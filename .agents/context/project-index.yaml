@@ -29,10 +29,6 @@ related_projects:
     relation: backend-gateway
     path: ../project-any-llm
     note: "Reference only. Do NOT modify."
-  project-careti.ai-frontend:
-    relation: design-reference
-    path: ../project-careti.ai-frontend
-    note: "Reference for patterns. Do NOT modify."
   cafelua-os:
     relation: desktop-client
     path: ../cafelua-os

@@ -96,5 +96,4 @@ PLAN → CHECK → BUILD → VERIFY → CLEAN → COMMIT
 | 프로젝트 | 관계 | 비고 |
 |---------|------|------|
 | `project-any-llm` | 백엔드 게이트웨이 | 참조만 |
-| `project-careti.ai-frontend` | 디자인 참조 | 참조만 |
 | `cafelua-os` | 데스크톱 클라이언트 | lab.cafelua.com 인증 플로우 소비자 |
