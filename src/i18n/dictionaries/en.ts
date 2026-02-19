@@ -43,8 +43,8 @@ const en: Dictionary = {
     copyright: "© 2025 Caretive Inc. All rights reserved.",
   },
   auth: {
-    loginTitle: "Login",
-    loginDescription: "Sign in to Cafelua Lab",
+    loginTitle: "Login / Sign Up",
+    loginDescription: "Get started with your social account",
     googleLogin: "Continue with Google",
     discordLogin: "Continue with Discord",
     logout: "Logout",

@@ -9,28 +9,31 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async signIn({ user, account }) {
-      if (!account || !user.email) return false;
-
-      try {
-        // Gateway social login — creates user + FREE plan credits on first login
-        await socialLogin(
-          account.provider,
-          user.email,
-          user.name ?? undefined,
-          user.image ?? undefined,
-        );
-      } catch {
-        // Gateway might be down — allow login anyway, sync later
-      }
-
-      return true;
+    async signIn({ account }) {
+      return !!account;
     },
-    async jwt({ token, account }) {
-      if (account) {
+    async jwt({ token, account, user }) {
+      if (account && user?.email) {
         token.provider = account.provider;
         token.providerAccountId = account.providerAccountId;
-        token.gwUserId = `${account.provider}:${account.providerAccountId}`;
+
+        try {
+          // Gateway social login — creates user + FREE plan credits on first login
+          const response = await socialLogin(
+            account.provider,
+            user.email,
+            user.name ?? undefined,
+            user.image ?? undefined,
+          );
+          // Extract gateway UUID from JWT access_token
+          const payload = JSON.parse(
+            Buffer.from(response.tokens.access_token.split(".")[1], "base64url").toString(),
+          );
+          token.gwUserId = payload.sub;
+        } catch {
+          // Gateway might be down — fallback to provider:accountId
+          token.gwUserId = `${account.provider}:${account.providerAccountId}`;
+        }
       }
       return token;
     },
