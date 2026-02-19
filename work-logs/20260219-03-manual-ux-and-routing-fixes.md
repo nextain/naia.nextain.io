@@ -1,7 +1,7 @@
 # 매뉴얼 UX/이미지 정합성 및 로컬 라우팅(3001) 수정
 
 - **날짜**: 2026-02-19
-- **상태**: doing
+- **상태**: done
 - **담당**: luke + Codex
 
 ## 목표
@@ -83,8 +83,10 @@
   2. `AUTH_URL=http://localhost:3001`로 재기동
   3. 브라우저 강력 새로고침 및 localhost 쿠키 정리
 
-## 다음 작업
+## 다음 작업 (완료)
 
-- chat 페이지 ko/en 이미지 매핑 최종 눈검증(중복/오인식 완전 제거)
-- 설정 UI에서 Gateway URL/Token을 고급 섹션으로 접는 실제 UI 반영 여부 결정
-- 루트(`dev`) 및 각 레포 컨텍스트 파일 업데이트 항목 최종 확정 후 커밋 분리
+- ✅ chat 페이지 ko/en 이미지 매핑 최종 검증 — en/chat.md에서 chat-voice.png 제거, ko와 동기화
+- ✅ getting-started.md ko/en: 누락된 온보딩 이미지 3개 추가 (user-name, personality, complete)
+- ✅ lab.md ko/en: API 키 섹션 + lab-keys.png 이미지 추가
+- ✅ 전체 커밋 완료 (`eeab75a`)
+- (보류) Gateway URL/Token 고급 섹션 접기 — 실제 Shell UI 변경은 별도 이슈로 분리
