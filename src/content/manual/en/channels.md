@@ -14,7 +14,7 @@ By telling AI 아바타 in the chat, "Start Discord web login," it will display 
 
 ## Messenger Notifications (Webhooks)
 Cafelua OS inherits OpenClaw's powerful channel system.
-By entering your Discord or Google Chat Webhook URL in the **Settings > Tools > Webhooks** menu or during the initial onboarding screen, AI 아바타 can send you messages with the results of important tasks.
+By entering your Slack, Discord or Google Chat Webhook URL in the **Settings > Tools > Webhooks** menu or during the initial onboarding screen, AI 아바타 can send you messages with the results of important tasks.
 
 > **Tip:** "Let me know on Discord when this file backup is completely finished!"
 
