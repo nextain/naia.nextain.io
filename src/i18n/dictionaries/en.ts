@@ -249,6 +249,7 @@ const en: Dictionary = {
     next: "Next",
     backToToc: "Back to Table of Contents",
     sections: {
+      install: "Installation & Deployment",
       gettingStarted: "Getting Started",
       mainScreen: "Main Screen",
       chat: "Chat",

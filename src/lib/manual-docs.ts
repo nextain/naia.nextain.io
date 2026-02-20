@@ -3,6 +3,7 @@ import path from "path";
 import type { Locale } from "@/i18n/config";
 
 export const MANUAL_SLUGS = [
+  "install",
   "getting-started",
   "main-screen",
   "chat",
@@ -42,6 +43,7 @@ export async function readManual(
 
 /** Slug → i18n section key mapping */
 export const SLUG_TO_SECTION_KEY: Record<ManualSlug, string> = {
+  install: "install",
   "getting-started": "gettingStarted",
   "main-screen": "mainScreen",
   chat: "chat",

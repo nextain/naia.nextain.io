@@ -247,6 +247,7 @@ const ko: Dictionary = {
     next: "다음",
     backToToc: "목차로 돌아가기",
     sections: {
+      install: "설치 및 배포",
       gettingStarted: "시작하기",
       mainScreen: "메인 화면",
       chat: "채팅",
