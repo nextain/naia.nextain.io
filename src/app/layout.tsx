@@ -19,6 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-G2BBWG5BNB"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-G2BBWG5BNB');
+          `}
+        </Script>
+      </head>
       <body className="antialiased font-sans">
         <ThemeProvider
           attribute="class"
