@@ -30,8 +30,8 @@ function CallbackContent() {
         if (source !== "web") {
           // Include state param for deep link verification
           const deepLink = state
-            ? `cafelua://auth?key=${encodeURIComponent(data.key)}&state=${encodeURIComponent(state)}`
-            : `cafelua://auth?key=${encodeURIComponent(data.key)}`;
+            ? `nan://auth?key=${encodeURIComponent(data.key)}&state=${encodeURIComponent(state)}`
+            : `nan://auth?key=${encodeURIComponent(data.key)}`;
           window.location.href = deepLink;
         }
       } catch (e) {
@@ -101,8 +101,8 @@ function CallbackContent() {
   }
 
   const deepLinkUrl = state
-    ? `cafelua://auth?key=${encodeURIComponent(key)}&state=${encodeURIComponent(state)}`
-    : `cafelua://auth?key=${encodeURIComponent(key)}`;
+    ? `nan://auth?key=${encodeURIComponent(key)}&state=${encodeURIComponent(state)}`
+    : `nan://auth?key=${encodeURIComponent(key)}`;
 
   return (
     <Card className="w-full max-w-sm">

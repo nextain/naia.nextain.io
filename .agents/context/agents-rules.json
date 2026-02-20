@@ -1,15 +1,15 @@
 {
 	"project_identity": {
-		"name": "lab.cafelua.com",
-		"nature": "Cafelua service portal — OAuth login, credit dashboard, usage analytics, key management, billing",
+		"name": "nan.nextain.io",
+		"nature": "nan service portal — OAuth login, credit dashboard, usage analytics, key management, billing",
 		"philosophy": "Thin web client for any-llm gateway. Auth + dashboard + billing UI only.",
-		"domain": "lab.cafelua.com",
-		"product": "Cafelua OS — personal AI desktop OS with companion Alpha, VRM avatar, TTS/STT, 8 themes"
+		"domain": "nan.nextain.io",
+		"product": "NaN OS — personal AI desktop OS with companion Nan, VRM avatar, TTS/STT, 8 themes"
 	},
 	"architecture": {
 		"framework": "Next.js 16 (App Router, Server Components)",
 		"language": "TypeScript",
-		"styling": "Tailwind CSS 4 + shadcn/ui (new-york style, Cafelua brown theme)",
+		"styling": "Tailwind CSS 4 + shadcn/ui (new-york style, nan brown theme)",
 		"deployment": "Vercel",
 		"backend": "Next.js API Routes (BFF pattern — master key server-only)",
 		"gateway": {

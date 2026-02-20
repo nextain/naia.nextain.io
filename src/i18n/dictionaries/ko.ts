@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ko: Dictionary = {
   locale: "ko",
   meta: {
-    title: "Cafelua Lab",
-    description: "Cafelua — 손쉬운 나만의 AI. 3D 아바타 AI 아바타와 대화하고, 음성으로 소통하세요.",
+    title: "NaN OS Lab",
+    description: "NaN OS — 손쉬운 나만의 AI. 3D 아바타 AI 아바타와 대화하고, 음성으로 소통하세요.",
   },
   common: {
     loading: "로딩 중...",
@@ -33,7 +33,7 @@ const ko: Dictionary = {
     manual: "사용법",
   },
   footer: {
-    brand: "Cafelua Lab",
+    brand: "NaN OS Lab",
     tagline: "Where Technology meets Emotion",
     links: {
       privacy: "개인정보처리방침",
@@ -63,7 +63,7 @@ const ko: Dictionary = {
       secondaryCta: "다운로드",
     },
     features: {
-      title: "Cafelua가 특별한 이유",
+      title: "NaN OS가 특별한 이유",
       subtitle: "개발자가 아니어도 AI 에이전트를 경험할 수 있습니다",
       items: {
         companion: {
@@ -227,7 +227,7 @@ const ko: Dictionary = {
     },
     desktopApp: {
       title: "데스크톱 앱 연결",
-      description: "Cafelua OS 데스크톱 앱에서 이 계정으로 로그인할 수 있습니다.",
+      description: "NaN OS 데스크톱 앱에서 이 계정으로 로그인할 수 있습니다.",
       issueKey: "연결 키 발급",
     },
     appearance: {
@@ -240,14 +240,14 @@ const ko: Dictionary = {
     },
     integrations: {
       title: "서비스 연동",
-      description: "Discord, Google Chat 등 외부 서비스에서 알파와 대화할 수 있습니다.",
+      description: "Discord, Google Chat 등 외부 서비스에서 낸와 대화할 수 있습니다.",
       discord: {
         title: "Discord",
         connected: "연동됨",
         notConnected: "미연동",
         connectedHint: "디스코드로 로그인하셨다면 이미 연동되어 있습니다.",
         inviteBot: "봇 서버에 추가",
-        inviteBotDescription: "이 봇을 서버에 추가하면 @알파 멘션이나 DM으로 대화할 수 있습니다.",
+        inviteBotDescription: "이 봇을 서버에 추가하면 @낸 멘션이나 DM으로 대화할 수 있습니다.",
         howToUse: "서버에서 @봇이름으로 멘션하거나 DM을 보내세요. 크레딧은 이 계정에서 자동 차감됩니다.",
       },
       googleChat: {
@@ -255,14 +255,14 @@ const ko: Dictionary = {
         connected: "연동됨",
         notConnected: "미연동",
         connectedHint: "구글로 로그인하셨다면 이미 연동되어 있습니다.",
-        howToUse: "Google Chat에서 Cafelua 앱을 추가한 후 메시지를 보내세요.",
+        howToUse: "Google Chat에서 NaN OS 앱을 추가한 후 메시지를 보내세요.",
       },
       viewGuide: "설정 가이드 보기",
     },
   },
   manual: {
     title: "시작하기",
-    subtitle: "Cafelua OS 데스크톱 앱 사용 가이드",
+    subtitle: "NaN OS 데스크톱 앱 사용 가이드",
     toc: "목차",
     prev: "이전",
     next: "다음",
@@ -280,7 +280,7 @@ const ko: Dictionary = {
       diagnostics: "시스템 진단",
       settings: "설정",
       tools: "도구 상세",
-      lab: "Cafelua Lab",
+      lab: "NaN OS Lab",
       troubleshooting: "문제 해결",
     },
   },

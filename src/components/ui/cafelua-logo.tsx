@@ -1,11 +1,16 @@
-import { Coffee, Orbit } from "lucide-react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export function CafeluaLogo({ className }: { className?: string }) {
+export function nanLogo({ className }: { className?: string }) {
   return (
     <div className={cn("relative flex items-center justify-center", className)}>
-      <Orbit className="absolute h-[140%] w-[140%] text-primary/40 animate-[spin_10s_linear_infinite]" />
-      <Coffee className="relative z-10 h-full w-full text-primary" />
+      <Image 
+        src="/nanos-logo.png" 
+        alt="NaN OS Logo" 
+        width={32} 
+        height={32} 
+        className="w-full h-full object-contain"
+      />
     </div>
   );
 }

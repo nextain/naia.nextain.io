@@ -36,65 +36,65 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 20 20% 15%;
+    --background: 210 40% 98%; /* Cloud White */
+    --foreground: 0 0% 9%; /* Terminal Black */
 
     --card: 0 0% 100%;
-    --card-foreground: 20 20% 15%;
+    --card-foreground: 0 0% 9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 20 20% 15%;
+    --popover-foreground: 0 0% 9%;
 
-    --primary: 25 45% 35%;
-    --primary-foreground: 40 33% 98%;
+    --primary: 221 83% 53%; /* Nextain Blue */
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 30 30% 90%;
-    --secondary-foreground: 25 45% 35%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 30 20% 92%;
-    --muted-foreground: 25 15% 45%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 30 30% 90%;
-    --accent-foreground: 25 45% 35%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 40 33% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 25 45% 35%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 221 83% 53%; /* Nextain Blue */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 20 20% 10%;
-    --foreground: 40 33% 98%;
+    --background: 222 47% 11%; /* Deep Node */
+    --foreground: 210 40% 98%; /* Cloud White */
 
-    --card: 20 15% 15%;
-    --card-foreground: 40 33% 98%;
+    --card: 222 47% 15%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 20 15% 15%;
-    --popover-foreground: 40 33% 98%;
+    --popover: 222 47% 15%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 25 50% 50%;
-    --primary-foreground: 20 20% 10%;
+    --primary: 188 94% 43%; /* Flow Cyan */
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 20 15% 25%;
-    --secondary-foreground: 40 33% 98%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 20 15% 20%;
-    --muted-foreground: 30 15% 65%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 20 15% 25%;
-    --accent-foreground: 40 33% 98%;
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 40 33% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 20 15% 25%;
-    --input: 20 15% 25%;
-    --ring: 25 50% 50%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 188 94% 43%; /* Flow Cyan */
   }
 }
 

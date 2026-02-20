@@ -1,4 +1,4 @@
-This tab manages all agents (including the main AI 아바타) and sub-agents running within Cafelua OS.
+This tab manages all agents (including the main AI 아바타) and sub-agents running within NaN OS.
 
 ![Agents Tab](agents-tab.png)
 

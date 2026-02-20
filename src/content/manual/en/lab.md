@@ -1,4 +1,4 @@
-Manage your account at [lab.cafelua.com](https://lab.cafelua.com).
+Manage your account at [nan.nextain.io](https://nan.nextain.io).
 
 ## Dashboard
 
@@ -54,7 +54,7 @@ Manage API keys for desktop apps and external services:
 
 ## Integrations
 
-Link your lab.cafelua.com account with external messengers to chat with the AI avatar from anywhere.
+Link your nan.nextain.io account with external messengers to chat with the AI avatar from anywhere.
 
 ### Discord
 - Automatically linked when you sign in with Discord

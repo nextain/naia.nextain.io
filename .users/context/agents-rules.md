@@ -1,13 +1,13 @@
-# lab.cafelua.com 프로젝트 규칙
+# nan.nextain.io 프로젝트 규칙
 
 > 이 문서는 `.agents/context/agents-rules.json`의 한국어 미러입니다.
 
 ## 프로젝트 정체성
 
-- **이름**: lab.cafelua.com
-- **성격**: Cafelua 서비스 포털 — OAuth 로그인, 크레딧 대시보드, 게이트웨이 클라이언트
+- **이름**: nan.nextain.io
+- **성격**: nan 서비스 포털 — OAuth 로그인, 크레딧 대시보드, 게이트웨이 클라이언트
 - **철학**: any-llm gateway의 얇은 웹 클라이언트. 인증 + 대시보드만.
-- **도메인**: lab.cafelua.com
+- **도메인**: nan.nextain.io
 
 ## 아키텍처
 
@@ -18,7 +18,7 @@
 - **백엔드**: Next.js API Routes (BFF 패턴)
 
 ### Gateway 연동
-- URL: `https://api.cafelua.com`
+- URL: `https://api.nan.com`
 - 인증: Master Key → 사용자별 Virtual Key
 - 프로토콜: OpenAI-compatible REST (any-llm gateway)
 - 프로바이더 정책: **Gemini 우선 운영** (OpenAI는 추후 확장 예정)
@@ -36,7 +36,7 @@
 | `/login` | OAuth 프로바이더 선택 (Google, Discord) |
 | `/dashboard` | 크레딧 잔액, 사용 내역, 계정 정보 |
 | `/settings` | 프로필, API 키 관리 |
-| `/callback` | 데스크톱 앱 딥링크 리다이렉트 (`cafelua://auth?code=<token>`) |
+| `/callback` | 데스크톱 앱 딥링크 리다이렉트 (`nan://auth?code=<token>`) |
 
 ## 코딩 컨벤션
 
@@ -98,4 +98,4 @@ PLAN → CHECK → BUILD → VERIFY → CLEAN → COMMIT
 | 프로젝트 | 관계 | 비고 |
 |---------|------|------|
 | `project-any-llm` | 백엔드 게이트웨이 | 참조만 |
-| `cafelua-os` | 데스크톱 클라이언트 | lab.cafelua.com 인증 플로우 소비자 |
+| `NaN-OS` | 데스크톱 클라이언트 | nan.nextain.io 인증 플로우 소비자 |

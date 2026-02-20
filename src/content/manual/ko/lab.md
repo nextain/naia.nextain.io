@@ -1,4 +1,4 @@
-[lab.cafelua.com](https://lab.cafelua.com)에서 계정을 관리합니다.
+[nan.nextain.io](https://nan.nextain.io)에서 계정을 관리합니다.
 
 ## 대시보드
 
@@ -54,7 +54,7 @@
 
 ## 연동 (Integrations)
 
-lab.cafelua.com 계정과 외부 메신저를 연동하여 어디서든 AI 아바타와 대화할 수 있습니다.
+nan.nextain.io 계정과 외부 메신저를 연동하여 어디서든 AI 아바타와 대화할 수 있습니다.
 
 ### Discord
 - 디스코드 계정으로 로그인하면 자동 연동

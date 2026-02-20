@@ -1,6 +1,6 @@
-# lab.cafelua.com
+# nan.nextain.io
 
-Cafelua 서비스 포털. OAuth 로그인 + 크레딧 대시보드 + any-llm gateway 연동.
+nan 서비스 포털. OAuth 로그인 + 크레딧 대시보드 + any-llm gateway 연동.
 
 ## 필수 읽기 (세션 시작 시)
 
@@ -90,14 +90,14 @@ src/
 
 1. **얇은 클라이언트** — 실제 로직은 gateway(any-llm)에, 여기는 UI만
 2. **BFF 패턴** — API Routes로 gateway 프록시 (클라이언트에 마스터키 노출 방지)
-3. **데스크톱 연동** — `/callback` 페이지로 cafelua-os에 키 전달
+3. **데스크톱 연동** — `/callback` 페이지로 NaN-OS에 키 전달
 4. **i18n** — URL 기반 `[lang]` 세그먼트 (ko, en)
 
 ## 기술 스택
 
 - **Next.js 16** (App Router, Server Components)
 - **NextAuth v5** (Google + Discord OAuth)
-- **shadcn/ui** + Tailwind CSS 4 (Cafelua 브라운 테마)
+- **shadcn/ui** + Tailwind CSS 4 (nan 브라운 테마)
 - **Recharts** — 사용량 차트
 - **next-themes** — 다크/라이트 모드
 - **LemonSqueezy** — 결제 (준비 중, env 미설정 시 Coming Soon)

@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const en: Dictionary = {
   locale: "en",
   meta: {
-    title: "Cafelua Lab",
-    description: "Cafelua — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+    title: "NaN OS Lab",
+    description: "NaN OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
   },
   common: {
     loading: "Loading...",
@@ -33,7 +33,7 @@ const en: Dictionary = {
     manual: "Manual",
   },
   footer: {
-    brand: "Cafelua Lab",
+    brand: "NaN OS Lab",
     tagline: "Where Technology meets Emotion",
     links: {
       privacy: "Privacy Policy",
@@ -63,7 +63,7 @@ const en: Dictionary = {
       secondaryCta: "Download",
     },
     features: {
-      title: "What makes Cafelua special",
+      title: "What makes nan special",
       subtitle: "Experience the power of AI agents — no coding required",
       items: {
         companion: {
@@ -229,7 +229,7 @@ const en: Dictionary = {
     desktopApp: {
       title: "Desktop App Connection",
       description:
-        "Connect your Cafelua OS desktop app with this account.",
+        "Connect your NaN OS desktop app with this account.",
       issueKey: "Issue Connection Key",
     },
     appearance: {
@@ -242,14 +242,14 @@ const en: Dictionary = {
     },
     integrations: {
       title: "Integrations",
-      description: "Chat with Alpha from Discord, Google Chat, and more.",
+      description: "Chat with Nan from Discord, Google Chat, and more.",
       discord: {
         title: "Discord",
         connected: "Connected",
         notConnected: "Not Connected",
         connectedHint: "If you logged in with Discord, you are already connected.",
         inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Alpha mention or DM.",
+        inviteBotDescription: "Add this bot to your server to chat via @Nan mention or DM.",
         howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
       },
       googleChat: {
@@ -257,14 +257,14 @@ const en: Dictionary = {
         connected: "Connected",
         notConnected: "Not Connected",
         connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the Cafelua app in Google Chat and start messaging.",
+        howToUse: "Add the nan app in Google Chat and start messaging.",
       },
       viewGuide: "View Setup Guide",
     },
   },
   manual: {
     title: "User Manual",
-    subtitle: "Cafelua OS Desktop App Guide",
+    subtitle: "NaN OS Desktop App Guide",
     toc: "Table of Contents",
     prev: "Previous",
     next: "Next",
@@ -282,7 +282,7 @@ const en: Dictionary = {
       diagnostics: "Diagnostics",
       settings: "Settings",
       tools: "Tool Details",
-      lab: "Cafelua Lab",
+      lab: "NaN OS Lab",
       troubleshooting: "Troubleshooting",
     },
   },

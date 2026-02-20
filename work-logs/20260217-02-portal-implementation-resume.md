@@ -64,7 +64,7 @@
 
 ## 추가 요청 반영 PLAN (사용자 지시)
 
-- 메인페이지를 cafelua-os 실제 서비스 정체성 기준으로 재구성
+- 메인페이지를 NaN-OS 실제 서비스 정체성 기준으로 재구성
 - LemonSqueezy 심사 대응 요소 추가
   - 빌링 페이지 결제/정책 안내
   - webhook 엔드포인트 스텁 + 서명 검증
@@ -75,7 +75,7 @@
 
 ## 추가 결정 (사용자 지시)
 
-- lab.cafelua.com 서비스는 우선 **Gemini 단일 프로바이더**로 운영
+- nan.nextain.io 서비스는 우선 **Gemini 단일 프로바이더**로 운영
 - OpenAI(ChatGPT)는 향후 확장 후보로만 표기
 - 메인/FAQ/요금/빌링 문구에서 멀티 프로바이더 표현 제거
 
@@ -98,7 +98,7 @@
 ## CONTEXT UPDATE
 
 - [x] `.agents/context/agents-rules.json` 업데이트
-  - `architecture.gateway.provider_policy: Gemini-first in lab.cafelua.com`
+  - `architecture.gateway.provider_policy: Gemini-first in nan.nextain.io`
 - [x] `.users/context/agents-rules.md` 미러 반영
   - Gateway 연동 섹션에 Gemini 우선 운영 정책 추가
 

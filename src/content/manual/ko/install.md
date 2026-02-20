@@ -1,4 +1,4 @@
-Cafelua OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니다. 특히 Bazzite와 같은 Immutable OS 환경이나 샌드박스(Flatpak) 환경에서 안전하게 동작합니다.
+NaN OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니다. 특히 Bazzite와 같은 Immutable OS 환경이나 샌드박스(Flatpak) 환경에서 안전하게 동작합니다.
 
 ## 시스템 요구사항
 
@@ -11,7 +11,7 @@ Cafelua OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습�
 
 ## 배포 방식 안내
 
-Cafelua OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 배포 방식이 매우 중요합니다.
+NaN OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 배포 방식이 매우 중요합니다.
 
 ### 1. Flatpak 배포 (권장)
 가장 보편적이고 안전한 리눅스 앱 배포 방식입니다. 앱스토어(Discover, GNOME Software)를 통해 쉽게 설치할 수 있습니다.
@@ -21,11 +21,11 @@ Cafelua OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있�
 - **설치 방법**:
   추후 제공될 `.flatpak` 번들을 다운로드하여 터미널에서 아래 명령어로 설치합니다.
   ```bash
-  flatpak install --user ./cafelua-os.flatpak
+  flatpak install --user ./NaN-OS.flatpak
   ```
 
 ### 2. Bazzite / BlueBuild 통합 이미지 (고급)
-사용자 정의 OS 이미지를 굽는 방식입니다. `cafelua-os`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
+사용자 정의 OS 이미지를 굽는 방식입니다. `NaN-OS`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
 
 ---
 
@@ -49,15 +49,15 @@ Cafelua OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있�
    ```
 
 3. **패키징 빌드 실행**
-   프로젝트 루트 디렉토리(cafelua-os)에서 실행합니다.
+   프로젝트 루트 디렉토리(NaN-OS)에서 실행합니다.
    ```bash
    # build-dir에 컴파일 및 빌드 진행
-   flatpak-builder --user --install --force-clean build-dir flatpak/com.cafelua.shell.yml
+   flatpak-builder --user --install --force-clean build-dir flatpak/com.nan.shell.yml
    ```
 
 4. **앱 실행**
    ```bash
-   flatpak run com.cafelua.shell
+   flatpak run com.nan.shell
    ```
 
 > **💡 개발 참고:**

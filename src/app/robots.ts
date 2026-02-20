@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://lab.cafelua.com/sitemap.xml",
+    sitemap: "https://nan.nextain.io/sitemap.xml",
   };
 }

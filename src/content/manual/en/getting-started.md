@@ -1,13 +1,13 @@
 When you first launch the app, an onboarding wizard appears. There are two ways to get started.
 
-## Start with Cafelua Lab (Recommended)
+## Start with NaN OS Lab (Recommended)
 
 The easiest way — free and no API key needed.
 
 ![Onboarding screen — provider selection](onboarding-provider.png)
 
-1. Click the **Cafelua Lab** button on the onboarding screen
-2. A browser opens to the lab.cafelua.com login page
+1. Click the **NaN OS Lab** button on the onboarding screen
+2. A browser opens to the nan.nextain.io login page
 3. Sign in with your **Google account** (registration is automatic)
 4. You'll be automatically redirected back to the desktop app
 5. You receive **20 free credits** on sign-up

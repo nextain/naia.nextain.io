@@ -6,8 +6,8 @@
 ## 작업 내용
 
 ### 완료
-- [x] GitHub 레포 생성 (`luke-n-alpha/lab.cafelua.com`, private)
-- [x] 루트 워크스페이스에 서브모듈 추가 (`project-lab.cafelua.com`)
+- [x] GitHub 레포 생성 (`luke-n-alpha/nan.nextain.io`, private)
+- [x] 루트 워크스페이스에 서브모듈 추가 (`project-nan.nextain.io`)
 - [x] Next.js 16 프로젝트 초기화 (TypeScript + Tailwind CSS 4 + App Router)
 - [x] 듀얼 컨텍스트 구조 생성 (`.agents/` + `.users/`)
 - [x] 루트 컨텍스트 연동 (CLAUDE.md, agents-rules.json, project-index.yaml)

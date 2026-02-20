@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/locale-provider";
-import { CafeluaLogo } from "@/components/ui/cafelua-logo";
+import { nanLogo } from "@/components/ui/nan-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { signOut } from "next-auth/react";
@@ -31,7 +31,7 @@ export function AuthHeader({ user }: AuthHeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg">
       <div className="flex h-14 items-center justify-between px-4">
         <Link href={`/${lang}`} className="flex items-center gap-2.5">
-          <CafeluaLogo className="h-5 w-5" />
+          <nanLogo className="h-5 w-5" />
           <span className="font-semibold tracking-tight">{dict.footer.brand}</span>
         </Link>
 

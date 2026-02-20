@@ -1,4 +1,4 @@
-import { CafeluaLogo } from "@/components/ui/cafelua-logo";
+import { nanLogo } from "@/components/ui/nan-logo";
 import Link from "next/link";
 import { getDictionary } from "@/i18n/dictionaries";
 import { isLocale } from "@/i18n/config";
@@ -19,7 +19,7 @@ export default async function AuthLayout({
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-muted/30 p-4">
       <Link href={`/${lang}`} className="mb-8 flex items-center gap-2">
-        <CafeluaLogo className="h-8 w-8" />
+        <nanLogo className="h-8 w-8" />
         <span className="text-xl font-bold tracking-tight">{dict.footer.brand}</span>
       </Link>
       {children}

@@ -41,7 +41,7 @@ Customize AI 아바타's personality, speech style, and name in free text. Emoti
 
 ![Persona settings](settings-persona.png)
 
-## Cafelua Lab Account
+## NaN OS Lab Account
 
 Manage Lab integration.
 
@@ -113,7 +113,7 @@ Manage external messenger integrations on the **Settings > Integrations** page.
 
 ![Device Settings](settings-device.png)
 
-- **Wake Word List**: Manage words to wake up the AI (e.g., "Hey Alpha", "Hello Alpha")
+- **Wake Word List**: Manage words to wake up the AI (e.g., "Hey Nan", "Hello Nan")
 - **Device Pairing**: Manage external device integrations (e.g., paired OpenClaw nodes) and connections with smart home devices.
 - Includes features for device approval and token resets.
 
