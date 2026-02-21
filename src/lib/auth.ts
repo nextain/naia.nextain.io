@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import Google from "next-auth/providers/google";
 import Discord from "next-auth/providers/discord";
-import { socialLogin, createVirtualKey, listKeys } from "./gateway-client";
+import { socialLogin, createVirtualKey, listKeys, deleteKey } from "./gateway-client";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [Google, Discord],
@@ -57,10 +57,12 @@ export async function issueDesktopKey(gwUserId: string): Promise<string> {
     const existingKeys = await listKeys(gwUserId);
     const existingDesktopKey = existingKeys.find(k => k.key_name === keyName);
     if (existingDesktopKey) {
-      return existingDesktopKey.key;
+      // The gateway list API only returns hashes, not the plaintext key.
+      // So if it exists, we must delete it and recreate it to get the plaintext key again.
+      await deleteKey(existingDesktopKey.id);
     }
   } catch (err) {
-    console.error("[auth] Failed to check existing keys:", err);
+    console.error("[auth] Failed to check/delete existing keys:", err);
   }
 
   const keyResponse = await createVirtualKey(gwUserId, keyName);

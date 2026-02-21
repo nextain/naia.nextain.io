@@ -207,6 +207,16 @@ export async function listKeys(userId: string): Promise<GatewayKey[]> {
   return [];
 }
 
+export async function deleteKey(keyId: string): Promise<void> {
+  const res = await gw(`/v1/keys/${encodeURIComponent(keyId)}`, {
+    method: "DELETE",
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Gateway ${res.status}: ${body}`);
+  }
+}
+
 export async function isKeyOwnedByUser(userId: string, keyId: string): Promise<boolean> {
   const keys = await listKeys(userId);
   return keys.some((key) => key.id === keyId);
