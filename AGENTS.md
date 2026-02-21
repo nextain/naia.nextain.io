@@ -18,6 +18,10 @@ When updating one side, update the other.
 
 ## Quick Reference
 
+- **Brand Identity**: 
+  - Company: Next AI Networks
+  - Product: Naia OS
+  - Tagline: The Next Generation AI OS
 - **Framework**: Next.js 16 (App Router, TypeScript)
 - **Styling**: Tailwind CSS 4
 - **Package manager**: npm

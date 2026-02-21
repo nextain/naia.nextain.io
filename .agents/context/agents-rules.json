@@ -1,10 +1,12 @@
 {
 	"project_identity": {
 		"name": "naia.nextain.io",
+		"company": "Next AI Networks",
+		"product": "Naia OS",
+		"tagline": "The Next Generation AI OS",
 		"nature": "naia service portal — OAuth login, credit dashboard, usage analytics, key management, billing",
 		"philosophy": "Thin web client for any-llm gateway. Auth + dashboard + billing UI only.",
-		"domain": "naia.nextain.io",
-		"product": "Naia OS — personal AI desktop OS with companion Naia, VRM avatar, TTS/STT, 8 themes"
+		"domain": "naia.nextain.io"
 	},
 	"architecture": {
 		"framework": "Next.js 16 (App Router, Server Components)",
