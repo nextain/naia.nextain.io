@@ -26,12 +26,9 @@ export function Hero({ dict, lang }: { dict: Dictionary; lang: string }) {
                 Next Generation AI OS
               </div>
               <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl lg:leading-[1.1]">
-                <span className="block text-foreground">{line1 ?? dict.home.hero.title}</span>
-                {line2 ? (
-                  <span className="block mt-2 bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
-                    {line2}
-                  </span>
-                ) : null}
+                <span className="block bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 bg-clip-text text-transparent">
+                  {dict.home.hero.title}
+                </span>
               </h1>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {dict.home.hero.subtitle}

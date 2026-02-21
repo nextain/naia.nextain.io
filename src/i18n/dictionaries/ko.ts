@@ -56,7 +56,7 @@ const ko: Dictionary = {
   },
   home: {
     hero: {
-      title: "가장 진보한 AI 에이전트,\n가장 완벽한 OS로.",
+      title: "가장 진보한 AI 에이전트, 가장 완벽한 OS로.",
       subtitle:
         "3대 LLM 통합부터 터미널 제어, 그리고 감정을 표현하는 VRM 아바타까지. 개발자가 아니어도 경험할 수 있는 완전한 AI 생태계, Naia OS.",
       cta: "무료로 시작하기",

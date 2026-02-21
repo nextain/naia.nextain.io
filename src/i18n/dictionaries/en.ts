@@ -56,7 +56,7 @@ const en: Dictionary = {
   },
   home: {
     hero: {
-      title: "The most advanced AI agent,\nas the perfect OS.",
+      title: "The most advanced AI agent, as the perfect OS.",
       subtitle:
         "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
       cta: "Get Started Free",
