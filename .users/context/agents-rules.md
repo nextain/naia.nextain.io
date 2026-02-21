@@ -40,6 +40,7 @@
 | `/dashboard` | 크레딧 잔액, 사용 내역, 계정 정보 |
 | `/settings` | 프로필, API 키 관리 |
 | `/callback` | 데스크톱 앱 딥링크 리다이렉트 (`naia://auth?code=<token>`) |
+| `/[lang]/discord/connect` | Naia 라우팅 기반 Discord 봇 초대 엔드포인트 |
 
 ## 코딩 컨벤션
 

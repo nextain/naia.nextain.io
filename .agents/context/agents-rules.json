@@ -43,7 +43,7 @@
 	"route_groups": {
 		"(public)": {
 			"layout": "Header + Footer",
-			"pages": ["/", "/terms", "/privacy", "/refund", "/contact"]
+			"pages": ["/", "/terms", "/privacy", "/refund", "/contact", "/[lang]/discord/connect (router endpoint for Discord bot invite flow)"]
 		},
 		"(protected)": {
 			"layout": "AuthHeader + ProtectedSidebar + MobileNav",
