@@ -34,7 +34,7 @@ const en: Dictionary = {
   },
   footer: {
     brand: "Naia OS",
-    tagline: "Where Technology meets Emotion",
+    tagline: "Next AI Networks",
     links: {
       privacy: "Privacy Policy",
       terms: "Terms of Service",
