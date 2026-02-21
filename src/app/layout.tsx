@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   ],
   metadataBase: new URL("https://naia.nextain.io"),
   openGraph: {
-    title: "Naia OS — Where Technology meets Emotion",
+    title: "Naia OS — The most advanced AI agent, as the perfect OS.",
     description:
-      "Your personal AI desktop OS with 3D avatar, voice chat, and multi-LLM support. One-click install or dedicated Linux OS.",
+      "A complete AI ecosystem with 3D avatar, voice chat, and multi-LLM support. Experience the power of AI agents without coding.",
     url: "https://naia.nextain.io",
     siteName: "Naia OS",
     locale: "en_US",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naia OS — Where Technology meets Emotion",
+    title: "Naia OS — The most advanced AI agent, as the perfect OS.",
     description:
-      "Your personal AI desktop OS with 3D avatar, voice chat, and multi-LLM support.",
+      "A complete AI ecosystem with 3D avatar, voice chat, and multi-LLM support.",
   },
 };
 
