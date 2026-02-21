@@ -1,306 +1,306 @@
 import type { Dictionary } from "./types";
 
-const en: Dictionary = {
-  locale: "ar",
-  meta: {
-    title: "Naia OS",
-    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+const ar: Dictionary = {
+  "locale": "ar",
+  "meta": {
+    "title": "نايا OS",
+    "description": "Naia OS — الذكاء الاصطناعي الشخصي الخاص بك، أصبح سهلاً. قم بالدردشة والتحدث والعمل باستخدام الصورة الرمزية ثلاثية الأبعاد AI 아바타."
   },
-  common: {
-    loading: "Loading...",
-    loadingShort: "Loading...",
-    error: "An error occurred",
-    save: "Save",
-    cancel: "Cancel",
-    delete: "Delete",
-    confirm: "Confirm",
-    copy: "Copy",
-    copied: "Copied",
-    comingSoon: "Coming Soon",
-    backTo: "Back",
-    prev: "Prev",
-    next: "Next",
-    page: "Page",
+  "common": {
+    "loading": "جار التحميل...",
+    "loadingShort": "جار التحميل...",
+    "error": "حدث خطأ",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "confirm": "تأكيد",
+    "copy": "نسخ",
+    "copied": "منقول",
+    "comingSoon": "قريبا",
+    "backTo": "العودة",
+    "prev": "السابق",
+    "next": "التالي",
+    "page": "الصفحة"
   },
-  header: {
-    home: "Home",
-    pricing: "Pricing",
-    faq: "FAQ",
-    download: "Download",
-    login: "Login",
-    dashboard: "Dashboard",
-    toggleMenu: "Toggle menu",
-    manual: "Manual",
+  "header": {
+    "home": "الصفحة الرئيسية",
+    "pricing": "التسعير",
+    "faq": "الأسئلة الشائعة",
+    "download": "تحميل",
+    "login": "تسجيل الدخول",
+    "dashboard": "لوحة القيادة",
+    "toggleMenu": "تبديل القائمة",
+    "manual": "دليل"
   },
-  footer: {
-    brand: "Naia OS",
-    tagline: "Where Technology meets Emotion",
-    links: {
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      refund: "Refund Policy",
-      contact: "Contact",
+  "footer": {
+    "brand": "نايا OS",
+    "tagline": "حيث تلتقي التكنولوجيا بالعاطفة",
+    "links": {
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة",
+      "refund": "سياسة استرداد الأموال",
+      "contact": "الاتصال"
     },
-    copyright: "© 2026 Nextain. All rights reserved.",
+    "copyright": "© 2026 نكستين. جميع الحقوق محفوظة."
   },
-  auth: {
-    loginTitle: "Login / Sign Up",
-    loginDescription: "Get started with your social account",
-    googleLogin: "Continue with Google",
-    discordLogin: "Continue with Discord",
-    logout: "Logout",
-    callbackRedirecting: "Redirecting to desktop app...",
-    callbackManualPrefix: "If it does not open automatically, ",
-    callbackManualLink: "click here",
-    callbackManualSuffix: ".",
+  "auth": {
+    "loginTitle": "تسجيل الدخول / الاشتراك",
+    "loginDescription": "ابدأ مع حسابك الاجتماعي",
+    "googleLogin": "تواصل مع جوجل",
+    "discordLogin": "تواصل مع الخلاف",
+    "logout": "تسجيل الخروج",
+    "callbackRedirecting": "جارٍ إعادة التوجيه إلى تطبيق سطح المكتب...",
+    "callbackManualPrefix": "إذا لم يفتح تلقائيا",
+    "callbackManualLink": "انقر هنا",
+    "callbackManualSuffix": "."
   },
-  home: {
-    hero: {
-      title: "The most advanced AI agent, as the perfect OS.",
-      subtitle:
-        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
-      cta: "Get Started Free",
-      secondaryCta: "Download",
+  "home": {
+    "hero": {
+      "title": "وكيل الذكاء الاصطناعي الأكثر تقدمًا، باعتباره نظام التشغيل المثالي.",
+      "subtitle": "من 3 تكاملات LLM رئيسية إلى التحكم الطرفي، وصورة VRM الرمزية التي تعبر عن المشاعر. نظام بيئي متكامل للذكاء الاصطناعي يمكنك تجربته دون أن تكون مطورًا، Naia OS.",
+      "cta": "ابدأ مجانًا",
+      "secondaryCta": "تحميل"
     },
-    features: {
-      title: "What makes naia special",
-      subtitle: "Experience the power of AI agents — no coding required",
-      items: {
-        companion: {
-          title: "AI Avatar AI 아바타",
-          description:
-            "A 3D avatar with emotions, right on your desktop. AI 아바타 reacts to conversations with facial expressions and eye contact.",
+    "features": {
+      "title": "ما الذي يجعل نايا مميزة",
+      "subtitle": "استمتع بتجربة قوة وكلاء الذكاء الاصطناعي - دون الحاجة إلى أي تعليمات برمجية",
+      "items": {
+        "companion": {
+          "title": "AI Avatar AI 아바타",
+          "description": "صورة رمزية ثلاثية الأبعاد مليئة بالعواطف، مباشرة على سطح المكتب. يتفاعل الذكاء الاصطناعي 아바타 مع المحادثات من خلال تعبيرات الوجه والتواصل البصري."
         },
-        multiProvider: {
-          title: "Gemini Free · More Models Coming Soon",
-          description:
-            "Currently supporting Gemini with free credits. API Key support for Grok, Anthropic(Claude), OpenAI, and Zhipu(GLM) is planned and coming soon.",
+        "multiProvider": {
+          "title": "الجوزاء مجاني · المزيد من النماذج قريبا",
+          "description": "يدعم حاليًا برج الجوزاء بأرصدة مجانية. من المقرر أن يتوفر دعم API Key لـ Grok وAnthropic(Claude) وOpenAI وZhipu(GLM) قريبًا."
         },
-        voice: {
-          title: "Voice Conversations",
-          description:
-            "Ask by voice, get spoken responses. AI 아바타 answers naturally with lip-synced animation.",
+        "voice": {
+          "title": "المحادثات الصوتية",
+          "description": "اسأل عن طريق الصوت، واحصل على ردود منطوقة. تجيب AI 아바타 بشكل طبيعي من خلال الرسوم المتحركة المتزامنة مع الشفاه."
         },
-        tools: {
-          title: "Tool Execution",
-          description:
-            "File editing, terminal commands, web search. AI 아바타 calls tools directly to get work done.",
+        "tools": {
+          "title": "تنفيذ الأداة",
+          "description": "تحرير الملفات، والأوامر الطرفية، والبحث على شبكة الإنترنت. يقوم الذكاء الاصطناعي 아바타 باستدعاء الأدوات مباشرة لإنجاز العمل."
         },
-        desktop: {
-          title: "One-click Install & OS",
-          description:
-            "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
-        },
-      },
+        "desktop": {
+          "title": "بنقرة واحدة التثبيت ونظام التشغيل",
+          "description": "قم بتثبيت تطبيق سطح المكتب بنقرة واحدة، أو أنشئ بيئة مخصصة للذكاء الاصطناعي باستخدام صورة نظام التشغيل Linux."
+        }
+      }
     },
-    pricing: {
-      title: "Simple Pricing",
-      subtitle: "Pay only for what you need",
-      policyNote: "Please review billing, refund, and policy documents below.",
-      free: {
-        name: "FREE",
-        price: "$0",
-        period: "forever",
-        description: "Start with just a sign-up",
-        features: [
-          "20 credits on sign-up",
-          "10 credits monthly refill",
-          "Gemini models",
-          "Basic voice chat",
-          "Community support",
+    "pricing": {
+      "title": "تسعير بسيط",
+      "subtitle": "ادفع فقط مقابل ما تحتاجه",
+      "policyNote": "يرجى مراجعة مستندات الفواتير واسترداد الأموال والسياسة أدناه.",
+      "free": {
+        "name": "مجاني",
+        "price": "0 دولار",
+        "period": "إلى الأبد",
+        "description": "ابدأ بمجرد التسجيل",
+        "features": [
+          "20 ساعة معتمدة عند التسجيل",
+          "10 اعتمادات إعادة التعبئة الشهرية",
+          "نماذج الجوزاء",
+          "الدردشة الصوتية الأساسية",
+          "دعم المجتمع"
         ],
-        cta: "Start Free",
+        "cta": "ابدأ مجانًا"
       },
-      basic: {
-        name: "BASIC",
-        price: "$10",
-        period: "mo",
-        description: "For those who want more",
-        features: [
-          "100 credits monthly",
-          "Gemini models",
-          "High-quality voice chat",
-          "Priority support",
-          "Advanced voice features",
+      "basic": {
+        "name": "الأساسية",
+        "price": "10 دولارات",
+        "period": "مو",
+        "description": "بالنسبة لأولئك الذين يريدون المزيد",
+        "features": [
+          "100 ساعة معتمدة شهريا",
+          "نماذج الجوزاء",
+          "دردشة صوتية عالية الجودة",
+          "دعم الأولوية",
+          "ميزات صوتية متقدمة"
         ],
-        cta: "Upgrade",
+        "cta": "ترقية"
+      }
+    },
+    "faq": {
+      "title": "الأسئلة المتداولة"
+    }
+  },
+  "sidebar": {
+    "dashboard": "لوحة القيادة",
+    "usage": "الاستخدام",
+    "logs": "سجلات",
+    "keys": "مفاتيح واجهة برمجة التطبيقات",
+    "settings": "الإعدادات",
+    "billing": "الفواتير"
+  },
+  "dashboard": {
+    "title": "لوحة القيادة",
+    "creditBalance": "الرصيد الائتماني",
+    "totalRequests": "إجمالي الطلبات",
+    "totalTokens": "مجموع الرموز",
+    "totalSpend": "إجمالي الإنفاق",
+    "currentPeriod": "الفترة الحالية",
+    "quickLinks": "روابط سريعة",
+    "statusActive": "نشط",
+    "statusBlocked": "محظور"
+  },
+  "usage": {
+    "title": "الاستخدام",
+    "period": {
+      "days7": "7 أيام",
+      "days30": "30 يوما",
+      "days90": "90 يوما"
+    },
+    "requestsPerDay": "الطلبات / اليوم",
+    "tokensPerDay": "الرموز / اليوم",
+    "spendPerDay": "قضاء / يوم",
+    "noData": "لا توجد بيانات للفترة المحددة"
+  },
+  "logs": {
+    "title": "سجلات",
+    "all": "الكل",
+    "filterStatus": "مرشح الحالة",
+    "filterModel": "مرشح النموذج",
+    "columns": {
+      "time": "الوقت",
+      "status": "الحالة",
+      "model": "نموذج",
+      "tokens": "الرموز",
+      "cost": "التكلفة"
+    },
+    "details": {
+      "id": "معرف السجل",
+      "endpoint": "نقطة النهاية",
+      "provider": "مزود",
+      "promptTokens": "الرموز الفورية",
+      "completionTokens": "رموز الإنجاز",
+      "error": "خطأ"
+    },
+    "noLogs": "لا توجد سجلات حتى الآن",
+    "expandDetails": "إظهار التفاصيل"
+  },
+  "keys": {
+    "title": "مفاتيح واجهة برمجة التطبيقات",
+    "createKey": "إنشاء مفتاح",
+    "keyName": "اسم المفتاح",
+    "keyNamePlaceholder": "على سبيل المثال مفتاح سطح المكتب الخاص بي",
+    "expires": "تنتهي",
+    "noExpiry": "لا انتهاء الصلاحية",
+    "days30": "30 يوما",
+    "days90": "90 يوما",
+    "days365": "1 سنة",
+    "columns": {
+      "name": "الاسم",
+      "status": "الحالة",
+      "created": "تم إنشاؤها",
+      "actions": "الإجراءات"
+    },
+    "noKeys": "لم يتم إنشاء أي مفاتيح حتى الآن",
+    "deleteConfirm": "هل أنت متأكد أنك تريد حذف هذا المفتاح؟",
+    "keyCreated": "تم إنشاء المفتاح",
+    "keyCreatedDescription": "سيتم عرض هذا المفتاح مرة واحدة فقط. قم بتخزينه في مكان آمن.",
+    "active": "نشط",
+    "revoked": "تم إبطاله",
+    "unnamed": "مفتاح غير مسمى",
+    "forbiddenAction": "ليس لديك إذن لهذا المفتاح."
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "profile": {
+      "title": "الملف الشخصي",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "avatar": "الصورة الرمزية",
+      "provider": "مزود تسجيل الدخول",
+      "gatewayId": "معرف البوابة",
+      "budgetId": "معرف الميزانية"
+    },
+    "connectedAccounts": {
+      "title": "الحسابات المتصلة",
+      "google": "جوجل",
+      "discord": "الفتنة"
+    },
+    "desktopApp": {
+      "title": "اتصال تطبيق سطح المكتب",
+      "description": "قم بتوصيل تطبيق Naia OS لسطح المكتب بهذا الحساب.",
+      "issueKey": "إصدار مفتاح الاتصال"
+    },
+    "appearance": {
+      "title": "المظهر",
+      "theme": "الموضوع",
+      "themeLight": "الموضوع 1 (النور)",
+      "themeDark": "الموضوع 2 (الظلام)",
+      "themeSystem": "النظام",
+      "language": "اللغة"
+    },
+    "integrations": {
+      "title": "التكامل",
+      "description": "قم بالدردشة مع Naia من Discord وGoogle Chat والمزيد.",
+      "discord": {
+        "title": "الفتنة",
+        "connected": "متصل",
+        "notConnected": "غير متصل",
+        "connectedHint": "إذا قمت بتسجيل الدخول باستخدام Discord، فأنت متصل بالفعل.",
+        "inviteBot": "إضافة بوت إلى الخادم",
+        "inviteBotDescription": "أضف هذا الروبوت إلى الخادم الخاص بك للدردشة عبر إشارة @Naia أو رسالة مباشرة.",
+        "howToUse": "اذكر @botname في الخادم الخاص بك أو أرسل رسالة مباشرة. يتم تحميل الاعتمادات على هذا الحساب تلقائيا."
       },
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-    },
-  },
-  sidebar: {
-    dashboard: "Dashboard",
-    usage: "Usage",
-    logs: "Logs",
-    keys: "API Keys",
-    settings: "Settings",
-    billing: "Billing",
-  },
-  dashboard: {
-    title: "Dashboard",
-    creditBalance: "Credit Balance",
-    totalRequests: "Total Requests",
-    totalTokens: "Total Tokens",
-    totalSpend: "Total Spend",
-    currentPeriod: "Current Period",
-    quickLinks: "Quick Links",
-    statusActive: "Active",
-    statusBlocked: "Blocked",
-  },
-  usage: {
-    title: "Usage",
-    period: {
-      days7: "7 days",
-      days30: "30 days",
-      days90: "90 days",
-    },
-    requestsPerDay: "Requests / Day",
-    tokensPerDay: "Tokens / Day",
-    spendPerDay: "Spend / Day",
-    noData: "No data for the selected period",
-  },
-  logs: {
-    title: "Logs",
-    all: "All",
-    filterStatus: "Status Filter",
-    filterModel: "Model Filter",
-    columns: {
-      time: "Time",
-      status: "Status",
-      model: "Model",
-      tokens: "Tokens",
-      cost: "Cost",
-    },
-    details: {
-      id: "Log ID",
-      endpoint: "Endpoint",
-      provider: "Provider",
-      promptTokens: "Prompt Tokens",
-      completionTokens: "Completion Tokens",
-      error: "Error",
-    },
-    noLogs: "No logs yet",
-    expandDetails: "Show details",
-  },
-  keys: {
-    title: "API Keys",
-    createKey: "Create Key",
-    keyName: "Key Name",
-    keyNamePlaceholder: "e.g. my-desktop-key",
-    expires: "Expires",
-    noExpiry: "No expiry",
-    days30: "30 days",
-    days90: "90 days",
-    days365: "1 year",
-    columns: {
-      name: "Name",
-      status: "Status",
-      created: "Created",
-      actions: "Actions",
-    },
-    noKeys: "No keys created yet",
-    deleteConfirm: "Are you sure you want to delete this key?",
-    keyCreated: "Key created",
-    keyCreatedDescription:
-      "This key will only be shown once. Store it in a safe place.",
-    active: "Active",
-    revoked: "Revoked",
-    unnamed: "unnamed-key",
-    forbiddenAction: "You do not have permission for this key.",
-  },
-  settings: {
-    title: "Settings",
-    profile: {
-      title: "Profile",
-      name: "Name",
-      email: "Email",
-      avatar: "Avatar",
-      provider: "Login Provider",
-      gatewayId: "Gateway ID",
-      budgetId: "Budget ID",
-    },
-    connectedAccounts: {
-      title: "Connected Accounts",
-      google: "Google",
-      discord: "Discord",
-    },
-    desktopApp: {
-      title: "Desktop App Connection",
-      description:
-        "Connect your Naia OS desktop app with this account.",
-      issueKey: "Issue Connection Key",
-    },
-    appearance: {
-      title: "Appearance",
-      theme: "Theme",
-      themeLight: "Theme 1 (Light)",
-      themeDark: "Theme 2 (Dark)",
-      themeSystem: "System",
-      language: "Language",
-    },
-    integrations: {
-      title: "Integrations",
-      description: "Chat with Naia from Discord, Google Chat, and more.",
-      discord: {
-        title: "Discord",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Discord, you are already connected.",
-        inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Naia mention or DM.",
-        howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
+      "googleChat": {
+        "title": "دردشة جوجل",
+        "connected": "متصل",
+        "notConnected": "غير متصل",
+        "connectedHint": "إذا قمت بتسجيل الدخول باستخدام Google، فأنت متصل بالفعل.",
+        "howToUse": "أضف تطبيق naia في Google Chat وابدأ المراسلة."
       },
-      googleChat: {
-        title: "Google Chat",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the naia app in Google Chat and start messaging.",
-      },
-      viewGuide: "View Setup Guide",
-    },
+      "viewGuide": "عرض دليل الإعداد"
+    }
   },
-  manual: {
-    title: "User Manual",
-    subtitle: "Naia OS Desktop App Guide",
-    toc: "Table of Contents",
-    prev: "Previous",
-    next: "Next",
-    backToToc: "Back to Table of Contents",
-    sections: {
-      install: "Installation & Deployment",
-      gettingStarted: "Getting Started",
-      mainScreen: "Main Screen",
-      chat: "Chat",
-      history: "Conversation History",
-      progress: "Work Progress",
-      skills: "Skills",
-      channels: "Channels",
-      agents: "Agents",
-      diagnostics: "Diagnostics",
-      settings: "Settings",
-      tools: "Tool Details",
-      lab: "Naia OS",
-      troubleshooting: "Troubleshooting",
-    },
+  "manual": {
+    "title": "دليل المستخدم",
+    "subtitle": "دليل تطبيقات Naia OS لسطح المكتب",
+    "toc": "جدول المحتويات",
+    "prev": "السابق",
+    "next": "التالي",
+    "backToToc": "العودة إلى جدول المحتويات",
+    "sections": {
+      "install": "التثبيت والنشر",
+      "gettingStarted": "البدء",
+      "mainScreen": "الشاشة الرئيسية",
+      "chat": "الدردشة",
+      "history": "تاريخ المحادثة",
+      "progress": "تقدم العمل",
+      "skills": "المهارات",
+      "channels": "القنوات",
+      "agents": "الوكلاء",
+      "diagnostics": "التشخيص",
+      "settings": "الإعدادات",
+      "tools": "تفاصيل الأداة",
+      "lab": "نايا OS",
+      "troubleshooting": "استكشاف الأخطاء وإصلاحها"
+    }
   },
-  billing: {
-    title: "Billing",
-    currentPlan: "Current Plan",
-    creditBalance: "Credit Balance",
-    periodUsage: "Period Usage",
-    comparePlans: "Compare Plans",
-    upgrade: "Upgrade",
-    free: "FREE",
-    basic: "BASIC",
-    currentBadge: "Current",
-    freeFeatures: ["20 signup credits", "Monthly refill minimum 10", "Gemini models access"],
-    basicFeatures: ["100 monthly credits", "Priority support", "High-quality voice"],
-    lemonNotice: "Payments are processed by LemonSqueezy. Please review billing and refund policies.",
-    pricingModelsSynced: "Pricing models synced",
-  },
+  "billing": {
+    "title": "الفواتير",
+    "currentPlan": "الخطة الحالية",
+    "creditBalance": "الرصيد الائتماني",
+    "periodUsage": "استخدام الفترة",
+    "comparePlans": "قارن الخطط",
+    "upgrade": "ترقية",
+    "free": "مجاني",
+    "basic": "الأساسية",
+    "currentBadge": "الحالي",
+    "freeFeatures": [
+      "20 اعتمادات الاشتراك",
+      "إعادة التعبئة الشهرية الحد الأدنى 10",
+      "الوصول إلى نماذج الجوزاء"
+    ],
+    "basicFeatures": [
+      "100 اعتمادات شهرية",
+      "دعم الأولوية",
+      "صوت عالي الجودة"
+    ],
+    "lemonNotice": "تتم معالجة المدفوعات عن طريق LemonSqueezy. يرجى مراجعة سياسات الفوترة واسترداد الأموال.",
+    "pricingModelsSynced": "نماذج التسعير متزامنة"
+  }
 };
 
-export default en;
+export default ar;

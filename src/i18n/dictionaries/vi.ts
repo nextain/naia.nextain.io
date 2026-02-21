@@ -1,306 +1,306 @@
 import type { Dictionary } from "./types";
 
-const en: Dictionary = {
-  locale: "vi",
-  meta: {
-    title: "Naia OS",
-    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+const vi: Dictionary = {
+  "locale": "vi",
+  "meta": {
+    "title": "Hệ điều hành Naia",
+    "description": "Naia OS — AI cá nhân của bạn, được thực hiện dễ dàng. Trò chuyện, trò chuyện và làm việc với hình đại diện 3D AI 아바타."
   },
-  common: {
-    loading: "Loading...",
-    loadingShort: "Loading...",
-    error: "An error occurred",
-    save: "Save",
-    cancel: "Cancel",
-    delete: "Delete",
-    confirm: "Confirm",
-    copy: "Copy",
-    copied: "Copied",
-    comingSoon: "Coming Soon",
-    backTo: "Back",
-    prev: "Prev",
-    next: "Next",
-    page: "Page",
+  "common": {
+    "loading": "Đang tải...",
+    "loadingShort": "Đang tải...",
+    "error": "Đã xảy ra lỗi",
+    "save": "Lưu",
+    "cancel": "Hủy bỏ",
+    "delete": "Xóa",
+    "confirm": "Xác nhận",
+    "copy": "Sao chép",
+    "copied": "Đã sao chép",
+    "comingSoon": "sắp ra mắt",
+    "backTo": "Quay lại",
+    "prev": "Trước đó",
+    "next": "Tiếp theo",
+    "page": "Trang"
   },
-  header: {
-    home: "Home",
-    pricing: "Pricing",
-    faq: "FAQ",
-    download: "Download",
-    login: "Login",
-    dashboard: "Dashboard",
-    toggleMenu: "Toggle menu",
-    manual: "Manual",
+  "header": {
+    "home": "Trang chủ",
+    "pricing": "Định giá",
+    "faq": "Câu hỏi thường gặp",
+    "download": "Tải xuống",
+    "login": "Đăng nhập",
+    "dashboard": "Trang tổng quan",
+    "toggleMenu": "Chuyển đổi menu",
+    "manual": "Hướng dẫn sử dụng"
   },
-  footer: {
-    brand: "Naia OS",
-    tagline: "Where Technology meets Emotion",
-    links: {
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      refund: "Refund Policy",
-      contact: "Contact",
+  "footer": {
+    "brand": "Hệ điều hành Naia",
+    "tagline": "Nơi công nghệ gặp gỡ cảm xúc",
+    "links": {
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản dịch vụ",
+      "refund": "Chính sách hoàn tiền",
+      "contact": "Liên hệ"
     },
-    copyright: "© 2026 Nextain. All rights reserved.",
+    "copyright": "© 2026 Nextain. Mọi quyền được bảo lưu."
   },
-  auth: {
-    loginTitle: "Login / Sign Up",
-    loginDescription: "Get started with your social account",
-    googleLogin: "Continue with Google",
-    discordLogin: "Continue with Discord",
-    logout: "Logout",
-    callbackRedirecting: "Redirecting to desktop app...",
-    callbackManualPrefix: "If it does not open automatically, ",
-    callbackManualLink: "click here",
-    callbackManualSuffix: ".",
+  "auth": {
+    "loginTitle": "Đăng nhập / Đăng ký",
+    "loginDescription": "Bắt đầu với tài khoản xã hội của bạn",
+    "googleLogin": "Tiếp tục với Google",
+    "discordLogin": "Tiếp tục với Discord",
+    "logout": "Đăng xuất",
+    "callbackRedirecting": "Đang chuyển hướng tới ứng dụng dành cho máy tính để bàn...",
+    "callbackManualPrefix": "Nếu nó không tự động mở,",
+    "callbackManualLink": "bấm vào đây",
+    "callbackManualSuffix": "."
   },
-  home: {
-    hero: {
-      title: "The most advanced AI agent, as the perfect OS.",
-      subtitle:
-        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
-      cta: "Get Started Free",
-      secondaryCta: "Download",
+  "home": {
+    "hero": {
+      "title": "Tác nhân AI tiên tiến nhất, là hệ điều hành hoàn hảo.",
+      "subtitle": "Từ tích hợp 3 LLM chính đến điều khiển thiết bị đầu cuối và hình đại diện VRM thể hiện cảm xúc. Một hệ sinh thái AI hoàn chỉnh mà bạn có thể trải nghiệm mà không cần phải là nhà phát triển, Naia OS.",
+      "cta": "Bắt đầu miễn phí",
+      "secondaryCta": "Tải xuống"
     },
-    features: {
-      title: "What makes naia special",
-      subtitle: "Experience the power of AI agents — no coding required",
-      items: {
-        companion: {
-          title: "AI Avatar AI 아바타",
-          description:
-            "A 3D avatar with emotions, right on your desktop. AI 아바타 reacts to conversations with facial expressions and eye contact.",
+    "features": {
+      "title": "Điều gì làm cho Naia trở nên đặc biệt",
+      "subtitle": "Trải nghiệm sức mạnh của tác nhân AI - không cần mã hóa",
+      "items": {
+        "companion": {
+          "title": "AI Avatar AI 아바타",
+          "description": "Hình đại diện 3D đầy cảm xúc, ngay trên màn hình của bạn. AI 아바타 phản ứng với các cuộc trò chuyện bằng nét mặt và giao tiếp bằng mắt."
         },
-        multiProvider: {
-          title: "Gemini Free · More Models Coming Soon",
-          description:
-            "Currently supporting Gemini with free credits. API Key support for Grok, Anthropic(Claude), OpenAI, and Zhipu(GLM) is planned and coming soon.",
+        "multiProvider": {
+          "title": "Gemini Free · Sắp có nhiều mẫu khác",
+          "description": "Hiện đang hỗ trợ Gemini bằng các khoản tín dụng miễn phí. Hỗ trợ API Key cho Grok, Anthropic(Claude), OpenAI và Zhipu(GLM) đã được lên kế hoạch và sắp ra mắt."
         },
-        voice: {
-          title: "Voice Conversations",
-          description:
-            "Ask by voice, get spoken responses. AI 아바타 answers naturally with lip-synced animation.",
+        "voice": {
+          "title": "Cuộc trò chuyện bằng giọng nói",
+          "description": "Hỏi bằng giọng nói, nhận câu trả lời bằng giọng nói. AI 아바타 trả lời một cách tự nhiên bằng hoạt ảnh nhép."
         },
-        tools: {
-          title: "Tool Execution",
-          description:
-            "File editing, terminal commands, web search. AI 아바타 calls tools directly to get work done.",
+        "tools": {
+          "title": "Thực thi công cụ",
+          "description": "Chỉnh sửa tập tin, lệnh đầu cuối, tìm kiếm trên web. AI 아바타 gọi trực tiếp các công cụ để hoàn thành công việc."
         },
-        desktop: {
-          title: "One-click Install & OS",
-          description:
-            "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
-        },
-      },
+        "desktop": {
+          "title": "Cài đặt và hệ điều hành chỉ bằng một cú nhấp chuột",
+          "description": "Cài đặt ứng dụng dành cho máy tính để bàn chỉ bằng một cú nhấp chuột hoặc tạo môi trường AI chuyên dụng với hình ảnh hệ điều hành Linux."
+        }
+      }
     },
-    pricing: {
-      title: "Simple Pricing",
-      subtitle: "Pay only for what you need",
-      policyNote: "Please review billing, refund, and policy documents below.",
-      free: {
-        name: "FREE",
-        price: "$0",
-        period: "forever",
-        description: "Start with just a sign-up",
-        features: [
-          "20 credits on sign-up",
-          "10 credits monthly refill",
-          "Gemini models",
-          "Basic voice chat",
-          "Community support",
+    "pricing": {
+      "title": "Định giá đơn giản",
+      "subtitle": "Chỉ trả tiền cho những gì bạn cần",
+      "policyNote": "Vui lòng xem lại tài liệu thanh toán, hoàn tiền và chính sách bên dưới.",
+      "free": {
+        "name": "MIỄN PHÍ",
+        "price": "$0",
+        "period": "mãi mãi",
+        "description": "Bắt đầu chỉ bằng việc đăng ký",
+        "features": [
+          "20 tín dụng khi đăng ký",
+          "10 tín dụng nạp lại hàng tháng",
+          "Người mẫu Song Tử",
+          "Trò chuyện thoại cơ bản",
+          "Hỗ trợ cộng đồng"
         ],
-        cta: "Start Free",
+        "cta": "Bắt đầu miễn phí"
       },
-      basic: {
-        name: "BASIC",
-        price: "$10",
-        period: "mo",
-        description: "For those who want more",
-        features: [
-          "100 credits monthly",
-          "Gemini models",
-          "High-quality voice chat",
-          "Priority support",
-          "Advanced voice features",
+      "basic": {
+        "name": "CƠ BẢN",
+        "price": "$10",
+        "period": "mo",
+        "description": "Dành cho những ai muốn nhiều hơn nữa",
+        "features": [
+          "100 tín chỉ hàng tháng",
+          "Người mẫu Song Tử",
+          "Trò chuyện bằng giọng nói chất lượng cao",
+          "Hỗ trợ ưu tiên",
+          "Tính năng giọng nói nâng cao"
         ],
-        cta: "Upgrade",
+        "cta": "Nâng cấp"
+      }
+    },
+    "faq": {
+      "title": "Câu hỏi thường gặp"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Trang tổng quan",
+    "usage": "Cách sử dụng",
+    "logs": "Nhật ký",
+    "keys": "Khóa API",
+    "settings": "Cài đặt",
+    "billing": "Thanh toán"
+  },
+  "dashboard": {
+    "title": "Trang tổng quan",
+    "creditBalance": "Số dư tín dụng",
+    "totalRequests": "Tổng số yêu cầu",
+    "totalTokens": "Tổng số token",
+    "totalSpend": "Tổng chi tiêu",
+    "currentPeriod": "Giai đoạn hiện tại",
+    "quickLinks": "Liên kết nhanh",
+    "statusActive": "Đang hoạt động",
+    "statusBlocked": "Bị chặn"
+  },
+  "usage": {
+    "title": "Cách sử dụng",
+    "period": {
+      "days7": "7 ngày",
+      "days30": "30 ngày",
+      "days90": "90 ngày"
+    },
+    "requestsPerDay": "Yêu cầu / Ngày",
+    "tokensPerDay": "Token / Ngày",
+    "spendPerDay": "Chi tiêu/Ngày",
+    "noData": "Không có dữ liệu cho khoảng thời gian đã chọn"
+  },
+  "logs": {
+    "title": "Nhật ký",
+    "all": "Tất cả",
+    "filterStatus": "Bộ lọc trạng thái",
+    "filterModel": "Bộ lọc mô hình",
+    "columns": {
+      "time": "thời gian",
+      "status": "Trạng thái",
+      "model": "người mẫu",
+      "tokens": "Mã thông báo",
+      "cost": "Chi phí"
+    },
+    "details": {
+      "id": "ID nhật ký",
+      "endpoint": "Điểm cuối",
+      "provider": "nhà cung cấp",
+      "promptTokens": "Mã thông báo nhắc nhở",
+      "completionTokens": "Mã thông báo hoàn thành",
+      "error": "Lỗi"
+    },
+    "noLogs": "Chưa có nhật ký nào",
+    "expandDetails": "Hiển thị chi tiết"
+  },
+  "keys": {
+    "title": "Khóa API",
+    "createKey": "Tạo khóa",
+    "keyName": "Tên khóa",
+    "keyNamePlaceholder": "ví dụ. phím-máy tính để bàn của tôi",
+    "expires": "Hết hạn",
+    "noExpiry": "Không hết hạn",
+    "days30": "30 ngày",
+    "days90": "90 ngày",
+    "days365": "1 năm",
+    "columns": {
+      "name": "Tên",
+      "status": "Trạng thái",
+      "created": "Đã tạo",
+      "actions": "hành động"
+    },
+    "noKeys": "Chưa có khóa nào được tạo",
+    "deleteConfirm": "Bạn có chắc chắn muốn xóa khóa này không?",
+    "keyCreated": "Đã tạo khóa",
+    "keyCreatedDescription": "Chìa khóa này sẽ chỉ được hiển thị một lần. Lưu trữ nó ở một nơi an toàn.",
+    "active": "Đang hoạt động",
+    "revoked": "Đã thu hồi",
+    "unnamed": "khóa không tên",
+    "forbiddenAction": "Bạn không có quyền đối với khóa này."
+  },
+  "settings": {
+    "title": "Cài đặt",
+    "profile": {
+      "title": "Hồ sơ",
+      "name": "Tên",
+      "email": "Email",
+      "avatar": "Hình đại diện",
+      "provider": "Đăng nhập nhà cung cấp",
+      "gatewayId": "ID cổng",
+      "budgetId": "Mã ngân sách"
+    },
+    "connectedAccounts": {
+      "title": "Tài khoản được kết nối",
+      "google": "Google",
+      "discord": "Bất hòa"
+    },
+    "desktopApp": {
+      "title": "Kết nối ứng dụng máy tính để bàn",
+      "description": "Kết nối ứng dụng máy tính để bàn Naia OS của bạn với tài khoản này.",
+      "issueKey": "Vấn đề về khóa kết nối"
+    },
+    "appearance": {
+      "title": "Ngoại hình",
+      "theme": "chủ đề",
+      "themeLight": "Chủ đề 1 (Ánh sáng)",
+      "themeDark": "Chủ đề 2 (Tối)",
+      "themeSystem": "Hệ thống",
+      "language": "Ngôn ngữ"
+    },
+    "integrations": {
+      "title": "Tích hợp",
+      "description": "Trò chuyện với Naia từ Discord, Google Chat, v.v.",
+      "discord": {
+        "title": "Bất hòa",
+        "connected": "Đã kết nối",
+        "notConnected": "Chưa kết nối",
+        "connectedHint": "Nếu bạn đăng nhập bằng Discord thì bạn đã được kết nối.",
+        "inviteBot": "Thêm Bot vào máy chủ",
+        "inviteBotDescription": "Thêm bot này vào máy chủ của bạn để trò chuyện qua @Naia đề cập hoặc DM.",
+        "howToUse": "Đề cập đến @botname trong máy chủ của bạn hoặc gửi tin nhắn trực tiếp. Tín dụng được tự động tính vào tài khoản này."
       },
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-    },
-  },
-  sidebar: {
-    dashboard: "Dashboard",
-    usage: "Usage",
-    logs: "Logs",
-    keys: "API Keys",
-    settings: "Settings",
-    billing: "Billing",
-  },
-  dashboard: {
-    title: "Dashboard",
-    creditBalance: "Credit Balance",
-    totalRequests: "Total Requests",
-    totalTokens: "Total Tokens",
-    totalSpend: "Total Spend",
-    currentPeriod: "Current Period",
-    quickLinks: "Quick Links",
-    statusActive: "Active",
-    statusBlocked: "Blocked",
-  },
-  usage: {
-    title: "Usage",
-    period: {
-      days7: "7 days",
-      days30: "30 days",
-      days90: "90 days",
-    },
-    requestsPerDay: "Requests / Day",
-    tokensPerDay: "Tokens / Day",
-    spendPerDay: "Spend / Day",
-    noData: "No data for the selected period",
-  },
-  logs: {
-    title: "Logs",
-    all: "All",
-    filterStatus: "Status Filter",
-    filterModel: "Model Filter",
-    columns: {
-      time: "Time",
-      status: "Status",
-      model: "Model",
-      tokens: "Tokens",
-      cost: "Cost",
-    },
-    details: {
-      id: "Log ID",
-      endpoint: "Endpoint",
-      provider: "Provider",
-      promptTokens: "Prompt Tokens",
-      completionTokens: "Completion Tokens",
-      error: "Error",
-    },
-    noLogs: "No logs yet",
-    expandDetails: "Show details",
-  },
-  keys: {
-    title: "API Keys",
-    createKey: "Create Key",
-    keyName: "Key Name",
-    keyNamePlaceholder: "e.g. my-desktop-key",
-    expires: "Expires",
-    noExpiry: "No expiry",
-    days30: "30 days",
-    days90: "90 days",
-    days365: "1 year",
-    columns: {
-      name: "Name",
-      status: "Status",
-      created: "Created",
-      actions: "Actions",
-    },
-    noKeys: "No keys created yet",
-    deleteConfirm: "Are you sure you want to delete this key?",
-    keyCreated: "Key created",
-    keyCreatedDescription:
-      "This key will only be shown once. Store it in a safe place.",
-    active: "Active",
-    revoked: "Revoked",
-    unnamed: "unnamed-key",
-    forbiddenAction: "You do not have permission for this key.",
-  },
-  settings: {
-    title: "Settings",
-    profile: {
-      title: "Profile",
-      name: "Name",
-      email: "Email",
-      avatar: "Avatar",
-      provider: "Login Provider",
-      gatewayId: "Gateway ID",
-      budgetId: "Budget ID",
-    },
-    connectedAccounts: {
-      title: "Connected Accounts",
-      google: "Google",
-      discord: "Discord",
-    },
-    desktopApp: {
-      title: "Desktop App Connection",
-      description:
-        "Connect your Naia OS desktop app with this account.",
-      issueKey: "Issue Connection Key",
-    },
-    appearance: {
-      title: "Appearance",
-      theme: "Theme",
-      themeLight: "Theme 1 (Light)",
-      themeDark: "Theme 2 (Dark)",
-      themeSystem: "System",
-      language: "Language",
-    },
-    integrations: {
-      title: "Integrations",
-      description: "Chat with Naia from Discord, Google Chat, and more.",
-      discord: {
-        title: "Discord",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Discord, you are already connected.",
-        inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Naia mention or DM.",
-        howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
+      "googleChat": {
+        "title": "Google Trò chuyện",
+        "connected": "Đã kết nối",
+        "notConnected": "Chưa kết nối",
+        "connectedHint": "Nếu bạn đăng nhập bằng Google, bạn đã được kết nối.",
+        "howToUse": "Thêm ứng dụng naia vào Google Chat và bắt đầu nhắn tin."
       },
-      googleChat: {
-        title: "Google Chat",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the naia app in Google Chat and start messaging.",
-      },
-      viewGuide: "View Setup Guide",
-    },
+      "viewGuide": "Xem hướng dẫn thiết lập"
+    }
   },
-  manual: {
-    title: "User Manual",
-    subtitle: "Naia OS Desktop App Guide",
-    toc: "Table of Contents",
-    prev: "Previous",
-    next: "Next",
-    backToToc: "Back to Table of Contents",
-    sections: {
-      install: "Installation & Deployment",
-      gettingStarted: "Getting Started",
-      mainScreen: "Main Screen",
-      chat: "Chat",
-      history: "Conversation History",
-      progress: "Work Progress",
-      skills: "Skills",
-      channels: "Channels",
-      agents: "Agents",
-      diagnostics: "Diagnostics",
-      settings: "Settings",
-      tools: "Tool Details",
-      lab: "Naia OS",
-      troubleshooting: "Troubleshooting",
-    },
+  "manual": {
+    "title": "Hướng dẫn sử dụng",
+    "subtitle": "Hướng dẫn ứng dụng máy tính để bàn Naia OS",
+    "toc": "Mục lục",
+    "prev": "trước đó",
+    "next": "Tiếp theo",
+    "backToToc": "Quay lại Mục lục",
+    "sections": {
+      "install": "Cài đặt & Triển khai",
+      "gettingStarted": "Bắt đầu",
+      "mainScreen": "Màn hình chính",
+      "chat": "Trò chuyện",
+      "history": "Lịch sử hội thoại",
+      "progress": "Tiến độ công việc",
+      "skills": "Kỹ năng",
+      "channels": "Kênh",
+      "agents": "Đại lý",
+      "diagnostics": "Chẩn đoán",
+      "settings": "Cài đặt",
+      "tools": "Chi tiết công cụ",
+      "lab": "Hệ điều hành Naia",
+      "troubleshooting": "Khắc phục sự cố"
+    }
   },
-  billing: {
-    title: "Billing",
-    currentPlan: "Current Plan",
-    creditBalance: "Credit Balance",
-    periodUsage: "Period Usage",
-    comparePlans: "Compare Plans",
-    upgrade: "Upgrade",
-    free: "FREE",
-    basic: "BASIC",
-    currentBadge: "Current",
-    freeFeatures: ["20 signup credits", "Monthly refill minimum 10", "Gemini models access"],
-    basicFeatures: ["100 monthly credits", "Priority support", "High-quality voice"],
-    lemonNotice: "Payments are processed by LemonSqueezy. Please review billing and refund policies.",
-    pricingModelsSynced: "Pricing models synced",
-  },
+  "billing": {
+    "title": "Thanh toán",
+    "currentPlan": "Gói hiện tại",
+    "creditBalance": "Số dư tín dụng",
+    "periodUsage": "Thời gian sử dụng",
+    "comparePlans": "So sánh các gói",
+    "upgrade": "Nâng cấp",
+    "free": "MIỄN PHÍ",
+    "basic": "CƠ BẢN",
+    "currentBadge": "hiện tại",
+    "freeFeatures": [
+      "20 tín dụng đăng ký",
+      "Nạp tiền hàng tháng tối thiểu 10",
+      "Quyền truy cập của người mẫu Song Tử"
+    ],
+    "basicFeatures": [
+      "100 tín dụng hàng tháng",
+      "Hỗ trợ ưu tiên",
+      "Giọng nói chất lượng cao"
+    ],
+    "lemonNotice": "Thanh toán được xử lý bởi LemonSqueezy. Vui lòng xem lại chính sách thanh toán và hoàn tiền.",
+    "pricingModelsSynced": "Đã đồng bộ hóa mô hình định giá"
+  }
 };
 
-export default en;
+export default vi;

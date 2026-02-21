@@ -1,306 +1,306 @@
 import type { Dictionary } from "./types";
 
-const en: Dictionary = {
-  locale: "hi",
-  meta: {
-    title: "Naia OS",
-    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+const hi: Dictionary = {
+  "locale": "hi",
+  "meta": {
+    "title": "नाया ओएस",
+    "description": "नाया ओएस - आपका व्यक्तिगत एआई, आसान बना दिया गया। 3डी अवतार एआई के साथ चैट करें, बात करें और काम करें।"
   },
-  common: {
-    loading: "Loading...",
-    loadingShort: "Loading...",
-    error: "An error occurred",
-    save: "Save",
-    cancel: "Cancel",
-    delete: "Delete",
-    confirm: "Confirm",
-    copy: "Copy",
-    copied: "Copied",
-    comingSoon: "Coming Soon",
-    backTo: "Back",
-    prev: "Prev",
-    next: "Next",
-    page: "Page",
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "loadingShort": "लोड हो रहा है...",
+    "error": "एक त्रुटि हुई",
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "delete": "हटाएँ",
+    "confirm": "पुष्टि करें",
+    "copy": "प्रतिलिपि",
+    "copied": "नकल की गई",
+    "comingSoon": "जल्द आ रहा है",
+    "backTo": "वापस",
+    "prev": "पिछला",
+    "next": "अगला",
+    "page": "पेज"
   },
-  header: {
-    home: "Home",
-    pricing: "Pricing",
-    faq: "FAQ",
-    download: "Download",
-    login: "Login",
-    dashboard: "Dashboard",
-    toggleMenu: "Toggle menu",
-    manual: "Manual",
+  "header": {
+    "home": "घर",
+    "pricing": "मूल्य निर्धारण",
+    "faq": "अक्सर पूछे जाने वाले प्रश्न",
+    "download": "डाउनलोड करें",
+    "login": "लॉग इन करें",
+    "dashboard": "डैशबोर्ड",
+    "toggleMenu": "मेनू टॉगल करें",
+    "manual": "मैनुअल"
   },
-  footer: {
-    brand: "Naia OS",
-    tagline: "Where Technology meets Emotion",
-    links: {
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      refund: "Refund Policy",
-      contact: "Contact",
+  "footer": {
+    "brand": "नाया ओएस",
+    "tagline": "जहां प्रौद्योगिकी भावना से मिलती है",
+    "links": {
+      "privacy": "गोपनीयता नीति",
+      "terms": "सेवा की शर्तें",
+      "refund": "धनवापसी नीति",
+      "contact": "संपर्क करें"
     },
-    copyright: "© 2026 Nextain. All rights reserved.",
+    "copyright": "© 2026 नेक्स्टैन। सर्वाधिकार सुरक्षित।"
   },
-  auth: {
-    loginTitle: "Login / Sign Up",
-    loginDescription: "Get started with your social account",
-    googleLogin: "Continue with Google",
-    discordLogin: "Continue with Discord",
-    logout: "Logout",
-    callbackRedirecting: "Redirecting to desktop app...",
-    callbackManualPrefix: "If it does not open automatically, ",
-    callbackManualLink: "click here",
-    callbackManualSuffix: ".",
+  "auth": {
+    "loginTitle": "लॉगइन/साइन अप करें",
+    "loginDescription": "अपने सामाजिक खाते से शुरुआत करें",
+    "googleLogin": "Google के साथ जारी रखें",
+    "discordLogin": "कलह जारी रखें",
+    "logout": "लॉगआउट करें",
+    "callbackRedirecting": "डेस्कटॉप ऐप पर रीडायरेक्ट किया जा रहा है...",
+    "callbackManualPrefix": "यदि यह स्वचालित रूप से नहीं खुलता है,",
+    "callbackManualLink": "यहां क्लिक करें",
+    "callbackManualSuffix": "."
   },
-  home: {
-    hero: {
-      title: "The most advanced AI agent, as the perfect OS.",
-      subtitle:
-        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
-      cta: "Get Started Free",
-      secondaryCta: "Download",
+  "home": {
+    "hero": {
+      "title": "सबसे उन्नत एआई एजेंट, उत्तम ओएस के रूप में।",
+      "subtitle": "3 प्रमुख एलएलएम एकीकरण से लेकर टर्मिनल नियंत्रण तक, और एक वीआरएम अवतार जो भावनाओं को व्यक्त करता है। एक संपूर्ण एआई पारिस्थितिकी तंत्र जिसे आप डेवलपर हुए बिना अनुभव कर सकते हैं, नाया ओएस।",
+      "cta": "निःशुल्क आरंभ करें",
+      "secondaryCta": "डाउनलोड करें"
     },
-    features: {
-      title: "What makes naia special",
-      subtitle: "Experience the power of AI agents — no coding required",
-      items: {
-        companion: {
-          title: "AI Avatar AI 아바타",
-          description:
-            "A 3D avatar with emotions, right on your desktop. AI 아바타 reacts to conversations with facial expressions and eye contact.",
+    "features": {
+      "title": "नाया को क्या खास बनाता है",
+      "subtitle": "एआई एजेंटों की शक्ति का अनुभव करें - कोडिंग की आवश्यकता नहीं है",
+      "items": {
+        "companion": {
+          "title": "एआई अवतार एआई 아바타",
+          "description": "भावनाओं के साथ एक 3डी अवतार, सीधे आपके डेस्कटॉप पर। AI चेहरे के भाव और आंखों के संपर्क के साथ बातचीत पर प्रतिक्रिया करता है।"
         },
-        multiProvider: {
-          title: "Gemini Free · More Models Coming Soon",
-          description:
-            "Currently supporting Gemini with free credits. API Key support for Grok, Anthropic(Claude), OpenAI, and Zhipu(GLM) is planned and coming soon.",
+        "multiProvider": {
+          "title": "जेमिनी फ्री · अधिक मॉडल जल्द ही आ रहे हैं",
+          "description": "वर्तमान में मुफ़्त क्रेडिट के साथ जेमिनी का समर्थन कर रहा हूँ। ग्रोक, एंथ्रोपिक (क्लाउड), ओपनएआई और जिपु (जीएलएम) के लिए एपीआई कुंजी समर्थन की योजना बनाई गई है और जल्द ही आ रही है।"
         },
-        voice: {
-          title: "Voice Conversations",
-          description:
-            "Ask by voice, get spoken responses. AI 아바타 answers naturally with lip-synced animation.",
+        "voice": {
+          "title": "आवाज वार्तालाप",
+          "description": "बोलकर पूछें, बोलकर जवाब पाएं। AI लिप-सिंक एनीमेशन के साथ स्वाभाविक रूप से उत्तर देता है।"
         },
-        tools: {
-          title: "Tool Execution",
-          description:
-            "File editing, terminal commands, web search. AI 아바타 calls tools directly to get work done.",
+        "tools": {
+          "title": "उपकरण निष्पादन",
+          "description": "फ़ाइल संपादन, टर्मिनल कमांड, वेब खोज। AI काम पूरा करने के लिए सीधे टूल को कॉल करता है।"
         },
-        desktop: {
-          title: "One-click Install & OS",
-          description:
-            "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
-        },
-      },
+        "desktop": {
+          "title": "एक-क्लिक इंस्टॉल और ओएस",
+          "description": "एक क्लिक से डेस्कटॉप ऐप इंस्टॉल करें, या लिनक्स ओएस छवि के साथ एक समर्पित एआई वातावरण बनाएं।"
+        }
+      }
     },
-    pricing: {
-      title: "Simple Pricing",
-      subtitle: "Pay only for what you need",
-      policyNote: "Please review billing, refund, and policy documents below.",
-      free: {
-        name: "FREE",
-        price: "$0",
-        period: "forever",
-        description: "Start with just a sign-up",
-        features: [
-          "20 credits on sign-up",
-          "10 credits monthly refill",
-          "Gemini models",
-          "Basic voice chat",
-          "Community support",
+    "pricing": {
+      "title": "सरल मूल्य निर्धारण",
+      "subtitle": "केवल उसी के लिए भुगतान करें जिसकी आपको आवश्यकता है",
+      "policyNote": "कृपया नीचे बिलिंग, रिफंड और पॉलिसी दस्तावेज़ों की समीक्षा करें।",
+      "free": {
+        "name": "मुफ़्त",
+        "price": "$0",
+        "period": "हमेशा के लिए",
+        "description": "बस एक साइन-अप से शुरुआत करें",
+        "features": [
+          "साइन-अप पर 20 क्रेडिट",
+          "10 क्रेडिट मासिक रिफिल",
+          "मिथुन मॉडल",
+          "बुनियादी ध्वनि चैट",
+          "सामुदायिक समर्थन"
         ],
-        cta: "Start Free",
+        "cta": "निःशुल्क प्रारंभ करें"
       },
-      basic: {
-        name: "BASIC",
-        price: "$10",
-        period: "mo",
-        description: "For those who want more",
-        features: [
-          "100 credits monthly",
-          "Gemini models",
-          "High-quality voice chat",
-          "Priority support",
-          "Advanced voice features",
+      "basic": {
+        "name": "बुनियादी",
+        "price": "$10",
+        "period": "मो",
+        "description": "उन लोगों के लिए जो अधिक चाहते हैं",
+        "features": [
+          "100 क्रेडिट मासिक",
+          "मिथुन मॉडल",
+          "उच्च गुणवत्ता वाली वॉयस चैट",
+          "प्राथमिकता समर्थन",
+          "उन्नत आवाज सुविधाएँ"
         ],
-        cta: "Upgrade",
+        "cta": "अपग्रेड करें"
+      }
+    },
+    "faq": {
+      "title": "अक्सर पूछे जाने वाले प्रश्न"
+    }
+  },
+  "sidebar": {
+    "dashboard": "डैशबोर्ड",
+    "usage": "उपयोग",
+    "logs": "लॉग",
+    "keys": "एपीआई कुंजी",
+    "settings": "सेटिंग्स",
+    "billing": "बिलिंग"
+  },
+  "dashboard": {
+    "title": "डैशबोर्ड",
+    "creditBalance": "क्रेडिट शेष",
+    "totalRequests": "कुल अनुरोध",
+    "totalTokens": "कुल टोकन",
+    "totalSpend": "कुल व्यय",
+    "currentPeriod": "वर्तमान काल",
+    "quickLinks": "त्वरित लिंक",
+    "statusActive": "सक्रिय",
+    "statusBlocked": "अवरुद्ध"
+  },
+  "usage": {
+    "title": "उपयोग",
+    "period": {
+      "days7": "7 दिन",
+      "days30": "30 दिन",
+      "days90": "90 दिन"
+    },
+    "requestsPerDay": "अनुरोध/दिन",
+    "tokensPerDay": "टोकन/दिन",
+    "spendPerDay": "खर्च/दिन",
+    "noData": "चयनित अवधि के लिए कोई डेटा नहीं"
+  },
+  "logs": {
+    "title": "लॉग",
+    "all": "सब",
+    "filterStatus": "स्थिति फ़िल्टर",
+    "filterModel": "मॉडल फ़िल्टर",
+    "columns": {
+      "time": "समय",
+      "status": "स्थिति",
+      "model": "मॉडल",
+      "tokens": "टोकन",
+      "cost": "लागत"
+    },
+    "details": {
+      "id": "लॉग आईडी",
+      "endpoint": "समापन बिंदु",
+      "provider": "प्रदाता",
+      "promptTokens": "शीघ्र टोकन",
+      "completionTokens": "समापन टोकन",
+      "error": "त्रुटि"
+    },
+    "noLogs": "अभी तक कोई लॉग नहीं",
+    "expandDetails": "विवरण दिखाएँ"
+  },
+  "keys": {
+    "title": "एपीआई कुंजी",
+    "createKey": "कुंजी बनाएँ",
+    "keyName": "कुंजी का नाम",
+    "keyNamePlaceholder": "जैसे मेरी-डेस्कटॉप-कुंजी",
+    "expires": "समाप्त हो रहा है",
+    "noExpiry": "कोई समाप्ति नहीं",
+    "days30": "30 दिन",
+    "days90": "90 दिन",
+    "days365": "1 वर्ष",
+    "columns": {
+      "name": "नाम",
+      "status": "स्थिति",
+      "created": "बनाया गया",
+      "actions": "क्रियाएँ"
+    },
+    "noKeys": "अभी तक कोई कुंजी नहीं बनाई गई",
+    "deleteConfirm": "क्या आप वाकई इस कुंजी को हटाना चाहते हैं?",
+    "keyCreated": "कुंजी बनाई गई",
+    "keyCreatedDescription": "यह कुंजी केवल एक बार दिखाई जाएगी. इसे किसी सुरक्षित स्थान पर रखें.",
+    "active": "सक्रिय",
+    "revoked": "निरस्त किया गया",
+    "unnamed": "अनाम-कुंजी",
+    "forbiddenAction": "आपके पास इस कुंजी की अनुमति नहीं है."
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "profile": {
+      "title": "प्रोफाइल",
+      "name": "नाम",
+      "email": "ईमेल",
+      "avatar": "अवतार",
+      "provider": "लॉगिन प्रदाता",
+      "gatewayId": "गेटवे आईडी",
+      "budgetId": "बजट आईडी"
+    },
+    "connectedAccounts": {
+      "title": "जुड़े हुए खाते",
+      "google": "गूगल",
+      "discord": "कलह"
+    },
+    "desktopApp": {
+      "title": "डेस्कटॉप ऐप कनेक्शन",
+      "description": "अपने Naia OS डेस्कटॉप ऐप को इस खाते से कनेक्ट करें।",
+      "issueKey": "कनेक्शन कुंजी जारी करें"
+    },
+    "appearance": {
+      "title": "दिखावट",
+      "theme": "थीम",
+      "themeLight": "थीम 1 (प्रकाश)",
+      "themeDark": "थीम 2 (डार्क)",
+      "themeSystem": "सिस्टम",
+      "language": "भाषा"
+    },
+    "integrations": {
+      "title": "एकीकरण",
+      "description": "डिस्कोर्ड, गूगल चैट और अन्य से नाया के साथ चैट करें।",
+      "discord": {
+        "title": "कलह",
+        "connected": "जुड़ा हुआ",
+        "notConnected": "कनेक्टेड नहीं",
+        "connectedHint": "यदि आपने डिस्कॉर्ड से लॉग इन किया है, तो आप पहले से ही जुड़े हुए हैं।",
+        "inviteBot": "सर्वर में बॉट जोड़ें",
+        "inviteBotDescription": "@Naia उल्लेख या DM के माध्यम से चैट करने के लिए इस बॉट को अपने सर्वर में जोड़ें।",
+        "howToUse": "अपने सर्वर में @botname का उल्लेख करें या एक DM भेजें। इस खाते से स्वचालित रूप से क्रेडिट शुल्क लिया जाता है."
       },
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-    },
-  },
-  sidebar: {
-    dashboard: "Dashboard",
-    usage: "Usage",
-    logs: "Logs",
-    keys: "API Keys",
-    settings: "Settings",
-    billing: "Billing",
-  },
-  dashboard: {
-    title: "Dashboard",
-    creditBalance: "Credit Balance",
-    totalRequests: "Total Requests",
-    totalTokens: "Total Tokens",
-    totalSpend: "Total Spend",
-    currentPeriod: "Current Period",
-    quickLinks: "Quick Links",
-    statusActive: "Active",
-    statusBlocked: "Blocked",
-  },
-  usage: {
-    title: "Usage",
-    period: {
-      days7: "7 days",
-      days30: "30 days",
-      days90: "90 days",
-    },
-    requestsPerDay: "Requests / Day",
-    tokensPerDay: "Tokens / Day",
-    spendPerDay: "Spend / Day",
-    noData: "No data for the selected period",
-  },
-  logs: {
-    title: "Logs",
-    all: "All",
-    filterStatus: "Status Filter",
-    filterModel: "Model Filter",
-    columns: {
-      time: "Time",
-      status: "Status",
-      model: "Model",
-      tokens: "Tokens",
-      cost: "Cost",
-    },
-    details: {
-      id: "Log ID",
-      endpoint: "Endpoint",
-      provider: "Provider",
-      promptTokens: "Prompt Tokens",
-      completionTokens: "Completion Tokens",
-      error: "Error",
-    },
-    noLogs: "No logs yet",
-    expandDetails: "Show details",
-  },
-  keys: {
-    title: "API Keys",
-    createKey: "Create Key",
-    keyName: "Key Name",
-    keyNamePlaceholder: "e.g. my-desktop-key",
-    expires: "Expires",
-    noExpiry: "No expiry",
-    days30: "30 days",
-    days90: "90 days",
-    days365: "1 year",
-    columns: {
-      name: "Name",
-      status: "Status",
-      created: "Created",
-      actions: "Actions",
-    },
-    noKeys: "No keys created yet",
-    deleteConfirm: "Are you sure you want to delete this key?",
-    keyCreated: "Key created",
-    keyCreatedDescription:
-      "This key will only be shown once. Store it in a safe place.",
-    active: "Active",
-    revoked: "Revoked",
-    unnamed: "unnamed-key",
-    forbiddenAction: "You do not have permission for this key.",
-  },
-  settings: {
-    title: "Settings",
-    profile: {
-      title: "Profile",
-      name: "Name",
-      email: "Email",
-      avatar: "Avatar",
-      provider: "Login Provider",
-      gatewayId: "Gateway ID",
-      budgetId: "Budget ID",
-    },
-    connectedAccounts: {
-      title: "Connected Accounts",
-      google: "Google",
-      discord: "Discord",
-    },
-    desktopApp: {
-      title: "Desktop App Connection",
-      description:
-        "Connect your Naia OS desktop app with this account.",
-      issueKey: "Issue Connection Key",
-    },
-    appearance: {
-      title: "Appearance",
-      theme: "Theme",
-      themeLight: "Theme 1 (Light)",
-      themeDark: "Theme 2 (Dark)",
-      themeSystem: "System",
-      language: "Language",
-    },
-    integrations: {
-      title: "Integrations",
-      description: "Chat with Naia from Discord, Google Chat, and more.",
-      discord: {
-        title: "Discord",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Discord, you are already connected.",
-        inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Naia mention or DM.",
-        howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
+      "googleChat": {
+        "title": "गूगल चैट",
+        "connected": "जुड़ा हुआ",
+        "notConnected": "कनेक्टेड नहीं",
+        "connectedHint": "यदि आपने Google से लॉग इन किया है, तो आप पहले से ही कनेक्ट हैं।",
+        "howToUse": "Google चैट में naia ऐप जोड़ें और मैसेजिंग प्रारंभ करें।"
       },
-      googleChat: {
-        title: "Google Chat",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the naia app in Google Chat and start messaging.",
-      },
-      viewGuide: "View Setup Guide",
-    },
+      "viewGuide": "सेटअप गाइड देखें"
+    }
   },
-  manual: {
-    title: "User Manual",
-    subtitle: "Naia OS Desktop App Guide",
-    toc: "Table of Contents",
-    prev: "Previous",
-    next: "Next",
-    backToToc: "Back to Table of Contents",
-    sections: {
-      install: "Installation & Deployment",
-      gettingStarted: "Getting Started",
-      mainScreen: "Main Screen",
-      chat: "Chat",
-      history: "Conversation History",
-      progress: "Work Progress",
-      skills: "Skills",
-      channels: "Channels",
-      agents: "Agents",
-      diagnostics: "Diagnostics",
-      settings: "Settings",
-      tools: "Tool Details",
-      lab: "Naia OS",
-      troubleshooting: "Troubleshooting",
-    },
+  "manual": {
+    "title": "उपयोगकर्ता मैनुअल",
+    "subtitle": "नाया ओएस डेस्कटॉप ऐप गाइड",
+    "toc": "सामग्री तालिका",
+    "prev": "पिछला",
+    "next": "अगला",
+    "backToToc": "विषय-सूची पर वापस जाएँ",
+    "sections": {
+      "install": "स्थापना एवं परिनियोजन",
+      "gettingStarted": "आरंभ करना",
+      "mainScreen": "मुख्य स्क्रीन",
+      "chat": "बातचीत",
+      "history": "बातचीत का इतिहास",
+      "progress": "कार्य प्रगति",
+      "skills": "कौशल",
+      "channels": "चैनल",
+      "agents": "एजेंट",
+      "diagnostics": "निदान",
+      "settings": "सेटिंग्स",
+      "tools": "उपकरण विवरण",
+      "lab": "नाया ओएस",
+      "troubleshooting": "समस्या निवारण"
+    }
   },
-  billing: {
-    title: "Billing",
-    currentPlan: "Current Plan",
-    creditBalance: "Credit Balance",
-    periodUsage: "Period Usage",
-    comparePlans: "Compare Plans",
-    upgrade: "Upgrade",
-    free: "FREE",
-    basic: "BASIC",
-    currentBadge: "Current",
-    freeFeatures: ["20 signup credits", "Monthly refill minimum 10", "Gemini models access"],
-    basicFeatures: ["100 monthly credits", "Priority support", "High-quality voice"],
-    lemonNotice: "Payments are processed by LemonSqueezy. Please review billing and refund policies.",
-    pricingModelsSynced: "Pricing models synced",
-  },
+  "billing": {
+    "title": "बिलिंग",
+    "currentPlan": "वर्तमान योजना",
+    "creditBalance": "क्रेडिट शेष",
+    "periodUsage": "अवधि उपयोग",
+    "comparePlans": "योजनाओं की तुलना करें",
+    "upgrade": "अपग्रेड करें",
+    "free": "मुफ़्त",
+    "basic": "बुनियादी",
+    "currentBadge": "वर्तमान",
+    "freeFeatures": [
+      "20 साइनअप क्रेडिट",
+      "मासिक रिफिल न्यूनतम 10",
+      "जेमिनी मॉडल एक्सेस"
+    ],
+    "basicFeatures": [
+      "100 मासिक क्रेडिट",
+      "प्राथमिकता समर्थन",
+      "उच्च गुणवत्ता वाली आवाज"
+    ],
+    "lemonNotice": "भुगतान लेमनस्क्वीज़ी द्वारा संसाधित किए जाते हैं। कृपया बिलिंग और धनवापसी नीतियों की समीक्षा करें।",
+    "pricingModelsSynced": "मूल्य निर्धारण मॉडल समन्वयित"
+  }
 };
 
-export default en;
+export default hi;

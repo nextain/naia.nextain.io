@@ -1,306 +1,306 @@
 import type { Dictionary } from "./types";
 
-const en: Dictionary = {
-  locale: "pt",
-  meta: {
-    title: "Naia OS",
-    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+const pt: Dictionary = {
+  "locale": "pt",
+  "meta": {
+    "title": "Naia OS",
+    "description": "Naia OS — Sua IA pessoal, facilitada. Converse, converse e trabalhe com avatar 3D AI 아바타."
   },
-  common: {
-    loading: "Loading...",
-    loadingShort: "Loading...",
-    error: "An error occurred",
-    save: "Save",
-    cancel: "Cancel",
-    delete: "Delete",
-    confirm: "Confirm",
-    copy: "Copy",
-    copied: "Copied",
-    comingSoon: "Coming Soon",
-    backTo: "Back",
-    prev: "Prev",
-    next: "Next",
-    page: "Page",
+  "common": {
+    "loading": "Carregando...",
+    "loadingShort": "Carregando...",
+    "error": "Ocorreu um erro",
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "confirm": "Confirmar",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "comingSoon": "Em breve",
+    "backTo": "Voltar",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "page": "Página"
   },
-  header: {
-    home: "Home",
-    pricing: "Pricing",
-    faq: "FAQ",
-    download: "Download",
-    login: "Login",
-    dashboard: "Dashboard",
-    toggleMenu: "Toggle menu",
-    manual: "Manual",
+  "header": {
+    "home": "Página inicial",
+    "pricing": "Preços",
+    "faq": "Perguntas frequentes",
+    "download": "Baixar",
+    "login": "Entrar",
+    "dashboard": "Painel",
+    "toggleMenu": "Alternar menu",
+    "manual": "Manuais"
   },
-  footer: {
-    brand: "Naia OS",
-    tagline: "Where Technology meets Emotion",
-    links: {
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      refund: "Refund Policy",
-      contact: "Contact",
+  "footer": {
+    "brand": "Naia OS",
+    "tagline": "Onde a tecnologia encontra a emoção",
+    "links": {
+      "privacy": "Política de Privacidade",
+      "terms": "Termos de Serviço",
+      "refund": "Política de Reembolso",
+      "contact": "Contato"
     },
-    copyright: "© 2026 Nextain. All rights reserved.",
+    "copyright": "© 2026 Nextain. Todos os direitos reservados."
   },
-  auth: {
-    loginTitle: "Login / Sign Up",
-    loginDescription: "Get started with your social account",
-    googleLogin: "Continue with Google",
-    discordLogin: "Continue with Discord",
-    logout: "Logout",
-    callbackRedirecting: "Redirecting to desktop app...",
-    callbackManualPrefix: "If it does not open automatically, ",
-    callbackManualLink: "click here",
-    callbackManualSuffix: ".",
+  "auth": {
+    "loginTitle": "Login / Inscreva-se",
+    "loginDescription": "Comece com sua conta social",
+    "googleLogin": "Continuar com o Google",
+    "discordLogin": "Continuar com discórdia",
+    "logout": "Sair",
+    "callbackRedirecting": "Redirecionando para aplicativo de desktop...",
+    "callbackManualPrefix": "Se não abrir automaticamente,",
+    "callbackManualLink": "clique aqui",
+    "callbackManualSuffix": "."
   },
-  home: {
-    hero: {
-      title: "The most advanced AI agent, as the perfect OS.",
-      subtitle:
-        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
-      cta: "Get Started Free",
-      secondaryCta: "Download",
+  "home": {
+    "hero": {
+      "title": "O agente de IA mais avançado, como o sistema operacional perfeito.",
+      "subtitle": "Da integração de 3 LLMs principais ao controle do terminal e um avatar VRM que expressa emoções. Um ecossistema de IA completo que você pode experimentar sem ser desenvolvedor, Naia OS.",
+      "cta": "Comece gratuitamente",
+      "secondaryCta": "Baixar"
     },
-    features: {
-      title: "What makes naia special",
-      subtitle: "Experience the power of AI agents — no coding required",
-      items: {
-        companion: {
-          title: "AI Avatar AI 아바타",
-          description:
-            "A 3D avatar with emotions, right on your desktop. AI 아바타 reacts to conversations with facial expressions and eye contact.",
+    "features": {
+      "title": "O que torna a naia especial",
+      "subtitle": "Experimente o poder dos agentes de IA — sem necessidade de codificação",
+      "items": {
+        "companion": {
+          "title": "AI Avatar AI",
+          "description": "Um avatar 3D com emoções, direto na sua área de trabalho. AI 아바타 reage às conversas com expressões faciais e contato visual."
         },
-        multiProvider: {
-          title: "Gemini Free · More Models Coming Soon",
-          description:
-            "Currently supporting Gemini with free credits. API Key support for Grok, Anthropic(Claude), OpenAI, and Zhipu(GLM) is planned and coming soon.",
+        "multiProvider": {
+          "title": "Gêmeos grátis · Mais modelos em breve",
+          "description": "Atualmente apoiando Gemini com créditos grátis. O suporte da API Key para Grok, Anthropic(Claude), OpenAI e Zhipu(GLM) está planejado e em breve."
         },
-        voice: {
-          title: "Voice Conversations",
-          description:
-            "Ask by voice, get spoken responses. AI 아바타 answers naturally with lip-synced animation.",
+        "voice": {
+          "title": "Conversas de voz",
+          "description": "Pergunte por voz e obtenha respostas faladas. AI 아바타 responde naturalmente com animação sincronizada com os lábios."
         },
-        tools: {
-          title: "Tool Execution",
-          description:
-            "File editing, terminal commands, web search. AI 아바타 calls tools directly to get work done.",
+        "tools": {
+          "title": "Execução de Ferramenta",
+          "description": "Edição de arquivos, comandos de terminal, pesquisa na web. AI 아바타 chama ferramentas diretamente para realizar o trabalho."
         },
-        desktop: {
-          title: "One-click Install & OS",
-          description:
-            "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
-        },
-      },
+        "desktop": {
+          "title": "Instalação e sistema operacional com um clique",
+          "description": "Instale o aplicativo de desktop com um clique ou crie um ambiente de IA dedicado com a imagem do sistema operacional Linux."
+        }
+      }
     },
-    pricing: {
-      title: "Simple Pricing",
-      subtitle: "Pay only for what you need",
-      policyNote: "Please review billing, refund, and policy documents below.",
-      free: {
-        name: "FREE",
-        price: "$0",
-        period: "forever",
-        description: "Start with just a sign-up",
-        features: [
-          "20 credits on sign-up",
-          "10 credits monthly refill",
-          "Gemini models",
-          "Basic voice chat",
-          "Community support",
+    "pricing": {
+      "title": "Preço Simples",
+      "subtitle": "Pague apenas pelo que você precisa",
+      "policyNote": "Revise os documentos de cobrança, reembolso e política abaixo.",
+      "free": {
+        "name": "GRÁTIS",
+        "price": "US$ 0",
+        "period": "para sempre",
+        "description": "Comece com apenas uma inscrição",
+        "features": [
+          "20 créditos na inscrição",
+          "10 créditos de recarga mensal",
+          "Modelos Gêmeos",
+          "Bate-papo por voz básico",
+          "Apoio comunitário"
         ],
-        cta: "Start Free",
+        "cta": "Comece grátis"
       },
-      basic: {
-        name: "BASIC",
-        price: "$10",
-        period: "mo",
-        description: "For those who want more",
-        features: [
-          "100 credits monthly",
-          "Gemini models",
-          "High-quality voice chat",
-          "Priority support",
-          "Advanced voice features",
+      "basic": {
+        "name": "BÁSICO",
+        "price": "US$ 10",
+        "period": "mo",
+        "description": "Para quem quer mais",
+        "features": [
+          "100 créditos mensais",
+          "Modelos Gêmeos",
+          "Bate-papo por voz de alta qualidade",
+          "Suporte prioritário",
+          "Recursos avançados de voz"
         ],
-        cta: "Upgrade",
+        "cta": "Atualizar"
+      }
+    },
+    "faq": {
+      "title": "Perguntas frequentes"
+    }
+  },
+  "sidebar": {
+    "dashboard": "Painel",
+    "usage": "Uso",
+    "logs": "Registros",
+    "keys": "Chaves de API",
+    "settings": "Configurações",
+    "billing": "Faturamento"
+  },
+  "dashboard": {
+    "title": "Painel",
+    "creditBalance": "Saldo de crédito",
+    "totalRequests": "Total de solicitações",
+    "totalTokens": "Total de fichas",
+    "totalSpend": "Gasto total",
+    "currentPeriod": "Período Atual",
+    "quickLinks": "Links rápidos",
+    "statusActive": "Ativo",
+    "statusBlocked": "Bloqueado"
+  },
+  "usage": {
+    "title": "Uso",
+    "period": {
+      "days7": "7 dias",
+      "days30": "30 dias",
+      "days90": "90 dias"
+    },
+    "requestsPerDay": "Solicitações / Dia",
+    "tokensPerDay": "Tokens / Dia",
+    "spendPerDay": "Gasto / Dia",
+    "noData": "Não há dados para o período selecionado"
+  },
+  "logs": {
+    "title": "Registros",
+    "all": "Todos",
+    "filterStatus": "Filtro de status",
+    "filterModel": "Filtro de modelo",
+    "columns": {
+      "time": "Hora",
+      "status": "Estado",
+      "model": "Modelo",
+      "tokens": "Fichas",
+      "cost": "Custo"
+    },
+    "details": {
+      "id": "ID de registro",
+      "endpoint": "Ponto final",
+      "provider": "Provedor",
+      "promptTokens": "Tokens de prompt",
+      "completionTokens": "Tokens de conclusão",
+      "error": "Erro"
+    },
+    "noLogs": "Ainda não há registros",
+    "expandDetails": "Mostrar detalhes"
+  },
+  "keys": {
+    "title": "Chaves de API",
+    "createKey": "Criar chave",
+    "keyName": "Nome da chave",
+    "keyNamePlaceholder": "por exemplo chave da minha área de trabalho",
+    "expires": "Expira",
+    "noExpiry": "Sem vencimento",
+    "days30": "30 dias",
+    "days90": "90 dias",
+    "days365": "1 ano",
+    "columns": {
+      "name": "Nome",
+      "status": "Estado",
+      "created": "Criado",
+      "actions": "Ações"
+    },
+    "noKeys": "Nenhuma chave criada ainda",
+    "deleteConfirm": "Tem certeza de que deseja excluir esta chave?",
+    "keyCreated": "Chave criada",
+    "keyCreatedDescription": "Esta chave só será mostrada uma vez. Guarde-o em um local seguro.",
+    "active": "Ativo",
+    "revoked": "Revogado",
+    "unnamed": "chave sem nome",
+    "forbiddenAction": "Você não tem permissão para esta chave."
+  },
+  "settings": {
+    "title": "Configurações",
+    "profile": {
+      "title": "Perfil",
+      "name": "Nome",
+      "email": "E-mail",
+      "avatar": "avatar",
+      "provider": "Provedor de login",
+      "gatewayId": "ID do gateway",
+      "budgetId": "ID do orçamento"
+    },
+    "connectedAccounts": {
+      "title": "Contas conectadas",
+      "google": "Google",
+      "discord": "Discórdia"
+    },
+    "desktopApp": {
+      "title": "Conexão de aplicativo de desktop",
+      "description": "Conecte seu aplicativo de desktop Naia OS a esta conta.",
+      "issueKey": "Emitir chave de conexão"
+    },
+    "appearance": {
+      "title": "Aparência",
+      "theme": "Tema",
+      "themeLight": "Tema 1 (Luz)",
+      "themeDark": "Tema 2 (escuro)",
+      "themeSystem": "Sistema",
+      "language": "Idioma"
+    },
+    "integrations": {
+      "title": "Integrações",
+      "description": "Converse com Naia no Discord, Google Chat e muito mais.",
+      "discord": {
+        "title": "Discórdia",
+        "connected": "Conectado",
+        "notConnected": "Não conectado",
+        "connectedHint": "Se você fez login no Discord, você já está conectado.",
+        "inviteBot": "Adicionar bot ao servidor",
+        "inviteBotDescription": "Adicione este bot ao seu servidor para conversar via menção @Naia ou DM.",
+        "howToUse": "Mencione @botname em seu servidor ou envie um DM. Os créditos são cobrados nesta conta automaticamente."
       },
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-    },
-  },
-  sidebar: {
-    dashboard: "Dashboard",
-    usage: "Usage",
-    logs: "Logs",
-    keys: "API Keys",
-    settings: "Settings",
-    billing: "Billing",
-  },
-  dashboard: {
-    title: "Dashboard",
-    creditBalance: "Credit Balance",
-    totalRequests: "Total Requests",
-    totalTokens: "Total Tokens",
-    totalSpend: "Total Spend",
-    currentPeriod: "Current Period",
-    quickLinks: "Quick Links",
-    statusActive: "Active",
-    statusBlocked: "Blocked",
-  },
-  usage: {
-    title: "Usage",
-    period: {
-      days7: "7 days",
-      days30: "30 days",
-      days90: "90 days",
-    },
-    requestsPerDay: "Requests / Day",
-    tokensPerDay: "Tokens / Day",
-    spendPerDay: "Spend / Day",
-    noData: "No data for the selected period",
-  },
-  logs: {
-    title: "Logs",
-    all: "All",
-    filterStatus: "Status Filter",
-    filterModel: "Model Filter",
-    columns: {
-      time: "Time",
-      status: "Status",
-      model: "Model",
-      tokens: "Tokens",
-      cost: "Cost",
-    },
-    details: {
-      id: "Log ID",
-      endpoint: "Endpoint",
-      provider: "Provider",
-      promptTokens: "Prompt Tokens",
-      completionTokens: "Completion Tokens",
-      error: "Error",
-    },
-    noLogs: "No logs yet",
-    expandDetails: "Show details",
-  },
-  keys: {
-    title: "API Keys",
-    createKey: "Create Key",
-    keyName: "Key Name",
-    keyNamePlaceholder: "e.g. my-desktop-key",
-    expires: "Expires",
-    noExpiry: "No expiry",
-    days30: "30 days",
-    days90: "90 days",
-    days365: "1 year",
-    columns: {
-      name: "Name",
-      status: "Status",
-      created: "Created",
-      actions: "Actions",
-    },
-    noKeys: "No keys created yet",
-    deleteConfirm: "Are you sure you want to delete this key?",
-    keyCreated: "Key created",
-    keyCreatedDescription:
-      "This key will only be shown once. Store it in a safe place.",
-    active: "Active",
-    revoked: "Revoked",
-    unnamed: "unnamed-key",
-    forbiddenAction: "You do not have permission for this key.",
-  },
-  settings: {
-    title: "Settings",
-    profile: {
-      title: "Profile",
-      name: "Name",
-      email: "Email",
-      avatar: "Avatar",
-      provider: "Login Provider",
-      gatewayId: "Gateway ID",
-      budgetId: "Budget ID",
-    },
-    connectedAccounts: {
-      title: "Connected Accounts",
-      google: "Google",
-      discord: "Discord",
-    },
-    desktopApp: {
-      title: "Desktop App Connection",
-      description:
-        "Connect your Naia OS desktop app with this account.",
-      issueKey: "Issue Connection Key",
-    },
-    appearance: {
-      title: "Appearance",
-      theme: "Theme",
-      themeLight: "Theme 1 (Light)",
-      themeDark: "Theme 2 (Dark)",
-      themeSystem: "System",
-      language: "Language",
-    },
-    integrations: {
-      title: "Integrations",
-      description: "Chat with Naia from Discord, Google Chat, and more.",
-      discord: {
-        title: "Discord",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Discord, you are already connected.",
-        inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Naia mention or DM.",
-        howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
+      "googleChat": {
+        "title": "Bate-papo do Google",
+        "connected": "Conectado",
+        "notConnected": "Não conectado",
+        "connectedHint": "Se você fez login no Google, você já está conectado.",
+        "howToUse": "Adicione o aplicativo naia ao Google Chat e comece a enviar mensagens."
       },
-      googleChat: {
-        title: "Google Chat",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the naia app in Google Chat and start messaging.",
-      },
-      viewGuide: "View Setup Guide",
-    },
+      "viewGuide": "Ver guia de configuração"
+    }
   },
-  manual: {
-    title: "User Manual",
-    subtitle: "Naia OS Desktop App Guide",
-    toc: "Table of Contents",
-    prev: "Previous",
-    next: "Next",
-    backToToc: "Back to Table of Contents",
-    sections: {
-      install: "Installation & Deployment",
-      gettingStarted: "Getting Started",
-      mainScreen: "Main Screen",
-      chat: "Chat",
-      history: "Conversation History",
-      progress: "Work Progress",
-      skills: "Skills",
-      channels: "Channels",
-      agents: "Agents",
-      diagnostics: "Diagnostics",
-      settings: "Settings",
-      tools: "Tool Details",
-      lab: "Naia OS",
-      troubleshooting: "Troubleshooting",
-    },
+  "manual": {
+    "title": "Manual do usuário",
+    "subtitle": "Guia do aplicativo Naia OS Desktop",
+    "toc": "Índice",
+    "prev": "Anterior",
+    "next": "Próximo",
+    "backToToc": "Voltar ao índice",
+    "sections": {
+      "install": "Instalação e implantação",
+      "gettingStarted": "Primeiros passos",
+      "mainScreen": "Tela principal",
+      "chat": "Bate-papo",
+      "history": "Histórico de conversas",
+      "progress": "Progresso do Trabalho",
+      "skills": "Habilidades",
+      "channels": "Canais",
+      "agents": "Agentes",
+      "diagnostics": "Diagnóstico",
+      "settings": "Configurações",
+      "tools": "Detalhes da ferramenta",
+      "lab": "Naia OS",
+      "troubleshooting": "Solução de problemas"
+    }
   },
-  billing: {
-    title: "Billing",
-    currentPlan: "Current Plan",
-    creditBalance: "Credit Balance",
-    periodUsage: "Period Usage",
-    comparePlans: "Compare Plans",
-    upgrade: "Upgrade",
-    free: "FREE",
-    basic: "BASIC",
-    currentBadge: "Current",
-    freeFeatures: ["20 signup credits", "Monthly refill minimum 10", "Gemini models access"],
-    basicFeatures: ["100 monthly credits", "Priority support", "High-quality voice"],
-    lemonNotice: "Payments are processed by LemonSqueezy. Please review billing and refund policies.",
-    pricingModelsSynced: "Pricing models synced",
-  },
+  "billing": {
+    "title": "Faturamento",
+    "currentPlan": "Plano Atual",
+    "creditBalance": "Saldo de crédito",
+    "periodUsage": "Período de uso",
+    "comparePlans": "Comparar planos",
+    "upgrade": "Atualizar",
+    "free": "GRÁTIS",
+    "basic": "BÁSICO",
+    "currentBadge": "Atual",
+    "freeFeatures": [
+      "20 créditos de inscrição",
+      "Recarga mensal mínimo 10",
+      "Acesso aos modelos Gemini"
+    ],
+    "basicFeatures": [
+      "100 créditos mensais",
+      "Suporte prioritário",
+      "Voz de alta qualidade"
+    ],
+    "lemonNotice": "Os pagamentos são processados ​​pela LemonSqueezy. Revise as políticas de faturamento e reembolso.",
+    "pricingModelsSynced": "Modelos de preços sincronizados"
+  }
 };
 
-export default en;
+export default pt;

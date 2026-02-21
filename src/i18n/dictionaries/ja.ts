@@ -1,306 +1,306 @@
 import type { Dictionary } from "./types";
 
-const en: Dictionary = {
-  locale: "ja",
-  meta: {
-    title: "Naia OS",
-    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+const ja: Dictionary = {
+  "locale": "ja",
+  "meta": {
+    "title": "ナイアOS",
+    "description": "Naia OS — パーソナル AI を簡単に。 3D アバター AI 아바타 とチャット、会話、作業を行います。"
   },
-  common: {
-    loading: "Loading...",
-    loadingShort: "Loading...",
-    error: "An error occurred",
-    save: "Save",
-    cancel: "Cancel",
-    delete: "Delete",
-    confirm: "Confirm",
-    copy: "Copy",
-    copied: "Copied",
-    comingSoon: "Coming Soon",
-    backTo: "Back",
-    prev: "Prev",
-    next: "Next",
-    page: "Page",
+  "common": {
+    "loading": "読み込み中...",
+    "loadingShort": "読み込み中...",
+    "error": "エラーが発生しました",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "confirm": "確認する",
+    "copy": "コピー",
+    "copied": "コピーされました",
+    "comingSoon": "近日公開予定",
+    "backTo": "戻る",
+    "prev": "前へ",
+    "next": "次へ",
+    "page": "ページ"
   },
-  header: {
-    home: "Home",
-    pricing: "Pricing",
-    faq: "FAQ",
-    download: "Download",
-    login: "Login",
-    dashboard: "Dashboard",
-    toggleMenu: "Toggle menu",
-    manual: "Manual",
+  "header": {
+    "home": "ホーム",
+    "pricing": "価格設定",
+    "faq": "よくある質問",
+    "download": "ダウンロード",
+    "login": "ログイン",
+    "dashboard": "ダッシュボード",
+    "toggleMenu": "メニューの切り替え",
+    "manual": "マニュアル"
   },
-  footer: {
-    brand: "Naia OS",
-    tagline: "Where Technology meets Emotion",
-    links: {
-      privacy: "Privacy Policy",
-      terms: "Terms of Service",
-      refund: "Refund Policy",
-      contact: "Contact",
+  "footer": {
+    "brand": "ナイアOS",
+    "tagline": "テクノロジーと感情が出会う場所",
+    "links": {
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約",
+      "refund": "返金ポリシー",
+      "contact": "お問い合わせ"
     },
-    copyright: "© 2026 Nextain. All rights reserved.",
+    "copyright": "© 2026 ネクストイン.無断転載を禁じます。"
   },
-  auth: {
-    loginTitle: "Login / Sign Up",
-    loginDescription: "Get started with your social account",
-    googleLogin: "Continue with Google",
-    discordLogin: "Continue with Discord",
-    logout: "Logout",
-    callbackRedirecting: "Redirecting to desktop app...",
-    callbackManualPrefix: "If it does not open automatically, ",
-    callbackManualLink: "click here",
-    callbackManualSuffix: ".",
+  "auth": {
+    "loginTitle": "ログイン/サインアップ",
+    "loginDescription": "ソーシャルアカウントを始めましょう",
+    "googleLogin": "Google を続ける",
+    "discordLogin": "Discordを続ける",
+    "logout": "ログアウト",
+    "callbackRedirecting": "デスクトップ アプリにリダイレクトしています...",
+    "callbackManualPrefix": "自動的に開かない場合は、",
+    "callbackManualLink": "ここをクリックしてください",
+    "callbackManualSuffix": "。"
   },
-  home: {
-    hero: {
-      title: "The most advanced AI agent, as the perfect OS.",
-      subtitle:
-        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
-      cta: "Get Started Free",
-      secondaryCta: "Download",
+  "home": {
+    "hero": {
+      "title": "最先端のAIエージェントを、完璧なOSとして。",
+      "subtitle": "3大LLMの統合から端末制御、感情を表現するVRMアバターまで。開発者でなくても体験できる完全な AI エコシステム、Naia OS。",
+      "cta": "無料で始めましょう",
+      "secondaryCta": "ダウンロード"
     },
-    features: {
-      title: "What makes naia special",
-      subtitle: "Experience the power of AI agents — no coding required",
-      items: {
-        companion: {
-          title: "AI Avatar AI 아바타",
-          description:
-            "A 3D avatar with emotions, right on your desktop. AI 아바타 reacts to conversations with facial expressions and eye contact.",
+    "features": {
+      "title": "ナイアの特別な理由",
+      "subtitle": "AI エージェントのパワーを体験してください — コーディングは必要ありません",
+      "items": {
+        "companion": {
+          "title": "AI アバター AI 아바타",
+          "description": "感情を持った 3D アバターがデスクトップ上に表示されます。 AI 아바타 は表情やアイコンタクトで会話に反応します。"
         },
-        multiProvider: {
-          title: "Gemini Free · More Models Coming Soon",
-          description:
-            "Currently supporting Gemini with free credits. API Key support for Grok, Anthropic(Claude), OpenAI, and Zhipu(GLM) is planned and coming soon.",
+        "multiProvider": {
+          "title": "Gemini Free · 他のモデルも近日公開予定",
+          "description": "現在、無料クレジットで Gemini をサポートしています。 Grok、Anthropic(Claude)、OpenAI、および Zhipu(GLM) の API キーのサポートが計画されており、近日中に提供される予定です。"
         },
-        voice: {
-          title: "Voice Conversations",
-          description:
-            "Ask by voice, get spoken responses. AI 아바타 answers naturally with lip-synced animation.",
+        "voice": {
+          "title": "音声会話",
+          "description": "音声で質問すると、音声で応答が得られます。 AI 아바타 は口パクアニメーションで自然に答えます。"
         },
-        tools: {
-          title: "Tool Execution",
-          description:
-            "File editing, terminal commands, web search. AI 아바타 calls tools directly to get work done.",
+        "tools": {
+          "title": "ツールの実行",
+          "description": "ファイル編集、ターミナルコマンド、Web検索。 AI はツールを直接呼び出して作業を完了します。"
         },
-        desktop: {
-          title: "One-click Install & OS",
-          description:
-            "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
-        },
-      },
+        "desktop": {
+          "title": "ワンクリックでインストールと OS",
+          "description": "ワンクリックでデスクトップ アプリをインストールするか、Linux OS イメージを使用して専用の AI 環境を作成します。"
+        }
+      }
     },
-    pricing: {
-      title: "Simple Pricing",
-      subtitle: "Pay only for what you need",
-      policyNote: "Please review billing, refund, and policy documents below.",
-      free: {
-        name: "FREE",
-        price: "$0",
-        period: "forever",
-        description: "Start with just a sign-up",
-        features: [
-          "20 credits on sign-up",
-          "10 credits monthly refill",
-          "Gemini models",
-          "Basic voice chat",
-          "Community support",
+    "pricing": {
+      "title": "シンプルな価格設定",
+      "subtitle": "必要な分だけお支払いください",
+      "policyNote": "以下の請求、返金、ポリシーに関する文書をご確認ください。",
+      "free": {
+        "name": "無料",
+        "price": "$0",
+        "period": "永遠に",
+        "description": "サインアップだけから始めましょう",
+        "features": [
+          "サインアップ時に 20 クレジット",
+          "10 クレジット毎月補充",
+          "ジェミニモデル",
+          "基本的なボイスチャット",
+          "コミュニティサポート"
         ],
-        cta: "Start Free",
+        "cta": "無料で始める"
       },
-      basic: {
-        name: "BASIC",
-        price: "$10",
-        period: "mo",
-        description: "For those who want more",
-        features: [
-          "100 credits monthly",
-          "Gemini models",
-          "High-quality voice chat",
-          "Priority support",
-          "Advanced voice features",
+      "basic": {
+        "name": "ベーシック",
+        "price": "10ドル",
+        "period": "も",
+        "description": "もっと欲しい人のために",
+        "features": [
+          "毎月 100 クレジット",
+          "ジェミニモデル",
+          "高品質なボイスチャット",
+          "優先サポート",
+          "高度な音声機能"
         ],
-        cta: "Upgrade",
+        "cta": "アップグレード"
+      }
+    },
+    "faq": {
+      "title": "よくある質問"
+    }
+  },
+  "sidebar": {
+    "dashboard": "ダッシュボード",
+    "usage": "使用法",
+    "logs": "ログ",
+    "keys": "APIキー",
+    "settings": "設定",
+    "billing": "請求"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "creditBalance": "クレジット残高",
+    "totalRequests": "総リクエスト数",
+    "totalTokens": "総トークン数",
+    "totalSpend": "総支出額",
+    "currentPeriod": "今期",
+    "quickLinks": "クイックリンク",
+    "statusActive": "アクティブ",
+    "statusBlocked": "ブロックされました"
+  },
+  "usage": {
+    "title": "使用法",
+    "period": {
+      "days7": "7日間",
+      "days30": "30日",
+      "days90": "90日"
+    },
+    "requestsPerDay": "リクエスト/日",
+    "tokensPerDay": "トークン/日",
+    "spendPerDay": "一日あたりの支出",
+    "noData": "選択した期間のデータがありません"
+  },
+  "logs": {
+    "title": "ログ",
+    "all": "すべて",
+    "filterStatus": "ステータスフィルター",
+    "filterModel": "モデルフィルター",
+    "columns": {
+      "time": "時間",
+      "status": "ステータス",
+      "model": "モデル",
+      "tokens": "トークン",
+      "cost": "コスト"
+    },
+    "details": {
+      "id": "ログID",
+      "endpoint": "エンドポイント",
+      "provider": "プロバイダー",
+      "promptTokens": "プロンプトトークン",
+      "completionTokens": "完了トークン",
+      "error": "エラー"
+    },
+    "noLogs": "まだログがありません",
+    "expandDetails": "詳細を表示"
+  },
+  "keys": {
+    "title": "APIキー",
+    "createKey": "キーの作成",
+    "keyName": "キー名",
+    "keyNamePlaceholder": "例えば私のデスクトップキー",
+    "expires": "有効期限が切れます",
+    "noExpiry": "有効期限なし",
+    "days30": "30日",
+    "days90": "90日",
+    "days365": "1年",
+    "columns": {
+      "name": "名前",
+      "status": "ステータス",
+      "created": "作成されました",
+      "actions": "アクション"
+    },
+    "noKeys": "まだキーが作成されていません",
+    "deleteConfirm": "このキーを削除してもよろしいですか?",
+    "keyCreated": "キーが作成されました",
+    "keyCreatedDescription": "このキーは 1 回だけ表示されます。安全な場所に保管してください。",
+    "active": "アクティブ",
+    "revoked": "取り消されました",
+    "unnamed": "名前のないキー",
+    "forbiddenAction": "このキーに対する権限がありません。"
+  },
+  "settings": {
+    "title": "設定",
+    "profile": {
+      "title": "プロフィール",
+      "name": "名前",
+      "email": "電子メール",
+      "avatar": "アバター",
+      "provider": "ログインプロバイダー",
+      "gatewayId": "ゲートウェイID",
+      "budgetId": "予算ID"
+    },
+    "connectedAccounts": {
+      "title": "接続されたアカウント",
+      "google": "Google",
+      "discord": "不和"
+    },
+    "desktopApp": {
+      "title": "デスクトップアプリ接続",
+      "description": "Naia OS デスクトップ アプリをこのアカウントに接続します。",
+      "issueKey": "接続キーの発行"
+    },
+    "appearance": {
+      "title": "外観",
+      "theme": "テーマ",
+      "themeLight": "テーマ1（光）",
+      "themeDark": "テーマ2(ダーク)",
+      "themeSystem": "システム",
+      "language": "言語"
+    },
+    "integrations": {
+      "title": "統合",
+      "description": "Discord や Google Chat などから Naia とチャットしましょう。",
+      "discord": {
+        "title": "不和",
+        "connected": "接続済み",
+        "notConnected": "接続されていません",
+        "connectedHint": "Discordでログインしている場合は、すでに接続されています。",
+        "inviteBot": "ボットをサーバーに追加する",
+        "inviteBotDescription": "このボットをサーバーに追加して、@Naia メンションまたは DM 経由でチャットします。",
+        "howToUse": "サーバーで @botname に言及するか、DM を送信してください。クレジットはこのアカウントに自動的に請求されます。"
       },
-    },
-    faq: {
-      title: "Frequently Asked Questions",
-    },
-  },
-  sidebar: {
-    dashboard: "Dashboard",
-    usage: "Usage",
-    logs: "Logs",
-    keys: "API Keys",
-    settings: "Settings",
-    billing: "Billing",
-  },
-  dashboard: {
-    title: "Dashboard",
-    creditBalance: "Credit Balance",
-    totalRequests: "Total Requests",
-    totalTokens: "Total Tokens",
-    totalSpend: "Total Spend",
-    currentPeriod: "Current Period",
-    quickLinks: "Quick Links",
-    statusActive: "Active",
-    statusBlocked: "Blocked",
-  },
-  usage: {
-    title: "Usage",
-    period: {
-      days7: "7 days",
-      days30: "30 days",
-      days90: "90 days",
-    },
-    requestsPerDay: "Requests / Day",
-    tokensPerDay: "Tokens / Day",
-    spendPerDay: "Spend / Day",
-    noData: "No data for the selected period",
-  },
-  logs: {
-    title: "Logs",
-    all: "All",
-    filterStatus: "Status Filter",
-    filterModel: "Model Filter",
-    columns: {
-      time: "Time",
-      status: "Status",
-      model: "Model",
-      tokens: "Tokens",
-      cost: "Cost",
-    },
-    details: {
-      id: "Log ID",
-      endpoint: "Endpoint",
-      provider: "Provider",
-      promptTokens: "Prompt Tokens",
-      completionTokens: "Completion Tokens",
-      error: "Error",
-    },
-    noLogs: "No logs yet",
-    expandDetails: "Show details",
-  },
-  keys: {
-    title: "API Keys",
-    createKey: "Create Key",
-    keyName: "Key Name",
-    keyNamePlaceholder: "e.g. my-desktop-key",
-    expires: "Expires",
-    noExpiry: "No expiry",
-    days30: "30 days",
-    days90: "90 days",
-    days365: "1 year",
-    columns: {
-      name: "Name",
-      status: "Status",
-      created: "Created",
-      actions: "Actions",
-    },
-    noKeys: "No keys created yet",
-    deleteConfirm: "Are you sure you want to delete this key?",
-    keyCreated: "Key created",
-    keyCreatedDescription:
-      "This key will only be shown once. Store it in a safe place.",
-    active: "Active",
-    revoked: "Revoked",
-    unnamed: "unnamed-key",
-    forbiddenAction: "You do not have permission for this key.",
-  },
-  settings: {
-    title: "Settings",
-    profile: {
-      title: "Profile",
-      name: "Name",
-      email: "Email",
-      avatar: "Avatar",
-      provider: "Login Provider",
-      gatewayId: "Gateway ID",
-      budgetId: "Budget ID",
-    },
-    connectedAccounts: {
-      title: "Connected Accounts",
-      google: "Google",
-      discord: "Discord",
-    },
-    desktopApp: {
-      title: "Desktop App Connection",
-      description:
-        "Connect your Naia OS desktop app with this account.",
-      issueKey: "Issue Connection Key",
-    },
-    appearance: {
-      title: "Appearance",
-      theme: "Theme",
-      themeLight: "Theme 1 (Light)",
-      themeDark: "Theme 2 (Dark)",
-      themeSystem: "System",
-      language: "Language",
-    },
-    integrations: {
-      title: "Integrations",
-      description: "Chat with Naia from Discord, Google Chat, and more.",
-      discord: {
-        title: "Discord",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Discord, you are already connected.",
-        inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Naia mention or DM.",
-        howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
+      "googleChat": {
+        "title": "Googleチャット",
+        "connected": "接続済み",
+        "notConnected": "接続されていません",
+        "connectedHint": "Google でログインしている場合は、すでに接続されています。",
+        "howToUse": "Google Chat に naia アプリを追加し、メッセージングを開始します。"
       },
-      googleChat: {
-        title: "Google Chat",
-        connected: "Connected",
-        notConnected: "Not Connected",
-        connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the naia app in Google Chat and start messaging.",
-      },
-      viewGuide: "View Setup Guide",
-    },
+      "viewGuide": "セットアップガイドを見る"
+    }
   },
-  manual: {
-    title: "User Manual",
-    subtitle: "Naia OS Desktop App Guide",
-    toc: "Table of Contents",
-    prev: "Previous",
-    next: "Next",
-    backToToc: "Back to Table of Contents",
-    sections: {
-      install: "Installation & Deployment",
-      gettingStarted: "Getting Started",
-      mainScreen: "Main Screen",
-      chat: "Chat",
-      history: "Conversation History",
-      progress: "Work Progress",
-      skills: "Skills",
-      channels: "Channels",
-      agents: "Agents",
-      diagnostics: "Diagnostics",
-      settings: "Settings",
-      tools: "Tool Details",
-      lab: "Naia OS",
-      troubleshooting: "Troubleshooting",
-    },
+  "manual": {
+    "title": "ユーザーマニュアル",
+    "subtitle": "Naia OS デスクトップ アプリ ガイド",
+    "toc": "目次",
+    "prev": "前へ",
+    "next": "次へ",
+    "backToToc": "目次に戻る",
+    "sections": {
+      "install": "インストールと展開",
+      "gettingStarted": "はじめに",
+      "mainScreen": "メイン画面",
+      "chat": "チャット",
+      "history": "会話履歴",
+      "progress": "作業の進捗状況",
+      "skills": "スキル",
+      "channels": "チャンネル",
+      "agents": "エージェント",
+      "diagnostics": "診断",
+      "settings": "設定",
+      "tools": "ツールの詳細",
+      "lab": "ナイアOS",
+      "troubleshooting": "トラブルシューティング"
+    }
   },
-  billing: {
-    title: "Billing",
-    currentPlan: "Current Plan",
-    creditBalance: "Credit Balance",
-    periodUsage: "Period Usage",
-    comparePlans: "Compare Plans",
-    upgrade: "Upgrade",
-    free: "FREE",
-    basic: "BASIC",
-    currentBadge: "Current",
-    freeFeatures: ["20 signup credits", "Monthly refill minimum 10", "Gemini models access"],
-    basicFeatures: ["100 monthly credits", "Priority support", "High-quality voice"],
-    lemonNotice: "Payments are processed by LemonSqueezy. Please review billing and refund policies.",
-    pricingModelsSynced: "Pricing models synced",
-  },
+  "billing": {
+    "title": "請求",
+    "currentPlan": "現在の計画",
+    "creditBalance": "クレジット残高",
+    "periodUsage": "期間利用",
+    "comparePlans": "プランを比較する",
+    "upgrade": "アップグレード",
+    "free": "無料",
+    "basic": "ベーシック",
+    "currentBadge": "現在",
+    "freeFeatures": [
+      "20 サインアップ クレジット",
+      "毎月の補充最低10",
+      "ジェミニモデルへのアクセス"
+    ],
+    "basicFeatures": [
+      "100 月間クレジット",
+      "優先サポート",
+      "高品質な音声"
+    ],
+    "lemonNotice": "支払いはLemonSqueezyによって処理されます。請求と返金のポリシーを確認してください。",
+    "pricingModelsSynced": "価格モデルが同期されました"
+  }
 };
 
-export default en;
+export default ja;
