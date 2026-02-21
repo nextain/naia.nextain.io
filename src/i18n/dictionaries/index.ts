@@ -9,6 +9,13 @@ const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
   fr: () => import("./fr").then((m) => m.default),
   de: () => import("./de").then((m) => m.default),
   ru: () => import("./ru").then((m) => m.default),
+  es: () => import("./es").then((m) => m.default),
+  ar: () => import("./ar").then((m) => m.default),
+  hi: () => import("./hi").then((m) => m.default),
+  bn: () => import("./bn").then((m) => m.default),
+  pt: () => import("./pt").then((m) => m.default),
+  id: () => import("./id").then((m) => m.default),
+  vi: () => import("./vi").then((m) => m.default),
 };
 
 export async function getDictionary(locale: Locale): Promise<Dictionary> {
