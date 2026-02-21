@@ -66,7 +66,6 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          enableSystem
           disableTransitionOnChange
         >
           {process.env.NEXT_PUBLIC_LEMONSQUEEZY_STORE_ID ? (

@@ -235,8 +235,8 @@ const en: Dictionary = {
     appearance: {
       title: "Appearance",
       theme: "Theme",
-      themeLight: "Light",
-      themeDark: "Dark",
+      themeLight: "Theme 1 (Light)",
+      themeDark: "Theme 2 (Dark)",
       themeSystem: "System",
       language: "Language",
     },

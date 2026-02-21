@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries/types";
 import { Sparkles, Terminal, Code2, Bot } from "lucide-react";
@@ -5,6 +8,17 @@ import { SectionReveal } from "@/components/home/section-reveal";
 
 export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lang: string; hasSession?: boolean }) {
   const [line1, line2] = dict.home.hero.title.split("\n");
+  const [activeCharIndex, setActiveCharIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Start with a random character, avoiding layout shift by setting it after mount
+    setActiveCharIndex(Math.floor(Math.random() * 2));
+
+    const interval = setInterval(() => {
+      setActiveCharIndex((prev) => (prev === 0 ? 1 : 0));
+    }, 7000); // Change every 7 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section className="relative overflow-hidden border-b border-border/40 pb-12 pt-16 md:pb-20 md:pt-24 lg:pt-32">
@@ -15,6 +29,13 @@ export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lan
       <div className="pointer-events-none absolute left-[-10%] top-[-10%] -z-10 h-[600px] w-[600px] rounded-full bg-blue-500/20 blur-[120px]" style={{ animation: 'float 15s ease-in-out infinite' }} />
       <div className="pointer-events-none absolute right-[5%] top-[10%] -z-10 h-[700px] w-[700px] rounded-full bg-cyan-500/20 blur-[150px]" style={{ animation: 'float-slow 20s ease-in-out infinite' }} />
       <div className="pointer-events-none absolute bottom-[-10%] left-[20%] -z-10 h-[500px] w-[500px] rounded-full bg-emerald-500/20 blur-[100px]" style={{ animation: 'float 18s ease-in-out infinite reverse' }} />
+
+      <style jsx>{`
+        @keyframes subtle-float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-15px); }
+        }
+      `}</style>
 
       <div className="relative mx-auto max-w-6xl px-4">
         <div className="grid items-center gap-12 lg:grid-cols-2">
@@ -59,53 +80,24 @@ export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lan
             </div>
           </SectionReveal>
 
-          {/* Right: Mockup Graphic */}
+          {/* Right: Character Graphic */}
           <SectionReveal delay={200}>
-            <div className="relative mx-auto max-w-lg lg:max-w-none">
-              <div className="relative rounded-2xl border border-border/50 bg-background/50 p-2 shadow-2xl backdrop-blur-xl">
-                <div className="flex h-8 items-center gap-1.5 rounded-t-xl border-b border-border/50 bg-muted/50 px-4">
-                  <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
-                  <div className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
-                  <span className="ml-2 text-[10px] font-medium text-muted-foreground">naia-os-terminal ~</span>
-                </div>
-                <div className="p-4 sm:p-6 space-y-4 rounded-b-xl bg-black/5 dark:bg-black/40 font-mono text-sm">
-                  <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400">
-                    <Terminal className="h-4 w-4" />
-                    <span>naia start --avatar vrm</span>
-                  </div>
-                  <div className="space-y-2 text-muted-foreground">
-                    <div className="flex items-center gap-2">
-                      <Code2 className="h-4 w-4 text-emerald-500" />
-                      <span>[System] LLM Engines initialized (Gemini, Grok, Claude)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Code2 className="h-4 w-4 text-emerald-500" />
-                      <span>[System] Local tools and file system access granted</span>
-                    </div>
-                  </div>
-                  <div className="mt-4 rounded-lg border border-primary/20 bg-primary/5 p-4">
-                    <div className="flex items-start gap-3">
-                      <div className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 via-cyan-500 to-emerald-500 text-white">
-                        <Bot className="h-4 w-4" />
-                      </div>
-                      <div>
-                        <p className="text-foreground font-sans text-sm font-medium">Naia</p>
-                        <p className="mt-1 font-sans text-sm text-muted-foreground">
-                          시스템이 성공적으로 부팅되었습니다. 마스터, 오늘 어떤 작업을 도와드릴까요?
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 text-muted-foreground">
-                    <span className="animate-pulse">_</span>
-                  </div>
-                </div>
+            <div className="relative mx-auto max-w-lg lg:max-w-none flex justify-center h-[400px] md:h-[500px] items-center">
+              <div 
+                className="relative h-full w-full flex justify-center items-center"
+                style={{ animation: 'subtle-float 4s ease-in-out infinite' }}
+              >
+                <img 
+                  src="/naia-default-character.png"
+                  alt="Naia Default Character" 
+                  className={`absolute inset-0 m-auto h-[110%] w-auto object-contain drop-shadow-2xl transition-opacity duration-[2000ms] ease-in-out ${activeCharIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
+                />
+                <img 
+                  src="/naia-character.png"
+                  alt="Naia Character" 
+                  className={`absolute inset-0 m-auto h-[110%] w-auto object-contain drop-shadow-2xl transition-opacity duration-[2000ms] ease-in-out ${activeCharIndex === 1 ? 'opacity-100' : 'opacity-0'}`}
+                />
               </div>
-
-              {/* Decorative floating elements */}
-              <div className="absolute -right-6 -top-6 -z-10 h-32 w-32 rounded-full bg-cyan-500/20 blur-2xl" />
-              <div className="absolute -bottom-8 -left-8 -z-10 h-40 w-40 rounded-full bg-blue-500/20 blur-2xl" />
             </div>
           </SectionReveal>
         </div>
@@ -113,3 +105,4 @@ export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lan
     </section>
   );
 }
+

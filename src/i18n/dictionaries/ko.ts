@@ -233,9 +233,9 @@ const ko: Dictionary = {
     appearance: {
       title: "외관",
       theme: "테마",
-      themeLight: "라이트",
-      themeDark: "다크",
-      themeSystem: "시스템",
+      themeLight: "테마 1 (Light)",
+      themeDark: "테마 2 (Dark)",
+      themeSystem: "시스템 설정",
       language: "언어",
     },
     integrations: {
