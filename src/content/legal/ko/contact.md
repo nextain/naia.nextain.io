@@ -1,4 +1,4 @@
 서비스/결제/환불 문의는 아래 이메일로 접수해 주세요.
 
-- 이메일: support@naia.com
+- 이메일: support@nextain.io
 - 응답: 영업일 기준 2~3일 내

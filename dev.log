@@ -1,0 +1,37 @@
+
+> project-naia.nextain.io@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.45.193:3000
+- Environments: .env
+
+✓ Starting...
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+✓ Ready in 931ms
+ GET /ko 200 in 3.3s (compile: 2.6s, proxy.ts: 72ms, generate-params: 351ms, render: 593ms)
+✓ Compiled in 92ms
+✓ Compiled in 37ms
+✓ Compiled in 68ms
+✓ Compiled in 67ms
+ GET /ko 200 in 542ms (compile: 190ms, proxy.ts: 6ms, generate-params: 35ms, render: 346ms)
+✓ Compiled in 38ms
+ GET /ko 200 in 575ms (compile: 155ms, proxy.ts: 8ms, generate-params: 33ms, render: 412ms)
+✓ Compiled in 34ms
+ GET /ko 200 in 449ms (compile: 127ms, proxy.ts: 3ms, generate-params: 31ms, render: 320ms)
+✓ Compiled in 47ms
+ GET /ko 200 in 462ms (compile: 138ms, proxy.ts: 4ms, generate-params: 34ms, render: 320ms)
+✓ Compiled in 44ms
+ GET /ko 200 in 350ms (compile: 140ms, proxy.ts: 7ms, generate-params: 32ms, render: 204ms)
+ GET /ko 200 in 88ms (compile: 36ms, proxy.ts: 4ms, generate-params: 32ms, render: 48ms)
+ GET /ko/manual 200 in 904ms (compile: 878ms, proxy.ts: 3ms, generate-params: 315ms, render: 23ms)
+ GET /ko/manual/install 200 in 1382ms (compile: 1239ms, proxy.ts: 3ms, generate-params: 316ms, render: 141ms)
+ GET /ko/manual/install 200 in 104ms (compile: 49ms, proxy.ts: 6ms, generate-params: 35ms, render: 49ms)
+ GET /ko 200 in 98ms (compile: 50ms, proxy.ts: 3ms, generate-params: 46ms, render: 45ms)
+ GET /ko/manual 200 in 74ms (compile: 46ms, proxy.ts: 5ms, generate-params: 41ms, render: 22ms)
+ GET /ko/manual/install 200 in 143ms (compile: 48ms, proxy.ts: 3ms, generate-params: 41ms, render: 92ms)
+ GET /ko/manual/install 200 in 70ms (compile: 7ms, proxy.ts: 15ms, generate-params: 31µs, render: 48ms)
+ GET /ko 200 in 89ms (compile: 43ms, proxy.ts: 3ms, generate-params: 39ms, render: 44ms)
+ GET /ko 200 in 90ms (compile: 45ms, proxy.ts: 3ms, generate-params: 40ms, render: 43ms)
+ GET /ko 200 in 96ms (compile: 44ms, proxy.ts: 4ms, generate-params: 41ms, render: 48ms)
