@@ -21,8 +21,16 @@ function detectLocale(request: NextRequest): Locale {
 
   // 2. Accept-Language header
   const acceptLang = request.headers.get("accept-language") ?? "";
-  for (const locale of SUPPORTED_LOCALES) {
-    if (acceptLang.includes(locale)) return locale;
+  const parsedLocales = acceptLang
+    .split(",")
+    .map((lang) => {
+      const [locale, q = "q=1"] = lang.split(";");
+      return { locale: locale.trim().split("-")[0], q: parseFloat(q.replace("q=", "")) };
+    })
+    .sort((a, b) => b.q - a.q);
+
+  for (const { locale } of parsedLocales) {
+    if (isLocale(locale)) return locale as Locale;
   }
 
   return DEFAULT_LOCALE;
