@@ -98,4 +98,4 @@ PLAN → CHECK → BUILD → VERIFY → CLEAN → COMMIT
 | 프로젝트 | 관계 | 비고 |
 |---------|------|------|
 | `project-any-llm` | 백엔드 게이트웨이 | 참조만 |
-| `NaN-OS` | 데스크톱 클라이언트 | naia.nextain.io 인증 플로우 소비자 |
+| `Naia-OS` | 데스크톱 클라이언트 | naia.nextain.io 인증 플로우 소비자 |

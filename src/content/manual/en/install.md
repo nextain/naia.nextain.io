@@ -21,7 +21,7 @@ This is the most common and secure way to distribute Linux desktop apps. You can
 - **How to Install**:
   Download the provided `.flatpak` bundle and install it via terminal:
   ```bash
-  flatpak install --user ./NaN-OS.flatpak
+  flatpak install --user ./Naia-OS.flatpak
   ```
 
 ### 2. Bazzite / BlueBuild Integrated Image (Advanced)
@@ -49,7 +49,7 @@ To build the Flatpak sandbox app from the source code, follow these steps:
    ```
 
 3. **Run the Packaging Build**
-   Execute this in the project root directory (NaN-OS).
+   Execute this in the project root directory (Naia-OS).
    ```bash
    # Compiles and builds into the build-dir
    flatpak-builder --user --install --force-clean build-dir flatpak/com.naia.shell.yml

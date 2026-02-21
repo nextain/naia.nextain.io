@@ -90,7 +90,7 @@ src/
 
 1. **얇은 클라이언트** — 실제 로직은 gateway(any-llm)에, 여기는 UI만
 2. **BFF 패턴** — API Routes로 gateway 프록시 (클라이언트에 마스터키 노출 방지)
-3. **데스크톱 연동** — `/callback` 페이지로 NaN-OS에 키 전달
+3. **데스크톱 연동** — `/callback` 페이지로 Naia OS에 키 전달
 4. **i18n** — URL 기반 `[lang]` 세그먼트 (ko, en)
 
 ## 기술 스택

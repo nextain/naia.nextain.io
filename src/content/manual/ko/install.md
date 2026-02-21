@@ -21,11 +21,11 @@ Naia OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 �
 - **설치 방법**:
   추후 제공될 `.flatpak` 번들을 다운로드하여 터미널에서 아래 명령어로 설치합니다.
   ```bash
-  flatpak install --user ./NaN-OS.flatpak
+  flatpak install --user ./Naia-OS.flatpak
   ```
 
 ### 2. Bazzite / BlueBuild 통합 이미지 (고급)
-사용자 정의 OS 이미지를 굽는 방식입니다. `NaN-OS`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
+사용자 정의 OS 이미지를 굽는 방식입니다. `Naia OS`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
 
 ---
 
@@ -49,7 +49,7 @@ Naia OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 �
    ```
 
 3. **패키징 빌드 실행**
-   프로젝트 루트 디렉토리(NaN-OS)에서 실행합니다.
+   프로젝트 루트 디렉토리(Naia-OS)에서 실행합니다.
    ```bash
    # build-dir에 컴파일 및 빌드 진행
    flatpak-builder --user --install --force-clean build-dir flatpak/com.naia.shell.yml
