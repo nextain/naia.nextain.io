@@ -34,7 +34,7 @@ const ko: Dictionary = {
   },
   footer: {
     brand: "Naia OS",
-    tagline: "Next AI Networks",
+    tagline: "The Next Generation AI OS",
     links: {
       privacy: "개인정보처리방침",
       terms: "이용약관",
