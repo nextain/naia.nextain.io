@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { SUPPORTED_LOCALES } from "@/i18n/config";
 import { MANUAL_SLUGS } from "@/lib/manual-docs";
 
-const BASE_URL = "https://nan.nextain.io";
+const BASE_URL = "https://naia.nextain.io";
 
 const PUBLIC_PAGES = ["", "terms", "privacy", "refund", "contact", "manual"];
 

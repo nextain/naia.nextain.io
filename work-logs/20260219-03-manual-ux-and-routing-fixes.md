@@ -9,7 +9,7 @@
 - `/ko/manual/*` 페이지의 설명/이미지 정합성 개선
 - 일반 사용자 기준으로 과도한 Gateway 노출 문구 제거
 - 로컬 실행 시 `3001 -> 3000` 리다이렉트 문제 정리
-- `docs-work-logs`에 섞여 있던 nan 로그를 각 프로젝트 work-logs로 분리
+- `docs-work-logs`에 섞여 있던 naia 로그를 각 프로젝트 work-logs로 분리
 
 ## 완료
 
@@ -19,7 +19,7 @@
 - `main-screen`은 이미지 1장만 사용하도록 유지
 
 ### 2) 문구 정책 정리 (사용자 관점)
-- `Nan가 응답하지 않아요` → `AI 에이전트가 응답하지 않아요`로 변경
+- `Naia가 응답하지 않아요` → `AI 에이전트가 응답하지 않아요`로 변경
 - 일반 사용자 대상 문서에서 `Gateway URL/Token` 수동 입력 요구 제거
 - 자체 Gateway 운영자(고급 사용자)만 수동 확인하도록 분리 문구 적용
 
@@ -70,10 +70,10 @@
 - `.env`
 
 ### 8) 작업 로그 저장소 분리 정책 실행
-- `docs-work-logs`의 nan 관련 로그를 프로젝트별 `work-logs`로 이동
+- `docs-work-logs`의 naia 관련 로그를 프로젝트별 `work-logs`로 이동
   - `NaN-OS/work-logs/`
-  - `project-nan.nextain.io/work-logs/`
-  - `nan.com/work-logs/`
+  - `project-naia.nextain.io/work-logs/`
+  - `naia.com/work-logs/`
 
 ## 확인 메모
 

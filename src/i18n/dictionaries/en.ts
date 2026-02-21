@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const en: Dictionary = {
   locale: "en",
   meta: {
-    title: "NaN OS",
-    description: "NaN OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
+    title: "Naia OS",
+    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI 아바타.",
   },
   common: {
     loading: "Loading...",
@@ -33,7 +33,7 @@ const en: Dictionary = {
     manual: "Manual",
   },
   footer: {
-    brand: "NaN OS",
+    brand: "Naia OS",
     tagline: "Where Technology meets Emotion",
     links: {
       privacy: "Privacy Policy",
@@ -58,12 +58,12 @@ const en: Dictionary = {
     hero: {
       title: "The most advanced AI agent,\nas the perfect OS.",
       subtitle:
-        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, NaN OS.",
+        "From 3 major LLMs integration to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
       cta: "Get Started Free",
       secondaryCta: "Download",
     },
     features: {
-      title: "What makes nan special",
+      title: "What makes naia special",
       subtitle: "Experience the power of AI agents — no coding required",
       items: {
         companion: {
@@ -229,7 +229,7 @@ const en: Dictionary = {
     desktopApp: {
       title: "Desktop App Connection",
       description:
-        "Connect your NaN OS desktop app with this account.",
+        "Connect your Naia OS desktop app with this account.",
       issueKey: "Issue Connection Key",
     },
     appearance: {
@@ -242,14 +242,14 @@ const en: Dictionary = {
     },
     integrations: {
       title: "Integrations",
-      description: "Chat with Nan from Discord, Google Chat, and more.",
+      description: "Chat with Naia from Discord, Google Chat, and more.",
       discord: {
         title: "Discord",
         connected: "Connected",
         notConnected: "Not Connected",
         connectedHint: "If you logged in with Discord, you are already connected.",
         inviteBot: "Add Bot to Server",
-        inviteBotDescription: "Add this bot to your server to chat via @Nan mention or DM.",
+        inviteBotDescription: "Add this bot to your server to chat via @Naia mention or DM.",
         howToUse: "Mention @botname in your server or send a DM. Credits are charged to this account automatically.",
       },
       googleChat: {
@@ -257,14 +257,14 @@ const en: Dictionary = {
         connected: "Connected",
         notConnected: "Not Connected",
         connectedHint: "If you logged in with Google, you are already connected.",
-        howToUse: "Add the nan app in Google Chat and start messaging.",
+        howToUse: "Add the naia app in Google Chat and start messaging.",
       },
       viewGuide: "View Setup Guide",
     },
   },
   manual: {
     title: "User Manual",
-    subtitle: "NaN OS Desktop App Guide",
+    subtitle: "Naia OS Desktop App Guide",
     toc: "Table of Contents",
     prev: "Previous",
     next: "Next",
@@ -282,7 +282,7 @@ const en: Dictionary = {
       diagnostics: "Diagnostics",
       settings: "Settings",
       tools: "Tool Details",
-      lab: "NaN OS",
+      lab: "Naia OS",
       troubleshooting: "Troubleshooting",
     },
   },

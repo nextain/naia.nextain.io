@@ -75,7 +75,7 @@
 
 ## 추가 결정 (사용자 지시)
 
-- nan.nextain.io 서비스는 우선 **Gemini 단일 프로바이더**로 운영
+- naia.nextain.io 서비스는 우선 **Gemini 단일 프로바이더**로 운영
 - OpenAI(ChatGPT)는 향후 확장 후보로만 표기
 - 메인/FAQ/요금/빌링 문구에서 멀티 프로바이더 표현 제거
 
@@ -98,7 +98,7 @@
 ## CONTEXT UPDATE
 
 - [x] `.agents/context/agents-rules.json` 업데이트
-  - `architecture.gateway.provider_policy: Gemini-first in nan.nextain.io`
+  - `architecture.gateway.provider_policy: Gemini-first in naia.nextain.io`
 - [x] `.users/context/agents-rules.md` 미러 반영
   - Gateway 연동 섹션에 Gemini 우선 운영 정책 추가
 

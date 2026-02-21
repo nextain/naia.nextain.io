@@ -1,6 +1,6 @@
-# nan.nextain.io
+# naia.nextain.io
 
-nan 서비스 포털. OAuth 로그인 + 크레딧 대시보드 + any-llm gateway 연동.
+naia 서비스 포털. OAuth 로그인 + 크레딧 대시보드 + any-llm gateway 연동.
 
 ## 필수 읽기 (세션 시작 시)
 
@@ -97,7 +97,7 @@ src/
 
 - **Next.js 16** (App Router, Server Components)
 - **NextAuth v5** (Google + Discord OAuth)
-- **shadcn/ui** + Tailwind CSS 4 (nan 브라운 테마)
+- **shadcn/ui** + Tailwind CSS 4 (naia 브라운 테마)
 - **Recharts** — 사용량 차트
 - **next-themes** — 다크/라이트 모드
 - **LemonSqueezy** — 결제 (준비 중, env 미설정 시 Coming Soon)

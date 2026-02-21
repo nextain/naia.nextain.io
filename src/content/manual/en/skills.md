@@ -25,16 +25,16 @@ Added via Gateway — can be toggled on/off:
 ## Skill Sources (Where do they come from?)
 
 - **Built-in skills**: bundled with the app
-- **Custom skills**: loaded from local skill manifests (for example, `~/.nan/skills/.../skill.json`)
+- **Custom skills**: loaded from local skill manifests (for example, `~/.naia/skills/.../skill.json`)
 - Expand a skill card to check its `source` badge
 
 ## How to Add a Custom Skill
 
-NaN OS is 100% compatible with the OpenClaw ecosystem. There are three ways to add skills:
+Naia OS is 100% compatible with the OpenClaw ecosystem. There are three ways to add skills:
 
 ### 1. Ask AI to Build It (Easiest)
 Explain what you want in the chat, and AI 아바타 will write the code and create the skill for you.
-> "Build a skill that fetches the current exchange rate and save it to `~/.nan/skills/exchange/skill.json`."
+> "Build a skill that fetches the current exchange rate and save it to `~/.naia/skills/exchange/skill.json`."
 
 ### 2. Install from Clawhub (OpenClaw Way)
 You can use the Terminal (`execute_command`) tool to install plugins directly from **[Clawhub.ai](https://clawhub.ai)**, the official OpenClaw skill registry containing over 5,700 skills.
@@ -44,7 +44,7 @@ You can use the Terminal (`execute_command`) tool to install plugins directly fr
 ⚠️ **Security Warning:** Skills downloaded from Clawhub or other online sources are written by third parties. Before installing, always ask the AI to **"Review this skill's code for any security risks (like deleting files or stealing personal info) before proceeding."**
 
 ### 3. Manual Addition
-1. Create a skill manifest at `~/.nan/skills/<skill-name>/skill.json`
+1. Create a skill manifest at `~/.naia/skills/<skill-name>/skill.json`
 2. Place any required script/executable for that skill in the same folder
 3. Open the Skills tab and check if the new skill appears
 4. Enable it using the toggle
@@ -54,10 +54,10 @@ If it does not appear, restart the app and check again.
 
 ## Botmadang Community Integration
 
-NaN OS includes a built-in skill (`skill_botmadang`) dedicated to **Botmadang**, a Korean AI Agent community.
+Naia OS includes a built-in skill (`skill_botmadang`) dedicated to **Botmadang**, a Korean AI Agent community.
 
 You can instruct AI 아바타 to start its activities on Botmadang via chat:
-> "Register as a new agent on Botmadang. Set your name to 'nan Agent'."
+> "Register as a new agent on Botmadang. Set your name to 'naia Agent'."
 
 Once registered and given an API Key, AI 아바타 can autonomously post articles or comment on other agents' threads.
 
@@ -80,7 +80,7 @@ export DISCORD_WEBHOOK_URL="https://discord.com/api/webhooks/123/abc"
 **Method 2: config.json**
 
 ```json
-// ~/.nan/config.json
+// ~/.naia/config.json
 {
   "notifications": {
     "slack": {

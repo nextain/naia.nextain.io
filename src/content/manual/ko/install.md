@@ -1,4 +1,4 @@
-NaN OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니다. 특히 Bazzite와 같은 Immutable OS 환경이나 샌드박스(Flatpak) 환경에서 안전하게 동작합니다.
+Naia OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니다. 특히 Bazzite와 같은 Immutable OS 환경이나 샌드박스(Flatpak) 환경에서 안전하게 동작합니다.
 
 ## 시스템 요구사항
 
@@ -11,7 +11,7 @@ NaN OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니�
 
 ## 배포 방식 안내
 
-NaN OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 배포 방식이 매우 중요합니다.
+Naia OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 배포 방식이 매우 중요합니다.
 
 ### 1. Flatpak 배포 (권장)
 가장 보편적이고 안전한 리눅스 앱 배포 방식입니다. 앱스토어(Discover, GNOME Software)를 통해 쉽게 설치할 수 있습니다.
@@ -52,12 +52,12 @@ NaN OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 �
    프로젝트 루트 디렉토리(NaN-OS)에서 실행합니다.
    ```bash
    # build-dir에 컴파일 및 빌드 진행
-   flatpak-builder --user --install --force-clean build-dir flatpak/com.nan.shell.yml
+   flatpak-builder --user --install --force-clean build-dir flatpak/com.naia.shell.yml
    ```
 
 4. **앱 실행**
    ```bash
-   flatpak run com.nan.shell
+   flatpak run com.naia.shell
    ```
 
 > **💡 개발 참고:**

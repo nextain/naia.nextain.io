@@ -1,4 +1,4 @@
-# 개발 사이클 — nan.nextain.io
+# 개발 사이클 — naia.nextain.io
 
 > 이 문서는 `.agents/workflows/development-cycle.yaml`의 한국어 미러입니다.
 > **코딩 작업 전 반드시 읽어주세요.**

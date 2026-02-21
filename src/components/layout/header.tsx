@@ -1,6 +1,6 @@
 "use client";
 
-import { NanLogo } from "@/components/ui/nan-logo";
+import { NanLogo } from "@/components/ui/naia-logo";
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/locale-provider";
 import { Button } from "@/components/ui/button";
@@ -45,7 +45,7 @@ export function Header() {
         {/* Desktop Actions */}
         <div className="hidden items-center gap-2 md:flex">
           <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
-            <Link href="https://github.com/nextain/nan-os" target="_blank" rel="noreferrer">
+            <Link href="https://github.com/nextain/naia-os" target="_blank" rel="noreferrer">
               <Github className="h-4 w-4" />
               <span className="sr-only">GitHub</span>
             </Link>
@@ -92,7 +92,7 @@ export function Header() {
             ))}
             <div className="flex items-center gap-2 pt-2">
               <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
-                <Link href="https://github.com/nextain/nan-os" target="_blank" rel="noreferrer">
+                <Link href="https://github.com/nextain/naia-os" target="_blank" rel="noreferrer">
                   <Github className="h-4 w-4" />
                   <span className="sr-only">GitHub</span>
                 </Link>

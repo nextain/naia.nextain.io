@@ -46,7 +46,7 @@ async function callLLM(userId: string, content: string): Promise<string> {
         {
           role: "system",
           content:
-            "You are Nan, a friendly AI assistant from nan. Respond in the same language as the user. Keep responses concise for chat.",
+            "You are Naia, a friendly AI assistant from naia. Respond in the same language as the user. Keep responses concise for chat.",
         },
         { role: "user", content },
       ],
@@ -70,7 +70,7 @@ export async function POST(request: Request) {
 
     if (event.type === "ADDED_TO_SPACE") {
       return NextResponse.json({
-        text: "Hi! I'm Nan from nan. Send me a message to get started!",
+        text: "Hi! I'm Naia from naia. Send me a message to get started!",
       });
     }
 
@@ -100,8 +100,8 @@ export async function POST(request: Request) {
     if (!caretUser) {
       return NextResponse.json({
         text:
-          "This Google account is not linked to nan.\n" +
-          "Please log in with Google at https://nan.nextain.io to connect your account.",
+          "This Google account is not linked to naia.\n" +
+          "Please log in with Google at https://naia.nextain.io to connect your account.",
       });
     }
 

@@ -1,4 +1,4 @@
-This tab allows you to monitor the health, statistics, and real-time logs of the OpenClaw Gateway daemon running in the background of NaN OS.
+This tab allows you to monitor the health, statistics, and real-time logs of the OpenClaw Gateway daemon running in the background of Naia OS.
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

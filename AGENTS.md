@@ -1,4 +1,4 @@
-# nan.nextain.io — Agent Entry Point
+# naia.nextain.io — Agent Entry Point
 
 ## Context Loading (MUST read first)
 

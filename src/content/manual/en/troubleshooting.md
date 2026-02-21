@@ -44,6 +44,6 @@ Common issues and solutions.
 ## Lab login is not working
 
 1. Check internet connection
-2. Try accessing nan.nextain.io directly in your browser
+2. Try accessing naia.nextain.io directly in your browser
 3. Verify you can sign in with your Google account
 4. Restart the app and try again

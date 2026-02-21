@@ -1,15 +1,15 @@
-# NaN OS 홈페이지 (nan.nextain.io)
+# Naia OS 홈페이지 (naia.nextain.io)
 
 [English](README.md)
 
-이곳은 [NaN OS](https://github.com/nextain/nan-os)의 공식 홈페이지 및 사용자 포털입니다.
-NaN OS에 대한 소개, 사용자 매뉴얼, 그리고 계정 관리 기능을 제공합니다.
+이곳은 [Naia OS](https://github.com/nextain/naia-os)의 공식 홈페이지 및 사용자 포털입니다.
+Naia OS에 대한 소개, 사용자 매뉴얼, 그리고 계정 관리 기능을 제공합니다.
 
 ## 주요 기능
-- **랜딩 페이지**: NaN OS 소개 및 가격 정보.
+- **랜딩 페이지**: Naia OS 소개 및 가격 정보.
 - **사용자 포털**: 계정, 연동(예: Discord), API 키 관리.
-- **매뉴얼**: NaN OS 사용을 위한 단계별 가이드.
-- **Discord 봇 연동**: NaN OS Discord 봇 연결 및 관리.
+- **매뉴얼**: Naia OS 사용을 위한 단계별 가이드.
+- **Discord 봇 연동**: Naia OS Discord 봇 연결 및 관리.
 
 ## 시작하기
 

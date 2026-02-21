@@ -1,4 +1,4 @@
-# NaN OS: API Key → 서비스 모드 전환
+# Naia OS: API Key → 서비스 모드 전환
 
 - **시작일**: 2026-02-17
 - **상태**: 진행 중
@@ -11,47 +11,47 @@ NaN-OS 데스크톱 앱을 "사용자가 직접 API 키 입력" → "회원가�
 ## 아키텍처 개요
 
 ```
-  nan.com (게임 홈페이지)
+  naia.com (게임 홈페이지)
       |  링크
       v
-  nan.nextain.io (Next.js)              api.nan.com (any-llm gateway)
+  naia.nextain.io (Next.js)              api.naia.com (any-llm gateway)
   - OAuth 로그인 (Google/Discord)  <---> - POST /v1/auth/login (JWT 발급)
   - 크레딧 대시보드                       - POST /v1/chat/completions (LLM 프록시)
   - 사용량 조회                           - 크레딧 차감 + 사용량 추적
       ^                                          |
-      | deep link (nan://auth)               v
+      | deep link (naia://auth)               v
   NaN-OS (Tauri 데스크톱 앱)         Cloud SQL (PostgreSQL 16)
   - 서비스 모드: JWT로 gateway 호출      - users, credits, usage_logs
-  - 로컬 모드: 기존 API Key 직접 사용    GCP nan-487703 / asia-northeast3
+  - 로컬 모드: 기존 API Key 직접 사용    GCP naia-487703 / asia-northeast3
 ```
 
-## GCP 인프라 구성 (nan-487703)
+## GCP 인프라 구성 (naia-487703)
 
 | 리소스 | 이름 | 상세 |
 |--------|------|------|
-| Cloud SQL | `nan-db` | PostgreSQL 16, db-f1-micro, asia-northeast3, IP: 34.50.57.134 |
+| Cloud SQL | `naia-db` | PostgreSQL 16, db-f1-micro, asia-northeast3, IP: 34.50.57.134 |
 | Database | `nan_gateway` | gateway 유저로 접근 |
-| Artifact Registry | `nan` | asia-northeast3, Docker 이미지 저장 |
-| Service Account | `nan-gateway@nan-487703.iam.gserviceaccount.com` | Cloud SQL Client + Secret Manager Accessor |
+| Artifact Registry | `naia` | asia-northeast3, Docker 이미지 저장 |
+| Service Account | `naia-gateway@naia-487703.iam.gserviceaccount.com` | Cloud SQL Client + Secret Manager Accessor |
 | Secret Manager | `db-password` | Cloud SQL gateway 유저 비밀번호 |
 | Secret Manager | `gateway-master-key` | Gateway 관리자 키 |
 | Secret Manager | `gateway-jwt-secret` | JWT 서명 키 |
 | Secret Manager | `gemini-api-key` | Gemini API 키 |
-| Cloud Run | `nan-gateway` (예정) | Gateway 서비스 |
+| Cloud Run | `naia-gateway` (예정) | Gateway 서비스 |
 
 ## OAuth 인증 플로우
 
 ```
 1. 사용자 → NaN-OS Settings → "로그인" 클릭
-2. 시스템 브라우저 열림 → nan.nextain.io/login?callback_url=nan://auth&client_type=desktop
-3. nan.nextain.io에서 Google/Discord OAuth 수행 (NextAuth.js)
-4. OAuth 성공 → nan.nextain.io API Route → POST api.nan.com/v1/auth/login
+2. 시스템 브라우저 열림 → naia.nextain.io/login?callback_url=naia://auth&client_type=desktop
+3. naia.nextain.io에서 Google/Discord OAuth 수행 (NextAuth.js)
+4. OAuth 성공 → naia.nextain.io API Route → POST api.naia.com/v1/auth/login
    {provider: "google", email, name, avatar_url, provider_token}
 5. Gateway: 유저 없으면 생성 + FREE plan 자동 부여 (가입 보너스 20크레딧)
 6. Gateway → JWT (access_token + refresh_token) 발급
-7. nan.nextain.io → redirect: nan://auth?code=<provider_token>
+7. naia.nextain.io → redirect: naia://auth?code=<provider_token>
 8. Tauri deep link 핸들러가 code 수신
-9. NaN-OS → POST api.nan.com/v1/auth/token {code} → JWT 수신
+9. NaN-OS → POST api.naia.com/v1/auth/token {code} → JWT 수신
 10. JWT를 Tauri secure storage에 저장
 11. 이후 Agent가 gateway에 요청 시 Authorization: Bearer <JWT> 사용
 ```
@@ -128,7 +128,7 @@ credits_charged = cost_usd × credits_per_usd (10)
 | `shell/src/lib/auth-service.ts` | **신규** — 로그인/토큰 교환/갱신 |
 | `shell/src/components/SettingsModal.tsx` | 모드 토글 + 로그인 UI |
 | `shell/src/components/ChatPanel.tsx` | service 모드 분기 |
-| `shell/src-tauri/tauri.conf.json` | `nan://` deep link 스킴 |
+| `shell/src-tauri/tauri.conf.json` | `naia://` deep link 스킴 |
 | `shell/src-tauri/src/lib.rs` | deep link 핸들러 |
 | `shell/src-tauri/Cargo.toml` | tauri-plugin-deep-link 추가 |
 
@@ -142,37 +142,37 @@ credits_charged = cost_usd × credits_per_usd (10)
 ## 진행 상황
 
 ### Phase 0: GCP 인프라 — 완료 (2026-02-17)
-- [x] GCP 프로젝트 확인 (nan-487703 기존 사용)
+- [x] GCP 프로젝트 확인 (naia-487703 기존 사용)
 - [x] API 활성화 (Cloud Run, SQL Admin, Secret Manager, Artifact Registry)
-- [x] Cloud SQL 인스턴스 생성 (nan-db, PostgreSQL 16)
+- [x] Cloud SQL 인스턴스 생성 (naia-db, PostgreSQL 16)
 - [x] Database + User 생성 (nan_gateway / gateway)
 - [x] Secret Manager: db-password, master-key, jwt-secret, gemini-api-key
 - [x] Service Account + IAM 권한 부여
-- [x] Artifact Registry 생성 (nan, asia-northeast3)
+- [x] Artifact Registry 생성 (naia, asia-northeast3)
 
 ### Phase 1: Gateway 배포 — 완료 (2026-02-17)
-- [x] config.nan.yml 작성 (provider: gemini, xai, anthropic)
+- [x] config.naia.yml 작성 (provider: gemini, xai, anthropic)
 - [x] FREE/BASIC plan 시드 (careti.ai 동일: FREE=가입20+월10, BASIC=$10/월100)
 - [x] Docker 빌드 + Cloud Run 배포 (v3)
-- [ ] 도메인 매핑 (api.nan.com) — Cloud Run 도메인 매핑 필요, MVP에서는 Cloud Run URL 직접 사용
+- [ ] 도메인 매핑 (api.naia.com) — Cloud Run 도메인 매핑 필요, MVP에서는 Cloud Run URL 직접 사용
 - [x] 헬스체크 검증 ✅
-- [x] Gateway URL: `https://nan-gateway-789741003661.asia-northeast3.run.app`
-- **발견 이슈**: nan.nextain.io auth가 `/v1/users` 호출 → 크레딧 미지급. `/v1/auth/login` 호출로 변경 필요
+- [x] Gateway URL: `https://naia-gateway-789741003661.asia-northeast3.run.app`
+- **발견 이슈**: naia.nextain.io auth가 `/v1/users` 호출 → 크레딧 미지급. `/v1/auth/login` 호출로 변경 필요
 
-### Phase 2: nan.nextain.io 인증 수정 — 완료 (2026-02-17)
+### Phase 2: naia.nextain.io 인증 수정 — 완료 (2026-02-17)
 - [x] auth.ts: `/v1/users` → `/v1/auth/login` (socialLogin) 전환 → 크레딧 자동 지급 ✅
 - [x] Google OAuth 로그인 검증 ✅
 - [x] Discord OAuth redirect URI 추가 + 로그인 검증 ✅
 - [x] 가입 시 20 크레딧 자동 부여 확인 ✅
 - [x] LLM 채팅 (크레딧 차감) E2E 검증 ✅
 - [x] Vercel 배포 (`https://project-labnancom.vercel.app`)
-- [ ] nan.nextain.io 커스텀 도메인 연결 (Vercel)
+- [ ] naia.nextain.io 커스텀 도메인 연결 (Vercel)
 
-### Phase 3: nan.nextain.io 풀 포털 구현 — 완료 (2026-02-17)
+### Phase 3: naia.nextain.io 풀 포털 구현 — 완료 (2026-02-17)
 
 8-Phase 계획 기반 (careti.ai 수준):
 
-- [x] **Phase 1**: shadcn/ui + 테마 (nan 브라운 톤, light/dark) + lucide-react
+- [x] **Phase 1**: shadcn/ui + 테마 (naia 브라운 톤, light/dark) + lucide-react
 - [x] **Phase 2**: 레이아웃 시스템 — `[lang]/(public)`, `[lang]/(protected)`, `[lang]/(auth)`
   - AuthHeader, ProtectedSidebar, MobileNav, Header, Footer
 - [x] **Phase 3**: i18n — `[lang]` URL 세그먼트 (ko/en), getDictionary, LocaleProvider, LanguageSwitcher
@@ -203,7 +203,7 @@ E2E 테스트:
 
 > NaN-OS plan Phase 5 (Lab 통합)로 통합. 상세는 `NaN-OS/.agents/context/plan.yaml` Phase 5 참조.
 
-- [ ] 5.1: Deep Link 핸들러 (tauri-plugin-deep-link, nan:// 스킴)
+- [ ] 5.1: Deep Link 핸들러 (tauri-plugin-deep-link, naia:// 스킴)
 - [ ] 5.2: 인증 흐름 UI (OnboardingWizard Lab 로그인 + SettingsTab Lab 연결)
 - [ ] 5.3: LLM 프록시 연동 (lab-proxy.ts, any-llm Gateway 경유)
 - [ ] 5.4: 크레딧 잔액 표시 (CostDashboard 서버 잔액)

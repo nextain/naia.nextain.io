@@ -1,4 +1,4 @@
-Manage your account at [nan.nextain.io](https://nan.nextain.io).
+Manage your account at [naia.nextain.io](https://naia.nextain.io).
 
 ## Dashboard
 
@@ -54,7 +54,7 @@ Manage API keys for desktop apps and external services:
 
 ## Integrations
 
-Link your nan.nextain.io account with external messengers to chat with the AI avatar from anywhere.
+Link your naia.nextain.io account with external messengers to chat with the AI avatar from anywhere.
 
 ### Discord
 - Automatically linked when you sign in with Discord

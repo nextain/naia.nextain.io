@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/locale-provider";
-import { NanLogo } from "@/components/ui/nan-logo";
+import { NanLogo } from "@/components/ui/naia-logo";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { signOut } from "next-auth/react";

@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: "https://nan.nextain.io/sitemap.xml",
+    sitemap: "https://naia.nextain.io/sitemap.xml",
   };
 }

@@ -1,15 +1,15 @@
 {
 	"project_identity": {
-		"name": "nan.nextain.io",
-		"nature": "nan service portal — OAuth login, credit dashboard, usage analytics, key management, billing",
+		"name": "naia.nextain.io",
+		"nature": "naia service portal — OAuth login, credit dashboard, usage analytics, key management, billing",
 		"philosophy": "Thin web client for any-llm gateway. Auth + dashboard + billing UI only.",
-		"domain": "nan.nextain.io",
-		"product": "NaN OS — personal AI desktop OS with companion Nan, VRM avatar, TTS/STT, 8 themes"
+		"domain": "naia.nextain.io",
+		"product": "Naia OS — personal AI desktop OS with companion Naia, VRM avatar, TTS/STT, 8 themes"
 	},
 	"architecture": {
 		"framework": "Next.js 16 (App Router, Server Components)",
 		"language": "TypeScript",
-		"styling": "Tailwind CSS 4 + shadcn/ui (new-york style, nan brown theme)",
+		"styling": "Tailwind CSS 4 + shadcn/ui (new-york style, naia brown theme)",
 		"deployment": "Vercel",
 		"backend": "Next.js API Routes (BFF pattern — master key server-only)",
 		"gateway": {

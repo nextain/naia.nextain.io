@@ -6,13 +6,13 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "NaN OS",
-    template: "%s | NaN OS",
+    default: "Naia OS",
+    template: "%s | Naia OS",
   },
   description:
-    "NaN OS — Your Personal AI Desktop OS. Chat with 3D avatar AI, voice conversations, and multi-LLM support.",
+    "Naia OS — Your Personal AI Desktop OS. Chat with 3D avatar AI, voice conversations, and multi-LLM support.",
   keywords: [
-    "nan",
+    "naia",
     "AI Desktop",
     "AI Avatar",
     "3D Avatar",
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
     "personal AI",
     "desktop OS",
   ],
-  metadataBase: new URL("https://nan.nextain.io"),
+  metadataBase: new URL("https://naia.nextain.io"),
   openGraph: {
-    title: "NaN OS — Where Technology meets Emotion",
+    title: "Naia OS — Where Technology meets Emotion",
     description:
       "Your personal AI desktop OS with 3D avatar, voice chat, and multi-LLM support. One-click install or dedicated Linux OS.",
-    url: "https://nan.nextain.io",
-    siteName: "NaN OS",
+    url: "https://naia.nextain.io",
+    siteName: "Naia OS",
     locale: "en_US",
     alternateLocale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NaN OS — Where Technology meets Emotion",
+    title: "Naia OS — Where Technology meets Emotion",
     description:
       "Your personal AI desktop OS with 3D avatar, voice chat, and multi-LLM support.",
   },

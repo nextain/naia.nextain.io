@@ -1,15 +1,15 @@
-# NaN OS Homepage (nan.nextain.io)
+# Naia OS Homepage (naia.nextain.io)
 
 [한국어(Korean)](README.ko.md)
 
-This is the official homepage and user portal for [NaN OS](https://github.com/nextain/nan-os).
-It provides information about NaN OS, user manuals, and account management features.
+This is the official homepage and user portal for [Naia OS](https://github.com/nextain/naia-os).
+It provides information about Naia OS, user manuals, and account management features.
 
 ## Features
-- **Landing Page**: Information and pricing about NaN OS.
+- **Landing Page**: Information and pricing about Naia OS.
 - **User Portal**: Manage your account, integrations (e.g., Discord), and API keys.
-- **Manuals**: Step-by-step guides for using NaN OS.
-- **Discord Bot Integration**: Connect with the NaN OS Discord bot.
+- **Manuals**: Step-by-step guides for using Naia OS.
+- **Discord Bot Integration**: Connect with the Naia OS Discord bot.
 
 ## Getting Started
 

@@ -1,4 +1,4 @@
-NaN OS is designed primarily for Linux environments, focusing on Immutable OSs like Bazzite or secure sandbox environments like Flatpak.
+Naia OS is designed primarily for Linux environments, focusing on Immutable OSs like Bazzite or secure sandbox environments like Flatpak.
 
 ## System Requirements
 
@@ -11,7 +11,7 @@ NaN OS is designed primarily for Linux environments, focusing on Immutable OSs l
 
 ## Deployment Options
 
-Since NaN OS features an AI that "controls the OS directly," the deployment method is an important consideration.
+Since Naia OS features an AI that "controls the OS directly," the deployment method is an important consideration.
 
 ### 1. Flatpak Distribution (Recommended)
 This is the most common and secure way to distribute Linux desktop apps. You can easily install it via app stores like Discover or GNOME Software.
@@ -25,7 +25,7 @@ This is the most common and secure way to distribute Linux desktop apps. You can
   ```
 
 ### 2. Bazzite / BlueBuild Integrated Image (Advanced)
-For advanced users, NaN OS provides a BlueBuild recipe to bake the app directly into a Bazzite image. This deeply integrates the AI into the OS, allowing the AI avatar to greet you immediately upon boot.
+For advanced users, Naia OS provides a BlueBuild recipe to bake the app directly into a Bazzite image. This deeply integrates the AI into the OS, allowing the AI avatar to greet you immediately upon boot.
 
 ---
 
@@ -52,12 +52,12 @@ To build the Flatpak sandbox app from the source code, follow these steps:
    Execute this in the project root directory (NaN-OS).
    ```bash
    # Compiles and builds into the build-dir
-   flatpak-builder --user --install --force-clean build-dir flatpak/com.nan.shell.yml
+   flatpak-builder --user --install --force-clean build-dir flatpak/com.naia.shell.yml
    ```
 
 4. **Run the App**
    ```bash
-   flatpak run com.nan.shell
+   flatpak run com.naia.shell
    ```
 
 > **💡 Developer Note:**

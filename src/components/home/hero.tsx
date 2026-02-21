@@ -61,12 +61,12 @@ export function Hero({ dict, lang }: { dict: Dictionary; lang: string }) {
                   <div className="h-2.5 w-2.5 rounded-full bg-red-500/80" />
                   <div className="h-2.5 w-2.5 rounded-full bg-yellow-500/80" />
                   <div className="h-2.5 w-2.5 rounded-full bg-green-500/80" />
-                  <span className="ml-2 text-[10px] font-medium text-muted-foreground">nan-os-terminal ~</span>
+                  <span className="ml-2 text-[10px] font-medium text-muted-foreground">naia-os-terminal ~</span>
                 </div>
                 <div className="p-4 sm:p-6 space-y-4 rounded-b-xl bg-black/5 dark:bg-black/40 font-mono text-sm">
                   <div className="flex items-center gap-2 text-cyan-600 dark:text-cyan-400">
                     <Terminal className="h-4 w-4" />
-                    <span>nan start --avatar vrm</span>
+                    <span>naia start --avatar vrm</span>
                   </div>
                   <div className="space-y-2 text-muted-foreground">
                     <div className="flex items-center gap-2">
@@ -84,7 +84,7 @@ export function Hero({ dict, lang }: { dict: Dictionary; lang: string }) {
                         <Bot className="h-4 w-4" />
                       </div>
                       <div>
-                        <p className="text-foreground font-sans text-sm font-medium">Nan</p>
+                        <p className="text-foreground font-sans text-sm font-medium">Naia</p>
                         <p className="mt-1 font-sans text-sm text-muted-foreground">
                           시스템이 성공적으로 부팅되었습니다. 마스터, 오늘 어떤 작업을 도와드릴까요?
                         </p>

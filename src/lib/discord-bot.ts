@@ -1,5 +1,5 @@
 /**
- * Discord bot service for nan.
+ * Discord bot service for naia.
  *
  * Connects to Discord WebSocket Gateway via discord.js.
  * On message (mention or DM), looks up the CaretUser via provider_account_id,
@@ -65,7 +65,7 @@ async function callLLM(
         {
           role: "system",
           content:
-            "You are Nan, a friendly AI assistant from nan. Respond in the same language as the user. Keep responses concise for chat.",
+            "You are Naia, a friendly AI assistant from naia. Respond in the same language as the user. Keep responses concise for chat.",
         },
         { role: "user", content },
       ],
@@ -111,8 +111,8 @@ async function handleMessage(message: Message): Promise<void> {
 
     if (!caretUser) {
       await message.reply(
-        "This Discord account is not linked to nan.\n" +
-          "Please log in with Discord at https://nan.nextain.io to connect your account.",
+        "This Discord account is not linked to naia.\n" +
+          "Please log in with Discord at https://naia.nextain.io to connect your account.",
       );
       return;
     }

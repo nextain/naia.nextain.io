@@ -10,7 +10,7 @@ export function NanLogo({ className }: { className?: string }) {
         className="w-full h-full"
       >
         <defs>
-          <linearGradient id="nan-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <linearGradient id="naia-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#2563EB" /> {/* Nextain Blue */}
             <stop offset="50%" stopColor="#06B6D4" /> {/* Flow Cyan */}
             <stop offset="100%" stopColor="#10B981" /> {/* Evolution Green */}
@@ -23,15 +23,15 @@ export function NanLogo({ className }: { className?: string }) {
         
         {/* Animated Glow */}
         <g filter="url(#glow)" className="opacity-50 animate-pulse">
-          <path d="M12 4 L19 16 L5 16 Z" stroke="url(#nan-gradient)" strokeWidth="1.5" strokeLinejoin="round" />
-          <circle cx="12" cy="4" r="3" fill="url(#nan-gradient)" />
-          <circle cx="19" cy="16" r="3" fill="url(#nan-gradient)" />
-          <circle cx="5" cy="16" r="3" fill="url(#nan-gradient)" />
+          <path d="M12 4 L19 16 L5 16 Z" stroke="url(#naia-gradient)" strokeWidth="1.5" strokeLinejoin="round" />
+          <circle cx="12" cy="4" r="3" fill="url(#naia-gradient)" />
+          <circle cx="19" cy="16" r="3" fill="url(#naia-gradient)" />
+          <circle cx="5" cy="16" r="3" fill="url(#naia-gradient)" />
         </g>
 
         {/* Core Constellation */}
         <g className="drop-shadow-sm transition-transform duration-700 hover:rotate-180" style={{ transformOrigin: 'center' }}>
-           <path d="M12 4 L19 16 L5 16 Z" stroke="url(#nan-gradient)" strokeWidth="1.5" strokeLinejoin="round" />
+           <path d="M12 4 L19 16 L5 16 Z" stroke="url(#naia-gradient)" strokeWidth="1.5" strokeLinejoin="round" />
            <circle cx="12" cy="4" r="2.5" fill="#06B6D4" />
            <circle cx="19" cy="16" r="2.5" fill="#10B981" />
            <circle cx="5" cy="16" r="2.5" fill="#2563EB" />

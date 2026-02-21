@@ -1,4 +1,4 @@
-import { NanLogo } from "@/components/ui/nan-logo";
+import { NanLogo } from "@/components/ui/naia-logo";
 import Link from "next/link";
 import { getDictionary } from "@/i18n/dictionaries";
 import { isLocale } from "@/i18n/config";

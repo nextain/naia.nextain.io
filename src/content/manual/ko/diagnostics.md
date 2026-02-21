@@ -1,4 +1,4 @@
-NaN OS 백그라운드에서 동작하는 OpenClaw Gateway 데몬의 건강 상태와 통계, 그리고 로그를 실시간으로 모니터링하는 탭입니다.
+Naia OS 백그라운드에서 동작하는 OpenClaw Gateway 데몬의 건강 상태와 통계, 그리고 로그를 실시간으로 모니터링하는 탭입니다.
 
 ![시스템 진단 탭](diagnostics-tab.png)
 

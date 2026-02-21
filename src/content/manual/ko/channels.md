@@ -14,33 +14,33 @@
 
 ## Discord 봇 연동
 
-[nan.nextain.io](https://nan.nextain.io)에서 디스코드 계정으로 로그인하면 자동으로 연동됩니다. 연동 후 디스코드에서 AI 아바타와 직접 대화할 수 있습니다.
+[naia.nextain.io](https://naia.nextain.io)에서 디스코드 계정으로 로그인하면 자동으로 연동됩니다. 연동 후 디스코드에서 AI 아바타와 직접 대화할 수 있습니다.
 
 ### 사용법
-1. nan.nextain.io에 **디스코드 계정으로 로그인**
+1. naia.nextain.io에 **디스코드 계정으로 로그인**
 2. **설정 > 연동** 페이지에서 봇 초대 링크 클릭
 3. 봇을 추가할 **서버를 선택** → 권한 승인
 4. 서버에서 **@봇이름** 멘션 또는 **DM으로 대화** 시작
-5. 크레딧은 nan.nextain.io 계정에서 자동 차감
+5. 크레딧은 naia.nextain.io 계정에서 자동 차감
 
 ### 특징
 - **멘션/DM 감지**: 서버에서 봇을 멘션하거나 DM을 보내면 AI가 응답합니다
-- **크레딧 연동**: nan.nextain.io 계정의 크레딧이 자동으로 사용됩니다
+- **크레딧 연동**: naia.nextain.io 계정의 크레딧이 자동으로 사용됩니다
 - **미등록 유저 안내**: 연동되지 않은 유저가 봇에게 말하면 연동 방법을 안내합니다
 - **Rate limiting**: 분당 10회 메시지 제한으로 크레딧을 보호합니다
 
 ## Google Chat 연동
 
-구글 계정으로 nan.nextain.io에 로그인하면 Google Chat에서도 AI 아바타와 대화할 수 있습니다.
+구글 계정으로 naia.nextain.io에 로그인하면 Google Chat에서도 AI 아바타와 대화할 수 있습니다.
 
 ### 사용법
-1. nan.nextain.io에 **구글 계정으로 로그인**
-2. Google Workspace 관리자가 **nan Chat 앱을 등록**
+1. naia.nextain.io에 **구글 계정으로 로그인**
+2. Google Workspace 관리자가 **naia Chat 앱을 등록**
 3. Google Chat에서 앱을 추가하고 대화 시작
-4. 크레딧은 nan.nextain.io 계정에서 자동 차감
+4. 크레딧은 naia.nextain.io 계정에서 자동 차감
 
 ## 메신저 알림 (Webhooks)
-NaN OS는 OpenClaw의 강력한 채널 시스템을 상속받았습니다.
+Naia OS는 OpenClaw의 강력한 채널 시스템을 상속받았습니다.
 앱 내부의 **설정 > 도구(Tools) > 메신저 연동** 메뉴 또는 초기 온보딩 화면에서 슬랙(Slack), 디스코드(Discord)나 구글 챗(Google Chat)의 웹훅 URL을 입력해 두면, AI 아바타가 중요한 작업 결과를 사용자에게 메시지로 쏴줍니다.
 
 > **활용 팁:** "지금 진행 중인 파일 백업이 다 끝나면 내 디스코드로 알려줘!"

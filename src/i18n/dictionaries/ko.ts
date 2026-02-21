@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ko: Dictionary = {
   locale: "ko",
   meta: {
-    title: "NaN OS",
-    description: "NaN OS — 손쉬운 나만의 AI. 3D 아바타 AI 아바타와 대화하고, 음성으로 소통하세요.",
+    title: "Naia OS",
+    description: "Naia OS — 손쉬운 나만의 AI. 3D 아바타 AI 아바타와 대화하고, 음성으로 소통하세요.",
   },
   common: {
     loading: "로딩 중...",
@@ -33,7 +33,7 @@ const ko: Dictionary = {
     manual: "사용법",
   },
   footer: {
-    brand: "NaN OS",
+    brand: "Naia OS",
     tagline: "Where Technology meets Emotion",
     links: {
       privacy: "개인정보처리방침",
@@ -58,12 +58,12 @@ const ko: Dictionary = {
     hero: {
       title: "가장 진보한 AI 에이전트,\n가장 완벽한 OS로.",
       subtitle:
-        "3대 LLM 통합부터 터미널 제어, 그리고 감정을 표현하는 VRM 아바타까지. 개발자가 아니어도 경험할 수 있는 완전한 AI 생태계, NaN OS.",
+        "3대 LLM 통합부터 터미널 제어, 그리고 감정을 표현하는 VRM 아바타까지. 개발자가 아니어도 경험할 수 있는 완전한 AI 생태계, Naia OS.",
       cta: "무료로 시작하기",
       secondaryCta: "다운로드",
     },
     features: {
-      title: "NaN OS가 특별한 이유",
+      title: "Naia OS가 특별한 이유",
       subtitle: "개발자가 아니어도 AI 에이전트를 경험할 수 있습니다",
       items: {
         companion: {
@@ -227,7 +227,7 @@ const ko: Dictionary = {
     },
     desktopApp: {
       title: "데스크톱 앱 연결",
-      description: "NaN OS 데스크톱 앱에서 이 계정으로 로그인할 수 있습니다.",
+      description: "Naia OS 데스크톱 앱에서 이 계정으로 로그인할 수 있습니다.",
       issueKey: "연결 키 발급",
     },
     appearance: {
@@ -255,14 +255,14 @@ const ko: Dictionary = {
         connected: "연동됨",
         notConnected: "미연동",
         connectedHint: "구글로 로그인하셨다면 이미 연동되어 있습니다.",
-        howToUse: "Google Chat에서 NaN OS 앱을 추가한 후 메시지를 보내세요.",
+        howToUse: "Google Chat에서 Naia OS 앱을 추가한 후 메시지를 보내세요.",
       },
       viewGuide: "설정 가이드 보기",
     },
   },
   manual: {
     title: "시작하기",
-    subtitle: "NaN OS 데스크톱 앱 사용 가이드",
+    subtitle: "Naia OS 데스크톱 앱 사용 가이드",
     toc: "목차",
     prev: "이전",
     next: "다음",
@@ -280,7 +280,7 @@ const ko: Dictionary = {
       diagnostics: "시스템 진단",
       settings: "설정",
       tools: "도구 상세",
-      lab: "NaN OS",
+      lab: "Naia OS",
       troubleshooting: "문제 해결",
     },
   },

@@ -26,7 +26,7 @@ export function buildLemonCheckoutUrl({
   if (email) {
     url.searchParams.set("checkout[email]", email);
   }
-  url.searchParams.set("checkout[custom][source]", "nan.nextain.io");
+  url.searchParams.set("checkout[custom][source]", "naia.nextain.io");
   url.searchParams.set("checkout[custom][locale]", lang);
 
   return url.toString();
