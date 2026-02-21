@@ -24,27 +24,39 @@ function CallbackContent() {
       try {
         let discordUserId: string | null = null;
         if (channel === "discord") {
-          const linkedRes = await fetch("/api/gateway/discord-linked", { method: "GET" });
-          if (linkedRes.ok) {
-            const linkedData = (await linkedRes.json()) as {
-              discordUserId?: string | null;
-            };
-            if (linkedData.discordUserId) {
-              discordUserId = linkedData.discordUserId;
-            }
-          } else {
-            const sessionRes = await fetch("/api/auth/session", { method: "GET" });
-            if (sessionRes.ok) {
-              const sessionData = (await sessionRes.json()) as {
-                provider?: string;
-                providerAccountId?: string;
+          // Method 1: Gateway lookup (may have provider_account_id from socialLogin)
+          try {
+            const linkedRes = await fetch("/api/gateway/discord-linked", { method: "GET" });
+            if (linkedRes.ok) {
+              const linkedData = (await linkedRes.json()) as {
+                discordUserId?: string | null;
               };
-              if (
-                sessionData.provider === "discord" &&
-                sessionData.providerAccountId
-              ) {
-                discordUserId = sessionData.providerAccountId;
+              if (linkedData.discordUserId) {
+                discordUserId = linkedData.discordUserId;
               }
+            }
+          } catch {
+            // Gateway lookup failed — fall through to session
+          }
+
+          // Method 2: Session fallback — after Discord signIn, session has providerAccountId
+          if (!discordUserId) {
+            try {
+              const sessionRes = await fetch("/api/auth/session", { method: "GET" });
+              if (sessionRes.ok) {
+                const sessionData = (await sessionRes.json()) as {
+                  provider?: string;
+                  providerAccountId?: string;
+                };
+                if (
+                  sessionData.provider === "discord" &&
+                  sessionData.providerAccountId
+                ) {
+                  discordUserId = sessionData.providerAccountId;
+                }
+              }
+            } catch {
+              // Session lookup failed — discordUserId stays null
             }
           }
         }

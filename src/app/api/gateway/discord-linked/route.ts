@@ -9,23 +9,34 @@ export async function GET() {
   }
 
   const email = session.user?.email ?? undefined;
-  if (!email) {
-    return NextResponse.json({ discordUserId: null });
+
+  // If current session is from Discord OAuth, providerAccountId IS the Discord user ID
+  const sessionDiscordId =
+    session.provider === "discord" && session.providerAccountId
+      ? session.providerAccountId
+      : null;
+
+  let gatewayDiscordId: string | null = null;
+  let linkedUserId: string | null = null;
+
+  if (email) {
+    try {
+      const linked = await lookupUser("discord", { email });
+      gatewayDiscordId = linked?.provider_account_id ?? null;
+      linkedUserId = linked?.user_id ?? null;
+    } catch {
+      // Gateway lookup failed — fall through to session-based ID
+    }
   }
 
-  try {
-    const linked = await lookupUser("discord", { email });
-    return NextResponse.json({
-      discordUserId: linked?.provider_account_id ?? null,
-      linkedUserId: linked?.user_id ?? null,
-      currentUserId: session.gwUserId,
-      linked: linked?.user_id === session.gwUserId,
-    });
-  } catch (error) {
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : String(error) },
-      { status: 500 },
-    );
-  }
+  // Prefer gateway lookup, fall back to session's providerAccountId
+  const discordUserId = gatewayDiscordId || sessionDiscordId;
+
+  return NextResponse.json({
+    discordUserId,
+    linkedUserId,
+    currentUserId: session.gwUserId,
+    linked: linkedUserId === session.gwUserId,
+  });
 }
 
