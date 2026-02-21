@@ -251,6 +251,25 @@ export interface Dictionary {
       troubleshooting: string;
     };
   };
+  download: {
+    title: string;
+    subtitle: string;
+    recommended: string;
+    version: string;
+    releaseNotes: string;
+    requirements: string;
+    requirementsList: string[];
+    formats: {
+      flatpak: { name: string; description: string; command: string };
+      appimage: { name: string; description: string; command: string };
+      deb: { name: string; description: string; command: string };
+      rpm: { name: string; description: string; command: string };
+    };
+    checksum: string;
+    checksumDescription: string;
+    allReleases: string;
+    sourceCode: string;
+  };
   billing: {
     title: string;
     currentPlan: string;

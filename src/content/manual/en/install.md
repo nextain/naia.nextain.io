@@ -19,10 +19,12 @@ This is the most common and secure way to distribute Linux desktop apps. You can
 - **Secure Isolation**: The app's UI (Tauri) and core agent (Node.js) run entirely inside the sandbox.
 - **Host Execution**: When the AI needs to execute terminal commands (e.g., installing a package or managing the host file system), it safely escapes the sandbox using `flatpak-spawn --host`.
 - **How to Install**:
-  Download the provided `.flatpak` bundle and install it via terminal:
+  Download the `.flatpak` bundle from the [Download page](/en/download) and install via terminal:
   ```bash
-  flatpak install --user ./Naia-OS.flatpak
+  flatpak install --user ./Naia-Shell-x86_64.flatpak
   ```
+
+> **Other formats available**: AppImage, DEB (Debian/Ubuntu), RPM (Fedora/RHEL). See the [Download page](/en/download) for all options.
 
 ### 2. Bazzite / BlueBuild Integrated Image (Advanced)
 For advanced users, Naia OS provides a BlueBuild recipe to bake the app directly into a Bazzite image. This deeply integrates the AI into the OS, allowing the AI avatar to greet you immediately upon boot.

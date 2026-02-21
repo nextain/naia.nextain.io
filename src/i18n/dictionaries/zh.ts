@@ -278,6 +278,45 @@ const zh: Dictionary = {
       "troubleshooting": "故障排除"
     }
   },
+  "download": {
+    "title": "下载",
+    "subtitle": "下载 Naia OS，与您的 AI 虚拟形象开始对话。",
+    "recommended": "推荐",
+    "version": "版本",
+    "releaseNotes": "发行说明",
+    "requirements": "系统要求",
+    "requirementsList": [
+      "Linux x86_64",
+      "Wayland 或 X11",
+      "Node.js 22+（适用于 AppImage/deb/rpm）",
+    ],
+    "formats": {
+      "flatpak": {
+        "name": "Flatpak",
+        "description": "The safest installation method. Runs in a sandboxed environment.",
+        "command": "flatpak install --user ./Naia-Shell-x86_64.flatpak",
+      },
+      "appimage": {
+        "name": "AppImage",
+        "description": "Single executable file. Run directly without installation.",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
+      },
+      "deb": {
+        "name": "DEB",
+        "description": "For Debian, Ubuntu, and other apt-based distributions.",
+        "command": "sudo dpkg -i naia-shell_*.deb",
+      },
+      "rpm": {
+        "name": "RPM",
+        "description": "For Fedora, RHEL, and other rpm-based distributions.",
+        "command": "sudo rpm -i naia-shell-*.rpm",
+      },
+    },
+    "checksum": "校验和验证",
+    "checksumDescription": "验证下载文件的完整性：",
+    "allReleases": "查看所有版本",
+    "sourceCode": "源代码",
+  },
   "billing": {
     "title": "计费",
     "currentPlan": "当前计划",

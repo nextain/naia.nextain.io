@@ -278,6 +278,45 @@ const ja: Dictionary = {
       "troubleshooting": "トラブルシューティング"
     }
   },
+  "download": {
+    "title": "ダウンロード",
+    "subtitle": "Naia OSをダウンロードして、AIアバターと会話しましょう。",
+    "recommended": "推奨",
+    "version": "バージョン",
+    "releaseNotes": "リリースノート",
+    "requirements": "システム要件",
+    "requirementsList": [
+      "Linux x86_64",
+      "WaylandまたはX11",
+      "Node.js 22+（AppImage/deb/rpm用）",
+    ],
+    "formats": {
+      "flatpak": {
+        "name": "Flatpak",
+        "description": "The safest installation method. Runs in a sandboxed environment.",
+        "command": "flatpak install --user ./Naia-Shell-x86_64.flatpak",
+      },
+      "appimage": {
+        "name": "AppImage",
+        "description": "Single executable file. Run directly without installation.",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
+      },
+      "deb": {
+        "name": "DEB",
+        "description": "For Debian, Ubuntu, and other apt-based distributions.",
+        "command": "sudo dpkg -i naia-shell_*.deb",
+      },
+      "rpm": {
+        "name": "RPM",
+        "description": "For Fedora, RHEL, and other rpm-based distributions.",
+        "command": "sudo rpm -i naia-shell-*.rpm",
+      },
+    },
+    "checksum": "チェックサム検証",
+    "checksumDescription": "ダウンロードファイルの整合性を確認するには：",
+    "allReleases": "全リリースを表示",
+    "sourceCode": "ソースコード",
+  },
   "billing": {
     "title": "請求",
     "currentPlan": "現在の計画",

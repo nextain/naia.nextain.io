@@ -26,6 +26,7 @@ export function Header({ session }: { session: Session | null }) {
   const user = session?.user;
 
   const navLinks = [
+    { href: `/${lang}/download`, label: dict.header.download },
     { href: `/${lang}#pricing`, label: dict.header.pricing },
     { href: `/${lang}#faq`, label: dict.header.faq },
     { href: `/${lang}/manual`, label: dict.header.manual },
@@ -96,7 +97,7 @@ export function Header({ session }: { session: Session | null }) {
             </Button>
           )}
           <Button size="sm" asChild>
-            <Link href={`/${lang}#pricing`}>{dict.header.download}</Link>
+            <Link href={`/${lang}/download`}>{dict.header.download}</Link>
           </Button>
         </div>
 

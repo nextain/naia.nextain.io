@@ -19,10 +19,12 @@ Naia OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 �
 - **안전한 격리**: 앱의 UI(Tauri)와 핵심 에이전트(Node.js)는 완벽하게 샌드박스 내부에서 동작합니다.
 - **호스트 제어**: AI가 터미널 명령어(ex. 패키지 설치, 파일 시스템 관리)를 실행할 때만 `flatpak-spawn --host`를 통해 안전하게 샌드박스를 우회하여 호스트 OS에 명령을 내립니다.
 - **설치 방법**:
-  추후 제공될 `.flatpak` 번들을 다운로드하여 터미널에서 아래 명령어로 설치합니다.
+  [다운로드 페이지](/ko/download)에서 `.flatpak` 번들을 받아 터미널에서 설치합니다.
   ```bash
-  flatpak install --user ./Naia-OS.flatpak
+  flatpak install --user ./Naia-Shell-x86_64.flatpak
   ```
+
+> **다른 형식도 지원합니다**: AppImage, DEB (Debian/Ubuntu), RPM (Fedora/RHEL). [다운로드 페이지](/ko/download)에서 모든 형식을 확인하세요.
 
 ### 2. Bazzite / BlueBuild 통합 이미지 (고급)
 사용자 정의 OS 이미지를 굽는 방식입니다. `Naia OS`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
