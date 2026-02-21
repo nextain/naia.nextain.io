@@ -72,9 +72,9 @@ const ko: Dictionary = {
             "감정을 표현하는 3D 아바타가 데스크톱에서 함께합니다. 대화에 따라 표정이 바뀌고, 눈을 맞추며 반응합니다.",
         },
         multiProvider: {
-          title: "Gemini · Grok · Claude",
+          title: "Gemini 무료 지원 · 기타 모델 준비중",
           description:
-            "3종 LLM을 하나의 계정으로. 크레딧 하나로 모델을 자유롭게 전환하며 사용하세요.",
+            "현재 Gemini를 무료 크레딧으로 지원합니다. Grok, Anthropic(Claude), OpenAI, Zhipu(GLM) 등의 API Key 지원이 곧 추가될 예정입니다.",
         },
         voice: {
           title: "음성 대화",

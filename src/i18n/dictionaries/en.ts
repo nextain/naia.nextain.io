@@ -72,9 +72,9 @@ const en: Dictionary = {
             "A 3D avatar with emotions, right on your desktop. AI 아바타 reacts to conversations with facial expressions and eye contact.",
         },
         multiProvider: {
-          title: "Gemini · Grok · Claude",
+          title: "Gemini Free · More Models Coming Soon",
           description:
-            "Three LLM providers under one account. Switch models freely with a single credit pool.",
+            "Currently supporting Gemini with free credits. API Key support for Grok, Anthropic(Claude), OpenAI, and Zhipu(GLM) is planned and coming soon.",
         },
         voice: {
           title: "Voice Conversations",
