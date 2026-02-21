@@ -20,9 +20,20 @@ export async function generateMetadata({
   }
 
   const dictionary = await getDictionary(lang as Locale);
+  
+  // SEO hreflang generation
+  const languages: Record<string, string> = {};
+  SUPPORTED_LOCALES.forEach((l) => {
+    languages[l] = `/${l}`;
+  });
+
   return {
     title: dictionary.meta.title,
     description: dictionary.meta.description,
+    alternates: {
+      canonical: `/${lang}`,
+      languages,
+    },
     openGraph: {
       title: dictionary.meta.title,
       description: dictionary.meta.description,
