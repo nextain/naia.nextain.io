@@ -9,7 +9,7 @@ import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 
-export function Header() {
+export function Header({ hasSession = false }: { hasSession?: boolean }) {
   const dict = useDictionary();
   const lang = dict.locale;
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -58,9 +58,15 @@ export function Header() {
           </Button>
           <ThemeToggle />
           <LanguageSwitcher />
-          <Button variant="ghost" size="sm" asChild>
-            <Link href={`/${lang}/login`}>{dict.header.login}</Link>
-          </Button>
+          {hasSession ? (
+            <Button variant="ghost" size="sm" asChild>
+              <Link href={`/${lang}/dashboard`}>{dict.sidebar.dashboard}</Link>
+            </Button>
+          ) : (
+            <Button variant="ghost" size="sm" asChild>
+              <Link href={`/${lang}/login`}>{dict.header.login}</Link>
+            </Button>
+          )}
           <Button size="sm" asChild>
             <Link href={`/${lang}#pricing`}>{dict.header.download}</Link>
           </Button>
@@ -106,9 +112,15 @@ export function Header() {
               <ThemeToggle />
               <LanguageSwitcher />
             </div>
-            <Button size="sm" className="mt-1" asChild>
-              <Link href={`/${lang}/login`}>{dict.header.login}</Link>
-            </Button>
+            {hasSession ? (
+              <Button size="sm" className="mt-1" asChild>
+                <Link href={`/${lang}/dashboard`}>{dict.sidebar.dashboard}</Link>
+              </Button>
+            ) : (
+              <Button size="sm" className="mt-1" asChild>
+                <Link href={`/${lang}/login`}>{dict.header.login}</Link>
+              </Button>
+            )}
           </nav>
         </div>
       )}

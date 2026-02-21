@@ -7,6 +7,7 @@ import { Features } from "@/components/home/features";
 import { Pricing } from "@/components/home/pricing";
 import { Faq } from "@/components/home/faq";
 import { readHomeFaq } from "@/lib/home-docs";
+import { auth } from "@/lib/auth";
 
 export default async function HomePage({
   params,
@@ -17,10 +18,11 @@ export default async function HomePage({
   if (!isLocale(lang)) notFound();
   const dict = await getDictionary(lang as Locale);
   const faqItems = await readHomeFaq(lang as Locale);
+  const session = await auth();
 
   return (
     <>
-      <Hero dict={dict} lang={lang} />
+      <Hero dict={dict} lang={lang} hasSession={!!session} />
       <Features dict={dict} />
       <Pricing dict={dict} lang={lang} />
       <Faq title={dict.home.faq.title} items={faqItems} />

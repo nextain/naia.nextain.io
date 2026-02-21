@@ -3,7 +3,7 @@ import type { Dictionary } from "@/i18n/dictionaries/types";
 import { Sparkles, Terminal, Code2, Bot } from "lucide-react";
 import { SectionReveal } from "@/components/home/section-reveal";
 
-export function Hero({ dict, lang }: { dict: Dictionary; lang: string }) {
+export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lang: string; hasSession?: boolean }) {
   const [line1, line2] = dict.home.hero.title.split("\n");
 
   return (
@@ -34,12 +34,21 @@ export function Hero({ dict, lang }: { dict: Dictionary; lang: string }) {
                 {dict.home.hero.subtitle}
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link
-                  href={`/${lang}/login`}
-                  className="rounded-md bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:opacity-90 hover:shadow-cyan-500/40"
-                >
-                  {dict.home.hero.cta}
-                </Link>
+                {hasSession ? (
+                  <Link
+                    href={`/${lang}/dashboard`}
+                    className="rounded-md bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:opacity-90 hover:shadow-cyan-500/40"
+                  >
+                    {dict.sidebar.dashboard}
+                  </Link>
+                ) : (
+                  <Link
+                    href={`/${lang}/login`}
+                    className="rounded-md bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/25 transition hover:opacity-90 hover:shadow-cyan-500/40"
+                  >
+                    {dict.home.hero.cta}
+                  </Link>
+                )}
                 <Link
                   href={`/${lang}#pricing`}
                   className="rounded-md border border-border bg-background px-6 py-3 text-sm font-medium transition hover:bg-muted"
