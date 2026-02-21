@@ -12,11 +12,19 @@ export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lan
 
   useEffect(() => {
     // Start with a random character, avoiding layout shift by setting it after mount
-    setActiveCharIndex(Math.floor(Math.random() * 2));
+    let currentIndex = Math.floor(Math.random() * 2);
+    setActiveCharIndex(currentIndex);
 
     const interval = setInterval(() => {
-      setActiveCharIndex((prev) => (prev === 0 ? 1 : 0));
-    }, 7000); // Change every 7 seconds
+      // Start fade out by setting active to null
+      setActiveCharIndex(null);
+
+      // Wait 1 second for fade out to complete, then show the next character
+      setTimeout(() => {
+        currentIndex = currentIndex === 0 ? 1 : 0;
+        setActiveCharIndex(currentIndex);
+      }, 1000);
+    }, 7000); // Cycle every 7 seconds
     return () => clearInterval(interval);
   }, []);
 
@@ -90,12 +98,12 @@ export function Hero({ dict, lang, hasSession = false }: { dict: Dictionary; lan
                 <img 
                   src="/naia-default-character.png"
                   alt="Naia Default Character" 
-                  className={`absolute inset-0 m-auto h-[110%] w-auto object-contain drop-shadow-2xl transition-opacity duration-[2000ms] ease-in-out ${activeCharIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
+                  className={`absolute inset-0 m-auto h-[110%] w-auto object-contain drop-shadow-2xl transition-opacity duration-1000 ease-in-out ${activeCharIndex === 0 ? 'opacity-100' : 'opacity-0'}`}
                 />
                 <img 
                   src="/naia-character.png"
                   alt="Naia Character" 
-                  className={`absolute inset-0 m-auto h-[110%] w-auto object-contain drop-shadow-2xl transition-opacity duration-[2000ms] ease-in-out ${activeCharIndex === 1 ? 'opacity-100' : 'opacity-0'}`}
+                  className={`absolute inset-0 m-auto h-[110%] w-auto object-contain drop-shadow-2xl transition-opacity duration-1000 ease-in-out ${activeCharIndex === 1 ? 'opacity-100' : 'opacity-0'}`}
                 />
               </div>
             </div>
