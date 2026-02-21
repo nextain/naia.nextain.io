@@ -48,10 +48,10 @@ export default async function IntegrationsPage({
   const isGoogleLinked = false;
 
   const t = dict.settings.integrations;
-  const redirectTo =
-    channel === "discord" && source === "naia-shell"
-      ? `/${lang}/callback?source=naia-shell&channel=discord`
-      : `/${lang}/settings/integrations?channel=discord&linked=oauth`;
+  const redirectSource = source === "naia-shell" ? "naia-shell" : "web";
+  const redirectTo = `/${lang}/callback?source=${encodeURIComponent(
+    redirectSource,
+  )}&channel=discord`;
 
   return (
     <div className="mx-auto max-w-4xl space-y-6">
