@@ -4,7 +4,7 @@ import { NanLogo } from "@/components/ui/nan-logo";
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/locale-provider";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Github, MessageSquare } from "lucide-react";
 import { useState } from "react";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -44,6 +44,18 @@ export function Header() {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-2 md:flex">
+          <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
+            <Link href="https://github.com/nextain/nan-os" target="_blank" rel="noreferrer">
+              <Github className="h-4 w-4" />
+              <span className="sr-only">GitHub</span>
+            </Link>
+          </Button>
+          <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
+            <Link href="https://discord.gg/FGYJN7auty" target="_blank" rel="noreferrer">
+              <MessageSquare className="h-4 w-4" />
+              <span className="sr-only">Discord</span>
+            </Link>
+          </Button>
           <ThemeToggle />
           <LanguageSwitcher />
           <Button variant="ghost" size="sm" asChild>
@@ -79,6 +91,18 @@ export function Header() {
               </Link>
             ))}
             <div className="flex items-center gap-2 pt-2">
+              <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
+                <Link href="https://github.com/nextain/nan-os" target="_blank" rel="noreferrer">
+                  <Github className="h-4 w-4" />
+                  <span className="sr-only">GitHub</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" className="h-9 w-9" asChild>
+                <Link href="https://discord.gg/FGYJN7auty" target="_blank" rel="noreferrer">
+                  <MessageSquare className="h-4 w-4" />
+                  <span className="sr-only">Discord</span>
+                </Link>
+              </Button>
               <ThemeToggle />
               <LanguageSwitcher />
             </div>

@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useDictionary } from "@/components/providers/locale-provider";
 import { NanLogo } from "@/components/ui/nan-logo";
+import { Github, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   const dict = useDictionary();
@@ -21,6 +23,20 @@ export function Footer() {
             <p className="text-sm text-muted-foreground italic">
               {dict.footer.tagline}
             </p>
+            <div className="flex items-center gap-2 mt-2">
+              <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground" asChild>
+                <Link href="https://github.com/nextain/nan-os" target="_blank" rel="noreferrer">
+                  <Github className="h-4 w-4" />
+                  <span className="sr-only">GitHub</span>
+                </Link>
+              </Button>
+              <Button variant="ghost" size="icon" className="h-8 w-8 text-muted-foreground hover:text-foreground" asChild>
+                <Link href="https://discord.gg/FGYJN7auty" target="_blank" rel="noreferrer">
+                  <MessageSquare className="h-4 w-4" />
+                  <span className="sr-only">Discord</span>
+                </Link>
+              </Button>
+            </div>
           </div>
 
           {/* Links */}
