@@ -1,12 +1,12 @@
 Khi bạn lần đầu khởi chạy ứng dụng, một trình hướng dẫn chào mừng sẽ xuất hiện. Có hai cách để bắt đầu.
 
-## Bắt đầu với Naia OS (Được khuyến nghị)
+## Bắt đầu với Naia (Được khuyến nghị)
 
 Cách dễ nhất — miễn phí và không cần API key.
 
 ![Onboarding screen — provider selection](onboarding-provider.png)
 
-1. Nhấp vào nút **Naia OS** trên màn hình chào mừng
+1. Nhấp vào nút **Naia** trên màn hình chào mừng
 2. Trình duyệt sẽ mở trang đăng nhập naia.nextain.io
 3. Đăng nhập bằng **tài khoản Google** của bạn (đăng ký tự động)
 4. Bạn sẽ tự động được chuyển hướng trở lại ứng dụng máy tính để bàn
@@ -25,7 +25,7 @@ Bạn cũng có thể nhập API key từ các nhà cung cấp như Google Gemin
 
 ## Các bước chào mừng
 
-Sau khi đăng nhập Nextain hoặc nhập API key, hoàn thành các bước sau:
+Sau khi đăng nhập Naia hoặc nhập API key, hoàn thành các bước sau:
 
 ### 1. Đặt tên cho AI của bạn
 Đặt tên cho Naia bất kỳ tên nào bạn muốn (ví dụ: "Naia", "Luna", "Cookie").

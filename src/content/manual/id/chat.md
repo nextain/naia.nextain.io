@@ -30,7 +30,7 @@ Layar percakapan utama dengan Naia.
 - Klik untuk membuka dasbor biaya terperinci:
   - Pesan per penyedia
   - Jumlah token input/output
-  - Saldo Nextain (saat terhubung)
+  - Saldo Naia (saat terhubung)
   - Tautan pengisian kredit
 
 ## Percakapan Baru

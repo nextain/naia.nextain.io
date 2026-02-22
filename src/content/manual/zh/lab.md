@@ -59,7 +59,7 @@
 ### Discord
 - 使用Discord登录时自动关联
 - 通过向 Naia 机器人发送私信聊天
-- 积分将从您的Nextain账户中扣除
+- 积分将从您的Naia账户中扣除
 
 ### Google Chat（即将推出）
 - Google Chat集成计划在未来更新中推出

@@ -70,6 +70,26 @@ export interface Dictionary {
         voice: { title: string; description: string };
         tools: { title: string; description: string };
         desktop: { title: string; description: string };
+        skills: { title: string; description: string };
+        discord: { title: string; description: string };
+        daemon: { title: string; description: string };
+      };
+    };
+    comparison: {
+      title: string;
+      subtitle: string;
+      headers: { category: string; others: string; naia: string };
+      rows: {
+        ui: { category: string; others: string; naia: string };
+        target: { category: string; others: string; naia: string };
+        llm: { category: string; others: string; naia: string };
+        avatar: { category: string; others: string; naia: string };
+        skills: { category: string; others: string; naia: string };
+        deploy: { category: string; others: string; naia: string };
+        voice: { category: string; others: string; naia: string };
+        i18n: { category: string; others: string; naia: string };
+        platform: { category: string; others: string; naia: string };
+        cost: { category: string; others: string; naia: string };
       };
     };
     pricing: {

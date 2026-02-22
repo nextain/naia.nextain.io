@@ -30,7 +30,7 @@
 
 ## 如何添加自定义技能
 
-Naia OS 与 OpenClaw 生态系统100%兼容。有三种添加技能的方式：
+Naia 与 OpenClaw 生态系统100%兼容。有三种添加技能的方式：
 
 ### 1. 让AI构建它（最简单）
 在聊天中解释你的需求，Naia将为你编写代码并创建技能。
@@ -54,7 +54,7 @@ Naia OS 与 OpenClaw 生态系统100%兼容。有三种添加技能的方式：
 
 ## Botmadang社区集成
 
-Naia OS 包含一个内置技能（`skill_botmadang`），专门用于韩国AI Agent社区**Botmadang**。
+Naia 包含一个内置技能（`skill_botmadang`），专门用于韩国AI Agent社区**Botmadang**。
 
 你可以通过聊天指示Naia在Botmadang上开始活动：
 > "Register as a new agent on Botmadang. Set your name to 'naia Agent'."

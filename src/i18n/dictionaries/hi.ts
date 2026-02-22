@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const hi: Dictionary = {
   "locale": "hi",
   "meta": {
-    "title": "नाया ओएस",
-    "description": "नाया ओएस - आपका व्यक्तिगत एआई, आसान बना दिया गया। 3डी AI अवतार के साथ चैट करें, बात करें और काम करें।"
+    "title": "नाया",
+    "description": "Naia — OpenClaw के 5,700+ स्किल इकोसिस्टम पर आधारित Linux AI OS। 3D AI अवतार, 7 LLM प्रदाता, वॉइस चैट, Discord DM। API कुंजी की आवश्यकता नहीं।",
   },
   "common": {
     "loading": "लोड हो रहा है...",
@@ -33,7 +33,7 @@ const hi: Dictionary = {
     "manual": "मैनुअल"
   },
   "footer": {
-    "brand": "नाया ओएस",
+    "brand": "नाया",
     "tagline": "जहां प्रौद्योगिकी भावना से मिलती है",
     "links": {
       "privacy": "गोपनीयता नीति",
@@ -57,7 +57,7 @@ const hi: Dictionary = {
   "home": {
     "hero": {
       "title": "सबसे उन्नत एआई एजेंट, उत्तम ओएस के रूप में।",
-      "subtitle": "7 AI प्रदाता से लेकर टर्मिनल नियंत्रण तक, और एक वीआरएम अवतार जो भावनाओं को व्यक्त करता है। एक संपूर्ण एआई पारिस्थितिकी तंत्र जिसे आप डेवलपर हुए बिना अनुभव कर सकते हैं, नाया ओएस।",
+      "subtitle": "OpenClaw के 5,700+ स्किल इकोसिस्टम से संचालित Linux AI OS। Naia अकाउंट से तुरंत शुरू करें — API कुंजी नहीं चाहिए। Discord DM से कभी भी, कहीं भी बात करें।",
       "cta": "निःशुल्क आरंभ करें",
       "secondaryCta": "डाउनलोड करें"
     },
@@ -84,7 +84,36 @@ const hi: Dictionary = {
         "desktop": {
           "title": "एक-क्लिक इंस्टॉल और ओएस",
           "description": "एक क्लिक से डेस्कटॉप ऐप इंस्टॉल करें, या लिनक्स ओएस छवि के साथ एक समर्पित एआई वातावरण बनाएं।"
+        },
+        "skills": {
+          "title": "70+ स्किल इकोसिस्टम",
+          "description": "7 बिल्ट-इन + 63 कस्टम स्किल — मौसम, GitHub, Slack, Notion, Spotify, Discord और अधिक। ClaHub समुदाय के 5,700+ स्किल के साथ संगत।"
+        },
+        "discord": {
+          "title": "Discord DM एकीकरण",
+          "description": "Discord DM के माध्यम से कभी भी, कहीं भी अपने AI अवतार से चैट करें। एक निजी बॉट जो केवल आपसे बात करता है।"
+        },
+        "daemon": {
+          "title": "OpenClaw Gateway अंतर्निहित",
+          "description": "OpenClaw के सिद्ध गेटवे डेमन और 5,700+ स्किल इकोसिस्टम द्वारा संचालित। CLI सेटअप नहीं — Naia अकाउंट से इंस्टॉल करें और तुरंत उपयोग करें।"
         }
+      }
+    },
+    "comparison": {
+      "title": "Naia तुलना",
+      "subtitle": "देखें कि Naia मौजूदा AI टूल्स से कैसे अलग है",
+      "headers": { "category": "श्रेणी", "others": "अन्य", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "इंटरफ़ेस", "others": "IDE / टर्मिनल / चैट विंडो", "naia": "डेस्कटॉप ऐप + 3D अवतार" },
+        "target": { "category": "लक्ष्य", "others": "केवल डेवलपर्स", "naia": "सभी (7-चरण ऑनबोर्डिंग)" },
+        "llm": { "category": "LLM", "others": "एकल प्रदाता", "naia": "7 प्रदाता, कभी भी स्विच करें" },
+        "avatar": { "category": "अवतार", "others": "कोई नहीं", "naia": "VRM 3D + भावनाएं + लिप-सिंक" },
+        "skills": { "category": "स्किल", "others": "सीमित उपकरण", "naia": "70 बिल्ट-इन + 5,700+ समुदाय" },
+        "deploy": { "category": "डिप्लॉयमेंट", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, OS इमेज" },
+        "voice": { "category": "आवाज़", "others": "केवल टेक्स्ट या बेसिक TTS", "naia": "5 TTS प्रदाता + STT + लिप-सिंक" },
+        "i18n": { "category": "भाषाएं", "others": "केवल अंग्रेज़ी", "naia": "14 भाषाएं" },
+        "platform": { "category": "प्लेटफ़ॉर्म", "others": "केवल macOS / CLI", "naia": "Linux नेटिव, GUI वन-क्लिक इंस्टॉल" },
+        "cost": { "category": "लागत", "others": "अलग API कुंजी आवश्यक", "naia": "Naia अकाउंट — API कुंजी नहीं, बस क्रेडिट" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const hi: Dictionary = {
     },
     "desktopApp": {
       "title": "डेस्कटॉप ऐप कनेक्शन",
-      "description": "अपने Naia OS डेस्कटॉप ऐप को इस खाते से कनेक्ट करें।",
+      "description": "अपने Naia डेस्कटॉप ऐप को इस खाते से कनेक्ट करें।",
       "issueKey": "कनेक्शन कुंजी जारी करें"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const hi: Dictionary = {
   },
   "manual": {
     "title": "उपयोगकर्ता मैनुअल",
-    "subtitle": "नाया ओएस डेस्कटॉप ऐप गाइड",
+    "subtitle": "नाया डेस्कटॉप ऐप गाइड",
     "toc": "सामग्री तालिका",
     "prev": "पिछला",
     "next": "अगला",
@@ -274,13 +303,13 @@ const hi: Dictionary = {
       "diagnostics": "निदान",
       "settings": "सेटिंग्स",
       "tools": "उपकरण विवरण",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "समस्या निवारण"
     }
   },
   "download": {
     "title": "डाउनलोड",
-    "subtitle": "Naia OS डाउनलोड करें और अपने AI अवतार से बात करना शुरू करें।",
+    "subtitle": "Naia डाउनलोड करें और अपने AI अवतार से बात करना शुरू करें।",
     "recommended": "अनुशंसित",
     "version": "संस्करण",
     "releaseNotes": "रिलीज़ नोट्स",

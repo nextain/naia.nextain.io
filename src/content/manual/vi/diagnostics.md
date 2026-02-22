@@ -1,4 +1,4 @@
-Tab này cho phép bạn theo dõi tình trạng hoạt động, số liệu thống kê và nhật ký thời gian thực của daemon OpenClaw Gateway đang chạy nền trên Naia OS.
+Tab này cho phép bạn theo dõi tình trạng hoạt động, số liệu thống kê và nhật ký thời gian thực của daemon OpenClaw Gateway đang chạy nền trên Naia.
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

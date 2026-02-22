@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ja: Dictionary = {
   "locale": "ja",
   "meta": {
-    "title": "ナイアOS",
-    "description": "Naia OS — パーソナル AI を簡単に。 3D AIアバター とチャット、会話、作業を行います。"
+    "title": "ナイア",
+    "description": "Naia — OpenClawの5,700+スキルエコシステムを搭載したLinux AI OS。3D AIアバター、7つのLLMプロバイダー、音声チャット、Discord DM。APIキー不要。",
   },
   "common": {
     "loading": "読み込み中...",
@@ -33,7 +33,7 @@ const ja: Dictionary = {
     "manual": "マニュアル"
   },
   "footer": {
-    "brand": "ナイアOS",
+    "brand": "ナイア",
     "tagline": "テクノロジーと感情が出会う場所",
     "links": {
       "privacy": "プライバシーポリシー",
@@ -57,7 +57,7 @@ const ja: Dictionary = {
   "home": {
     "hero": {
       "title": "最先端のAIエージェントを、完璧なOSとして。",
-      "subtitle": "7つのAIプロバイダーの統合から端末制御、感情を表現するVRMアバターまで。開発者でなくても体験できる完全な AI エコシステム、Naia OS。",
+      "subtitle": "OpenClawの5,700+スキルエコシステムを搭載したLinux AI OS。APIキー不要、Naiaアカウントですぐに開始。Discord DMでいつでもどこでも会話。",
       "cta": "無料で始めましょう",
       "secondaryCta": "ダウンロード"
     },
@@ -84,7 +84,36 @@ const ja: Dictionary = {
         "desktop": {
           "title": "ワンクリックでインストールと OS",
           "description": "ワンクリックでデスクトップ アプリをインストールするか、Linux OS イメージを使用して専用の AI 環境を作成します。"
+        },
+        "skills": {
+          "title": "70+スキルエコシステム",
+          "description": "7つの内蔵 + 63のカスタムスキル — 天気、GitHub、Slack、Notion、Spotify、Discordなど。ClaHubコミュニティの5,700+スキルにも対応。"
+        },
+        "discord": {
+          "title": "Discord DM連携",
+          "description": "Discord DMでいつでもどこでもAIアバターとチャット。あなただけのパーソナルボットです。"
+        },
+        "daemon": {
+          "title": "OpenClaw Gateway内蔵",
+          "description": "実績あるOpenClawゲートウェイデーモンと5,700+スキルエコシステムを搭載。CLIセットアップ不要 — Naiaアカウントでインストール即利用可能。"
         }
+      }
+    },
+    "comparison": {
+      "title": "Naiaの比較",
+      "subtitle": "既存のAIツールとの違いをご確認ください",
+      "headers": { "category": "カテゴリ", "others": "その他", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "UI", "others": "IDE / ターミナル / チャットウィンドウ", "naia": "デスクトップアプリ + 3Dアバター" },
+        "target": { "category": "対象", "others": "開発者のみ", "naia": "誰でも（7ステップオンボーディング）" },
+        "llm": { "category": "LLM", "others": "単一プロバイダー", "naia": "7つのプロバイダー、いつでも切替" },
+        "avatar": { "category": "アバター", "others": "なし", "naia": "VRM 3D + 感情 + リップシンク" },
+        "skills": { "category": "スキル", "others": "限定的なツール", "naia": "70個内蔵 + 5,700+コミュニティ" },
+        "deploy": { "category": "デプロイ", "others": "npm / brew / pip", "naia": "Flatpak、AppImage、DEB、RPM、OSイメージ" },
+        "voice": { "category": "音声", "others": "テキストのみまたは基本TTS", "naia": "TTS 5社 + STT + リップシンク" },
+        "i18n": { "category": "多言語", "others": "英語のみ", "naia": "14言語" },
+        "platform": { "category": "プラットフォーム", "others": "macOS専用 / CLI", "naia": "Linuxネイティブ、GUIワンクリックインストール" },
+        "cost": { "category": "コスト", "others": "別途APIキーが必要", "naia": "Naiaアカウント — APIキー不要、クレジットで利用" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const ja: Dictionary = {
     },
     "desktopApp": {
       "title": "デスクトップアプリ接続",
-      "description": "Naia OS デスクトップ アプリをこのアカウントに接続します。",
+      "description": "Naia デスクトップ アプリをこのアカウントに接続します。",
       "issueKey": "接続キーの発行"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const ja: Dictionary = {
   },
   "manual": {
     "title": "ユーザーマニュアル",
-    "subtitle": "Naia OS デスクトップ アプリ ガイド",
+    "subtitle": "Naia デスクトップ アプリ ガイド",
     "toc": "目次",
     "prev": "前へ",
     "next": "次へ",
@@ -274,13 +303,13 @@ const ja: Dictionary = {
       "diagnostics": "診断",
       "settings": "設定",
       "tools": "ツールの詳細",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "トラブルシューティング"
     }
   },
   "download": {
     "title": "ダウンロード",
-    "subtitle": "Naia OSをダウンロードして、AIアバターと会話しましょう。",
+    "subtitle": "Naiaをダウンロードして、AIアバターと会話しましょう。",
     "recommended": "推奨",
     "version": "バージョン",
     "releaseNotes": "リリースノート",

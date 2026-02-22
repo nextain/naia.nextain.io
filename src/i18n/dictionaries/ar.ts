@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ar: Dictionary = {
   "locale": "ar",
   "meta": {
-    "title": "نايا OS",
-    "description": "Naia OS — الذكاء الاصطناعي الشخصي الخاص بك، أصبح سهلاً. قم بالدردشة والتحدث والعمل باستخدام صورة رمزية للذكاء الاصطناعي ثلاثية الأبعاد."
+    "title": "نايا",
+    "description": "Naia — نظام تشغيل AI لينكس مدعوم بنظام OpenClaw البيئي لأكثر من 5,700 مهارة. صورة AI ثلاثية الأبعاد، 7 مزودي LLM، دردشة صوتية، Discord DM. بدون مفاتيح API.",
   },
   "common": {
     "loading": "جار التحميل...",
@@ -33,7 +33,7 @@ const ar: Dictionary = {
     "manual": "دليل"
   },
   "footer": {
-    "brand": "نايا OS",
+    "brand": "نايا",
     "tagline": "حيث تلتقي التكنولوجيا بالعاطفة",
     "links": {
       "privacy": "سياسة الخصوصية",
@@ -57,7 +57,7 @@ const ar: Dictionary = {
   "home": {
     "hero": {
       "title": "وكيل الذكاء الاصطناعي الأكثر تقدمًا، باعتباره نظام التشغيل المثالي.",
-      "subtitle": "من 7 مزودي الذكاء الاصطناعي إلى التحكم الطرفي، وصورة VRM الرمزية التي تعبر عن المشاعر. نظام بيئي متكامل للذكاء الاصطناعي يمكنك تجربته دون أن تكون مطورًا، Naia OS.",
+      "subtitle": "نظام تشغيل AI على Linux مع نظام OpenClaw البيئي لأكثر من 5,700 مهارة. ابدأ فوراً بحساب Naia — بدون مفاتيح API. تحدث عبر Discord DM في أي وقت ومن أي مكان.",
       "cta": "ابدأ مجانًا",
       "secondaryCta": "تحميل"
     },
@@ -84,7 +84,36 @@ const ar: Dictionary = {
         "desktop": {
           "title": "بنقرة واحدة التثبيت ونظام التشغيل",
           "description": "قم بتثبيت تطبيق سطح المكتب بنقرة واحدة، أو أنشئ بيئة مخصصة للذكاء الاصطناعي باستخدام صورة نظام التشغيل Linux."
+        },
+        "skills": {
+          "title": "نظام بيئي لأكثر من 70 مهارة",
+          "description": "7 مدمجة + 63 مخصصة — الطقس، GitHub، Slack، Notion، Spotify، Discord والمزيد. متوافق مع أكثر من 5,700 مهارة من مجتمع ClaHub."
+        },
+        "discord": {
+          "title": "تكامل Discord DM",
+          "description": "تحدث مع صورتك الرمزية للذكاء الاصطناعي عبر رسائل Discord المباشرة، في أي وقت ومن أي مكان. بوت شخصي يتحدث معك فقط."
+        },
+        "daemon": {
+          "title": "بوابة OpenClaw مدمجة",
+          "description": "مدعوم ببوابة OpenClaw المُجربة ونظام بيئي يضم أكثر من 5,700 مهارة. بدون إعداد CLI — قم بالتثبيت واستخدم فوراً مع حساب Naia."
         }
+      }
+    },
+    "comparison": {
+      "title": "مقارنة Naia",
+      "subtitle": "اكتشف ما يميز Naia عن أدوات الذكاء الاصطناعي الحالية",
+      "headers": { "category": "الفئة", "others": "الأخرى", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "الواجهة", "others": "IDE / الطرفية / نافذة الدردشة", "naia": "تطبيق سطح المكتب + صورة رمزية ثلاثية الأبعاد" },
+        "target": { "category": "الجمهور", "others": "المطورون فقط", "naia": "الجميع (7 خطوات للبدء)" },
+        "llm": { "category": "LLM", "others": "مزود واحد", "naia": "7 مزودين، التبديل في أي وقت" },
+        "avatar": { "category": "الصورة الرمزية", "others": "لا يوجد", "naia": "VRM 3D + مشاعر + مزامنة الشفاه" },
+        "skills": { "category": "المهارات", "others": "أدوات محدودة", "naia": "70 مدمجة + 5,700+ مجتمعية" },
+        "deploy": { "category": "النشر", "others": "npm / brew / pip", "naia": "Flatpak، AppImage، DEB، RPM، صورة OS" },
+        "voice": { "category": "الصوت", "others": "نص فقط أو TTS أساسي", "naia": "5 مزودي TTS + STT + مزامنة الشفاه" },
+        "i18n": { "category": "اللغات", "others": "الإنجليزية فقط", "naia": "14 لغة" },
+        "platform": { "category": "المنصة", "others": "macOS فقط / CLI", "naia": "Linux أصلي، تثبيت GUI بنقرة واحدة" },
+        "cost": { "category": "التكلفة", "others": "مفاتيح API منفصلة مطلوبة", "naia": "حساب Naia — بدون مفتاح API، فقط أرصدة" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const ar: Dictionary = {
     },
     "desktopApp": {
       "title": "اتصال تطبيق سطح المكتب",
-      "description": "قم بتوصيل تطبيق Naia OS لسطح المكتب بهذا الحساب.",
+      "description": "قم بتوصيل تطبيق Naia لسطح المكتب بهذا الحساب.",
       "issueKey": "إصدار مفتاح الاتصال"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const ar: Dictionary = {
   },
   "manual": {
     "title": "دليل المستخدم",
-    "subtitle": "دليل تطبيقات Naia OS لسطح المكتب",
+    "subtitle": "دليل تطبيقات Naia لسطح المكتب",
     "toc": "جدول المحتويات",
     "prev": "السابق",
     "next": "التالي",
@@ -274,13 +303,13 @@ const ar: Dictionary = {
       "diagnostics": "التشخيص",
       "settings": "الإعدادات",
       "tools": "تفاصيل الأداة",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "استكشاف الأخطاء وإصلاحها"
     }
   },
   "download": {
     "title": "تحميل",
-    "subtitle": "قم بتحميل Naia OS وابدأ الدردشة مع صورتك الرمزية للذكاء الاصطناعي.",
+    "subtitle": "قم بتحميل Naia وابدأ الدردشة مع صورتك الرمزية للذكاء الاصطناعي.",
     "recommended": "موصى به",
     "version": "الإصدار",
     "releaseNotes": "ملاحظات الإصدار",

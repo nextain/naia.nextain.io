@@ -2,7 +2,7 @@ Quản lý tài khoản của bạn tại [naia.nextain.io](https://naia.nextain
 
 ## Bảng điều khiển
 
-![Bảng điều khiển Nextain](lab-dashboard.png)
+![Bảng điều khiển Naia](lab-dashboard.png)
 
 - Số dư tín dụng
 - Tổng số yêu cầu
@@ -59,7 +59,7 @@ Liên kết tài khoản naia.nextain.io của bạn với các ứng dụng nh�
 ### Discord
 - Tự động liên kết khi bạn đăng nhập bằng Discord
 - Trò chuyện qua tin nhắn trực tiếp với bot Naia
-- Tín dụng được trừ từ tài khoản Nextain của bạn
+- Tín dụng được trừ từ tài khoản Naia của bạn
 
 ### Google Chat (Sắp Ra Mắt)
 - Tích hợp Google Chat được lên kế hoạch cho bản cập nhật tương lai

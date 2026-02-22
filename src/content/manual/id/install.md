@@ -1,4 +1,4 @@
-Naia OS dirancang terutama untuk lingkungan Linux, berfokus pada OS Imutabel seperti Bazzite atau lingkungan sandbox aman seperti Flatpak.
+Naia dirancang terutama untuk lingkungan Linux, berfokus pada OS Imutabel seperti Bazzite atau lingkungan sandbox aman seperti Flatpak.
 
 ## Persyaratan Sistem
 
@@ -11,7 +11,7 @@ Naia OS dirancang terutama untuk lingkungan Linux, berfokus pada OS Imutabel sep
 
 ## Opsi Penyebaran
 
-Karena Naia OS menampilkan AI yang "mengontrol OS secara langsung," metode penyebaran merupakan pertimbangan penting.
+Karena Naia menampilkan AI yang "mengontrol OS secara langsung," metode penyebaran merupakan pertimbangan penting.
 
 ### 1. Distribusi Flatpak (Direkomendasikan)
 Ini adalah cara yang paling umum dan aman untuk mendistribusikan aplikasi desktop Linux. Anda dapat dengan mudah menginstalnya melalui toko aplikasi seperti Discover atau GNOME Software.
@@ -25,7 +25,7 @@ Ini adalah cara yang paling umum dan aman untuk mendistribusikan aplikasi deskto
   ```
 
 ### 2. Citra Terintegrasi Bazzite / BlueBuild (Tingkat Lanjut)
-Untuk pengguna tingkat lanjut, Naia OS menyediakan resep BlueBuild untuk mengintegrasikan aplikasi langsung ke dalam citra Bazzite. Ini mengintegrasikan AI secara mendalam ke dalam OS, memungkinkan Naia menyambut Anda segera setelah boot.
+Untuk pengguna tingkat lanjut, Naia menyediakan resep BlueBuild untuk mengintegrasikan aplikasi langsung ke dalam citra Bazzite. Ini mengintegrasikan AI secara mendalam ke dalam OS, memungkinkan Naia menyambut Anda segera setelah boot.
 
 ---
 

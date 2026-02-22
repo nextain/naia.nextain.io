@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const de: Dictionary = {
   "locale": "de",
   "meta": {
-    "title": "Naia OS",
-    "description": "Naia OS – Ihre persönliche KI, leicht gemacht. Chatten, sprechen und arbeiten Sie mit der 3D-Avatar-KI-App."
+    "title": "Naia",
+    "description": "Naia — Ein Linux-AI-OS basierend auf OpenClaws 5.700+ Skill-Ökosystem. 3D-AI-Avatar, 7 LLM-Anbieter, Sprachchat, Discord DM. Keine API-Schlüssel nötig.",
   },
   "common": {
     "loading": "Laden...",
@@ -33,7 +33,7 @@ const de: Dictionary = {
     "manual": "Handbuch"
   },
   "footer": {
-    "brand": "Naia OS",
+    "brand": "Naia",
     "tagline": "Wo Technologie auf Emotion trifft",
     "links": {
       "privacy": "Datenschutzrichtlinie",
@@ -57,7 +57,7 @@ const de: Dictionary = {
   "home": {
     "hero": {
       "title": "Der fortschrittlichste KI-Agent als perfektes Betriebssystem.",
-      "subtitle": "Von der Integration von 7 KI-Anbietern über die Terminalsteuerung bis hin zu einem VRM-Avatar, der Emotionen ausdrückt. Ein komplettes KI-Ökosystem, das Sie erleben können, ohne Entwickler zu sein: Naia OS.",
+      "subtitle": "Ein Linux-KI-OS mit OpenClaws 5.700+ Skills-Ökosystem. Sofort starten mit einem Naia-Konto — kein API-Schlüssel nötig. Chatten Sie via Discord-DM, jederzeit und überall.",
       "cta": "Starten Sie kostenlos durch",
       "secondaryCta": "Herunterladen"
     },
@@ -84,7 +84,36 @@ const de: Dictionary = {
         "desktop": {
           "title": "Ein-Klick-Installation und Betriebssystem",
           "description": "Installieren Sie die Desktop-App mit einem Klick oder erstellen Sie eine dedizierte KI-Umgebung mit dem Linux-Betriebssystem-Image."
+        },
+        "skills": {
+          "title": "70+ Skills-Ökosystem",
+          "description": "7 integrierte + 63 benutzerdefinierte Skills — Wetter, GitHub, Slack, Notion, Spotify, Discord und mehr. Kompatibel mit 5.700+ ClaHub-Community-Skills."
+        },
+        "discord": {
+          "title": "Discord-DM-Integration",
+          "description": "Chatten Sie jederzeit und überall über Discord-DM mit Ihrem KI-Avatar. Ein persönlicher Bot, der nur mit Ihnen spricht."
+        },
+        "daemon": {
+          "title": "OpenClaw Gateway integriert",
+          "description": "Angetrieben vom bewährten OpenClaw-Gateway-Daemon und einem Ökosystem mit 5.700+ Skills. Kein CLI-Setup — einfach installieren und mit Ihrem Naia-Konto loslegen."
         }
+      }
+    },
+    "comparison": {
+      "title": "Naia im Vergleich",
+      "subtitle": "Erfahren Sie, was Naia von bestehenden KI-Tools unterscheidet",
+      "headers": { "category": "Kategorie", "others": "Andere", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "Oberfläche", "others": "IDE / Terminal / Chat-Fenster", "naia": "Desktop-App + 3D-Avatar" },
+        "target": { "category": "Zielgruppe", "others": "Nur Entwickler", "naia": "Alle (7-Schritte-Onboarding)" },
+        "llm": { "category": "LLM", "others": "Einzelner Anbieter", "naia": "7 Anbieter, jederzeit wechseln" },
+        "avatar": { "category": "Avatar", "others": "Keiner", "naia": "VRM 3D + Emotionen + Lippensynchronisation" },
+        "skills": { "category": "Skills", "others": "Begrenzte Tools", "naia": "70 integriert + 5.700+ Community" },
+        "deploy": { "category": "Bereitstellung", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, OS-Image" },
+        "voice": { "category": "Stimme", "others": "Nur Text oder einfaches TTS", "naia": "5 TTS-Anbieter + STT + Lippensynchronisation" },
+        "i18n": { "category": "Sprachen", "others": "Nur Englisch", "naia": "14 Sprachen" },
+        "platform": { "category": "Plattform", "others": "Nur macOS / CLI", "naia": "Linux-nativ, GUI-Ein-Klick-Installation" },
+        "cost": { "category": "Kosten", "others": "Separate API-Schlüssel erforderlich", "naia": "Naia-Konto — kein API-Schlüssel, nur Credits" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const de: Dictionary = {
     },
     "desktopApp": {
       "title": "Desktop-App-Verbindung",
-      "description": "Verbinden Sie Ihre Naia OS-Desktop-App mit diesem Konto.",
+      "description": "Verbinden Sie Ihre Naia-Desktop-App mit diesem Konto.",
       "issueKey": "Verbindungsschlüssel ausgeben"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const de: Dictionary = {
   },
   "manual": {
     "title": "Benutzerhandbuch",
-    "subtitle": "Anleitung zur Naia OS Desktop-App",
+    "subtitle": "Anleitung zur Naia Desktop-App",
     "toc": "Inhaltsverzeichnis",
     "prev": "Zurück",
     "next": "Als nächstes",
@@ -274,13 +303,13 @@ const de: Dictionary = {
       "diagnostics": "Diagnose",
       "settings": "Einstellungen",
       "tools": "Werkzeugdetails",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "Fehlerbehebung"
     }
   },
   "download": {
     "title": "Herunterladen",
-    "subtitle": "Laden Sie Naia OS herunter und beginnen Sie mit Ihrem KI-Avatar zu chatten.",
+    "subtitle": "Laden Sie Naia herunter und beginnen Sie mit Ihrem KI-Avatar zu chatten.",
     "recommended": "Empfohlen",
     "version": "Version",
     "releaseNotes": "Versionshinweise",

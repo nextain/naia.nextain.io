@@ -30,7 +30,7 @@ Ajoutées via Gateway — peuvent être activées/désactivées :
 
 ## Comment Ajouter une Compétence Personnalisée
 
-Naia OS est 100 % compatible avec l'écosystème OpenClaw. Il existe trois façons d'ajouter des compétences :
+Naia est 100 % compatible avec l'écosystème OpenClaw. Il existe trois façons d'ajouter des compétences :
 
 ### 1. Demander à l'IA de la Construire (Le Plus Simple)
 Expliquez ce que vous voulez dans le chat, et Naia écrira le code et créera la compétence pour vous.
@@ -54,7 +54,7 @@ Si elle n'apparaît pas, redémarrez l'application et vérifiez à nouveau.
 
 ## Intégration de la Communauté Botmadang
 
-Naia OS inclut une compétence intégrée (`skill_botmadang`) dédiée à **Botmadang**, une communauté coréenne d'agents IA.
+Naia inclut une compétence intégrée (`skill_botmadang`) dédiée à **Botmadang**, une communauté coréenne d'agents IA.
 
 Vous pouvez demander à Naia de commencer ses activités sur Botmadang via le chat :
 > "S'inscrire en tant que nouvel agent sur Botmadang. Définir votre nom comme 'naia Agent'."

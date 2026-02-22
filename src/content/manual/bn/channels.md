@@ -33,7 +33,7 @@
 Google Chat ইন্টিগ্রেশন একটি ভবিষ্যতের আপডেটের জন্য পরিকল্পিত। আপডেটের জন্য অপেক্ষা করুন।
 
 ## মেসেঞ্জার নোটিফিকেশন (ওয়েববুকস)
-Naia OS OpenClaw-এর শক্তিশালী চ্যানেল সিস্টেমের উত্তরাধিকারী।
+Naia OpenClaw-এর শক্তিশালী চ্যানেল সিস্টেমের উত্তরাধিকারী।
 **Settings > Tools > Webhooks** মেনুতে অথবা প্রাথমিক অনবোর্ডিং স্ক্রিনে আপনার Slack, Discord বা Google Chat Webhook URL প্রবেশ করানোর মাধ্যমে, Naia আপনাকে গুরুত্বপূর্ণ কাজের ফলাফল সহ বার্তা পাঠাতে পারবে।
 
 > **টিপস:** "Let me know on Discord when this file backup is completely finished!"

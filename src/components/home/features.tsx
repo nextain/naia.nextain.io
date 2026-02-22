@@ -5,6 +5,9 @@ import {
   Mic,
   Wrench,
   Monitor,
+  Puzzle,
+  MessageCircle,
+  Cpu,
 } from "lucide-react";
 import { SectionReveal } from "@/components/home/section-reveal";
 
@@ -20,6 +23,13 @@ export function Features({ dict }: { dict: Dictionary }) {
     { icon: Mic, title: items.voice.title, description: items.voice.description },
     { icon: Wrench, title: items.tools.title, description: items.tools.description },
     { icon: Monitor, title: items.desktop.title, description: items.desktop.description },
+    { icon: Puzzle, title: items.skills.title, description: items.skills.description },
+    {
+      icon: MessageCircle,
+      title: items.discord.title,
+      description: items.discord.description,
+    },
+    { icon: Cpu, title: items.daemon.title, description: items.daemon.description },
   ];
 
   return (

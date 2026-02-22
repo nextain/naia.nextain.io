@@ -44,21 +44,21 @@ AI 아바타의 성격, 말투, 이름을 자유 텍스트로 커스터마이즈
 
 ![페르소나 설정](settings-persona.png)
 
-## Nextain 계정
+## Naia 계정
 
-Nextain 계정에 연동하여 AI를 이용 가능하며, Naia 앱의 계정 정보가 자동 백업됩니다.
+Naia 계정에 연동하여 AI를 이용 가능하며, Naia 앱의 계정 정보가 자동 백업됩니다.
 
 ### 연결된 상태
 
 - 사용자 ID 표시
 - **크레딧 잔액** 표시 (실시간 조회)
-- **대시보드** 버튼: Nextain 대시보드를 브라우저에서 열기
-- **크레딧 충전** 버튼: Nextain 결제 페이지로 이동
-- **연결 해제** 버튼: Nextain 계정 연결 해제
-- 설정 저장 시 Nextain에 자동 동기화
+- **대시보드** 버튼: Naia 대시보드를 브라우저에서 열기
+- **크레딧 충전** 버튼: Naia 결제 페이지로 이동
+- **연결 해제** 버튼: Naia 계정 연결 해제
+- 설정 저장 시 Naia에 자동 동기화
 
 ### 미연결 상태
-- **Nextain 로그인** 버튼: 브라우저로 로그인 후 자동 연결
+- **Naia 로그인** 버튼: 브라우저로 로그인 후 자동 연결
 
 ## 사용법 매뉴얼
 
@@ -68,7 +68,7 @@ Nextain 계정에 연동하여 AI를 이용 가능하며, Naia 앱의 계정 정
 
 - **제공업체**: Claude Code CLI (로컬), Gemini, OpenAI, Anthropic (Claude), xAI (Grok), zAI (GLM), Ollama (로컬)
 - **모델**: 제공업체별 모델 선택 (예: gemini-2.5-flash, claude-sonnet-4.5 등)
-- **API 키**: 제공업체 API 키 (Nextain 계정 사용 시 불필요)
+- **API 키**: 제공업체 API 키 (Naia 계정 사용 시 불필요)
 
 ## 음성 (TTS/STT)
 
@@ -78,7 +78,7 @@ Nextain 계정에 연동하여 AI를 이용 가능하며, Naia 앱의 계정 정
 
 | 제공업체 | API 키 | 특징 |
 |---------|--------|------|
-| Nextain Cloud TTS | 불필요 (Nextain 로그인만) | Google Cloud TTS 품질, 크레딧 차감 |
+| Naia Cloud TTS | 불필요 (Naia 로그인만) | Google Cloud TTS 품질, 크레딧 차감 |
 | Edge TTS (Free) | 불필요 | 무료, Microsoft Edge 음성 |
 | Google Cloud TTS | 필요 (`AIza...`) | Neural2/WaveNet/Standard 음성 |
 | OpenAI TTS | 필요 (`sk-...`) | OpenAI 음성 |

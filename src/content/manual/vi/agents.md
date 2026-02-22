@@ -1,4 +1,4 @@
-Thẻ này quản lý tất cả các tác nhân (agent) (bao gồm Naia chính) và các tác nhân phụ (sub-agent) đang chạy trong Naia OS.
+Thẻ này quản lý tất cả các tác nhân (agent) (bao gồm Naia chính) và các tác nhân phụ (sub-agent) đang chạy trong Naia.
 
 ![Agents Tab](agents-tab.png)
 

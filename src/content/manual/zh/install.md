@@ -1,4 +1,4 @@
-Naia OS 主要为 Linux 环境设计，重点关注 Bazzite 等不可变操作系统或 Flatpak 等安全沙盒环境。
+Naia 主要为 Linux 环境设计，重点关注 Bazzite 等不可变操作系统或 Flatpak 等安全沙盒环境。
 
 ## 系统要求
 
@@ -11,7 +11,7 @@ Naia OS 主要为 Linux 环境设计，重点关注 Bazzite 等不可变操作�
 
 ## 部署选项
 
-由于 Naia OS 的 AI 能够“直接控制操作系统”，因此部署方法是一个重要的考虑因素。
+由于 Naia 的 AI 能够“直接控制操作系统”，因此部署方法是一个重要的考虑因素。
 
 ### 1. Flatpak 分发 (推荐)
 这是分发 Linux 桌面应用程序最常见、最安全的方式。您可以通过 Discover 或 GNOME Software 等应用商店轻松安装它。
@@ -25,7 +25,7 @@ Naia OS 主要为 Linux 环境设计，重点关注 Bazzite 等不可变操作�
   ```
 
 ### 2. Bazzite / BlueBuild 集成镜像 (高级)
-对于高级用户，Naia OS 提供了一个 BlueBuild 配方，可以将应用程序直接集成到 Bazzite 镜像中。这使得 AI 深度融入操作系统，让 AI 形象在启动时立即问候您。
+对于高级用户，Naia 提供了一个 BlueBuild 配方，可以将应用程序直接集成到 Bazzite 镜像中。这使得 AI 深度融入操作系统，让 AI 形象在启动时立即问候您。
 
 ---
 

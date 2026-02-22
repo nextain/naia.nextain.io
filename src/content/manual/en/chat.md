@@ -30,7 +30,7 @@ The main conversation screen with Naia.
 - Click to open the detailed cost dashboard:
   - Messages per provider
   - Input/output token counts
-  - Nextain balance (when connected)
+  - Naia balance (when connected)
   - Credit charge link
 
 ## New Conversation

@@ -33,7 +33,7 @@ Masuk dengan akun Discord Anda di [naia.nextain.io](https://naia.nextain.io) unt
 Integrasi Google Chat direncanakan untuk pembaruan mendatang. Nantikan pengumumannya.
 
 ## Notifikasi Messenger (Webhook)
-Naia OS mewarisi sistem saluran canggih OpenClaw.
+Naia mewarisi sistem saluran canggih OpenClaw.
 Dengan memasukkan URL Webhook Slack, Discord, atau Google Chat Anda di menu **Pengaturan > Alat > Webhook** atau selama layar orientasi awal, Naia dapat mengirimi Anda pesan dengan hasil tugas penting.
 
 > **Tip:** "Beri tahu saya di Discord saat pencadangan file ini selesai sepenuhnya!"

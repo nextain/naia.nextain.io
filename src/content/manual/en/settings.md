@@ -41,21 +41,21 @@ Customize Naia's personality, speech style, and name in free text. Emotion tags 
 
 ![Persona settings](settings-persona.png)
 
-## Nextain Account
+## Naia Account
 
-Manage Nextain integration.
+Manage Naia integration.
 
 ### When Connected
 
 - User ID displayed
 - **Credit balance** shown (real-time query)
-- **Dashboard** button: Open Nextain dashboard in browser
-- **Charge Credits** button: Go to Nextain billing page
-- **Disconnect** button: Unlink Nextain account
-- Settings auto-sync to Nextain on save
+- **Dashboard** button: Open Naia dashboard in browser
+- **Charge Credits** button: Go to Naia billing page
+- **Disconnect** button: Unlink Naia account
+- Settings auto-sync to Naia on save
 
 ### When Not Connected
-- **Nextain Login** button: Sign in via browser, auto-connects
+- **Naia Login** button: Sign in via browser, auto-connects
 
 ## User Manual
 
@@ -65,7 +65,7 @@ Click "User Manual" to open this page in the browser.
 
 - **Provider**: Gemini (default), OpenAI, Claude, Grok, xAI, Ollama, Claude Code CLI
 - **Model**: Model name (e.g., gemini-2.5-flash)
-- **API Key**: Provider API key (not needed if using Nextain)
+- **API Key**: Provider API key (not needed if using Naia)
 
 ## Voice (TTS/STT)
 

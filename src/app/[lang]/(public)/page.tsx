@@ -4,6 +4,7 @@ import { isLocale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/home/hero";
 import { Features } from "@/components/home/features";
+import { Comparison } from "@/components/home/comparison";
 import { Pricing } from "@/components/home/pricing";
 import { Faq } from "@/components/home/faq";
 import { readHomeFaq } from "@/lib/home-docs";
@@ -24,6 +25,7 @@ export default async function HomePage({
     <>
       <Hero dict={dict} lang={lang} hasSession={!!session} />
       <Features dict={dict} />
+      <Comparison dict={dict} />
       <Pricing dict={dict} lang={lang} />
       <Faq title={dict.home.faq.title} items={faqItems} />
     </>

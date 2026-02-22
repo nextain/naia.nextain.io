@@ -1,4 +1,4 @@
-Tab ini memungkinkan Anda untuk memantau kesehatan, statistik, dan log waktu nyata dari daemon OpenClaw Gateway yang berjalan di latar belakang Naia OS.
+Tab ini memungkinkan Anda untuk memantau kesehatan, statistik, dan log waktu nyata dari daemon OpenClaw Gateway yang berjalan di latar belakang Naia.
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

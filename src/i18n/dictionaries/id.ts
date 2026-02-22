@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const id: Dictionary = {
   "locale": "id",
   "meta": {
-    "title": "Naia OS",
-    "description": "Naia OS — AI pribadi Anda, menjadi mudah. Mengobrol, berbicara, dan bekerja dengan avatar AI 3D."
+    "title": "Naia",
+    "description": "Naia — OS AI Linux berbasis ekosistem 5.700+ keterampilan OpenClaw. Avatar AI 3D, 7 penyedia LLM, obrolan suara, Discord DM. Tanpa kunci API.",
   },
   "common": {
     "loading": "Memuat...",
@@ -33,7 +33,7 @@ const id: Dictionary = {
     "manual": "petunjuk"
   },
   "footer": {
-    "brand": "Naia OS",
+    "brand": "Naia",
     "tagline": "Dimana Teknologi bertemu Emosi",
     "links": {
       "privacy": "Kebijakan Privasi",
@@ -57,7 +57,7 @@ const id: Dictionary = {
   "home": {
     "hero": {
       "title": "Agen AI tercanggih, sebagai OS yang sempurna.",
-      "subtitle": "Dari 7 penyedia AI hingga kontrol terminal, dan avatar VRM yang mengekspresikan emosi. Ekosistem AI lengkap yang dapat Anda alami tanpa menjadi pengembang, Naia OS.",
+      "subtitle": "OS AI Linux dengan ekosistem 5.700+ keterampilan OpenClaw. Mulai langsung dengan akun Naia — tanpa kunci API. Ngobrol via Discord DM, kapan saja di mana saja.",
       "cta": "Memulai Gratis",
       "secondaryCta": "Unduh"
     },
@@ -84,7 +84,36 @@ const id: Dictionary = {
         "desktop": {
           "title": "Instal & OS sekali klik",
           "description": "Instal aplikasi desktop dengan satu klik, atau buat lingkungan AI khusus dengan image OS Linux."
+        },
+        "skills": {
+          "title": "Ekosistem 70+ keterampilan",
+          "description": "7 bawaan + 63 kustom — cuaca, GitHub, Slack, Notion, Spotify, Discord, dan lainnya. Kompatibel dengan 5.700+ keterampilan komunitas ClaHub."
+        },
+        "discord": {
+          "title": "Integrasi Discord DM",
+          "description": "Ngobrol dengan avatar AI Anda melalui Discord DM, kapan saja, di mana saja. Bot pribadi yang hanya berbicara dengan Anda."
+        },
+        "daemon": {
+          "title": "OpenClaw Gateway bawaan",
+          "description": "Didukung oleh daemon gateway OpenClaw yang teruji dan ekosistem 5.700+ keterampilan. Tanpa pengaturan CLI — instal dan gunakan langsung dengan akun Naia Anda."
         }
+      }
+    },
+    "comparison": {
+      "title": "Perbandingan Naia",
+      "subtitle": "Lihat apa yang membedakan Naia dari alat AI yang ada",
+      "headers": { "category": "Kategori", "others": "Lainnya", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "Antarmuka", "others": "IDE / Terminal / Jendela chat", "naia": "Aplikasi desktop + avatar 3D" },
+        "target": { "category": "Target", "others": "Hanya pengembang", "naia": "Semua orang (onboarding 7 langkah)" },
+        "llm": { "category": "LLM", "others": "Penyedia tunggal", "naia": "7 penyedia, beralih kapan saja" },
+        "avatar": { "category": "Avatar", "others": "Tidak ada", "naia": "VRM 3D + emosi + sinkronisasi bibir" },
+        "skills": { "category": "Keterampilan", "others": "Alat terbatas", "naia": "70 bawaan + 5.700+ komunitas" },
+        "deploy": { "category": "Deployment", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, image OS" },
+        "voice": { "category": "Suara", "others": "Hanya teks atau TTS dasar", "naia": "5 penyedia TTS + STT + sinkronisasi bibir" },
+        "i18n": { "category": "Bahasa", "others": "Hanya Inggris", "naia": "14 bahasa" },
+        "platform": { "category": "Platform", "others": "Hanya macOS / CLI", "naia": "Linux native, instalasi GUI satu klik" },
+        "cost": { "category": "Biaya", "others": "Kunci API terpisah diperlukan", "naia": "Akun Naia — tanpa kunci API, cukup kredit" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const id: Dictionary = {
     },
     "desktopApp": {
       "title": "Koneksi Aplikasi Desktop",
-      "description": "Hubungkan aplikasi desktop Naia OS Anda dengan akun ini.",
+      "description": "Hubungkan aplikasi desktop Naia Anda dengan akun ini.",
       "issueKey": "Masalah Kunci Koneksi"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const id: Dictionary = {
   },
   "manual": {
     "title": "Panduan Pengguna",
-    "subtitle": "Panduan Aplikasi Desktop Naia OS",
+    "subtitle": "Panduan Aplikasi Desktop Naia",
     "toc": "Daftar Isi",
     "prev": "Sebelumnya",
     "next": "Selanjutnya",
@@ -274,13 +303,13 @@ const id: Dictionary = {
       "diagnostics": "Diagnostik",
       "settings": "Pengaturan",
       "tools": "Detail Alat",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "Pemecahan masalah"
     }
   },
   "download": {
     "title": "Unduh",
-    "subtitle": "Unduh Naia OS dan mulai mengobrol dengan avatar AI Anda.",
+    "subtitle": "Unduh Naia dan mulai mengobrol dengan avatar AI Anda.",
     "recommended": "Direkomendasikan",
     "version": "Versi",
     "releaseNotes": "Catatan Rilis",

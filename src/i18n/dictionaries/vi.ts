@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const vi: Dictionary = {
   "locale": "vi",
   "meta": {
-    "title": "Hệ điều hành Naia",
-    "description": "Naia OS — AI cá nhân của bạn, được thực hiện dễ dàng. Trò chuyện, trò chuyện và làm việc với avatar AI 3D."
+    "title": "Naia",
+    "description": "Naia — Hệ điều hành AI Linux dựa trên hệ sinh thái 5.700+ kỹ năng OpenClaw. Avatar AI 3D, 7 nhà cung cấp LLM, trò chuyện giọng nói, Discord DM. Không cần API key.",
   },
   "common": {
     "loading": "Đang tải...",
@@ -33,7 +33,7 @@ const vi: Dictionary = {
     "manual": "Hướng dẫn sử dụng"
   },
   "footer": {
-    "brand": "Hệ điều hành Naia",
+    "brand": "Naia",
     "tagline": "Nơi công nghệ gặp gỡ cảm xúc",
     "links": {
       "privacy": "Chính sách bảo mật",
@@ -57,7 +57,7 @@ const vi: Dictionary = {
   "home": {
     "hero": {
       "title": "Tác nhân AI tiên tiến nhất, là hệ điều hành hoàn hảo.",
-      "subtitle": "Từ 7 nhà cung cấp AI đến điều khiển thiết bị đầu cuối và hình đại diện VRM thể hiện cảm xúc. Một hệ sinh thái AI hoàn chỉnh mà bạn có thể trải nghiệm mà không cần phải là nhà phát triển, Naia OS.",
+      "subtitle": "Hệ điều hành AI Linux với hệ sinh thái 5.700+ kỹ năng của OpenClaw. Bắt đầu ngay với tài khoản Naia — không cần API key. Trò chuyện qua Discord DM, mọi lúc mọi nơi.",
       "cta": "Bắt đầu miễn phí",
       "secondaryCta": "Tải xuống"
     },
@@ -84,7 +84,36 @@ const vi: Dictionary = {
         "desktop": {
           "title": "Cài đặt và hệ điều hành chỉ bằng một cú nhấp chuột",
           "description": "Cài đặt ứng dụng dành cho máy tính để bàn chỉ bằng một cú nhấp chuột hoặc tạo môi trường AI chuyên dụng với hình ảnh hệ điều hành Linux."
+        },
+        "skills": {
+          "title": "Hệ sinh thái 70+ kỹ năng",
+          "description": "7 tích hợp + 63 tùy chỉnh — thời tiết, GitHub, Slack, Notion, Spotify, Discord và hơn thế. Tương thích với 5.700+ kỹ năng cộng đồng ClaHub."
+        },
+        "discord": {
+          "title": "Tích hợp Discord DM",
+          "description": "Trò chuyện với avatar AI qua Discord DM, mọi lúc, mọi nơi. Một bot cá nhân chỉ trò chuyện với bạn."
+        },
+        "daemon": {
+          "title": "Tích hợp OpenClaw Gateway",
+          "description": "Được hỗ trợ bởi daemon gateway OpenClaw đã được kiểm chứng và hệ sinh thái 5.700+ kỹ năng. Không cần thiết lập CLI — cài đặt và sử dụng ngay với tài khoản Naia."
         }
+      }
+    },
+    "comparison": {
+      "title": "So sánh Naia",
+      "subtitle": "Xem điều gì làm Naia khác biệt so với các công cụ AI hiện có",
+      "headers": { "category": "Danh mục", "others": "Khác", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "Giao diện", "others": "IDE / Terminal / Cửa sổ chat", "naia": "Ứng dụng desktop + avatar 3D" },
+        "target": { "category": "Đối tượng", "others": "Chỉ nhà phát triển", "naia": "Mọi người (7 bước hướng dẫn)" },
+        "llm": { "category": "LLM", "others": "Nhà cung cấp đơn lẻ", "naia": "7 nhà cung cấp, chuyển đổi bất kỳ lúc nào" },
+        "avatar": { "category": "Avatar", "others": "Không có", "naia": "VRM 3D + cảm xúc + nhép môi" },
+        "skills": { "category": "Kỹ năng", "others": "Công cụ hạn chế", "naia": "70 tích hợp + 5.700+ cộng đồng" },
+        "deploy": { "category": "Triển khai", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, ảnh OS" },
+        "voice": { "category": "Giọng nói", "others": "Chỉ văn bản hoặc TTS cơ bản", "naia": "5 nhà cung cấp TTS + STT + nhép môi" },
+        "i18n": { "category": "Ngôn ngữ", "others": "Chỉ tiếng Anh", "naia": "14 ngôn ngữ" },
+        "platform": { "category": "Nền tảng", "others": "Chỉ macOS / CLI", "naia": "Linux gốc, cài đặt GUI một cú nhấp" },
+        "cost": { "category": "Chi phí", "others": "Cần khóa API riêng", "naia": "Tài khoản Naia — không cần API key, chỉ cần tín dụng" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const vi: Dictionary = {
     },
     "desktopApp": {
       "title": "Kết nối ứng dụng máy tính để bàn",
-      "description": "Kết nối ứng dụng máy tính để bàn Naia OS của bạn với tài khoản này.",
+      "description": "Kết nối ứng dụng máy tính để bàn Naia của bạn với tài khoản này.",
       "issueKey": "Vấn đề về khóa kết nối"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const vi: Dictionary = {
   },
   "manual": {
     "title": "Hướng dẫn sử dụng",
-    "subtitle": "Hướng dẫn ứng dụng máy tính để bàn Naia OS",
+    "subtitle": "Hướng dẫn ứng dụng máy tính để bàn Naia",
     "toc": "Mục lục",
     "prev": "trước đó",
     "next": "Tiếp theo",
@@ -274,13 +303,13 @@ const vi: Dictionary = {
       "diagnostics": "Chẩn đoán",
       "settings": "Cài đặt",
       "tools": "Chi tiết công cụ",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "Khắc phục sự cố"
     }
   },
   "download": {
     "title": "Tải xuống",
-    "subtitle": "Tải xuống Naia OS và bắt đầu trò chuyện với avatar AI của bạn.",
+    "subtitle": "Tải xuống Naia và bắt đầu trò chuyện với avatar AI của bạn.",
     "recommended": "Khuyến nghị",
     "version": "Phiên bản",
     "releaseNotes": "Ghi chú phát hành",

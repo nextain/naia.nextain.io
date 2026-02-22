@@ -1,4 +1,4 @@
-Tab ini mengelola semua agen (termasuk Naia utama) dan sub-agen yang berjalan dalam Naia OS.
+Tab ini mengelola semua agen (termasuk Naia utama) dan sub-agen yang berjalan dalam Naia.
 
 ![Agents Tab](agents-tab.png)
 

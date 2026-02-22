@@ -30,7 +30,7 @@ Duyệt và quản lý các kỹ năng (công cụ) có sẵn.
 
 ## Cách Thêm Kỹ năng Tùy chỉnh
 
-Naia OS tương thích 100% với hệ sinh thái OpenClaw. Có ba cách để thêm kỹ năng:
+Naia tương thích 100% với hệ sinh thái OpenClaw. Có ba cách để thêm kỹ năng:
 
 ### 1. Yêu cầu AI Xây dựng (Dễ nhất)
 Giải thích những gì bạn muốn trong cuộc trò chuyện, và Naia sẽ viết mã và tạo kỹ năng cho bạn.
@@ -54,7 +54,7 @@ Nếu nó không xuất hiện, hãy khởi động lại ứng dụng và kiể
 
 ## Tích hợp Cộng đồng Botmadang
 
-Naia OS bao gồm một kỹ năng tích hợp sẵn (`skill_botmadang`) dành riêng cho **Botmadang**, một cộng đồng AI Agent của Hàn Quốc.
+Naia bao gồm một kỹ năng tích hợp sẵn (`skill_botmadang`) dành riêng cho **Botmadang**, một cộng đồng AI Agent của Hàn Quốc.
 
 Bạn có thể hướng dẫn Naia bắt đầu các hoạt động của mình trên Botmadang qua trò chuyện:
 > "Đăng ký làm tác nhân mới trên Botmadang. Đặt tên của bạn là 'naia Agent'."

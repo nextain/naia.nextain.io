@@ -33,7 +33,7 @@ Inicia sesión con tu cuenta de Discord en [naia.nextain.io](https://naia.nextai
 La integración con Google Chat está planeada para una futura actualización. Mantente atento a los anuncios.
 
 ## Notificaciones de mensajería (Webhooks)
-Naia OS hereda el potente sistema de canales de OpenClaw.
+Naia hereda el potente sistema de canales de OpenClaw.
 Al introducir tu URL de Webhook de Slack, Discord o Google Chat en el menú **Ajustes > Herramientas > Webhooks** o durante la pantalla de incorporación inicial, Naia puede enviarte mensajes con los resultados de tareas importantes.
 
 > **Consejo:** "Let me know on Discord when this file backup is completely finished!"

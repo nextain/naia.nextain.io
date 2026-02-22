@@ -41,21 +41,21 @@ Passen Sie die Persönlichkeit, den Sprachstil und den Namen von Naia im Freitex
 
 ![Persona-Einstellungen](settings-persona.png)
 
-## Nextain-Konto
+## Naia-Konto
 
-Verwalten Sie die Nextain-Integration.
+Verwalten Sie die Naia-Integration.
 
 ### Wenn verbunden
 
 - Benutzer-ID wird angezeigt
 - **Guthabenstand** wird angezeigt (Echtzeitabfrage)
-- Schaltfläche **Dashboard**: Öffnen Sie das Nextain-Dashboard im Browser
-- Schaltfläche **Guthaben aufladen**: Gehen Sie zur Nextain-Abrechnungsseite
-- Schaltfläche **Trennen**: Nextain-Konto entknüpfen
-- Einstellungen werden beim Speichern automatisch mit Nextain synchronisiert
+- Schaltfläche **Dashboard**: Öffnen Sie das Naia-Dashboard im Browser
+- Schaltfläche **Guthaben aufladen**: Gehen Sie zur Naia-Abrechnungsseite
+- Schaltfläche **Trennen**: Naia-Konto entknüpfen
+- Einstellungen werden beim Speichern automatisch mit Naia synchronisiert
 
 ### Wenn nicht verbunden
-- Schaltfläche **Nextain-Login**: Melden Sie sich über den Browser an, automatische Verbindung
+- Schaltfläche **Naia-Login**: Melden Sie sich über den Browser an, automatische Verbindung
 
 ## Benutzerhandbuch
 
@@ -65,7 +65,7 @@ Klicken Sie auf „Benutzerhandbuch“, um diese Seite im Browser zu öffnen.
 
 - **Anbieter**: Gemini (Standard), OpenAI, Claude, Grok, xAI, Ollama, Claude Code CLI
 - **Modell**: Modellname (z.B. gemini-2.5-flash)
-- **API Key**: Anbieter-API-Schlüssel (nicht erforderlich, wenn Nextain verwendet wird)
+- **API Key**: Anbieter-API-Schlüssel (nicht erforderlich, wenn Naia verwendet wird)
 
 ## Stimme (TTS/STT)
 

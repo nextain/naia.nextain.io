@@ -41,21 +41,21 @@ Tùy chỉnh tính cách, phong cách nói chuyện và tên của Naia bằng v
 
 ![Persona settings](settings-persona.png)
 
-## Tài khoản Nextain
+## Tài khoản Naia
 
-Quản lý tích hợp Nextain.
+Quản lý tích hợp Naia.
 
 ### Khi đã kết nối
 
 - ID người dùng được hiển thị
 - **Số dư tín dụng** được hiển thị (truy vấn thời gian thực)
-- Nút **Bảng điều khiển**: Mở bảng điều khiển Nextain trong trình duyệt
-- Nút **Nạp Tín dụng**: Chuyển đến trang thanh toán của Nextain
-- Nút **Ngắt kết nối**: Hủy liên kết tài khoản Nextain
-- Cài đặt tự động đồng bộ hóa với Nextain khi lưu
+- Nút **Bảng điều khiển**: Mở bảng điều khiển Naia trong trình duyệt
+- Nút **Nạp Tín dụng**: Chuyển đến trang thanh toán của Naia
+- Nút **Ngắt kết nối**: Hủy liên kết tài khoản Naia
+- Cài đặt tự động đồng bộ hóa với Naia khi lưu
 
 ### Khi chưa kết nối
-- Nút **Đăng nhập Nextain**: Đăng nhập qua trình duyệt, tự động kết nối
+- Nút **Đăng nhập Naia**: Đăng nhập qua trình duyệt, tự động kết nối
 
 ## Hướng dẫn sử dụng
 
@@ -65,7 +65,7 @@ Nhấp vào "Hướng dẫn sử dụng" để mở trang này trong trình duy�
 
 - **Nhà cung cấp**: Gemini (mặc định), OpenAI, Claude, Grok, xAI, Ollama, Claude Code CLI
 - **Mô hình**: Tên mô hình (ví dụ: gemini-2.5-flash)
-- **API Key**: Khóa API của nhà cung cấp (không cần nếu sử dụng Nextain)
+- **API Key**: Khóa API của nhà cung cấp (không cần nếu sử dụng Naia)
 
 ## Giọng nói (TTS/STT)
 

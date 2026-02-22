@@ -4,7 +4,7 @@ import { MANUAL_SLUGS } from "@/lib/manual-docs";
 
 const BASE_URL = "https://naia.nextain.io";
 
-const PUBLIC_PAGES = ["", "terms", "privacy", "refund", "contact", "manual"];
+const PUBLIC_PAGES = ["", "download", "terms", "privacy", "refund", "contact", "manual"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];

@@ -1,4 +1,4 @@
-Cet onglet gère tous les agents (y compris l'avatar IA principal) et les sous-agents exécutés au sein de Naia OS.
+Cet onglet gère tous les agents (y compris l'avatar IA principal) et les sous-agents exécutés au sein de Naia.
 
 ![Agents Tab](agents-tab.png)
 

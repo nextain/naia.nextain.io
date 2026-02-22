@@ -59,7 +59,7 @@ Tautkan akun naia.nextain.io Anda dengan aplikasi pesan eksternal untuk mengobro
 ### Discord
 - Secara otomatis tertaut saat Anda masuk dengan Discord
 - Mengobrol melalui DM dengan bot Naia
-- Kredit dipotong dari akun Nextain Anda
+- Kredit dipotong dari akun Naia Anda
 
 ### Google Chat (Segera Hadir)
 - Integrasi Google Chat direncanakan untuk pembaruan mendatang

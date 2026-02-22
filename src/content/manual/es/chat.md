@@ -30,7 +30,7 @@ La pantalla principal de conversación con Naia.
 - Haga clic para abrir el panel de control de costos detallado:
   - Mensajes por proveedor
   - Recuentos de tokens de entrada/salida
-  - Saldo de Nextain (cuando esté conectado)
+  - Saldo de Naia (cuando esté conectado)
   - Enlace de recarga de crédito
 
 ## Nueva Conversación

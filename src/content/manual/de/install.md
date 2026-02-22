@@ -1,4 +1,4 @@
-Naia OS wurde primär für Linux-Umgebungen entwickelt, mit Fokus auf unveränderliche Betriebssysteme (Immutable OSs) wie Bazzite oder sichere Sandbox-Umgebungen wie Flatpak.
+Naia wurde primär für Linux-Umgebungen entwickelt, mit Fokus auf unveränderliche Betriebssysteme (Immutable OSs) wie Bazzite oder sichere Sandbox-Umgebungen wie Flatpak.
 
 ## Systemanforderungen
 
@@ -11,7 +11,7 @@ Naia OS wurde primär für Linux-Umgebungen entwickelt, mit Fokus auf unverände
 
 ## Bereitstellungsoptionen
 
-Da Naia OS eine KI enthält, die „das Betriebssystem direkt steuert“, ist die Bereitstellungsmethode ein wichtiger Aspekt.
+Da Naia eine KI enthält, die „das Betriebssystem direkt steuert“, ist die Bereitstellungsmethode ein wichtiger Aspekt.
 
 ### 1. Flatpak-Distribution (Empfohlen)
 Dies ist die gängigste und sicherste Methode zur Verteilung von Linux-Desktop-Apps. Sie können es einfach über App-Stores wie Discover oder GNOME Software installieren.
@@ -25,7 +25,7 @@ Dies ist die gängigste und sicherste Methode zur Verteilung von Linux-Desktop-A
   ```
 
 ### 2. Bazzite / BlueBuild Integriertes Image (Fortgeschritten)
-Für fortgeschrittene Benutzer bietet Naia OS ein BlueBuild-Rezept, um die App direkt in ein Bazzite-Image zu integrieren. Dies integriert die KI tief in das Betriebssystem, sodass der KI-Avatar Sie sofort beim Start begrüßen kann.
+Für fortgeschrittene Benutzer bietet Naia ein BlueBuild-Rezept, um die App direkt in ein Bazzite-Image zu integrieren. Dies integriert die KI tief in das Betriebssystem, sodass der KI-Avatar Sie sofort beim Start begrüßen kann.
 
 ---
 

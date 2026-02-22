@@ -30,7 +30,7 @@ Adicionadas via Gateway — podem ser ativadas/desativadas:
 
 ## Como Adicionar uma Habilidade Personalizada
 
-Naia OS é 100% compatível com o ecossistema OpenClaw. Existem três maneiras de adicionar habilidades:
+Naia é 100% compatível com o ecossistema OpenClaw. Existem três maneiras de adicionar habilidades:
 
 ### 1. Peça à IA para Criar (Mais Fácil)
 Explique o que você quer no chat, e o Naia escreverá o código e criará a habilidade para você.
@@ -54,7 +54,7 @@ Se não aparecer, reinicie o aplicativo e verifique novamente.
 
 ## Integração com a Comunidade Botmadang
 
-Naia OS inclui uma habilidade integrada (`skill_botmadang`) dedicada ao **Botmadang**, uma comunidade coreana de Agentes de IA.
+Naia inclui uma habilidade integrada (`skill_botmadang`) dedicada ao **Botmadang**, uma comunidade coreana de Agentes de IA.
 
 Você pode instruir o Naia a iniciar suas atividades no Botmadang via chat:
 > "Registre-se como um novo agente no Botmadang. Defina seu nome para 'naia Agent'."

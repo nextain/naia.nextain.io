@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const en: Dictionary = {
   locale: "en",
   meta: {
-    title: "Naia OS | The Next Generation AI OS",
-    description: "Naia OS — Your personal AI, made easy. Chat, talk, and work with 3D avatar AI.",
+    title: "Naia",
+    description: "Naia — A Linux AI OS powered by OpenClaw's 5,700+ skill ecosystem. 3D AI avatar, 7 LLM providers, voice chat, Discord DM. No API keys needed.",
   },
   common: {
     loading: "Loading...",
@@ -33,7 +33,7 @@ const en: Dictionary = {
     manual: "Manual",
   },
   footer: {
-    brand: "Naia OS",
+    brand: "Naia",
     tagline: "The Next Generation AI OS",
     links: {
       privacy: "Privacy Policy",
@@ -58,7 +58,7 @@ const en: Dictionary = {
     hero: {
       title: "The most advanced AI agent, as the perfect OS.",
       subtitle:
-        "From 7 AI providers to terminal control, and a VRM avatar that expresses emotion. A complete AI ecosystem you can experience without being a developer, Naia OS.",
+        "A Linux AI OS powered by OpenClaw's 5,700+ skill ecosystem. Start instantly with a Naia account — no API keys. Chat via Discord DM, anytime, anywhere.",
       cta: "Get Started Free",
       secondaryCta: "Download",
     },
@@ -91,6 +91,38 @@ const en: Dictionary = {
           description:
             "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
         },
+        skills: {
+          title: "70+ Skills Ecosystem",
+          description:
+            "7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClaHub community skills.",
+        },
+        discord: {
+          title: "Discord DM Integration",
+          description:
+            "Chat with your AI avatar via Discord DM, anytime, anywhere. A personal bot that only talks to you.",
+        },
+        daemon: {
+          title: "OpenClaw Gateway Built-in",
+          description:
+            "Powered by OpenClaw's battle-tested gateway daemon and 5,700+ skill ecosystem. No CLI setup — just install and go with your Naia account.",
+        },
+      },
+    },
+    comparison: {
+      title: "How Naia compares",
+      subtitle: "See what sets Naia apart from existing AI tools",
+      headers: { category: "Category", others: "Others", naia: "Naia" },
+      rows: {
+        ui: { category: "UI", others: "IDE / Terminal / Chat window", naia: "Desktop app + 3D avatar" },
+        target: { category: "Target", others: "Developers only", naia: "Everyone (7-step onboarding)" },
+        llm: { category: "LLM", others: "Single provider", naia: "7 providers, switch anytime" },
+        avatar: { category: "Avatar", others: "None", naia: "VRM 3D with emotions & lip-sync" },
+        skills: { category: "Skills", others: "Limited tools", naia: "70 built-in + 5,700+ community" },
+        deploy: { category: "Deployment", others: "npm / brew / pip", naia: "Flatpak, AppImage, DEB, RPM, OS image" },
+        voice: { category: "Voice", others: "Text only or basic TTS", naia: "5 TTS providers + STT + lip-sync" },
+        i18n: { category: "Languages", others: "English only", naia: "14 languages" },
+        platform: { category: "Platform", others: "macOS only / CLI", naia: "Linux native, GUI one-click install" },
+        cost: { category: "Cost", others: "Separate API keys required", naia: "Naia account — no API key, just credits" },
       },
     },
     pricing: {
@@ -229,7 +261,7 @@ const en: Dictionary = {
     desktopApp: {
       title: "Desktop App Connection",
       description:
-        "Connect your Naia OS desktop app with this account.",
+        "Connect your Naia desktop app with this account.",
       issueKey: "Issue Connection Key",
     },
     appearance: {
@@ -264,7 +296,7 @@ const en: Dictionary = {
   },
   manual: {
     title: "User Manual",
-    subtitle: "Naia OS Desktop App Guide",
+    subtitle: "Naia Desktop App Guide",
     toc: "Table of Contents",
     prev: "Previous",
     next: "Next",
@@ -282,13 +314,13 @@ const en: Dictionary = {
       diagnostics: "Diagnostics",
       settings: "Settings",
       tools: "Tool Details",
-      lab: "Nextain Account",
+      lab: "Naia Account",
       troubleshooting: "Troubleshooting",
     },
   },
   download: {
     title: "Download",
-    subtitle: "Download Naia OS and start chatting with your AI avatar.",
+    subtitle: "Download Naia and start chatting with your AI avatar.",
     recommended: "Recommended",
     version: "Version",
     releaseNotes: "Release Notes",

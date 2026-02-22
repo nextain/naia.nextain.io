@@ -1,4 +1,4 @@
-Esta aba gerencia todos os agentes (incluindo o Naia principal) e subagentes em execução no Naia OS.
+Esta aba gerencia todos os agentes (incluindo o Naia principal) e subagentes em execução no Naia.
 
 ![Guia Agentes](agents-tab.png)
 

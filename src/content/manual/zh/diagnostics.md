@@ -1,4 +1,4 @@
-此选项卡允许您监控在 Naia OS 后台运行的 OpenClaw Gateway 守护程序的健康状况、统计数据和实时日志。
+此选项卡允许您监控在 Naia 后台运行的 OpenClaw Gateway 守护程序的健康状况、统计数据和实时日志。
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

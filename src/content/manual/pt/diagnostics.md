@@ -1,4 +1,4 @@
-Esta aba permite monitorar a saúde, estatísticas e logs em tempo real do daemon OpenClaw Gateway executando em segundo plano no Naia OS.
+Esta aba permite monitorar a saúde, estatísticas e logs em tempo real do daemon OpenClaw Gateway executando em segundo plano no Naia.
 
 ![Aba de Diagnóstico](diagnostics-tab.png)
 

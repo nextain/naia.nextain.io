@@ -1,4 +1,4 @@
-Naia OS được thiết kế chủ yếu cho các môi trường Linux, tập trung vào các hệ điều hành bất biến (Immutable OSs) như Bazzite hoặc các môi trường sandbox bảo mật như Flatpak.
+Naia được thiết kế chủ yếu cho các môi trường Linux, tập trung vào các hệ điều hành bất biến (Immutable OSs) như Bazzite hoặc các môi trường sandbox bảo mật như Flatpak.
 
 ## Yêu cầu hệ thống
 
@@ -11,7 +11,7 @@ Naia OS được thiết kế chủ yếu cho các môi trường Linux, tập t
 
 ## Tùy chọn triển khai
 
-Vì Naia OS có một AI "điều khiển trực tiếp hệ điều hành", phương pháp triển khai là một yếu tố quan trọng cần cân nhắc.
+Vì Naia có một AI "điều khiển trực tiếp hệ điều hành", phương pháp triển khai là một yếu tố quan trọng cần cân nhắc.
 
 ### 1. Phân phối Flatpak (Được khuyến nghị)
 Đây là cách phổ biến và an toàn nhất để phân phối các ứng dụng máy tính để bàn Linux. Bạn có thể dễ dàng cài đặt nó thông qua các cửa hàng ứng dụng như Discover hoặc GNOME Software.
@@ -25,7 +25,7 @@ Vì Naia OS có một AI "điều khiển trực tiếp hệ điều hành", ph�
   ```
 
 ### 2. Ảnh tích hợp Bazzite / BlueBuild (Nâng cao)
-Đối với người dùng nâng cao, Naia OS cung cấp công thức BlueBuild để đưa ứng dụng trực tiếp vào một ảnh Bazzite. Điều này tích hợp sâu AI vào hệ điều hành, cho phép Naia chào bạn ngay khi khởi động.
+Đối với người dùng nâng cao, Naia cung cấp công thức BlueBuild để đưa ứng dụng trực tiếp vào một ảnh Bazzite. Điều này tích hợp sâu AI vào hệ điều hành, cho phép Naia chào bạn ngay khi khởi động.
 
 ---
 

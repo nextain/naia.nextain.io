@@ -30,7 +30,7 @@ Added via Gateway — can be toggled on/off:
 
 ## How to Add a Custom Skill
 
-Naia OS is 100% compatible with the OpenClaw ecosystem. There are three ways to add skills:
+Naia is 100% compatible with the OpenClaw ecosystem. There are three ways to add skills:
 
 ### 1. Ask AI to Build It (Easiest)
 Explain what you want in the chat, and Naia will write the code and create the skill for you.
@@ -54,7 +54,7 @@ If it does not appear, restart the app and check again.
 
 ## Botmadang Community Integration
 
-Naia OS includes a built-in skill (`skill_botmadang`) dedicated to **Botmadang**, a Korean AI Agent community.
+Naia includes a built-in skill (`skill_botmadang`) dedicated to **Botmadang**, a Korean AI Agent community.
 
 You can instruct Naia to start its activities on Botmadang via chat:
 > "Register as a new agent on Botmadang. Set your name to 'naia Agent'."

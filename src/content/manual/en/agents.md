@@ -1,4 +1,4 @@
-This tab manages all agents (including the main Naia) and sub-agents running within Naia OS.
+This tab manages all agents (including the main Naia) and sub-agents running within Naia.
 
 ![Agents Tab](agents-tab.png)
 

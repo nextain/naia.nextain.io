@@ -30,7 +30,7 @@ Der Haupt-Konversationsbildschirm mit dem KI-Avatar.
 - Klicken Sie, um das detaillierte Kosten-Dashboard zu öffnen:
   - Nachrichten pro Anbieter
   - Anzahl der Input-/Output-Tokens
-  - Nextain-Guthaben (bei Verbindung)
+  - Naia-Guthaben (bei Verbindung)
   - Link zur Gutschriftenaufladung
 
 ## Neue Konversation

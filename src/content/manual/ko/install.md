@@ -1,4 +1,4 @@
-Naia OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니다. 특히 Bazzite와 같은 Immutable OS 환경이나 샌드박스(Flatpak) 환경에서 안전하게 동작합니다.
+Naia는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니다. 특히 Bazzite와 같은 Immutable OS 환경이나 샌드박스(Flatpak) 환경에서 안전하게 동작합니다.
 
 ## 시스템 요구사항
 
@@ -11,7 +11,7 @@ Naia OS는 완벽한 리눅스(Linux) 환경을 타겟으로 설계되었습니�
 
 ## 배포 방식 안내
 
-Naia OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 배포 방식이 매우 중요합니다.
+Naia는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 배포 방식이 매우 중요합니다.
 
 ### 1. Flatpak 배포 (권장)
 가장 보편적이고 안전한 리눅스 앱 배포 방식입니다. 앱스토어(Discover, GNOME Software)를 통해 쉽게 설치할 수 있습니다.
@@ -27,7 +27,7 @@ Naia OS는 "AI가 OS를 직접 다루는" 독특한 컨셉을 가지고 있어 �
 > **다른 형식도 지원합니다**: AppImage, DEB (Debian/Ubuntu), RPM (Fedora/RHEL). [다운로드 페이지](/ko/download)에서 모든 형식을 확인하세요.
 
 ### 2. Bazzite / BlueBuild 통합 이미지 (고급)
-사용자 정의 OS 이미지를 굽는 방식입니다. `Naia OS`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
+사용자 정의 OS 이미지를 굽는 방식입니다. `Naia`는 Bazzite의 BlueBuild 레시피를 기본 제공합니다. 이 방식을 사용하면 앱이 OS 자체에 100% 통합되어 부팅하자마자 AI 아바타가 바탕화면에 뜹니다.
 
 ---
 

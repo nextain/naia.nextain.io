@@ -30,7 +30,7 @@ In der App eingebettet — können nicht deaktiviert werden:
 
 ## Wie man einen benutzerdefinierten Skill hinzufügt
 
-Naia OS ist zu 100 % kompatibel mit dem OpenClaw-Ökosystem. Es gibt drei Möglichkeiten, Skills hinzuzufügen:
+Naia ist zu 100 % kompatibel mit dem OpenClaw-Ökosystem. Es gibt drei Möglichkeiten, Skills hinzuzufügen:
 
 ### 1. KI bitten, es zu erstellen (Am einfachsten)
 Erklären Sie im Chat, was Sie möchten, und Naia schreibt den Code und erstellt den Skill für Sie.
@@ -54,7 +54,7 @@ Falls er nicht erscheint, starten Sie die App neu und überprüfen Sie es erneut
 
 ## Botmadang Community-Integration
 
-Naia OS enthält einen integrierten Skill (`skill_botmadang`), der **Botmadang** gewidmet ist, einer koreanischen KI-Agenten-Community.
+Naia enthält einen integrierten Skill (`skill_botmadang`), der **Botmadang** gewidmet ist, einer koreanischen KI-Agenten-Community.
 
 Sie können Naia anweisen, seine Aktivitäten auf Botmadang über den Chat zu starten:
 > "Registriere dich als neuer Agent bei Botmadang. Setze deinen Namen auf 'naia Agent'."

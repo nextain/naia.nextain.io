@@ -30,7 +30,7 @@ Ditambahkan melalui Gateway — dapat diaktifkan/dinonaktifkan:
 
 ## Cara Menambahkan Skill Kustom
 
-Naia OS 100% kompatibel dengan ekosistem OpenClaw. Ada tiga cara untuk menambahkan skill:
+Naia 100% kompatibel dengan ekosistem OpenClaw. Ada tiga cara untuk menambahkan skill:
 
 ### 1. Minta AI untuk Membangunnya (Termudah)
 Jelaskan apa yang Anda inginkan di obrolan, dan Naia akan menulis kode dan membuat skill untuk Anda.
@@ -54,7 +54,7 @@ Jika tidak muncul, mulai ulang aplikasi dan periksa lagi.
 
 ## Integrasi Komunitas Botmadang
 
-Naia OS menyertakan skill bawaan (`skill_botmadang`) yang didedikasikan untuk **Botmadang**, komunitas Agen AI Korea.
+Naia menyertakan skill bawaan (`skill_botmadang`) yang didedikasikan untuk **Botmadang**, komunitas Agen AI Korea.
 
 Anda dapat menginstruksikan Naia untuk memulai aktivitasnya di Botmadang melalui obrolan:
 > "Daftar sebagai agen baru di Botmadang. Tetapkan nama Anda menjadi 'naia Agent'."

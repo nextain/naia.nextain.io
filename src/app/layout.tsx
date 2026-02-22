@@ -6,11 +6,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Naia OS",
-    template: "%s | Naia OS",
+    default: "Naia",
+    template: "%s | Naia",
   },
   description:
-    "Naia OS — Your Personal AI Desktop OS. Chat with 3D avatar AI, voice conversations, and multi-LLM support.",
+    "Naia — A Linux AI OS powered by OpenClaw's 5,700+ skill ecosystem. 3D AI avatar, 7 LLM providers, voice chat, Discord DM. No API keys needed.",
   keywords: [
     "naia",
     "AI Desktop",
@@ -18,24 +18,31 @@ export const metadata: Metadata = {
     "3D Avatar",
     "Voice AI",
     "LLM",
+    "OpenClaw",
+    "AI skills",
+    "Linux AI",
     "Gemini",
+    "Claude",
+    "GPT",
+    "Discord AI",
     "personal AI",
     "desktop OS",
+    "Nextain",
   ],
   metadataBase: new URL("https://naia.nextain.io"),
   openGraph: {
-    title: "Naia OS | The Next Generation AI OS",
-    description: "Your Personal AI Desktop OS. Experience a complete AI ecosystem with a 3D avatar.",
+    title: "Naia — Linux AI OS with 5,700+ Skills",
+    description: "Built on OpenClaw's ecosystem. 3D AI avatar, 7 LLM providers, 70+ skills, voice chat, Discord DM — no API keys needed.",
     url: "https://naia.nextain.io",
-    siteName: "Naia OS",
+    siteName: "Naia",
     type: "website",
     locale: "en_US",
-    alternateLocale: ["ko_KR"],
+    alternateLocale: ["ko_KR", "ja_JP", "zh_CN", "fr_FR", "de_DE", "ru_RU", "es_ES", "pt_BR", "vi_VN", "id_ID", "ar_SA", "hi_IN", "bn_BD"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Naia OS | The Next Generation AI OS",
-    description: "Your Personal AI Desktop OS. Experience a complete AI ecosystem with a 3D avatar.",
+    title: "Naia — Linux AI OS with 5,700+ Skills",
+    description: "Built on OpenClaw's ecosystem. 3D AI avatar, 7 LLM providers, 70+ skills, voice chat, Discord DM — no API keys needed.",
   },
 };
 

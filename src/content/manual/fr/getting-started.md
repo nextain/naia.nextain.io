@@ -1,12 +1,12 @@
 Lorsque vous lancez l'application pour la première fois, un assistant d'intégration apparaît. Il y a deux façons de commencer.
 
-## Commencer avec Naia OS (Recommandé)
+## Commencer avec Naia (Recommandé)
 
 La façon la plus simple — gratuite et sans API Key nécessaire.
 
 ![Écran d'intégration — sélection du fournisseur](onboarding-provider.png)
 
-1. Cliquez sur le bouton **Naia OS** sur l'écran d'intégration
+1. Cliquez sur le bouton **Naia** sur l'écran d'intégration
 2. Un navigateur s'ouvre sur la page de connexion naia.nextain.io
 3. Connectez-vous avec votre **compte Google** (l'inscription est automatique)
 4. Vous serez automatiquement redirigé vers l'application de bureau
@@ -25,7 +25,7 @@ Vous pouvez également saisir une API Key de fournisseurs comme Google Gemini.
 
 ## Étapes d'intégration
 
-Après la connexion à Nextain ou la saisie de l'API Key, suivez ces étapes :
+Après la connexion à Naia ou la saisie de l'API Key, suivez ces étapes :
 
 ### 1. Nommez votre IA
 Donnez à votre avatar IA le nom que vous souhaitez (par exemple, "Naia", "Luna", "Cookie").

@@ -33,7 +33,7 @@ Bằng cách nói với Naia trong cuộc trò chuyện, "Start Discord web logi
 Tích hợp Google Chat được lên kế hoạch cho bản cập nhật tương lai. Hãy theo dõi các thông báo.
 
 ## Thông Báo Messenger (Webhooks)
-Naia OS kế thừa hệ thống kênh mạnh mẽ của OpenClaw.
+Naia kế thừa hệ thống kênh mạnh mẽ của OpenClaw.
 Bằng cách nhập URL Webhook của Slack, Discord hoặc Google Chat của bạn vào menu **Cài đặt > Công cụ > Webhooks** hoặc trong màn hình giới thiệu ban đầu, Naia có thể gửi cho bạn tin nhắn với kết quả của các tác vụ quan trọng.
 
 > **Mẹo:** "Let me know on Discord when this file backup is completely finished!"

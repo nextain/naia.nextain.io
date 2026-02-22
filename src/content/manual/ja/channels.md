@@ -33,7 +33,7 @@
 Google Chat連携は将来のアップデートで対応予定です。最新情報をお待ちください。
 
 ## メッセンジャー通知 (Webhooks)
-Naia OSはOpenClawの強力なチャンネルシステムを継承しています。
+NaiaはOpenClawの強力なチャンネルシステムを継承しています。
 Slack、Discord、またはGoogle ChatのWebhook URLを**Settings > Tools > Webhooks**メニュー、または初期オンボーディング画面で入力することで、AIアバターは重要なタスクの結果をメッセージとして送信できます。
 
 > **ヒント:** 「このファイルバックアップが完全に完了したらDiscordで知らせて！」

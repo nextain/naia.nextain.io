@@ -1,6 +1,6 @@
 ## Service Scope
 
-naia.nextain.io is a service portal for Naia OS account authentication, billing, credit, and usage management.
+naia.nextain.io is a service portal for Naia account authentication, billing, credit, and usage management.
 
 ## Account and Billing
 

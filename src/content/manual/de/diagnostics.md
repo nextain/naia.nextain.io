@@ -1,4 +1,4 @@
-Dieser Tab ermöglicht es Ihnen, den Zustand, die Statistiken und die Echtzeit-Protokolle des OpenClaw Gateway-Daemons zu überwachen, der im Hintergrund von Naia OS ausgeführt wird.
+Dieser Tab ermöglicht es Ihnen, den Zustand, die Statistiken und die Echtzeit-Protokolle des OpenClaw Gateway-Daemons zu überwachen, der im Hintergrund von Naia ausgeführt wird.
 
 ![Diagnose-Tab](diagnostics-tab.png)
 

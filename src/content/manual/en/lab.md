@@ -59,7 +59,7 @@ Link your naia.nextain.io account with external messengers to chat with Naia fro
 ### Discord
 - Automatically linked when you sign in with Discord
 - Chat via DM with the Naia bot
-- Credits deducted from your Nextain account
+- Credits deducted from your Naia account
 
 ### Google Chat (Coming Soon)
 - Google Chat integration is planned for a future update

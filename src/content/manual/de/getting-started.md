@@ -1,12 +1,12 @@
 Wenn Sie die App zum ersten Mal starten, erscheint ein Onboarding-Assistent. Es gibt zwei Möglichkeiten, zu beginnen.
 
-## Mit Naia OS starten (Empfohlen)
+## Mit Naia starten (Empfohlen)
 
 Der einfachste Weg – kostenlos und kein API Key erforderlich.
 
 ![Onboarding-Bildschirm – Anbieterauswahl](onboarding-provider.png)
 
-1.  Klicken Sie auf die Schaltfläche **Naia OS** auf dem Onboarding-Bildschirm
+1.  Klicken Sie auf die Schaltfläche **Naia** auf dem Onboarding-Bildschirm
 2.  Ein Browser öffnet sich zur Login-Seite naia.nextain.io
 3.  Melden Sie sich mit Ihrem **Google account** an (die Registrierung erfolgt automatisch)
 4.  Sie werden automatisch zurück zur Desktop-App weitergeleitet
@@ -25,7 +25,7 @@ Sie können auch einen API Key von Anbietern wie Google Gemini eingeben.
 
 ## Onboarding-Schritte
 
-Nach der Nextain-Anmeldung oder API Key-Eingabe schließen Sie diese Schritte ab:
+Nach der Naia-Anmeldung oder API Key-Eingabe schließen Sie diese Schritte ab:
 
 ### 1. Benennen Sie Ihre KI
 Geben Sie Ihrem KI-Avatar einen beliebigen Namen (z.B. "Naia", "Luna", "Cookie").

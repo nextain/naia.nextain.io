@@ -1,4 +1,4 @@
-Esta pestaña le permite monitorizar la salud, las estadísticas y los registros en tiempo real del demonio OpenClaw Gateway ejecutándose en segundo plano en Naia OS.
+Esta pestaña le permite monitorizar la salud, las estadísticas y los registros en tiempo real del demonio OpenClaw Gateway ejecutándose en segundo plano en Naia.
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

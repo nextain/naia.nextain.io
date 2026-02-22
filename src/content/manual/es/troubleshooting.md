@@ -2,9 +2,9 @@ Problemas comunes y soluciones.
 
 ## El agente de IA no responde
 
-1. Verifique la API Key o la conexión a Nextain en Ajustes > Ajustes de IA
+1. Verifique la API Key o la conexión a Naia en Ajustes > Ajustes de IA
 2. Verifique la conexión a internet
-3. Verifique el saldo de créditos en Ajustes > Cuenta de Nextain
+3. Verifique el saldo de créditos en Ajustes > Cuenta de Naia
 4. Asegúrese de que el modelo esté configurado correctamente
 
 ## La voz no funciona
@@ -16,8 +16,8 @@ Problemas comunes y soluciones.
 
 ## Pocos créditos
 
-1. Verifique el saldo en Ajustes > Cuenta de Nextain
-2. Revise el uso en el Panel de Nextain
+1. Verifique el saldo en Ajustes > Cuenta de Naia
+2. Revise el uso en el Panel de Naia
 3. Los créditos gratuitos se recargan mensualmente
 4. Actualice a BASIC ($10/mes) para 100 créditos
 
@@ -41,7 +41,7 @@ Problemas comunes y soluciones.
 - Sea específico: "Dime el clima en Seúl"
 - Intente con nombres de ciudades en inglés (ej., "Seoul weather")
 
-## El inicio de sesión en Nextain no funciona
+## El inicio de sesión en Naia no funciona
 
 1. Verifique la conexión a internet
 2. Intente acceder a naia.nextain.io directamente en su navegador

@@ -1,12 +1,12 @@
 Saat Anda pertama kali meluncurkan aplikasi, wizard orientasi muncul. Ada dua cara untuk memulai.
 
-## Mulai dengan Naia OS (Direkomendasikan)
+## Mulai dengan Naia (Direkomendasikan)
 
 Cara termudah — gratis dan tidak memerlukan API Key.
 
 ![Layar orientasi — pemilihan penyedia](onboarding-provider.png)
 
-1. Klik tombol **Naia OS** di layar orientasi
+1. Klik tombol **Naia** di layar orientasi
 2. Peramban akan membuka halaman masuk naia.nextain.io
 3. Masuk dengan **akun Google** Anda (pendaftaran otomatis)
 4. Anda akan secara otomatis dialihkan kembali ke aplikasi desktop
@@ -25,7 +25,7 @@ Anda juga dapat memasukkan API Key dari penyedia seperti Google Gemini.
 
 ## Langkah-Langkah Orientasi
 
-Setelah masuk Nextain atau entri API Key, selesaikan langkah-langkah berikut:
+Setelah masuk Naia atau entri API Key, selesaikan langkah-langkah berikut:
 
 ### 1. Beri Nama AI Anda
 Beri nama Naia sesuka Anda (misalnya, "Naia", "Luna", "Cookie").

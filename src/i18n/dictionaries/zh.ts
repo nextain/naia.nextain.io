@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const zh: Dictionary = {
   "locale": "zh",
   "meta": {
-    "title": "奈亚操作系统",
-    "description": "Naia OS——您的个人人工智能，变得简单。与 3D AI助手 聊天、交谈和工作。"
+    "title": "奈亚",
+    "description": "Naia — 基于OpenClaw 5,700+技能生态系统的Linux AI OS。3D AI头像、7个LLM提供商、语音聊天、Discord DM。无需API密钥。",
   },
   "common": {
     "loading": "正在加载...",
@@ -33,7 +33,7 @@ const zh: Dictionary = {
     "manual": "手册"
   },
   "footer": {
-    "brand": "奈亚操作系统",
+    "brand": "奈亚",
     "tagline": "科技与情感的邂逅",
     "links": {
       "privacy": "隐私政策",
@@ -57,7 +57,7 @@ const zh: Dictionary = {
   "home": {
     "hero": {
       "title": "最先进的AI代理，作为完美的操作系统。",
-      "subtitle": "从7个AI提供商整合到终端控制，以及表达情感的VRM化身。无需成为开发者即可体验的完整AI生态系统，Naia OS。",
+      "subtitle": "搭载OpenClaw 5,700+技能生态系统的Linux AI OS。用Naia账户即刻启动，无需API密钥。通过Discord私信随时随地对话。",
       "cta": "免费开始使用",
       "secondaryCta": "下载"
     },
@@ -84,7 +84,36 @@ const zh: Dictionary = {
         "desktop": {
           "title": "一键安装和操作系统",
           "description": "一键安装桌面应用程序，或使用 Linux 操作系统映像创建专用的 AI 环境。"
+        },
+        "skills": {
+          "title": "70+技能生态系统",
+          "description": "7个内置 + 63个自定义技能 — 天气、GitHub、Slack、Notion、Spotify、Discord等。兼容ClaHub社区5,700+技能。"
+        },
+        "discord": {
+          "title": "Discord私信集成",
+          "description": "通过Discord私信随时随地与AI助手聊天。专属于您的私人机器人。"
+        },
+        "daemon": {
+          "title": "内置OpenClaw Gateway",
+          "description": "搭载经过验证的OpenClaw网关守护进程和5,700+技能生态系统。无需CLI设置 — 用Naia账户安装即用。"
         }
+      }
+    },
+    "comparison": {
+      "title": "Naia 对比",
+      "subtitle": "了解Naia与现有AI工具的不同之处",
+      "headers": { "category": "类别", "others": "其他工具", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "界面", "others": "IDE / 终端 / 聊天窗口", "naia": "桌面应用 + 3D头像" },
+        "target": { "category": "目标用户", "others": "仅开发者", "naia": "所有人（7步引导）" },
+        "llm": { "category": "LLM", "others": "单一提供商", "naia": "7个提供商，随时切换" },
+        "avatar": { "category": "头像", "others": "无", "naia": "VRM 3D + 表情 + 口型同步" },
+        "skills": { "category": "技能", "others": "有限工具", "naia": "70个内置 + 5,700+社区" },
+        "deploy": { "category": "部署", "others": "npm / brew / pip", "naia": "Flatpak、AppImage、DEB、RPM、OS镜像" },
+        "voice": { "category": "语音", "others": "纯文本或基础TTS", "naia": "5家TTS + STT + 口型同步" },
+        "i18n": { "category": "多语言", "others": "仅英文", "naia": "14种语言" },
+        "platform": { "category": "平台", "others": "仅macOS / CLI", "naia": "Linux原生，GUI一键安装" },
+        "cost": { "category": "费用", "others": "需要单独的API密钥", "naia": "Naia账户 — 无需API密钥，直接用积分" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const zh: Dictionary = {
     },
     "desktopApp": {
       "title": "桌面应用程序连接",
-      "description": "将您的 Naia OS 桌面应用程序与此帐户连接。",
+      "description": "将您的 Naia 桌面应用程序与此帐户连接。",
       "issueKey": "发出连接密钥"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const zh: Dictionary = {
   },
   "manual": {
     "title": "用户手册",
-    "subtitle": "Naia OS 桌面应用指南",
+    "subtitle": "Naia 桌面应用指南",
     "toc": "目录",
     "prev": "上一页",
     "next": "下一步",
@@ -274,13 +303,13 @@ const zh: Dictionary = {
       "diagnostics": "诊断",
       "settings": "设置",
       "tools": "工具详情",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "故障排除"
     }
   },
   "download": {
     "title": "下载",
-    "subtitle": "下载 Naia OS，与您的 AI 虚拟形象开始对话。",
+    "subtitle": "下载 Naia，与您的 AI 虚拟形象开始对话。",
     "recommended": "推荐",
     "version": "版本",
     "releaseNotes": "发行说明",

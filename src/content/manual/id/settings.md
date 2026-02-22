@@ -41,21 +41,21 @@ Sesuaikan kepribadian, gaya bicara, dan nama Naia dalam teks bebas. Tag emosi di
 
 ![Persona settings](settings-persona.png)
 
-## Akun Nextain
+## Akun Naia
 
-Kelola integrasi Nextain.
+Kelola integrasi Naia.
 
 ### Saat Terhubung
 
 - ID Pengguna ditampilkan
 - **Saldo kredit** ditampilkan (kueri waktu nyata)
-- Tombol **Dashboard**: Buka dashboard Nextain di browser
-- Tombol **Isi Kredit**: Buka halaman penagihan Nextain
-- Tombol **Putuskan Sambungan**: Hapus tautan akun Nextain
-- Pengaturan otomatis sinkron ke Nextain saat disimpan
+- Tombol **Dashboard**: Buka dashboard Naia di browser
+- Tombol **Isi Kredit**: Buka halaman penagihan Naia
+- Tombol **Putuskan Sambungan**: Hapus tautan akun Naia
+- Pengaturan otomatis sinkron ke Naia saat disimpan
 
 ### Saat Tidak Terhubung
-- Tombol **Masuk Nextain**: Masuk melalui browser, otomatis terhubung
+- Tombol **Masuk Naia**: Masuk melalui browser, otomatis terhubung
 
 ## Manual Pengguna
 
@@ -65,7 +65,7 @@ Klik "Manual Pengguna" untuk membuka halaman ini di browser.
 
 - **Penyedia**: Gemini (default), OpenAI, Claude, Grok, xAI, Ollama, Claude Code CLI
 - **Model**: Nama model (misalnya, gemini-2.5-flash)
-- **API Key**: Kunci API penyedia (tidak diperlukan jika menggunakan Nextain)
+- **API Key**: Kunci API penyedia (tidak diperlukan jika menggunakan Naia)
 
 ## Suara (TTS/STT)
 

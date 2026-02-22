@@ -30,7 +30,7 @@ L'ecran de conversation principal avec l'avatar IA.
 - Cliquez pour ouvrir le tableau de bord détaillé des coûts :
   - Messages par fournisseur
   - Nombre de jetons d'entrée/sortie
-  - Solde Nextain (lorsqu'il est connecté)
+  - Solde Naia (lorsqu'il est connecté)
   - Lien de recharge de crédits
 
 ## Nouvelle conversation

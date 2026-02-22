@@ -1,4 +1,4 @@
-このタブでは、Naia OS のバックグラウンドで実行されている OpenClaw Gateway デーモンのヘルス、統計、およびリアルタイムログを監視できます。
+このタブでは、Naia のバックグラウンドで実行されている OpenClaw Gateway デーモンのヘルス、統計、およびリアルタイムログを監視できます。
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

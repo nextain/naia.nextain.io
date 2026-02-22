@@ -30,7 +30,7 @@ A tela principal de conversação com Naia.
 - Clique para abrir o painel de custos detalhado:
   - Mensagens por provedor
   - Contagens de tokens de entrada/saída
-  - Saldo do Nextain (quando conectado)
+  - Saldo do Naia (quando conectado)
   - Link para carregamento de crédito
 
 ## Nova Conversa

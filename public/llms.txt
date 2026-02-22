@@ -1,31 +1,54 @@
-# Naia OS
+# Naia
 
 > The most advanced AI agent, as the perfect OS.
 
-Naia OS Homepage (naia.nextain.io) is the official service portal and documentation hub for Naia OS, a personal AI desktop operating system.
+Naia is a Linux AI desktop OS built on top of the OpenClaw ecosystem. It provides GUI-based access to 5,700+ community skills, 7 LLM providers, and a 3D AI avatar — all without requiring API keys.
 
-## What is Naia OS?
+## What is Naia?
 
-Naia OS is a desktop application (and a standalone Linux OS) featuring:
-- **3D AI Avatar**: A fully animated 3D character named Naia that lives on your desktop.
-- **Voice Conversations**: Real-time voice chat with AI using text-to-speech and speech-to-text.
-- **Multi-LLM Support**: Connect to Google Gemini, Anthropic Claude, xAI Grok, and more under a single account.
-- **Agent System**: AI agents that can browse the web, manage files, and execute terminal commands autonomously.
-- **Tool Execution**: Deep integration with your local OS, allowing the AI to actually perform tasks for you.
+Naia is a desktop application (and a standalone Linux OS) that rides on the OpenClaw wave:
+
+- **OpenClaw Gateway Built-in**: Powered by OpenClaw's battle-tested gateway daemon and 5,700+ skill ecosystem. No CLI setup — install and go with your Naia account.
+- **3D AI Avatar**: A fully animated VRM 3D avatar with emotions and lip-sync that lives on your desktop and reacts to conversations.
+- **7 LLM Providers**: Gemini, Claude, GPT, Grok, xAI, Ollama, Claude Code CLI — switch freely using credits or your own API keys.
+- **70+ Skills Ecosystem**: 7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClaHub community skills.
+- **Voice Conversations**: Ask via voice, get spoken responses. The AI avatar answers naturally with lip-synced animations. 5 TTS providers + STT.
+- **Tool Execution**: File editing, terminal commands, web search. The AI avatar calls tools directly to get work done.
+- **Discord DM Integration**: Chat with your AI avatar via Discord DM, anytime, anywhere. A personal bot that only talks to you.
+- **One-Click Install & OS**: One-click desktop app install, or build a dedicated AI environment with the Linux OS image. Flatpak, AppImage, DEB, RPM supported.
+- **No API Keys Required**: Start instantly with a Naia account and credits. No separate API key setup needed.
+- **14 Languages**: English, Korean, Japanese, Chinese, French, German, Russian, Spanish, Arabic, Hindi, Bengali, Portuguese, Indonesian, Vietnamese.
+
+## How is Naia different?
+
+| Category | Others (Cline, Cursor, etc.) | Naia |
+|---|---|---|
+| UI | IDE / Terminal / Chat window | Desktop app + 3D avatar |
+| Target | Developers only | Everyone (7-step onboarding) |
+| LLM | Single provider | 7 providers, switch anytime |
+| Avatar | None | VRM 3D + emotions + lip-sync |
+| Skills | Limited tools | 70 built-in + 5,700+ community |
+| Deployment | npm / brew / pip | Flatpak, AppImage, DEB, RPM, OS image |
+| Voice | Text only or basic TTS | 5 TTS providers + STT + lip-sync |
+| Languages | English only | 14 languages |
+| Platform | macOS only / CLI | Linux native, one-click GUI install |
+| Cost | Separate API keys required | Naia account — no API keys, just credits |
 
 ## What does this portal provide?
 
 The homepage and portal (this site) provides:
 - **Account Management**: OAuth sign-in via Google and Discord.
-- **API Credit System**: Manage credits for LLM API usage.
+- **Credit System**: Manage credits for LLM API usage — no separate API keys needed.
 - **Usage Dashboard**: Monitor your AI usage, request logs, and token consumption.
 - **API Key Management**: Create and manage API keys for connecting the desktop app.
-- **Desktop Integration**: Seamless deep-link connection between the web portal and the local Naia OS app.
-- **User Manuals**: Comprehensive guides on installing and using Naia OS.
+- **Desktop Integration**: Seamless deep-link connection between the web portal and the local Naia app.
+- **User Manuals**: Comprehensive guides on installing and using Naia.
+- **Download Page**: Download Flatpak, AppImage, DEB, RPM packages.
 
 ## Public Pages
 
-- `/{locale}` — Homepage (features, pricing, FAQ)
+- `/{locale}` — Homepage (features, comparison, pricing, FAQ)
+- `/{locale}/download` — Download desktop app
 - `/{locale}/manual` — User manual
 - `/{locale}/manual/{slug}` — Manual details (`install`, `tools`, `settings`, ...)
 - `/{locale}/terms` — Terms of Service
@@ -36,15 +59,16 @@ The homepage and portal (this site) provides:
 
 ## Technology
 
-- Built with Next.js (App Router), deployed on Vercel
+- Built with Next.js 16 (App Router), deployed on Vercel
 - Frontend: Tailwind CSS 4, shadcn/ui, lucide-react
 - Backend: Next.js API Routes proxying to a FastAPI any-llm gateway
-- Desktop app: Tauri 2 + React + Node.js agent (OpenClaw compatible)
-- Languages: 14 locales (English, Korean, Japanese, Chinese, French, German, Russian, Spanish, Arabic, Hindi, Bengali, Portuguese, Indonesian, Vietnamese)
+- Desktop app: Tauri 2 + React + Node.js agent, built on OpenClaw gateway
+- AI Skills: OpenClaw-compatible skill.json format, 5,700+ ClaHub community ecosystem
+- Languages: 14 locales
 
 ## Company
 
-Naia OS is developed by Nextain, a South Korean AI company.
+Naia is developed by Nextain, a South Korean AI company.
 - Website: https://naia.nextain.io
 - GitHub: https://github.com/nextain/naia-os
 - Discord: https://discord.gg/FGYJN7auty

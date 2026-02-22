@@ -41,21 +41,21 @@
 
 ![Persona settings](settings-persona.png)
 
-## Nextain 账户
+## Naia 账户
 
-管理 Nextain 集成。
+管理 Naia 集成。
 
 ### 已连接时
 
 - 显示用户 ID
 - 显示 **信用余额**（实时查询）
-- **控制面板** 按钮：在浏览器中打开 Nextain 控制面板
-- **充值** 按钮：前往 Nextain 账单页面
-- **断开连接** 按钮：解除 Nextain 账户链接
-- 设置保存时自动同步到 Nextain
+- **控制面板** 按钮：在浏览器中打开 Naia 控制面板
+- **充值** 按钮：前往 Naia 账单页面
+- **断开连接** 按钮：解除 Naia 账户链接
+- 设置保存时自动同步到 Naia
 
 ### 未连接时
-- **Nextain 登录** 按钮：通过浏览器登录，自动连接
+- **Naia 登录** 按钮：通过浏览器登录，自动连接
 
 ## 用户手册
 
@@ -65,7 +65,7 @@
 
 - **提供商**：Gemini（默认）、OpenAI、Claude、Grok、xAI、Ollama、Claude Code CLI
 - **模型**：模型名称（例如，gemini-2.5-flash）
-- **API Key**：提供商 API 密钥（如果使用 Nextain 则不需要）
+- **API Key**：提供商 API 密钥（如果使用 Naia 则不需要）
 
 ## 语音 (TTS/STT)
 

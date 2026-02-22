@@ -2,7 +2,7 @@ Gerencie sua conta em [naia.nextain.io](https://naia.nextain.io).
 
 ## Painel
 
-![Painel do Nextain](lab-dashboard.png)
+![Painel do Naia](lab-dashboard.png)
 
 - Saldo de créditos
 - Total de solicitações
@@ -59,7 +59,7 @@ Vincule sua conta naia.nextain.io com mensageiros externos para conversar com Na
 ### Discord
 - Automaticamente vinculado ao fazer login com o Discord
 - Converse via mensagem direta com o bot da Naia
-- Créditos deduzidos da sua conta Nextain
+- Créditos deduzidos da sua conta Naia
 
 ### Google Chat (Em Breve)
 - A integração com o Google Chat está planejada para uma futura atualização

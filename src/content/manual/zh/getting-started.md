@@ -1,12 +1,12 @@
 首次启动应用时，会出现一个引导向导。有两种方式可以开始使用。
 
-## 从 Naia OS 开始（推荐）
+## 从 Naia 开始（推荐）
 
 最简单的方式 — 免费且无需 API Key。
 
 ![Onboarding screen — provider selection](onboarding-provider.png)
 
-1. 在引导屏幕上点击 **Naia OS** 按钮
+1. 在引导屏幕上点击 **Naia** 按钮
 2. 浏览器将打开 naia.nextain.io 登录页面
 3. 使用您的 **Google 帐户** 登录（注册是自动的）
 4. 您将自动重定向回桌面应用
@@ -25,7 +25,7 @@
 
 ## 引导步骤
 
-完成 Nextain 登录或 API Key 输入后，请完成以下步骤：
+完成 Naia 登录或 API Key 输入后，请完成以下步骤：
 
 ### 1. 为您的 AI 命名
 为AI助手命名，任何您喜欢的名字都可以（例如，”Naia”、”Luna”、”Cookie”）。

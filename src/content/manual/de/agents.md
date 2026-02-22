@@ -1,4 +1,4 @@
-Dieser Tab verwaltet alle Agenten (einschließlich des Haupt-KI-Avatars) und Sub-Agenten, die innerhalb von Naia OS ausgeführt werden.
+Dieser Tab verwaltet alle Agenten (einschließlich des Haupt-KI-Avatars) und Sub-Agenten, die innerhalb von Naia ausgeführt werden.
 
 ![Agents Tab](agents-tab.png)
 

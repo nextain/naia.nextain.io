@@ -1,4 +1,4 @@
-Cet onglet vous permet de surveiller la santé, les statistiques et les journaux en temps réel du démon OpenClaw Gateway fonctionnant en arrière-plan de Naia OS.
+Cet onglet vous permet de surveiller la santé, les statistiques et les journaux en temps réel du démon OpenClaw Gateway fonctionnant en arrière-plan de Naia.
 
 ![Diagnostics Tab](diagnostics-tab.png)
 

@@ -33,7 +33,7 @@
 Google Chat 集成计划在未来更新中推出。敬请关注最新公告。
 
 ## 消息通知（Webhooks）
-Naia OS 继承了 OpenClaw 强大的通道系统。
+Naia 继承了 OpenClaw 强大的通道系统。
 通过在**设置 > 工具 > Webhooks**菜单或初始引导屏幕中输入您的 Slack、Discord 或 Google Chat Webhook URL，AI 形象可以向您发送重要任务结果的消息。
 
 > **提示**：“当此文件备份完全完成时，请在 Discord 上通知我！”

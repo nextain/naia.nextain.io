@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ko: Dictionary = {
   locale: "ko",
   meta: {
-    title: "Naia OS | The Next Generation AI OS",
-    description: "Naia OS — 손쉬운 나만의 AI. 3D 아바타 AI와 대화하고, 음성으로 소통하세요.",
+    title: "Naia",
+    description: "Naia — OpenClaw 5,700+ 스킬 생태계 기반 Linux AI OS. 3D AI 아바타, 7개 LLM, 음성 대화, Discord DM. API 키 없이 바로 시작.",
   },
   common: {
     loading: "로딩 중...",
@@ -33,7 +33,7 @@ const ko: Dictionary = {
     manual: "사용법",
   },
   footer: {
-    brand: "Naia OS",
+    brand: "Naia",
     tagline: "The Next Generation AI OS",
     links: {
       privacy: "개인정보처리방침",
@@ -58,12 +58,12 @@ const ko: Dictionary = {
     hero: {
       title: "가장 진보한 AI 에이전트, 가장 완벽한 OS로.",
       subtitle:
-        "7개 AI 제공업체, 터미널 제어, 그리고 감정을 표현하는 VRM 아바타까지. 개발자가 아니어도 경험할 수 있는 완전한 AI 생태계, Naia OS.",
+        "OpenClaw의 5,700+ 스킬 생태계를 품은 Linux AI OS. API 키 없이 Naia 계정으로 바로 시작하고, Discord DM으로 언제 어디서나 대화하세요.",
       cta: "무료로 시작하기",
       secondaryCta: "다운로드",
     },
     features: {
-      title: "Naia OS가 특별한 이유",
+      title: "Naia가 특별한 이유",
       subtitle: "개발자가 아니어도 AI 에이전트를 경험할 수 있습니다",
       items: {
         companion: {
@@ -91,6 +91,38 @@ const ko: Dictionary = {
           description:
             "데스크톱 앱을 원클릭으로 설치하거나, 전용 Linux OS 이미지로 AI 전용 환경을 만들 수 있습니다.",
         },
+        skills: {
+          title: "70+ 스킬 생태계",
+          description:
+            "7개 내장 + 63개 커스텀 스킬 — 날씨, GitHub, Slack, Notion, Spotify, Discord 등. ClaHub 커뮤니티 5,700+ 스킬 호환.",
+        },
+        discord: {
+          title: "Discord DM 연동",
+          description:
+            "Discord DM으로 언제 어디서나 AI 아바타와 대화하세요. 나만을 위한 개인 봇입니다.",
+        },
+        daemon: {
+          title: "OpenClaw Gateway 내장",
+          description:
+            "검증된 OpenClaw 게이트웨이 데몬과 5,700+ 스킬 생태계를 품고 있습니다. CLI 설정 없이 Naia 계정으로 설치 즉시 사용 가능.",
+        },
+      },
+    },
+    comparison: {
+      title: "Naia 비교",
+      subtitle: "기존 AI 도구와 무엇이 다른지 확인하세요",
+      headers: { category: "분류", others: "기존 도구", naia: "Naia" },
+      rows: {
+        ui: { category: "UI", others: "IDE / 터미널 / 채팅창", naia: "데스크톱 앱 + 3D 아바타" },
+        target: { category: "대상", others: "개발자 전용", naia: "누구나 (7단계 온보딩)" },
+        llm: { category: "LLM", others: "단일 제공업체", naia: "7개 제공업체, 실시간 전환" },
+        avatar: { category: "아바타", others: "없음", naia: "VRM 3D + 감정 + 립싱크" },
+        skills: { category: "스킬", others: "제한된 도구", naia: "70개 내장 + 5,700+ 커뮤니티" },
+        deploy: { category: "배포", others: "npm / brew / pip", naia: "Flatpak, AppImage, DEB, RPM, OS 이미지" },
+        voice: { category: "음성", others: "텍스트 전용 또는 기본 TTS", naia: "TTS 5개 + STT + 립싱크" },
+        i18n: { category: "다국어", others: "영어 전용", naia: "14개 언어" },
+        platform: { category: "플랫폼", others: "macOS 전용 / CLI", naia: "Linux 네이티브, GUI 원클릭 설치" },
+        cost: { category: "비용", others: "별도 API 키 필수", naia: "Naia 계정 — API 키 없이 크레딧으로 바로 사용" },
       },
     },
     pricing: {
@@ -227,7 +259,7 @@ const ko: Dictionary = {
     },
     desktopApp: {
       title: "데스크톱 앱 연결",
-      description: "Naia OS 데스크톱 앱에서 이 계정으로 로그인할 수 있습니다.",
+      description: "Naia 데스크톱 앱에서 이 계정으로 로그인할 수 있습니다.",
       issueKey: "연결 키 발급",
     },
     appearance: {
@@ -262,7 +294,7 @@ const ko: Dictionary = {
   },
   manual: {
     title: "시작하기",
-    subtitle: "Naia OS 데스크톱 앱 사용 가이드",
+    subtitle: "Naia 데스크톱 앱 사용 가이드",
     toc: "목차",
     prev: "이전",
     next: "다음",
@@ -280,13 +312,13 @@ const ko: Dictionary = {
       diagnostics: "시스템 진단",
       settings: "설정",
       tools: "도구 상세",
-      lab: "Nextain 계정",
+      lab: "Naia 계정",
       troubleshooting: "문제 해결",
     },
   },
   download: {
     title: "다운로드",
-    subtitle: "Naia OS를 다운로드하고 AI 아바타와 대화를 시작하세요.",
+    subtitle: "Naia를 다운로드하고 AI 아바타와 대화를 시작하세요.",
     recommended: "권장",
     version: "버전",
     releaseNotes: "릴리즈 노트",

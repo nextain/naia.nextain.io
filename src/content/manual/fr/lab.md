@@ -59,7 +59,7 @@ Connectez votre compte naia.nextain.io à des messageries externes pour discuter
 ### Discord
 - Lié automatiquement lorsque vous vous connectez avec Discord
 - Discutez via DM avec le bot Naia
-- Crédits déduits de votre compte Nextain
+- Crédits déduits de votre compte Naia
 
 ### Google Chat (Bientôt disponible)
 - L'intégration Google Chat est prévue pour une future mise à jour

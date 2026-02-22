@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const es: Dictionary = {
   "locale": "es",
   "meta": {
-    "title": "Naia OS",
-    "description": "Naia OS: tu IA personal, simplificada. Chatea, habla y trabaja con un avatar de IA en 3D."
+    "title": "Naia",
+    "description": "Naia — Un SO Linux IA impulsado por el ecosistema de 5.700+ habilidades de OpenClaw. Avatar IA 3D, 7 proveedores LLM, chat de voz, Discord DM. Sin claves API.",
   },
   "common": {
     "loading": "Cargando...",
@@ -33,7 +33,7 @@ const es: Dictionary = {
     "manual": "manuales"
   },
   "footer": {
-    "brand": "Naia OS",
+    "brand": "Naia",
     "tagline": "Donde la tecnología se encuentra con la emoción",
     "links": {
       "privacy": "Política de privacidad",
@@ -57,7 +57,7 @@ const es: Dictionary = {
   "home": {
     "hero": {
       "title": "El agente de IA más avanzado, como el sistema operativo perfecto.",
-      "subtitle": "Desde 7 proveedores de IA hasta el control de terminales y un avatar VRM que expresa emociones. Un ecosistema de IA completo que puedes experimentar sin ser desarrollador, Naia OS.",
+      "subtitle": "Un OS de IA Linux impulsado por el ecosistema de 5.700+ habilidades de OpenClaw. Comienza al instante con una cuenta Naia — sin claves API. Chatea por Discord DM, en cualquier momento.",
       "cta": "Comience gratis",
       "secondaryCta": "Descargar"
     },
@@ -84,7 +84,36 @@ const es: Dictionary = {
         "desktop": {
           "title": "Instalación y sistema operativo con un solo clic",
           "description": "Instale la aplicación de escritorio con un clic o cree un entorno de IA dedicado con la imagen del sistema operativo Linux."
+        },
+        "skills": {
+          "title": "Ecosistema de 70+ habilidades",
+          "description": "7 integradas + 63 personalizadas — clima, GitHub, Slack, Notion, Spotify, Discord y más. Compatible con 5.700+ habilidades de la comunidad ClaHub."
+        },
+        "discord": {
+          "title": "Integración de Discord DM",
+          "description": "Chatea con tu avatar de IA por DM de Discord, en cualquier momento y lugar. Un bot personal que solo habla contigo."
+        },
+        "daemon": {
+          "title": "OpenClaw Gateway integrado",
+          "description": "Impulsado por el daemon gateway probado de OpenClaw y un ecosistema de 5.700+ habilidades. Sin configuración CLI — instala y usa con tu cuenta Naia."
         }
+      }
+    },
+    "comparison": {
+      "title": "Comparación de Naia",
+      "subtitle": "Descubre qué diferencia a Naia de las herramientas de IA existentes",
+      "headers": { "category": "Categoría", "others": "Otros", "naia": "Naia" },
+      "rows": {
+        "ui": { "category": "Interfaz", "others": "IDE / Terminal / Ventana de chat", "naia": "App de escritorio + avatar 3D" },
+        "target": { "category": "Público", "others": "Solo desarrolladores", "naia": "Todos (onboarding de 7 pasos)" },
+        "llm": { "category": "LLM", "others": "Proveedor único", "naia": "7 proveedores, cambia en cualquier momento" },
+        "avatar": { "category": "Avatar", "others": "Ninguno", "naia": "VRM 3D + emociones + sincronización labial" },
+        "skills": { "category": "Habilidades", "others": "Herramientas limitadas", "naia": "70 integradas + 5.700+ comunidad" },
+        "deploy": { "category": "Despliegue", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, imagen OS" },
+        "voice": { "category": "Voz", "others": "Solo texto o TTS básico", "naia": "5 proveedores TTS + STT + sincronización labial" },
+        "i18n": { "category": "Idiomas", "others": "Solo inglés", "naia": "14 idiomas" },
+        "platform": { "category": "Plataforma", "others": "Solo macOS / CLI", "naia": "Linux nativo, instalación GUI en un clic" },
+        "cost": { "category": "Costo", "others": "Se requieren claves API separadas", "naia": "Cuenta Naia — sin clave API, solo créditos" }
       }
     },
     "pricing": {
@@ -221,7 +250,7 @@ const es: Dictionary = {
     },
     "desktopApp": {
       "title": "Conexión de la aplicación de escritorio",
-      "description": "Conecte su aplicación de escritorio Naia OS con esta cuenta.",
+      "description": "Conecte su aplicación de escritorio Naia con esta cuenta.",
       "issueKey": "Emitir clave de conexión"
     },
     "appearance": {
@@ -256,7 +285,7 @@ const es: Dictionary = {
   },
   "manual": {
     "title": "Manual de usuario",
-    "subtitle": "Guía de la aplicación de escritorio Naia OS",
+    "subtitle": "Guía de la aplicación de escritorio Naia",
     "toc": "Tabla de contenidos",
     "prev": "Anterior",
     "next": "Siguiente",
@@ -274,13 +303,13 @@ const es: Dictionary = {
       "diagnostics": "Diagnóstico",
       "settings": "Configuración",
       "tools": "Detalles de la herramienta",
-      "lab": "Nextain",
+      "lab": "Naia",
       "troubleshooting": "Solución de problemas"
     }
   },
   "download": {
     "title": "Descargar",
-    "subtitle": "Descarga Naia OS y comienza a chatear con tu avatar de IA.",
+    "subtitle": "Descarga Naia y comienza a chatear con tu avatar de IA.",
     "recommended": "Recomendado",
     "version": "Versión",
     "releaseNotes": "Notas de la versión",

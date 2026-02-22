@@ -1,4 +1,4 @@
-这个选项卡管理 Naia OS 中运行的所有代理（包括主AI助手）和子代理。
+这个选项卡管理 Naia 中运行的所有代理（包括主AI助手）和子代理。
 
 ![Agents Tab](agents-tab.png)
 

@@ -1,4 +1,4 @@
-Esta pestaña gestiona todos los agentes (incluido Naia, el agente principal) y los subagentes que se ejecutan dentro de Naia OS.
+Esta pestaña gestiona todos los agentes (incluido Naia, el agente principal) y los subagentes que se ejecutan dentro de Naia.
 
 ![Pestaña de Agentes](agents-tab.png)
 

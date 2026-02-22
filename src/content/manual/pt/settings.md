@@ -41,21 +41,21 @@ Personalize a personalidade, o estilo de fala e o nome de Naia em texto livre. A
 
 ![Persona settings](settings-persona.png)
 
-## Conta Nextain
+## Conta Naia
 
-Gerencie a integração com o Nextain.
+Gerencie a integração com o Naia.
 
 ### Quando Conectado
 
 - ID de Usuário exibido
 - **Saldo de Crédito** mostrado (consulta em tempo real)
-- Botão **Dashboard**: Abre o dashboard do Nextain no navegador
-- Botão **Carregar Créditos**: Vai para a página de faturamento do Nextain
-- Botão **Desconectar**: Desvincula a conta do Nextain
-- As configurações são sincronizadas automaticamente com o Nextain ao salvar
+- Botão **Dashboard**: Abre o dashboard do Naia no navegador
+- Botão **Carregar Créditos**: Vai para a página de faturamento do Naia
+- Botão **Desconectar**: Desvincula a conta do Naia
+- As configurações são sincronizadas automaticamente com o Naia ao salvar
 
 ### Quando Não Conectado
-- Botão **Nextain Login**: Faça login via navegador, conecta-se automaticamente
+- Botão **Naia Login**: Faça login via navegador, conecta-se automaticamente
 
 ## Manual do Usuário
 
@@ -65,7 +65,7 @@ Clique em "Manual do Usuário" para abrir esta página no navegador.
 
 - **Provedor**: Gemini (padrão), OpenAI, Claude, Grok, xAI, Ollama, Claude Code CLI
 - **Modelo**: Nome do modelo (ex: gemini-2.5-flash)
-- **API Key**: API key do provedor (não é necessária se estiver usando o Nextain)
+- **API Key**: API key do provedor (não é necessária se estiver usando o Naia)
 
 ## Voz (TTS/STT)
 

@@ -30,7 +30,7 @@ Màn hình trò chuyện chính với Naia.
 - Nhấp để mở bảng điều khiển chi phí chi tiết:
   - Tin nhắn theo nhà cung cấp
   - Số lượng token đầu vào/đầu ra
-  - Số dư Nextain (khi được kết nối)
+  - Số dư Naia (khi được kết nối)
   - Liên kết nạp tín dụng
 
 ## Cuộc trò chuyện mới

@@ -1,4 +1,4 @@
-Naia OS é projetado principalmente para ambientes Linux, focando em Immutable OSs como Bazzite ou ambientes de sandbox seguros como Flatpak.
+Naia é projetado principalmente para ambientes Linux, focando em Immutable OSs como Bazzite ou ambientes de sandbox seguros como Flatpak.
 
 ## Requisitos do Sistema
 
@@ -11,7 +11,7 @@ Naia OS é projetado principalmente para ambientes Linux, focando em Immutable O
 
 ## Opções de Implantação
 
-Uma vez que o Naia OS possui uma IA que "controla o OS diretamente", o método de implantação é uma consideração importante.
+Uma vez que o Naia possui uma IA que "controla o OS diretamente", o método de implantação é uma consideração importante.
 
 ### 1. Distribuição Flatpak (Recomendado)
 Esta é a forma mais comum e segura de distribuir aplicativos de desktop Linux. Você pode instalá-lo facilmente via lojas de aplicativos como Discover ou GNOME Software.
@@ -25,7 +25,7 @@ Esta é a forma mais comum e segura de distribuir aplicativos de desktop Linux. 
   ```
 
 ### 2. Imagem Integrada Bazzite / BlueBuild (Avançado)
-Para usuários avançados, o Naia OS fornece uma receita BlueBuild para integrar o aplicativo diretamente em uma imagem Bazzite. Isso integra profundamente a IA ao OS, permitindo que Naia o cumprimente imediatamente na inicialização.
+Para usuários avançados, o Naia fornece uma receita BlueBuild para integrar o aplicativo diretamente em uma imagem Bazzite. Isso integra profundamente a IA ao OS, permitindo que Naia o cumprimente imediatamente na inicialização.
 
 ---
 
