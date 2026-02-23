@@ -5,8 +5,8 @@ const BASE_URL = "http://localhost:3001";
 const VIEWPORT = { width: 400, height: 768 };
 const OUTPUT_DIR = path.resolve(__dirname, "../public/screenshots");
 
-// All public pages for ko and en
-const LOCALES = ["ko", "en"] as const;
+// All supported locales
+const LOCALES = ["ko", "en", "ja", "zh", "fr", "de", "ru", "es", "ar", "hi", "bn", "pt", "id", "vi"] as const;
 
 const MANUAL_SLUGS = [
   "install",

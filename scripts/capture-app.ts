@@ -15,9 +15,9 @@ import fs from "fs";
 
 const BASE_URL = "http://localhost:1420";
 const VIEWPORT = { width: 400, height: 768 };
+const MANUAL_DIR = path.resolve(__dirname, "../public/manual");
 
-const KO_DIR = path.resolve(__dirname, "../public/manual/ko");
-const EN_DIR = path.resolve(__dirname, "../public/manual/en");
+const ALL_LOCALES = ["ko", "en", "ja", "zh", "fr", "de", "ru", "es", "ar", "hi", "bn", "pt", "id", "vi"] as const;
 
 // ─── Tauri Mock (comprehensive) ─────────────────────────────
 // This mock must handle:
@@ -608,16 +608,17 @@ async function captureSettingsSections(browser: Browser, outDir: string, locale:
     await page.screenshot({ path: path.join(outDir, "settings-overview.png") });
     console.log("  -> settings-overview.png");
 
+    // Exact i18n divider texts from naia-os/shell/src/lib/i18n.ts
     const sections: [string, string[]][] = [
-      ["settings-ai", ["AI 설정", "AI Settings"]],
-      ["settings-voice", ["음성", "Voice", "TTS"]],
-      ["settings-persona", ["페르소나", "Persona"]],
-      ["settings-memory", ["기억", "Memory"]],
-      ["settings-avatar", ["아바타", "Avatar"]],
-      ["settings-device", ["디바이스", "Device"]],
-      ["settings-tools", ["도구", "Tool"]],
-      ["settings-channels", ["채널", "Channel"]],
-      ["settings-lab", ["Nextain", "NEXTAIN", "Naia 계정", "Naia Account"]],
+      ["settings-ai", ["AI 설정", "AI Settings", "AI設定", "人工智能设置", "Paramètres IA", "AI-Einstellungen", "Настройки ИИ", "Configuración de IA", "إعدادات الذكاء الاصطناعي", "एआई सेटिंग्स", "এআই সেটিংস", "Configurações de IA", "Pengaturan AI", "Cài đặt AI"]],
+      ["settings-voice", ["음성", "Voice", "音声", "语音", "Voix", "Sprache", "Голос", "Voz", "الصوت", "आवाज", "ভয়েস", "Voz", "Suara", "Giọng", "TTS"]],
+      ["settings-persona", ["페르소나", "Persona", "ペルソナ", "人格面具", "Personnalité", "Persona", "Персона", "persona", "شخصية", "व्यक्तित्व", "ব্যক্তিত্ব", "Pessoa", "kepribadian", "nhân cách"]],
+      ["settings-memory", ["기억", "Memory", "記憶", "内存", "Mémoire", "Erinnerung", "Память", "Memoria", "الذاكرة", "स्मृति", "স্মৃতি", "Memória", "Memori", "Bộ nhớ"]],
+      ["settings-avatar", ["아바타", "Avatar", "アバター", "阿凡达", "avatar", "Avatar", "Аватар", "الصورة الرمزية", "अवतार", "অবতার", "Hình đại diện"]],
+      ["settings-device", ["디바이스", "Device", "デバイス", "设备配对", "Couplage", "Gerätekopplung", "Сопряжение", "Emparejamiento", "إقران", "डिवाइस", "ডিভাইস", "Emparelhamento", "Pemasangan", "Ghép nối"]],
+      ["settings-tools", ["도구", "Tools", "ツール", "工具", "Outils", "Werkzeuge", "Инструменты", "Herramientas", "أدوات", "उपकरण", "টুলস", "Ferramentas", "Alat", "Công cụ"]],
+      ["settings-channels", ["채널", "Channel", "チャネル", "渠道管理", "Gestion des canaux", "Kanalmanagement", "Управление каналами", "Gestión de canales", "إدارة القناة", "चैनल", "চ্যানেল", "Gestão de Canais", "Manajemen Saluran", "Quản lý kênh"]],
+      ["settings-lab", ["Nextain", "NEXTAIN", "Naia 계정", "Naia Account", "Nextainアカウント", "Nextain帐户", "Compte Nextain", "Nextain-Konto", "Аккаунт Nextain", "Cuenta de Nextain", "حساب Nextain", "Nextain खाता", "Nextain অ্যাকাউন্ট", "Conta do Nextain", "Akun Nextain", "Tài khoản Nextain"]],
     ];
 
     const divTexts = await page.evaluate(() =>
@@ -628,7 +629,8 @@ async function captureSettingsSections(browser: Browser, outDir: string, locale:
     for (const [name, keywords] of sections) {
       let found = false;
       for (let j = 0; j < divTexts.length && !found; j++) {
-        if (divTexts[j] && keywords.some(kw => divTexts[j]!.includes(kw))) {
+        const dt = (divTexts[j] || "").toLowerCase();
+        if (dt && keywords.some(kw => dt.includes(kw.toLowerCase()))) {
           await page.locator(".settings-section-divider span").nth(j).scrollIntoViewIfNeeded();
           await page.waitForTimeout(400);
           await page.screenshot({ path: path.join(outDir, `${name}.png`) });
@@ -701,9 +703,50 @@ async function captureOnboarding(browser: Browser, outDir: string) {
 // These are standalone HTML mockups matching the site's design system
 // since the actual pages require server-side auth (NextAuth + Gateway)
 
+// Lab mockup i18n dictionary (only UI labels used in mockup HTML)
+const LAB_I18N: Record<string, Record<string, string>> = {
+  dashboard:       { ko:"대시보드", en:"Dashboard", ja:"ダッシュボード", zh:"仪表盘", fr:"Tableau de bord", de:"Dashboard", ru:"Панель управления", es:"Panel", ar:"لوحة التحكم", hi:"डैशबोर्ड", bn:"ড্যাশবোর্ড", pt:"Painel", id:"Dasbor", vi:"Bảng điều khiển" },
+  creditBalance:   { ko:"크레딧 잔액", en:"Credit Balance", ja:"クレジット残高", zh:"信用余额", fr:"Solde de crédits", de:"Guthaben", ru:"Баланс кредитов", es:"Saldo de créditos", ar:"رصيد الائتمان", hi:"क्रेडिट शेष", bn:"ক্রেডিট ব্যালেন্স", pt:"Saldo de créditos", id:"Saldo Kredit", vi:"Số dư tín dụng" },
+  totalRequests:   { ko:"총 요청", en:"Total Requests", ja:"総リクエスト", zh:"总请求", fr:"Requêtes totales", de:"Anfragen gesamt", ru:"Всего запросов", es:"Solicitudes totales", ar:"إجمالي الطلبات", hi:"कुल अनुरोध", bn:"মোট অনুরোধ", pt:"Total de requisições", id:"Total Permintaan", vi:"Tổng yêu cầu" },
+  totalTokens:     { ko:"총 토큰", en:"Total Tokens", ja:"総トークン", zh:"总令牌", fr:"Tokens totaux", de:"Tokens gesamt", ru:"Всего токенов", es:"Tokens totales", ar:"إجمالي الرموز", hi:"कुल टोकन", bn:"মোট টোকেন", pt:"Total de tokens", id:"Total Token", vi:"Tổng token" },
+  totalSpend:      { ko:"총 비용", en:"Total Spend", ja:"総コスト", zh:"总花费", fr:"Dépenses totales", de:"Gesamtausgaben", ru:"Общие расходы", es:"Gasto total", ar:"إجمالي الإنفاق", hi:"कुल खर्च", bn:"মোট খরচ", pt:"Total gasto", id:"Total Pengeluaran", vi:"Tổng chi phí" },
+  currentPeriod:   { ko:"현재 기간", en:"Current Period", ja:"現在の期間", zh:"当前周期", fr:"Période en cours", de:"Aktueller Zeitraum", ru:"Текущий период", es:"Período actual", ar:"الفترة الحالية", hi:"वर्तमान अवधि", bn:"বর্তমান সময়কাল", pt:"Período atual", id:"Periode Saat Ini", vi:"Kỳ hiện tại" },
+  active:          { ko:"활성", en:"Active", ja:"アクティブ", zh:"活跃", fr:"Actif", de:"Aktiv", ru:"Активен", es:"Activo", ar:"نشط", hi:"सक्रिय", bn:"সক্রিয়", pt:"Ativo", id:"Aktif", vi:"Hoạt động" },
+  quickLinks:      { ko:"빠른 링크", en:"Quick Links", ja:"クイックリンク", zh:"快速链接", fr:"Liens rapides", de:"Schnellzugriff", ru:"Быстрые ссылки", es:"Accesos rápidos", ar:"روابط سريعة", hi:"त्वरित लिंक", bn:"দ্রুত লিঙ্ক", pt:"Links rápidos", id:"Tautan Cepat", vi:"Liên kết nhanh" },
+  usage:           { ko:"사용량", en:"Usage", ja:"使用量", zh:"使用量", fr:"Utilisation", de:"Nutzung", ru:"Использование", es:"Uso", ar:"الاستخدام", hi:"उपयोग", bn:"ব্যবহার", pt:"Uso", id:"Penggunaan", vi:"Sử dụng" },
+  logs:            { ko:"로그", en:"Logs", ja:"ログ", zh:"日志", fr:"Journaux", de:"Logs", ru:"Логи", es:"Registros", ar:"السجلات", hi:"लॉग", bn:"লগ", pt:"Logs", id:"Log", vi:"Nhật ký" },
+  keys:            { ko:"API 키", en:"Keys", ja:"APIキー", zh:"API密钥", fr:"Clés API", de:"API-Schlüssel", ru:"API-ключи", es:"Claves API", ar:"مفاتيح API", hi:"API कुंजी", bn:"API কী", pt:"Chaves API", id:"Kunci API", vi:"Khóa API" },
+  billing:         { ko:"결제", en:"Billing", ja:"請求", zh:"账单", fr:"Facturation", de:"Abrechnung", ru:"Оплата", es:"Facturación", ar:"الفوترة", hi:"बिलिंग", bn:"বিলিং", pt:"Faturamento", id:"Tagihan", vi:"Thanh toán" },
+  days7:           { ko:"7일", en:"7D", ja:"7日", zh:"7天", fr:"7J", de:"7T", ru:"7Д", es:"7D", ar:"7أ", hi:"7दि", bn:"7দি", pt:"7D", id:"7H", vi:"7N" },
+  days30:          { ko:"30일", en:"30D", ja:"30日", zh:"30天", fr:"30J", de:"30T", ru:"30Д", es:"30D", ar:"30أ", hi:"30दि", bn:"30দি", pt:"30D", id:"30H", vi:"30N" },
+  days90:          { ko:"90일", en:"90D", ja:"90日", zh:"90天", fr:"90J", de:"90T", ru:"90Д", es:"90D", ar:"90أ", hi:"90दि", bn:"90দি", pt:"90D", id:"90H", vi:"90N" },
+  requestsPerDay:  { ko:"일별 요청 수", en:"Requests per Day", ja:"日別リクエスト数", zh:"每日请求数", fr:"Requêtes par jour", de:"Anfragen pro Tag", ru:"Запросы в день", es:"Solicitudes por día", ar:"الطلبات يوميًا", hi:"प्रतिदिन अनुरोध", bn:"প্রতিদিন অনুরোধ", pt:"Requisições por dia", id:"Permintaan per Hari", vi:"Yêu cầu mỗi ngày" },
+  tokensPerDay:    { ko:"일별 토큰 수", en:"Tokens per Day", ja:"日別トークン数", zh:"每日令牌数", fr:"Tokens par jour", de:"Tokens pro Tag", ru:"Токены в день", es:"Tokens por día", ar:"الرموز يوميًا", hi:"प्रतिदिन टोकन", bn:"প্রতিদিন টোকেন", pt:"Tokens por dia", id:"Token per Hari", vi:"Token mỗi ngày" },
+  spendPerDay:     { ko:"일별 비용", en:"Spend per Day", ja:"日別コスト", zh:"每日花费", fr:"Dépenses par jour", de:"Ausgaben pro Tag", ru:"Расходы в день", es:"Gasto por día", ar:"الإنفاق يوميًا", hi:"प्रतिदिन खर्च", bn:"প্রতিদিন খরচ", pt:"Gasto por dia", id:"Pengeluaran per Hari", vi:"Chi phí mỗi ngày" },
+  apiLogs:         { ko:"API 로그", en:"API Logs", ja:"APIログ", zh:"API日志", fr:"Journaux API", de:"API-Logs", ru:"API-логи", es:"Registros API", ar:"سجلات API", hi:"API लॉग", bn:"API লগ", pt:"Logs de API", id:"Log API", vi:"Nhật ký API" },
+  time:            { ko:"시간", en:"Time", ja:"時間", zh:"时间", fr:"Heure", de:"Zeit", ru:"Время", es:"Hora", ar:"الوقت", hi:"समय", bn:"সময়", pt:"Hora", id:"Waktu", vi:"Thời gian" },
+  model:           { ko:"모델", en:"Model", ja:"モデル", zh:"模型", fr:"Modèle", de:"Modell", ru:"Модель", es:"Modelo", ar:"النموذج", hi:"मॉडल", bn:"মডেল", pt:"Modelo", id:"Model", vi:"Mô hình" },
+  tokens:          { ko:"토큰", en:"Tokens", ja:"トークン", zh:"令牌", fr:"Tokens", de:"Tokens", ru:"Токены", es:"Tokens", ar:"الرموز", hi:"टोकन", bn:"টোকেন", pt:"Tokens", id:"Token", vi:"Token" },
+  cost:            { ko:"비용", en:"Cost", ja:"コスト", zh:"费用", fr:"Coût", de:"Kosten", ru:"Стоимость", es:"Costo", ar:"التكلفة", hi:"लागत", bn:"খরচ", pt:"Custo", id:"Biaya", vi:"Chi phí" },
+  status:          { ko:"상태", en:"Status", ja:"ステータス", zh:"状态", fr:"Statut", de:"Status", ru:"Статус", es:"Estado", ar:"الحالة", hi:"स्थिति", bn:"অবস্থা", pt:"Status", id:"Status", vi:"Trạng thái" },
+  prev:            { ko:"이전", en:"Prev", ja:"前", zh:"上一页", fr:"Préc.", de:"Zurück", ru:"Назад", es:"Ant.", ar:"السابق", hi:"पिछला", bn:"পূর্ববর্তী", pt:"Anterior", id:"Sebelumnya", vi:"Trước" },
+  page:            { ko:"페이지", en:"Page", ja:"ページ", zh:"页", fr:"Page", de:"Seite", ru:"Страница", es:"Página", ar:"الصفحة", hi:"पृष्ठ", bn:"পৃষ্ঠা", pt:"Página", id:"Halaman", vi:"Trang" },
+  next:            { ko:"다음", en:"Next", ja:"次", zh:"下一页", fr:"Suiv.", de:"Weiter", ru:"Далее", es:"Sig.", ar:"التالي", hi:"अगला", bn:"পরবর্তী", pt:"Próxima", id:"Selanjutnya", vi:"Tiếp" },
+  createKey:       { ko:"새 키 생성", en:"Create New Key", ja:"新しいキーを作成", zh:"创建新密钥", fr:"Créer une clé", de:"Neuen Schlüssel erstellen", ru:"Создать ключ", es:"Crear clave", ar:"إنشاء مفتاح", hi:"नई कुंजी बनाएं", bn:"নতুন কী তৈরি", pt:"Criar chave", id:"Buat Kunci Baru", vi:"Tạo khóa mới" },
+  keyPlaceholder:  { ko:"키 이름 (선택)", en:"Key name (optional)", ja:"キー名（任意）", zh:"密钥名称（可选）", fr:"Nom de la clé (optionnel)", de:"Schlüsselname (optional)", ru:"Имя ключа (опционально)", es:"Nombre de clave (opcional)", ar:"اسم المفتاح (اختياري)", hi:"कुंजी नाम (वैकल्पिक)", bn:"কী নাম (ঐচ্ছিক)", pt:"Nome da chave (opcional)", id:"Nama kunci (opsional)", vi:"Tên khóa (tùy chọn)" },
+  create:          { ko:"생성", en:"Create", ja:"作成", zh:"创建", fr:"Créer", de:"Erstellen", ru:"Создать", es:"Crear", ar:"إنشاء", hi:"बनाएं", bn:"তৈরি", pt:"Criar", id:"Buat", vi:"Tạo" },
+  delete:          { ko:"삭제", en:"Delete", ja:"削除", zh:"删除", fr:"Supprimer", de:"Löschen", ru:"Удалить", es:"Eliminar", ar:"حذف", hi:"हटाएं", bn:"মুছুন", pt:"Excluir", id:"Hapus", vi:"Xóa" },
+  revoked:         { ko:"폐기됨", en:"Revoked", ja:"取消済み", zh:"已撤销", fr:"Révoqué", de:"Widerrufen", ru:"Отозван", es:"Revocada", ar:"ملغى", hi:"रद्द", bn:"বাতিল", pt:"Revogada", id:"Dicabut", vi:"Đã thu hồi" },
+  requests:        { ko:"요청", en:"Requests", ja:"リクエスト", zh:"请求", fr:"Requêtes", de:"Anfragen", ru:"Запросы", es:"Solicitudes", ar:"الطلبات", hi:"अनुरोध", bn:"অনুরোধ", pt:"Requisições", id:"Permintaan", vi:"Yêu cầu" },
+  spend:           { ko:"비용", en:"Spend", ja:"コスト", zh:"花费", fr:"Dépenses", de:"Ausgaben", ru:"Расходы", es:"Gasto", ar:"الإنفاق", hi:"खर्च", bn:"খরচ", pt:"Gasto", id:"Pengeluaran", vi:"Chi phí" },
+};
+
+function labT(key: string, locale: string): string {
+  return LAB_I18N[key]?.[locale] ?? LAB_I18N[key]?.["en"] ?? key;
+}
+
 function labMockupHtml(pageName: string, locale: string): string {
-  const isKo = locale === "ko";
-  const t = (ko: string, en: string) => isKo ? ko : en;
+  const t = (key: string) => labT(key, locale);
 
   // Shared styles matching shadcn/ui + naia theme
   const baseStyles = `
@@ -777,10 +820,10 @@ function labMockupHtml(pageName: string, locale: string): string {
 
   const bottomNav = `
     <div class="bottom-nav">
-      <div class="nav-item ${pageName === 'dashboard' ? 'active' : ''}"><span class="nav-icon">📊</span>${t('대시보드','Dashboard')}</div>
-      <div class="nav-item ${pageName === 'usage' ? 'active' : ''}"><span class="nav-icon">📈</span>${t('사용량','Usage')}</div>
-      <div class="nav-item ${pageName === 'logs' ? 'active' : ''}"><span class="nav-icon">📋</span>${t('로그','Logs')}</div>
-      <div class="nav-item ${pageName === 'keys' ? 'active' : ''}"><span class="nav-icon">🔑</span>${t('API 키','Keys')}</div>
+      <div class="nav-item ${pageName === 'dashboard' ? 'active' : ''}"><span class="nav-icon">📊</span>${t('dashboard')}</div>
+      <div class="nav-item ${pageName === 'usage' ? 'active' : ''}"><span class="nav-icon">📈</span>${t('usage')}</div>
+      <div class="nav-item ${pageName === 'logs' ? 'active' : ''}"><span class="nav-icon">📋</span>${t('logs')}</div>
+      <div class="nav-item ${pageName === 'keys' ? 'active' : ''}"><span class="nav-icon">🔑</span>${t('keys')}</div>
     </div>
   `;
 
@@ -788,25 +831,25 @@ function labMockupHtml(pageName: string, locale: string): string {
 
   if (pageName === 'dashboard') {
     content = `
-      <h1>${t('대시보드','Dashboard')}</h1>
+      <h1>${t('dashboard')}</h1>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('크레딧 잔액','Credit Balance')}</div></div>
+        <div class="card-header"><div class="card-title">${t('creditBalance')}</div></div>
         <div class="card-content"><div class="big-number">4.8</div></div>
       </div>
       <div class="grid-4">
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('총 요청','Total Requests')}</div><div class="small-value">47</div></div></div>
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('총 토큰','Total Tokens')}</div><div class="small-value">38,240</div></div></div>
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('총 비용','Total Spend')}</div><div class="small-value">$0.0156</div></div></div>
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('현재 기간','Current Period')}</div><div><span class="badge badge-active">${t('활성','Active')}</span></div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('totalRequests')}</div><div class="small-value">47</div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('totalTokens')}</div><div class="small-value">38,240</div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('totalSpend')}</div><div class="small-value">$0.0156</div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('currentPeriod')}</div><div><span class="badge badge-active">${t('active')}</span></div></div></div>
       </div>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('빠른 링크','Quick Links')}</div></div>
+        <div class="card-header"><div class="card-title">${t('quickLinks')}</div></div>
         <div class="card-content">
           <div class="link-grid">
-            <div class="link-item"><span class="link-icon">📈</span>${t('사용량','Usage')}</div>
-            <div class="link-item"><span class="link-icon">📋</span>${t('로그','Logs')}</div>
-            <div class="link-item"><span class="link-icon">🔑</span>${t('API 키','Keys')}</div>
-            <div class="link-item"><span class="link-icon">💳</span>${t('결제','Billing')}</div>
+            <div class="link-item"><span class="link-icon">📈</span>${t('usage')}</div>
+            <div class="link-item"><span class="link-icon">📋</span>${t('logs')}</div>
+            <div class="link-item"><span class="link-icon">🔑</span>${t('keys')}</div>
+            <div class="link-item"><span class="link-icon">💳</span>${t('billing')}</div>
           </div>
         </div>
       </div>
@@ -814,20 +857,20 @@ function labMockupHtml(pageName: string, locale: string): string {
   } else if (pageName === 'usage') {
     content = `
       <div class="flex-between mb-12">
-        <h1>${t('사용량','Usage')}</h1>
+        <h1>${t('usage')}</h1>
         <div class="period-tabs">
-          <span class="period-tab">${t('7일','7D')}</span>
-          <span class="period-tab active">${t('30일','30D')}</span>
-          <span class="period-tab">${t('90일','90D')}</span>
+          <span class="period-tab">${t('days7')}</span>
+          <span class="period-tab active">${t('days30')}</span>
+          <span class="period-tab">${t('days90')}</span>
         </div>
       </div>
       <div class="grid-2" style="grid-template-columns:1fr 1fr 1fr; margin-bottom:16px;">
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('총 요청','Requests')}</div><div class="small-value">47</div></div></div>
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('총 토큰','Tokens')}</div><div class="small-value">38.2K</div></div></div>
-        <div class="card small-card"><div class="card-content"><div class="small-label">${t('총 비용','Spend')}</div><div class="small-value">$0.016</div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('requests')}</div><div class="small-value">47</div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('tokens')}</div><div class="small-value">38.2K</div></div></div>
+        <div class="card small-card"><div class="card-content"><div class="small-label">${t('spend')}</div><div class="small-value">$0.016</div></div></div>
       </div>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('일별 요청 수','Requests per Day')}</div></div>
+        <div class="card-header"><div class="card-title">${t('requestsPerDay')}</div></div>
         <div class="card-content">
           <div class="chart-placeholder">
             ${[20,35,15,45,30,55,40,60,25,50,70,45,35,55,40,30,50,65,45,35,55,40,60,45,50,65,75,55,40,50].map(h => `<div class="chart-bar" style="height:${h}%"></div>`).join('')}
@@ -835,13 +878,13 @@ function labMockupHtml(pageName: string, locale: string): string {
         </div>
       </div>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('일별 토큰 수','Tokens per Day')}</div></div>
+        <div class="card-header"><div class="card-title">${t('tokensPerDay')}</div></div>
         <div class="card-content">
           <div class="chart-line-area"><div class="chart-area"></div></div>
         </div>
       </div>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('일별 비용','Spend per Day')}</div></div>
+        <div class="card-header"><div class="card-title">${t('spendPerDay')}</div></div>
         <div class="card-content">
           <div class="chart-line-area"><div class="chart-area" style="height:40%;"></div></div>
         </div>
@@ -859,16 +902,16 @@ function labMockupHtml(pageName: string, locale: string): string {
       { time: '09:00:18', model: 'grok-3-mini', tokens: '890', cost: '$0.0012', status: 'success' },
     ];
     content = `
-      <h1>${t('API 로그','API Logs')}</h1>
+      <h1>${t('apiLogs')}</h1>
       <div class="card">
         <div class="card-content" style="padding:0; overflow-x:auto;">
           <table>
             <thead><tr>
-              <th>${t('시간','Time')}</th>
-              <th>${t('모델','Model')}</th>
-              <th>${t('토큰','Tokens')}</th>
-              <th>${t('비용','Cost')}</th>
-              <th>${t('상태','Status')}</th>
+              <th>${t('time')}</th>
+              <th>${t('model')}</th>
+              <th>${t('tokens')}</th>
+              <th>${t('cost')}</th>
+              <th>${t('status')}</th>
             </tr></thead>
             <tbody>
               ${rows.map(r => `<tr>
@@ -883,37 +926,37 @@ function labMockupHtml(pageName: string, locale: string): string {
         </div>
       </div>
       <div class="flex-between" style="margin-top:12px;">
-        <span class="btn" style="opacity:0.4">← ${t('이전','Prev')}</span>
-        <span style="font-size:13px; color:#888">${t('페이지','Page')} 1</span>
-        <span class="btn">→ ${t('다음','Next')}</span>
+        <span class="btn" style="opacity:0.4">← ${t('prev')}</span>
+        <span style="font-size:13px; color:#888">${t('page')} 1</span>
+        <span class="btn">→ ${t('next')}</span>
       </div>
     `;
   } else if (pageName === 'keys') {
     content = `
-      <h1>${t('API 키','API Keys')}</h1>
+      <h1>${t('keys')}</h1>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('새 키 생성','Create New Key')}</div></div>
+        <div class="card-header"><div class="card-title">${t('createKey')}</div></div>
         <div class="card-content">
           <div class="form-row">
-            <input class="form-input" placeholder="${t('키 이름 (선택)','Key name (optional)')}" style="flex:1" />
-            <button class="btn btn-primary">${t('생성','Create')}</button>
+            <input class="form-input" placeholder="${t('keyPlaceholder')}" style="flex:1" />
+            <button class="btn btn-primary">${t('create')}</button>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-header"><div class="card-title">${t('API 키','API Keys')}</div></div>
+        <div class="card-header"><div class="card-title">${t('keys')}</div></div>
         <div class="card-content">
           <div class="key-row">
             <div><div class="key-name">desktop-naia</div><div class="key-date">2026-02-20 14:30</div></div>
-            <div class="key-actions"><span class="badge badge-active">${t('활성','Active')}</span><button class="btn btn-sm">${t('삭제','Delete')}</button></div>
+            <div class="key-actions"><span class="badge badge-active">${t('active')}</span><button class="btn btn-sm">${t('delete')}</button></div>
           </div>
           <div class="key-row">
             <div><div class="key-name">api-test</div><div class="key-date">2026-02-18 09:15</div></div>
-            <div class="key-actions"><span class="badge badge-active">${t('활성','Active')}</span><button class="btn btn-sm">${t('삭제','Delete')}</button></div>
+            <div class="key-actions"><span class="badge badge-active">${t('active')}</span><button class="btn btn-sm">${t('delete')}</button></div>
           </div>
           <div class="key-row">
             <div><div class="key-name">old-key</div><div class="key-date">2026-01-15 11:00</div></div>
-            <div class="key-actions"><span class="badge badge-secondary" style="background:#f5f5f5;color:#999">${t('폐기됨','Revoked')}</span></div>
+            <div class="key-actions"><span class="badge badge-secondary" style="background:#f5f5f5;color:#999">${t('revoked')}</span></div>
           </div>
         </div>
       </div>
@@ -951,54 +994,71 @@ async function captureLabMockups(browser: Browser, outDir: string, locale: strin
 // ─── Main ────────────────────────────────────────────────────
 
 async function run() {
-  const browser = await chromium.launch({ headless: true });
+  // Process only locales specified by CLI args, or all if none given
+  const args = process.argv.slice(2);
+  const locales = args.length > 0
+    ? args.filter(a => ALL_LOCALES.includes(a as any)) as (typeof ALL_LOCALES[number])[]
+    : [...ALL_LOCALES];
 
-  for (const locale of ["ko", "en"]) {
-    const outDir = locale === "ko" ? KO_DIR : EN_DIR;
+  for (const locale of locales) {
+    // Fresh browser per locale to avoid memory leaks from VRM/Three.js
+    const browser = await chromium.launch({ headless: true });
+    const outDir = path.join(MANUAL_DIR, locale);
     fs.mkdirSync(outDir, { recursive: true });
     console.log(`\n========== ${locale.toUpperCase()} ==========`);
 
-    console.log("\n--- Onboarding ---");
-    await captureOnboarding(browser, outDir);
+    try {
+      console.log("\n--- Onboarding ---");
+      await captureOnboarding(browser, outDir);
 
-    console.log("\n--- Main & Chat ---");
-    await captureMainAndChat(browser, outDir, locale);
+      console.log("\n--- Main & Chat ---");
+      await captureMainAndChat(browser, outDir, locale);
 
-    console.log("\n--- Chat Cost ---");
-    await captureChatCost(browser, outDir, locale);
+      console.log("\n--- Chat Cost ---");
+      await captureChatCost(browser, outDir, locale);
 
-    console.log("\n--- Chat Tool ---");
-    await captureChatTool(browser, outDir, locale);
+      console.log("\n--- Chat Tool ---");
+      await captureChatTool(browser, outDir, locale);
 
-    console.log("\n--- Chat Approval ---");
-    await captureChatApproval(browser, outDir, locale);
+      console.log("\n--- Chat Approval ---");
+      await captureChatApproval(browser, outDir, locale);
 
-    console.log("\n--- History ---");
-    await captureHistoryTab(browser, outDir, locale);
+      console.log("\n--- History ---");
+      await captureHistoryTab(browser, outDir, locale);
 
-    console.log("\n--- Progress ---");
-    await captureProgressTab(browser, outDir, locale);
+      console.log("\n--- Progress ---");
+      await captureProgressTab(browser, outDir, locale);
 
-    console.log("\n--- Skills ---");
-    await captureSkillsTab(browser, outDir, locale);
+      console.log("\n--- Skills ---");
+      await captureSkillsTab(browser, outDir, locale);
 
-    console.log("\n--- Channels ---");
-    await captureChannelsTab(browser, outDir, locale);
+      console.log("\n--- Channels ---");
+      await captureChannelsTab(browser, outDir, locale);
 
-    console.log("\n--- Agents ---");
-    await captureAgentsTab(browser, outDir, locale);
+      console.log("\n--- Agents ---");
+      await captureAgentsTab(browser, outDir, locale);
 
-    console.log("\n--- Diagnostics ---");
-    await captureDiagnosticsTab(browser, outDir, locale);
+      console.log("\n--- Diagnostics ---");
+      await captureDiagnosticsTab(browser, outDir, locale);
 
-    console.log("\n--- Settings ---");
-    await captureSettingsSections(browser, outDir, locale);
+      console.log("\n--- Settings ---");
+      await captureSettingsSections(browser, outDir, locale);
 
-    console.log("\n--- Lab (Dashboard) Mockups ---");
-    await captureLabMockups(browser, outDir, locale);
+      console.log("\n--- Lab (Dashboard) Mockups ---");
+      await captureLabMockups(browser, outDir, locale);
+    } catch (e) {
+      console.error(`\n[FATAL] ${locale}: ${(e as Error).message}`);
+    } finally {
+      await browser.close();
+    }
+
+    // Brief pause between locales to let the app stabilize
+    if (locale !== locales[locales.length - 1]) {
+      console.log("\n... pause 3s ...");
+      await new Promise(r => setTimeout(r, 3000));
+    }
   }
 
-  await browser.close();
   console.log("\nDone!");
 }
 
