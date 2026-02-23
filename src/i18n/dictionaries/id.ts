@@ -87,7 +87,7 @@ const id: Dictionary = {
         },
         "skills": {
           "title": "Ekosistem 70+ keterampilan",
-          "description": "7 bawaan + 63 kustom — cuaca, GitHub, Slack, Notion, Spotify, Discord, dan lainnya. Kompatibel dengan 5.700+ keterampilan komunitas ClaHub."
+          "description": "7 bawaan + 63 kustom — cuaca, GitHub, Slack, Notion, Spotify, Discord, dan lainnya. Kompatibel dengan 5.700+ keterampilan komunitas ClawHub."
         },
         "discord": {
           "title": "Integrasi Discord DM",

@@ -11,7 +11,7 @@ Naia is a desktop application (and a standalone Linux OS) that rides on the Open
 - **OpenClaw Gateway Built-in**: Powered by OpenClaw's battle-tested gateway daemon and 5,700+ skill ecosystem. No CLI setup — install and go with your Naia account.
 - **3D AI Avatar**: A fully animated VRM 3D avatar with emotions and lip-sync that lives on your desktop and reacts to conversations.
 - **7 LLM Providers**: Gemini, Claude, GPT, Grok, xAI, Ollama, Claude Code CLI — switch freely using credits or your own API keys.
-- **70+ Skills Ecosystem**: 7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClaHub community skills.
+- **70+ Skills Ecosystem**: 7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClawHub community skills.
 - **Voice Conversations**: Ask via voice, get spoken responses. The AI avatar answers naturally with lip-synced animations. 5 TTS providers + STT.
 - **Tool Execution**: File editing, terminal commands, web search. The AI avatar calls tools directly to get work done.
 - **Discord DM Integration**: Chat with your AI avatar via Discord DM, anytime, anywhere. A personal bot that only talks to you.
@@ -63,7 +63,7 @@ The homepage and portal (this site) provides:
 - Frontend: Tailwind CSS 4, shadcn/ui, lucide-react
 - Backend: Next.js API Routes proxying to a FastAPI any-llm gateway
 - Desktop app: Tauri 2 + React + Node.js agent, built on OpenClaw gateway
-- AI Skills: OpenClaw-compatible skill.json format, 5,700+ ClaHub community ecosystem
+- AI Skills: OpenClaw-compatible skill.json format, 5,700+ ClawHub community ecosystem
 - Languages: 14 locales
 
 ## Company

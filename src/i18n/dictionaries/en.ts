@@ -94,7 +94,7 @@ const en: Dictionary = {
         skills: {
           title: "70+ Skills Ecosystem",
           description:
-            "7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClaHub community skills.",
+            "7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClawHub community skills.",
         },
         discord: {
           title: "Discord DM Integration",

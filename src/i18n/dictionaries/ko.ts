@@ -94,7 +94,7 @@ const ko: Dictionary = {
         skills: {
           title: "70+ 스킬 생태계",
           description:
-            "7개 내장 + 63개 커스텀 스킬 — 날씨, GitHub, Slack, Notion, Spotify, Discord 등. ClaHub 커뮤니티 5,700+ 스킬 호환.",
+            "7개 내장 + 63개 커스텀 스킬 — 날씨, GitHub, Slack, Notion, Spotify, Discord 등. ClawHub 커뮤니티 5,700+ 스킬 호환.",
         },
         discord: {
           title: "Discord DM 연동",

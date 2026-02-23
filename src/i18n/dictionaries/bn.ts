@@ -87,7 +87,7 @@ const bn: Dictionary = {
         },
         "skills": {
           "title": "70+ দক্ষতা ইকোসিস্টেম",
-          "description": "7টি বিল্ট-ইন + 63টি কাস্টম দক্ষতা — আবহাওয়া, GitHub, Slack, Notion, Spotify, Discord এবং আরও অনেক কিছু। ClaHub সম্প্রদায়ের 5,700+ দক্ষতার সাথে সামঞ্জস্যপূর্ণ।"
+          "description": "7টি বিল্ট-ইন + 63টি কাস্টম দক্ষতা — আবহাওয়া, GitHub, Slack, Notion, Spotify, Discord এবং আরও অনেক কিছু। ClawHub সম্প্রদায়ের 5,700+ দক্ষতার সাথে সামঞ্জস্যপূর্ণ।"
         },
         "discord": {
           "title": "Discord DM ইন্টিগ্রেশন",

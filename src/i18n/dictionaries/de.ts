@@ -87,7 +87,7 @@ const de: Dictionary = {
         },
         "skills": {
           "title": "70+ Skills-Ökosystem",
-          "description": "7 integrierte + 63 benutzerdefinierte Skills — Wetter, GitHub, Slack, Notion, Spotify, Discord und mehr. Kompatibel mit 5.700+ ClaHub-Community-Skills."
+          "description": "7 integrierte + 63 benutzerdefinierte Skills — Wetter, GitHub, Slack, Notion, Spotify, Discord und mehr. Kompatibel mit 5.700+ ClawHub-Community-Skills."
         },
         "discord": {
           "title": "Discord-DM-Integration",

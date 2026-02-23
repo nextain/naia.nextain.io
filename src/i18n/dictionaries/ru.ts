@@ -87,7 +87,7 @@ const ru: Dictionary = {
         },
         "skills": {
           "title": "Экосистема 70+ навыков",
-          "description": "7 встроенных + 63 пользовательских навыка — погода, GitHub, Slack, Notion, Spotify, Discord и другие. Совместимость с 5 700+ навыками сообщества ClaHub."
+          "description": "7 встроенных + 63 пользовательских навыка — погода, GitHub, Slack, Notion, Spotify, Discord и другие. Совместимость с 5 700+ навыками сообщества ClawHub."
         },
         "discord": {
           "title": "Интеграция Discord DM",

@@ -87,7 +87,7 @@ const hi: Dictionary = {
         },
         "skills": {
           "title": "70+ स्किल इकोसिस्टम",
-          "description": "7 बिल्ट-इन + 63 कस्टम स्किल — मौसम, GitHub, Slack, Notion, Spotify, Discord और अधिक। ClaHub समुदाय के 5,700+ स्किल के साथ संगत।"
+          "description": "7 बिल्ट-इन + 63 कस्टम स्किल — मौसम, GitHub, Slack, Notion, Spotify, Discord और अधिक। ClawHub समुदाय के 5,700+ स्किल के साथ संगत।"
         },
         "discord": {
           "title": "Discord DM एकीकरण",

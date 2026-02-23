@@ -87,7 +87,7 @@ const vi: Dictionary = {
         },
         "skills": {
           "title": "Hệ sinh thái 70+ kỹ năng",
-          "description": "7 tích hợp + 63 tùy chỉnh — thời tiết, GitHub, Slack, Notion, Spotify, Discord và hơn thế. Tương thích với 5.700+ kỹ năng cộng đồng ClaHub."
+          "description": "7 tích hợp + 63 tùy chỉnh — thời tiết, GitHub, Slack, Notion, Spotify, Discord và hơn thế. Tương thích với 5.700+ kỹ năng cộng đồng ClawHub."
         },
         "discord": {
           "title": "Tích hợp Discord DM",

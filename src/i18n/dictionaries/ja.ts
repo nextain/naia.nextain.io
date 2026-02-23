@@ -87,7 +87,7 @@ const ja: Dictionary = {
         },
         "skills": {
           "title": "70+スキルエコシステム",
-          "description": "7つの内蔵 + 63のカスタムスキル — 天気、GitHub、Slack、Notion、Spotify、Discordなど。ClaHubコミュニティの5,700+スキルにも対応。"
+          "description": "7つの内蔵 + 63のカスタムスキル — 天気、GitHub、Slack、Notion、Spotify、Discordなど。ClawHubコミュニティの5,700+スキルにも対応。"
         },
         "discord": {
           "title": "Discord DM連携",

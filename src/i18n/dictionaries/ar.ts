@@ -87,7 +87,7 @@ const ar: Dictionary = {
         },
         "skills": {
           "title": "نظام بيئي لأكثر من 70 مهارة",
-          "description": "7 مدمجة + 63 مخصصة — الطقس، GitHub، Slack، Notion، Spotify، Discord والمزيد. متوافق مع أكثر من 5,700 مهارة من مجتمع ClaHub."
+          "description": "7 مدمجة + 63 مخصصة — الطقس، GitHub، Slack، Notion، Spotify، Discord والمزيد. متوافق مع أكثر من 5,700 مهارة من مجتمع ClawHub."
         },
         "discord": {
           "title": "تكامل Discord DM",

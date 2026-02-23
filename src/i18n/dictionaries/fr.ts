@@ -87,7 +87,7 @@ const fr: Dictionary = {
         },
         "skills": {
           "title": "Écosystème de 70+ compétences",
-          "description": "7 intégrées + 63 personnalisées — météo, GitHub, Slack, Notion, Spotify, Discord, et plus. Compatible avec 5 700+ compétences de la communauté ClaHub."
+          "description": "7 intégrées + 63 personnalisées — météo, GitHub, Slack, Notion, Spotify, Discord, et plus. Compatible avec 5 700+ compétences de la communauté ClawHub."
         },
         "discord": {
           "title": "Intégration Discord DM",

@@ -87,7 +87,7 @@ const zh: Dictionary = {
         },
         "skills": {
           "title": "70+技能生态系统",
-          "description": "7个内置 + 63个自定义技能 — 天气、GitHub、Slack、Notion、Spotify、Discord等。兼容ClaHub社区5,700+技能。"
+          "description": "7个内置 + 63个自定义技能 — 天气、GitHub、Slack、Notion、Spotify、Discord等。兼容ClawHub社区5,700+技能。"
         },
         "discord": {
           "title": "Discord私信集成",
