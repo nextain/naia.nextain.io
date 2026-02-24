@@ -352,6 +352,13 @@ const bn: Dictionary = {
       },
     },
     "shellOnly": "শুধুমাত্র Shell UI — AI বৈশিষ্ট্যের জন্য Naia OS বা আলাদা গেটওয়ে সেটআপ প্রয়োজন।",
+    "gateway": {
+      "title": "AI গেটওয়ে সম্পর্কে",
+      "description": "Naia-এর AI বৈশিষ্ট্য (চ্যাট, ভয়েস, টুলস) OpenClaw গেটওয়ে দ্বারা চালিত। শুধুমাত্র Shell UI দিয়ে AI চালানো সম্ভব নয় — এর পাশাপাশি একটি গেটওয়ে চলমান থাকা প্রয়োজন।",
+      "naiaOsIncluded": "Naia OS-এ গেটওয়ে প্রি-ইনস্টল করা আছে। শুধু বুট করুন এবং শুরু করুন।",
+      "shellOnlyGuide": "উপরের Shell-শুধু প্যাকেজগুলির জন্য, আপনাকে আলাদাভাবে OpenClaw ইনস্টল করতে হবে।",
+      "openclawLink": "OpenClaw সেটআপ গাইড",
+    },
     "checksum": "চেকসাম যাচাই",
     "checksumDescription": "ডাউনলোড করা ফাইলের অখণ্ডতা যাচাই করতে:",
     "allReleases": "সমস্ত রিলিজ দেখুন",

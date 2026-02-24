@@ -352,6 +352,13 @@ const ja: Dictionary = {
       },
     },
     "shellOnly": "Shell UIのみ — AI機能にはNaia OSまたは別途ゲートウェイのセットアップが必要です。",
+    "gateway": {
+      "title": "AI ゲートウェイについて",
+      "description": "Naia のAI機能(チャット、音声、ツール)はOpenClawゲートウェイで動作します。Shell UI単体ではAIを使用できません。ゲートウェイが一緒に実行される必要があります。",
+      "naiaOsIncluded": "Naia OSにはゲートウェイがプリインストールされています。起動するだけですぐに使えます。",
+      "shellOnlyGuide": "上記のShell単体パッケージを使用する場合、OpenClawを別途インストールする必要があります。",
+      "openclawLink": "OpenClawセットアップガイド",
+    },
     "checksum": "チェックサム検証",
     "checksumDescription": "ダウンロードしたファイルの整合性を検証するには：",
     "allReleases": "全リリースを表示",

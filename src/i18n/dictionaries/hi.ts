@@ -352,6 +352,13 @@ const hi: Dictionary = {
       },
     },
     "shellOnly": "केवल Shell UI — AI सुविधाओं के लिए Naia OS या अलग गेटवे सेटअप आवश्यक है।",
+    "gateway": {
+      "title": "AI गेटवे के बारे में",
+      "description": "Naia की AI सुविधाएँ (चैट, आवाज़, टूल) OpenClaw गेटवे द्वारा संचालित हैं। Shell UI अकेला AI नहीं चला सकता — इसके साथ एक गेटवे चलना आवश्यक है।",
+      "naiaOsIncluded": "Naia OS में गेटवे पहले से इंस्टॉल है। बस बूट करें और शुरू करें।",
+      "shellOnlyGuide": "ऊपर दिए गए Shell-केवल पैकेज के लिए, आपको अलग से OpenClaw इंस्टॉल करना होगा।",
+      "openclawLink": "OpenClaw सेटअप गाइड",
+    },
     "checksum": "चेकसम सत्यापित करें",
     "checksumDescription": "डाउनलोड की गई फ़ाइलों की अखंडता सत्यापित करने के लिए:",
     "allReleases": "सभी रिलीज़ देखें",

@@ -361,6 +361,13 @@ const ko: Dictionary = {
       },
     },
     shellOnly: "Shell UI만 포함 — AI 기능은 Naia OS 또는 별도 게이트웨이 설치가 필요합니다.",
+    gateway: {
+      title: "AI 게이트웨이 안내",
+      description: "Naia의 AI 기능(채팅, 음성, 도구)은 OpenClaw 게이트웨이로 동작합니다. Shell UI만으로는 AI를 사용할 수 없으며, 게이트웨이가 함께 실행되어야 합니다.",
+      naiaOsIncluded: "Naia OS에는 게이트웨이가 기본 설치되어 있습니다. 부팅만 하면 바로 사용 가능합니다.",
+      shellOnlyGuide: "위의 Shell 단독 패키지를 사용하는 경우, OpenClaw를 별도로 설치해야 합니다.",
+      openclawLink: "OpenClaw 설치 가이드",
+    },
     checksum: "체크섬 검증",
     checksumDescription: "다운로드한 파일의 무결성을 검증하려면:",
     allReleases: "전체 릴리즈 보기",

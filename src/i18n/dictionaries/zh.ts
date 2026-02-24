@@ -352,6 +352,13 @@ const zh: Dictionary = {
       },
     },
     "shellOnly": "仅Shell UI — AI功能需要Naia OS或单独设置网关。",
+    "gateway": {
+      "title": "关于AI网关",
+      "description": "Naia的AI功能（聊天、语音、工具）由OpenClaw网关提供支持。仅Shell UI无法运行AI，需要同时运行网关。",
+      "naiaOsIncluded": "Naia OS已预装网关。启动即可使用。",
+      "shellOnlyGuide": "使用上述Shell独立包时，需要单独安装OpenClaw。",
+      "openclawLink": "OpenClaw安装指南",
+    },
     "checksum": "校验和验证",
     "checksumDescription": "验证下载文件的完整性：",
     "allReleases": "查看所有版本",

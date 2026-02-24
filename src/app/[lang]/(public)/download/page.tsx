@@ -130,6 +130,41 @@ export default async function DownloadPage({
         })}
       </div>
 
+      {/* Gateway Guide */}
+      <Card className="mb-12 border-amber-500/30 bg-amber-50/50 dark:bg-amber-950/20">
+        <CardHeader className="pb-3">
+          <div className="flex items-center gap-3">
+            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-400">
+              <Info className="h-5 w-5" />
+            </div>
+            <CardTitle className="text-lg">{d.gateway.title}</CardTitle>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-3 text-sm text-muted-foreground">
+          <p>{d.gateway.description}</p>
+          <ul className="space-y-1.5 pl-1">
+            <li className="flex items-start gap-2">
+              <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-500" />
+              <span>{d.gateway.naiaOsIncluded}</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <ExternalLink className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+              <span>
+                {d.gateway.shellOnlyGuide}{" "}
+                <Link
+                  href="https://github.com/openclaw/openclaw"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
+                >
+                  {d.gateway.openclawLink}
+                </Link>
+              </span>
+            </li>
+          </ul>
+        </CardContent>
+      </Card>
+
       {/* Requirements */}
       <div className="mb-8">
         <h2 className="mb-4 text-xl font-semibold">{d.requirements}</h2>

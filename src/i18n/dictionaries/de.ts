@@ -352,6 +352,13 @@ const de: Dictionary = {
       },
     },
     "shellOnly": "Nur Shell UI — KI-Funktionen erfordern Naia OS oder ein separates Gateway-Setup.",
+    "gateway": {
+      "title": "Über das KI-Gateway",
+      "description": "Die KI-Funktionen von Naia (Chat, Sprache, Tools) werden vom OpenClaw-Gateway betrieben. Die Shell UI allein kann keine KI ausführen — sie benötigt ein Gateway, das parallel läuft.",
+      "naiaOsIncluded": "Naia OS enthält das Gateway vorinstalliert. Einfach starten und loslegen.",
+      "shellOnlyGuide": "Für die oben genannten Shell-only-Pakete müssen Sie OpenClaw separat installieren.",
+      "openclawLink": "OpenClaw-Einrichtungsanleitung",
+    },
     "checksum": "Prüfsummen überprüfen",
     "checksumDescription": "Um die Integrität der heruntergeladenen Dateien zu überprüfen:",
     "allReleases": "Alle Versionen anzeigen",

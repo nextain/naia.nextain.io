@@ -352,6 +352,13 @@ const vi: Dictionary = {
       },
     },
     "shellOnly": "Chỉ Shell UI — tính năng AI yêu cầu Naia OS hoặc thiết lập gateway riêng.",
+    "gateway": {
+      "title": "Về Gateway AI",
+      "description": "Các tính năng AI của Naia (trò chuyện, giọng nói, công cụ) được cung cấp bởi gateway OpenClaw. Shell UI một mình không thể chạy AI — cần có gateway chạy cùng.",
+      "naiaOsIncluded": "Naia OS đã bao gồm gateway cài sẵn. Chỉ cần khởi động và bắt đầu.",
+      "shellOnlyGuide": "Đối với các gói Shell độc lập ở trên, bạn cần cài đặt OpenClaw riêng.",
+      "openclawLink": "Hướng dẫn cài đặt OpenClaw",
+    },
     "checksum": "Xác minh checksum",
     "checksumDescription": "Để xác minh tính toàn vẹn của các tệp đã tải xuống:",
     "allReleases": "Xem tất cả phiên bản",

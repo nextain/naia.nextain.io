@@ -352,6 +352,13 @@ const ar: Dictionary = {
       },
     },
     "shellOnly": "Shell UI فقط — تتطلب ميزات AI نظام Naia OS أو إعداد بوابة منفصل.",
+    "gateway": {
+      "title": "حول بوابة AI",
+      "description": "تعمل ميزات AI في Naia (الدردشة، الصوت، الأدوات) بواسطة بوابة OpenClaw. لا يمكن لـ Shell UI وحده تشغيل AI — يحتاج إلى بوابة تعمل بجانبه.",
+      "naiaOsIncluded": "يتضمن Naia OS البوابة مثبتة مسبقًا. فقط قم بالتشغيل وابدأ.",
+      "shellOnlyGuide": "لحزم Shell المستقلة أعلاه، تحتاج إلى تثبيت OpenClaw بشكل منفصل.",
+      "openclawLink": "دليل إعداد OpenClaw",
+    },
     "checksum": "التحقق من المجاميع الاختبارية",
     "checksumDescription": "للتحقق من سلامة الملفات المحملة:",
     "allReleases": "عرض جميع الإصدارات",

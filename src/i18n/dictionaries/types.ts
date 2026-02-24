@@ -292,6 +292,13 @@ export interface Dictionary {
       rpm: { name: string; description: string; command: string; note: string };
     };
     shellOnly: string;
+    gateway: {
+      title: string;
+      description: string;
+      naiaOsIncluded: string;
+      shellOnlyGuide: string;
+      openclawLink: string;
+    };
     checksum: string;
     checksumDescription: string;
     allReleases: string;

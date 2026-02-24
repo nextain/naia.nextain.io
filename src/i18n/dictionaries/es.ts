@@ -352,6 +352,13 @@ const es: Dictionary = {
       },
     },
     "shellOnly": "Solo Shell UI — las funciones de IA requieren Naia OS o una configuración de gateway independiente.",
+    "gateway": {
+      "title": "Acerca del gateway de IA",
+      "description": "Las funciones de IA de Naia (chat, voz, herramientas) funcionan con el gateway de OpenClaw. La Shell UI por sí sola no puede ejecutar IA — necesita un gateway ejecutándose junto a ella.",
+      "naiaOsIncluded": "Naia OS incluye el gateway preinstalado. Solo arranca y listo.",
+      "shellOnlyGuide": "Para los paquetes solo Shell anteriores, necesitas instalar OpenClaw por separado.",
+      "openclawLink": "Guía de configuración de OpenClaw",
+    },
     "checksum": "Verificar sumas de comprobación",
     "checksumDescription": "Para verificar la integridad de los archivos descargados:",
     "allReleases": "Ver todas las versiones",

@@ -352,6 +352,13 @@ const id: Dictionary = {
       },
     },
     "shellOnly": "Hanya Shell UI — fitur AI memerlukan Naia OS atau pengaturan gateway terpisah.",
+    "gateway": {
+      "title": "Tentang Gateway AI",
+      "description": "Fitur AI Naia (obrolan, suara, alat) didukung oleh gateway OpenClaw. Shell UI saja tidak dapat menjalankan AI — diperlukan gateway yang berjalan bersamanya.",
+      "naiaOsIncluded": "Naia OS sudah termasuk gateway yang terinstal. Cukup boot dan langsung gunakan.",
+      "shellOnlyGuide": "Untuk paket Shell saja di atas, Anda perlu menginstal OpenClaw secara terpisah.",
+      "openclawLink": "Panduan Pengaturan OpenClaw",
+    },
     "checksum": "Verifikasi Checksum",
     "checksumDescription": "Untuk memverifikasi integritas file yang diunduh:",
     "allReleases": "Lihat Semua Rilis",
