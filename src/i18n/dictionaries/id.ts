@@ -4,7 +4,7 @@ const id: Dictionary = {
   "locale": "id",
   "meta": {
     "title": "Naia",
-    "description": "Naia — OS AI Linux berbasis ekosistem 5.700+ keterampilan OpenClaw. Avatar AI 3D, 7 penyedia LLM, obrolan suara, Discord DM. Tanpa kunci API.",
+    "description": "Naia — OS AI personal tempat AI Anda tinggal. Kendali penuh atas pilihan AI, memori, kepribadian, suara, dan avatar. Dari desktop hingga Physical AI.",
   },
   "common": {
     "loading": "Memuat...",
@@ -56,64 +56,64 @@ const id: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "Agen AI tercanggih, sebagai OS yang sempurna.",
-      "subtitle": "OS AI Linux dengan ekosistem 5.700+ keterampilan OpenClaw. Mulai langsung dengan akun Naia — tanpa kunci API. Ngobrol via Discord DM, kapan saja di mana saja.",
+      "title": "AI Anda tinggal di sini. OS Anda, aturan Anda.",
+      "subtitle": "OS AI personal yang memberi Anda kendali penuh — pilih AI Anda (termasuk model lokal), bentuk memori dan kepribadiannya, kustomisasi suara dan avatarnya. Semua milik Anda, semua lokal.",
       "cta": "Memulai Gratis",
       "secondaryCta": "Unduh"
     },
     "features": {
-      "title": "Apa yang membuat Naia istimewa",
-      "subtitle": "Rasakan kehebatan agen AI — tidak perlu coding",
+      "title": "AI Anda, Aturan Anda",
+      "subtitle": "Kedaulatan penuh atas AI Anda — pilihan, kendali, dan kepemilikan kembali di tangan Anda",
       "items": {
         "companion": {
-          "title": "Avatar AI",
-          "description": "Avatar 3D dengan emosi, langsung di desktop Anda. Avatar AI bereaksi terhadap percakapan dengan ekspresi wajah dan kontak mata."
+          "title": "Avatar AI Milik Anda",
+          "description": "Buat karakter AI Anda dengan avatar 3D VRM. Kustomisasi penampilan, ekspresi, dan emosi. Masa depan: avatar video real-time, bernyanyi, bermain game bersama."
         },
         "multiProvider": {
-          "title": "7 penyedia AI didukung",
-          "description": "Gemini, Claude, GPT, Grok, zAI, Ollama, Claude Code CLI — beralih dengan bebas menggunakan kredit atau kunci API Anda sendiri."
+          "title": "Kebebasan Memilih AI",
+          "description": "7 penyedia cloud (Gemini, Claude, GPT, Grok, zAI) hingga AI lokal (Ollama). OS Anda tidak mendikte AI Anda. Anda yang memilih."
         },
         "voice": {
-          "title": "Percakapan Suara",
-          "description": "Tanyakan melalui suara, dapatkan tanggapan lisan. Avatar AI menjawab secara alami dengan animasi yang disinkronkan bibir."
+          "title": "Suara AI Anda",
+          "description": "Berikan AI Anda suara yang Anda inginkan dengan 5 mesin TTS. Bicara secara alami dan saksikan ia hidup dengan sinkronisasi bibir."
         },
         "tools": {
-          "title": "Eksekusi Alat",
-          "description": "Pengeditan file, perintah terminal, pencarian web. Avatar AI memanggil alat secara langsung untuk menyelesaikan pekerjaan."
+          "title": "Seluruh OS sebagai Alat",
+          "description": "File, terminal, web, browser — AI Anda menggunakan OS itu sendiri sebagai alatnya. Katakan 'buat file' dan ia benar-benar melakukannya."
         },
         "desktop": {
-          "title": "Instal & OS sekali klik",
-          "description": "Instal aplikasi desktop dengan satu klik, atau buat lingkungan AI khusus dengan image OS Linux."
+          "title": "Kendali Lokal Sepenuhnya",
+          "description": "Memori, kepribadian, pengaturan — semua tersimpan di mesin Anda. AI yang benar-benar personal, bebas dari ketergantungan cloud. Image OS USB bootable tersedia."
         },
         "skills": {
-          "title": "Ekosistem 70+ keterampilan",
-          "description": "7 bawaan + 63 kustom — cuaca, GitHub, Slack, Notion, Spotify, Discord, dan lainnya. Kompatibel dengan 5.700+ keterampilan komunitas ClawHub."
+          "title": "Dapat Diperluas Tanpa Batas",
+          "description": "70 keterampilan bawaan + 5.700+ keterampilan komunitas ClawHub. Cuaca, GitHub, Slack, Spotify, Discord — tambahkan apa pun yang Anda butuhkan."
         },
         "discord": {
-          "title": "Integrasi Discord DM",
-          "description": "Ngobrol dengan avatar AI Anda melalui Discord DM, kapan saja, di mana saja. Bot pribadi yang hanya berbicara dengan Anda."
+          "title": "Selalu Bersama Anda",
+          "description": "Ngobrol dengan AI Anda via Discord DM meski Anda sedang jauh. AI Anda selalu di sisi Anda."
         },
         "daemon": {
-          "title": "OpenClaw Gateway bawaan",
-          "description": "Didukung oleh daemon gateway OpenClaw yang teruji dan ekosistem 5.700+ keterampilan. Tanpa pengaturan CLI — instal dan gunakan langsung dengan akun Naia Anda."
+          "title": "AI yang Selalu Aktif",
+          "description": "Gateway OpenClaw berjalan di latar belakang 24/7. Bahkan saat Anda menutup aplikasi, AI Anda tetap hidup — menerima pesan dan mengerjakan tugas."
         }
       }
     },
     "comparison": {
-      "title": "Perbandingan Naia",
-      "subtitle": "Lihat apa yang membedakan Naia dari alat AI yang ada",
-      "headers": { "category": "Kategori", "others": "Lainnya", "naia": "Naia" },
+      "title": "Mengapa Naia",
+      "subtitle": "Alat AI lain hanyalah 'alat'. Naia adalah 'AI milik Anda'.",
+      "headers": { "category": "Kategori", "others": "Alat AI Lain", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "Antarmuka", "others": "IDE / Terminal / Jendela chat", "naia": "Aplikasi desktop + avatar 3D" },
-        "target": { "category": "Target", "others": "Hanya pengembang", "naia": "Semua orang (onboarding 7 langkah)" },
-        "llm": { "category": "LLM", "others": "Penyedia tunggal", "naia": "7 penyedia, beralih kapan saja" },
-        "avatar": { "category": "Avatar", "others": "Tidak ada", "naia": "VRM 3D + emosi + sinkronisasi bibir" },
-        "skills": { "category": "Keterampilan", "others": "Alat terbatas", "naia": "70 bawaan + 5.700+ komunitas" },
-        "deploy": { "category": "Deployment", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, image OS" },
-        "voice": { "category": "Suara", "others": "Hanya teks atau TTS dasar", "naia": "5 penyedia TTS + STT + sinkronisasi bibir" },
+        "ui": { "category": "Filosofi", "others": "Gunakan AI sebagai alat", "naia": "Berikan AI sebuah OS. Hidup bersama." },
+        "target": { "category": "Target", "others": "Hanya pengembang", "naia": "Semua yang ingin punya AI sendiri" },
+        "llm": { "category": "Pilihan AI", "others": "Platform yang menentukan", "naia": "7 cloud + AI lokal — Anda yang tentukan" },
+        "avatar": { "category": "Avatar", "others": "Tidak ada", "naia": "Karakter 3D VRM + emosi + sinkronisasi bibir" },
+        "skills": { "category": "Kedaulatan Data", "others": "Terkunci di cloud", "naia": "Memori, kepribadian, pengaturan semua lokal" },
+        "deploy": { "category": "Deployment", "others": "npm / brew / pip", "naia": "Instal aplikasi atau OS USB bootable" },
+        "voice": { "category": "Suara", "others": "Hanya teks atau TTS dasar", "naia": "5 TTS + STT + suara AI Anda sendiri" },
         "i18n": { "category": "Bahasa", "others": "Hanya Inggris", "naia": "14 bahasa" },
-        "platform": { "category": "Platform", "others": "Hanya macOS / CLI", "naia": "Linux native, instalasi GUI satu klik" },
-        "cost": { "category": "Biaya", "others": "Kunci API terpisah diperlukan", "naia": "Akun Naia — tanpa kunci API, cukup kredit" }
+        "platform": { "category": "Platform", "others": "macOS / CLI / Web", "naia": "Linux native desktop + masa depan: Physical AI" },
+        "cost": { "category": "Biaya", "others": "Kunci API terpisah diperlukan", "naia": "Kredit gratis untuk mulai, AI lokal sepenuhnya gratis" }
       }
     },
     "pricing": {

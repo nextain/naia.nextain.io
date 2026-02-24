@@ -4,7 +4,7 @@ const ja: Dictionary = {
   "locale": "ja",
   "meta": {
     "title": "ナイア",
-    "description": "Naia — OpenClawの5,700+スキルエコシステムを搭載したLinux AI OS。3D AIアバター、7つのLLMプロバイダー、音声チャット、Discord DM。APIキー不要。",
+    "description": "Naia — 自分だけのAIが息づくパーソナルAI OS。AIの選択権と完全なコントロールをあなたの手に。3Dアバター、音声、記憶、性格まですべて自分で決められます。",
   },
   "common": {
     "loading": "読み込み中...",
@@ -56,64 +56,64 @@ const ja: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "最先端のAIエージェントを、完璧なOSとして。",
-      "subtitle": "OpenClawの5,700+スキルエコシステムを搭載したLinux AI OS。APIキー不要、Naiaアカウントですぐに開始。Discord DMでいつでもどこでも会話。",
+      "title": "自分だけのAIが息づく、自分だけのOS。",
+      "subtitle": "AIに対する選択権とコントロールを個人に取り戻すAI OS。どのAIを使うか、どんな記憶と性格を持つか、どんな声と姿にするか — すべてあなたが決めます。",
       "cta": "無料で始めましょう",
       "secondaryCta": "ダウンロード"
     },
     "features": {
-      "title": "ナイアの特別な理由",
-      "subtitle": "AI エージェントのパワーを体験してください — コーディングは必要ありません",
+      "title": "あなたのAI、あなたのルール",
+      "subtitle": "AIに対する選択権、コントロール、所有権を個人に取り戻します",
       "items": {
         "companion": {
-          "title": "AIアバター",
-          "description": "感情を持った 3D アバターがデスクトップ上に表示されます。 AIアバター は表情やアイコンタクトで会話に反応します。"
+          "title": "自分だけのAIアバター",
+          "description": "VRM 3Dアバターで自分だけのAIキャラクターを作りましょう。外見、表情、感情表現まで自由にカスタマイズ。将来はリアルタイム映像アバター、歌、ゲームまで。"
         },
         "multiProvider": {
-          "title": "7つのAIプロバイダー対応",
-          "description": "Gemini、Claude、GPT、Grok、zAI、Ollama、Claude Code CLI — クレジットまたは自分のAPIキーで自由に切り替え。"
+          "title": "AI選択の自由",
+          "description": "クラウドAI 7種（Gemini、Claude、GPT、Grok、zAI）からローカルAI（Ollama）まで。どのAIを使うかOSが強制しません。あなたが選びます。"
         },
         "voice": {
-          "title": "音声会話",
-          "description": "音声で質問すると、音声で応答が得られます。 AIアバター は口パクアニメーションで自然に答えます。"
+          "title": "自分だけの声",
+          "description": "5つのTTSエンジンでAIに好みの声を与えましょう。音声で会話し、リップシンクで生きた体験を感じてください。"
         },
         "tools": {
-          "title": "ツールの実行",
-          "description": "ファイル編集、ターミナルコマンド、Web検索。 AIアバター はツールを直接呼び出して作業を完了します。"
+          "title": "OS全体をツールに",
+          "description": "ファイル、ターミナル、Web、ブラウザ — AIがOS自体をツールとして使います。「ファイルを作って」と言えば、本当に作ります。"
         },
         "desktop": {
-          "title": "ワンクリックでインストールと OS",
-          "description": "ワンクリックでデスクトップ アプリをインストールするか、Linux OS イメージを使用して専用の AI 環境を作成します。"
+          "title": "完全なローカルコントロール",
+          "description": "記憶、性格、設定はすべて自分のPCに保存されます。クラウドに依存しない本当の個人AI。USB起動OSイメージも提供。"
         },
         "skills": {
-          "title": "70+スキルエコシステム",
-          "description": "7つの内蔵 + 63のカスタムスキル — 天気、GitHub、Slack、Notion、Spotify、Discordなど。ClawHubコミュニティの5,700+スキルにも対応。"
+          "title": "無限に拡張可能",
+          "description": "70個の内蔵スキル + ClawHub 5,700+コミュニティスキル。天気、GitHub、Slack、Spotify、Discordなど、好きな機能を自由に追加。"
         },
         "discord": {
-          "title": "Discord DM連携",
-          "description": "Discord DMでいつでもどこでもAIアバターとチャット。あなただけのパーソナルボットです。"
+          "title": "いつでもどこでも",
+          "description": "Discord DMで外出先でも自分のAIと会話。PCの前にいなくても、AIがいつもそばにいます。"
         },
         "daemon": {
-          "title": "OpenClaw Gateway内蔵",
-          "description": "実績あるOpenClawゲートウェイデーモンと5,700+スキルエコシステムを搭載。CLIセットアップ不要 — Naiaアカウントでインストール即利用可能。"
+          "title": "常に稼働するAI",
+          "description": "OpenClawゲートウェイがバックグラウンドで常時稼働。アプリを閉じてもAIは生き続け、メッセージを受信し、作業を実行します。"
         }
       }
     },
     "comparison": {
-      "title": "Naiaの比較",
-      "subtitle": "既存のAIツールとの違いをご確認ください",
-      "headers": { "category": "カテゴリ", "others": "その他", "naia": "Naia" },
+      "title": "なぜNaiaなのか",
+      "subtitle": "既存のAIツールは「ツール」です。Naiaは「自分だけのAI」です。",
+      "headers": { "category": "分類", "others": "既存のAIツール", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "UI", "others": "IDE / ターミナル / チャットウィンドウ", "naia": "デスクトップアプリ + 3Dアバター" },
-        "target": { "category": "対象", "others": "開発者のみ", "naia": "誰でも（7ステップオンボーディング）" },
-        "llm": { "category": "LLM", "others": "単一プロバイダー", "naia": "7つのプロバイダー、いつでも切替" },
-        "avatar": { "category": "アバター", "others": "なし", "naia": "VRM 3D + 感情 + リップシンク" },
-        "skills": { "category": "スキル", "others": "限定的なツール", "naia": "70個内蔵 + 5,700+コミュニティ" },
-        "deploy": { "category": "デプロイ", "others": "npm / brew / pip", "naia": "Flatpak、AppImage、DEB、RPM、OSイメージ" },
-        "voice": { "category": "音声", "others": "テキストのみまたは基本TTS", "naia": "TTS 5社 + STT + リップシンク" },
+        "ui": { "category": "哲学", "others": "AIをツールとして使う", "naia": "AIにOSを与え、共に暮らす" },
+        "target": { "category": "対象", "others": "開発者専用", "naia": "誰でも — 自分だけのAIを求めるすべての人" },
+        "llm": { "category": "AI選択権", "others": "プラットフォームが決定", "naia": "クラウド7種 + ローカルAI、自分で決定" },
+        "avatar": { "category": "アバター", "others": "なし", "naia": "VRM 3Dキャラクター + 感情 + リップシンク" },
+        "skills": { "category": "データ主権", "others": "クラウド依存", "naia": "記憶・性格・設定すべてローカル保存" },
+        "deploy": { "category": "デプロイ", "others": "npm / brew / pip", "naia": "アプリインストールまたはUSB起動OS" },
+        "voice": { "category": "音声", "others": "テキストのみまたは基本TTS", "naia": "5つのTTS + STT + 自分だけの声" },
         "i18n": { "category": "多言語", "others": "英語のみ", "naia": "14言語" },
-        "platform": { "category": "プラットフォーム", "others": "macOS専用 / CLI", "naia": "Linuxネイティブ、GUIワンクリックインストール" },
-        "cost": { "category": "コスト", "others": "別途APIキーが必要", "naia": "Naiaアカウント — APIキー不要、クレジットで利用" }
+        "platform": { "category": "プラットフォーム", "others": "macOS / CLI / Web", "naia": "Linuxネイティブデスクトップ + 将来：Physical AI" },
+        "cost": { "category": "コスト", "others": "別途APIキーが必要", "naia": "無料クレジットで開始、ローカルAIは完全無料" }
       }
     },
     "pricing": {

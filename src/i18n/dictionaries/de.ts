@@ -4,7 +4,7 @@ const de: Dictionary = {
   "locale": "de",
   "meta": {
     "title": "Naia",
-    "description": "Naia — Ein Linux-AI-OS basierend auf OpenClaws 5.700+ Skill-Ökosystem. 3D-AI-Avatar, 7 LLM-Anbieter, Sprachchat, Discord DM. Keine API-Schlüssel nötig.",
+    "description": "Naia — Dein persönliches AI OS, in dem deine eigene KI lebt. Volle Kontrolle über KI-Wahl, Erinnerung, Persönlichkeit, Stimme und Avatar. Vom Desktop bis zum Physical AI.",
   },
   "common": {
     "loading": "Laden...",
@@ -56,64 +56,64 @@ const de: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "Der fortschrittlichste KI-Agent als perfektes Betriebssystem.",
-      "subtitle": "Ein Linux-KI-OS mit OpenClaws 5.700+ Skills-Ökosystem. Sofort starten mit einem Naia-Konto — kein API-Schlüssel nötig. Chatten Sie via Discord-DM, jederzeit und überall.",
+      "title": "Deine KI lebt hier. Dein OS, deine Regeln.",
+      "subtitle": "Ein persönliches KI-OS, das dir die volle Kontrolle gibt — wähle deine KI (einschließlich lokaler Modelle), forme ihre Erinnerung und Persönlichkeit, gestalte ihre Stimme und ihren Avatar. Alles gehört dir, alles bleibt lokal.",
       "cta": "Starten Sie kostenlos durch",
       "secondaryCta": "Herunterladen"
     },
     "features": {
-      "title": "Was Naia so besonders macht",
-      "subtitle": "Erleben Sie die Leistungsfähigkeit von KI-Agenten – keine Programmierung erforderlich",
+      "title": "Deine KI, deine Regeln",
+      "subtitle": "Volle Souveränität über deine KI — Wahlfreiheit, Kontrolle und Eigentum zurück in deinen Händen",
       "items": {
         "companion": {
-          "title": "KI-Avatar",
-          "description": "Ein 3D-Avatar mit Emotionen direkt auf Ihrem Desktop. Der KI-Avatar reagiert auf Gespräche mit Mimik und Augenkontakt."
+          "title": "Dein eigener KI-Avatar",
+          "description": "Erstelle deinen KI-Charakter mit VRM 3D-Avataren. Passe Aussehen, Ausdrücke und Emotionen frei an. Zukunft: Echtzeit-Video-Avatare, Singen, gemeinsam Spielen."
         },
         "multiProvider": {
-          "title": "7 KI-Anbieter unterstützt",
-          "description": "Gemini, Claude, GPT, Grok, zAI, Ollama, Claude Code CLI — wechseln Sie frei mit Credits oder Ihren eigenen API-Schlüsseln."
+          "title": "Freie KI-Wahl",
+          "description": "7 Cloud-Anbieter (Gemini, Claude, GPT, Grok, zAI) bis hin zu lokaler KI (Ollama). Dein OS bestimmt nicht deine KI. Du entscheidest."
         },
         "voice": {
-          "title": "Sprachgespräche",
-          "description": "Fragen Sie per Stimme und erhalten Sie gesprochene Antworten. Der KI-Avatar antwortet auf natürliche Weise mit lippensynchroner Animation."
+          "title": "Die Stimme deiner KI",
+          "description": "Gib deiner KI mit 5 TTS-Engines die Stimme, die du willst. Sprich natürlich und erlebe sie mit Lippensynchronisation zum Leben erwachen."
         },
         "tools": {
-          "title": "Werkzeugausführung",
-          "description": "Dateibearbeitung, Terminalbefehle, Websuche. Der KI-Avatar ruft Tools direkt auf, um die Arbeit zu erledigen."
+          "title": "Das gesamte OS als Werkzeug",
+          "description": "Dateien, Terminal, Web, Browser — deine KI nutzt das OS selbst als Werkzeug. Sage „erstelle eine Datei" und sie tut es wirklich."
         },
         "desktop": {
-          "title": "Ein-Klick-Installation und Betriebssystem",
-          "description": "Installieren Sie die Desktop-App mit einem Klick oder erstellen Sie eine dedizierte KI-Umgebung mit dem Linux-Betriebssystem-Image."
+          "title": "Vollständige lokale Kontrolle",
+          "description": "Erinnerung, Persönlichkeit, Einstellungen — alles auf deinem Rechner gespeichert. Eine wirklich persönliche KI, frei von Cloud-Abhängigkeit. Bootfähiges USB-OS-Image verfügbar."
         },
         "skills": {
-          "title": "70+ Skills-Ökosystem",
-          "description": "7 integrierte + 63 benutzerdefinierte Skills — Wetter, GitHub, Slack, Notion, Spotify, Discord und mehr. Kompatibel mit 5.700+ ClawHub-Community-Skills."
+          "title": "Unendlich erweiterbar",
+          "description": "70 integrierte Skills + 5.700+ ClawHub-Community-Skills. Wetter, GitHub, Slack, Spotify, Discord — füge hinzu, was du brauchst."
         },
         "discord": {
-          "title": "Discord-DM-Integration",
-          "description": "Chatten Sie jederzeit und überall über Discord-DM mit Ihrem KI-Avatar. Ein persönlicher Bot, der nur mit Ihnen spricht."
+          "title": "Immer an deiner Seite",
+          "description": "Chatte mit deiner KI per Discord-DM, auch wenn du unterwegs bist. Deine KI ist immer bei dir."
         },
         "daemon": {
-          "title": "OpenClaw Gateway integriert",
-          "description": "Angetrieben vom bewährten OpenClaw-Gateway-Daemon und einem Ökosystem mit 5.700+ Skills. Kein CLI-Setup — einfach installieren und mit Ihrem Naia-Konto loslegen."
+          "title": "Immer aktive KI",
+          "description": "Das OpenClaw-Gateway läuft rund um die Uhr im Hintergrund. Auch wenn du die App schließt, bleibt deine KI aktiv — empfängt Nachrichten und erledigt Aufgaben."
         }
       }
     },
     "comparison": {
-      "title": "Naia im Vergleich",
-      "subtitle": "Erfahren Sie, was Naia von bestehenden KI-Tools unterscheidet",
-      "headers": { "category": "Kategorie", "others": "Andere", "naia": "Naia" },
+      "title": "Warum Naia",
+      "subtitle": "Andere KI-Tools sind nur „Werkzeuge". Naia ist „deine eigene KI".",
+      "headers": { "category": "Kategorie", "others": "Andere KI-Tools", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "Oberfläche", "others": "IDE / Terminal / Chat-Fenster", "naia": "Desktop-App + 3D-Avatar" },
-        "target": { "category": "Zielgruppe", "others": "Nur Entwickler", "naia": "Alle (7-Schritte-Onboarding)" },
-        "llm": { "category": "LLM", "others": "Einzelner Anbieter", "naia": "7 Anbieter, jederzeit wechseln" },
-        "avatar": { "category": "Avatar", "others": "Keiner", "naia": "VRM 3D + Emotionen + Lippensynchronisation" },
-        "skills": { "category": "Skills", "others": "Begrenzte Tools", "naia": "70 integriert + 5.700+ Community" },
-        "deploy": { "category": "Bereitstellung", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, OS-Image" },
-        "voice": { "category": "Stimme", "others": "Nur Text oder einfaches TTS", "naia": "5 TTS-Anbieter + STT + Lippensynchronisation" },
+        "ui": { "category": "Philosophie", "others": "KI als Werkzeug nutzen", "naia": "Der KI ein OS geben. Zusammen leben." },
+        "target": { "category": "Zielgruppe", "others": "Nur Entwickler", "naia": "Jeder, der seine eigene KI möchte" },
+        "llm": { "category": "KI-Wahl", "others": "Die Plattform entscheidet", "naia": "7 Cloud + lokale KI — du entscheidest" },
+        "avatar": { "category": "Avatar", "others": "Keiner", "naia": "VRM 3D-Charakter + Emotionen + Lip-Sync" },
+        "skills": { "category": "Datensouveränität", "others": "Cloud-gebunden", "naia": "Erinnerung, Persönlichkeit, Einstellungen alles lokal" },
+        "deploy": { "category": "Bereitstellung", "others": "npm / brew / pip", "naia": "App installieren oder bootfähiges USB-OS" },
+        "voice": { "category": "Stimme", "others": "Nur Text oder einfaches TTS", "naia": "5 TTS + STT + die Stimme deiner KI" },
         "i18n": { "category": "Sprachen", "others": "Nur Englisch", "naia": "14 Sprachen" },
-        "platform": { "category": "Plattform", "others": "Nur macOS / CLI", "naia": "Linux-nativ, GUI-Ein-Klick-Installation" },
-        "cost": { "category": "Kosten", "others": "Separate API-Schlüssel erforderlich", "naia": "Naia-Konto — kein API-Schlüssel, nur Credits" }
+        "platform": { "category": "Plattform", "others": "macOS / CLI / Web", "naia": "Linux-nativer Desktop + Zukunft: Physical AI" },
+        "cost": { "category": "Kosten", "others": "Separate API-Schlüssel erforderlich", "naia": "Gratis-Credits zum Start, lokale KI komplett kostenlos" }
       }
     },
     "pricing": {

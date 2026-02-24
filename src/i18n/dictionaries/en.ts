@@ -4,7 +4,7 @@ const en: Dictionary = {
   locale: "en",
   meta: {
     title: "Naia",
-    description: "Naia — A Linux AI OS powered by OpenClaw's 5,700+ skill ecosystem. 3D AI avatar, 7 LLM providers, voice chat, Discord DM. No API keys needed.",
+    description: "Naia — Your personal AI OS where your own AI lives. Full control over AI choice, memory, personality, voice, and avatar. From desktop to Physical AI.",
   },
   common: {
     loading: "Loading...",
@@ -56,73 +56,73 @@ const en: Dictionary = {
   },
   home: {
     hero: {
-      title: "The most advanced AI agent, as the perfect OS.",
+      title: "Your AI lives here. Your OS, your rules.",
       subtitle:
-        "A Linux AI OS powered by OpenClaw's 5,700+ skill ecosystem. Start instantly with a Naia account — no API keys. Chat via Discord DM, anytime, anywhere.",
+        "A personal AI OS that gives you full control — choose your AI (including local models), shape its memory and personality, customize its voice and avatar. All yours, all local.",
       cta: "Get Started Free",
       secondaryCta: "Download",
     },
     features: {
-      title: "What makes naia special",
-      subtitle: "Experience the power of AI agents — no coding required",
+      title: "Your AI, Your Rules",
+      subtitle: "Full sovereignty over your AI — choice, control, and ownership back in your hands",
       items: {
         companion: {
-          title: "AI Avatar",
+          title: "Your Own AI Avatar",
           description:
-            "A 3D avatar with emotions, right on your desktop. The AI avatar reacts to conversations with facial expressions and eye contact.",
+            "Create your AI character with VRM 3D avatars. Customize appearance, expressions, and emotions. Future: real-time video avatars, singing, gaming together.",
         },
         multiProvider: {
-          title: "7 AI Providers Supported",
+          title: "Freedom of AI Choice",
           description:
-            "Gemini, Claude, GPT, Grok, zAI, Ollama, Claude Code CLI — switch freely with credits or your own API keys.",
+            "7 cloud providers (Gemini, Claude, GPT, Grok, zAI) to local AI (Ollama). Your OS doesn't dictate your AI. You choose.",
         },
         voice: {
-          title: "Voice Conversations",
+          title: "Your AI's Voice",
           description:
-            "Ask by voice, get spoken responses. The AI avatar answers naturally with lip-synced animation.",
+            "Give your AI the voice you want with 5 TTS engines. Speak naturally and watch it come alive with lip-sync.",
         },
         tools: {
-          title: "Tool Execution",
+          title: "The Entire OS as a Tool",
           description:
-            "File editing, terminal commands, web search. The AI avatar calls tools directly to get work done.",
+            "Files, terminal, web, browser — your AI uses the OS itself as its tool. Say 'create a file' and it actually does.",
         },
         desktop: {
-          title: "One-click Install & OS",
+          title: "Complete Local Control",
           description:
-            "Install the desktop app with one click, or create a dedicated AI environment with the Linux OS image.",
+            "Memory, personality, settings — all stored on your machine. A truly personal AI, free from cloud dependency. Bootable USB OS image available.",
         },
         skills: {
-          title: "70+ Skills Ecosystem",
+          title: "Infinitely Extensible",
           description:
-            "7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClawHub community skills.",
+            "70 built-in skills + 5,700+ ClawHub community skills. Weather, GitHub, Slack, Spotify, Discord — add whatever you need.",
         },
         discord: {
-          title: "Discord DM Integration",
+          title: "Always With You",
           description:
-            "Chat with your AI avatar via Discord DM, anytime, anywhere. A personal bot that only talks to you.",
+            "Chat with your AI via Discord DM even when you're away. Your AI is always by your side.",
         },
         daemon: {
-          title: "OpenClaw Gateway Built-in",
+          title: "Always-On AI",
           description:
-            "Powered by OpenClaw's battle-tested gateway daemon and 5,700+ skill ecosystem. No CLI setup — just install and go with your Naia account.",
+            "OpenClaw gateway runs in the background 24/7. Even when you close the app, your AI stays alive — receiving messages and doing work.",
         },
       },
     },
     comparison: {
-      title: "How Naia compares",
-      subtitle: "See what sets Naia apart from existing AI tools",
-      headers: { category: "Category", others: "Others", naia: "Naia" },
+      title: "Why Naia",
+      subtitle: "Other AI tools are just 'tools'. Naia is 'your own AI'.",
+      headers: { category: "Category", others: "Other AI Tools", naia: "Naia" },
       rows: {
-        ui: { category: "UI", others: "IDE / Terminal / Chat window", naia: "Desktop app + 3D avatar" },
-        target: { category: "Target", others: "Developers only", naia: "Everyone (7-step onboarding)" },
-        llm: { category: "LLM", others: "Single provider", naia: "7 providers, switch anytime" },
-        avatar: { category: "Avatar", others: "None", naia: "VRM 3D with emotions & lip-sync" },
-        skills: { category: "Skills", others: "Limited tools", naia: "70 built-in + 5,700+ community" },
-        deploy: { category: "Deployment", others: "npm / brew / pip", naia: "Flatpak, AppImage, DEB, RPM, OS image" },
-        voice: { category: "Voice", others: "Text only or basic TTS", naia: "5 TTS providers + STT + lip-sync" },
+        ui: { category: "Philosophy", others: "Use AI as a tool", naia: "Give AI the OS. Live together." },
+        target: { category: "Target", others: "Developers only", naia: "Everyone who wants their own AI" },
+        llm: { category: "AI Choice", others: "Platform decides", naia: "7 cloud + local AI — you decide" },
+        avatar: { category: "Avatar", others: "None", naia: "VRM 3D character + emotions + lip-sync" },
+        skills: { category: "Data Sovereignty", others: "Cloud-locked", naia: "Memory, personality, settings all local" },
+        deploy: { category: "Deployment", others: "npm / brew / pip", naia: "App install or bootable USB OS" },
+        voice: { category: "Voice", others: "Text only or basic TTS", naia: "5 TTS + STT + your AI's own voice" },
         i18n: { category: "Languages", others: "English only", naia: "14 languages" },
-        platform: { category: "Platform", others: "macOS only / CLI", naia: "Linux native, GUI one-click install" },
-        cost: { category: "Cost", others: "Separate API keys required", naia: "Naia account — no API key, just credits" },
+        platform: { category: "Platform", others: "macOS / CLI / Web", naia: "Linux native desktop + future: Physical AI" },
+        cost: { category: "Cost", others: "Separate API keys required", naia: "Free credits to start, local AI completely free" },
       },
     },
     pricing: {

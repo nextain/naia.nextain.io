@@ -4,7 +4,7 @@ const pt: Dictionary = {
   "locale": "pt",
   "meta": {
     "title": "Naia",
-    "description": "Naia — Um SO Linux IA baseado no ecossistema de 5.700+ habilidades OpenClaw. Avatar IA 3D, 7 provedores LLM, chat por voz, Discord DM. Sem chaves de API.",
+    "description": "Naia — Seu SO de IA pessoal onde sua própria IA vive. Controle total sobre escolha de IA, memória, personalidade, voz e avatar. Do desktop à IA física.",
   },
   "common": {
     "loading": "Carregando...",
@@ -56,64 +56,64 @@ const pt: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "O agente de IA mais avançado, como o sistema operacional perfeito.",
-      "subtitle": "Um OS de IA Linux com o ecossistema de 5.700+ habilidades do OpenClaw. Comece instantaneamente com uma conta Naia — sem chaves API. Converse via Discord DM, a qualquer hora.",
+      "title": "Sua IA vive aqui. Seu SO, suas regras.",
+      "subtitle": "Um SO de IA pessoal que te dá controle total — escolha sua IA (incluindo modelos locais), molde sua memória e personalidade, personalize sua voz e avatar. Tudo seu, tudo local.",
       "cta": "Comece gratuitamente",
       "secondaryCta": "Baixar"
     },
     "features": {
-      "title": "O que torna a naia especial",
-      "subtitle": "Experimente o poder dos agentes de IA — sem necessidade de codificação",
+      "title": "Sua IA, suas regras",
+      "subtitle": "Soberania total sobre sua IA — escolha, controle e propriedade de volta nas suas mãos",
       "items": {
         "companion": {
-          "title": "Avatar de IA",
-          "description": "Um avatar 3D com emoções, direto na sua área de trabalho. O avatar de IA reage às conversas com expressões faciais e contato visual."
+          "title": "Seu próprio avatar de IA",
+          "description": "Crie seu personagem de IA com avatares VRM 3D. Personalize aparência, expressões e emoções. Futuro: avatares de vídeo em tempo real, canto, jogos juntos."
         },
         "multiProvider": {
-          "title": "7 provedores de IA suportados",
-          "description": "Gemini, Claude, GPT, Grok, zAI, Ollama, Claude Code CLI — alterne livremente com créditos ou suas próprias chaves API."
+          "title": "Liberdade de escolha de IA",
+          "description": "7 provedores na nuvem (Gemini, Claude, GPT, Grok, zAI) e IA local (Ollama). Seu SO não dita sua IA. Você escolhe."
         },
         "voice": {
-          "title": "Conversas de voz",
-          "description": "Pergunte por voz e obtenha respostas faladas. O avatar de IA responde naturalmente com animação sincronizada com os lábios."
+          "title": "A voz da sua IA",
+          "description": "Dê à sua IA a voz que você quiser com 5 motores TTS. Fale naturalmente e veja-a ganhar vida com sincronização labial."
         },
         "tools": {
-          "title": "Execução de Ferramenta",
-          "description": "Edição de arquivos, comandos de terminal, pesquisa na web. O avatar de IA chama ferramentas diretamente para realizar o trabalho."
+          "title": "Todo o SO como ferramenta",
+          "description": "Arquivos, terminal, web, navegador — sua IA usa o próprio SO como ferramenta. Diga 'crie um arquivo' e ela realmente faz."
         },
         "desktop": {
-          "title": "Instalação e sistema operacional com um clique",
-          "description": "Instale o aplicativo de desktop com um clique ou crie um ambiente de IA dedicado com a imagem do sistema operacional Linux."
+          "title": "Controle local completo",
+          "description": "Memória, personalidade, configurações — tudo armazenado na sua máquina. Uma IA verdadeiramente pessoal, livre de dependência da nuvem. Imagem USB bootável disponível."
         },
         "skills": {
-          "title": "Ecossistema de 70+ habilidades",
-          "description": "7 integradas + 63 personalizadas — clima, GitHub, Slack, Notion, Spotify, Discord e mais. Compatível com 5.700+ habilidades da comunidade ClawHub."
+          "title": "Infinitamente extensível",
+          "description": "70 habilidades integradas + 5.700+ habilidades da comunidade ClawHub. Clima, GitHub, Slack, Spotify, Discord — adicione o que precisar."
         },
         "discord": {
-          "title": "Integração Discord DM",
-          "description": "Converse com seu avatar de IA por DM do Discord, a qualquer hora, em qualquer lugar. Um bot pessoal que só fala com você."
+          "title": "Sempre com você",
+          "description": "Converse com sua IA pelo Discord DM mesmo quando estiver fora. Sua IA está sempre ao seu lado."
         },
         "daemon": {
-          "title": "OpenClaw Gateway integrado",
-          "description": "Alimentado pelo daemon gateway comprovado do OpenClaw e um ecossistema de 5.700+ habilidades. Sem configuração CLI — instale e use com sua conta Naia."
+          "title": "IA sempre ativa",
+          "description": "O gateway OpenClaw funciona em segundo plano 24/7. Mesmo quando você fecha o app, sua IA continua viva — recebendo mensagens e realizando tarefas."
         }
       }
     },
     "comparison": {
-      "title": "Comparação do Naia",
-      "subtitle": "Veja o que diferencia o Naia das ferramentas de IA existentes",
-      "headers": { "category": "Categoria", "others": "Outros", "naia": "Naia" },
+      "title": "Por que Naia",
+      "subtitle": "Outras ferramentas de IA são apenas 'ferramentas'. Naia é 'sua própria IA'.",
+      "headers": { "category": "Categoria", "others": "Outras ferramentas de IA", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "Interface", "others": "IDE / Terminal / Janela de chat", "naia": "App desktop + avatar 3D" },
-        "target": { "category": "Público", "others": "Apenas desenvolvedores", "naia": "Todos (onboarding de 7 etapas)" },
-        "llm": { "category": "LLM", "others": "Provedor único", "naia": "7 provedores, troque a qualquer momento" },
-        "avatar": { "category": "Avatar", "others": "Nenhum", "naia": "VRM 3D + emoções + sincronização labial" },
-        "skills": { "category": "Habilidades", "others": "Ferramentas limitadas", "naia": "70 integradas + 5.700+ comunidade" },
-        "deploy": { "category": "Implantação", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, imagem OS" },
-        "voice": { "category": "Voz", "others": "Apenas texto ou TTS básico", "naia": "5 provedores TTS + STT + sincronização labial" },
+        "ui": { "category": "Filosofia", "others": "Usar IA como ferramenta", "naia": "Dar à IA o SO. Viver juntos." },
+        "target": { "category": "Público", "others": "Apenas desenvolvedores", "naia": "Todos que querem sua própria IA" },
+        "llm": { "category": "Escolha de IA", "others": "A plataforma decide", "naia": "7 na nuvem + IA local — você decide" },
+        "avatar": { "category": "Avatar", "others": "Nenhum", "naia": "Personagem VRM 3D + emoções + sincronização labial" },
+        "skills": { "category": "Soberania de dados", "others": "Preso à nuvem", "naia": "Memória, personalidade, configurações — tudo local" },
+        "deploy": { "category": "Implantação", "others": "npm / brew / pip", "naia": "Instalação do app ou USB bootável com SO" },
+        "voice": { "category": "Voz", "others": "Apenas texto ou TTS básico", "naia": "5 TTS + STT + a voz própria da sua IA" },
         "i18n": { "category": "Idiomas", "others": "Apenas inglês", "naia": "14 idiomas" },
-        "platform": { "category": "Plataforma", "others": "Apenas macOS / CLI", "naia": "Linux nativo, instalação GUI com um clique" },
-        "cost": { "category": "Custo", "others": "Chaves API separadas necessárias", "naia": "Conta Naia — sem chave API, apenas créditos" }
+        "platform": { "category": "Plataforma", "others": "macOS / CLI / Web", "naia": "Desktop Linux nativo + futuro: IA física" },
+        "cost": { "category": "Custo", "others": "Chaves API separadas necessárias", "naia": "Créditos grátis para começar, IA local completamente grátis" }
       }
     },
     "pricing": {

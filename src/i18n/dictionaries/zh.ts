@@ -4,7 +4,7 @@ const zh: Dictionary = {
   "locale": "zh",
   "meta": {
     "title": "奈亚",
-    "description": "Naia — 基于OpenClaw 5,700+技能生态系统的Linux AI OS。3D AI头像、7个LLM提供商、语音聊天、Discord DM。无需API密钥。",
+    "description": "Naia — 属于你的AI在此鲜活存在的个人AI OS。AI的选择权和完全掌控权交还给你。3D虚拟形象、语音、记忆、性格，一切尽在掌握。",
   },
   "common": {
     "loading": "正在加载...",
@@ -56,64 +56,64 @@ const zh: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "最先进的AI代理，作为完美的操作系统。",
-      "subtitle": "搭载OpenClaw 5,700+技能生态系统的Linux AI OS。用Naia账户即刻启动，无需API密钥。通过Discord私信随时随地对话。",
+      "title": "你的AI在这里鲜活存在，你的OS，你做主。",
+      "subtitle": "一个将AI选择权和掌控权交还给你的个人AI OS。选择你的AI（包括本地模型），塑造它的记忆和性格，定制它的声音和形象。一切属于你，一切在本地。",
       "cta": "免费开始使用",
       "secondaryCta": "下载"
     },
     "features": {
-      "title": "是什么让奈亚如此特别",
-      "subtitle": "体验人工智能代理的力量——无需编码",
+      "title": "你的AI，你的规则",
+      "subtitle": "将AI的选择权、掌控权和所有权交还给你",
       "items": {
         "companion": {
-          "title": "AI助手",
-          "description": "带有情感的 3D 头像就在您的桌面上。 AI助手 通过面部表情和眼神交流对对话做出反应。"
+          "title": "专属AI虚拟形象",
+          "description": "用VRM 3D虚拟形象打造你专属的AI角色。外观、表情、情感表达全部自由定制。未来还将支持实时视频形象、唱歌、一起游戏。"
         },
         "multiProvider": {
-          "title": "7个AI提供商支持",
-          "description": "Gemini、Claude、GPT、Grok、zAI、Ollama、Claude Code CLI — 使用积分或自己的API密钥自由切换。"
+          "title": "AI选择自由",
+          "description": "从7种云端AI（Gemini、Claude、GPT、Grok、zAI）到本地AI（Ollama），用哪个AI不由系统说了算，由你决定。"
         },
         "voice": {
-          "title": "语音对话",
-          "description": "通过语音提问，获得口头答复。 AI助手 通过口型同步动画自然地回答。"
+          "title": "专属声音",
+          "description": "通过5种TTS引擎为你的AI赋予你想要的声音。用语音对话，配合唇形同步感受栩栩如生的体验。"
         },
         "tools": {
-          "title": "工具执行",
-          "description": "文件编辑、终端命令、网络搜索。 AI助手直接调用工具来完成工作。"
+          "title": "整个OS都是工具",
+          "description": "文件、终端、网页、浏览器 — AI把OS本身当作工具。说「帮我创建个文件」，它就真的会创建。"
         },
         "desktop": {
-          "title": "一键安装和操作系统",
-          "description": "一键安装桌面应用程序，或使用 Linux 操作系统映像创建专用的 AI 环境。"
+          "title": "完全本地掌控",
+          "description": "记忆、性格、设置全部保存在你的电脑上。不依赖云端的真正个人AI。还提供USB启动OS镜像。"
         },
         "skills": {
-          "title": "70+技能生态系统",
-          "description": "7个内置 + 63个自定义技能 — 天气、GitHub、Slack、Notion、Spotify、Discord等。兼容ClawHub社区5,700+技能。"
+          "title": "无限扩展",
+          "description": "70个内置技能 + ClawHub 5,700+社区技能。天气、GitHub、Slack、Spotify、Discord等，自由添加你需要的功能。"
         },
         "discord": {
-          "title": "Discord私信集成",
-          "description": "通过Discord私信随时随地与AI助手聊天。专属于您的私人机器人。"
+          "title": "随时随地",
+          "description": "通过Discord私信在外也能和你的AI聊天。即使不在电脑前，AI也始终陪伴在你身边。"
         },
         "daemon": {
-          "title": "内置OpenClaw Gateway",
-          "description": "搭载经过验证的OpenClaw网关守护进程和5,700+技能生态系统。无需CLI设置 — 用Naia账户安装即用。"
+          "title": "永不停歇的AI",
+          "description": "OpenClaw网关在后台持续运行。即使关闭应用，AI依然保持活跃，接收消息，执行任务。"
         }
       }
     },
     "comparison": {
-      "title": "Naia 对比",
-      "subtitle": "了解Naia与现有AI工具的不同之处",
-      "headers": { "category": "类别", "others": "其他工具", "naia": "Naia" },
+      "title": "为什么选择Naia",
+      "subtitle": "现有AI工具只是「工具」。Naia是「你自己的AI」。",
+      "headers": { "category": "类别", "others": "现有AI工具", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "界面", "others": "IDE / 终端 / 聊天窗口", "naia": "桌面应用 + 3D头像" },
-        "target": { "category": "目标用户", "others": "仅开发者", "naia": "所有人（7步引导）" },
-        "llm": { "category": "LLM", "others": "单一提供商", "naia": "7个提供商，随时切换" },
-        "avatar": { "category": "头像", "others": "无", "naia": "VRM 3D + 表情 + 口型同步" },
-        "skills": { "category": "技能", "others": "有限工具", "naia": "70个内置 + 5,700+社区" },
-        "deploy": { "category": "部署", "others": "npm / brew / pip", "naia": "Flatpak、AppImage、DEB、RPM、OS镜像" },
-        "voice": { "category": "语音", "others": "纯文本或基础TTS", "naia": "5家TTS + STT + 口型同步" },
+        "ui": { "category": "理念", "others": "把AI当工具用", "naia": "给AI一个OS，与它共同生活" },
+        "target": { "category": "面向人群", "others": "仅限开发者", "naia": "每一个想拥有自己AI的人" },
+        "llm": { "category": "AI选择权", "others": "平台说了算", "naia": "7种云端 + 本地AI，由你决定" },
+        "avatar": { "category": "虚拟形象", "others": "无", "naia": "VRM 3D角色 + 情感 + 唇形同步" },
+        "skills": { "category": "数据主权", "others": "绑定云端", "naia": "记忆、性格、设置全部本地存储" },
+        "deploy": { "category": "部署", "others": "npm / brew / pip", "naia": "安装应用或USB启动OS" },
+        "voice": { "category": "语音", "others": "纯文本或基础TTS", "naia": "5种TTS + STT + 专属声音" },
         "i18n": { "category": "多语言", "others": "仅英文", "naia": "14种语言" },
-        "platform": { "category": "平台", "others": "仅macOS / CLI", "naia": "Linux原生，GUI一键安装" },
-        "cost": { "category": "费用", "others": "需要单独的API密钥", "naia": "Naia账户 — 无需API密钥，直接用积分" }
+        "platform": { "category": "平台", "others": "macOS / CLI / Web", "naia": "Linux原生桌面 + 未来：Physical AI" },
+        "cost": { "category": "费用", "others": "需另购API密钥", "naia": "免费额度起步，本地AI完全免费" }
       }
     },
     "pricing": {

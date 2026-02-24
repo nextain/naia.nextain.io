@@ -4,7 +4,7 @@ const vi: Dictionary = {
   "locale": "vi",
   "meta": {
     "title": "Naia",
-    "description": "Naia — Hệ điều hành AI Linux dựa trên hệ sinh thái 5.700+ kỹ năng OpenClaw. Avatar AI 3D, 7 nhà cung cấp LLM, trò chuyện giọng nói, Discord DM. Không cần API key.",
+    "description": "Naia — Hệ điều hành AI cá nhân nơi AI của riêng bạn sinh sống. Toàn quyền kiểm soát lựa chọn AI, bộ nhớ, tính cách, giọng nói và avatar. Từ desktop đến AI vật lý.",
   },
   "common": {
     "loading": "Đang tải...",
@@ -56,64 +56,64 @@ const vi: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "Tác nhân AI tiên tiến nhất, là hệ điều hành hoàn hảo.",
-      "subtitle": "Hệ điều hành AI Linux với hệ sinh thái 5.700+ kỹ năng của OpenClaw. Bắt đầu ngay với tài khoản Naia — không cần API key. Trò chuyện qua Discord DM, mọi lúc mọi nơi.",
+      "title": "AI của bạn sống ở đây. Hệ điều hành của bạn, luật lệ của bạn.",
+      "subtitle": "Hệ điều hành AI cá nhân cho bạn toàn quyền kiểm soát — chọn AI của bạn (bao gồm mô hình cục bộ), định hình bộ nhớ và tính cách, tùy chỉnh giọng nói và avatar. Tất cả là của bạn, tất cả ở máy bạn.",
       "cta": "Bắt đầu miễn phí",
       "secondaryCta": "Tải xuống"
     },
     "features": {
-      "title": "Điều gì làm cho Naia trở nên đặc biệt",
-      "subtitle": "Trải nghiệm sức mạnh của tác nhân AI - không cần mã hóa",
+      "title": "AI của bạn, luật lệ của bạn",
+      "subtitle": "Toàn quyền tự chủ với AI — lựa chọn, kiểm soát và sở hữu trở lại tay bạn",
       "items": {
         "companion": {
-          "title": "Avatar AI",
-          "description": "Hình đại diện 3D đầy cảm xúc, ngay trên màn hình của bạn. Avatar AI phản ứng với các cuộc trò chuyện bằng nét mặt và giao tiếp bằng mắt."
+          "title": "Avatar AI của riêng bạn",
+          "description": "Tạo nhân vật AI với avatar VRM 3D. Tùy chỉnh ngoại hình, biểu cảm và cảm xúc. Tương lai: avatar video thời gian thực, hát, chơi game cùng nhau."
         },
         "multiProvider": {
-          "title": "Hỗ trợ 7 nhà cung cấp AI",
-          "description": "Gemini, Claude, GPT, Grok, zAI, Ollama, Claude Code CLI — chuyển đổi tự do bằng tín dụng hoặc khóa API của riêng bạn."
+          "title": "Tự do lựa chọn AI",
+          "description": "7 nhà cung cấp đám mây (Gemini, Claude, GPT, Grok, zAI) đến AI cục bộ (Ollama). Hệ điều hành không áp đặt AI cho bạn. Bạn tự quyết."
         },
         "voice": {
-          "title": "Cuộc trò chuyện bằng giọng nói",
-          "description": "Hỏi bằng giọng nói, nhận câu trả lời bằng giọng nói. Avatar AI trả lời một cách tự nhiên bằng hoạt ảnh nhép."
+          "title": "Giọng nói của AI",
+          "description": "Cho AI của bạn giọng nói mà bạn muốn với 5 engine TTS. Nói chuyện tự nhiên và xem AI sống động với nhép môi."
         },
         "tools": {
-          "title": "Thực thi công cụ",
-          "description": "Chỉnh sửa tập tin, lệnh đầu cuối, tìm kiếm trên web. Avatar AI gọi trực tiếp các công cụ để hoàn thành công việc."
+          "title": "Toàn bộ hệ điều hành là công cụ",
+          "description": "Tập tin, terminal, web, trình duyệt — AI của bạn sử dụng chính hệ điều hành làm công cụ. Nói 'tạo tập tin' và nó thực sự làm điều đó."
         },
         "desktop": {
-          "title": "Cài đặt và hệ điều hành chỉ bằng một cú nhấp chuột",
-          "description": "Cài đặt ứng dụng dành cho máy tính để bàn chỉ bằng một cú nhấp chuột hoặc tạo môi trường AI chuyên dụng với hình ảnh hệ điều hành Linux."
+          "title": "Toàn quyền kiểm soát cục bộ",
+          "description": "Bộ nhớ, tính cách, cài đặt — tất cả lưu trữ trên máy bạn. Một AI thực sự cá nhân, không phụ thuộc đám mây. Có sẵn ảnh USB khởi động."
         },
         "skills": {
-          "title": "Hệ sinh thái 70+ kỹ năng",
-          "description": "7 tích hợp + 63 tùy chỉnh — thời tiết, GitHub, Slack, Notion, Spotify, Discord và hơn thế. Tương thích với 5.700+ kỹ năng cộng đồng ClawHub."
+          "title": "Mở rộng vô hạn",
+          "description": "70 kỹ năng tích hợp + 5.700+ kỹ năng cộng đồng ClawHub. Thời tiết, GitHub, Slack, Spotify, Discord — thêm bất cứ thứ gì bạn cần."
         },
         "discord": {
-          "title": "Tích hợp Discord DM",
-          "description": "Trò chuyện với avatar AI qua Discord DM, mọi lúc, mọi nơi. Một bot cá nhân chỉ trò chuyện với bạn."
+          "title": "Luôn bên bạn",
+          "description": "Trò chuyện với AI qua Discord DM ngay cả khi bạn không ở máy. AI của bạn luôn ở bên cạnh."
         },
         "daemon": {
-          "title": "Tích hợp OpenClaw Gateway",
-          "description": "Được hỗ trợ bởi daemon gateway OpenClaw đã được kiểm chứng và hệ sinh thái 5.700+ kỹ năng. Không cần thiết lập CLI — cài đặt và sử dụng ngay với tài khoản Naia."
+          "title": "AI luôn hoạt động",
+          "description": "Gateway OpenClaw chạy nền 24/7. Ngay cả khi bạn đóng ứng dụng, AI của bạn vẫn sống — nhận tin nhắn và thực hiện công việc."
         }
       }
     },
     "comparison": {
-      "title": "So sánh Naia",
-      "subtitle": "Xem điều gì làm Naia khác biệt so với các công cụ AI hiện có",
-      "headers": { "category": "Danh mục", "others": "Khác", "naia": "Naia" },
+      "title": "Tại sao chọn Naia",
+      "subtitle": "Các công cụ AI khác chỉ là 'công cụ'. Naia là 'AI của riêng bạn'.",
+      "headers": { "category": "Danh mục", "others": "Công cụ AI khác", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "Giao diện", "others": "IDE / Terminal / Cửa sổ chat", "naia": "Ứng dụng desktop + avatar 3D" },
-        "target": { "category": "Đối tượng", "others": "Chỉ nhà phát triển", "naia": "Mọi người (7 bước hướng dẫn)" },
-        "llm": { "category": "LLM", "others": "Nhà cung cấp đơn lẻ", "naia": "7 nhà cung cấp, chuyển đổi bất kỳ lúc nào" },
-        "avatar": { "category": "Avatar", "others": "Không có", "naia": "VRM 3D + cảm xúc + nhép môi" },
-        "skills": { "category": "Kỹ năng", "others": "Công cụ hạn chế", "naia": "70 tích hợp + 5.700+ cộng đồng" },
-        "deploy": { "category": "Triển khai", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, ảnh OS" },
-        "voice": { "category": "Giọng nói", "others": "Chỉ văn bản hoặc TTS cơ bản", "naia": "5 nhà cung cấp TTS + STT + nhép môi" },
+        "ui": { "category": "Triết lý", "others": "Dùng AI như công cụ", "naia": "Cho AI hệ điều hành. Sống cùng nhau." },
+        "target": { "category": "Đối tượng", "others": "Chỉ lập trình viên", "naia": "Tất cả những ai muốn có AI riêng" },
+        "llm": { "category": "Lựa chọn AI", "others": "Nền tảng quyết định", "naia": "7 đám mây + AI cục bộ — bạn quyết định" },
+        "avatar": { "category": "Avatar", "others": "Không có", "naia": "Nhân vật VRM 3D + cảm xúc + nhép môi" },
+        "skills": { "category": "Chủ quyền dữ liệu", "others": "Bị khóa trên đám mây", "naia": "Bộ nhớ, tính cách, cài đặt — tất cả cục bộ" },
+        "deploy": { "category": "Triển khai", "others": "npm / brew / pip", "naia": "Cài ứng dụng hoặc USB khởi động hệ điều hành" },
+        "voice": { "category": "Giọng nói", "others": "Chỉ văn bản hoặc TTS cơ bản", "naia": "5 TTS + STT + giọng nói riêng của AI" },
         "i18n": { "category": "Ngôn ngữ", "others": "Chỉ tiếng Anh", "naia": "14 ngôn ngữ" },
-        "platform": { "category": "Nền tảng", "others": "Chỉ macOS / CLI", "naia": "Linux gốc, cài đặt GUI một cú nhấp" },
-        "cost": { "category": "Chi phí", "others": "Cần khóa API riêng", "naia": "Tài khoản Naia — không cần API key, chỉ cần tín dụng" }
+        "platform": { "category": "Nền tảng", "others": "macOS / CLI / Web", "naia": "Desktop Linux gốc + tương lai: AI vật lý" },
+        "cost": { "category": "Chi phí", "others": "Cần khóa API riêng", "naia": "Tín dụng miễn phí để bắt đầu, AI cục bộ hoàn toàn miễn phí" }
       }
     },
     "pricing": {

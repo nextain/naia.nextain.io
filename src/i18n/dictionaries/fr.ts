@@ -4,7 +4,7 @@ const fr: Dictionary = {
   "locale": "fr",
   "meta": {
     "title": "Naia",
-    "description": "Naia — Un OS Linux IA propulsé par l'écosystème de 5 700+ compétences OpenClaw. Avatar IA 3D, 7 fournisseurs LLM, chat vocal, Discord DM. Sans clé API.",
+    "description": "Naia — Votre OS IA personnel où votre propre IA prend vie. Contrôle total sur le choix d'IA, la mémoire, la personnalité, la voix et l'avatar. Du bureau au Physical AI.",
   },
   "common": {
     "loading": "Chargement...",
@@ -56,64 +56,64 @@ const fr: Dictionary = {
   },
   "home": {
     "hero": {
-      "title": "L'agent IA le plus avancé, comme système d'exploitation parfait.",
-      "subtitle": "Un OS IA Linux propulsé par l'écosystème de 5 700+ compétences d'OpenClaw. Démarrez instantanément avec un compte Naia — sans clé API. Discutez via Discord DM, à tout moment.",
+      "title": "Votre IA vit ici. Votre OS, vos règles.",
+      "subtitle": "Un OS IA personnel qui vous donne le plein contrôle — choisissez votre IA (y compris les modèles locaux), façonnez sa mémoire et sa personnalité, personnalisez sa voix et son avatar. Tout est à vous, tout est en local.",
       "cta": "Commencez gratuitement",
       "secondaryCta": "Télécharger"
     },
     "features": {
-      "title": "Ce qui rend Naia spéciale",
-      "subtitle": "Découvrez la puissance des agents IA – aucun codage requis",
+      "title": "Votre IA, vos règles",
+      "subtitle": "Souveraineté totale sur votre IA — choix, contrôle et propriété entre vos mains",
       "items": {
         "companion": {
-          "title": "Avatar IA",
-          "description": "Un avatar 3D plein d'émotions, directement sur votre bureau. L'avatar IA réagit aux conversations avec des expressions faciales et un contact visuel."
+          "title": "Votre propre avatar IA",
+          "description": "Créez votre personnage IA avec des avatars VRM 3D. Personnalisez l'apparence, les expressions et les émotions. À venir : avatars vidéo en temps réel, chant, jeux ensemble."
         },
         "multiProvider": {
-          "title": "7 fournisseurs d'IA supportés",
-          "description": "Gemini, Claude, GPT, Grok, zAI, Ollama, Claude Code CLI — basculez librement avec des crédits ou vos propres clés API."
+          "title": "Liberté de choix d'IA",
+          "description": "7 fournisseurs cloud (Gemini, Claude, GPT, Grok, zAI) jusqu'à l'IA locale (Ollama). Votre OS ne dicte pas votre IA. C'est vous qui choisissez."
         },
         "voice": {
-          "title": "Conversations vocales",
-          "description": "Demandez vocalement, obtenez des réponses orales. L'avatar IA répond naturellement avec une animation synchronisée sur les lèvres."
+          "title": "La voix de votre IA",
+          "description": "Donnez à votre IA la voix que vous souhaitez grâce à 5 moteurs TTS. Parlez naturellement et regardez-la prendre vie avec la synchronisation labiale."
         },
         "tools": {
-          "title": "Exécution des outils",
-          "description": "Édition de fichiers, commandes de terminal, recherche sur le Web. L'avatar IA appelle directement les outils pour effectuer le travail."
+          "title": "L'OS entier comme outil",
+          "description": "Fichiers, terminal, web, navigateur — votre IA utilise l'OS lui-même comme outil. Dites « crée un fichier » et elle le fait vraiment."
         },
         "desktop": {
-          "title": "Installation et système d'exploitation en un clic",
-          "description": "Installez l'application de bureau en un seul clic ou créez un environnement IA dédié avec l'image du système d'exploitation Linux."
+          "title": "Contrôle local complet",
+          "description": "Mémoire, personnalité, paramètres — tout est stocké sur votre machine. Une IA vraiment personnelle, libre de toute dépendance au cloud. Image OS bootable sur USB disponible."
         },
         "skills": {
-          "title": "Écosystème de 70+ compétences",
-          "description": "7 intégrées + 63 personnalisées — météo, GitHub, Slack, Notion, Spotify, Discord, et plus. Compatible avec 5 700+ compétences de la communauté ClawHub."
+          "title": "Extensible à l'infini",
+          "description": "70 compétences intégrées + 5 700+ compétences communautaires ClawHub. Météo, GitHub, Slack, Spotify, Discord — ajoutez tout ce dont vous avez besoin."
         },
         "discord": {
-          "title": "Intégration Discord DM",
-          "description": "Discutez avec votre avatar IA par DM Discord, à tout moment, n'importe où. Un bot personnel qui ne parle qu'à vous."
+          "title": "Toujours avec vous",
+          "description": "Discutez avec votre IA via Discord DM même quand vous êtes loin de votre PC. Votre IA est toujours à vos côtés."
         },
         "daemon": {
-          "title": "OpenClaw Gateway intégré",
-          "description": "Propulsé par le démon gateway OpenClaw éprouvé et un écosystème de 5 700+ compétences. Pas de configuration CLI — installez et utilisez avec votre compte Naia."
+          "title": "IA toujours active",
+          "description": "La passerelle OpenClaw tourne en arrière-plan 24h/24. Même quand vous fermez l'application, votre IA reste active — elle reçoit des messages et exécute des tâches."
         }
       }
     },
     "comparison": {
-      "title": "Comparaison de Naia",
-      "subtitle": "Découvrez ce qui distingue Naia des outils IA existants",
-      "headers": { "category": "Catégorie", "others": "Autres", "naia": "Naia" },
+      "title": "Pourquoi Naia",
+      "subtitle": "Les autres outils IA sont de simples « outils ». Naia, c'est « votre propre IA ».",
+      "headers": { "category": "Catégorie", "others": "Autres outils IA", "naia": "Naia" },
       "rows": {
-        "ui": { "category": "Interface", "others": "IDE / Terminal / Fenêtre de chat", "naia": "Application de bureau + avatar 3D" },
-        "target": { "category": "Public", "others": "Développeurs uniquement", "naia": "Tout le monde (7 étapes d'intégration)" },
-        "llm": { "category": "LLM", "others": "Fournisseur unique", "naia": "7 fournisseurs, changement à tout moment" },
-        "avatar": { "category": "Avatar", "others": "Aucun", "naia": "VRM 3D + émotions + synchronisation labiale" },
-        "skills": { "category": "Compétences", "others": "Outils limités", "naia": "70 intégrées + 5 700+ communauté" },
-        "deploy": { "category": "Déploiement", "others": "npm / brew / pip", "naia": "Flatpak, AppImage, DEB, RPM, image OS" },
-        "voice": { "category": "Voix", "others": "Texte uniquement ou TTS de base", "naia": "5 fournisseurs TTS + STT + synchronisation labiale" },
+        "ui": { "category": "Philosophie", "others": "Utiliser l'IA comme outil", "naia": "Donner un OS à l'IA. Vivre ensemble." },
+        "target": { "category": "Public", "others": "Développeurs uniquement", "naia": "Tous ceux qui veulent leur propre IA" },
+        "llm": { "category": "Choix d'IA", "others": "La plateforme décide", "naia": "7 cloud + IA locale — vous décidez" },
+        "avatar": { "category": "Avatar", "others": "Aucun", "naia": "Personnage VRM 3D + émotions + lip-sync" },
+        "skills": { "category": "Souveraineté des données", "others": "Dépendance au cloud", "naia": "Mémoire, personnalité, paramètres tout en local" },
+        "deploy": { "category": "Déploiement", "others": "npm / brew / pip", "naia": "Installation d'app ou OS bootable USB" },
+        "voice": { "category": "Voix", "others": "Texte seul ou TTS basique", "naia": "5 TTS + STT + la voix de votre IA" },
         "i18n": { "category": "Langues", "others": "Anglais uniquement", "naia": "14 langues" },
-        "platform": { "category": "Plateforme", "others": "macOS uniquement / CLI", "naia": "Linux natif, installation GUI en un clic" },
-        "cost": { "category": "Coût", "others": "Clés API séparées requises", "naia": "Compte Naia — pas de clé API, juste des crédits" }
+        "platform": { "category": "Plateforme", "others": "macOS / CLI / Web", "naia": "Bureau Linux natif + futur : Physical AI" },
+        "cost": { "category": "Coût", "others": "Clés API séparées requises", "naia": "Crédits gratuits pour commencer, IA locale entièrement gratuite" }
       }
     },
     "pricing": {
