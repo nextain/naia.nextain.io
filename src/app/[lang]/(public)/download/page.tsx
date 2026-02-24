@@ -79,15 +79,9 @@ export default async function DownloadPage({
             <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
             {d.naiaOs.note}
           </p>
-          <Button className="w-full" asChild>
-            <Link
-              href={`https://github.com/${GITHUB_REPO}/actions`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Download className="mr-2 h-4 w-4" />
-              {d.naiaOs.cta}
-            </Link>
+          <Button className="w-full" disabled>
+            <Download className="mr-2 h-4 w-4" />
+            {d.naiaOs.cta} — {dict.common.comingSoon}
           </Button>
         </CardContent>
       </Card>
@@ -126,11 +120,9 @@ export default async function DownloadPage({
                     <code>{fmt.command}</code>
                   </pre>
                 </div>
-                <Button className="w-full" variant="outline" asChild>
-                  <Link href={DOWNLOAD_URLS[key]} target="_blank" rel="noreferrer">
-                    <Download className="mr-2 h-4 w-4" />
-                    {fmt.name} {d.version}
-                  </Link>
+                <Button className="w-full" variant="outline" disabled>
+                  <Download className="mr-2 h-4 w-4" />
+                  {fmt.name} — {dict.common.comingSoon}
                 </Button>
               </CardContent>
             </Card>
