@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ar: Dictionary = {
   "locale": "ar",
   "meta": {
-    "title": "نايا",
-    "description": "Naia — نظام تشغيل AI الشخصي حيث يعيش ذكاؤك الاصطناعي. تحكم كامل في اختيار AI، الذاكرة، الشخصية، الصوت، والأفاتار. من سطح المكتب إلى Physical AI.",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "ذكاؤك الاصطناعي يعيش هنا. مفتوح المصدر، من السحابة الى AI محلي — انت تختار. افاتار VRM 3D مع دردشة صوتية، 70+ مهارة، OpenClaw AI gateway، الذاكرة والشخصية على جهازك. Linux امن وجاهز لـ Steam حيث يعيش ذكاؤك الاصطناعي.",
   },
   "common": {
     "loading": "جار التحميل...",

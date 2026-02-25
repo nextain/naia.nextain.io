@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const ko: Dictionary = {
   locale: "ko",
   meta: {
-    title: "Naia",
-    description: "Naia — 나만의 AI가 살아있는 개인 AI OS. AI 선택권과 완벽한 통제권을 당신에게. 3D 아바타, 음성, 기억, 성격까지 모두 내 손안에.",
+    title: "Naia — The Next Generation AI OS",
+    description: "나만의 AI가 살아있는 개인 AI OS. 오픈소스, 클라우드부터 로컬 AI까지 자유롭게. VRM 3D 아바타와 음성 대화, 70+ 스킬, OpenClaw AI 게이트웨이, 기억과 성격 모두 내 컴퓨터에. Steam 게이밍이 되는 안전한 Linux 위의 AI.",
   },
   common: {
     loading: "로딩 중...",

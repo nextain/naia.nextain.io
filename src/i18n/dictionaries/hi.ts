@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const hi: Dictionary = {
   "locale": "hi",
   "meta": {
-    "title": "नाया",
-    "description": "Naia — आपका निजी AI OS जहां आपका अपना AI रहता है। AI चयन, मेमोरी, व्यक्तित्व, आवाज़ और अवतार पर पूर्ण नियंत्रण। डेस्कटॉप से Physical AI तक।",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "आपका AI यहां रहता है। ओपन सोर्स, क्लाउड से लोकल AI तक — आप चुनते हैं। VRM 3D अवतार के साथ वॉइस चैट, 70+ स्किल, OpenClaw AI गेटवे, मेमोरी और व्यक्तित्व आपकी मशीन पर। Steam-तैयार सुरक्षित Linux जहां आपका AI रहता है।",
   },
   "common": {
     "loading": "लोड हो रहा है...",

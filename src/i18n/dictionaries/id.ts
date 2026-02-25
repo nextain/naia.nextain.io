@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const id: Dictionary = {
   "locale": "id",
   "meta": {
-    "title": "Naia",
-    "description": "Naia — OS AI personal tempat AI Anda tinggal. Kendali penuh atas pilihan AI, memori, kepribadian, suara, dan avatar. Dari desktop hingga Physical AI.",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "AI Anda tinggal di sini. Open source, dari cloud ke AI lokal — Anda memilih. Avatar VRM 3D dengan voice chat, 70+ keterampilan, OpenClaw AI gateway, memori dan kepribadian di mesin Anda. Linux yang aman dan siap Steam tempat AI Anda tinggal.",
   },
   "common": {
     "loading": "Memuat...",

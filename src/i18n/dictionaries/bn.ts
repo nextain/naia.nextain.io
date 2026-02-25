@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const bn: Dictionary = {
   "locale": "bn",
   "meta": {
-    "title": "নায়া",
-    "description": "Naia — আপনার ব্যক্তিগত AI OS যেখানে আপনার নিজের AI বাস করে। AI নির্বাচন, মেমোরি, ব্যক্তিত্ব, কণ্ঠস্বর এবং অবতারের উপর সম্পূর্ণ নিয়ন্ত্রণ। ডেস্কটপ থেকে Physical AI পর্যন্ত।"
+    "title": "Naia — The Next Generation AI OS",
+    "description": "আপনার AI এখানে বাস করে। ওপেন সোর্স, ক্লাউড থেকে লোকাল AI পর্যন্ত — আপনি বেছে নেন। VRM 3D অবতার সহ ভয়েস চ্যাট, 70+ স্কিল, OpenClaw AI গেটওয়ে, স্মৃতি ও ব্যক্তিত্ব আপনার মেশিনে। Steam-প্রস্তুত নিরাপদ Linux যেখানে আপনার AI বাস করে।"
   },
   "common": {
     "loading": "লোড হচ্ছে...",

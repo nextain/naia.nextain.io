@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const zh: Dictionary = {
   "locale": "zh",
   "meta": {
-    "title": "奈亚",
-    "description": "Naia — 属于你的AI在此鲜活存在的个人AI OS。AI的选择权和完全掌控权交还给你。3D虚拟形象、语音、记忆、性格，一切尽在掌握。",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "你的AI在这里鲜活存在。开源，从云端到本地AI由你选择。VRM 3D虚拟形象与语音聊天，70+技能，OpenClaw AI网关，记忆与性格全部存储在你的电脑上。Steam游戏就绪的安全Linux上的AI。",
   },
   "common": {
     "loading": "正在加载...",

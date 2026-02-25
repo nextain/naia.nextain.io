@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const pt: Dictionary = {
   "locale": "pt",
   "meta": {
-    "title": "Naia",
-    "description": "Naia — Seu SO de IA pessoal onde sua própria IA vive. Controle total sobre escolha de IA, memória, personalidade, voz e avatar. Do desktop à IA física.",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "Sua IA vive aqui. Open source, da nuvem ate IA local — voce escolhe. Avatar VRM 3D com chat de voz, 70+ habilidades, OpenClaw AI gateway, memoria e personalidade na sua maquina. Um Linux seguro e pronto para Steam onde sua IA mora.",
   },
   "common": {
     "loading": "Carregando...",

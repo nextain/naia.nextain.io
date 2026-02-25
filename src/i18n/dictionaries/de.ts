@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const de: Dictionary = {
   "locale": "de",
   "meta": {
-    "title": "Naia",
-    "description": "Naia — Dein persönliches AI OS, in dem deine eigene KI lebt. Volle Kontrolle über KI-Wahl, Erinnerung, Persönlichkeit, Stimme und Avatar. Vom Desktop bis zum Physical AI.",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "Deine KI lebt hier. Open Source, von Cloud bis lokaler KI — du entscheidest. VRM 3D-Avatar mit Sprachchat, 70+ Skills, OpenClaw AI-Gateway, Erinnerung und Persoenlichkeit auf deinem Rechner. Ein sicheres, Steam-bereites Linux, auf dem deine KI lebt.",
   },
   "common": {
     "loading": "Laden...",

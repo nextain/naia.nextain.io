@@ -3,8 +3,8 @@ import type { Dictionary } from "./types";
 const vi: Dictionary = {
   "locale": "vi",
   "meta": {
-    "title": "Naia",
-    "description": "Naia — Hệ điều hành AI cá nhân nơi AI của riêng bạn sinh sống. Toàn quyền kiểm soát lựa chọn AI, bộ nhớ, tính cách, giọng nói và avatar. Từ desktop đến AI vật lý.",
+    "title": "Naia — The Next Generation AI OS",
+    "description": "AI cua ban song o day. Ma nguon mo, tu dam may den AI cuc bo — ban quyet dinh. Avatar VRM 3D voi tro chuyen bang giong noi, 70+ ky nang, OpenClaw AI gateway, tri nho va tinh cach tren may cua ban. Linux an toan va san sang cho Steam, noi AI cua ban sinh song.",
   },
   "common": {
     "loading": "Đang tải...",
