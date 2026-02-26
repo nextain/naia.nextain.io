@@ -135,8 +135,8 @@ const de: Dictionary = {
         "period": "für immer",
         "description": "Beginnen Sie einfach mit einer Anmeldung",
         "features": [
-          "20 Credits bei der Anmeldung",
-          "10 Credits monatliche Aufladung",
+          "5 Credits bei der Anmeldung",
+          "3 Credits monatliche Aufladung",
           "Zwillingsmodelle",
           "Einfacher Voice-Chat",
           "Community-Unterstützung"
