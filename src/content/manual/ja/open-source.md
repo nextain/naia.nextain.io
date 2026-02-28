@@ -45,4 +45,5 @@ AIエージェントが最初に読むルールファイルに**絶対禁止事�
 - [貢献ガイド](https://github.com/nextain/naia-os/blob/main/.users/context/contributing.md)
 - [CONTEXT-LICENSE](https://github.com/nextain/naia-os/blob/main/CONTEXT-LICENSE)
 - [AIエージェントテストシナリオ](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
+- [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [寄付](https://naia.nextain.io/donation)

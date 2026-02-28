@@ -123,7 +123,7 @@ Naia를 포크하는 것은 완전히 자유입니다. 단, 다음을 지켜주�
 
 Naia는 개인 개발자가 만들고, 오픈소스로 유지하는 프로젝트입니다. 서버 비용, 무료 크레딧 제공, 개발 지속 — 모두 후원으로 가능합니다.
 
-[후원 페이지 바로가기 →](https://naia.nextain.io/donation)
+[GitHub Sponsors →](https://github.com/sponsors/luke-n-alpha) | [후원 페이지 →](https://naia.nextain.io/donation)
 
 후원금은 다음에 사용됩니다:
 - **서버 운영**: Gateway 서버, Cloud Run, Cloud SQL 비용
@@ -139,4 +139,5 @@ Naia는 개인 개발자가 만들고, 오픈소스로 유지하는 프로젝트
 - [기여 가이드 (한국어)](https://github.com/nextain/naia-os/blob/main/.users/context/ko/contributing.md)
 - [CONTEXT-LICENSE](https://github.com/nextain/naia-os/blob/main/CONTEXT-LICENSE)
 - [AI 에이전트 라이선스 보호 테스트](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
-- [후원](https://naia.nextain.io/donation)
+- [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
+- [후원 페이지](https://naia.nextain.io/donation)

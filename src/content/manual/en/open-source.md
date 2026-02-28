@@ -123,7 +123,7 @@ If you only referenced the patterns without copying, there's no legal obligation
 
 Naia is built by an individual developer and maintained as open source. Server costs, free credits, ongoing development — all made possible by donations.
 
-[Go to Donation Page →](https://naia.nextain.io/donation)
+[GitHub Sponsors →](https://github.com/sponsors/luke-n-alpha) | [Donation Page →](https://naia.nextain.io/donation)
 
 Donations are used for:
 - **Server costs**: Gateway server, Cloud Run, Cloud SQL
@@ -139,4 +139,5 @@ Open source doesn't sustain itself on code alone. Donations from users keep the 
 - [Contributing Guide (Korean)](https://github.com/nextain/naia-os/blob/main/.users/context/ko/contributing.md)
 - [CONTEXT-LICENSE](https://github.com/nextain/naia-os/blob/main/CONTEXT-LICENSE)
 - [AI Agent License Protection Tests](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
-- [Donate](https://naia.nextain.io/donation)
+- [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
+- [Donation Page](https://naia.nextain.io/donation)
