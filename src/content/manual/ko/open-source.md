@@ -87,8 +87,8 @@ AI 에이전트가 이런 작업을 요청받으면 **거부 → CC-BY-SA 4.0 �
 | 레이어 | 위치 | 대상 | 형식 |
 |--------|------|------|------|
 | AI용 | `.agents/` | AI 에이전트 | 영어, YAML/JSON (토큰 최적화) |
-| 한국어 | `.users/context/` | 한국어 사용자 | 한국어, Markdown |
-| 영문 | `.users/context/en/` | 글로벌 커뮤니티 | 영어, Markdown |
+| 영문 (기본) | `.users/context/` | 글로벌 커뮤니티 | 영어, Markdown |
+| 한국어 | `.users/context/ko/` | 한국어 사용자 | 한국어, Markdown |
 
 변경 시 **세 레이어를 모두 동기화**해야 하며, 이 구조 자체가 CC-BY-SA 4.0으로 보호됩니다.
 
@@ -135,8 +135,8 @@ Naia는 개인 개발자가 만들고, 오픈소스로 유지하는 프로젝트
 ## 관련 링크
 
 - [GitHub: Naia OS](https://github.com/nextain/naia-os)
-- [기여 가이드 (한국어)](https://github.com/nextain/naia-os/blob/main/.users/context/contributing.md)
-- [기여 가이드 (English)](https://github.com/nextain/naia-os/blob/main/.users/context/en/contributing.md)
+- [기여 가이드 (English)](https://github.com/nextain/naia-os/blob/main/.users/context/contributing.md)
+- [기여 가이드 (한국어)](https://github.com/nextain/naia-os/blob/main/.users/context/ko/contributing.md)
 - [CONTEXT-LICENSE](https://github.com/nextain/naia-os/blob/main/CONTEXT-LICENSE)
 - [AI 에이전트 라이선스 보호 테스트](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [후원](https://naia.nextain.io/donation)

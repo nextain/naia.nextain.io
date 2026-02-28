@@ -42,7 +42,7 @@ AI 代理首先读取的规则文件中包含 **8 项绝对禁止行为**：删�
 ## 相关链接
 
 - [GitHub: Naia OS](https://github.com/nextain/naia-os)
-- [贡献指南](https://github.com/nextain/naia-os/blob/main/.users/context/en/contributing.md)
+- [贡献指南](https://github.com/nextain/naia-os/blob/main/.users/context/contributing.md)
 - [CONTEXT-LICENSE](https://github.com/nextain/naia-os/blob/main/CONTEXT-LICENSE)
 - [AI 代理测试场景](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [捐赠](https://naia.nextain.io/donation)

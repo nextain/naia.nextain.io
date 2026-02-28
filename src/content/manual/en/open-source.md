@@ -87,8 +87,8 @@ Context is maintained in three forms, ensuring both AI and humans can access it:
 | Layer | Location | Audience | Format |
 |-------|----------|----------|--------|
 | AI | `.agents/` | AI agents | English, YAML/JSON (token-optimized) |
-| Korean | `.users/context/` | Korean users | Korean, Markdown |
-| English | `.users/context/en/` | Global community | English, Markdown |
+| English (default) | `.users/context/` | Global community | English, Markdown |
+| Korean | `.users/context/ko/` | Korean users | Korean, Markdown |
 
 Changes must be **synced across all three layers**, and this structure itself is protected under CC-BY-SA 4.0.
 
@@ -135,8 +135,8 @@ Open source doesn't sustain itself on code alone. Donations from users keep the 
 ## Related Links
 
 - [GitHub: Naia OS](https://github.com/nextain/naia-os)
-- [Contributing Guide (Korean)](https://github.com/nextain/naia-os/blob/main/.users/context/contributing.md)
-- [Contributing Guide (English)](https://github.com/nextain/naia-os/blob/main/.users/context/en/contributing.md)
+- [Contributing Guide (English)](https://github.com/nextain/naia-os/blob/main/.users/context/contributing.md)
+- [Contributing Guide (Korean)](https://github.com/nextain/naia-os/blob/main/.users/context/ko/contributing.md)
 - [CONTEXT-LICENSE](https://github.com/nextain/naia-os/blob/main/CONTEXT-LICENSE)
 - [AI Agent License Protection Tests](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [Donate](https://naia.nextain.io/donation)
