@@ -300,6 +300,7 @@ const id: Dictionary = {
     "next": "Selanjutnya",
     "backToToc": "Kembali ke Daftar Isi",
     "sections": {
+      "videoManual": "Manual Video",
       "install": "Instalasi & Penerapan",
       "gettingStarted": "Memulai",
       "mainScreen": "Layar Utama",

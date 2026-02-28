@@ -313,6 +313,7 @@ const en: Dictionary = {
     next: "Next",
     backToToc: "Back to Table of Contents",
     sections: {
+      videoManual: "Video Manual",
       install: "Installation & Deployment",
       gettingStarted: "Getting Started",
       mainScreen: "Main Screen",

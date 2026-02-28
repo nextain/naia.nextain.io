@@ -300,6 +300,7 @@ const ar: Dictionary = {
     "next": "التالي",
     "backToToc": "العودة إلى جدول المحتويات",
     "sections": {
+      "videoManual": "دليل الفيديو",
       "install": "التثبيت والنشر",
       "gettingStarted": "البدء",
       "mainScreen": "الشاشة الرئيسية",

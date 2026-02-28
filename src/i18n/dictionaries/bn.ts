@@ -300,6 +300,7 @@ const bn: Dictionary = {
     "next": "পরবর্তী",
     "backToToc": "বিষয়বস্তুর সারণীতে ফিরে যান",
     "sections": {
+      "videoManual": "ভিডিও ম্যানুয়াল",
       "install": "ইনস্টলেশন এবং স্থাপনা",
       "gettingStarted": "শুরু করা",
       "mainScreen": "প্রধান পর্দা",

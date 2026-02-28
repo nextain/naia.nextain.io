@@ -4,6 +4,7 @@ import path from "path";
 import type { Locale } from "@/i18n/config";
 
 export const MANUAL_SLUGS = [
+  "video-manual",
   "install",
   "getting-started",
   "main-screen",
@@ -56,6 +57,7 @@ export async function readManual(
 
 /** Slug → i18n section key mapping */
 export const SLUG_TO_SECTION_KEY: Record<ManualSlug, string> = {
+  "video-manual": "videoManual",
   install: "install",
   "getting-started": "gettingStarted",
   "main-screen": "mainScreen",

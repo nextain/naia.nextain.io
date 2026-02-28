@@ -300,6 +300,7 @@ const vi: Dictionary = {
     "next": "Tiếp theo",
     "backToToc": "Quay lại Mục lục",
     "sections": {
+      "videoManual": "Hướng dẫn video",
       "install": "Cài đặt & Triển khai",
       "gettingStarted": "Bắt đầu",
       "mainScreen": "Màn hình chính",

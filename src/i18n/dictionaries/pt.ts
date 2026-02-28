@@ -300,6 +300,7 @@ const pt: Dictionary = {
     "next": "Próximo",
     "backToToc": "Voltar ao índice",
     "sections": {
+      "videoManual": "Manual em vídeo",
       "install": "Instalação e implantação",
       "gettingStarted": "Primeiros passos",
       "mainScreen": "Tela principal",

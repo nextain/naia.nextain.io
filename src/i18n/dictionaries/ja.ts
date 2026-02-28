@@ -300,6 +300,7 @@ const ja: Dictionary = {
     "next": "次へ",
     "backToToc": "目次に戻る",
     "sections": {
+      "videoManual": "動画マニュアル",
       "install": "インストールと展開",
       "gettingStarted": "はじめに",
       "mainScreen": "メイン画面",

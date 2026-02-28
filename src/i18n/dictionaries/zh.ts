@@ -300,6 +300,7 @@ const zh: Dictionary = {
     "next": "下一步",
     "backToToc": "返回目录",
     "sections": {
+      "videoManual": "视频手册",
       "install": "安装部署",
       "gettingStarted": "开始使用",
       "mainScreen": "主屏幕",

@@ -66,18 +66,34 @@ export function ManualMarkdown({ markdown, lang }: ManualMarkdownProps) {
             ),
             img: ({ src, alt }) => {
               const srcStr = typeof src === "string" ? src : "";
-              const imgSrc = srcStr.startsWith("/")
+              const resolvedSrc = srcStr.startsWith("/")
                 ? srcStr
                 : `/manual/${lang}/${srcStr}`;
+
+              // Render .mp4/.webm as video instead of img
+              if (/\.(mp4|webm)$/i.test(srcStr)) {
+                return (
+                  <video
+                    src={resolvedSrc}
+                    controls
+                    playsInline
+                    preload="metadata"
+                    className="h-auto w-full rounded-lg border border-border/30 shadow-sm"
+                  >
+                    {alt}
+                  </video>
+                );
+              }
+
               return (
                 <img
-                  src={imgSrc}
+                  src={resolvedSrc}
                   alt={alt ?? ""}
                   data-manual-img=""
                   data-alt={alt ?? ""}
                   className="h-auto w-full cursor-pointer rounded-lg border border-border/30 shadow-sm transition-opacity hover:opacity-80"
                   loading="lazy"
-                  onClick={() => setLightbox({ src: imgSrc, alt: alt ?? "" })}
+                  onClick={() => setLightbox({ src: resolvedSrc, alt: alt ?? "" })}
                 />
               );
             },

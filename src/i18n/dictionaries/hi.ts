@@ -300,6 +300,7 @@ const hi: Dictionary = {
     "next": "अगला",
     "backToToc": "विषय-सूची पर वापस जाएँ",
     "sections": {
+      "videoManual": "वीडियो मैनुअल",
       "install": "स्थापना एवं परिनियोजन",
       "gettingStarted": "आरंभ करना",
       "mainScreen": "मुख्य स्क्रीन",

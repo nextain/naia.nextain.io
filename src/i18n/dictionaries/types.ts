@@ -258,6 +258,7 @@ export interface Dictionary {
     next: string;
     backToToc: string;
     sections: {
+      videoManual: string;
       install: string;
       gettingStarted: string;
       mainScreen: string;

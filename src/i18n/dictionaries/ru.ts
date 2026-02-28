@@ -300,6 +300,7 @@ const ru: Dictionary = {
     "next": "Далее",
     "backToToc": "Вернуться к оглавлению",
     "sections": {
+      "videoManual": "Видео-инструкция",
       "install": "Установка и развертывание",
       "gettingStarted": "Начало работы",
       "mainScreen": "Главный экран",
