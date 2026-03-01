@@ -100,8 +100,8 @@ const id: Dictionary = {
           "description": "Gateway OpenClaw berjalan di latar belakang 24/7. Bahkan saat Anda menutup aplikasi, AI Anda tetap hidup — menerima pesan dan mengerjakan tugas."
         },
         "openSource": {
-          "title": "Open Source (Apache 2.0)",
-          "description": "Seluruh basis kode terbuka. Verifikasi dengan tepat bagaimana AI menangani data Anda. Periksa, modifikasi, kontribusi. Perbedaan mendasar dari layanan AI tertutup."
+          "title": "Open Source Dilindungi AI",
+          "description": "Lisensi ganda: kode sumber di bawah Apache 2.0, konteks AI di bawah CC-BY-SA 4.0. Agen AI secara mandiri mencantumkan sumber, mematuhi lisensi, dan menjaga ekosistem open source — infrastruktur kontribusi baru."
         },
         "vision": {
           "title": "Visi: OS Gaming Immutable + AI",

@@ -100,8 +100,8 @@ const pt: Dictionary = {
           "description": "O gateway OpenClaw funciona em segundo plano 24/7. Mesmo quando você fecha o app, sua IA continua viva — recebendo mensagens e realizando tarefas."
         },
         "openSource": {
-          "title": "Codigo Aberto (Apache 2.0)",
-          "description": "Todo o codigo esta aberto. Verifique exatamente como a IA lida com seus dados. Inspecione, modifique, contribua. Uma diferenca fundamental em relacao aos servicos de IA fechados."
+          "title": "Open source protegido por IA",
+          "description": "Licença dupla: código-fonte sob Apache 2.0, contexto de IA sob CC-BY-SA 4.0. Agentes de IA atribuem fontes, cumprem licenças e sustentam o ecossistema open source — uma nova infraestrutura de contribuição."
         },
         "vision": {
           "title": "Visao: SO de jogo imutavel + IA",

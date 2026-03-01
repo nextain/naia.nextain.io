@@ -109,9 +109,9 @@ const en: Dictionary = {
             "OpenClaw gateway runs in the background 24/7. Even when you close the app, your AI stays alive — receiving messages and doing work.",
         },
         openSource: {
-          title: "Open Source (Apache 2.0)",
+          title: "AI-Guarded Open Source",
           description:
-            "The entire codebase is open. Verify exactly how AI handles your data. Inspect, modify, contribute. A fundamental difference from closed AI services.",
+            "Dual-licensed: source code under Apache 2.0, AI context under CC-BY-SA 4.0. AI agents attribute sources, comply with licenses, and sustain the open-source ecosystem — a new contribution infrastructure.",
         },
         vision: {
           title: "Vision: Gaming OS + AI",

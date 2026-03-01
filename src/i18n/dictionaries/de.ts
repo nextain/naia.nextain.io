@@ -100,8 +100,8 @@ const de: Dictionary = {
           "description": "Das OpenClaw-Gateway läuft rund um die Uhr im Hintergrund. Auch wenn du die App schließt, bleibt deine KI aktiv — empfängt Nachrichten und erledigt Aufgaben."
         },
         "openSource": {
-          "title": "Open Source (Apache 2.0)",
-          "description": "Die gesamte Codebasis ist offen. Prufe genau, wie die KI mit deinen Daten umgeht. Inspizieren, andern, beitragen. Ein grundlegender Unterschied zu geschlossenen KI-Diensten."
+          "title": "KI-geschütztes Open Source",
+          "description": "Dual-lizenziert: Quellcode unter Apache 2.0, KI-Kontext unter CC-BY-SA 4.0. KI-Agenten kennzeichnen Quellen, halten Lizenzen ein und tragen das Open-Source-Ökosystem — eine neue Beitragsinfrastruktur."
         },
         "vision": {
           "title": "Vision: Unveraenderliches Gaming-OS + KI",

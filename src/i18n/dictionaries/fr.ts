@@ -100,8 +100,8 @@ const fr: Dictionary = {
           "description": "La passerelle OpenClaw tourne en arrière-plan 24h/24. Même quand vous fermez l'application, votre IA reste active — elle reçoit des messages et exécute des tâches."
         },
         "openSource": {
-          "title": "Open Source (Apache 2.0)",
-          "description": "L'integralite du code est ouverte. Verifiez exactement comment l'IA traite vos donnees. Inspectez, modifiez, contribuez. Une difference fondamentale avec les services IA fermes."
+          "title": "Open source gardé par l'IA",
+          "description": "Double licence : code source sous Apache 2.0, contexte IA sous CC-BY-SA 4.0. Les agents IA attribuent les sources, respectent les licences et soutiennent l'écosystème open source — une nouvelle infrastructure de contribution."
         },
         "vision": {
           "title": "Vision : OS de jeu immuable + IA",

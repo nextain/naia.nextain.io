@@ -100,8 +100,8 @@ const zh: Dictionary = {
           "description": "OpenClaw网关在后台持续运行。即使关闭应用，AI依然保持活跃，接收消息，执行任务。"
         },
         "openSource": {
-          "title": "开源 (Apache 2.0)",
-          "description": "整个代码库完全公开。精确验证AI如何处理你的数据。检查、修改、贡献。这是与封闭AI服务的根本区别。"
+          "title": "AI守护的开源",
+          "description": "源代码(Apache 2.0)与AI上下文(CC-BY-SA 4.0)双重许可保护。AI代理自主标注来源、遵守许可证，支撑开源生态系统的全新贡献基础设施。"
         },
         "vision": {
           "title": "愿景：不可变游戏OS + AI",
