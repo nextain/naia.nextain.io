@@ -14,7 +14,6 @@ function CallbackContent() {
   const lang = dict.locale;
   const source = searchParams.get("source");
   const state = searchParams.get("state");
-  const channel = searchParams.get("channel");
   const [key, setKey] = useState<string | null>(null);
   const [userId, setUserId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -23,47 +22,6 @@ function CallbackContent() {
   useEffect(() => {
     async function issueKey() {
       try {
-        // Always try to resolve Discord user ID for desktop deep links.
-        // Even Google-login users may have a linked Discord account.
-        let discordUserId: string | null = null;
-        if (source !== "web") {
-          // Method 1: Gateway lookup (checks linked Discord account by email)
-          try {
-            const linkedRes = await fetch("/api/gateway/discord-linked", { method: "GET" });
-            if (linkedRes.ok) {
-              const linkedData = (await linkedRes.json()) as {
-                discordUserId?: string | null;
-              };
-              if (linkedData.discordUserId) {
-                discordUserId = linkedData.discordUserId;
-              }
-            }
-          } catch {
-            // Gateway lookup failed — fall through to session
-          }
-
-          // Method 2: Session fallback — if current session is Discord OAuth
-          if (!discordUserId) {
-            try {
-              const sessionRes = await fetch("/api/auth/session", { method: "GET" });
-              if (sessionRes.ok) {
-                const sessionData = (await sessionRes.json()) as {
-                  provider?: string;
-                  providerAccountId?: string;
-                };
-                if (
-                  sessionData.provider === "discord" &&
-                  sessionData.providerAccountId
-                ) {
-                  discordUserId = sessionData.providerAccountId;
-                }
-              }
-            } catch {
-              // Session lookup failed — discordUserId stays null
-            }
-          }
-        }
-
         const res = await fetch("/api/gateway/desktop-key", {
           method: "POST",
         });
@@ -77,8 +35,6 @@ function CallbackContent() {
             key: data.key,
             userId: data.userId,
             state,
-            channel,
-            discordUserId,
           });
           window.location.href = deepLink;
         }
@@ -87,7 +43,7 @@ function CallbackContent() {
       }
     }
     issueKey();
-  }, [source, state, channel, dict.common.error]);
+  }, [source, state, dict.common.error]);
 
   if (error) {
     return (
@@ -152,7 +108,6 @@ function CallbackContent() {
     key,
     userId,
     state,
-    channel,
   });
 
   return (

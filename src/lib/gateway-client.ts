@@ -140,6 +140,7 @@ export interface LookupUserResponse {
   email: string | null;
   name: string | null;
   avatar_url: string | null;
+  linked_accounts?: Record<string, string> | null;
 }
 
 /**
