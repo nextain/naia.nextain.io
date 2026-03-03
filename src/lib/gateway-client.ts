@@ -11,6 +11,7 @@ const MASTER_KEY = process.env.GATEWAY_MASTER_KEY ?? "";
 export interface GatewayUser {
   user_id: string;
   alias: string | null;
+  email: string | null;
   spend: number;
   budget_id: string | null;
   budget_started_at: string | null;
@@ -19,6 +20,7 @@ export interface GatewayUser {
   created_at: string;
   updated_at: string;
   metadata: Record<string, unknown>;
+  linked_accounts?: Record<string, string> | null;
 }
 
 export interface GatewayKey {

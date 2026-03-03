@@ -70,29 +70,16 @@ async function handleDesktopAuth(req: NextRequest, userId: string): Promise<Next
       return NextResponse.json({ error: "User not found" }, { status: 404, headers: corsHeaders(req) });
     }
 
-    // Lookup by email to get linked_accounts
-    const email = (user.metadata as Record<string, unknown>)?.email as string | undefined;
-    const channels: LinkedChannel[] = [];
+    // 1. Try linked_accounts directly from getUser response (Gateway v5+)
+    let channels = buildChannels(user.linked_accounts);
 
-    if (email) {
+    // 2. Fallback: lookup by email to get linked_accounts
+    if (channels.length === 0 && user.email) {
       try {
-        const lookup = await lookupUser("google", { email });
-        channels.push(...buildChannels(lookup?.linked_accounts));
+        const lookup = await lookupUser("google", { email: user.email });
+        channels = buildChannels(lookup?.linked_accounts);
       } catch {
         // Gateway lookup failed
-      }
-    }
-
-    // Also try direct lookup by user_id to cover cases where email isn't in metadata
-    if (channels.length === 0) {
-      try {
-        // Try looking up any linked discord account via all providers
-        const lookup = await lookupUser("google", { email: email ?? "" });
-        if (lookup?.linked_accounts) {
-          channels.push(...buildChannels(lookup.linked_accounts));
-        }
-      } catch {
-        // Ignore
       }
     }
 
