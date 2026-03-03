@@ -117,6 +117,11 @@ export interface Dictionary {
         cta: string;
       };
     };
+    usbBoot: {
+      title: string;
+      description: string;
+      imageAlt: string;
+    };
     faq: {
       title: string;
     };

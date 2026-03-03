@@ -109,6 +109,12 @@ const id: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "Colokkan USB, Jalankan AI Langsung",
+      "description":
+        "Tanpa instalasi, tanpa konfigurasi. Cukup colokkan USB Naia OS ke laptop Anda dan nyalakan — AI pribadi Anda langsung hidup. Coba dulu, dan instal ke hard drive jika Anda menyukainya.",
+      "imageAlt": "Mencolokkan USB ke laptop untuk menjalankan Naia OS"
+    },
     "comparison": {
       "title": "Mengapa Naia",
       "subtitle": "Alat AI lain adalah 'alat' tertutup. Naia adalah 'AI milik Anda' yang open-source — sebuah visi AI pada gaming OS.",

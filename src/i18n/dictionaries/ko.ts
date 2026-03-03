@@ -120,6 +120,12 @@ const ko: Dictionary = {
         },
       },
     },
+    usbBoot: {
+      title: "USB만 꽂으면, AI가 바로 실행됩니다",
+      description:
+        "설치도, 설정도 필요 없습니다. Naia OS USB를 노트북에 꽂고 전원만 켜면, 나만의 AI가 바로 살아납니다. 체험 후 마음에 들면 하드에 설치하세요.",
+      imageAlt: "노트북에 USB를 꽂아 Naia OS를 실행하는 모습",
+    },
     comparison: {
       title: "왜 Naia인가",
       subtitle: "기존 AI 도구는 폐쇄된 '도구'입니다. Naia는 오픈소스로 만드는 '나만의 AI'이자, 게이밍 OS 위의 AI 비전입니다.",

@@ -109,6 +109,12 @@ const de: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "USB einstecken, KI sofort starten",
+      "description":
+        "Keine Installation, keine Konfiguration nötig. Stecken Sie den Naia OS USB in Ihren Laptop und schalten Sie ihn ein — Ihre eigene KI erwacht sofort zum Leben. Probieren Sie es aus und installieren Sie es auf Ihrer Festplatte, wenn es Ihnen gefällt.",
+      "imageAlt": "Einen USB-Stick in einen Laptop stecken, um Naia OS zu starten"
+    },
     "comparison": {
       "title": "Warum Naia",
       "subtitle": "Andere KI-Tools sind geschlossene 'Werkzeuge'. Naia ist deine eigene KI im Open-Source — eine Vision von KI auf einem Gaming-OS.",

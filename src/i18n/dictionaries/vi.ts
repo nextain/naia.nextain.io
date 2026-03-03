@@ -109,6 +109,12 @@ const vi: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "Cắm USB, Chạy AI Ngay Lập Tức",
+      "description":
+        "Không cần cài đặt, không cần cấu hình. Chỉ cần cắm USB Naia OS vào laptop và bật nguồn — AI của riêng bạn sẽ hoạt động ngay lập tức. Hãy thử và cài đặt vào ổ cứng nếu bạn thích.",
+      "imageAlt": "Cắm USB vào laptop để chạy Naia OS"
+    },
     "comparison": {
       "title": "Tại sao chọn Naia",
       "subtitle": "Các công cụ AI khác chỉ là 'công cụ' kín đóng. Naia là 'AI của riêng bạn' mã nguồn mở — một tầm nhìn AI trên gaming OS.",

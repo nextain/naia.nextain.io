@@ -109,6 +109,12 @@ const ja: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "USBを挿すだけで、AIがすぐに起動",
+      "description":
+        "インストールも設定も不要。Naia OS USBをノートパソコンに挿して電源を入れるだけで、あなただけのAIがすぐに動き出します。試してみて、気に入ったらハードドライブにインストールしてください。",
+      "imageAlt": "ノートパソコンにUSBを挿してNaia OSを起動する様子"
+    },
     "comparison": {
       "title": "なぜNaiaなのか",
       "subtitle": "既存のAIツールは閉鎖された「ツール」です。Naiaはオープンソースで作る「自分だけのAI」、ゲーミングOS上のAI構想です。",

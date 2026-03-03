@@ -109,6 +109,12 @@ const pt: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "Conecte o USB, Execute IA Instantaneamente",
+      "description":
+        "Sem instalação, sem configuração. Basta conectar o USB do Naia OS no seu notebook e ligar — sua própria IA ganha vida instantaneamente. Experimente e instale no disco rígido se gostar.",
+      "imageAlt": "Conectando um USB a um notebook para executar o Naia OS"
+    },
     "comparison": {
       "title": "Por que Naia",
       "subtitle": "Outras ferramentas de IA sao 'ferramentas' fechadas. Naia e sua propria IA open-source — uma visao de IA em um OS gaming.",

@@ -6,6 +6,7 @@ import { Hero } from "@/components/home/hero";
 import { Features } from "@/components/home/features";
 import { Comparison } from "@/components/home/comparison";
 import { Pricing } from "@/components/home/pricing";
+import { UsbBoot } from "@/components/home/usb-boot";
 import { Faq } from "@/components/home/faq";
 import { readHomeFaq } from "@/lib/home-docs";
 import { auth } from "@/lib/auth";
@@ -24,6 +25,7 @@ export default async function HomePage({
   return (
     <>
       <Hero dict={dict} lang={lang} hasSession={!!session} />
+      <UsbBoot dict={dict} />
       <Features dict={dict} />
       <Comparison dict={dict} />
       <Pricing dict={dict} lang={lang} />

@@ -120,6 +120,12 @@ const en: Dictionary = {
         },
       },
     },
+    usbBoot: {
+      title: "Plug in USB, Run AI Instantly",
+      description:
+        "No installation, no configuration needed. Just plug the Naia OS USB into your laptop and power on — your own AI comes alive instantly. Try it out, and install to your hard drive if you like it.",
+      imageAlt: "Plugging a USB into a laptop to run Naia OS",
+    },
     comparison: {
       title: "Why Naia",
       subtitle: "Other AI tools are closed 'tools'. Naia is an open-source 'your own AI' — a vision of AI living on a gaming OS.",

@@ -109,6 +109,12 @@ const zh: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "插入USB，即刻运行AI",
+      "description":
+        "无需安装，无需配置。只需将Naia OS USB插入笔记本电脑并开机——您专属的AI即刻苏醒。先试用，喜欢的话再安装到硬盘。",
+      "imageAlt": "将USB插入笔记本电脑运行Naia OS"
+    },
     "comparison": {
       "title": "为什么选择Naia",
       "subtitle": "现有AI工具是封闭的「工具」。Naia是开源的「你自己的AI」,也是游戏OS上AI的愿景。",

@@ -109,6 +109,12 @@ const fr: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "Branchez la clé USB, lancez l'IA instantanément",
+      "description":
+        "Pas d'installation, pas de configuration. Branchez simplement la clé USB Naia OS sur votre ordinateur portable et allumez-le — votre propre IA prend vie instantanément. Essayez-la, et installez-la sur votre disque dur si elle vous plaît.",
+      "imageAlt": "Branchement d'une clé USB sur un ordinateur portable pour lancer Naia OS"
+    },
     "comparison": {
       "title": "Pourquoi Naia",
       "subtitle": "Les autres outils IA sont des 'outils' fermes. Naia est une 'votre propre IA' open-source — une vision de l'IA sur un OS gaming.",

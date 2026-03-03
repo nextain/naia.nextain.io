@@ -109,6 +109,12 @@ const es: Dictionary = {
         }
       }
     },
+    "usbBoot": {
+      "title": "Conecta el USB, ejecuta IA al instante",
+      "description":
+        "Sin instalación, sin configuración. Solo conecta el USB de Naia OS a tu portátil y enciéndelo — tu propia IA cobra vida al instante. Pruébalo e instálalo en tu disco duro si te gusta.",
+      "imageAlt": "Conectando un USB a un portátil para ejecutar Naia OS"
+    },
     "comparison": {
       "title": "Por qué Naia",
       "subtitle": "Otras herramientas de IA son 'herramientas' cerradas. Naia es tu propia IA de codigo abierto — una vision de IA en un OS gaming.",
