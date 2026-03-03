@@ -112,7 +112,7 @@ export interface SocialLoginResponse {
  */
 export async function socialLogin(
   provider: string,
-  email: string,
+  email?: string,
   name?: string,
   avatarUrl?: string,
   providerAccountId?: string,
@@ -121,7 +121,7 @@ export async function socialLogin(
     method: "POST",
     body: JSON.stringify({
       provider,
-      email,
+      ...(email && { email }),
       name,
       avatar_url: avatarUrl,
       provider_account_id: providerAccountId,

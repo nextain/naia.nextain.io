@@ -13,17 +13,20 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       return !!account;
     },
     async jwt({ token, account, user }) {
-      if (account && user?.email) {
+      if (account) {
         token.provider = account.provider;
         token.providerAccountId = account.providerAccountId;
+
+        // Discord users may not have a verified email — email can be null
+        const email = user?.email ?? undefined;
 
         try {
           // Gateway social login — creates user + FREE plan credits on first login
           const response = await socialLogin(
             account.provider,
-            user.email,
-            user.name ?? undefined,
-            user.image ?? undefined,
+            email,
+            user?.name ?? undefined,
+            user?.image ?? undefined,
             account.providerAccountId,
           );
           // Extract gateway UUID from JWT access_token
