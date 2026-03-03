@@ -3,7 +3,7 @@ import { existsSync } from "fs";
 import path from "path";
 import type { Locale } from "@/i18n/config";
 
-export const LEGAL_SLUGS = ["terms", "privacy", "refund", "contact"] as const;
+export const LEGAL_SLUGS = ["terms", "privacy", "refund", "contact", "donation"] as const;
 export type LegalSlug = (typeof LEGAL_SLUGS)[number];
 
 export async function readLegalDoc(lang: Locale, slug: LegalSlug): Promise<string> {

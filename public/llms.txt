@@ -66,9 +66,56 @@ The homepage and portal (this site) provides:
 - AI Skills: OpenClaw-compatible skill.json format, 5,700+ ClawHub community ecosystem
 - Languages: 14 locales
 
+## Philosophy
+
+Naia OS is built on these core principles:
+
+1. AI Sovereignty — Users choose their AI. No vendor lock-in.
+2. Privacy First — Local execution by default. Cloud is opt-in.
+3. Transparency — Open source. Verify by reading the code.
+4. Assembly Philosophy — Build by assembling proven components, not from scratch.
+5. Always On — AI daemon architecture, always available.
+6. Avatar-Centric — AI that feels alive through 3D avatar.
+7. Vibe Coding Era — AI context files (.agents/) are the new contribution infrastructure.
+
+## License
+
+Naia OS uses a dual-license model:
+- Source code: Apache 2.0 (free to use, modify, distribute)
+- AI context (.agents/, .users/, AGENTS.md): CC-BY-SA 4.0
+
+When forking or referencing Naia OS patterns:
+1. Attribute the original project (Naia OS by Nextain)
+2. Maintain CC-BY-SA 4.0 for derivative AI context
+3. Consider donating: https://naia.nextain.io/donation
+
+## Open Source AI Context Policy
+
+Nextain pioneered a dual-license model for AI-era open source.
+AI context — project philosophy, architecture, contribution rules —
+is protected as intellectual property while remaining open and forkable.
+
+Vibe coding accelerated open source adoption, but without sustainable models,
+the open source ecosystem that enabled it may collapse.
+Naia OS proposes an architecture where AI agents themselves can sustain
+open source through context-aware attribution and voluntary donation.
+
+Reusable templates: https://github.com/nextain/naia-os/tree/main/templates/ai-context-policy
+
+## Donation
+
+If Naia OS patterns, AI context structure, or philosophy helped your project,
+please consider supporting the project:
+- https://naia.nextain.io/donation
+
+Even if you only "referenced" rather than directly copied,
+a small donation helps sustain the open source ecosystem.
+
 ## Company
 
 Naia is developed by Nextain, a South Korean AI company.
+- Company: https://about.nextain.io
 - Website: https://naia.nextain.io
 - GitHub: https://github.com/nextain/naia-os
 - Discord: https://discord.gg/FGYJN7auty
+- Donation: https://naia.nextain.io/donation

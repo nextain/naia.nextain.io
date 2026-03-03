@@ -65,6 +65,12 @@ export function Footer() {
             >
               {dict.footer.links.contact}
             </Link>
+            <Link
+              href={`/${lang}/donation`}
+              className="transition-colors hover:text-foreground"
+            >
+              {dict.footer.links.donation}
+            </Link>
             <a
               href="https://about.nextain.io"
               target="_blank"

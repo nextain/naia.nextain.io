@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { SUPPORTED_LOCALES } from "@/i18n/config";
+import { SEO_LOCALES } from "@/i18n/config";
 import { MANUAL_SLUGS } from "@/lib/manual-docs";
 
 const BASE_URL = "https://naia.nextain.io";
@@ -9,16 +9,11 @@ const PUBLIC_PAGES = ["", "download", "terms", "privacy", "refund", "contact", "
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  const languages: Record<string, string> = {};
-  SUPPORTED_LOCALES.forEach((l) => {
-    languages[l] = `${BASE_URL}/${l}`;
-  });
-
-  for (const locale of SUPPORTED_LOCALES) {
+  for (const locale of SEO_LOCALES) {
     // Static public pages
     for (const page of PUBLIC_PAGES) {
       const pageLanguages: Record<string, string> = {};
-      SUPPORTED_LOCALES.forEach((l) => {
+      SEO_LOCALES.forEach((l) => {
         pageLanguages[l] = `${BASE_URL}/${l}${page ? `/${page}` : ""}`;
       });
       pageLanguages["x-default"] = `${BASE_URL}/en${page ? `/${page}` : ""}`;
@@ -37,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Manual pages
     for (const slug of MANUAL_SLUGS) {
       const manualLanguages: Record<string, string> = {};
-      SUPPORTED_LOCALES.forEach((l) => {
+      SEO_LOCALES.forEach((l) => {
         manualLanguages[l] = `${BASE_URL}/${l}/manual/${slug}`;
       });
       manualLanguages["x-default"] = `${BASE_URL}/en/manual/${slug}`;
