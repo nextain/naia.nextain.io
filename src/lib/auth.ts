@@ -9,7 +9,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     signIn: "/login",
   },
   callbacks: {
-    async signIn({ account }) {
+    async signIn({ account, user }) {
+      console.log("[auth] signIn callback", {
+        provider: account?.provider,
+        hasEmail: !!user?.email,
+        hasName: !!user?.name,
+        providerAccountId: account?.providerAccountId?.slice(0, 6),
+      });
       return !!account;
     },
     async jwt({ token, account, user }) {
@@ -19,6 +25,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         // Discord users may not have a verified email — email can be null
         const email = user?.email ?? undefined;
+
+        console.log("[auth] jwt callback — socialLogin start", {
+          provider: account.provider,
+          email: email ? "yes" : "no",
+        });
 
         try {
           // Gateway social login — creates user + FREE plan credits on first login
@@ -34,9 +45,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             Buffer.from(response.tokens.access_token.split(".")[1], "base64url").toString(),
           );
           token.gwUserId = payload.sub;
+          console.log("[auth] jwt callback — socialLogin OK, gwUserId:", payload.sub?.slice(0, 8));
         } catch (err) {
           // Gateway might be down — fallback to provider:accountId
           console.error("[auth] socialLogin failed:", err instanceof Error ? err.message : String(err));
+          console.error("[auth] socialLogin error stack:", err instanceof Error ? err.stack : "no stack");
           token.gwUserId = `${account.provider}:${account.providerAccountId}`;
         }
       }
