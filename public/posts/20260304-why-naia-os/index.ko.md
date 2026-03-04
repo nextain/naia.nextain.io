@@ -1,5 +1,5 @@
 ---
-title: "Naia OS: 어릴 적 꿈꿨던 AI를 만들기 위해 OS를 AI코딩으로 시작했습니다"
+title: "Naia OS: 어릴 적 꿈꿨던 AI를 만들기 위해 OS개발을 AI코딩으로 시작했습니다"
 date: "2026-03-04T09:00:00+09:00"
 summary: "철완 아톰부터 카페 알파까지 — '함께 사는 AI'를 꿈꿨던 소년이 AI 코딩 시대에 직접 만들기 시작한 이야기. 그리고 오픈소스는 살아남을 수 있을까?"
 tags: ["naia-os", "open-source", "philosophy", "vibe-coding"]

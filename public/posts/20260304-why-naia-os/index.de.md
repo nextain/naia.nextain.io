@@ -1,5 +1,5 @@
 ---
-title: "Naia OS: Ich habe ein OS mit KI-Coding gestartet, um die KI meiner Kindheitstraume zu bauen"
+title: "Naia OS: Ich habe die OS-Entwicklung mit KI-Coding gestartet, um die KI meiner Kindheitstraume zu bauen"
 date: "2026-03-04T09:00:00+09:00"
 summary: "Von Astro Boy bis Cafe Alpha -- Die Geschichte eines Jungen, der von einer 'KI, die mit uns lebt' traumte und sie im Zeitalter des KI-Codings selbst zu bauen begann. Und kann Open Source uberleben?"
 tags: ["naia-os", "open-source", "philosophy", "vibe-coding"]

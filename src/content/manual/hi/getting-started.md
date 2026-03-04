@@ -28,16 +28,21 @@
 Naia लॉगिन या API key दर्ज करने के बाद, इन चरणों को पूरा करें:
 
 ### 1. अपने AI को नाम दें
-Naia को कोई भी नाम दें जो आप चाहें (जैसे, "Naia", "Luna", "Cookie")।
 
 ![AI name input](onboarding-agent-name.png)
 
+Naia को कोई भी नाम दें जो आप चाहें (जैसे, "Naia", "Luna", "Cookie")।
+
 ### 2. आपका नाम
-दर्ज करें कि Naia आपको क्या कहकर बुलाए।
 
 ![Your name input](onboarding-user-name.png)
 
+दर्ज करें कि Naia आपको क्या कहकर बुलाए।
+
 ### 3. चरित्र चुनें
+
+![Character selection screen](onboarding-character.png)
+
 4 VRM अवतारों में से चुनें:
 
 | चरित्र | विवरण |
@@ -47,9 +52,11 @@ Naia को कोई भी नाम दें जो आप चाहें (
 | लड़की | सामान्य लड़की |
 | लड़का | सामान्य लड़का |
 
-![Character selection screen](onboarding-character.png)
 
 ### 4. व्यक्तित्व चुनें
+
+![Personality selection screen](onboarding-personality.png)
+
 4 प्रीसेट में से चुनें:
 
 | व्यक्तित्व | विवरण |
@@ -59,12 +66,12 @@ Naia को कोई भी नाम दें जो आप चाहें (
 | चंचल | विनोदी, उज्ज्वल लहजा |
 | विद्वान | शांत, बौद्धिक लहजा |
 
-![Personality selection screen](onboarding-personality.png)
 
 ### 5. मैसेंजर एकीकरण (वैकल्पिक)
-Telegram या Slack जैसे समर्थित मैसेंजर के साथ एकीकरण सेट करें। इस चरण को छोड़ा जा सकता है और बाद में सेटिंग्स में कॉन्फ़िगर किया जा सकता है।
 
 ![Messenger integration screen](onboarding-messenger.png)
+
+Telegram या Slack जैसे समर्थित मैसेंजर के साथ एकीकरण सेट करें। इस चरण को छोड़ा जा सकता है और बाद में सेटिंग्स में कॉन्फ़िगर किया जा सकता है।
 
 ### 6. पूरा करें
 

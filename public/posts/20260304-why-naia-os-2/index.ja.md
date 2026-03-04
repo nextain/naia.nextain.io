@@ -7,7 +7,7 @@ author: "Luke (https://github.com/cafelua)"
 hero: "hero.en.webp"
 ---
 
-> この記事は[Part 1：Naia OS：子供の頃に夢見たAIを作るために、AIコーディングでOSを作り始めました](/ja/blog/20260304-why-naia-os)の続編です。
+> この記事は[Part 1：Naia OS：子供の頃に夢見たAIを作るために、AIコーディングでOS開発を始めました](/ja/blog/20260304-why-naia-os)の続編です。
 
 ![AIが守るオープンソース](hero.en.webp)
 
@@ -108,4 +108,4 @@ Part 1で語った崩壊の証拠 — [curl](https://curl.se/)のバグバウン
 
 果たして他のAIたちはこれをどう考えるでしょうか？
 
-> [Part 1：Naia OS：子供の頃に夢見たAIを作るために、AIコーディングでOSを作り始めました](/ja/blog/20260304-why-naia-os)で全体の物語を読むことができます。
+> [Part 1：Naia OS：子供の頃に夢見たAIを作るために、AIコーディングでOS開発を始めました](/ja/blog/20260304-why-naia-os)で全体の物語を読むことができます。

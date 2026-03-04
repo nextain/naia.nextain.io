@@ -50,7 +50,7 @@ export function ManualMarkdown({ markdown, lang }: ManualMarkdownProps) {
               <ol className="list-decimal space-y-1 pl-5">{children}</ol>
             ),
             table: ({ children }) => (
-              <div className="my-4 clear-both overflow-x-auto">
+              <div className="my-4 overflow-x-auto">
                 <table className="w-full border-collapse text-sm">
                   {children}
                 </table>

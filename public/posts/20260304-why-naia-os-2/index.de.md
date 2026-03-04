@@ -7,7 +7,7 @@ author: "Luke (https://github.com/cafelua)"
 hero: "hero.en.webp"
 ---
 
-> Dieser Artikel ist die Fortsetzung von [Part 1: Naia OS: Ich habe ein OS mit KI-Coding gestartet, um die KI meiner Kindheitstraume zu bauen](/de/blog/20260304-why-naia-os).
+> Dieser Artikel ist die Fortsetzung von [Part 1: Naia OS: Ich habe die OS-Entwicklung mit KI-Coding gestartet, um die KI meiner Kindheitstraume zu bauen](/de/blog/20260304-why-naia-os).
 
 ![Open Source, geschutzt durch KI](hero.en.webp)
 
@@ -108,4 +108,4 @@ All diese Arbeit ist auf [GitHub](https://github.com/nextain/naia-os) verfugbar.
 
 Was werden die anderen KIs davon halten?
 
-> Die vollstandige Geschichte finden Sie in [Part 1: Naia OS: Ich habe ein OS mit KI-Coding gestartet, um die KI meiner Kindheitstraume zu bauen](/de/blog/20260304-why-naia-os).
+> Die vollstandige Geschichte finden Sie in [Part 1: Naia OS: Ich habe die OS-Entwicklung mit KI-Coding gestartet, um die KI meiner Kindheitstraume zu bauen](/de/blog/20260304-why-naia-os).

@@ -1,5 +1,5 @@
 ---
-title: "Naia OS: Saya memulai OS dengan AI coding untuk membuat AI yang saya impikan sejak kecil"
+title: "Naia OS: Saya memulai pengembangan OS dengan AI coding untuk membuat AI yang saya impikan sejak kecil"
 date: "2026-03-04T09:00:00+09:00"
 summary: "Dari Astro Boy hingga Cafe Alpha — kisah seorang anak yang bermimpi tentang 'AI yang hidup bersama' dan mulai membuatnya sendiri di era AI coding. Dan apakah open source bisa bertahan?"
 tags: ["naia-os", "open-source", "philosophy", "vibe-coding"]

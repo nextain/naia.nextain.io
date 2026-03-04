@@ -28,16 +28,21 @@
 完成 Naia 登录或 API Key 输入后，请完成以下步骤：
 
 ### 1. 为您的 AI 命名
-为AI助手命名，任何您喜欢的名字都可以（例如，”Naia”、”Luna”、”Cookie”）。
 
 ![AI name input](onboarding-agent-name.png)
 
+为AI助手命名，任何您喜欢的名字都可以（例如，”Naia”、”Luna”、”Cookie”）。
+
 ### 2. 您的名字
-输入 Naia 应该如何称呼您。
 
 ![Your name input](onboarding-user-name.png)
 
+输入 Naia 应该如何称呼您。
+
 ### 3. 选择角色
+
+![Character selection screen](onboarding-character.png)
+
 从 4 个 VRM 头像中选择：
 
 | 角色 | 描述 |
@@ -47,9 +52,11 @@
 | 女孩 | 普通女孩 |
 | 男孩 | 普通男孩 |
 
-![Character selection screen](onboarding-character.png)
 
 ### 4. 选择个性
+
+![Personality selection screen](onboarding-personality.png)
+
 从 4 个预设中选择：
 
 | 个性 | 描述 |
@@ -59,12 +66,12 @@
 | 活泼 | 幽默、明亮的语气 |
 | 学者 | 冷静、理性的语气 |
 
-![Personality selection screen](onboarding-personality.png)
 
 ### 5. 即时通讯工具集成（可选）
-设置与 Telegram 或 Slack 等支持的即时通讯工具的集成。此步骤可以跳过，稍后在设置中配置。
 
 ![Messenger integration screen](onboarding-messenger.png)
+
+设置与 Telegram 或 Slack 等支持的即时通讯工具的集成。此步骤可以跳过，稍后在设置中配置。
 
 ### 6. 完成
 

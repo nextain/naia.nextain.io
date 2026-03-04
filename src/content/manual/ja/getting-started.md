@@ -28,16 +28,21 @@ Google GeminiのようなプロバイダーからAPI Keyを入力することも
 NaiaログインまたはAPI Key入力後、以下の手順を完了してください。
 
 ### 1. AIに名前を付ける
-AIアバターに好きな名前を付けてください（例：「Naia」、「Luna」、「Cookie」）。
 
 ![AI name input](onboarding-agent-name.png)
 
+AIアバターに好きな名前を付けてください（例：「Naia」、「Luna」、「Cookie」）。
+
 ### 2. あなたの名前
-Naiaに呼ばれたい名前を入力してください。
 
 ![Your name input](onboarding-user-name.png)
 
+Naiaに呼ばれたい名前を入力してください。
+
 ### 3. キャラクターを選択する
+
+![Character selection screen](onboarding-character.png)
+
 4つのVRMアバターから選択してください。
 
 | キャラクター | 説明 |
@@ -47,9 +52,11 @@ Naiaに呼ばれたい名前を入力してください。
 | ガール | 一般的な女の子 |
 | ボーイ | 一般的な男の子 |
 
-![Character selection screen](onboarding-character.png)
 
 ### 4. パーソナリティを選択する
+
+![Personality selection screen](onboarding-personality.png)
+
 4つのプリセットから選択してください。
 
 | パーソナリティ | 説明 |
@@ -59,12 +66,12 @@ Naiaに呼ばれたい名前を入力してください。
 | 遊び心がある | ユーモラスで明るいトーン |
 | スカラー | 落ち着いた知的なトーン |
 
-![Personality selection screen](onboarding-personality.png)
 
 ### 5. メッセンジャー連携（オプション）
-TelegramやSlackなどの対応メッセンジャーとの連携を設定します。この手順はスキップして、後で設定で構成できます。
 
 ![Messenger integration screen](onboarding-messenger.png)
+
+TelegramやSlackなどの対応メッセンジャーとの連携を設定します。この手順はスキップして、後で設定で構成できます。
 
 ### 6. 完了
 

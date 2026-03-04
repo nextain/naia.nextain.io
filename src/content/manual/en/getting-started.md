@@ -28,16 +28,21 @@ You can also enter an API key from providers like Google Gemini.
 After Naia login or API key entry, complete these steps:
 
 ### 1. Name Your AI
-Give your AI avatar any name you'd like (e.g., "Naia", "Luna", "Cookie").
 
 ![AI name input](onboarding-agent-name.png)
 
+Give your AI avatar any name you'd like (e.g., "Naia", "Luna", "Cookie").
+
 ### 2. Your Name
-Enter what Naia should call you.
 
 ![Your name input](onboarding-user-name.png)
 
+Enter what Naia should call you.
+
 ### 3. Choose Character
+
+![Character selection screen](onboarding-character.png)
+
 Pick from 4 VRM avatars:
 
 | Character | Description |
@@ -47,9 +52,11 @@ Pick from 4 VRM avatars:
 | Girl | Generic girl |
 | Boy | Generic boy |
 
-![Character selection screen](onboarding-character.png)
 
 ### 4. Choose Personality
+
+![Personality selection screen](onboarding-personality.png)
+
 Pick from 4 presets:
 
 | Personality | Description |
@@ -59,12 +66,12 @@ Pick from 4 presets:
 | Playful | Humorous, bright tone |
 | Scholar | Calm, intellectual tone |
 
-![Personality selection screen](onboarding-personality.png)
 
 ### 5. Messenger Integration (Optional)
-Set up integration with supported messengers like Telegram or Slack. This step can be skipped and configured later in the settings.
 
 ![Messenger integration screen](onboarding-messenger.png)
+
+Set up integration with supported messengers like Telegram or Slack. This step can be skipped and configured later in the settings.
 
 ### 6. Complete
 

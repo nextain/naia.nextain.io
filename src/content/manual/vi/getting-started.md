@@ -28,16 +28,21 @@ Bạn cũng có thể nhập API key từ các nhà cung cấp như Google Gemin
 Sau khi đăng nhập Naia hoặc nhập API key, hoàn thành các bước sau:
 
 ### 1. Đặt tên cho AI của bạn
-Đặt tên cho Naia bất kỳ tên nào bạn muốn (ví dụ: "Naia", "Luna", "Cookie").
 
 ![AI name input](onboarding-agent-name.png)
 
+Đặt tên cho Naia bất kỳ tên nào bạn muốn (ví dụ: "Naia", "Luna", "Cookie").
+
 ### 2. Tên của bạn
-Nhập tên mà Naia nên gọi bạn.
 
 ![Your name input](onboarding-user-name.png)
 
+Nhập tên mà Naia nên gọi bạn.
+
 ### 3. Chọn nhân vật
+
+![Character selection screen](onboarding-character.png)
+
 Chọn từ 4 hình đại diện VRM:
 
 | Nhân vật | Mô tả |
@@ -47,9 +52,11 @@ Chọn từ 4 hình đại diện VRM:
 | Girl | Cô gái chung |
 | Boy | Chàng trai chung |
 
-![Character selection screen](onboarding-character.png)
 
 ### 4. Chọn tính cách
+
+![Personality selection screen](onboarding-personality.png)
+
 Chọn từ 4 cài đặt sẵn:
 
 | Tính cách | Mô tả |
@@ -59,12 +66,12 @@ Chọn từ 4 cài đặt sẵn:
 | Playful | Tông giọng hài hước, tươi sáng |
 | Scholar | Tông giọng điềm tĩnh, trí tuệ |
 
-![Personality selection screen](onboarding-personality.png)
 
 ### 5. Tích hợp Messenger (Tùy chọn)
-Thiết lập tích hợp với các ứng dụng nhắn tin được hỗ trợ như Telegram hoặc Slack. Bước này có thể bỏ qua và cấu hình sau trong phần cài đặt.
 
 ![Messenger integration screen](onboarding-messenger.png)
+
+Thiết lập tích hợp với các ứng dụng nhắn tin được hỗ trợ như Telegram hoặc Slack. Bước này có thể bỏ qua và cấu hình sau trong phần cài đặt.
 
 ### 6. Hoàn tất
 

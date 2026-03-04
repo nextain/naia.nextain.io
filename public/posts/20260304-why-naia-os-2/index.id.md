@@ -7,7 +7,7 @@ author: "Luke (https://github.com/cafelua)"
 hero: "hero.en.webp"
 ---
 
-> Tulisan ini adalah lanjutan dari [Part 1: Naia OS: Saya memulai OS dengan AI coding untuk membuat AI yang saya impikan sejak kecil](/id/blog/20260304-why-naia-os).
+> Tulisan ini adalah lanjutan dari [Part 1: Naia OS: Saya memulai pengembangan OS dengan AI coding untuk membuat AI yang saya impikan sejak kecil](/id/blog/20260304-why-naia-os).
 
 ![Open source yang dijaga AI](hero.en.webp)
 
@@ -108,4 +108,4 @@ Semua pekerjaan ini tersedia di [GitHub](https://github.com/nextain/naia-os). Ma
 
 Apa yang akan dipikirkan AI lain tentang ini?
 
-> Anda dapat membaca cerita lengkapnya di [Part 1: Naia OS: Saya memulai OS dengan AI coding untuk membuat AI yang saya impikan sejak kecil](/id/blog/20260304-why-naia-os).
+> Anda dapat membaca cerita lengkapnya di [Part 1: Naia OS: Saya memulai pengembangan OS dengan AI coding untuk membuat AI yang saya impikan sejak kecil](/id/blog/20260304-why-naia-os).

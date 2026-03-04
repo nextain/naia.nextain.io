@@ -28,16 +28,21 @@ Sie können auch einen API Key von Anbietern wie Google Gemini eingeben.
 Nach der Naia-Anmeldung oder API Key-Eingabe schließen Sie diese Schritte ab:
 
 ### 1. Benennen Sie Ihre KI
-Geben Sie Ihrem KI-Avatar einen beliebigen Namen (z.B. "Naia", "Luna", "Cookie").
 
 ![KI-Namenseingabe](onboarding-agent-name.png)
 
+Geben Sie Ihrem KI-Avatar einen beliebigen Namen (z.B. "Naia", "Luna", "Cookie").
+
 ### 2. Ihr Name
-Geben Sie ein, wie Naia Sie nennen soll.
 
 ![Ihr Name Eingabe](onboarding-user-name.png)
 
+Geben Sie ein, wie Naia Sie nennen soll.
+
 ### 3. Charakter auswählen
+
+![Charakterauswahl-Bildschirm](onboarding-character.png)
+
 Wählen Sie aus 4 VRM-Avataren:
 
 | Charakter       | Beschreibung           |
@@ -47,9 +52,11 @@ Wählen Sie aus 4 VRM-Avataren:
 | Girl            | Generisches Mädchen    |
 | Boy             | Generischer Junge      |
 
-![Charakterauswahl-Bildschirm](onboarding-character.png)
 
 ### 4. Persönlichkeit auswählen
+
+![Persönlichkeitsauswahl-Bildschirm](onboarding-personality.png)
+
 Wählen Sie aus 4 Voreinstellungen:
 
 | Persönlichkeit | Beschreibung                  |
@@ -59,12 +66,12 @@ Wählen Sie aus 4 Voreinstellungen:
 | Playful        | Humorvoll, heller Ton         |
 | Scholar        | Ruhig, intellektueller Ton    |
 
-![Persönlichkeitsauswahl-Bildschirm](onboarding-personality.png)
 
 ### 5. Messenger-Integration (Optional)
-Richten Sie die Integration mit unterstützten Messengern wie Telegram oder Slack ein. Dieser Schritt kann übersprungen und später in den Einstellungen konfiguriert werden.
 
 ![Messenger-Integrationsbildschirm](onboarding-messenger.png)
+
+Richten Sie die Integration mit unterstützten Messengern wie Telegram oder Slack ein. Dieser Schritt kann übersprungen und später in den Einstellungen konfiguriert werden.
 
 ### 6. Abschließen
 

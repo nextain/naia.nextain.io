@@ -28,16 +28,21 @@ Anda juga dapat memasukkan API Key dari penyedia seperti Google Gemini.
 Setelah masuk Naia atau entri API Key, selesaikan langkah-langkah berikut:
 
 ### 1. Beri Nama AI Anda
-Beri nama Naia sesuka Anda (misalnya, "Naia", "Luna", "Cookie").
 
 ![Input nama AI](onboarding-agent-name.png)
 
+Beri nama Naia sesuka Anda (misalnya, "Naia", "Luna", "Cookie").
+
 ### 2. Nama Anda
-Masukkan nama panggilan Anda oleh Naia.
 
 ![Input nama Anda](onboarding-user-name.png)
 
+Masukkan nama panggilan Anda oleh Naia.
+
 ### 3. Pilih Karakter
+
+![Layar pemilihan karakter](onboarding-character.png)
+
 Pilih dari 4 avatar VRM:
 
 | Karakter        | Deskripsi       |
@@ -47,9 +52,11 @@ Pilih dari 4 avatar VRM:
 | Girl            | Gadis umum      |
 | Boy             | Anak laki-laki umum |
 
-![Layar pemilihan karakter](onboarding-character.png)
 
 ### 4. Pilih Kepribadian
+
+![Layar pemilihan kepribadian](onboarding-personality.png)
+
 Pilih dari 4 preset:
 
 | Kepribadian   | Deskripsi                 |
@@ -59,12 +66,12 @@ Pilih dari 4 preset:
 | Lucu          | Nada jenaka, ceria        |
 | Cendekiawan   | Nada tenang, intelektual  |
 
-![Layar pemilihan kepribadian](onboarding-personality.png)
 
 ### 5. Integrasi Messenger (Opsional)
-Atur integrasi dengan messenger yang didukung seperti Telegram atau Slack. Langkah ini dapat dilewati dan dikonfigurasi nanti di pengaturan.
 
 ![Layar integrasi messenger](onboarding-messenger.png)
+
+Atur integrasi dengan messenger yang didukung seperti Telegram atau Slack. Langkah ini dapat dilewati dan dikonfigurasi nanti di pengaturan.
 
 ### 6. Selesai
 

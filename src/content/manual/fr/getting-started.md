@@ -28,16 +28,21 @@ Vous pouvez également saisir une API Key de fournisseurs comme Google Gemini.
 Après la connexion à Naia ou la saisie de l'API Key, suivez ces étapes :
 
 ### 1. Nommez votre IA
-Donnez à votre avatar IA le nom que vous souhaitez (par exemple, "Naia", "Luna", "Cookie").
 
 ![Saisie du nom de l'IA](onboarding-agent-name.png)
 
+Donnez à votre avatar IA le nom que vous souhaitez (par exemple, "Naia", "Luna", "Cookie").
+
 ### 2. Votre Nom
-Saisissez comment Naia doit vous appeler.
 
 ![Saisie de votre nom](onboarding-user-name.png)
 
+Saisissez comment Naia doit vous appeler.
+
 ### 3. Choisissez un personnage
+
+![Écran de sélection de personnage](onboarding-character.png)
+
 Choisissez parmi 4 avatars VRM :
 
 | Personnage | Description |
@@ -47,9 +52,11 @@ Choisissez parmi 4 avatars VRM :
 | Fille | Fille générique |
 | Garçon | Garçon générique |
 
-![Écran de sélection de personnage](onboarding-character.png)
 
 ### 4. Choisissez une personnalité
+
+![Écran de sélection de personnalité](onboarding-personality.png)
+
 Choisissez parmi 4 préréglages :
 
 | Personnalité | Description |
@@ -59,12 +66,12 @@ Choisissez parmi 4 préréglages :
 | Ludique | Ton humoristique et joyeux |
 | Érudite | Ton calme et intellectuel |
 
-![Écran de sélection de personnalité](onboarding-personality.png)
 
 ### 5. Intégration de messagerie (Optionnel)
-Configurez l'intégration avec les messageries prises en charge comme Telegram ou Slack. Cette étape peut être ignorée et configurée plus tard dans les paramètres.
 
 ![Écran d'intégration de messagerie](onboarding-messenger.png)
+
+Configurez l'intégration avec les messageries prises en charge comme Telegram ou Slack. Cette étape peut être ignorée et configurée plus tard dans les paramètres.
 
 ### 6. Terminé
 

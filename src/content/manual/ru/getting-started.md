@@ -28,16 +28,21 @@
 После входа в Naia или ввода API Key выполните следующие шаги:
 
 ### 1. Назовите свой ИИ
-Дайте Naia любое имя, какое захотите (например, "Naia", "Luna", "Cookie").
 
 ![AI name input](onboarding-agent-name.png)
 
+Дайте Naia любое имя, какое захотите (например, "Naia", "Luna", "Cookie").
+
 ### 2. Ваше имя
-Введите, как Naia должна вас называть.
 
 ![Your name input](onboarding-user-name.png)
 
+Введите, как Naia должна вас называть.
+
 ### 3. Выберите персонажа
+
+![Character selection screen](onboarding-character.png)
+
 Выберите из 4 VRM аватаров:
 
 | Персонаж | Описание |
@@ -47,9 +52,11 @@
 | Девочка | Обычная девочка |
 | Мальчик | Обычный мальчик |
 
-![Character selection screen](onboarding-character.png)
 
 ### 4. Выберите личность
+
+![Personality selection screen](onboarding-personality.png)
+
 Выберите из 4 предустановок:
 
 | Личность | Описание |
@@ -59,12 +66,12 @@
 | Игривый | Юмористический, яркий тон |
 | Ученый | Спокойный, интеллектуальный тон |
 
-![Personality selection screen](onboarding-personality.png)
 
 ### 5. Интеграция с мессенджерами (Необязательно)
-Настройте интеграцию с поддерживаемыми мессенджерами, такими как Telegram или Slack. Этот шаг можно пропустить и настроить позже в настройках.
 
 ![Messenger integration screen](onboarding-messenger.png)
+
+Настройте интеграцию с поддерживаемыми мессенджерами, такими как Telegram или Slack. Этот шаг можно пропустить и настроить позже в настройках.
 
 ### 6. Завершение
 

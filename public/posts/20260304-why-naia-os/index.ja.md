@@ -1,5 +1,5 @@
 ---
-title: "Naia OS：子供の頃に夢見たAIを作るために、AIコーディングでOSを作り始めました"
+title: "Naia OS：子供の頃に夢見たAIを作るために、AIコーディングでOS開発を始めました"
 date: "2026-03-04T09:00:00+09:00"
 summary: "鉄腕アトムからカフェアルファまで——「一緒に暮らすAI」を夢見た少年が、AIコーディング時代に自ら作り始めた物語。そしてオープンソースは生き残れるのか？"
 tags: ["naia-os", "open-source", "philosophy", "vibe-coding"]
