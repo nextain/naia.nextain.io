@@ -10,7 +10,7 @@ The easiest way — free and no API key needed.
 2. A browser opens to the naia.nextain.io login page
 3. Sign in with your **Google account** (registration is automatic)
 4. You'll be automatically redirected back to the desktop app
-5. You receive **20 free credits** on sign-up
+5. You receive **500 free credits** on sign-up
 
 ## Start with API Key
 

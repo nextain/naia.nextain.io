@@ -10,7 +10,7 @@ A maneira mais fácil — gratuita e sem necessidade de API Key.
 2. Um navegador se abre na página de login naia.nextain.io
 3. Faça login com sua **conta Google** (o registro é automático)
 4. Você será automaticamente redirecionado de volta para o aplicativo de desktop
-5. Você recebe **20 créditos gratuitos** ao se cadastrar
+5. Você recebe **500 créditos gratuitos** ao se cadastrar
 
 ## Começar com API Key
 

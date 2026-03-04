@@ -19,7 +19,7 @@ Problemas comuns e soluções.
 1. Verifique o saldo em Configurações > Conta do Naia
 2. Revise o uso no Painel do Naia
 3. Créditos gratuitos são recarregados mensalmente
-4. Faça upgrade para BASIC (US$10/mês) para 100 créditos
+4. Faça upgrade para BASIC (US$10/mês) para 10.000 créditos
 
 ## Ferramentas não estão funcionando
 

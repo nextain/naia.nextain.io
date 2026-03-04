@@ -143,8 +143,8 @@ const es: Dictionary = {
         "period": "para siempre",
         "description": "Comience con solo registrarse",
         "features": [
-          "20 créditos al registrarse",
-          "Recarga mensual de 10 créditos",
+          "500 créditos al registrarse",
+          "Recarga mensual de 300 créditos",
           "Modelos Géminis",
           "Chat de voz básico",
           "Apoyo comunitario"
@@ -157,7 +157,7 @@ const es: Dictionary = {
         "period": "mes",
         "description": "Para los que quieren más",
         "features": [
-          "100 créditos mensuales",
+          "10.000 créditos mensuales",
           "Modelos Géminis",
           "Chat de voz de alta calidad",
           "Apoyo prioritario",
@@ -395,12 +395,12 @@ const es: Dictionary = {
     "basic": "BÁSICO",
     "currentBadge": "Actual",
     "freeFeatures": [
-      "20 créditos de registro",
-      "Recarga mensual mínimo 10",
+      "500 créditos de registro",
+      "Recarga mensual mínimo 300",
       "Acceso a modelos Géminis"
     ],
     "basicFeatures": [
-      "100 créditos mensuales",
+      "10.000 créditos mensuales",
       "Apoyo prioritario",
       "Voz de alta calidad"
     ],

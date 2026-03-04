@@ -19,7 +19,7 @@ Problemas comunes y soluciones.
 1. Verifique el saldo en Ajustes > Cuenta de Naia
 2. Revise el uso en el Panel de Naia
 3. Los créditos gratuitos se recargan mensualmente
-4. Actualice a BASIC ($10/mes) para 100 créditos
+4. Actualice a BASIC ($10/mes) para 10.000 créditos
 
 ## Las herramientas no funcionan
 

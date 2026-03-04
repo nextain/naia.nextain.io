@@ -49,7 +49,7 @@ Gérez les API Keys pour les applications de bureau et les services externes :
 | | Gratuit | Basique |
 |---|------|-------|
 | Prix | Gratuit | 10 $/mois |
-| Crédits | 20 (à l'inscription) | 100/mois |
+| Crédits | 500 (à l'inscription) | 10 000/mois |
 | Fonctionnalités | Basique | Complètes |
 
 ## Intégrations

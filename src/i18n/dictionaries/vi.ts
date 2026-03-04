@@ -143,8 +143,8 @@ const vi: Dictionary = {
         "period": "mãi mãi",
         "description": "Bắt đầu chỉ bằng việc đăng ký",
         "features": [
-          "20 tín dụng khi đăng ký",
-          "10 tín dụng nạp lại hàng tháng",
+          "500 tín dụng khi đăng ký",
+          "300 tín dụng nạp lại hàng tháng",
           "Người mẫu Song Tử",
           "Trò chuyện thoại cơ bản",
           "Hỗ trợ cộng đồng"
@@ -157,7 +157,7 @@ const vi: Dictionary = {
         "period": "mo",
         "description": "Dành cho những ai muốn nhiều hơn nữa",
         "features": [
-          "100 tín chỉ hàng tháng",
+          "10.000 tín chỉ hàng tháng",
           "Người mẫu Song Tử",
           "Trò chuyện bằng giọng nói chất lượng cao",
           "Hỗ trợ ưu tiên",
@@ -395,12 +395,12 @@ const vi: Dictionary = {
     "basic": "CƠ BẢN",
     "currentBadge": "hiện tại",
     "freeFeatures": [
-      "20 tín dụng đăng ký",
-      "Nạp tiền hàng tháng tối thiểu 10",
+      "500 tín dụng đăng ký",
+      "Nạp tiền hàng tháng tối thiểu 300",
       "Quyền truy cập của người mẫu Song Tử"
     ],
     "basicFeatures": [
-      "100 tín dụng hàng tháng",
+      "10.000 tín dụng hàng tháng",
       "Hỗ trợ ưu tiên",
       "Giọng nói chất lượng cao"
     ],

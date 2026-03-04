@@ -127,7 +127,7 @@ Naia é construído por um desenvolvedor individual e mantido como código abert
 
 As doações são usadas para:
 - **Custos de servidor**: Servidor Gateway, Cloud Run, Cloud SQL
-- **Créditos gratuitos**: Custos de API LLM para 5 créditos de cadastro + 3 créditos mensais
+- **Créditos gratuitos**: Custos de API LLM para 500 créditos de cadastro + 300 créditos mensais
 - **Desenvolvimento contínuo**: Permitir que o desenvolvedor se dedique ao código aberto em tempo integral
 
 O código aberto não se sustenta apenas com código. As doações dos usuários mantêm o ecossistema vivo.

@@ -19,7 +19,7 @@ Problèmes courants et solutions.
 1. Vérifiez le solde dans Paramètres > Compte Naia
 2. Examinez l'utilisation dans le Tableau de bord Naia
 3. Les crédits gratuits sont rechargés mensuellement
-4. Passez à BASIC (10 $/mois) pour 100 crédits
+4. Passez à BASIC (10 $/mois) pour 10 000 crédits
 
 ## Les outils ne fonctionnent pas
 

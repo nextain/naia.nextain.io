@@ -49,7 +49,7 @@ Quản lý khóa API cho ứng dụng máy tính và dịch vụ bên ngoài:
 | | Miễn phí | Cơ bản |
 |---|------|-------|
 | Giá | Miễn phí | $10/tháng |
-| Tín dụng | 20 (khi đăng ký) | 100/tháng |
+| Tín dụng | 500 (khi đăng ký) | 10.000/tháng |
 | Tính năng | Cơ bản | Đầy đủ |
 
 ## Tích hợp

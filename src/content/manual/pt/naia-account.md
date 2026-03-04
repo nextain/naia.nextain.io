@@ -49,7 +49,7 @@ Gerencie chaves de API para aplicativos de desktop e serviços externos:
 | | Gratuito | Básico |
 |---|------|-------|
 | Preço | Gratuito | $10/mês |
-| Créditos | 20 (no cadastro) | 100/mês |
+| Créditos | 500 (no cadastro) | 10.000/mês |
 | Recursos | Básico | Completo |
 
 ## Integrações

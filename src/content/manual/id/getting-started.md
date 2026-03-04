@@ -10,7 +10,7 @@ Cara termudah — gratis dan tidak memerlukan API Key.
 2. Peramban akan membuka halaman masuk naia.nextain.io
 3. Masuk dengan **akun Google** Anda (pendaftaran otomatis)
 4. Anda akan secara otomatis dialihkan kembali ke aplikasi desktop
-5. Anda menerima **20 kredit gratis** saat mendaftar
+5. Anda menerima **500 kredit gratis** saat mendaftar
 
 ## Mulai dengan API Key
 

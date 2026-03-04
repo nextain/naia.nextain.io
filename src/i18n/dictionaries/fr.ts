@@ -143,8 +143,8 @@ const fr: Dictionary = {
         "period": "pour toujours",
         "description": "Commencez par une simple inscription",
         "features": [
-          "20 crédits à l'inscription",
-          "Recharge mensuelle de 10 crédits",
+          "500 crédits à l'inscription",
+          "Recharge mensuelle de 300 crédits",
           "Modèles Gémeaux",
           "Chat vocal de base",
           "Soutien communautaire"
@@ -157,7 +157,7 @@ const fr: Dictionary = {
         "period": "mo",
         "description": "Pour ceux qui en veulent plus",
         "features": [
-          "100 crédits mensuels",
+          "10 000 crédits mensuels",
           "Modèles Gémeaux",
           "Chat vocal de haute qualité",
           "Assistance prioritaire",
@@ -395,12 +395,12 @@ const fr: Dictionary = {
     "basic": "BASE",
     "currentBadge": "Actuel",
     "freeFeatures": [
-      "20 crédits d'inscription",
-      "Recharge mensuelle minimum 10",
+      "500 crédits d'inscription",
+      "Recharge mensuelle minimum 300",
       "Accès aux modèles Gémeaux"
     ],
     "basicFeatures": [
-      "100 crédits mensuels",
+      "10 000 crédits mensuels",
       "Assistance prioritaire",
       "Voix de haute qualité"
     ],

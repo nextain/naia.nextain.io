@@ -49,7 +49,7 @@ Manage API keys for desktop apps and external services:
 | | Free | Basic |
 |---|------|-------|
 | Price | Free | $10/mo |
-| Credits | 20 (on signup) | 100/mo |
+| Credits | 500 (on signup) | 10,000/mo |
 | Features | Basic | Full |
 
 ## Integrations

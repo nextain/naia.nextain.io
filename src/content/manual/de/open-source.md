@@ -127,7 +127,7 @@ Naia wird von einem einzelnen Entwickler erstellt und als Open Source gepflegt. 
 
 Spenden werden verwendet für:
 - **Serverkosten**: Gateway-Server, Cloud Run, Cloud SQL
-- **Kostenlose Credits**: LLM-API-Kosten für 5 Anmelde-Credits + 3 monatliche Credits
+- **Kostenlose Credits**: LLM-API-Kosten für 500 Anmelde-Credits + 300 monatliche Credits
 - **Laufende Entwicklung**: Dem Entwickler ermöglichen, sich Vollzeit auf Open Source zu konzentrieren
 
 Open Source erhält sich nicht allein durch Code. Spenden von Nutzern halten das Ökosystem am Leben.

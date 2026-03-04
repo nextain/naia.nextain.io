@@ -127,7 +127,7 @@ Naia est développé par un développeur indépendant et maintenu en open source
 
 Les dons sont utilisés pour :
 - **Coûts de serveur** : Serveur Gateway, Cloud Run, Cloud SQL
-- **Crédits gratuits** : Coûts API LLM pour 5 crédits à l'inscription + 3 crédits mensuels
+- **Crédits gratuits** : Coûts API LLM pour 500 crédits à l'inscription + 300 crédits mensuels
 - **Développement continu** : Permettre au développeur de se consacrer à l'open source à temps plein
 
 L'open source ne se maintient pas uniquement par le code. Les dons des utilisateurs font vivre l'écosystème.

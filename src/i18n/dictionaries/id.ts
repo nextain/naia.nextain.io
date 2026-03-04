@@ -143,8 +143,8 @@ const id: Dictionary = {
         "period": "selamanya",
         "description": "Mulailah hanya dengan mendaftar",
         "features": [
-          "20 kredit saat mendaftar",
-          "Isi ulang bulanan 10 kredit",
+          "500 kredit saat mendaftar",
+          "Isi ulang bulanan 300 kredit",
           "Model Gemini",
           "Obrolan suara dasar",
           "Dukungan komunitas"
@@ -157,7 +157,7 @@ const id: Dictionary = {
         "period": "bulan",
         "description": "Bagi mereka yang menginginkan lebih",
         "features": [
-          "100 kredit setiap bulan",
+          "10.000 kredit setiap bulan",
           "Model Gemini",
           "Obrolan suara berkualitas tinggi",
           "Dukungan prioritas",
@@ -395,12 +395,12 @@ const id: Dictionary = {
     "basic": "DASAR",
     "currentBadge": "Saat ini",
     "freeFeatures": [
-      "20 kredit pendaftaran",
-      "Isi ulang bulanan minimal 10",
+      "500 kredit pendaftaran",
+      "Isi ulang bulanan minimal 300",
       "Akses model Gemini"
     ],
     "basicFeatures": [
-      "100 kredit bulanan",
+      "10.000 kredit bulanan",
       "Dukungan prioritas",
       "Suara berkualitas tinggi"
     ],

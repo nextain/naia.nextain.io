@@ -19,7 +19,7 @@ Các vấn đề thường gặp và giải pháp.
 1. Kiểm tra số dư trong Cài đặt > Tài khoản Naia
 2. Xem lại mức sử dụng trong Naia Dashboard
 3. Tín dụng miễn phí được nạp lại hàng tháng
-4. Nâng cấp lên BASIC ($10/tháng) để nhận 100 tín dụng
+4. Nâng cấp lên BASIC ($10/tháng) để nhận 10.000 tín dụng
 
 ## Công cụ không hoạt động
 

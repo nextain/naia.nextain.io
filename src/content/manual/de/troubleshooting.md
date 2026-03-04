@@ -19,7 +19,7 @@ Häufige Probleme und Lösungen.
 1. Überprüfen Sie das Guthaben unter Einstellungen > Naia-Konto
 2. Überprüfen Sie die Nutzung im Naia Dashboard
 3. Kostenlose Credits werden monatlich aufgeladen
-4. Führen Sie ein Upgrade auf BASIC (10 $/Monat) für 100 Credits durch
+4. Führen Sie ein Upgrade auf BASIC (10 $/Monat) für 10.000 Credits durch
 
 ## Tools funktionieren nicht
 

@@ -10,7 +10,7 @@ Cách dễ nhất — miễn phí và không cần API key.
 2. Trình duyệt sẽ mở trang đăng nhập naia.nextain.io
 3. Đăng nhập bằng **tài khoản Google** của bạn (đăng ký tự động)
 4. Bạn sẽ tự động được chuyển hướng trở lại ứng dụng máy tính để bàn
-5. Bạn nhận được **20 tín chỉ miễn phí** khi đăng ký
+5. Bạn nhận được **500 tín chỉ miễn phí** khi đăng ký
 
 ## Bắt đầu với API Key
 

@@ -49,7 +49,7 @@ Kelola API Keys untuk aplikasi desktop dan layanan eksternal:
 | | Gratis | Dasar |
 |---|------|-------|
 | Harga | Gratis | $10/bln |
-| Kredit | 20 (saat pendaftaran) | 100/bln |
+| Kredit | 500 (saat pendaftaran) | 10.000/bln |
 | Fitur | Dasar | Penuh |
 
 ## Integrasi

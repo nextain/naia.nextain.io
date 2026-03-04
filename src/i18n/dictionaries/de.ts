@@ -143,8 +143,8 @@ const de: Dictionary = {
         "period": "für immer",
         "description": "Beginnen Sie einfach mit einer Anmeldung",
         "features": [
-          "5 Credits bei der Anmeldung",
-          "3 Credits monatliche Aufladung",
+          "500 Credits bei der Anmeldung",
+          "300 Credits monatliche Aufladung",
           "Zwillingsmodelle",
           "Einfacher Voice-Chat",
           "Community-Unterstützung"
@@ -157,7 +157,7 @@ const de: Dictionary = {
         "period": "Mo",
         "description": "Für diejenigen, die mehr wollen",
         "features": [
-          "100 Credits monatlich",
+          "10.000 Credits monatlich",
           "Zwillingsmodelle",
           "Hochwertiger Voice-Chat",
           "Vorrangiger Support",
@@ -395,12 +395,12 @@ const de: Dictionary = {
     "basic": "GRUNDLEGEND",
     "currentBadge": "Aktuell",
     "freeFeatures": [
-      "20 Anmeldeguthaben",
-      "Monatliche Nachfüllung mindestens 10",
+      "500 Anmeldeguthaben",
+      "Monatliche Nachfüllung mindestens 300",
       "Zugang zu Zwillingsmodellen"
     ],
     "basicFeatures": [
-      "100 monatliche Credits",
+      "10.000 monatliche Credits",
       "Vorrangiger Support",
       "Hochwertige Stimme"
     ],

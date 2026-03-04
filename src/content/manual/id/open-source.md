@@ -127,7 +127,7 @@ Naia dibangun oleh pengembang individu dan dikelola sebagai open source. Biaya s
 
 Donasi digunakan untuk:
 - **Biaya server**: Server gateway, Cloud Run, Cloud SQL
-- **Kredit gratis**: Biaya API LLM untuk 5 kredit pendaftaran + 3 kredit bulanan
+- **Kredit gratis**: Biaya API LLM untuk 500 kredit pendaftaran + 300 kredit bulanan
 - **Pengembangan berkelanjutan**: Memungkinkan pengembang fokus pada open source penuh waktu
 
 Open source tidak bertahan hanya dengan kode saja. Donasi dari pengguna menjaga ekosistem tetap hidup.

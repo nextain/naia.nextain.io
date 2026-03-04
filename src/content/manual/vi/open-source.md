@@ -127,7 +127,7 @@ Naia được xây dựng bởi một lập trình viên cá nhân và duy trì 
 
 Quyên góp được sử dụng cho:
 - **Chi phí máy chủ**: Máy chủ Gateway, Cloud Run, Cloud SQL
-- **Credit miễn phí**: Chi phí LLM API cho 5 credit đăng ký + 3 credit hàng tháng
+- **Credit miễn phí**: Chi phí LLM API cho 500 credit đăng ký + 300 credit hàng tháng
 - **Phát triển liên tục**: Giúp lập trình viên tập trung toàn thời gian vào mã nguồn mở
 
 Mã nguồn mở không tự duy trì chỉ bằng mã nguồn. Quyên góp từ người dùng giúp hệ sinh thái tồn tại.

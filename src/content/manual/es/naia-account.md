@@ -49,7 +49,7 @@ Gestiona las API keys para aplicaciones de escritorio y servicios externos:
 | | Gratis | Básico |
 |---|------|-------|
 | Precio | Gratis | $10/mes |
-| Créditos | 20 (al registrarse) | 100/mes |
+| Créditos | 500 (al registrarse) | 10.000/mes |
 | Funciones | Básico | Completo |
 
 ## Integraciones

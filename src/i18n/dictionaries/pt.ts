@@ -143,8 +143,8 @@ const pt: Dictionary = {
         "period": "para sempre",
         "description": "Comece com apenas uma inscrição",
         "features": [
-          "20 créditos na inscrição",
-          "10 créditos de recarga mensal",
+          "500 créditos na inscrição",
+          "300 créditos de recarga mensal",
           "Modelos Gêmeos",
           "Bate-papo por voz básico",
           "Apoio comunitário"
@@ -157,7 +157,7 @@ const pt: Dictionary = {
         "period": "mo",
         "description": "Para quem quer mais",
         "features": [
-          "100 créditos mensais",
+          "10.000 créditos mensais",
           "Modelos Gêmeos",
           "Bate-papo por voz de alta qualidade",
           "Suporte prioritário",
@@ -395,12 +395,12 @@ const pt: Dictionary = {
     "basic": "BÁSICO",
     "currentBadge": "Atual",
     "freeFeatures": [
-      "20 créditos de inscrição",
-      "Recarga mensal mínimo 10",
+      "500 créditos de inscrição",
+      "Recarga mensal mínimo 300",
       "Acesso aos modelos Gemini"
     ],
     "basicFeatures": [
-      "100 créditos mensais",
+      "10.000 créditos mensais",
       "Suporte prioritário",
       "Voz de alta qualidade"
     ],

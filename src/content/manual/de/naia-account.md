@@ -49,7 +49,7 @@ Verwalten Sie API Keys für Desktop-Apps und externe Dienste:
 | | Kostenlos | Basic |
 |---|------|-------|
 | Preis | Kostenlos | 10 $/Monat |
-| Credits | 20 (bei Anmeldung) | 100/Monat |
+| Credits | 500 (bei Anmeldung) | 10.000/Monat |
 | Funktionen | Basis | Voll |
 
 ## Integrationen

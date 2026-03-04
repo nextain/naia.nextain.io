@@ -19,7 +19,7 @@ Common issues and solutions.
 1. Check balance in Settings > Naia Account
 2. Review usage in Naia Dashboard
 3. Free credits recharge monthly
-4. Upgrade to BASIC ($10/mo) for 100 credits
+4. Upgrade to BASIC ($10/mo) for 10,000 credits
 
 ## Tools are not working
 

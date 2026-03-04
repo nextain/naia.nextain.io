@@ -19,7 +19,7 @@ Masalah umum dan solusi.
 1. Periksa saldo di Pengaturan > Akun Naia
 2. Tinjau penggunaan di Dasbor Naia
 3. Kredit gratis diisi ulang setiap bulan
-4. Tingkatkan ke BASIC ($10/bulan) untuk 100 kredit
+4. Tingkatkan ke BASIC ($10/bulan) untuk 10.000 kredit
 
 ## Alat tidak berfungsi
 

@@ -127,7 +127,7 @@ Naia is built by an individual developer and maintained as open source. Server c
 
 Donations are used for:
 - **Server costs**: Gateway server, Cloud Run, Cloud SQL
-- **Free credits**: LLM API costs for 5 signup credits + 3 monthly credits
+- **Free credits**: LLM API costs for 500 signup credits + 300 monthly credits
 - **Ongoing development**: Enabling the developer to focus on open source full-time
 
 Open source doesn't sustain itself on code alone. Donations from users keep the ecosystem alive.
