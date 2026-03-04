@@ -13,7 +13,7 @@ Por isso, com os avancos recentes da IA, meu desejo de criar minha propria IA pe
 
 No meu blog pessoal no Naver, os posts mais populares sao sobre configuracao de ambiente Linux e sobre um projeto open source de VTuber com IA. Provavelmente isso tem a ver com o perfil dos meus visitantes, mas acredito que muitos deles compartilham ideias semelhantes as minhas.
 
-Entao, unindo tudo isso em um unico resultado, iniciei o [projeto open source Naia OS](https://github.com/nextain/naia-os). Para garantir a sustentabilidade, fundei a [Nextain](https://about.nextain.io) junto com [Anthony Kim](https://www.linkedin.com/in/%EB%8F%99%ED%95%99-%EA%B9%80-9870a9368/), um mestre do vibe coding na Coreia do Sul. O primeiro commit foi em 15 de fevereiro de 2026 — exatamente 17 dias antes da escrita deste post.
+Entao, unindo tudo isso em um unico resultado, iniciei o [projeto open source Naia OS](https://github.com/nextain/naia-os). Para garantir a sustentabilidade, fundei a [Nextain](https://about.nextain.io) junto com [Anthony Kim](https://github.com/jikime), um mestre do vibe coding na Coreia do Sul. O primeiro commit foi em 15 de fevereiro de 2026 — exatamente 17 dias antes da escrita deste post.
 
 ---
 

@@ -13,7 +13,7 @@ Deshalb war mein Verlangen, eine eigene personliche KI zu erschaffen, durch die 
 
 Auf meinem personlichen Naver-Blog sind die beliebtesten Beitrage die uber Linux-Umgebungskonfiguration und uber die Vorstellung von Open-Source-VTuber-Projekten. Das liegt sicher an der Art meiner Blog-Besucher, aber ich glaube, viele von ihnen haben ahnliche Gedanken wie ich.
 
-Deshalb habe ich all das in einem Ergebnis vereint und das [Naia OS Open-Source-Projekt](https://github.com/nextain/naia-os) gestartet. Um dessen Nachhaltigkeit zu sichern, habe ich zusammen mit [Anthony Kim](https://www.linkedin.com/in/%EB%8F%99%ED%95%99-%EA%B9%80-9870a9368/), einem der fuhrenden Vibe-Coding-Experten in Korea, die Firma [Nextain](https://about.nextain.io) gegrundet. Der erste Commit war am 15. Februar 2026, genau 17 Tage vor der Verfassung dieses Artikels.
+Deshalb habe ich all das in einem Ergebnis vereint und das [Naia OS Open-Source-Projekt](https://github.com/nextain/naia-os) gestartet. Um dessen Nachhaltigkeit zu sichern, habe ich zusammen mit [Anthony Kim](https://github.com/jikime), einem der fuhrenden Vibe-Coding-Experten in Korea, die Firma [Nextain](https://about.nextain.io) gegrundet. Der erste Commit war am 15. Februar 2026, genau 17 Tage vor der Verfassung dieses Artikels.
 
 ---
 

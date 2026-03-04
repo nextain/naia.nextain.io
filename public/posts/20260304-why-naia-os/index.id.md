@@ -13,7 +13,7 @@ Karena itulah, dengan perkembangan AI belakangan ini, keinginan saya untuk membu
 
 Di blog pribadi Naver saya, postingan paling populer adalah tentang setup lingkungan Linux dan pengenalan proyek open source VTuber AI. Mungkin karena karakteristik pengunjung blog saya, tapi saya rasa banyak pengguna yang punya pemikiran serupa dengan saya.
 
-Jadi, saya menggabungkan semuanya menjadi satu hasil dan memulai [proyek open source Naia OS](https://github.com/nextain/naia-os). Untuk keberlanjutannya, saya mendirikan [Nextain](https://about.nextain.io) bersama [Anthony Kim](https://www.linkedin.com/in/%EB%8F%99%ED%95%99-%EA%B9%80-9870a9368/), seorang master vibe coding di Korea Selatan. Commit pertama dilakukan pada 15 Februari 2026 — tepat 17 hari sebelum tulisan ini dibuat.
+Jadi, saya menggabungkan semuanya menjadi satu hasil dan memulai [proyek open source Naia OS](https://github.com/nextain/naia-os). Untuk keberlanjutannya, saya mendirikan [Nextain](https://about.nextain.io) bersama [Anthony Kim](https://github.com/jikime), seorang master vibe coding di Korea Selatan. Commit pertama dilakukan pada 15 Februari 2026 — tepat 17 hari sebelum tulisan ini dibuat.
 
 ---
 
