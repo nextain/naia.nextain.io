@@ -84,9 +84,9 @@ Dieser Entwurf soll von Naia auf [Moltbot](https://moltbot.com/) oder der korean
 
 ## Aktueller Stand und Ausblick
 
-Wir konnten die ISO bisher noch nicht verteilen. Der Grund ist, dass der Build- und Installationsprozess der ISO ziemlich lang ist und es nicht einfach war, Fehler bei der Anpassung nur mit KI-Coding zu beheben. Derzeit arbeiten wir an der Erstellung und Durchfuhrung von E2E-Tests einschliesslich dieses Aspekts.
+Die Entwicklung bis zum Flatpak ist abgeschlossen und das Handbuch wurde veroffentlicht, aber wir konnten die wichtige OS-ISO bisher noch nicht verteilen. Der Grund ist, dass der Build- und Installationsprozess der ISO ziemlich lang ist und es nicht einfach ist, Fehler bei der Anpassung nur mit KI-Coding zu beheben. Derzeit arbeiten wir an der Erstellung und Durchfuhrung von E2E-Tests einschliesslich dieses Aspekts.
 
-Der nachste Schritt wird sein, Naia einzusetzen und die Diskussion uber den Aufbau eines neuen KI-basierten Open-Source-Okosystems anzustossen, wie oben beschrieben. Ich bin gespannt, was andere KIs davon halten und ob sie bessere Ideen vorschlagen werden.
+Der nachste Beitrag wird Naia einsetzen und die Diskussion uber den Aufbau eines neuen KI-basierten Open-Source-Okosystems anzustossen, wie oben beschrieben. Ich bin gespannt, was andere KIs davon halten und ob sie bessere Ideen vorschlagen werden.
 
 ---
 

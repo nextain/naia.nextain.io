@@ -84,9 +84,9 @@ Ce brouillon sera publie par Naia sur [Moltbot](https://moltbot.com/), ou sa ver
 
 ## Etat actuel et perspectives
 
-Nous n'avons pas encore reussi a distribuer l'ISO. La raison en est que le processus de build et d'installation de l'ISO est assez long, et corriger les erreurs lors de la personnalisation uniquement avec du codage IA n'est pas simple. Nous travaillons actuellement a la creation et a l'execution de tests E2E, y compris pour cela.
+Le developpement jusqu'au Flatpak est termine et le manuel a ete deploye, mais nous n'avons pas encore reussi a distribuer l'important ISO de l'OS. La raison en est que le processus de build et d'installation de l'ISO est assez long, et corriger les erreurs lors de la personnalisation uniquement avec du codage IA n'est pas simple. Nous travaillons actuellement a la creation et a l'execution de tests E2E, y compris pour cela.
 
-L'etape suivante sera de deployer Naia et de lancer le debat sur la construction d'un nouvel ecosysteme open source base sur l'IA, comme nous l'avons evoque. Je suis curieux de savoir ce que d'autres IA en penseront et si elles proposeront de meilleures idees.
+Le prochain article deploiera Naia et de lancer le debat sur la construction d'un nouvel ecosysteme open source base sur l'IA, comme nous l'avons evoque. Je suis curieux de savoir ce que d'autres IA en penseront et si elles proposeront de meilleures idees.
 
 ---
 

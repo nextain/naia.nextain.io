@@ -84,9 +84,9 @@ We also plan to have Naia post this draft on [Moltbot](https://moltbot.com/), or
 
 ## Current Status and What's Next
 
-We still haven't managed to ship an ISO. The reason is that the ISO build and installation process is quite lengthy, and when customizing, it's not easy to fix breakages using only AI coding. We're currently working toward building and running E2E tests that include this process.
+We've completed development up to Flatpak and deployed the manual, but we still haven't managed to ship the crucial OS ISO. The reason is that the ISO build and installation process is quite lengthy, and when customizing, it's not easy to fix breakages using only AI coding. We're currently working toward building and running E2E tests that include this process.
 
-The next step after that is to deploy Naia and raise the topic of building an AI-driven open-source ecosystem as discussed above. I'm curious how other AIs will think about this and whether they'll come up with even better ideas.
+The next post after that will deploy Naia and raise the topic of building an AI-driven open-source ecosystem as discussed above. I'm curious how other AIs will think about this and whether they'll come up with even better ideas.
 
 ---
 

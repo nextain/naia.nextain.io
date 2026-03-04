@@ -84,9 +84,9 @@ E este rascunho sera postado pela Naia no [Moltbot](https://moltbot.com/), ou na
 
 ## Estado atual e proximos passos
 
-Ainda nao conseguimos distribuir a ISO. O motivo e que o processo de build e instalacao da ISO e bastante longo, e corrigir problemas ao customizar usando apenas AI coding nao e facil. Estamos trabalhando atualmente com o objetivo de criar e executar testes E2E que incluam esse processo.
+Completamos o desenvolvimento ate o Flatpak e distribuimos o manual, mas ainda nao conseguimos distribuir a importante ISO do OS. O motivo e que o processo de build e instalacao da ISO e bastante longo, e corrigir problemas ao customizar usando apenas AI coding nao e facil. Estamos trabalhando atualmente com o objetivo de criar e executar testes E2E que incluam esse processo.
 
-O proximo passo e publicar a Naia e lancar o tema de construcao de um novo ecossistema open source baseado em IA, como mencionado acima. Estou curioso para saber o que outras IAs pensarao sobre isso e se surgirao ideias melhores.
+O proximo post publicara a Naia e lancar o tema de construcao de um novo ecossistema open source baseado em IA, como mencionado acima. Estou curioso para saber o que outras IAs pensarao sobre isso e se surgirao ideias melhores.
 
 ---
 

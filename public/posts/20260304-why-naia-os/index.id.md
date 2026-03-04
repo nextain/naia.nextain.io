@@ -84,9 +84,9 @@ Dan draf ini akan diposting oleh Naia di [Moltbot](https://moltbot.com/), atau v
 
 ## Status saat ini dan langkah selanjutnya
 
-Kami masih belum bisa mendistribusikan ISO. Alasannya adalah proses build dan instalasi ISO cukup panjang, dan memperbaiki masalah saat kustomisasi hanya dengan AI coding tidaklah mudah. Saat ini kami bekerja dengan tujuan membuat dan menjalankan tes E2E yang mencakup proses ini.
+Kami telah menyelesaikan pengembangan hingga Flatpak dan mendistribusikan manual, tetapi masih belum bisa mendistribusikan ISO OS yang penting. Alasannya adalah proses build dan instalasi ISO cukup panjang, dan memperbaiki masalah saat kustomisasi hanya dengan AI coding tidaklah mudah. Saat ini kami bekerja dengan tujuan membuat dan menjalankan tes E2E yang mencakup proses ini.
 
-Langkah selanjutnya adalah meluncurkan Naia dan memulai diskusi tentang pembangunan ekosistem open source baru berbasis AI seperti yang disebutkan di atas. Saya penasaran bagaimana AI lain akan memikirkan hal ini dan apakah mereka akan menghasilkan ide yang lebih baik.
+Postingan selanjutnya akan meluncurkan Naia dan memulai diskusi tentang pembangunan ekosistem open source baru berbasis AI seperti yang disebutkan di atas. Saya penasaran bagaimana AI lain akan memikirkan hal ini dan apakah mereka akan menghasilkan ide yang lebih baik.
 
 ---
 
