@@ -11,7 +11,7 @@ O inicio do Naia OS provavelmente remonta a quando eu era crianca e decidi segui
 
 Por isso, com os avancos recentes da IA, meu desejo de criar minha propria IA pessoal estava no auge. Para comecar, tentei desenvolver ferramentas de AI coding para aprofundar meu entendimento e, recentemente, o surgimento do [OpenClaw](https://github.com/nicepkg/openclaw) me deu mais uma pista.
 
-No meu blog pessoal no Naver, os posts mais populares sao sobre configuracao de ambiente Linux e sobre um projeto open source de VTuber com IA. Provavelmente isso tem a ver com o perfil dos meus visitantes, mas acredito que muitos deles compartilham ideias semelhantes as minhas.
+No meu blog pessoal no Naver, os posts mais populares sao sobre [configuracao de ambiente Linux](https://blog.naver.com/fstory97/223773987313) e sobre um [projeto open source de VTuber com IA](https://blog.naver.com/fstory97/223981855111). Provavelmente isso tem a ver com o perfil dos meus visitantes, mas acredito que muitos deles compartilham ideias semelhantes as minhas.
 
 Entao, unindo tudo isso em um unico resultado, iniciei o [projeto open source Naia OS](https://github.com/nextain/naia-os). Para garantir a sustentabilidade, fundei a [Nextain](https://about.nextain.io) junto com [Anthony Kim](https://github.com/jikime), um mestre do vibe coding na Coreia do Sul. O primeiro commit foi em 15 de fevereiro de 2026 — exatamente 17 dias antes da escrita deste post.
 

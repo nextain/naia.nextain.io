@@ -11,7 +11,7 @@ Khoi nguon cua Naia OS co le bat dau tu khi toi con nho va quyet dinh theo duoi 
 
 Vi vay, voi su phat trien cua AI gan day, khao khat tao ra AI ca nhan cua toi dang o dinh cao. De bat dau, toi da thu phat trien cac cong cu AI coding de nang cao hieu biet, va gan day su xuat hien cua [OpenClaw](https://github.com/nicepkg/openclaw) da cho toi them goi y.
 
-Tren blog ca nhan Naver cua toi, nhung bai viet duoc yeu thich nhat la ve cai dat moi truong Linux va gioi thieu du an open source VTuber AI. Co le do la dac diem cua nguoi doc blog toi, nhung toi nghi nhieu nguoi dung cung co suy nghi tuong tu nhu toi.
+Tren blog ca nhan Naver cua toi, nhung bai viet duoc yeu thich nhat la ve [cai dat moi truong Linux](https://blog.naver.com/fstory97/223773987313) va [gioi thieu du an open source VTuber AI](https://blog.naver.com/fstory97/223981855111). Co le do la dac diem cua nguoi doc blog toi, nhung toi nghi nhieu nguoi dung cung co suy nghi tuong tu nhu toi.
 
 Vi the, toi da ket hop tat ca thanh mot ket qua duy nhat va bat dau [du an open source Naia OS](https://github.com/nextain/naia-os). De dam bao tinh ben vung, toi da thanh lap [Nextain](https://about.nextain.io) cung voi [Anthony Kim](https://github.com/jikime), mot bac thay vibe coding tai Han Quoc. Commit dau tien la vao ngay 15 thang 2 nam 2026 — dung 17 ngay truoc khi bai viet nay duoc viet.
 
