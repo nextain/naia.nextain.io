@@ -31,6 +31,7 @@ export interface Dictionary {
     dashboard: string;
     toggleMenu: string;
     manual: string;
+    blog: string;
   };
   footer: {
     brand: string;

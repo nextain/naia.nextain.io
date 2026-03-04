@@ -30,6 +30,7 @@ export function Header({ session }: { session: Session | null }) {
     { href: `/${lang}#pricing`, label: dict.header.pricing },
     { href: `/${lang}#faq`, label: dict.header.faq },
     { href: `/${lang}/manual`, label: dict.header.manual },
+    { href: `/${lang}/blog`, label: dict.header.blog },
   ];
 
   return (

@@ -31,6 +31,7 @@ const ko: Dictionary = {
     dashboard: "대시보드",
     toggleMenu: "메뉴 열기/닫기",
     manual: "사용법",
+    blog: "블로그",
   },
   footer: {
     brand: "Naia",

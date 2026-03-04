@@ -30,7 +30,8 @@ const ar: Dictionary = {
     "login": "تسجيل الدخول",
     "dashboard": "لوحة القيادة",
     "toggleMenu": "تبديل القائمة",
-    "manual": "دليل"
+    "manual": "دليل",
+    "blog": "مدونة"
   },
   "footer": {
     "brand": "نايا",

@@ -30,7 +30,8 @@ const pt: Dictionary = {
     "login": "Entrar",
     "dashboard": "Painel",
     "toggleMenu": "Alternar menu",
-    "manual": "Manuais"
+    "manual": "Manuais",
+    "blog": "Blog"
   },
   "footer": {
     "brand": "Naia",

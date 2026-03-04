@@ -30,7 +30,8 @@ const id: Dictionary = {
     "login": "Masuk",
     "dashboard": "Dasbor",
     "toggleMenu": "Alihkan menu",
-    "manual": "petunjuk"
+    "manual": "petunjuk",
+    "blog": "Blog"
   },
   "footer": {
     "brand": "Naia",

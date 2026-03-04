@@ -30,7 +30,8 @@ const bn: Dictionary = {
     "login": "লগইন করুন",
     "dashboard": "ড্যাশবোর্ড",
     "toggleMenu": "মেনু টগল করুন",
-    "manual": "ম্যানুয়াল"
+    "manual": "ম্যানুয়াল",
+    "blog": "ব্লগ"
   },
   "footer": {
     "brand": "নায়া",

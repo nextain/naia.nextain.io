@@ -30,7 +30,8 @@ const ru: Dictionary = {
     "login": "Войти",
     "dashboard": "Панель управления",
     "toggleMenu": "Переключить меню",
-    "manual": "Руководство"
+    "manual": "Руководство",
+    "blog": "Блог"
   },
   "footer": {
     "brand": "Ная",

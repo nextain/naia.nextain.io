@@ -30,7 +30,8 @@ const hi: Dictionary = {
     "login": "लॉग इन करें",
     "dashboard": "डैशबोर्ड",
     "toggleMenu": "मेनू टॉगल करें",
-    "manual": "मैनुअल"
+    "manual": "मैनुअल",
+    "blog": "ब्लॉग"
   },
   "footer": {
     "brand": "नाया",

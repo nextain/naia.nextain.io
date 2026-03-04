@@ -30,7 +30,8 @@ const zh: Dictionary = {
     "login": "登录",
     "dashboard": "仪表板",
     "toggleMenu": "切换菜单",
-    "manual": "手册"
+    "manual": "手册",
+    "blog": "博客"
   },
   "footer": {
     "brand": "奈亚",

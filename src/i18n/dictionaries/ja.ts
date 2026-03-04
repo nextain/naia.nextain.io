@@ -30,7 +30,8 @@ const ja: Dictionary = {
     "login": "ログイン",
     "dashboard": "ダッシュボード",
     "toggleMenu": "メニューの切り替え",
-    "manual": "マニュアル"
+    "manual": "マニュアル",
+    "blog": "ブログ"
   },
   "footer": {
     "brand": "ナイア",

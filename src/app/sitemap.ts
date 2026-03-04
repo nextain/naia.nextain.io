@@ -1,10 +1,11 @@
 import type { MetadataRoute } from "next";
 import { SEO_LOCALES } from "@/i18n/config";
 import { MANUAL_SLUGS } from "@/lib/manual-docs";
+import { getPostSlugs } from "@/lib/posts";
 
 const BASE_URL = "https://naia.nextain.io";
 
-const PUBLIC_PAGES = ["", "download", "terms", "privacy", "refund", "contact", "manual"];
+const PUBLIC_PAGES = ["", "download", "terms", "privacy", "refund", "contact", "manual", "blog"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -44,6 +45,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
         alternates: {
           languages: manualLanguages,
+        },
+      });
+    }
+
+    // Blog post pages
+    for (const slug of getPostSlugs()) {
+      const blogLanguages: Record<string, string> = {};
+      SEO_LOCALES.forEach((l) => {
+        blogLanguages[l] = `${BASE_URL}/${l}/blog/${slug}`;
+      });
+      blogLanguages["x-default"] = `${BASE_URL}/en/blog/${slug}`;
+
+      entries.push({
+        url: `${BASE_URL}/${locale}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.6,
+        alternates: {
+          languages: blogLanguages,
         },
       });
     }

@@ -30,7 +30,8 @@ const fr: Dictionary = {
     "login": "Connexion",
     "dashboard": "Tableau de bord",
     "toggleMenu": "Changer de menu",
-    "manual": "Manuel"
+    "manual": "Manuel",
+    "blog": "Blog"
   },
   "footer": {
     "brand": "Naia",

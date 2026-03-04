@@ -30,7 +30,8 @@ const vi: Dictionary = {
     "login": "Đăng nhập",
     "dashboard": "Trang tổng quan",
     "toggleMenu": "Chuyển đổi menu",
-    "manual": "Hướng dẫn sử dụng"
+    "manual": "Hướng dẫn sử dụng",
+    "blog": "Blog"
   },
   "footer": {
     "brand": "Naia",

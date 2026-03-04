@@ -54,6 +54,8 @@ The homepage and portal (this site) provides:
 - `/{locale}/terms` — Terms of Service
 - `/{locale}/privacy` — Privacy Policy
 - `/{locale}/refund` — Refund Policy
+- `/{locale}/blog` — Blog listing page
+- `/{locale}/blog/{slug}` — Blog post detail page
 - `/{locale}/contact` — Contact
 - Supported locales: `en`, `ko`, `ja`, `zh`, `fr`, `de`, `ru`, `es`, `ar`, `hi`, `bn`, `pt`, `id`, `vi`
 

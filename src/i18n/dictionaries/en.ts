@@ -31,6 +31,7 @@ const en: Dictionary = {
     dashboard: "Dashboard",
     toggleMenu: "Toggle menu",
     manual: "Manual",
+    blog: "Blog",
   },
   footer: {
     brand: "Naia",
