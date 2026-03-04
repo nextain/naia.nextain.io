@@ -355,7 +355,7 @@ const ru: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "Один исполняемый файл. Запускается напрямую без установки.",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "Только Shell UI. ИИ-шлюз не включён.",
       },
       "deb": {

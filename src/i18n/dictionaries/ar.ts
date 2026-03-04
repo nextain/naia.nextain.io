@@ -355,7 +355,7 @@ const ar: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "ملف تنفيذي واحد. قم بتشغيله مباشرة دون تثبيت.",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "Shell UI فقط. بوابة AI غير مضمنة.",
       },
       "deb": {

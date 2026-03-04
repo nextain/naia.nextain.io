@@ -355,7 +355,7 @@ const bn: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "একক এক্সিকিউটেবল ফাইল। ইনস্টলেশন ছাড়াই সরাসরি চালান।",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "শুধুমাত্র Shell UI। AI গেটওয়ে অন্তর্ভুক্ত নয়।",
       },
       "deb": {

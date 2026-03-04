@@ -368,7 +368,7 @@ const en: Dictionary = {
       appimage: {
         name: "AppImage",
         description: "Single executable file. Run directly without installation.",
-        command: "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        command: "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         note: "Shell UI only. AI gateway not included.",
       },
       deb: {

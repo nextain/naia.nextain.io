@@ -355,7 +355,7 @@ const zh: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "单个可执行文件。无需安装，直接运行。",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "仅Shell UI。不包含AI网关。",
       },
       "deb": {

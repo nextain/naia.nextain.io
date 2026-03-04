@@ -355,7 +355,7 @@ const hi: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "एकल निष्पादन योग्य फ़ाइल। बिना इंस्टॉल किए सीधे चलाएँ।",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "केवल Shell UI। AI गेटवे शामिल नहीं है।",
       },
       "deb": {

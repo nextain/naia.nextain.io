@@ -355,7 +355,7 @@ const es: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "Archivo ejecutable único. Ejecútelo directamente sin instalación.",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "Solo Shell UI. Gateway de IA no incluido.",
       },
       "deb": {

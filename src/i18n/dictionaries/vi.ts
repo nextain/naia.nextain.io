@@ -355,7 +355,7 @@ const vi: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "Tệp thực thi đơn. Chạy trực tiếp mà không cần cài đặt.",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "Chỉ Shell UI. Không bao gồm gateway AI.",
       },
       "deb": {

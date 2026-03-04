@@ -355,7 +355,7 @@ const ja: Dictionary = {
       "appimage": {
         "name": "AppImage",
         "description": "単一の実行ファイルです。インストール不要でそのまま実行できます。",
-        "command": "chmod +x Naia.Shell_0.1.0_amd64.AppImage && ./Naia.Shell_0.1.0_amd64.AppImage",
+        "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
         "note": "Shell UIのみ。AIゲートウェイは含まれていません。",
       },
       "deb": {
