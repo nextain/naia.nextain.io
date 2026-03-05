@@ -447,8 +447,23 @@ async function createPage(browser: Browser, locale: string, opts?: { labKey?: bo
   return page;
 }
 
-async function loadApp(page: Page, waitMs = 10000) {
+// Google Fonts URLs for CJK — Playwright bundled Chromium can't read .ttc system fonts
+const CJK_FONT_URL: Record<string, string> = {
+  ja: "https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap",
+  zh: "https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap",
+};
+const CJK_FONT_FAMILY: Record<string, string> = { ja: "Noto Sans JP", zh: "Noto Sans SC" };
+
+async function injectCJKFont(page: Page, locale: string) {
+  if (!CJK_FONT_URL[locale]) return;
+  await page.addStyleTag({ url: CJK_FONT_URL[locale] });
+  await page.addStyleTag({ content: `* { font-family: "${CJK_FONT_FAMILY[locale]}", sans-serif !important; }` });
+  await page.waitForTimeout(2000); // Wait for web font download
+}
+
+async function loadApp(page: Page, waitMs = 10000, locale?: string) {
   await page.goto(BASE_URL, { waitUntil: "networkidle", timeout: 20000 });
+  if (locale) await injectCJKFont(page, locale);
   await page.waitForTimeout(waitMs); // VRM avatar load (Three.js needs time)
 }
 
@@ -457,7 +472,7 @@ async function loadApp(page: Page, waitMs = 10000) {
 async function captureMainAndChat(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page, 12000); // Extra time for VRM
+    await loadApp(page, 12000, locale); // Extra time for VRM
 
     await page.screenshot({ path: path.join(outDir, "main-screen.png") });
     console.log("  -> main-screen.png");
@@ -476,10 +491,34 @@ async function captureMainAndChat(browser: Browser, outDir: string, locale: stri
   }
 }
 
+async function captureChatVoice(browser: Browser, outDir: string, locale: string) {
+  const page = await createPage(browser, locale);
+  try {
+    await loadApp(page, undefined, locale);
+    await injectChatMessages(page, locale);
+    await page.waitForTimeout(500);
+
+    // Simulate voice active state: add .active class to voice button + disable textarea
+    await page.evaluate(() => {
+      const btn = document.querySelector(".chat-voice-btn");
+      if (btn) btn.classList.add("active");
+      const textarea = document.querySelector(".chat-input") as HTMLTextAreaElement | null;
+      if (textarea) textarea.disabled = true;
+    });
+    await page.waitForTimeout(500);
+    await page.screenshot({ path: path.join(outDir, "chat-voice.png") });
+    console.log("  -> chat-voice.png");
+  } catch (e) {
+    console.log(`  [error] chat-voice: ${(e as Error).message.split("\\n")[0]}`);
+  } finally {
+    await page.close();
+  }
+}
+
 async function captureChatCost(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale, { labKey: true });
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await injectChatMessages(page, locale);
     await page.waitForTimeout(500);
 
@@ -502,7 +541,7 @@ async function captureChatCost(browser: Browser, outDir: string, locale: string)
 async function captureChatTool(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await injectChatMessages(page, locale);
     await page.waitForTimeout(500);
 
@@ -525,7 +564,7 @@ async function captureChatTool(browser: Browser, outDir: string, locale: string)
 async function captureChatApproval(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await injectChatMessages(page, locale);
     await injectPendingApproval(page, locale);
     await page.waitForTimeout(800);
@@ -541,7 +580,7 @@ async function captureChatApproval(browser: Browser, outDir: string, locale: str
 async function captureHistoryTab(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(1).click({ timeout: 5000 });
     await page.waitForTimeout(3000); // Wait for directToolCall → agent_response flow
     await page.screenshot({ path: path.join(outDir, "history-tab.png") });
@@ -556,7 +595,7 @@ async function captureHistoryTab(browser: Browser, outDir: string, locale: strin
 async function captureProgressTab(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(2).click({ timeout: 5000 });
     await page.waitForTimeout(1500);
     // Inject progress data directly via Zustand store
@@ -574,7 +613,7 @@ async function captureProgressTab(browser: Browser, outDir: string, locale: stri
 async function captureSkillsTab(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(3).click({ timeout: 5000 });
     await page.waitForTimeout(1500);
     await page.screenshot({ path: path.join(outDir, "skills-tab.png") });
@@ -598,7 +637,7 @@ async function captureSkillsTab(browser: Browser, outDir: string, locale: string
 async function captureChannelsTab(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale, { discord: true });
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(4).click({ timeout: 5000 });
     await page.waitForTimeout(3000); // Wait for Discord API mock to resolve
     await page.screenshot({ path: path.join(outDir, "channels-tab.png") });
@@ -613,7 +652,7 @@ async function captureChannelsTab(browser: Browser, outDir: string, locale: stri
 async function captureAgentsTab(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(5).click({ timeout: 5000 });
     await page.waitForTimeout(3000); // Wait for directToolCall flow
     await page.screenshot({ path: path.join(outDir, "agents-tab.png") });
@@ -628,7 +667,7 @@ async function captureAgentsTab(browser: Browser, outDir: string, locale: string
 async function captureDiagnosticsTab(browser: Browser, outDir: string, locale: string) {
   const page = await createPage(browser, locale);
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(6).click({ timeout: 5000 });
     await page.waitForTimeout(3000); // Wait for diagnostics fetch
     // Also inject log entries via Zustand
@@ -647,7 +686,7 @@ async function captureSettingsSections(browser: Browser, outDir: string, locale:
   // With labKey for Nextain connected state
   const page = await createPage(browser, locale, { labKey: true });
   try {
-    await loadApp(page);
+    await loadApp(page, undefined, locale);
     await page.locator(".chat-tab").nth(7).click({ timeout: 5000 });
     await page.waitForTimeout(1500);
 
@@ -694,12 +733,15 @@ async function captureSettingsSections(browser: Browser, outDir: string, locale:
   }
 }
 
-async function captureOnboarding(browser: Browser, outDir: string) {
-  const page = await browser.newPage({ viewport: VIEWPORT, deviceScaleFactor: 2 });
+async function captureOnboarding(browser: Browser, outDir: string, locale: string) {
+  const context = await browser.newContext({ viewport: VIEWPORT, deviceScaleFactor: 2, locale });
+  const page = await context.newPage();
   try {
+    await page.addInitScript(`window.__MOCK_LOCALE = "${locale}";`);
     await page.addInitScript(TAURI_MOCK);
-    // No config = onboarding
+    // No config = onboarding (app detects locale from navigator.language)
     await page.goto(BASE_URL, { waitUntil: "networkidle", timeout: 15000 });
+    await injectCJKFont(page, locale);
     await page.waitForTimeout(1500);
 
     const shot = async (name: string) => {
@@ -732,17 +774,21 @@ async function captureOnboarding(browser: Browser, outDir: string) {
     await shot("onboarding-personality");
     await next().click({ timeout: 10000 }); await page.waitForTimeout(600);
 
+    // speechStyle step (between personality and complete)
+    const startLabels = ["시작하기", "Get Started", "はじめる", "开始使用", "Commencer", "Legen Sie los", "Начать", "Empezar", "ابدأ", "आरंभ करें", "শুরু করুন", "Comece", "Memulai", "Bắt đầu"];
     await page.waitForTimeout(500);
     const vis = await next().isVisible({ timeout: 1000 }).catch(() => false);
     if (vis) {
       const t = await next().textContent();
-      if (t && !t.includes("시작") && !t.includes("Start")) {
+      if (t && !startLabels.some(l => t.includes(l))) {
+        await shot("onboarding-speech-style");
         await next().click({ timeout: 3000 }); await page.waitForTimeout(600);
       }
     }
     await shot("onboarding-complete");
   } finally {
     await page.close();
+    await context.close();
   }
 }
 
@@ -1056,10 +1102,13 @@ async function run() {
 
     try {
       console.log("\n--- Onboarding ---");
-      await captureOnboarding(browser, outDir);
+      await captureOnboarding(browser, outDir, locale);
 
       console.log("\n--- Main & Chat ---");
       await captureMainAndChat(browser, outDir, locale);
+
+      console.log("\n--- Chat Voice ---");
+      await captureChatVoice(browser, outDir, locale);
 
       console.log("\n--- Chat Cost ---");
       await captureChatCost(browser, outDir, locale);

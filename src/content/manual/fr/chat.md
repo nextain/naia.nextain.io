@@ -11,6 +11,8 @@ L'ecran de conversation principal avec l'avatar IA.
 
 ## Chat vocal (en direct)
 
+![Chat vocal](chat-voice.png)
+
 1. Cliquez sur le **bouton Chat vocal** à côté du champ de saisie
 2. Une fois connecté, une conversation vocale bidirectionnelle en temps réel commence
 3. Parlez et Naia répond immédiatement par la voix

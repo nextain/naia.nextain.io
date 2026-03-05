@@ -21,12 +21,11 @@ scripts:
       - Each tab opens in a separate browser page (avoids blocking)
     source: http://localhost:1420 (Naia OS shell Vite dev server)
     output:
-      - public/manual/ko/*.png
-      - public/manual/en/*.png
+      - public/manual/{locale}/*.png (14 locales)
     images:
-      onboarding: [onboarding-provider, onboarding-apikey, onboarding-agent-name, onboarding-user-name, onboarding-character, onboarding-personality, onboarding-complete]
+      onboarding: [onboarding-provider, onboarding-apikey, onboarding-agent-name, onboarding-user-name, onboarding-character, onboarding-personality, onboarding-speech-style, onboarding-complete]
       main: [main-screen, tabs-layout, chat-text]
-      chat_features: [chat-cost, chat-tool, chat-approval]
+      chat_features: [chat-voice, chat-cost, chat-tool, chat-approval]
       tabs: [history-tab, progress-tab, skills-tab, skills-card, channels-tab, agents-tab, diagnostics-tab]
       settings: [settings-overview, settings-ai, settings-voice, settings-persona, settings-memory, settings-avatar, settings-device, settings-tools, settings-channels, settings-lab]
 

@@ -11,6 +11,8 @@ Der Haupt-Konversationsbildschirm mit dem KI-Avatar.
 
 ## Sprachchat (Live)
 
+![Sprachchat](chat-voice.png)
+
 1. Klicken Sie auf die **Sprachchat-Schaltfläche** neben dem Eingabefeld
 2. Nach der Verbindung beginnt eine bidirektionale Echtzeit-Sprachkonversation
 3. Sprechen Sie und Naia antwortet sofort per Sprache

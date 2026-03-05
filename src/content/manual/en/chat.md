@@ -11,6 +11,8 @@ The main conversation screen with Naia.
 
 ## Voice Chat (Live)
 
+![Voice chat](chat-voice.png)
+
 1. Click the **Voice Chat button** next to the input field
 2. Once connected, a real-time two-way voice conversation begins
 3. Speak and Naia responds immediately with voice

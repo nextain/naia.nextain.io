@@ -11,6 +11,8 @@ Màn hình trò chuyện chính với Naia.
 
 ## Trò chuyện thoại (Trực tiếp)
 
+![Trò chuyện thoại](chat-voice.png)
+
 1. Nhấp vào **nút Trò chuyện thoại** bên cạnh trường nhập liệu
 2. Sau khi kết nối, cuộc trò chuyện thoại hai chiều thời gian thực bắt đầu
 3. Nói và Naia phản hồi ngay lập tức bằng giọng nói

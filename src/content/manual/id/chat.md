@@ -11,6 +11,8 @@ Layar percakapan utama dengan Naia.
 
 ## Obrolan Suara (Langsung)
 
+![Obrolan suara](chat-voice.png)
+
 1. Klik **tombol Obrolan Suara** di samping kolom input
 2. Setelah terhubung, percakapan suara dua arah secara real-time dimulai
 3. Bicara dan Naia langsung merespons dengan suara

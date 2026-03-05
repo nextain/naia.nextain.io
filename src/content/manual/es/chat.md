@@ -11,6 +11,8 @@ La pantalla principal de conversación con Naia.
 
 ## Chat de Voz (en vivo)
 
+![Chat de voz](chat-voice.png)
+
 1. Haga clic en el **botón de Chat de Voz** junto al campo de entrada
 2. Una vez conectado, comienza una conversación de voz bidireccional en tiempo real
 3. Hable y Naia responde inmediatamente con voz
