@@ -100,6 +100,10 @@ const zh: Dictionary = {
           "title": "永不停歇的AI",
           "description": "OpenClaw在后台持续运行。即使关闭应用，AI依然保持活跃，接收消息，执行任务。"
         },
+        "memory": {
+          "title": "越聊越了解你的AI",
+          "description": "在对话中自然记住您的姓名、偏好、生日等。记忆在桌面、Discord私信等所有渠道持续有效，仅存储在本地设备上。"
+        },
         "openSource": {
           "title": "AI守护的开源",
           "description": "源代码(Apache 2.0)与AI上下文(CC-BY-SA 4.0)双重许可保护。AI代理自主标注来源、遵守许可证，支撑开源生态系统的全新贡献基础设施。"

@@ -100,6 +100,10 @@ const es: Dictionary = {
           "title": "IA siempre activa",
           "description": "OpenClaw funciona en segundo plano 24/7. Incluso cuando cierras la app, tu IA sigue viva — recibiendo mensajes y trabajando."
         },
+        "memory": {
+          "title": "Memoria persistente",
+          "description": "Naia recuerda naturalmente tu nombre, preferencias, cumpleaños y más durante la conversación. Los recuerdos persisten en escritorio, Discord DM y todos los canales, almacenados solo en tu dispositivo local."
+        },
         "openSource": {
           "title": "Open source protegido por IA",
           "description": "Doble licencia: código fuente bajo Apache 2.0, contexto IA bajo CC-BY-SA 4.0. Los agentes IA atribuyen fuentes, cumplen licencias y sostienen el ecosistema open source — una nueva infraestructura de contribución."

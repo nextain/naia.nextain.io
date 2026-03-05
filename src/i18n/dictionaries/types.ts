@@ -76,6 +76,7 @@ export interface Dictionary {
         skills: { title: string; description: string };
         discord: { title: string; description: string };
         daemon: { title: string; description: string };
+        memory: { title: string; description: string };
         openSource: { title: string; description: string };
         vision: { title: string; description: string };
       };

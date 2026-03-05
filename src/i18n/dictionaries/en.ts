@@ -109,6 +109,11 @@ const en: Dictionary = {
           description:
             "OpenClaw runs in the background 24/7. Even when you close the app, your AI stays alive — receiving messages and doing work.",
         },
+        memory: {
+          title: "Persistent Memory",
+          description:
+            "Naia naturally remembers your name, preferences, birthday, and more during conversation. Memories persist across desktop, Discord DM, and all channels — stored only on your local device.",
+        },
         openSource: {
           title: "AI-Guarded Open Source",
           description:

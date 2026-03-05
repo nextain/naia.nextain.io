@@ -9,18 +9,15 @@ A tela principal de conversação com Naia.
 3. Naia gera uma resposta (transmitida em tempo real)
 4. Use Shift+Enter para quebras de linha
 
-## Conversa de Voz
+## Chat de Voz (ao vivo)
 
-1. Clique no **botão do microfone** ao lado do campo de entrada
-2. Fale quando o microfone for ativado
-3. Clique novamente para parar a gravação — a fala é convertida em texto (STT)
-4. O texto convertido é enviado automaticamente
+1. Clique no **botão Chat de Voz** ao lado do campo de entrada
+2. Após a conexão, uma conversa de voz bidirecional em tempo real começa
+3. Fale e Naia responde imediatamente com voz
+4. Clique novamente para encerrar a sessão de voz
 
-## Resposta por Voz (TTS)
-
-- As respostas de Naia são reproduzidas automaticamente como áudio
-- Pode ser desativado em Configurações
-- O avatar realiza sincronia labial durante a reprodução
+- A entrada de texto permanece disponível durante o chat de voz
+- O avatar realiza animação de sincronia labial durante as respostas
 
 ## Exibição de Custo
 

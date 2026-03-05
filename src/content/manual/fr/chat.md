@@ -9,18 +9,15 @@ L'ecran de conversation principal avec l'avatar IA.
 3. L'avatar IA génère une réponse (diffusée en temps réel)
 4. Utilisez Maj+Entrée pour les sauts de ligne
 
-## Conversation vocale
+## Chat vocal (en direct)
 
-1. Cliquez sur le **bouton microphone** à côté du champ de saisie
-2. Parlez lorsque le microphone s'active
-3. Cliquez à nouveau pour arrêter l'enregistrement — la parole est convertie en texte (STT)
-4. Le texte converti est automatiquement envoyé
+1. Cliquez sur le **bouton Chat vocal** à côté du champ de saisie
+2. Une fois connecté, une conversation vocale bidirectionnelle en temps réel commence
+3. Parlez et Naia répond immédiatement par la voix
+4. Cliquez à nouveau pour terminer la session vocale
 
-## Réponse vocale (TTS)
-
-- Les réponses de l'avatar IA sont automatiquement lues sous forme audio
-- Peut être désactivé dans les Paramètres
-- L'avatar effectue une synchronisation labiale pendant la lecture
+- La saisie de texte reste disponible pendant le chat vocal
+- L'avatar effectue une animation de synchronisation labiale pendant les réponses
 
 ## Affichage des coûts
 

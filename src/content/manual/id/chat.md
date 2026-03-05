@@ -9,18 +9,15 @@ Layar percakapan utama dengan Naia.
 3. Naia menghasilkan respons (mengalir secara real-time)
 4. Gunakan Shift+Enter untuk jeda baris
 
-## Percakapan Suara
+## Obrolan Suara (Langsung)
 
-1. Klik **tombol mikrofon** di samping kolom input
-2. Berbicara saat mikrofon aktif
-3. Klik lagi untuk berhenti merekam — ucapan diubah menjadi teks (STT)
-4. Teks yang dikonversi secara otomatis terkirim
+1. Klik **tombol Obrolan Suara** di samping kolom input
+2. Setelah terhubung, percakapan suara dua arah secara real-time dimulai
+3. Bicara dan Naia langsung merespons dengan suara
+4. Klik lagi untuk mengakhiri sesi suara
 
-## Respons Suara (TTS)
-
-- Respons Naia secara otomatis diputar sebagai audio
-- Dapat dimatikan di Pengaturan
-- Avatar melakukan sinkronisasi bibir selama pemutaran
+- Input teks tetap tersedia selama obrolan suara
+- Avatar melakukan animasi sinkronisasi bibir selama respons
 
 ## Tampilan Biaya
 

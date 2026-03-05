@@ -109,6 +109,11 @@ const ko: Dictionary = {
           description:
             "OpenClaw가 백그라운드에서 항상 구동. 앱을 끄더라도 AI는 살아있고, 메시지를 받고, 작업을 수행합니다.",
         },
+        memory: {
+          title: "대화할수록 알아가는 AI",
+          description:
+            "대화 중 자연스럽게 이름, 선호, 생일 등을 기억합니다. 기억은 데스크톱, Discord DM 등 모든 경로에서 유지되며, 로컬 기기에만 저장됩니다.",
+        },
         openSource: {
           title: "AI가 지키는 오픈소스",
           description:

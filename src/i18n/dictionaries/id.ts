@@ -100,6 +100,10 @@ const id: Dictionary = {
           "title": "AI yang Selalu Aktif",
           "description": "OpenClaw berjalan di latar belakang 24/7. Bahkan saat Anda menutup aplikasi, AI Anda tetap hidup — menerima pesan dan mengerjakan tugas."
         },
+        "memory": {
+          "title": "Memori yang Bertumbuh",
+          "description": "Naia secara alami mengingat nama, preferensi, ulang tahun Anda selama percakapan. Memori bertahan di desktop, Discord DM, dan semua saluran — disimpan hanya di perangkat lokal Anda."
+        },
         "openSource": {
           "title": "Open Source Dilindungi AI",
           "description": "Lisensi ganda: kode sumber di bawah Apache 2.0, konteks AI di bawah CC-BY-SA 4.0. Agen AI secara mandiri mencantumkan sumber, mematuhi lisensi, dan menjaga ekosistem open source — infrastruktur kontribusi baru."

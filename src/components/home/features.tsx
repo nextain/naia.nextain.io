@@ -1,6 +1,7 @@
 import type { Dictionary } from "@/i18n/dictionaries/types";
 import {
   Bot,
+  Brain,
   Layers3,
   Mic,
   Wrench,
@@ -32,6 +33,7 @@ export function Features({ dict }: { dict: Dictionary }) {
       description: items.discord.description,
     },
     { icon: Cpu, title: items.daemon.title, description: items.daemon.description },
+    { icon: Brain, title: items.memory.title, description: items.memory.description },
     {
       icon: Code2,
       title: items.openSource.title,

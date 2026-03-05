@@ -9,18 +9,15 @@ The main conversation screen with Naia.
 3. Naia generates a response (streams in real-time)
 4. Use Shift+Enter for line breaks
 
-## Voice Conversation
+## Voice Chat (Live)
 
-1. Click the **microphone button** next to the input field
-2. Speak when the microphone activates
-3. Click again to stop recording — speech is converted to text (STT)
-4. The converted text is automatically sent
+1. Click the **Voice Chat button** next to the input field
+2. Once connected, a real-time two-way voice conversation begins
+3. Speak and Naia responds immediately with voice
+4. Click again to end the voice session
 
-## Voice Response (TTS)
-
-- Naia's responses are automatically played as audio
-- Can be toggled off in Settings
-- Avatar performs lip-sync during playback
+- Text input remains available during voice chat
+- Avatar performs lip-sync animation during responses
 
 ## Cost Display
 

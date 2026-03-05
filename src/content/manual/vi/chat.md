@@ -9,18 +9,15 @@ Màn hình trò chuyện chính với Naia.
 3. Naia tạo phản hồi (truyền tải theo thời gian thực)
 4. Sử dụng Shift+Enter để xuống dòng
 
-## Hội thoại bằng giọng nói
+## Trò chuyện thoại (Trực tiếp)
 
-1. Nhấp vào **nút micro** bên cạnh trường nhập liệu
-2. Nói khi micro được kích hoạt
-3. Nhấp lại để dừng ghi âm — giọng nói được chuyển đổi thành văn bản (STT)
-4. Văn bản đã chuyển đổi được tự động gửi đi
+1. Nhấp vào **nút Trò chuyện thoại** bên cạnh trường nhập liệu
+2. Sau khi kết nối, cuộc trò chuyện thoại hai chiều thời gian thực bắt đầu
+3. Nói và Naia phản hồi ngay lập tức bằng giọng nói
+4. Nhấp lại để kết thúc phiên thoại
 
-## Phản hồi bằng giọng nói (TTS)
-
-- Phản hồi của Naia được tự động phát dưới dạng âm thanh
-- Có thể tắt trong Cài đặt
-- Avatar thực hiện đồng bộ môi trong khi phát lại
+- Nhập văn bản vẫn khả dụng trong khi trò chuyện thoại
+- Avatar thực hiện hoạt ảnh đồng bộ môi trong khi phản hồi
 
 ## Hiển thị chi phí
 

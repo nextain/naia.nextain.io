@@ -100,6 +100,10 @@ const vi: Dictionary = {
           "title": "AI luôn hoạt động",
           "description": "OpenClaw chạy nền 24/7. Ngay cả khi bạn đóng ứng dụng, AI của bạn vẫn sống — nhận tin nhắn và thực hiện công việc."
         },
+        "memory": {
+          "title": "Trí nhớ bền vững",
+          "description": "Naia tự nhiên ghi nhớ tên, sở thích, sinh nhật của bạn trong quá trình trò chuyện. Ký ức được duy trì trên desktop, Discord DM và tất cả kênh — chỉ lưu trữ trên thiết bị cục bộ của bạn."
+        },
         "openSource": {
           "title": "Mã nguồn mở được AI bảo vệ",
           "description": "Giấy phép kép: mã nguồn theo Apache 2.0, ngữ cảnh AI theo CC-BY-SA 4.0. Các tác tử AI tự ghi nhận nguồn, tuân thủ giấy phép và duy trì hệ sinh thái mã nguồn mở — hạ tầng đóng góp kiểu mới."

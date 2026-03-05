@@ -9,18 +9,15 @@ Der Haupt-Konversationsbildschirm mit dem KI-Avatar.
 3. Der KI-Avatar generiert eine Antwort (wird in Echtzeit gestreamt)
 4. Verwenden Sie Umschalt+Enter für Zeilenumbrüche
 
-## Sprachgespräch
+## Sprachchat (Live)
 
-1. Klicken Sie auf die **Mikrofon-Schaltfläche** neben dem Eingabefeld
-2. Sprechen Sie, wenn das Mikrofon aktiviert wird
-3. Klicken Sie erneut, um die Aufnahme zu beenden — Sprache wird in Text umgewandelt (STT)
-4. Der umgewandelte Text wird automatisch gesendet
+1. Klicken Sie auf die **Sprachchat-Schaltfläche** neben dem Eingabefeld
+2. Nach der Verbindung beginnt eine bidirektionale Echtzeit-Sprachkonversation
+3. Sprechen Sie und Naia antwortet sofort per Sprache
+4. Klicken Sie erneut, um die Sprachsitzung zu beenden
 
-## Sprachausgabe (TTS)
-
-- Die Antworten des KI-Avatars werden automatisch als Audio abgespielt
-- Kann in den Einstellungen deaktiviert werden
-- Der Avatar führt während der Wiedergabe Lippensynchronisation durch
+- Texteingabe bleibt während des Sprachchats verfügbar
+- Der Avatar führt während der Antworten eine Lippensynchronisations-Animation durch
 
 ## Kostenanzeige
 

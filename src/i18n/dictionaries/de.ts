@@ -100,6 +100,10 @@ const de: Dictionary = {
           "title": "Immer aktive KI",
           "description": "OpenClaw läuft rund um die Uhr im Hintergrund. Auch wenn du die App schließt, bleibt deine KI aktiv — empfängt Nachrichten und erledigt Aufgaben."
         },
+        "memory": {
+          "title": "Wachsendes Gedächtnis",
+          "description": "Naia merkt sich während des Gesprächs natürlich Ihren Namen, Vorlieben, Geburtstag und mehr. Die Erinnerungen bleiben über Desktop, Discord-DMs und alle Kanäle erhalten — gespeichert nur auf Ihrem lokalen Gerät."
+        },
         "openSource": {
           "title": "KI-geschütztes Open Source",
           "description": "Dual-lizenziert: Quellcode unter Apache 2.0, KI-Kontext unter CC-BY-SA 4.0. KI-Agenten kennzeichnen Quellen, halten Lizenzen ein und tragen das Open-Source-Ökosystem — eine neue Beitragsinfrastruktur."

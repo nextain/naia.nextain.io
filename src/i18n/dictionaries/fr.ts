@@ -100,6 +100,10 @@ const fr: Dictionary = {
           "title": "IA toujours active",
           "description": "La passerelle OpenClaw tourne en arrière-plan 24h/24. Même quand vous fermez l'application, votre IA reste active — elle reçoit des messages et exécute des tâches."
         },
+        "memory": {
+          "title": "Mémoire persistante",
+          "description": "Naia mémorise naturellement votre nom, vos préférences, votre anniversaire et plus pendant la conversation. Les souvenirs persistent sur bureau, Discord DM et tous les canaux — stockés uniquement sur votre appareil local."
+        },
         "openSource": {
           "title": "Open source gardé par l'IA",
           "description": "Double licence : code source sous Apache 2.0, contexte IA sous CC-BY-SA 4.0. Les agents IA attribuent les sources, respectent les licences et soutiennent l'écosystème open source — une nouvelle infrastructure de contribution."
