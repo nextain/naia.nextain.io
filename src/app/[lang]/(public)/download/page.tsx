@@ -21,8 +21,10 @@ import Link from "next/link";
 
 const GITHUB_REPO = "nextain/naia-os";
 const RELEASE_BASE = `https://github.com/${GITHUB_REPO}/releases`;
+const R2_BASE = "https://pub-affd0538517845d98ce44a5aec11dd98.r2.dev";
 
 const DOWNLOAD_URLS: Record<string, string> = {
+  iso: `${R2_BASE}/naia-os-live-amd64.iso`,
   flatpak: `${RELEASE_BASE}/latest/download/Naia-Shell-x86_64.flatpak`,
   appimage: `${RELEASE_BASE}/latest/download/Naia-Shell-x86_64.AppImage`,
   deb: `${RELEASE_BASE}/latest/download/Naia-Shell-x86_64.deb`,
@@ -88,9 +90,11 @@ export default async function DownloadPage({
             <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
             {d.naiaOs.note}
           </p>
-          <Button className="w-full" disabled>
-            <Download className="mr-2 h-4 w-4" />
-            {d.naiaOs.cta} — {dict.common.comingSoon}
+          <Button className="w-full" asChild>
+            <Link href={DOWNLOAD_URLS.iso} target="_blank" rel="noreferrer">
+              <Download className="mr-2 h-4 w-4" />
+              {d.naiaOs.cta} (~7.2 GB)
+            </Link>
           </Button>
         </CardContent>
       </Card>
