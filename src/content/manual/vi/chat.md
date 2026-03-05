@@ -36,6 +36,8 @@ Màn hình trò chuyện chính với Naia.
 - Nhấp vào nút **+** (góc trên bên phải) để bắt đầu cuộc trò chuyện mới
 - Các cuộc trò chuyện trước đó được lưu trong tab Lịch sử
 
+> **Trí nhớ**: Naia tự nhiên ghi nhớ thông tin về bạn trong quá trình trò chuyện — tên, sở thích, sinh nhật và nhiều hơn nữa. Những ký ức này được duy trì trên tất cả các kênh, bao gồm Discord DM. Không cần thao tác thủ công; chỉ cần trò chuyện và ký ức sẽ tự động tích lũy. Tất cả dữ liệu được lưu trữ cục bộ trên thiết bị của bạn.
+
 ## Hiển thị thực thi công cụ
 
 Khi Naia sử dụng công cụ, khu vực trò chuyện hiển thị:

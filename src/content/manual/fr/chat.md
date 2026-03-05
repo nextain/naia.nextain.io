@@ -36,6 +36,8 @@ L'ecran de conversation principal avec l'avatar IA.
 - Cliquez sur le bouton **+** (en haut à droite) pour démarrer une nouvelle conversation
 - Les conversations précédentes sont enregistrées dans l'onglet Historique
 
+> **Mémoire** : Naia mémorise naturellement des informations vous concernant pendant la conversation — votre nom, vos préférences, votre anniversaire, etc. Ces souvenirs persistent sur tous les canaux, y compris les DM Discord. Aucune action manuelle nécessaire ; il suffit de discuter et les souvenirs s'accumulent automatiquement. Toutes les données sont stockées localement sur votre appareil.
+
 ## Affichage de l'exécution d'outils
 
 Lorsque l'avatar IA utilise des outils, la zone de chat affiche :

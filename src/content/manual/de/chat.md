@@ -36,6 +36,8 @@ Der Haupt-Konversationsbildschirm mit dem KI-Avatar.
 - Klicken Sie auf die **+**-Schaltfläche (oben rechts), um eine neue Konversation zu starten
 - Frühere Konversationen werden im Tab "Verlauf" gespeichert
 
+> **Gedächtnis**: Naia merkt sich während des Gesprächs automatisch Informationen über Sie — Ihren Namen, Vorlieben, Geburtstag und mehr. Diese Erinnerungen bleiben über alle Kanäle hinweg erhalten, einschließlich Discord-DMs. Keine manuelle Aktion erforderlich; einfach chatten und die Erinnerungen sammeln sich automatisch. Alle Daten werden nur lokal auf Ihrem Gerät gespeichert.
+
 ## Anzeige der Tool-Ausführung
 
 Wenn der KI-Avatar Tools verwendet, zeigt der Chatbereich an:

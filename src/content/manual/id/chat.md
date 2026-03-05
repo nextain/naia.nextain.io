@@ -36,6 +36,8 @@ Layar percakapan utama dengan Naia.
 - Klik tombol **+** (kanan atas) untuk memulai percakapan baru
 - Percakapan sebelumnya disimpan di tab Riwayat
 
+> **Memori**: Naia secara alami mengingat informasi tentang Anda selama percakapan — nama, preferensi, ulang tahun, dan lainnya. Memori ini bertahan di semua saluran, termasuk Discord DM. Tidak perlu tindakan manual; cukup mengobrol dan memori terakumulasi secara otomatis. Semua data disimpan secara lokal di perangkat Anda.
+
 ## Tampilan Eksekusi Alat
 
 Ketika Naia menggunakan alat, area obrolan menampilkan:

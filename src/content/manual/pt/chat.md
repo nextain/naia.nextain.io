@@ -36,6 +36,8 @@ A tela principal de conversação com Naia.
 - Clique no botão **+** (canto superior direito) para iniciar uma nova conversa
 - Conversas anteriores são salvas na aba Histórico
 
+> **Memória**: Naia lembra naturalmente informações sobre você durante a conversa — seu nome, preferências, aniversário e mais. Essas memórias persistem em todos os canais, incluindo Discord DM. Nenhuma ação manual necessária; basta conversar e as memórias se acumulam automaticamente. Todos os dados são armazenados localmente no seu dispositivo.
+
 ## Exibição da Execução de Ferramentas
 
 Quando Naia usa ferramentas, a área de chat mostra:
