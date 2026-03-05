@@ -316,6 +316,7 @@ export interface Dictionary {
     checksumDescription: string;
     allReleases: string;
     sourceCode: string;
+    itchIo: string;
   };
   billing: {
     title: string;

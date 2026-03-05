@@ -4,7 +4,7 @@ const ar: Dictionary = {
   "locale": "ar",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "ذكاؤك الاصطناعي يعيش هنا. مفتوح المصدر، من السحابة الى AI محلي — انت تختار. افاتار VRM 3D مع دردشة صوتية، 70+ مهارة، OpenClaw AI gateway، الذاكرة والشخصية على جهازك. Linux امن وجاهز لـ Steam حيث يعيش ذكاؤك الاصطناعي.",
+    "description": "ذكاؤك الاصطناعي يعيش هنا. مفتوح المصدر، من السحابة الى AI محلي — انت تختار. افاتار VRM 3D مع دردشة صوتية، 70+ مهارة، OpenClaw، الذاكرة والشخصية على جهازك. Linux امن وجاهز لـ Steam حيث يعيش ذكاؤك الاصطناعي.",
   },
   "common": {
     "loading": "جار التحميل...",
@@ -383,6 +383,7 @@ const ar: Dictionary = {
     "checksumDescription": "للتحقق من سلامة الملفات المحملة:",
     "allReleases": "عرض جميع الإصدارات",
     "sourceCode": "الكود المصدري",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "الفواتير",

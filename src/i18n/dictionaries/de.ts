@@ -4,7 +4,7 @@ const de: Dictionary = {
   "locale": "de",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "Deine KI lebt hier. Open Source, von Cloud bis lokaler KI — du entscheidest. VRM 3D-Avatar mit Sprachchat, 70+ Skills, OpenClaw AI-Gateway, Erinnerung und Persoenlichkeit auf deinem Rechner. Ein sicheres, Steam-bereites Linux, auf dem deine KI lebt.",
+    "description": "Deine KI lebt hier. Open Source, von Cloud bis lokaler KI — du entscheidest. VRM 3D-Avatar mit Sprachchat, 70+ Skills, OpenClaw, Erinnerung und Persoenlichkeit auf deinem Rechner. Ein sicheres, Steam-bereites Linux, auf dem deine KI lebt.",
   },
   "common": {
     "loading": "Laden...",
@@ -98,7 +98,7 @@ const de: Dictionary = {
         },
         "daemon": {
           "title": "Immer aktive KI",
-          "description": "Das OpenClaw-Gateway läuft rund um die Uhr im Hintergrund. Auch wenn du die App schließt, bleibt deine KI aktiv — empfängt Nachrichten und erledigt Aufgaben."
+          "description": "OpenClaw läuft rund um die Uhr im Hintergrund. Auch wenn du die App schließt, bleibt deine KI aktiv — empfängt Nachrichten und erledigt Aufgaben."
         },
         "openSource": {
           "title": "KI-geschütztes Open Source",
@@ -341,7 +341,7 @@ const de: Dictionary = {
     "verificationNotice": "Downloads werden nach Abschluss der jeweiligen Build-Überprüfung nacheinander freigeschaltet.",
     "naiaOs": {
       "title": "Naia OS (Live USB / Installation)",
-      "description": "Das vollständige Naia-Erlebnis. Enthält KI-Avatar, Gateway, koreanische Eingabe und vorinstallierte Apps. Vom USB booten zum Ausprobieren oder auf die Festplatte installieren.",
+      "description": "Das vollständige Naia-Erlebnis. Enthält KI-Avatar, OpenClaw, koreanische Eingabe und vorinstallierte Apps. Vom USB booten zum Ausprobieren oder auf die Festplatte installieren.",
       "note": "Live USB wird beim Neustart zurückgesetzt. Für dauerhafte Nutzung installieren.",
       "cta": "ISO herunterladen",
     },
@@ -350,31 +350,31 @@ const de: Dictionary = {
         "name": "Flatpak",
         "description": "Läuft in einer Sandbox-Umgebung. Erfordert GNOME Platform Runtime.",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "Nur Shell UI. KI-Gateway nicht enthalten.",
+        "note": "Nur Shell UI. OpenClaw nicht enthalten.",
       },
       "appimage": {
         "name": "AppImage",
         "description": "Einzelne ausführbare Datei. Direkt ohne Installation ausführbar.",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "Nur Shell UI. KI-Gateway nicht enthalten.",
+        "note": "Nur Shell UI. OpenClaw nicht enthalten.",
       },
       "deb": {
         "name": "DEB",
         "description": "Für Debian, Ubuntu und andere apt-basierte Distributionen.",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "Nur Shell UI. KI-Gateway nicht enthalten.",
+        "note": "Nur Shell UI. OpenClaw nicht enthalten.",
       },
       "rpm": {
         "name": "RPM",
         "description": "Für Fedora, RHEL und andere rpm-basierte Distributionen.",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "Nur Shell UI. KI-Gateway nicht enthalten.",
+        "note": "Nur Shell UI. OpenClaw nicht enthalten.",
       },
     },
-    "shellOnly": "Nur Shell UI — KI-Funktionen erfordern Naia OS oder ein separates Gateway-Setup.",
+    "shellOnly": "Nur Shell UI — KI-Funktionen erfordern Naia OS oder ein separates OpenClaw-Setup.",
     "gateway": {
       "title": "Über OpenClaw",
-      "description": "Die KI-Funktionen von Naia (Chat, Sprache, Tools, Skills) werden vom Open-Source-KI-Gateway OpenClaw betrieben. Die Shell UI allein kann keine KI ausführen — OpenClaw muss parallel laufen.",
+      "description": "Die KI-Funktionen von Naia (Chat, Sprache, Tools, Skills) werden vom OpenClaw betrieben. Die Shell UI allein kann keine KI ausführen — OpenClaw muss parallel laufen.",
       "naiaOsIncluded": "Naia OS enthält OpenClaw vorinstalliert. Einfach starten und loslegen.",
       "shellOnlyGuide": "Für die oben genannten Shell-only-Pakete müssen Sie OpenClaw separat installieren.",
       "openclawLink": "OpenClaw-Einrichtungsanleitung",
@@ -383,6 +383,7 @@ const de: Dictionary = {
     "checksumDescription": "Um die Integrität der heruntergeladenen Dateien zu überprüfen:",
     "allReleases": "Alle Versionen anzeigen",
     "sourceCode": "Quellcode",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "Abrechnung",

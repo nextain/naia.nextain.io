@@ -4,7 +4,7 @@ const vi: Dictionary = {
   "locale": "vi",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "AI cua ban song o day. Ma nguon mo, tu dam may den AI cuc bo — ban quyet dinh. Avatar VRM 3D voi tro chuyen bang giong noi, 70+ ky nang, OpenClaw AI gateway, tri nho va tinh cach tren may cua ban. Linux an toan va san sang cho Steam, noi AI cua ban sinh song.",
+    "description": "AI cua ban song o day. Ma nguon mo, tu dam may den AI cuc bo — ban quyet dinh. Avatar VRM 3D voi tro chuyen bang giong noi, 70+ ky nang, OpenClawtri nho va tinh cach tren may cua ban. Linux an toan va san sang cho Steam, noi AI cua ban sinh song.",
   },
   "common": {
     "loading": "Đang tải...",
@@ -98,7 +98,7 @@ const vi: Dictionary = {
         },
         "daemon": {
           "title": "AI luôn hoạt động",
-          "description": "Gateway OpenClaw chạy nền 24/7. Ngay cả khi bạn đóng ứng dụng, AI của bạn vẫn sống — nhận tin nhắn và thực hiện công việc."
+          "description": "OpenClaw chạy nền 24/7. Ngay cả khi bạn đóng ứng dụng, AI của bạn vẫn sống — nhận tin nhắn và thực hiện công việc."
         },
         "openSource": {
           "title": "Mã nguồn mở được AI bảo vệ",
@@ -341,7 +341,7 @@ const vi: Dictionary = {
     "verificationNotice": "Các bản tải xuống sẽ được kích hoạt lần lượt khi mỗi bản dựng vượt qua kiểm tra.",
     "naiaOs": {
       "title": "Naia OS (Live USB / Cài đặt)",
-      "description": "Trải nghiệm Naia đầy đủ. Bao gồm avatar AI, gateway, nhập liệu tiếng Hàn và các ứng dụng cài sẵn. Khởi động từ USB để dùng thử, hoặc cài đặt vào ổ cứng.",
+      "description": "Trải nghiệm Naia đầy đủ. Bao gồm avatar AI, OpenClawnhập liệu tiếng Hàn và các ứng dụng cài sẵn. Khởi động từ USB để dùng thử, hoặc cài đặt vào ổ cứng.",
       "note": "Live USB sẽ được đặt lại khi khởi động lại. Cài đặt để sử dụng lâu dài.",
       "cta": "Tải xuống ISO",
     },
@@ -350,31 +350,31 @@ const vi: Dictionary = {
         "name": "Flatpak",
         "description": "Chạy trong môi trường sandbox. Yêu cầu runtime GNOME Platform.",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "Chỉ Shell UI. Không bao gồm gateway AI.",
+        "note": "Chỉ Shell UI. Không bao gồm OpenClaw.",
       },
       "appimage": {
         "name": "AppImage",
         "description": "Tệp thực thi đơn. Chạy trực tiếp mà không cần cài đặt.",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "Chỉ Shell UI. Không bao gồm gateway AI.",
+        "note": "Chỉ Shell UI. Không bao gồm OpenClaw.",
       },
       "deb": {
         "name": "DEB",
         "description": "Dành cho Debian, Ubuntu và các bản phân phối dựa trên apt khác.",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "Chỉ Shell UI. Không bao gồm gateway AI.",
+        "note": "Chỉ Shell UI. Không bao gồm OpenClaw.",
       },
       "rpm": {
         "name": "RPM",
         "description": "Dành cho Fedora, RHEL và các bản phân phối dựa trên rpm khác.",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "Chỉ Shell UI. Không bao gồm gateway AI.",
+        "note": "Chỉ Shell UI. Không bao gồm OpenClaw.",
       },
     },
-    "shellOnly": "Chỉ Shell UI — tính năng AI yêu cầu Naia OS hoặc thiết lập gateway riêng.",
+    "shellOnly": "Chỉ Shell UI — tính năng AI yêu cầu Naia OS hoặc thiết lập OpenClaw riêng.",
     "gateway": {
       "title": "Về OpenClaw",
-      "description": "Các tính năng AI của Naia (trò chuyện, giọng nói, công cụ, kỹ năng) được cung cấp bởi OpenClaw, một gateway AI mã nguồn mở. Shell UI một mình không thể chạy AI — cần có OpenClaw chạy cùng.",
+      "description": "Các tính năng AI của Naia (trò chuyện, giọng nói, công cụ, kỹ năng) được cung cấp bởi OpenClaw. Shell UI một mình không thể chạy AI — cần có OpenClaw chạy cùng.",
       "naiaOsIncluded": "Naia OS đã bao gồm OpenClaw cài sẵn. Chỉ cần khởi động và bắt đầu.",
       "shellOnlyGuide": "Đối với các gói Shell độc lập ở trên, bạn cần cài đặt OpenClaw riêng.",
       "openclawLink": "Hướng dẫn cài đặt OpenClaw",
@@ -383,6 +383,7 @@ const vi: Dictionary = {
     "checksumDescription": "Để xác minh tính toàn vẹn của các tệp đã tải xuống:",
     "allReleases": "Xem tất cả phiên bản",
     "sourceCode": "Mã nguồn",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "Thanh toán",

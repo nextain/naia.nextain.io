@@ -4,7 +4,7 @@ const en: Dictionary = {
   locale: "en",
   meta: {
     title: "Naia — The Next Generation AI OS",
-    description: "Your own AI lives here. Open source, cloud to local AI — you choose. VRM 3D avatar with voice chat, 70+ skills, OpenClaw AI gateway, memory and personality all on your machine. A safe, Steam-ready Linux where your AI lives.",
+    description: "Your own AI lives here. Open source, cloud to local AI — you choose. VRM 3D avatar with voice chat, 70+ skills, OpenClaw, memory and personality all on your machine. A safe, Steam-ready Linux where your AI lives.",
   },
   common: {
     loading: "Loading...",
@@ -107,7 +107,7 @@ const en: Dictionary = {
         daemon: {
           title: "Always-On AI",
           description:
-            "OpenClaw gateway runs in the background 24/7. Even when you close the app, your AI stays alive — receiving messages and doing work.",
+            "OpenClaw runs in the background 24/7. Even when you close the app, your AI stays alive — receiving messages and doing work.",
         },
         openSource: {
           title: "AI-Guarded Open Source",
@@ -354,7 +354,7 @@ const en: Dictionary = {
     verificationNotice: "Downloads will be enabled one by one as each build passes verification.",
     naiaOs: {
       title: "Naia OS (Live USB / Install)",
-      description: "The complete Naia experience. Includes AI avatar, gateway, Korean input, and pre-installed apps. Boot from USB to try, or install to hard drive.",
+      description: "The complete Naia experience. Includes AI avatar, OpenClaw, Korean input, and pre-installed apps. Boot from USB to try, or install to hard drive.",
       note: "Live USB resets on reboot. Install for permanent use.",
       cta: "Download ISO",
     },
@@ -363,31 +363,31 @@ const en: Dictionary = {
         name: "Flatpak",
         description: "Sandboxed environment. Requires GNOME Platform runtime.",
         command: "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//49\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        note: "Shell + AI gateway (OpenClaw) included. Most complete package.",
+        note: "Shell + OpenClaw included. Most complete package.",
       },
       appimage: {
         name: "AppImage",
         description: "Single executable file. Run directly without installation.",
         command: "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        note: "Shell UI only. AI gateway not included.",
+        note: "Shell UI only. OpenClaw not included.",
       },
       deb: {
         name: "DEB",
         description: "For Debian, Ubuntu, and other apt-based distributions.",
         command: "sudo dpkg -i Naia.Shell_*.deb",
-        note: "Shell UI only. AI gateway not included.",
+        note: "Shell UI only. OpenClaw not included.",
       },
       rpm: {
         name: "RPM",
         description: "For Fedora, RHEL, and other rpm-based distributions.",
         command: "sudo rpm -i Naia.Shell-*.rpm",
-        note: "Shell UI only. AI gateway not included.",
+        note: "Shell UI only. OpenClaw not included.",
       },
     },
-    shellOnly: "Shell UI only — AI features require Naia OS or separate gateway setup.",
+    shellOnly: "Shell UI only — AI features require Naia OS or separate OpenClaw setup.",
     gateway: {
       title: "About OpenClaw",
-      description: "Naia's AI features (chat, voice, tools, skills) run on OpenClaw — an open-source AI gateway. Shell UI alone cannot run AI; OpenClaw must be running alongside it.",
+      description: "Naia's AI features (chat, voice, tools, skills) run on OpenClaw. Shell UI alone cannot run AI; OpenClaw must be running alongside it.",
       naiaOsIncluded: "Naia OS includes OpenClaw pre-installed. Just boot and go.",
       shellOnlyGuide: "For Shell-only packages above, install OpenClaw separately.",
       openclawLink: "OpenClaw Setup Guide",
@@ -396,6 +396,7 @@ const en: Dictionary = {
     checksumDescription: "To verify the integrity of downloaded files:",
     allReleases: "View All Releases",
     sourceCode: "Source Code",
+    itchIo: "itch.io",
   },
   billing: {
     title: "Billing",

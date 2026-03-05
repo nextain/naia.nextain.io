@@ -4,7 +4,7 @@ const es: Dictionary = {
   "locale": "es",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "Tu IA vive aqui. Open source, de nube a IA local — tu eliges. Avatar VRM 3D con chat de voz, 70+ habilidades, OpenClaw AI gateway, memoria y personalidad en tu maquina. Un Linux seguro y listo para Steam donde vive tu IA.",
+    "description": "Tu IA vive aqui. Open source, de nube a IA local — tu eliges. Avatar VRM 3D con chat de voz, 70+ habilidades, OpenClawmemoria y personalidad en tu maquina. Un Linux seguro y listo para Steam donde vive tu IA.",
   },
   "common": {
     "loading": "Cargando...",
@@ -98,7 +98,7 @@ const es: Dictionary = {
         },
         "daemon": {
           "title": "IA siempre activa",
-          "description": "El gateway OpenClaw funciona en segundo plano 24/7. Incluso cuando cierras la app, tu IA sigue viva — recibiendo mensajes y trabajando."
+          "description": "OpenClaw funciona en segundo plano 24/7. Incluso cuando cierras la app, tu IA sigue viva — recibiendo mensajes y trabajando."
         },
         "openSource": {
           "title": "Open source protegido por IA",
@@ -341,7 +341,7 @@ const es: Dictionary = {
     "verificationNotice": "Las descargas se habilitarán una por una a medida que cada compilación pase la verificación.",
     "naiaOs": {
       "title": "Naia OS (Live USB / Instalación)",
-      "description": "La experiencia completa de Naia. Incluye avatar de IA, gateway, entrada en coreano y aplicaciones preinstaladas. Arranca desde USB para probar, o instala en el disco duro.",
+      "description": "La experiencia completa de Naia. Incluye avatar de IA, OpenClawentrada en coreano y aplicaciones preinstaladas. Arranca desde USB para probar, o instala en el disco duro.",
       "note": "Live USB se reinicia al reiniciar. Instale para uso permanente.",
       "cta": "Descargar ISO",
     },
@@ -350,31 +350,31 @@ const es: Dictionary = {
         "name": "Flatpak",
         "description": "Se ejecuta en un entorno aislado. Requiere el entorno de ejecución GNOME Platform.",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "Solo Shell UI. Gateway de IA no incluido.",
+        "note": "Solo Shell UI. OpenClaw no incluido.",
       },
       "appimage": {
         "name": "AppImage",
         "description": "Archivo ejecutable único. Ejecútelo directamente sin instalación.",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "Solo Shell UI. Gateway de IA no incluido.",
+        "note": "Solo Shell UI. OpenClaw no incluido.",
       },
       "deb": {
         "name": "DEB",
         "description": "Para Debian, Ubuntu y otras distribuciones basadas en apt.",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "Solo Shell UI. Gateway de IA no incluido.",
+        "note": "Solo Shell UI. OpenClaw no incluido.",
       },
       "rpm": {
         "name": "RPM",
         "description": "Para Fedora, RHEL y otras distribuciones basadas en rpm.",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "Solo Shell UI. Gateway de IA no incluido.",
+        "note": "Solo Shell UI. OpenClaw no incluido.",
       },
     },
-    "shellOnly": "Solo Shell UI — las funciones de IA requieren Naia OS o una configuración de gateway independiente.",
+    "shellOnly": "Solo Shell UI — las funciones de IA requieren Naia OS o una configuración de OpenClaw independiente.",
     "gateway": {
       "title": "Acerca de OpenClaw",
-      "description": "Las funciones de IA de Naia (chat, voz, herramientas, habilidades) funcionan con OpenClaw, un gateway de IA de código abierto. La Shell UI por sí sola no puede ejecutar IA — necesita OpenClaw ejecutándose junto a ella.",
+      "description": "Las funciones de IA de Naia (chat, voz, herramientas, habilidades) funcionan con OpenClaw. La Shell UI por sí sola no puede ejecutar IA — necesita OpenClaw ejecutándose junto a ella.",
       "naiaOsIncluded": "Naia OS incluye OpenClaw preinstalado. Solo arranca y listo.",
       "shellOnlyGuide": "Para los paquetes solo Shell anteriores, necesitas instalar OpenClaw por separado.",
       "openclawLink": "Guía de configuración de OpenClaw",
@@ -383,6 +383,7 @@ const es: Dictionary = {
     "checksumDescription": "Para verificar la integridad de los archivos descargados:",
     "allReleases": "Ver todas las versiones",
     "sourceCode": "Código fuente",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "Facturación",

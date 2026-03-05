@@ -9,7 +9,7 @@ Layar percakapan utama dengan Naia.
 3. Naia menghasilkan respons (mengalir secara real-time)
 4. Gunakan Shift+Enter untuk jeda baris
 
-## Obrolan Suara
+## Percakapan Suara
 
 1. Klik **tombol mikrofon** di samping kolom input
 2. Berbicara saat mikrofon aktif

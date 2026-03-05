@@ -383,6 +383,7 @@ const hi: Dictionary = {
     "checksumDescription": "डाउनलोड की गई फ़ाइलों की अखंडता सत्यापित करने के लिए:",
     "allReleases": "सभी रिलीज़ देखें",
     "sourceCode": "सोर्स कोड",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "बिलिंग",

@@ -383,6 +383,7 @@ const ru: Dictionary = {
     "checksumDescription": "Для проверки целостности загруженных файлов:",
     "allReleases": "Просмотреть все выпуски",
     "sourceCode": "Исходный код",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "Биллинг",

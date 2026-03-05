@@ -47,8 +47,8 @@ Chọn từ 4 hình đại diện VRM:
 
 | Nhân vật | Mô tả |
 |-----------|-------------|
-| Shino (Dark) | Đồng phục tối màu |
-| Shino (Light) | Đồng phục sáng màu |
+| Shino | Đồng phục học sinh (mặc định) |
+| Sakurada Fumiriya | Thường ngày |
 | Girl | Cô gái chung |
 | Boy | Chàng trai chung |
 
@@ -61,19 +61,24 @@ Chọn từ 4 cài đặt sẵn:
 
 | Tính cách | Mô tả |
 |-------------|-------------|
-| Friendly | Tông giọng thoải mái, ấm áp |
-| Professional | Tông giọng lịch sự, trang trọng |
-| Playful | Tông giọng hài hước, tươi sáng |
-| Scholar | Tông giọng điềm tĩnh, trí tuệ |
+| Bạn thân thiện | Nói chuyện thân mật, tính cách ấm áp |
+| Trợ lý đáng tin cậy | Nói chuyện trang trọng, giọng chuyên nghiệp |
+| Tinh nghịch | Hài hước, giọng vui tươi |
+| Học giả điềm tĩnh | Giọng trí thức, điềm tĩnh |
 
 
-### 5. Tích hợp Messenger (Tùy chọn)
+### 5. Chọn phong cách nói
 
-![Messenger integration screen](onboarding-messenger.png)
+Chọn cách AI của bạn nói chuyện:
 
-Thiết lập tích hợp với các ứng dụng nhắn tin được hỗ trợ như Telegram hoặc Slack. Bước này có thể bỏ qua và cấu hình sau trong phần cài đặt.
+| Phong cách | Mô tả |
+|------------|-------|
+| Thân mật | Như bạn bè |
+| Trang trọng | Lịch sự và tôn trọng |
 
 ### 6. Hoàn tất
 
 ![Onboarding complete screen](onboarding-complete.png)
+
+Bạn có thể tùy chọn kết nối **bot Discord** từ màn hình này.
 Nhấp **Bắt đầu** để vào màn hình chính.

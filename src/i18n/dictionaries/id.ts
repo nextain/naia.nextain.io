@@ -4,7 +4,7 @@ const id: Dictionary = {
   "locale": "id",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "AI Anda tinggal di sini. Open source, dari cloud ke AI lokal — Anda memilih. Avatar VRM 3D dengan voice chat, 70+ keterampilan, OpenClaw AI gateway, memori dan kepribadian di mesin Anda. Linux yang aman dan siap Steam tempat AI Anda tinggal.",
+    "description": "AI Anda tinggal di sini. Open source, dari cloud ke AI lokal — Anda memilih. Avatar VRM 3D dengan voice chat, 70+ keterampilan, OpenClawmemori dan kepribadian di mesin Anda. Linux yang aman dan siap Steam tempat AI Anda tinggal.",
   },
   "common": {
     "loading": "Memuat...",
@@ -98,7 +98,7 @@ const id: Dictionary = {
         },
         "daemon": {
           "title": "AI yang Selalu Aktif",
-          "description": "Gateway OpenClaw berjalan di latar belakang 24/7. Bahkan saat Anda menutup aplikasi, AI Anda tetap hidup — menerima pesan dan mengerjakan tugas."
+          "description": "OpenClaw berjalan di latar belakang 24/7. Bahkan saat Anda menutup aplikasi, AI Anda tetap hidup — menerima pesan dan mengerjakan tugas."
         },
         "openSource": {
           "title": "Open Source Dilindungi AI",
@@ -341,7 +341,7 @@ const id: Dictionary = {
     "verificationNotice": "Unduhan akan diaktifkan satu per satu setelah setiap build melewati verifikasi.",
     "naiaOs": {
       "title": "Naia OS (Live USB / Instalasi)",
-      "description": "Pengalaman Naia yang lengkap. Termasuk avatar AI, gateway, input Korea, dan aplikasi yang sudah terinstal. Boot dari USB untuk mencoba, atau instal ke hard drive.",
+      "description": "Pengalaman Naia yang lengkap. Termasuk avatar AI, OpenClawinput Korea, dan aplikasi yang sudah terinstal. Boot dari USB untuk mencoba, atau instal ke hard drive.",
       "note": "Live USB direset saat reboot. Instal untuk penggunaan permanen.",
       "cta": "Unduh ISO",
     },
@@ -350,31 +350,31 @@ const id: Dictionary = {
         "name": "Flatpak",
         "description": "Berjalan di lingkungan sandbox. Memerlukan runtime GNOME Platform.",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "Hanya Shell UI. Gateway AI tidak termasuk.",
+        "note": "Hanya Shell UI. OpenClaw tidak termasuk.",
       },
       "appimage": {
         "name": "AppImage",
         "description": "File eksekusi tunggal. Jalankan langsung tanpa instalasi.",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "Hanya Shell UI. Gateway AI tidak termasuk.",
+        "note": "Hanya Shell UI. OpenClaw tidak termasuk.",
       },
       "deb": {
         "name": "DEB",
         "description": "Untuk Debian, Ubuntu, dan distribusi berbasis apt lainnya.",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "Hanya Shell UI. Gateway AI tidak termasuk.",
+        "note": "Hanya Shell UI. OpenClaw tidak termasuk.",
       },
       "rpm": {
         "name": "RPM",
         "description": "Untuk Fedora, RHEL, dan distribusi berbasis rpm lainnya.",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "Hanya Shell UI. Gateway AI tidak termasuk.",
+        "note": "Hanya Shell UI. OpenClaw tidak termasuk.",
       },
     },
-    "shellOnly": "Hanya Shell UI — fitur AI memerlukan Naia OS atau pengaturan gateway terpisah.",
+    "shellOnly": "Hanya Shell UI — fitur AI memerlukan Naia OS atau pengaturan OpenClaw terpisah.",
     "gateway": {
       "title": "Tentang OpenClaw",
-      "description": "Fitur AI Naia (obrolan, suara, alat, keterampilan) didukung oleh OpenClaw, gateway AI open source. Shell UI saja tidak dapat menjalankan AI — diperlukan OpenClaw yang berjalan bersamanya.",
+      "description": "Fitur AI Naia (obrolan, suara, alat, keterampilan) didukung oleh OpenClaw. Shell UI saja tidak dapat menjalankan AI — diperlukan OpenClaw yang berjalan bersamanya.",
       "naiaOsIncluded": "Naia OS sudah termasuk OpenClaw yang terinstal. Cukup boot dan langsung gunakan.",
       "shellOnlyGuide": "Untuk paket Shell saja di atas, Anda perlu menginstal OpenClaw secara terpisah.",
       "openclawLink": "Panduan Pengaturan OpenClaw",
@@ -383,6 +383,7 @@ const id: Dictionary = {
     "checksumDescription": "Untuk memverifikasi integritas file yang diunduh:",
     "allReleases": "Lihat Semua Rilis",
     "sourceCode": "Kode Sumber",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "Penagihan",

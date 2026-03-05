@@ -63,7 +63,7 @@ export default async function DownloadPage({
       </div>
 
       {/* Verification Notice */}
-      <div className="mb-8 rounded-lg border border-blue-200 bg-blue-50 p-4 text-center text-sm text-blue-800 dark:border-blue-800 dark:bg-blue-950/30 dark:text-blue-300">
+      <div className="mb-8 rounded-lg border border-blue-200 bg-blue-50 p-4 text-center text-sm text-blue-800 dark:border-blue-400 dark:bg-blue-950/60 dark:text-blue-200">
         {d.verificationNotice}
       </div>
 
@@ -233,6 +233,16 @@ export default async function DownloadPage({
           >
             <Github className="mr-2 h-4 w-4" />
             {d.sourceCode}
+          </Link>
+        </Button>
+        <Button variant="outline" asChild>
+          <Link
+            href="https://nextain.itch.io/naia"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <ExternalLink className="mr-2 h-4 w-4" />
+            {d.itchIo}
           </Link>
         </Button>
         <Button variant="ghost" asChild>

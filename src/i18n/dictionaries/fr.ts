@@ -4,7 +4,7 @@ const fr: Dictionary = {
   "locale": "fr",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "Votre IA vit ici. Open source, du cloud a l'IA locale — vous choisissez. Avatar VRM 3D avec chat vocal, 70+ competences, OpenClaw AI gateway, memoire et personnalite sur votre machine. Un Linux sur et pret pour Steam ou votre IA habite.",
+    "description": "Votre IA vit ici. Open source, du cloud a l'IA locale — vous choisissez. Avatar VRM 3D avec chat vocal, 70+ competences, OpenClawmemoire et personnalite sur votre machine. Un Linux sur et pret pour Steam ou votre IA habite.",
   },
   "common": {
     "loading": "Chargement...",
@@ -341,7 +341,7 @@ const fr: Dictionary = {
     "verificationNotice": "Les téléchargements seront activés progressivement après vérification de chaque build.",
     "naiaOs": {
       "title": "Naia OS (Live USB / Installation)",
-      "description": "L'expérience Naia complète. Inclut l'avatar IA, le gateway, la saisie coréenne et les applications préinstallées. Démarrez depuis USB pour essayer, ou installez sur le disque dur.",
+      "description": "L'expérience Naia complète. Inclut l'avatar IA, OpenClawla saisie coréenne et les applications préinstallées. Démarrez depuis USB pour essayer, ou installez sur le disque dur.",
       "note": "Le Live USB se réinitialise au redémarrage. Installez pour un usage permanent.",
       "cta": "Télécharger l'ISO",
     },
@@ -350,31 +350,31 @@ const fr: Dictionary = {
         "name": "Flatpak",
         "description": "S'exécute dans un environnement sandboxé. Nécessite le runtime GNOME Platform.",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "Shell UI uniquement. Gateway IA non inclus.",
+        "note": "Shell UI uniquement. OpenClaw non inclus.",
       },
       "appimage": {
         "name": "AppImage",
         "description": "Fichier exécutable unique. Lancez directement sans installation.",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "Shell UI uniquement. Gateway IA non inclus.",
+        "note": "Shell UI uniquement. OpenClaw non inclus.",
       },
       "deb": {
         "name": "DEB",
         "description": "Pour Debian, Ubuntu et autres distributions basées sur apt.",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "Shell UI uniquement. Gateway IA non inclus.",
+        "note": "Shell UI uniquement. OpenClaw non inclus.",
       },
       "rpm": {
         "name": "RPM",
         "description": "Pour Fedora, RHEL et autres distributions basées sur rpm.",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "Shell UI uniquement. Gateway IA non inclus.",
+        "note": "Shell UI uniquement. OpenClaw non inclus.",
       },
     },
-    "shellOnly": "Shell UI uniquement — les fonctionnalités IA nécessitent Naia OS ou une configuration gateway séparée.",
+    "shellOnly": "Shell UI uniquement — les fonctionnalités IA nécessitent Naia OS ou une configuration OpenClaw séparée.",
     "gateway": {
       "title": "À propos d'OpenClaw",
-      "description": "Les fonctionnalités IA de Naia (chat, voix, outils, compétences) sont alimentées par OpenClaw, un gateway IA open source. La Shell UI seule ne peut pas exécuter l'IA — OpenClaw doit fonctionner à ses côtés.",
+      "description": "Les fonctionnalités IA de Naia (chat, voix, outils, compétences) sont alimentées par OpenClaw. La Shell UI seule ne peut pas exécuter l'IA — OpenClaw doit fonctionner à ses côtés.",
       "naiaOsIncluded": "Naia OS inclut OpenClaw préinstallé. Il suffit de démarrer et c'est parti.",
       "shellOnlyGuide": "Pour les paquets Shell uniquement ci-dessus, vous devez installer OpenClaw séparément.",
       "openclawLink": "Guide d'installation d'OpenClaw",
@@ -383,6 +383,7 @@ const fr: Dictionary = {
     "checksumDescription": "Pour vérifier l'intégrité des fichiers téléchargés :",
     "allReleases": "Voir toutes les versions",
     "sourceCode": "Code source",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "Facturation",

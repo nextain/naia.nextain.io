@@ -9,7 +9,7 @@ Màn hình trò chuyện chính với Naia.
 3. Naia tạo phản hồi (truyền tải theo thời gian thực)
 4. Sử dụng Shift+Enter để xuống dòng
 
-## Trò chuyện bằng giọng nói
+## Hội thoại bằng giọng nói
 
 1. Nhấp vào **nút micro** bên cạnh trường nhập liệu
 2. Nói khi micro được kích hoạt

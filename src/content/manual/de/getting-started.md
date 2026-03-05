@@ -47,8 +47,8 @@ Wählen Sie aus 4 VRM-Avataren:
 
 | Charakter       | Beschreibung           |
 |-----------------|------------------------|
-| Shino (Dark)    | Dunkle Uniform         |
-| Shino (Light)   | Helle Uniform          |
+| Shino           | Schuluniform (Standard)|
+| Sakurada Fumiriya | Lässig               |
 | Girl            | Generisches Mädchen    |
 | Boy             | Generischer Junge      |
 
@@ -61,19 +61,24 @@ Wählen Sie aus 4 Voreinstellungen:
 
 | Persönlichkeit | Beschreibung                  |
 |----------------|-------------------------------|
-| Friendly       | Zwanglos, warmer Ton          |
-| Professional   | Höflich, formeller Ton        |
-| Playful        | Humorvoll, heller Ton         |
-| Scholar        | Ruhig, intellektueller Ton    |
+| Freundlicher Begleiter | Lockere Sprache, warme Persönlichkeit |
+| Zuverlässiger Assistent | Formelle Sprache, professioneller Ton |
+| Spaßvogel | Humorvoll, fröhlicher Ton |
+| Ruhiger Gelehrter | Intellektueller, besonnener Ton |
 
 
-### 5. Messenger-Integration (Optional)
+### 5. Sprachstil wählen
 
-![Messenger-Integrationsbildschirm](onboarding-messenger.png)
+Wählen Sie, wie Ihre KI spricht:
 
-Richten Sie die Integration mit unterstützten Messengern wie Telegram oder Slack ein. Dieser Schritt kann übersprungen und später in den Einstellungen konfiguriert werden.
+| Stil | Beschreibung |
+|------|--------------|
+| Lässig | Wie ein Freund |
+| Formell | Höflich und respektvoll |
 
 ### 6. Abschließen
 
 ![Onboarding abgeschlossen Bildschirm](onboarding-complete.png)
-Klicken Sie auf **Los geht's**, um zum Hauptbildschirm zu gelangen.
+
+Sie können auf diesem Bildschirm optional einen **Discord-Bot** verbinden.
+Klicken Sie auf **Legen Sie los**, um zum Hauptbildschirm zu gelangen.

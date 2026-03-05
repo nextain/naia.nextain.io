@@ -47,8 +47,8 @@ Pilih dari 4 avatar VRM:
 
 | Karakter        | Deskripsi       |
 |-----------------|-----------------|
-| Shino (Dark)    | Seragam gelap   |
-| Shino (Light)   | Seragam terang  |
+| Shino           | Seragam sekolah (default) |
+| Sakurada Fumiriya | Kasual        |
 | Girl            | Gadis umum      |
 | Boy             | Anak laki-laki umum |
 
@@ -61,19 +61,24 @@ Pilih dari 4 preset:
 
 | Kepribadian   | Deskripsi                 |
 |---------------|---------------------------|
-| Ramah         | Nada santai, hangat       |
-| Profesional   | Nada sopan, formal        |
-| Lucu          | Nada jenaka, ceria        |
-| Cendekiawan   | Nada tenang, intelektual  |
+| Teman yang ramah | Bicara santai, kepribadian hangat |
+| Asisten yang andal | Bicara formal, nada profesional |
+| Si Jahil      | Humoris, nada ceria       |
+| Cendekiawan tenang | Nada intelektual dan tenang |
 
 
-### 5. Integrasi Messenger (Opsional)
+### 5. Pilih Gaya Bicara
 
-![Layar integrasi messenger](onboarding-messenger.png)
+Pilih cara AI Anda berbicara:
 
-Atur integrasi dengan messenger yang didukung seperti Telegram atau Slack. Langkah ini dapat dilewati dan dikonfigurasi nanti di pengaturan.
+| Gaya | Deskripsi |
+|------|-----------|
+| Kasual | Seperti teman |
+| Formal | Sopan dan hormat |
 
 ### 6. Selesai
 
 ![Layar orientasi selesai](onboarding-complete.png)
-Klik **Mulai** untuk masuk ke layar utama.
+
+Anda dapat secara opsional menghubungkan **bot Discord** dari layar ini.
+Klik **Memulai** untuk masuk ke layar utama.

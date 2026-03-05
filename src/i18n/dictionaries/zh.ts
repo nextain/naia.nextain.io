@@ -4,7 +4,7 @@ const zh: Dictionary = {
   "locale": "zh",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "你的AI在这里鲜活存在。开源，从云端到本地AI由你选择。VRM 3D虚拟形象与语音聊天，70+技能，OpenClaw AI网关，记忆与性格全部存储在你的电脑上。Steam游戏就绪的安全Linux上的AI。",
+    "description": "你的AI在这里鲜活存在。开源，从云端到本地AI由你选择。VRM 3D虚拟形象与语音聊天，70+技能，OpenClaw，记忆与性格全部存储在你的电脑上。Steam游戏就绪的安全Linux上的AI。",
   },
   "common": {
     "loading": "正在加载...",
@@ -98,7 +98,7 @@ const zh: Dictionary = {
         },
         "daemon": {
           "title": "永不停歇的AI",
-          "description": "OpenClaw网关在后台持续运行。即使关闭应用，AI依然保持活跃，接收消息，执行任务。"
+          "description": "OpenClaw在后台持续运行。即使关闭应用，AI依然保持活跃，接收消息，执行任务。"
         },
         "openSource": {
           "title": "AI守护的开源",
@@ -341,7 +341,7 @@ const zh: Dictionary = {
     "verificationNotice": "各版本通过验证后将依次开放下载。",
     "naiaOs": {
       "title": "Naia OS (Live USB / 安装)",
-      "description": "完整的Naia体验。包含AI头像、网关、韩语输入和预装应用。从USB启动试用，或安装到硬盘。",
+      "description": "完整的Naia体验。包含AI头像、OpenClaw、韩语输入和预装应用。从USB启动试用，或安装到硬盘。",
       "note": "Live USB重启后会重置。永久使用请安装。",
       "cta": "下载ISO",
     },
@@ -350,31 +350,31 @@ const zh: Dictionary = {
         "name": "Flatpak",
         "description": "在沙盒环境中运行。需要GNOME Platform运行时。",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "仅Shell UI。不包含AI网关。",
+        "note": "仅Shell UI。不包含OpenClaw。",
       },
       "appimage": {
         "name": "AppImage",
         "description": "单个可执行文件。无需安装，直接运行。",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "仅Shell UI。不包含AI网关。",
+        "note": "仅Shell UI。不包含OpenClaw。",
       },
       "deb": {
         "name": "DEB",
         "description": "适用于 Debian、Ubuntu 及其他基于 apt 的发行版。",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "仅Shell UI。不包含AI网关。",
+        "note": "仅Shell UI。不包含OpenClaw。",
       },
       "rpm": {
         "name": "RPM",
         "description": "适用于 Fedora、RHEL 及其他基于 rpm 的发行版。",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "仅Shell UI。不包含AI网关。",
+        "note": "仅Shell UI。不包含OpenClaw。",
       },
     },
-    "shellOnly": "仅Shell UI — AI功能需要Naia OS或单独设置网关。",
+    "shellOnly": "仅Shell UI — AI功能需要Naia OS或单独设置OpenClaw。",
     "gateway": {
       "title": "关于 OpenClaw",
-      "description": "Naia的AI功能（聊天、语音、工具、技能）运行在开源AI网关OpenClaw上。仅Shell UI无法运行AI，需要同时运行OpenClaw。",
+      "description": "Naia的AI功能（聊天、语音、工具、技能）运行在OpenClaw上。仅Shell UI无法运行AI，需要同时运行OpenClaw。",
       "naiaOsIncluded": "Naia OS已预装OpenClaw。启动即可使用。",
       "shellOnlyGuide": "使用上述Shell独立包时，需要单独安装OpenClaw。",
       "openclawLink": "OpenClaw安装指南",
@@ -383,6 +383,7 @@ const zh: Dictionary = {
     "checksumDescription": "验证下载文件的完整性：",
     "allReleases": "查看所有版本",
     "sourceCode": "源代码",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "计费",

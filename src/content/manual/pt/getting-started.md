@@ -47,10 +47,10 @@ Escolha entre 4 avatares VRM:
 
 | Personagem | Descrição |
 |-----------|-------------|
-| Shino (Escuro) | Uniforme escuro |
-| Shino (Claro) | Uniforme claro |
-| Menina | Menina genérica |
-| Menino | Menino genérico |
+| Shino | Uniforme escolar (padrão) |
+| Sakurada Fumiriya | Casual |
+| Girl | Menina genérica |
+| Boy | Menino genérico |
 
 
 ### 4. Escolha uma Personalidade
@@ -61,19 +61,24 @@ Escolha entre 4 predefinições:
 
 | Personalidade | Descrição |
 |-------------|-------------|
-| Amigável | Tom casual, caloroso |
-| Profissional | Tom educado, formal |
-| Brincalhão | Tom bem-humorado, alegre |
-| Acadêmico | Tom calmo, intelectual |
+| Amigo carinhoso | Fala informal, personalidade calorosa |
+| Assistente confiável | Fala formal, tom profissional |
+| Brincalhão | Humorístico, tom alegre |
+| Estudioso calmo | Tom intelectual e sereno |
 
 
-### 5. Integração com Mensageiros (Opcional)
+### 5. Escolha o Estilo de Fala
 
-![Messenger integration screen](onboarding-messenger.png)
+Escolha como sua IA fala:
 
-Configure a integração com mensageiros suportados como Telegram ou Slack. Esta etapa pode ser ignorada e configurada mais tarde nas configurações.
+| Estilo | Descrição |
+|--------|-----------|
+| Informal | Como um amigo |
+| Formal | Educado e respeitoso |
 
 ### 6. Concluir
 
 ![Onboarding complete screen](onboarding-complete.png)
-Clique em **Começar** para entrar na tela principal.
+
+Você pode opcionalmente conectar um **bot do Discord** nesta tela.
+Clique em **Comece** para entrar na tela principal.

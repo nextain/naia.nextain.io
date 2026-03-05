@@ -47,8 +47,8 @@ Pick from 4 VRM avatars:
 
 | Character | Description |
 |-----------|-------------|
-| Shino (Dark) | Dark uniform |
-| Shino (Light) | Light uniform |
+| Shino | School uniform (default) |
+| Sakurada Fumiriya | Casual |
 | Girl | Generic girl |
 | Boy | Generic boy |
 
@@ -61,19 +61,24 @@ Pick from 4 presets:
 
 | Personality | Description |
 |-------------|-------------|
-| Friendly | Casual, warm tone |
-| Professional | Polite, formal tone |
-| Playful | Humorous, bright tone |
-| Scholar | Calm, intellectual tone |
+| Friendly Companion | Casual speech, warm personality |
+| Reliable Assistant | Formal speech, professional tone |
+| Playful Joker | Humorous, bright tone |
+| Calm Scholar | Intellectual, composed tone |
 
 
-### 5. Messenger Integration (Optional)
+### 5. Choose Speech Style
 
-![Messenger integration screen](onboarding-messenger.png)
+Pick how your AI speaks:
 
-Set up integration with supported messengers like Telegram or Slack. This step can be skipped and configured later in the settings.
+| Style | Description |
+|-------|-------------|
+| Casual | Like a friend |
+| Formal | Polite and respectful |
 
 ### 6. Complete
 
 ![Onboarding complete screen](onboarding-complete.png)
+
+You can optionally connect a **Discord bot** from this screen.
 Click **Get Started** to enter the main screen.

@@ -4,7 +4,7 @@ const ja: Dictionary = {
   "locale": "ja",
   "meta": {
     "title": "Naia — The Next Generation AI OS",
-    "description": "自分だけのAIがここに住んでいる。オープンソース、クラウドからローカルAIまで自由に選べる。VRM 3Dアバターと音声チャット、70+スキル、OpenClaw AIゲートウェイ、記憶と性格すべて自分のマシンに。Steam対応の安全なLinuxで暮らすAI。",
+    "description": "自分だけのAIがここに住んでいる。オープンソース、クラウドからローカルAIまで自由に選べる。VRM 3Dアバターと音声チャット、70+スキル、OpenClaw、記憶と性格すべて自分のマシンに。Steam対応の安全なLinuxで暮らすAI。",
   },
   "common": {
     "loading": "読み込み中...",
@@ -98,7 +98,7 @@ const ja: Dictionary = {
         },
         "daemon": {
           "title": "常に稼働するAI",
-          "description": "OpenClawゲートウェイがバックグラウンドで常時稼働。アプリを閉じてもAIは生き続け、メッセージを受信し、作業を実行します。"
+          "description": "OpenClawがバックグラウンドで常時稼働。アプリを閉じてもAIは生き続け、メッセージを受信し、作業を実行します。"
         },
         "openSource": {
           "title": "AIが守るオープンソース",
@@ -341,7 +341,7 @@ const ja: Dictionary = {
     "verificationNotice": "各ビルドの検証が完了次第、順次ダウンロードが有効になります。",
     "naiaOs": {
       "title": "Naia OS (ライブUSB / インストール)",
-      "description": "完全なNaia体験。AIアバター、ゲートウェイ、韓国語入力、標準アプリがすべて含まれています。USBから起動して試すか、ハードドライブにインストールしてください。",
+      "description": "完全なNaia体験。AIアバター、OpenClaw、韓国語入力、標準アプリがすべて含まれています。USBから起動して試すか、ハードドライブにインストールしてください。",
       "note": "ライブUSBは再起動でリセットされます。永続的に使用するにはインストールしてください。",
       "cta": "ISOをダウンロード",
     },
@@ -350,31 +350,31 @@ const ja: Dictionary = {
         "name": "Flatpak",
         "description": "サンドボックス環境で実行されます。GNOME Platformランタイムが必要です。",
         "command": "flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo\nflatpak install -y flathub org.gnome.Platform//47\nflatpak install --user ./Naia-Shell-x86_64.flatpak",
-        "note": "Shell UIのみ。AIゲートウェイは含まれていません。",
+        "note": "Shell UIのみ。OpenClawは含まれていません。",
       },
       "appimage": {
         "name": "AppImage",
         "description": "単一の実行ファイルです。インストール不要でそのまま実行できます。",
         "command": "chmod +x Naia-Shell-x86_64.AppImage && ./Naia-Shell-x86_64.AppImage",
-        "note": "Shell UIのみ。AIゲートウェイは含まれていません。",
+        "note": "Shell UIのみ。OpenClawは含まれていません。",
       },
       "deb": {
         "name": "DEB",
         "description": "Debian、Ubuntu、その他のapt系ディストリビューション向けです。",
         "command": "sudo dpkg -i Naia.Shell_*.deb",
-        "note": "Shell UIのみ。AIゲートウェイは含まれていません。",
+        "note": "Shell UIのみ。OpenClawは含まれていません。",
       },
       "rpm": {
         "name": "RPM",
         "description": "Fedora、RHEL、その他のrpm系ディストリビューション向けです。",
         "command": "sudo rpm -i Naia.Shell-*.rpm",
-        "note": "Shell UIのみ。AIゲートウェイは含まれていません。",
+        "note": "Shell UIのみ。OpenClawは含まれていません。",
       },
     },
-    "shellOnly": "Shell UIのみ — AI機能にはNaia OSまたは別途ゲートウェイのセットアップが必要です。",
+    "shellOnly": "Shell UIのみ — AI機能にはNaia OSまたは別途OpenClawのセットアップが必要です。",
     "gateway": {
       "title": "OpenClaw について",
-      "description": "NaiaのAI機能（チャット、音声、ツール、スキル）はオープンソースAIゲートウェイのOpenClawで動作します。Shell UI単体ではAIを使用できません。OpenClawが一緒に実行される必要があります。",
+      "description": "NaiaのAI機能（チャット、音声、ツール、スキル）はOpenClawで動作します。Shell UI単体ではAIを使用できません。OpenClawが一緒に実行される必要があります。",
       "naiaOsIncluded": "Naia OSにはOpenClawがプリインストールされています。起動するだけですぐに使えます。",
       "shellOnlyGuide": "上記のShell単体パッケージを使用する場合、OpenClawを別途インストールする必要があります。",
       "openclawLink": "OpenClawセットアップガイド",
@@ -383,6 +383,7 @@ const ja: Dictionary = {
     "checksumDescription": "ダウンロードしたファイルの整合性を検証するには：",
     "allReleases": "全リリースを表示",
     "sourceCode": "ソースコード",
+    itchIo: "itch.io",
   },
   "billing": {
     "title": "請求",

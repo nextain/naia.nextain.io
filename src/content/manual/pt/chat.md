@@ -9,7 +9,7 @@ A tela principal de conversação com Naia.
 3. Naia gera uma resposta (transmitida em tempo real)
 4. Use Shift+Enter para quebras de linha
 
-## Chat de Voz
+## Conversa de Voz
 
 1. Clique no **botão do microfone** ao lado do campo de entrada
 2. Fale quando o microfone for ativado

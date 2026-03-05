@@ -9,7 +9,7 @@ Der Haupt-Konversationsbildschirm mit dem KI-Avatar.
 3. Der KI-Avatar generiert eine Antwort (wird in Echtzeit gestreamt)
 4. Verwenden Sie Umschalt+Enter für Zeilenumbrüche
 
-## Sprach-Chat
+## Sprachgespräch
 
 1. Klicken Sie auf die **Mikrofon-Schaltfläche** neben dem Eingabefeld
 2. Sprechen Sie, wenn das Mikrofon aktiviert wird

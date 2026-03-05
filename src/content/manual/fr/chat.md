@@ -9,7 +9,7 @@ L'ecran de conversation principal avec l'avatar IA.
 3. L'avatar IA génère une réponse (diffusée en temps réel)
 4. Utilisez Maj+Entrée pour les sauts de ligne
 
-## Chat vocal
+## Conversation vocale
 
 1. Cliquez sur le **bouton microphone** à côté du champ de saisie
 2. Parlez lorsque le microphone s'active

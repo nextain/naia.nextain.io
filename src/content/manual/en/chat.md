@@ -9,7 +9,7 @@ The main conversation screen with Naia.
 3. Naia generates a response (streams in real-time)
 4. Use Shift+Enter for line breaks
 
-## Voice Chat
+## Voice Conversation
 
 1. Click the **microphone button** next to the input field
 2. Speak when the microphone activates

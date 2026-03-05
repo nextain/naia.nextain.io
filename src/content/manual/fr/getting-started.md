@@ -47,10 +47,10 @@ Choisissez parmi 4 avatars VRM :
 
 | Personnage | Description |
 |-----------|-------------|
-| Shino (Sombre) | Uniforme sombre |
-| Shino (Clair) | Uniforme clair |
-| Fille | Fille générique |
-| Garçon | Garçon générique |
+| Shino | Uniforme scolaire (par défaut) |
+| Sakurada Fumiriya | Décontracté |
+| Girl | Fille générique |
+| Boy | Garçon générique |
 
 
 ### 4. Choisissez une personnalité
@@ -61,19 +61,24 @@ Choisissez parmi 4 préréglages :
 
 | Personnalité | Description |
 |-------------|-------------|
-| Amicale | Ton décontracté et chaleureux |
-| Professionnelle | Ton poli et formel |
-| Ludique | Ton humoristique et joyeux |
-| Érudite | Ton calme et intellectuel |
+| Ami chaleureux | Langage décontracté, personnalité chaleureuse |
+| Assistant fiable | Langage formel, ton professionnel |
+| Farceur | Humoristique, ton enjoué |
+| Érudit calme | Ton intellectuel et composé |
 
 
-### 5. Intégration de messagerie (Optionnel)
+### 5. Choisissez un style de parole
 
-![Écran d'intégration de messagerie](onboarding-messenger.png)
+Choisissez comment votre IA s'exprime :
 
-Configurez l'intégration avec les messageries prises en charge comme Telegram ou Slack. Cette étape peut être ignorée et configurée plus tard dans les paramètres.
+| Style | Description |
+|-------|-------------|
+| Décontracté | Comme un ami |
+| Formel | Poli et respectueux |
 
 ### 6. Terminé
 
 ![Écran d'intégration terminée](onboarding-complete.png)
-Cliquez sur **Get Started** pour accéder à l'écran principal.
+
+Vous pouvez éventuellement connecter un **bot Discord** depuis cet écran.
+Cliquez sur **Commencer** pour accéder à l'écran principal.

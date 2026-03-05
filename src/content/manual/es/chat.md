@@ -9,7 +9,7 @@ La pantalla principal de conversación con Naia.
 3. Naia genera una respuesta (transmite en tiempo real)
 4. Use Shift+Enter para saltos de línea
 
-## Chat de Voz
+## Conversación de Voz
 
 1. Haga clic en el **botón del micrófono** junto al campo de entrada
 2. Hable cuando el micrófono se active
