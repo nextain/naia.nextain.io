@@ -27,7 +27,7 @@ export function BlogMarkdown({ markdown, slug }: BlogMarkdownProps) {
 
   return (
     <>
-      <article className="mt-8 space-y-4 text-base leading-8 text-muted-foreground">
+      <article className="mt-8 min-w-0 space-y-4 text-base leading-8 text-muted-foreground">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           rehypePlugins={[rehypeRaw]}
@@ -80,6 +80,11 @@ export function BlogMarkdown({ markdown, slug }: BlogMarkdownProps) {
                 />
               );
             },
+            pre: ({ children }) => (
+              <pre className="my-2 overflow-x-auto rounded-lg bg-muted/30 p-4 text-sm">
+                {children}
+              </pre>
+            ),
             code: ({ children, className }) => {
               const isInline = !className;
               if (isInline) {
@@ -89,7 +94,7 @@ export function BlogMarkdown({ markdown, slug }: BlogMarkdownProps) {
                   </code>
                 );
               }
-              return <code className={className}>{children}</code>;
+              return <code className="font-mono">{children}</code>;
             },
             p: ({ node, children }) => {
               const hasImg = node?.children?.some(

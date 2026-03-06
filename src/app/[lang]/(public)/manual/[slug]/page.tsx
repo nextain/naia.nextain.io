@@ -85,7 +85,7 @@ export default async function ManualSectionPage({
           </div>
         </aside>
 
-        <section>
+        <section className="min-w-0">
           <details className="mb-6 rounded-xl border border-border/50 bg-background p-4 lg:hidden">
             <summary className="cursor-pointer text-sm font-semibold">{dict.manual.toc}</summary>
             <ol className="mt-3 space-y-1.5">
