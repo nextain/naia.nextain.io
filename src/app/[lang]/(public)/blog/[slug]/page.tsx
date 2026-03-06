@@ -4,13 +4,14 @@ import { SUPPORTED_LOCALES, SEO_LOCALES, isLocale } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getPost, getAllPosts, getPostSlugs } from "@/lib/posts";
+import { getPostViews } from "@/lib/ga4";
 import { BlogMarkdown } from "@/components/blog/blog-markdown";
 import { Comments } from "@/components/blog/comments";
 import { PopularPosts } from "@/components/blog/popular-posts";
 import { auth } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Eye } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -75,10 +76,12 @@ export default async function BlogPostPage({
   const post = getPost(lang as Locale, slug);
   if (!post) notFound();
 
-  const [dict, session] = await Promise.all([
+  const [dict, session, viewsMap] = await Promise.all([
     getDictionary(lang as Locale),
     auth(),
+    getPostViews(),
   ]);
+  const views = viewsMap[slug] ?? 0;
   const allPosts = getAllPosts(lang as Locale);
   const currentIndex = allPosts.findIndex((p) => p.slug === slug);
   const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
@@ -142,6 +145,11 @@ export default async function BlogPostPage({
               ) : (
                 post.author
               )}
+            </span>
+          )}
+          {views > 0 && (
+            <span className="flex items-center gap-1">
+              · <Eye className="h-3.5 w-3.5" /> {views.toLocaleString()}
             </span>
           )}
         </div>

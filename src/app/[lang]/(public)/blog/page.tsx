@@ -4,8 +4,10 @@ import { SUPPORTED_LOCALES, SEO_LOCALES, isLocale } from "@/i18n/config";
 import type { Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getAllPosts } from "@/lib/posts";
+import { getPostViews } from "@/lib/ga4";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import { Eye } from "lucide-react";
 import type { Metadata } from "next";
 
 export async function generateStaticParams() {
@@ -48,7 +50,10 @@ export default async function BlogListPage({
   if (!isLocale(lang)) notFound();
 
   const dict = await getDictionary(lang as Locale);
-  const posts = getAllPosts(lang as Locale);
+  const [posts, viewsMap] = await Promise.all([
+    getAllPosts(lang as Locale),
+    getPostViews(),
+  ]);
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-14">
@@ -91,6 +96,11 @@ export default async function BlogListPage({
                       })}
                     </time>
                     {post.author && <span>· {post.author}</span>}
+                    {(viewsMap[post.slug] ?? 0) > 0 && (
+                      <span className="flex items-center gap-0.5">
+                        · <Eye className="h-3 w-3" /> {viewsMap[post.slug].toLocaleString()}
+                      </span>
+                    )}
                   </div>
                   <h2 className="mt-1.5 text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                     {post.title}
