@@ -319,6 +319,20 @@ export interface Dictionary {
     sourceCode: string;
     itchIo: string;
   };
+  comments: {
+    title: string;
+    placeholder: string;
+    guestName: string;
+    guestNamePlaceholder: string;
+    submit: string;
+    reply: string;
+    delete: string;
+    deleteConfirm: string;
+    loginPrompt: string;
+    guestPrompt: string;
+    noComments: string;
+    cancel: string;
+  };
   billing: {
     title: string;
     currentPlan: string;

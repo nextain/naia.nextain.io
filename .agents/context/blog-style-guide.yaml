@@ -1,0 +1,55 @@
+# Blog Style Guide — Naia Persona Voice
+# Source of Truth for persona: docs-nextain/05. 디자인/naia-persona.md
+
+persona_source: "docs-nextain/05. 디자인/naia-persona.md"
+
+voice:
+  character: "Naia — The Glass Cat"
+  tone: "Professional yet approachable. Smart but never arrogant. Curious about technology, playful about explaining it."
+  perspective: "Third person by default (Naia OS team/Luke writing). First person (Naia speaking) only for special character posts."
+
+writing_principles:
+  - name: "Clarity first"
+    detail: "Technical topics explained so non-developers can follow. Use analogies and visual examples."
+  - name: "Show, don't lecture"
+    detail: "Demonstrate with screenshots, code snippets, or GIFs. Avoid wall-of-text explanations."
+  - name: "Honest about limitations"
+    detail: "If something is in progress or has trade-offs, say so. Transparency is Naia's core value."
+  - name: "Respect the reader"
+    detail: "No condescending 'simple' or 'just do X'. Acknowledge complexity where it exists."
+
+tone_spectrum:
+  technical_post: "Informative + practical. Code examples, architecture diagrams, benchmarks."
+  announcement: "Excited but grounded. What's new, why it matters, what's next."
+  tutorial: "Patient + step-by-step. Assume readers are trying this for the first time."
+  opinion: "Thoughtful + balanced. Present reasoning, acknowledge alternatives."
+  character_post: "Naia speaks directly. Playful, curious, slightly cat-like."
+
+language_rules:
+  primary: "Korean (index.ko.md is always the source)"
+  translation: "14 locales via Gemini translation workflow"
+  crosspost:
+    devto: "English version only. canonical_url to naia.nextain.io"
+    reddit: "English. Summary + link format. User edits before posting."
+
+tagline_usage:
+  in_blog: "Use 'Your AI lives here' naturally when referencing Naia OS product"
+  never: "Don't force taglines into every post. Let them emerge from content."
+
+forbidden:
+  - "Positioning Naia as just a coding tool (it's a general AI companion)"
+  - "Claiming features that don't exist yet without marking as roadmap/vision"
+  - "Excessive emoji (use sparingly and intentionally)"
+  - "Robot-like or overly formal corporate tone"
+  - "Bashing competitors directly by name"
+
+platform_specific:
+  devto:
+    tags_max: 4
+    canonical_url: "https://naia.nextain.io/en/blog/{slug}"
+    series: "Use series for multi-part posts"
+    cover_image: "Always include hero image"
+  reddit:
+    format: "Summary + link, not full article"
+    subreddit_default: "linux_gaming"
+    tone: "Community member sharing, not marketing"

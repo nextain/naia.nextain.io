@@ -5,6 +5,8 @@ import type { Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { getPost, getAllPosts, getPostSlugs } from "@/lib/posts";
 import { BlogMarkdown } from "@/components/blog/blog-markdown";
+import { Comments } from "@/components/blog/comments";
+import { auth } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -72,7 +74,10 @@ export default async function BlogPostPage({
   const post = getPost(lang as Locale, slug);
   if (!post) notFound();
 
-  const dict = await getDictionary(lang as Locale);
+  const [dict, session] = await Promise.all([
+    getDictionary(lang as Locale),
+    auth(),
+  ]);
   const allPosts = getAllPosts(lang as Locale);
   const currentIndex = allPosts.findIndex((p) => p.slug === slug);
   const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
@@ -152,6 +157,8 @@ export default async function BlogPostPage({
       </header>
 
       <BlogMarkdown markdown={post.content} slug={post.slug} />
+
+      <Comments slug={slug} session={session} locale={lang} dict={dict.comments} />
 
       {/* Prev / Next navigation */}
       <nav className="mt-12 grid grid-cols-1 gap-4 border-t border-border/40 pt-6 sm:grid-cols-2">

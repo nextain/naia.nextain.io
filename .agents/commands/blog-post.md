@@ -14,8 +14,10 @@ End-to-end workflow for creating, reviewing, translating, and publishing a blog 
 
 ## Prerequisites
 - Read `AGENTS.md` (Blog Posting Guide section)
+- Read `.agents/context/blog-style-guide.yaml` (tone, persona, platform rules)
 - Read `.agents/workflows/translation.yaml` (for Step 5)
 - Confirm `GEMINI_API_KEY` is available in `.env` (needed for translation script)
+- Persona SoT: `docs-nextain/05. 디자인/naia-persona.md` (캐치프레이즈, 성격, 말투)
 
 ## Workflow
 
@@ -111,6 +113,37 @@ The blog system auto-generates metadata from frontmatter. Verify these are corre
 3. Verify OG tags in browser DevTools (`<head>` tag inspection)
 4. Confirm post appears in blog listing page (`/{lang}/blog`)
 
+### Step 8: Deploy & Cross-post
+Use the admin editor page at `http://localhost:3000/{lang}/admin/blog/editor` (requires dev server + admin session).
+
+**Deploy:**
+1. Select the post from the dropdown
+2. Verify content in split/preview mode
+3. Enter commit message (or use default `blog: update {slug}`)
+4. Click **Deploy** — commits and pushes changes
+
+**Cross-post (English version):**
+1. **Dev.to**: Click Dev.to button → auto-publishes with `canonical_url` pointing to naia.nextain.io
+2. **Reddit**: Enter subreddit name → click Reddit button → opens Reddit submit page in browser → user can edit title/body before posting
+
+**Alternatively via API (CLI/curl):**
+```bash
+# Deploy
+curl -X POST http://localhost:3000/api/admin/deploy \
+  -H "Content-Type: application/json" \
+  -d '{"slug":"your-slug","message":"blog: publish your-slug"}'
+
+# Cross-post to Dev.to
+curl -X POST http://localhost:3000/api/admin/crosspost \
+  -H "Content-Type: application/json" \
+  -d '{"slug":"your-slug","targets":["devto"]}'
+
+# Cross-post to Reddit (returns submit URL)
+curl -X POST http://localhost:3000/api/admin/crosspost \
+  -H "Content-Type: application/json" \
+  -d '{"slug":"your-slug","targets":["reddit"],"subreddit":"linux_gaming"}'
+```
+
 ## Checklist
 ```
 - [ ] Korean draft written (index.ko.md)
@@ -122,6 +155,9 @@ The blog system auto-generates metadata from frontmatter. Verify these are corre
 - [ ] `npm run build` succeeds
 - [ ] OG tags verified
 - [ ] Post appears in sitemap
+- [ ] Deployed (git commit + push)
+- [ ] Cross-posted to Dev.to (with canonical_url)
+- [ ] Cross-posted to Reddit (submit URL opened, user posted)
 ```
 
 ## Key Files
@@ -135,6 +171,11 @@ The blog system auto-generates metadata from frontmatter. Verify these are corre
 | `src/app/sitemap.ts` | Sitemap generation |
 | `src/i18n/config.ts` | SUPPORTED_LOCALES (14), SEO_LOCALES (en, ko, ja) |
 | `.agents/workflows/translation.yaml` | Translation workflow reference |
+| `src/app/[lang]/(protected)/admin/blog/editor/page.tsx` | Admin editor (edit/preview/deploy/crosspost) |
+| `src/lib/crosspost/devto.ts` | Dev.to API integration |
+| `src/lib/crosspost/reddit.ts` | Reddit submit URL generation |
+| `src/app/api/admin/deploy/route.ts` | Git deploy API (dev-only) |
+| `src/app/api/admin/crosspost/route.ts` | Cross-posting API |
 
 ## Notes
 - SEO_LOCALES (en, ko, ja) are included in sitemap and hreflang; other locales are served but not indexed
