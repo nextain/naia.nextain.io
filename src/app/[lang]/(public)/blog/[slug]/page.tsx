@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { getPost, getAllPosts, getPostSlugs } from "@/lib/posts";
 import { BlogMarkdown } from "@/components/blog/blog-markdown";
 import { Comments } from "@/components/blog/comments";
+import { PopularPosts } from "@/components/blog/popular-posts";
 import { auth } from "@/lib/auth";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -157,6 +158,36 @@ export default async function BlogPostPage({
       </header>
 
       <BlogMarkdown markdown={post.content} slug={post.slug} />
+
+      <PopularPosts
+        lang={lang}
+        excludeSlugs={[
+          slug,
+          ...(prevPost ? [prevPost.slug] : []),
+          ...(nextPost ? [nextPost.slug] : []),
+        ]}
+      />
+
+      {/* License badge */}
+      <div className="mt-10 flex items-center gap-3 border-t border-border/40 pt-6 text-xs text-muted-foreground">
+        <a
+          href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
+            alt="CC BY-NC-SA 4.0"
+            width={88}
+            height={31}
+          />
+        </a>
+        <span>
+          {lang === "ko"
+            ? "이 글은 CC BY-NC-SA 4.0 라이선스로 제공됩니다."
+            : "This post is licensed under CC BY-NC-SA 4.0."}
+        </span>
+      </div>
 
       <Comments slug={slug} session={session} locale={lang} dict={dict.comments} />
 

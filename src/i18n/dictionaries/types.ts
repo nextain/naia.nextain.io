@@ -327,6 +327,7 @@ export interface Dictionary {
     placeholder: string;
     guestName: string;
     guestNamePlaceholder: string;
+    emailPlaceholder: string;
     submit: string;
     reply: string;
     delete: string;

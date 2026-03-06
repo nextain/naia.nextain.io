@@ -410,6 +410,7 @@ const en: Dictionary = {
     placeholder: "Write a comment...",
     guestName: "Name",
     guestNamePlaceholder: "Enter your name",
+    emailPlaceholder: "Email (optional, for reply notifications)",
     submit: "Post",
     reply: "Reply",
     delete: "Delete",

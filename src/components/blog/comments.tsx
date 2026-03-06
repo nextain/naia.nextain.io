@@ -46,6 +46,7 @@ interface CommentsProps {
     placeholder: string;
     guestName: string;
     guestNamePlaceholder: string;
+    emailPlaceholder: string;
     submit: string;
     reply: string;
     delete: string;
@@ -119,6 +120,7 @@ function CommentForm({
 }) {
   const [content, setContent] = useState("");
   const [guestName, setGuestName] = useState("");
+  const [email, setEmail] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
@@ -142,6 +144,7 @@ function CommentForm({
           content: content.trim(),
           parentId,
           guestName: isLoggedIn ? null : guestName.trim(),
+          email: email.trim() || undefined,
         }),
       });
 
@@ -153,6 +156,7 @@ function CommentForm({
 
       setContent("");
       setGuestName("");
+      setEmail("");
       onSubmitted();
     } catch {
       setError("Network error");
@@ -176,13 +180,22 @@ function CommentForm({
         </div>
       ) : (
         <div>
-          <p className="mb-2 text-xs text-muted-foreground">{dict.guestPrompt}</p>
-          <Input
-            value={guestName}
-            onChange={(e) => setGuestName(e.target.value)}
-            placeholder={dict.guestNamePlaceholder}
-            className="max-w-xs"
-          />
+          <p className="mb-3 text-xs text-muted-foreground">{dict.guestPrompt}</p>
+          <div className="flex flex-wrap gap-3">
+            <Input
+              value={guestName}
+              onChange={(e) => setGuestName(e.target.value)}
+              placeholder={dict.guestNamePlaceholder}
+              className="max-w-[200px]"
+            />
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={dict.emailPlaceholder}
+              className="max-w-[280px]"
+            />
+          </div>
         </div>
       )}
 

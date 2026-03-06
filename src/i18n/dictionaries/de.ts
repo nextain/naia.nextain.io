@@ -396,6 +396,7 @@ const de: Dictionary = {
     "placeholder": "Kommentar schreiben...",
     "guestName": "Name",
     "guestNamePlaceholder": "Namen eingeben",
+    "emailPlaceholder": "E-Mail (optional, für Antwort-Benachrichtigungen)",
     "submit": "Absenden",
     "reply": "Antworten",
     "delete": "Löschen",

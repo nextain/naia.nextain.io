@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { getAdminDb } from "@/lib/firebase-admin";
+import { sendEmail, buildReplyNotificationEmail } from "@/lib/email";
 import { FieldValue } from "firebase-admin/firestore";
 import crypto from "crypto";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const RATE_LIMIT_SECONDS = 60;
 const MAX_CONTENT_LENGTH = 2000;
@@ -28,7 +31,7 @@ function countLinks(text: string): number {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { postSlug, locale, content, parentId, guestName } = body;
+    const { postSlug, locale, content, parentId, guestName, email } = body;
 
     if (!postSlug || !locale || !content?.trim()) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -44,6 +47,15 @@ export async function POST(req: NextRequest) {
 
     const session = await auth();
     const isGuest = !session?.gwUserId;
+
+    // Logged-in users: use session email; guests: use submitted email
+    const rawEmail = isGuest
+      ? (typeof email === "string" ? email.trim() : "")
+      : (session?.user?.email ?? "");
+    if (rawEmail && !EMAIL_RE.test(rawEmail)) {
+      return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+    }
+    const trimEmail = rawEmail;
 
     if (isGuest && (typeof guestName !== "string" || !guestName.trim())) {
       return NextResponse.json({ error: "Guest name required" }, { status: 400 });
@@ -72,7 +84,9 @@ export async function POST(req: NextRequest) {
       }
     }
 
-    const commentData = {
+    const userName = isGuest ? guestName.trim() : (session?.user?.name ?? "Anonymous");
+
+    const commentData: Record<string, unknown> = {
       postSlug,
       locale,
       content: trimmed,
@@ -81,14 +95,35 @@ export async function POST(req: NextRequest) {
       isGuest,
       guestName: isGuest ? guestName.trim() : null,
       userId: session?.gwUserId ?? null,
-      userName: isGuest ? guestName.trim() : (session?.user?.name ?? "Anonymous"),
+      userName,
       userImage: isGuest ? null : (session?.user?.image ?? null),
       userProvider: isGuest ? null : (session?.provider ?? null),
       ipHash,
       deleted: false,
     };
+    if (trimEmail) {
+      commentData.email = trimEmail;
+    }
 
     const docRef = await db.collection("comments").add(commentData);
+
+    // Send reply notification email (fire and forget)
+    if (parentId) {
+      const parentDoc = await db.collection("comments").doc(parentId).get();
+      const parentData = parentDoc.data();
+      if (parentData?.email) {
+        const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://naia.nextain.io";
+        const postUrl = `${baseUrl}/${locale}/blog/${postSlug}`;
+        const emailData = buildReplyNotificationEmail({
+          parentName: parentData.userName ?? "Anonymous",
+          replyName: userName,
+          replyContent: trimmed,
+          postSlug,
+          postUrl,
+        });
+        sendEmail({ to: parentData.email, ...emailData }).catch(() => {});
+      }
+    }
 
     return NextResponse.json({ id: docRef.id }, { status: 201 });
   } catch (err) {

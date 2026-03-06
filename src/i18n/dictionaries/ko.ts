@@ -408,6 +408,7 @@ const ko: Dictionary = {
     placeholder: "댓글을 작성하세요...",
     guestName: "이름",
     guestNamePlaceholder: "이름을 입력하세요",
+    emailPlaceholder: "이메일 (선택, 답글 알림용)",
     submit: "등록",
     reply: "답글",
     delete: "삭제",

@@ -396,6 +396,7 @@ const id: Dictionary = {
     "placeholder": "Tulis komentar...",
     "guestName": "Nama",
     "guestNamePlaceholder": "Masukkan nama Anda",
+    "emailPlaceholder": "Email (opsional, untuk notifikasi balasan)",
     "submit": "Kirim",
     "reply": "Balas",
     "delete": "Hapus",

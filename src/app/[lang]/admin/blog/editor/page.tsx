@@ -1,7 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +17,7 @@ import {
   Edit3,
   Sparkles,
   X,
+  ImagePlus,
 } from "lucide-react";
 
 interface PostMeta {
@@ -37,9 +39,39 @@ const STYLES = [
   { id: "community", label: "Community" },
 ] as const;
 
+const NEW_POST_TEMPLATE = (slug: string) =>
+  `---
+title: "${slug}"
+date: "${new Date().toISOString().slice(0, 10)}"
+draft: true
+tags: []
+summary: ""
+hero: ""
+---
+
+`;
+
 export default function BlogEditorPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex h-full items-center justify-center text-muted-foreground">
+          Loading...
+        </div>
+      }
+    >
+      <EditorInner />
+    </Suspense>
+  );
+}
+
+function EditorInner() {
+  const searchParams = useSearchParams();
+  const slugParam = searchParams.get("slug");
+  const isNew = searchParams.get("new") === "1";
+
   const [posts, setPosts] = useState<PostMeta[]>([]);
-  const [selectedSlug, setSelectedSlug] = useState("");
+  const [selectedSlug, setSelectedSlug] = useState(slugParam ?? "");
   const [locale, setLocale] = useState("ko");
   const [content, setContent] = useState("");
   const [originalContent, setOriginalContent] = useState("");
@@ -48,10 +80,17 @@ export default function BlogEditorPage() {
   const [message, setMessage] = useState("");
   const [commitMsg, setCommitMsg] = useState("");
   const [viewMode, setViewMode] = useState<ViewMode>("split");
+  const [uploading, setUploading] = useState(false);
+
+  // New post
+  const [newSlug, setNewSlug] = useState("");
+  const [showNewPost, setShowNewPost] = useState(isNew);
 
   // Crosspost panel
   const [crosspostOpen, setCrosspostOpen] = useState(false);
-  const [crosspostPlatform, setCrosspostPlatform] = useState<"devto" | "reddit">("reddit");
+  const [crosspostPlatform, setCrosspostPlatform] = useState<
+    "devto" | "reddit"
+  >("reddit");
   const [crosspostStyle, setCrosspostStyle] = useState("community");
   const [crosspostDraft, setCrosspostDraft] = useState("");
   const [crosspostTitle, setCrosspostTitle] = useState("");
@@ -59,37 +98,68 @@ export default function BlogEditorPage() {
   const [generating, setGenerating] = useState(false);
   const [posting, setPosting] = useState(false);
 
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const isDirty = content !== originalContent;
   const selectedPost = posts.find((p) => p.slug === selectedSlug);
+
+  const showMsg = useCallback((msg: string) => {
+    setMessage(msg);
+    setTimeout(() => setMessage(""), 3000);
+  }, []);
 
   const loadPosts = useCallback(async () => {
     try {
       const res = await fetch("/api/admin/posts");
-      if (res.ok) {
-        const data = await res.json();
-        setPosts(data);
-      }
+      if (res.ok) setPosts(await res.json());
     } catch {
-      setMessage("Failed to load posts");
+      showMsg("Failed to load posts");
     }
+  }, [showMsg]);
+
+  const loadPost = useCallback(
+    async (slug: string) => {
+      try {
+        const res = await fetch(`/api/admin/posts/${slug}`);
+        if (res.ok) {
+          const data = await res.json();
+          const md = data.locales[locale] ?? data.locales["ko"] ?? "";
+          setContent(md);
+          setOriginalContent(md);
+        }
+      } catch {
+        showMsg("Failed to load post");
+      }
+    },
+    [locale, showMsg],
+  );
+
+  useEffect(() => {
+    loadPosts();
+  }, [loadPosts]);
+
+  useEffect(() => {
+    if (selectedSlug && !showNewPost) loadPost(selectedSlug);
+  }, [selectedSlug, loadPost, showNewPost]);
+
+  // Pre-select from query param
+  useEffect(() => {
+    if (slugParam && !isNew) setSelectedSlug(slugParam);
+  }, [slugParam, isNew]);
+
+  // Ctrl+S
+  const handleSaveRef = useRef<() => void>(() => {});
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key === "s") {
+        e.preventDefault();
+        handleSaveRef.current();
+      }
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
   }, []);
-
-  const loadPost = useCallback(async (slug: string) => {
-    try {
-      const res = await fetch(`/api/admin/posts/${slug}`);
-      if (res.ok) {
-        const data = await res.json();
-        const md = data.locales[locale] ?? data.locales["ko"] ?? "";
-        setContent(md);
-        setOriginalContent(md);
-      }
-    } catch {
-      setMessage("Failed to load post");
-    }
-  }, [locale]);
-
-  useEffect(() => { loadPosts(); }, [loadPosts]);
-  useEffect(() => { if (selectedSlug) loadPost(selectedSlug); }, [selectedSlug, loadPost]);
 
   const handleSave = async () => {
     if (!selectedSlug || !isDirty) return;
@@ -103,15 +173,86 @@ export default function BlogEditorPage() {
       });
       if (res.ok) {
         setOriginalContent(content);
-        setMessage("Saved");
+        showMsg("Saved");
       } else {
         const data = await res.json();
-        setMessage(`Save failed: ${data.error}`);
+        showMsg(`Save failed: ${data.error}`);
       }
     } catch {
-      setMessage("Save failed");
+      showMsg("Save failed");
     } finally {
       setSaving(false);
+    }
+  };
+  handleSaveRef.current = handleSave;
+
+  const handleCreatePost = async () => {
+    const slug = newSlug.trim().toLowerCase();
+    if (!slug || !/^[a-z0-9][-a-z0-9]*$/.test(slug)) {
+      showMsg("Invalid slug (lowercase, hyphens only)");
+      return;
+    }
+    setSaving(true);
+    try {
+      const template = NEW_POST_TEMPLATE(slug);
+      const res = await fetch(`/api/admin/posts/${slug}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ locale: "ko", content: template }),
+      });
+      if (res.ok) {
+        setContent(template);
+        setOriginalContent(template);
+        setSelectedSlug(slug);
+        setShowNewPost(false);
+        setNewSlug("");
+        await loadPosts();
+        window.history.replaceState(null, "", `?slug=${slug}`);
+        showMsg("Post created");
+      } else {
+        const data = await res.json();
+        showMsg(`Create failed: ${data.error}`);
+      }
+    } catch {
+      showMsg("Create failed");
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !selectedSlug) {
+      showMsg("Select a post first");
+      return;
+    }
+    setUploading(true);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("slug", selectedSlug);
+      const res = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: formData,
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Upload failed");
+      const imgMd = `![${file.name}](${data.path})`;
+      if (textareaRef.current) {
+        const ta = textareaRef.current;
+        const start = ta.selectionStart;
+        const before = content.slice(0, start);
+        const after = content.slice(ta.selectionEnd);
+        setContent(before + imgMd + "\n" + after);
+      } else {
+        setContent(content + "\n" + imgMd + "\n");
+      }
+      showMsg(`Uploaded: ${data.path}`);
+    } catch (err) {
+      showMsg(err instanceof Error ? err.message : "Upload failed");
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = "";
     }
   };
 
@@ -129,13 +270,13 @@ export default function BlogEditorPage() {
       });
       const data = await res.json();
       if (res.ok) {
-        setMessage(`Deployed: ${data.committed?.join(", ")}`);
+        showMsg(`Deployed: ${data.committed?.join(", ")}`);
         setCommitMsg("");
       } else {
-        setMessage(`Deploy failed: ${data.error}`);
+        showMsg(`Deploy failed: ${data.error}`);
       }
     } catch {
-      setMessage("Deploy failed");
+      showMsg("Deploy failed");
     } finally {
       setDeploying(false);
     }
@@ -162,10 +303,10 @@ export default function BlogEditorPage() {
           setCrosspostTitle(selectedPost.title);
         }
       } else {
-        setMessage(`Generate failed: ${data.error}`);
+        showMsg(`Generate failed: ${data.error}`);
       }
     } catch {
-      setMessage("Generate failed");
+      showMsg("Generate failed");
     } finally {
       setGenerating(false);
     }
@@ -173,8 +314,16 @@ export default function BlogEditorPage() {
 
   const handlePost = async () => {
     if (!selectedSlug || !crosspostDraft.trim()) return;
-    const label = crosspostPlatform === "devto" ? "Dev.to" : `Reddit (r/${subreddit})`;
-    if (!confirm(`"${crosspostTitle}" 을(를) ${label}에 발행합니다. 계속하시겠습니까?`)) return;
+    const label =
+      crosspostPlatform === "devto"
+        ? "Dev.to"
+        : `Reddit (r/${subreddit})`;
+    if (
+      !confirm(
+        `"${crosspostTitle}" 을(를) ${label}에 발행합니다. 계속하시겠습니까?`,
+      )
+    )
+      return;
     setPosting(true);
     setMessage("");
     try {
@@ -185,7 +334,6 @@ export default function BlogEditorPage() {
           slug: selectedSlug,
           targets: [crosspostPlatform],
           subreddit,
-          // Pass generated content to override defaults
           overrideTitle: crosspostTitle,
           overrideBody: crosspostDraft,
         }),
@@ -193,18 +341,18 @@ export default function BlogEditorPage() {
       const data = await res.json();
       if (res.ok) {
         if (crosspostPlatform === "devto" && data.devto?.url) {
-          setMessage(`Dev.to published: ${data.devto.url}`);
+          showMsg(`Dev.to published: ${data.devto.url}`);
           window.open(data.devto.url, "_blank");
         }
         if (crosspostPlatform === "reddit" && data.reddit?.submitUrl) {
-          setMessage("Opening Reddit...");
+          showMsg("Opening Reddit...");
           window.open(data.reddit.submitUrl, "_blank");
         }
       } else {
-        setMessage(`Post failed: ${data.error}`);
+        showMsg(`Post failed: ${data.error}`);
       }
     } catch {
-      setMessage("Post failed");
+      showMsg("Post failed");
     } finally {
       setPosting(false);
     }
@@ -217,23 +365,70 @@ export default function BlogEditorPage() {
     if (selectedPost) setCrosspostTitle(selectedPost.title);
   };
 
-  // Extract title from frontmatter for preview
   const previewMarkdown = content.replace(/^---[\s\S]*?---\s*/, "");
 
+  // New post creation UI
+  if (showNewPost) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <div className="w-full max-w-md space-y-4 rounded-lg border border-border/40 bg-card p-6">
+          <h2 className="text-lg font-semibold">New Post</h2>
+          <div className="space-y-2">
+            <label className="text-sm text-muted-foreground">Slug</label>
+            <Input
+              value={newSlug}
+              onChange={(e) => setNewSlug(e.target.value)}
+              placeholder="my-new-post"
+              onKeyDown={(e) => e.key === "Enter" && handleCreatePost()}
+            />
+            <p className="text-xs text-muted-foreground">
+              Lowercase letters, numbers, hyphens only
+            </p>
+          </div>
+          <div className="flex gap-2">
+            <Button onClick={handleCreatePost} disabled={saving}>
+              {saving ? "..." : "Create"}
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setShowNewPost(false);
+                window.history.replaceState(null, "", "?");
+              }}
+            >
+              Cancel
+            </Button>
+          </div>
+          {message && (
+            <p className="text-xs text-destructive">{message}</p>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex h-full flex-col">
       {/* Toolbar */}
       <div className="flex items-center gap-3 border-b border-border/40 px-4 py-2">
         <div className="relative">
           <select
             value={selectedSlug}
-            onChange={(e) => setSelectedSlug(e.target.value)}
+            onChange={(e) => {
+              setSelectedSlug(e.target.value);
+              window.history.replaceState(
+                null,
+                "",
+                e.target.value ? `?slug=${e.target.value}` : "?",
+              );
+            }}
             className="appearance-none rounded-md border border-border/50 bg-background px-3 py-1.5 pr-8 text-sm"
           >
             <option value="">Select post...</option>
             {posts.map((p) => (
               <option key={p.slug} value={p.slug}>
-                {p.draft ? "[DRAFT] " : ""}{p.title}
+                {p.draft ? "[DRAFT] " : ""}
+                {p.title}
               </option>
             ))}
           </select>
@@ -271,6 +466,20 @@ export default function BlogEditorPage() {
           </button>
         </div>
 
+        {selectedSlug && (
+          <label className="flex cursor-pointer items-center gap-1 rounded-md border border-border/50 px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground">
+            <ImagePlus className="h-3.5 w-3.5" />
+            {uploading ? "..." : "Image"}
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="image/*"
+              onChange={handleImageUpload}
+              className="hidden"
+            />
+          </label>
+        )}
+
         <div className="flex-1" />
 
         {isDirty && (
@@ -279,7 +488,12 @@ export default function BlogEditorPage() {
           </Badge>
         )}
 
-        <Button size="sm" variant="outline" onClick={handleSave} disabled={saving || !isDirty}>
+        <Button
+          size="sm"
+          variant="outline"
+          onClick={handleSave}
+          disabled={saving || !isDirty}
+        >
           <Save className="mr-1.5 h-3.5 w-3.5" />
           {saving ? "..." : "Save"}
         </Button>
@@ -288,8 +502,11 @@ export default function BlogEditorPage() {
       {/* Editor + Preview */}
       <div className="flex flex-1 overflow-hidden">
         {viewMode !== "preview" && (
-          <div className={`flex flex-col ${viewMode === "split" ? "w-1/2 border-r border-border/40" : "w-full"}`}>
+          <div
+            className={`flex flex-col ${viewMode === "split" ? "w-1/2 border-r border-border/40" : "w-full"}`}
+          >
             <textarea
+              ref={textareaRef}
               value={content}
               onChange={(e) => setContent(e.target.value)}
               className="flex-1 resize-none bg-background p-4 font-mono text-sm text-foreground focus:outline-none"
@@ -300,7 +517,9 @@ export default function BlogEditorPage() {
         )}
 
         {viewMode !== "edit" && (
-          <div className={`overflow-y-auto ${viewMode === "split" ? "w-1/2" : "w-full"}`}>
+          <div
+            className={`overflow-y-auto ${viewMode === "split" ? "w-1/2" : "w-full"}`}
+          >
             <div className="mx-auto max-w-3xl px-4 py-6">
               {selectedPost && (
                 <header className="mb-6">
@@ -308,7 +527,11 @@ export default function BlogEditorPage() {
                   {selectedPost.tags.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-1">
                       {selectedPost.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="text-xs">
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="text-xs"
+                        >
                           {tag}
                         </Badge>
                       ))}
@@ -332,25 +555,39 @@ export default function BlogEditorPage() {
               placeholder={`blog: update ${selectedSlug}`}
               className="max-w-sm text-sm"
             />
-            <Button size="sm" onClick={handleDeploy} disabled={deploying || isDirty}>
+            <Button
+              size="sm"
+              onClick={handleDeploy}
+              disabled={deploying || isDirty}
+            >
               <Rocket className="mr-1.5 h-3.5 w-3.5" />
               {deploying ? "..." : "Deploy"}
             </Button>
 
             <div className="mx-2 h-6 w-px bg-border/40" />
 
-            <Button size="sm" variant="outline" onClick={() => openCrosspost("devto")}>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => openCrosspost("devto")}
+            >
               <Send className="mr-1.5 h-3.5 w-3.5" />
               Dev.to
             </Button>
-            <Button size="sm" variant="outline" onClick={() => openCrosspost("reddit")}>
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => openCrosspost("reddit")}
+            >
               <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
               Reddit
             </Button>
 
             <div className="flex-1" />
             {message && (
-              <span className="text-xs text-muted-foreground truncate max-w-md">{message}</span>
+              <span className="max-w-md truncate text-xs text-muted-foreground">
+                {message}
+              </span>
             )}
           </div>
         </div>
@@ -359,7 +596,6 @@ export default function BlogEditorPage() {
       {/* Crosspost panel */}
       {selectedSlug && crosspostOpen && (
         <div className="border-t border-border/40 bg-muted/30">
-          {/* Panel header */}
           <div className="flex items-center gap-3 border-b border-border/20 px-4 py-2">
             <span className="text-sm font-medium">
               {crosspostPlatform === "devto" ? "Dev.to" : "Reddit"} Crosspost
@@ -371,7 +607,9 @@ export default function BlogEditorPage() {
               className="rounded-md border border-border/50 bg-background px-2 py-1 text-xs"
             >
               {STYLES.map((s) => (
-                <option key={s.id} value={s.id}>{s.label}</option>
+                <option key={s.id} value={s.id}>
+                  {s.label}
+                </option>
               ))}
             </select>
 
@@ -380,7 +618,7 @@ export default function BlogEditorPage() {
                 value={subreddit}
                 onChange={(e) => setSubreddit(e.target.value)}
                 placeholder="subreddit"
-                className="w-32 text-xs h-7"
+                className="h-7 w-32 text-xs"
               />
             )}
 
@@ -398,7 +636,9 @@ export default function BlogEditorPage() {
             <div className="flex-1" />
 
             {message && (
-              <span className="text-xs text-muted-foreground truncate max-w-xs">{message}</span>
+              <span className="max-w-xs truncate text-xs text-muted-foreground">
+                {message}
+              </span>
             )}
 
             <Button
@@ -410,19 +650,21 @@ export default function BlogEditorPage() {
               {posting ? "..." : "Post"}
             </Button>
 
-            <button onClick={() => setCrosspostOpen(false)} className="text-muted-foreground hover:text-foreground">
+            <button
+              onClick={() => setCrosspostOpen(false)}
+              className="text-muted-foreground hover:text-foreground"
+            >
               <X className="h-4 w-4" />
             </button>
           </div>
 
-          {/* Title + Body */}
-          <div className="flex gap-0 h-48">
-            <div className="flex flex-col flex-1 border-r border-border/20">
+          <div className="flex h-48 gap-0">
+            <div className="flex flex-1 flex-col border-r border-border/20">
               <Input
                 value={crosspostTitle}
                 onChange={(e) => setCrosspostTitle(e.target.value)}
                 placeholder="Title"
-                className="rounded-none border-0 border-b border-border/20 text-sm font-medium h-8"
+                className="h-8 rounded-none border-0 border-b border-border/20 text-sm font-medium"
               />
               <textarea
                 value={crosspostDraft}
@@ -431,8 +673,7 @@ export default function BlogEditorPage() {
                 placeholder="Click Generate to create a draft..."
               />
             </div>
-            {/* Preview */}
-            <div className="w-1/2 overflow-y-auto p-3 text-xs text-muted-foreground whitespace-pre-wrap">
+            <div className="w-1/2 overflow-y-auto whitespace-pre-wrap p-3 text-xs text-muted-foreground">
               {crosspostDraft || "Preview will appear here..."}
             </div>
           </div>

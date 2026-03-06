@@ -396,6 +396,7 @@ const bn: Dictionary = {
     "placeholder": "একটি মন্তব্য লিখুন...",
     "guestName": "নাম",
     "guestNamePlaceholder": "আপনার নাম লিখুন",
+    "emailPlaceholder": "ইমেইল (ঐচ্ছিক, উত্তর বিজ্ঞপ্তির জন্য)",
     "submit": "পোস্ট করুন",
     "reply": "উত্তর দিন",
     "delete": "মুছুন",

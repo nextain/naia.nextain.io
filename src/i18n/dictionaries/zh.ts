@@ -396,6 +396,7 @@ const zh: Dictionary = {
     "placeholder": "写下你的评论...",
     "guestName": "姓名",
     "guestNamePlaceholder": "请输入你的姓名",
+    "emailPlaceholder": "邮箱（可选，用于回复通知）",
     "submit": "发表",
     "reply": "回复",
     "delete": "删除",

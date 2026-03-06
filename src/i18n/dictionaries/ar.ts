@@ -396,6 +396,7 @@ const ar: Dictionary = {
     "placeholder": "اكتب تعليقًا...",
     "guestName": "الاسم",
     "guestNamePlaceholder": "أدخل اسمك",
+    "emailPlaceholder": "البريد الإلكتروني (اختياري، لإشعارات الردود)",
     "submit": "نشر",
     "reply": "رد",
     "delete": "حذف",

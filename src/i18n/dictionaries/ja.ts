@@ -396,6 +396,7 @@ const ja: Dictionary = {
     "placeholder": "コメントを書く...",
     "guestName": "名前",
     "guestNamePlaceholder": "名前を入力してください",
+    "emailPlaceholder": "メール（任意、返信通知用）",
     "submit": "投稿",
     "reply": "返信",
     "delete": "削除",

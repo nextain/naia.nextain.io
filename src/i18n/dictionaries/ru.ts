@@ -396,6 +396,7 @@ const ru: Dictionary = {
     "placeholder": "Написать комментарий...",
     "guestName": "Имя",
     "guestNamePlaceholder": "Введите ваше имя",
+    "emailPlaceholder": "Эл. почта (необязательно, для уведомлений об ответах)",
     "submit": "Отправить",
     "reply": "Ответить",
     "delete": "Удалить",

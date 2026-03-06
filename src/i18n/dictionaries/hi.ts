@@ -396,6 +396,7 @@ const hi: Dictionary = {
     "placeholder": "टिप्पणी लिखें...",
     "guestName": "नाम",
     "guestNamePlaceholder": "अपना नाम दर्ज करें",
+    "emailPlaceholder": "ईमेल (वैकल्पिक, उत्तर सूचनाओं के लिए)",
     "submit": "पोस्ट करें",
     "reply": "जवाब दें",
     "delete": "हटाएँ",

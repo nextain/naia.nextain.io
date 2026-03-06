@@ -396,6 +396,7 @@ const vi: Dictionary = {
     "placeholder": "Viết bình luận...",
     "guestName": "Tên",
     "guestNamePlaceholder": "Nhập tên của bạn",
+    "emailPlaceholder": "Email (tùy chọn, để nhận thông báo trả lời)",
     "submit": "Đăng",
     "reply": "Trả lời",
     "delete": "Xóa",
