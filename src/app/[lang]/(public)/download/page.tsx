@@ -90,9 +90,11 @@ export default async function DownloadPage({
             <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
             {d.naiaOs.note}
           </p>
-          <Button className="w-full" disabled>
-            <Download className="mr-2 h-4 w-4" />
-            {d.naiaOs.cta} — {dict.common.comingSoon}
+          <Button className="w-full" asChild>
+            <Link href={DOWNLOAD_URLS.iso} target="_blank" rel="noreferrer">
+              <Download className="mr-2 h-4 w-4" />
+              {d.naiaOs.cta} (~7.2 GB)
+            </Link>
           </Button>
         </CardContent>
       </Card>
