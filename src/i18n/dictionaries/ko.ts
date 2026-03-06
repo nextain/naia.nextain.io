@@ -325,7 +325,10 @@ const ko: Dictionary = {
     backToToc: "목차로 돌아가기",
     sections: {
       videoManual: "동영상 매뉴얼",
-      install: "설치 및 배포",
+      liveUsb: "Naia OS 라이브 USB",
+      install: "설치",
+      installIso: "Naia OS 설치 (ISO)",
+      installApp: "리눅스 앱 설치",
       gettingStarted: "시작하기",
       mainScreen: "메인 화면",
       chat: "채팅",

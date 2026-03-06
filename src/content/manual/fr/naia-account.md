@@ -1,3 +1,14 @@
+Avec un seul compte Naia, accédez instantanément à plusieurs services d'IA. Pas besoin de s'inscrire auprès de chaque fournisseur ni de gérer des clés API séparées.
+
+## Ce que le compte Naia offre
+
+- **Plusieurs fournisseurs LLM** — Passez librement entre Google Gemini, Anthropic Claude, OpenAI GPT, xAI Grok et plus — le tout via un seul compte.
+- **Conversation vocale en direct** — Parlez dans votre micro et Naia répond en temps réel par la voix. Les mouvements des lèvres de l'avatar 3D se synchronisent naturellement avec la conversation.
+- **Conversation multi-tours** — Naia se souvient du contexte des messages précédents, permettant un dialogue naturel.
+- **Sauvegarde et synchronisation des paramètres** — Sauvegardez vos paramètres de compétences, historique de conversation et plus sur votre compte Naia, et synchronisez sur plusieurs appareils.
+
+> Un seul solde de crédits couvre tous les services. Vous ne payez que ce que vous utilisez.
+
 Gérez votre compte sur [naia.nextain.io](https://naia.nextain.io).
 
 ## Tableau de bord

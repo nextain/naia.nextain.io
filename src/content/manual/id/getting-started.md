@@ -8,9 +8,11 @@ Cara termudah — gratis dan tidak memerlukan API Key.
 
 1. Klik tombol **Naia** di layar orientasi
 2. Peramban akan membuka halaman masuk naia.nextain.io
-3. Masuk dengan **akun Google** Anda (pendaftaran otomatis)
+3. Masuk dengan akun **Google** atau **Discord** Anda (pendaftaran otomatis)
 4. Anda akan secara otomatis dialihkan kembali ke aplikasi desktop
 5. Anda menerima **500 kredit gratis** saat mendaftar
+
+Dengan satu akun Naia, Anda mendapat akses ke berbagai penyedia LLM, percakapan suara langsung, dialog multi-giliran, cadangan pengaturan, dan lainnya. Detail di **[16. Akun Naia](/id/manual/naia-account)**.
 
 ## Mulai dengan API Key
 

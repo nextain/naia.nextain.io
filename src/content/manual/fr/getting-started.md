@@ -8,9 +8,11 @@ La façon la plus simple — gratuite et sans API Key nécessaire.
 
 1. Cliquez sur le bouton **Naia** sur l'écran d'intégration
 2. Un navigateur s'ouvre sur la page de connexion naia.nextain.io
-3. Connectez-vous avec votre **compte Google** (l'inscription est automatique)
+3. Connectez-vous avec votre compte **Google** ou **Discord** (l'inscription est automatique)
 4. Vous serez automatiquement redirigé vers l'application de bureau
 5. Vous recevez **500 crédits gratuits** lors de l'inscription
+
+Avec un seul compte Naia, accédez à plusieurs fournisseurs LLM, conversation vocale en direct, dialogue multi-tours, sauvegarde des paramètres et plus. Détails : **[16. Compte Naia](/fr/manual/naia-account)**.
 
 ## Commencer avec l'API Key
 

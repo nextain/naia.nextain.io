@@ -313,7 +313,10 @@ const ar: Dictionary = {
     "backToToc": "العودة إلى جدول المحتويات",
     "sections": {
       "videoManual": "دليل الفيديو",
+      "liveUsb": "Naia OS Live USB",
       "install": "التثبيت والنشر",
+      "installIso": "تثبيت Naia OS (ISO)",
+      "installApp": "تثبيت التطبيق",
       "gettingStarted": "البدء",
       "mainScreen": "الشاشة الرئيسية",
       "chat": "الدردشة",

@@ -8,9 +8,11 @@ The easiest way — free and no API key needed.
 
 1. Click the **Naia** button on the onboarding screen
 2. A browser opens to the naia.nextain.io login page
-3. Sign in with your **Google account** (registration is automatic)
+3. Sign in with your **Google** or **Discord account** (registration is automatic)
 4. You'll be automatically redirected back to the desktop app
 5. You receive **500 free credits** on sign-up
+
+With a single Naia account, you get access to multiple LLM providers, live voice conversation, multi-turn dialogue, settings backup & sync, and more. See **[16. Naia Account](/en/manual/naia-account)** for details.
 
 ## Start with API Key
 
@@ -67,14 +69,16 @@ Pick from 4 presets:
 | Calm Scholar | Intellectual, composed tone |
 
 
-### 5. Choose Speech Style
+### 5. Choose Speech Style (Korean only)
+
+> This step only appears when the app language is set to Korean. Other languages skip this step automatically.
 
 Pick how your AI speaks:
 
 | Style | Description |
 |-------|-------------|
-| Casual | Like a friend |
-| Formal | Polite and respectful |
+| Casual (반말) | Like a friend |
+| Formal (존댓말) | Polite and respectful |
 
 ### 6. Complete
 

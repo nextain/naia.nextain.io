@@ -4,6 +4,7 @@ import type { Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import {
   MANUAL_SLUGS,
+  SLUG_NUMBER,
   SLUG_TO_SECTION_KEY,
   isManualSlug,
   readManual,
@@ -45,10 +46,10 @@ export default async function ManualSectionPage({
       : null;
 
   const prevLabel = prevSlug
-    ? sections[SLUG_TO_SECTION_KEY[prevSlug]]
+    ? `${SLUG_NUMBER[prevSlug]}. ${sections[SLUG_TO_SECTION_KEY[prevSlug]]}`
     : null;
   const nextLabel = nextSlug
-    ? sections[SLUG_TO_SECTION_KEY[nextSlug]]
+    ? `${SLUG_NUMBER[nextSlug]}. ${sections[SLUG_TO_SECTION_KEY[nextSlug]]}`
     : null;
 
   return (
@@ -58,22 +59,28 @@ export default async function ManualSectionPage({
           <div className="rounded-xl border border-border/50 bg-background p-4">
             <p className="mb-3 text-sm font-semibold">{dict.manual.toc}</p>
             <nav>
-              <ol className="space-y-1.5">
-                {MANUAL_SLUGS.map((itemSlug, i) => {
+              <ol className="space-y-1">
+                {MANUAL_SLUGS.map((itemSlug) => {
                   const itemLabel = sections[SLUG_TO_SECTION_KEY[itemSlug]] ?? itemSlug;
                   const isActive = itemSlug === slug;
+                  const num = SLUG_NUMBER[itemSlug];
+                  const isChild = num.includes(".");
                   return (
                     <li key={itemSlug}>
                       <Link
                         href={`/${lang}/manual/${itemSlug}`}
-                        className={`flex items-center gap-2 rounded-md px-2.5 py-2 text-sm transition-colors ${
+                        className={`flex items-center gap-2 rounded-md py-1.5 text-sm transition-colors ${
+                          isChild ? "pl-7 pr-2.5" : "px-2.5"
+                        } ${
                           isActive
                             ? "bg-primary/10 font-medium text-primary"
                             : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
                         }`}
                       >
-                        <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-border/60 text-xs">
-                          {i + 1}
+                        <span className={`inline-flex items-center justify-center rounded-full border border-border/60 text-xs ${
+                          isChild ? "h-5 min-w-[1.75rem] px-1" : "h-5 w-5"
+                        }`}>
+                          {num}
                         </span>
                         <span>{itemLabel}</span>
                       </Link>
@@ -88,22 +95,28 @@ export default async function ManualSectionPage({
         <section className="min-w-0">
           <details className="mb-6 rounded-xl border border-border/50 bg-background p-4 lg:hidden">
             <summary className="cursor-pointer text-sm font-semibold">{dict.manual.toc}</summary>
-            <ol className="mt-3 space-y-1.5">
-              {MANUAL_SLUGS.map((itemSlug, i) => {
+            <ol className="mt-3 space-y-1">
+              {MANUAL_SLUGS.map((itemSlug) => {
                 const itemLabel = sections[SLUG_TO_SECTION_KEY[itemSlug]] ?? itemSlug;
                 const isActive = itemSlug === slug;
+                const num = SLUG_NUMBER[itemSlug];
+                const isChild = num.includes(".");
                 return (
                   <li key={`mobile-${itemSlug}`}>
                     <Link
                       href={`/${lang}/manual/${itemSlug}`}
-                      className={`flex items-center gap-2 rounded-md px-2.5 py-2 text-sm transition-colors ${
+                      className={`flex items-center gap-2 rounded-md py-1.5 text-sm transition-colors ${
+                        isChild ? "pl-7 pr-2.5" : "px-2.5"
+                      } ${
                         isActive
                           ? "bg-primary/10 font-medium text-primary"
                           : "text-muted-foreground hover:bg-muted/50 hover:text-foreground"
                       }`}
                     >
-                      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-border/60 text-xs">
-                        {i + 1}
+                      <span className={`inline-flex items-center justify-center rounded-full border border-border/60 text-xs ${
+                        isChild ? "h-5 min-w-[1.75rem] px-1" : "h-5 w-5"
+                      }`}>
+                        {num}
                       </span>
                       <span>{itemLabel}</span>
                     </Link>
@@ -122,7 +135,7 @@ export default async function ManualSectionPage({
             </Link>
           </div>
 
-          <h1 className="text-3xl font-bold">{sectionTitle}</h1>
+          <h1 className="text-3xl font-bold">{SLUG_NUMBER[slug as ManualSlug]}. {sectionTitle}</h1>
 
           <ManualMarkdown markdown={markdown} lang={lang} />
 

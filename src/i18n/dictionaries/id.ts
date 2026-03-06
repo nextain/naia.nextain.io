@@ -313,7 +313,10 @@ const id: Dictionary = {
     "backToToc": "Kembali ke Daftar Isi",
     "sections": {
       "videoManual": "Manual Video",
+      "liveUsb": "Naia OS Live USB",
       "install": "Instalasi & Penerapan",
+      "installIso": "Instalasi Naia OS (ISO)",
+      "installApp": "Instalasi Aplikasi",
       "gettingStarted": "Memulai",
       "mainScreen": "Layar Utama",
       "chat": "Obrolan",

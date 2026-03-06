@@ -313,7 +313,10 @@ const ja: Dictionary = {
     "backToToc": "目次に戻る",
     "sections": {
       "videoManual": "動画マニュアル",
+      "liveUsb": "Naia OS Live USB",
       "install": "インストールと展開",
+      "installIso": "Naia OS インストール (ISO)",
+      "installApp": "アプリインストール",
       "gettingStarted": "はじめに",
       "mainScreen": "メイン画面",
       "chat": "チャット",

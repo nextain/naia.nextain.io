@@ -8,9 +8,11 @@ Der einfachste Weg – kostenlos und kein API Key erforderlich.
 
 1.  Klicken Sie auf die Schaltfläche **Naia** auf dem Onboarding-Bildschirm
 2.  Ein Browser öffnet sich zur Login-Seite naia.nextain.io
-3.  Melden Sie sich mit Ihrem **Google account** an (die Registrierung erfolgt automatisch)
+3.  Melden Sie sich mit Ihrem **Google-** oder **Discord-Konto** an (die Registrierung erfolgt automatisch)
 4.  Sie werden automatisch zurück zur Desktop-App weitergeleitet
 5.  Sie erhalten **500 kostenlose Credits** bei der Anmeldung
+
+Mit einem Naia-Konto erhalten Sie Zugang zu mehreren LLM-Anbietern, Live-Sprachkonversation, Multi-Turn-Dialog, Einstellungssicherung und mehr. Details unter **[16. Naia-Konto](/de/manual/naia-account)**.
 
 ## Mit API Key starten
 

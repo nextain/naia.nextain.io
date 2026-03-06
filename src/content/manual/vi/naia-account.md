@@ -1,3 +1,14 @@
+Với một tài khoản Naia, bạn có thể truy cập ngay nhiều dịch vụ AI. Không cần đăng ký từng nhà cung cấp hay quản lý khóa API riêng.
+
+## Tài khoản Naia cung cấp gì
+
+- **Nhiều nhà cung cấp LLM** — Chuyển đổi tự do giữa Google Gemini, Anthropic Claude, OpenAI GPT, xAI Grok và nhiều hơn — tất cả qua một tài khoản.
+- **Hội thoại giọng nói trực tiếp** — Nói vào mic và Naia trả lời bằng giọng nói theo thời gian thực. Cử động môi của avatar 3D đồng bộ tự nhiên với cuộc trò chuyện.
+- **Hội thoại đa lượt** — Naia nhớ ngữ cảnh các tin nhắn trước, cho phép đối thoại tự nhiên.
+- **Sao lưu & đồng bộ cài đặt** — Sao lưu cài đặt kỹ năng, lịch sử hội thoại và nhiều hơn vào tài khoản Naia, đồng bộ trên nhiều thiết bị.
+
+> Một số dư tín dụng bao gồm tất cả dịch vụ. Bạn chỉ trả cho những gì sử dụng.
+
 Quản lý tài khoản của bạn tại [naia.nextain.io](https://naia.nextain.io).
 
 ## Bảng điều khiển

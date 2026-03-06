@@ -1,3 +1,14 @@
+Dengan satu akun Naia, Anda langsung mendapat akses ke berbagai layanan AI. Tidak perlu mendaftar di setiap penyedia atau mengelola kunci API terpisah.
+
+## Yang Disediakan Akun Naia
+
+- **Berbagai Penyedia LLM** — Beralih bebas antara Google Gemini, Anthropic Claude, OpenAI GPT, xAI Grok, dan lainnya — semua melalui satu akun.
+- **Percakapan Suara Langsung** — Bicara ke mikrofon dan Naia merespons secara real time dengan suara. Gerakan bibir avatar 3D tersinkronisasi secara alami dengan percakapan.
+- **Percakapan Multi-giliran** — Naia mengingat konteks pesan sebelumnya, memungkinkan dialog yang alami.
+- **Cadangan & Sinkronisasi Pengaturan** — Cadangkan pengaturan skill, riwayat percakapan, dan lainnya ke akun Naia Anda, dan sinkronkan di beberapa perangkat.
+
+> Satu saldo kredit mencakup semua layanan. Anda hanya membayar sesuai penggunaan.
+
 Kelola akun Anda di [naia.nextain.io](https://naia.nextain.io).
 
 ## Dasbor

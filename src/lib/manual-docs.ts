@@ -5,7 +5,10 @@ import type { Locale } from "@/i18n/config";
 
 export const MANUAL_SLUGS = [
   "video-manual",
+  "live-usb",
   "install",
+  "install-iso",
+  "install-app",
   "getting-started",
   "main-screen",
   "chat",
@@ -56,10 +59,36 @@ export async function readManual(
   return readFile(fullPath, "utf-8");
 }
 
+/** Slug → hierarchical display number (e.g. "2.1") */
+export const SLUG_NUMBER: Record<ManualSlug, string> = {
+  "video-manual": "1",
+  "live-usb": "2",
+  install: "3",
+  "install-iso": "3.1",
+  "install-app": "3.2",
+  "getting-started": "4",
+  "main-screen": "5",
+  chat: "6",
+  history: "7",
+  progress: "8",
+  skills: "9",
+  channels: "10",
+  agents: "11",
+  diagnostics: "12",
+  settings: "13",
+  tools: "14",
+  "naia-account": "15",
+  troubleshooting: "16",
+  "open-source": "17",
+};
+
 /** Slug → i18n section key mapping */
 export const SLUG_TO_SECTION_KEY: Record<ManualSlug, string> = {
   "video-manual": "videoManual",
+  "live-usb": "liveUsb",
   install: "install",
+  "install-iso": "installIso",
+  "install-app": "installApp",
   "getting-started": "gettingStarted",
   "main-screen": "mainScreen",
   chat: "chat",

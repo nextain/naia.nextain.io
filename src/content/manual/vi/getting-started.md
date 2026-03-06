@@ -8,9 +8,11 @@ Cách dễ nhất — miễn phí và không cần API key.
 
 1. Nhấp vào nút **Naia** trên màn hình chào mừng
 2. Trình duyệt sẽ mở trang đăng nhập naia.nextain.io
-3. Đăng nhập bằng **tài khoản Google** của bạn (đăng ký tự động)
+3. Đăng nhập bằng tài khoản **Google** hoặc **Discord** của bạn (đăng ký tự động)
 4. Bạn sẽ tự động được chuyển hướng trở lại ứng dụng máy tính để bàn
 5. Bạn nhận được **500 tín chỉ miễn phí** khi đăng ký
+
+Với một tài khoản Naia, bạn có thể truy cập nhiều nhà cung cấp LLM, hội thoại giọng nói trực tiếp, đối thoại đa lượt, sao lưu cài đặt và nhiều hơn. Chi tiết tại **[16. Tài khoản Naia](/vi/manual/naia-account)**.
 
 ## Bắt đầu với API Key
 

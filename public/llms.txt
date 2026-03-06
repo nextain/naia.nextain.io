@@ -12,7 +12,9 @@ Naia is a desktop application (and a standalone Linux OS) that rides on the Open
 - **3D AI Avatar**: A fully animated VRM 3D avatar with emotions and lip-sync that lives on your desktop and reacts to conversations.
 - **7 LLM Providers**: Gemini, Claude, GPT, Grok, xAI, Ollama, Claude Code CLI — switch freely using credits or your own API keys.
 - **70+ Skills Ecosystem**: 7 built-in + 63 custom skills — weather, GitHub, Slack, Notion, Spotify, Discord, and more. Plus 5,700+ ClawHub community skills.
-- **Voice Conversations**: Ask via voice, get spoken responses. The AI avatar answers naturally with lip-synced animations. 5 TTS providers + STT.
+- **Live Voice Conversations**: Real-time voice dialogue — speak into the mic and the AI avatar responds instantly with lip-synced animations. 5 TTS providers + STT.
+- **Multi-turn Conversation**: Naia remembers the context of previous messages for natural back-and-forth dialogue.
+- **Settings Backup & Sync**: Back up skill settings, conversation history, and preferences to your Naia account and sync across devices.
 - **Tool Execution**: File editing, terminal commands, web search. The AI avatar calls tools directly to get work done.
 - **Discord DM Integration**: Chat with your AI avatar via Discord DM, anytime, anywhere. A personal bot that only talks to you.
 - **One-Click Install & OS**: One-click desktop app install, or build a dedicated AI environment with the Linux OS image. Flatpak, AppImage, DEB, RPM supported.
@@ -50,7 +52,7 @@ The homepage and portal (this site) provides:
 - `/{locale}` — Homepage (features, comparison, pricing, FAQ)
 - `/{locale}/download` — Download desktop app
 - `/{locale}/manual` — User manual
-- `/{locale}/manual/{slug}` — Manual details (`install`, `getting-started`, `main-screen`, `chat`, `history`, `progress`, `skills`, `channels`, `agents`, `diagnostics`, `settings`, `tools`, `naia-account`, `troubleshooting`)
+- `/{locale}/manual/{slug}` — Manual details (`video-manual`, `live-usb`, `install`, `install-iso`, `install-app`, `getting-started`, `main-screen`, `chat`, `history`, `progress`, `skills`, `channels`, `agents`, `diagnostics`, `settings`, `tools`, `naia-account`, `troubleshooting`, `open-source`)
 - `/{locale}/terms` — Terms of Service
 - `/{locale}/privacy` — Privacy Policy
 - `/{locale}/refund` — Refund Policy

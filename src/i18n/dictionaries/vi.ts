@@ -313,7 +313,10 @@ const vi: Dictionary = {
     "backToToc": "Quay lại Mục lục",
     "sections": {
       "videoManual": "Hướng dẫn video",
+      "liveUsb": "Naia OS Live USB",
       "install": "Cài đặt & Triển khai",
+      "installIso": "Cài đặt Naia OS (ISO)",
+      "installApp": "Cài đặt ứng dụng",
       "gettingStarted": "Bắt đầu",
       "mainScreen": "Màn hình chính",
       "chat": "Trò chuyện",

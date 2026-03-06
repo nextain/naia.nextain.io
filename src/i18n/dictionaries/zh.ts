@@ -313,7 +313,10 @@ const zh: Dictionary = {
     "backToToc": "返回目录",
     "sections": {
       "videoManual": "视频手册",
+      "liveUsb": "Naia OS Live USB",
       "install": "安装部署",
+      "installIso": "Naia OS 安装 (ISO)",
+      "installApp": "应用安装",
       "gettingStarted": "开始使用",
       "mainScreen": "主屏幕",
       "chat": "聊天",

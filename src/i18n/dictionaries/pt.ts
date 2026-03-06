@@ -313,7 +313,10 @@ const pt: Dictionary = {
     "backToToc": "Voltar ao índice",
     "sections": {
       "videoManual": "Manual em vídeo",
+      "liveUsb": "Naia OS Live USB",
       "install": "Instalação e implantação",
+      "installIso": "Instalação do Naia OS (ISO)",
+      "installApp": "Instalação do app",
       "gettingStarted": "Primeiros passos",
       "mainScreen": "Tela principal",
       "chat": "Bate-papo",

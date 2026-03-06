@@ -267,7 +267,10 @@ export interface Dictionary {
     backToToc: string;
     sections: {
       videoManual: string;
+      liveUsb: string;
       install: string;
+      installIso: string;
+      installApp: string;
       gettingStarted: string;
       mainScreen: string;
       chat: string;

@@ -313,7 +313,10 @@ const hi: Dictionary = {
     "backToToc": "विषय-सूची पर वापस जाएँ",
     "sections": {
       "videoManual": "वीडियो मैनुअल",
+      "liveUsb": "Naia OS Live USB",
       "install": "स्थापना एवं परिनियोजन",
+      "installIso": "Naia OS स्थापना (ISO)",
+      "installApp": "ऐप स्थापना",
       "gettingStarted": "आरंभ करना",
       "mainScreen": "मुख्य स्क्रीन",
       "chat": "बातचीत",
