@@ -339,7 +339,6 @@ const vi: Dictionary = {
     "requirements": "Yêu cầu hệ thống",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland hoặc X11",
       "Node.js 22+ (cho AppImage/deb/rpm)",
     ],
     "verificationNotice": "Các bản tải xuống sẽ được kích hoạt lần lượt khi mỗi bản dựng vượt qua kiểm tra.",

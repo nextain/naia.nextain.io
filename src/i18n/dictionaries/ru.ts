@@ -339,7 +339,6 @@ const ru: Dictionary = {
     "requirements": "Системные требования",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland или X11",
       "Node.js 22+ (для AppImage/deb/rpm)",
     ],
     "verificationNotice": "Загрузки будут открываться по мере прохождения проверки каждой сборки.",

@@ -339,7 +339,6 @@ const de: Dictionary = {
     "requirements": "Systemanforderungen",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland oder X11",
       "Node.js 22+ (für AppImage/deb/rpm)",
     ],
     "verificationNotice": "Downloads werden nach Abschluss der jeweiligen Build-Überprüfung nacheinander freigeschaltet.",

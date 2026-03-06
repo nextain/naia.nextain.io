@@ -339,7 +339,6 @@ const hi: Dictionary = {
     "requirements": "सिस्टम आवश्यकताएँ",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland या X11",
       "Node.js 22+ (AppImage/deb/rpm के लिए)",
     ],
     "verificationNotice": "प्रत्येक बिल्ड की जांच पूरी होने पर डाउनलोड एक-एक करके सक्षम किए जाएंगे।",

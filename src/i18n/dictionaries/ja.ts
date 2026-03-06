@@ -339,7 +339,6 @@ const ja: Dictionary = {
     "requirements": "システム要件",
     "requirementsList": [
       "Linux x86_64",
-      "WaylandまたはX11",
       "Node.js 22+（AppImage/deb/rpm用）",
     ],
     "verificationNotice": "各ビルドの検証が完了次第、順次ダウンロードが有効になります。",

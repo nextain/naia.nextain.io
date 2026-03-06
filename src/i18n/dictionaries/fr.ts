@@ -339,7 +339,6 @@ const fr: Dictionary = {
     "requirements": "Configuration requise",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland ou X11",
       "Node.js 22+ (pour AppImage/deb/rpm)",
     ],
     "verificationNotice": "Les téléchargements seront activés progressivement après vérification de chaque build.",

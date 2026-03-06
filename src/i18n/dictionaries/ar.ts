@@ -339,7 +339,6 @@ const ar: Dictionary = {
     "requirements": "متطلبات النظام",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland أو X11",
       "Node.js 22+ (لـ AppImage/deb/rpm)",
     ],
     "verificationNotice": "سيتم تفعيل التنزيلات تدريجياً بعد التحقق من كل إصدار.",

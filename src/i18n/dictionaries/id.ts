@@ -339,7 +339,6 @@ const id: Dictionary = {
     "requirements": "Persyaratan Sistem",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland atau X11",
       "Node.js 22+ (untuk AppImage/deb/rpm)",
     ],
     "verificationNotice": "Unduhan akan diaktifkan satu per satu setelah setiap build melewati verifikasi.",

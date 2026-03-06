@@ -339,7 +339,6 @@ const zh: Dictionary = {
     "requirements": "系统要求",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland 或 X11",
       "Node.js 22+（适用于 AppImage/deb/rpm）",
     ],
     "verificationNotice": "各版本通过验证后将依次开放下载。",

@@ -351,7 +351,6 @@ const ko: Dictionary = {
     requirements: "시스템 요구 사항",
     requirementsList: [
       "Linux x86_64",
-      "Wayland 또는 X11",
       "Node.js 22+ (AppImage/deb/rpm 사용 시)",
     ],
     verificationNotice: "각 빌드 검증이 완료되는 대로 순차적으로 다운로드가 오픈됩니다.",

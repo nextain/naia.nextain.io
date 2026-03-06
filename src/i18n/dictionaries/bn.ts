@@ -339,7 +339,6 @@ const bn: Dictionary = {
     "requirements": "সিস্টেম প্রয়োজনীয়তা",
     "requirementsList": [
       "Linux x86_64",
-      "Wayland অথবা X11",
       "Node.js 22+ (AppImage/deb/rpm এর জন্য)",
     ],
     "verificationNotice": "প্রতিটি বিল্ড যাচাই সম্পন্ন হওয়ার সাথে সাথে ডাউনলোড ক্রমান্বয়ে সক্রিয় করা হবে।",
