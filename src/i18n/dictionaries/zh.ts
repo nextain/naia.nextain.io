@@ -411,7 +411,7 @@ const zh: Dictionary = {
     "title": "AI 原生开源 — 参与 Naia",
     "subtitle": "与 AI 一起构建的开源项目。克隆仓库，让 AI 指引你，用你的语言贡献。",
     "cloneTitle": "克隆并询问 AI",
-    "cloneDescription": "无需阅读文档，无需询问任何人。Claude Code、Cursor、Windsurf、Gemini Code Assist 等 AI 编码工具读取项目上下文——用你的语言，和你的 AI 一起贡献。",
+    "cloneDescription": "无需阅读文档，无需询问任何人。Claude Code、Cursor、Windsurf、OpenCode、Gemini Code Assist 等 AI 编码工具读取项目上下文——用你的语言，和你的 AI 一起贡献。",
     "cloneAsk": "用你的语言询问：'这个项目是什么，我能帮什么忙？' '我想建议一个改进——可以吗？'",
     "whyTitle": "Naia 的不同之处",
     "whyItems": [

@@ -423,7 +423,7 @@ const ko: Dictionary = {
     title: "AI-네이티브 오픈소스, Naia에 참여하기",
     subtitle: "AI와 함께 만드는 오픈소스 프로젝트. 리포를 클론하고, AI의 안내를 받아, 당신의 언어로 기여하세요.",
     cloneTitle: "클론하고 AI에게 물어보세요",
-    cloneDescription: "문서를 읽을 필요 없고, 누구에게 물어볼 필요도 없습니다. Claude Code, Cursor, Windsurf, Gemini Code Assist 등 AI 코딩 도구가 프로젝트 컨텍스트를 읽고, 당신의 언어로, 당신의 AI와 함께 기여할 수 있습니다.",
+    cloneDescription: "문서를 읽을 필요 없고, 누구에게 물어볼 필요도 없습니다. Claude Code, Cursor, Windsurf, OpenCode, Gemini Code Assist 등 AI 코딩 도구가 프로젝트 컨텍스트를 읽고, 당신의 언어로, 당신의 AI와 함께 기여할 수 있습니다.",
     cloneAsk: "당신의 언어로 물어보세요: \"이 프로젝트가 뭐고, 내가 뭘 도울 수 있어?\" \"이런 거 개선되면 좋겠는데, 제안할 수 있어?\"",
     whyTitle: "Naia가 다른 점",
     whyItems: [

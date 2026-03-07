@@ -411,7 +411,7 @@ const de: Dictionary = {
     "title": "AI-natives Open Source — Bei Naia mitwirken",
     "subtitle": "Ein Open-Source-Projekt, das mit KI gebaut wird. Klone das Repo, lass dich von der KI leiten und trage in deiner Sprache bei.",
     "cloneTitle": "Klonen & KI fragen",
-    "cloneDescription": "Keine Docs lesen, niemanden fragen. KI-Coding-Tools wie Claude Code, Cursor, Windsurf und Gemini Code Assist lesen den Projektkontext — trage in deiner Sprache bei, mit deiner KI.",
+    "cloneDescription": "Keine Docs lesen, niemanden fragen. KI-Coding-Tools wie Claude Code, Cursor, Windsurf, OpenCode und Gemini Code Assist lesen den Projektkontext — trage in deiner Sprache bei, mit deiner KI.",
     "cloneAsk": "Frag in deiner Sprache: 'Was ist dieses Projekt und wie kann ich helfen?' 'Ich habe eine Verbesserungsidee — kann ich sie vorschlagen?'",
     "whyTitle": "Was Naia anders macht",
     "whyItems": [

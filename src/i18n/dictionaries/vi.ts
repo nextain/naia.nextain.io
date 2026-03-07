@@ -411,7 +411,7 @@ const vi: Dictionary = {
     "title": "Mã nguồn mở AI-native — Đóng góp cho Naia",
     "subtitle": "Dự án mã nguồn mở được xây dựng cùng AI. Clone repo, để AI hướng dẫn bạn và đóng góp bằng ngôn ngữ của bạn.",
     "cloneTitle": "Clone & hỏi AI",
-    "cloneDescription": "Không cần đọc tài liệu, không cần hỏi ai. Các công cụ coding AI như Claude Code, Cursor, Windsurf và Gemini Code Assist đọc ngữ cảnh dự án — đóng góp bằng ngôn ngữ của bạn, cùng AI của bạn.",
+    "cloneDescription": "Không cần đọc tài liệu, không cần hỏi ai. Các công cụ coding AI như Claude Code, Cursor, Windsurf, OpenCode và Gemini Code Assist đọc ngữ cảnh dự án — đóng góp bằng ngôn ngữ của bạn, cùng AI của bạn.",
     "cloneAsk": "Hỏi bằng ngôn ngữ của bạn: \"Dự án này là gì và tôi có thể giúp gì?\" \"Tôi muốn đề xuất cải tiến — được không?\"",
     "whyTitle": "Điều gì khiến Naia khác biệt",
     "whyItems": [

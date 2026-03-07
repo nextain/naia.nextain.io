@@ -411,7 +411,7 @@ const ja: Dictionary = {
     "title": "AIネイティブオープンソース — Naiaに参加する",
     "subtitle": "AIと一緒に作るオープンソースプロジェクト。リポをクローンし、AIのガイドを受け、あなたの言語で貢献しましょう。",
     "cloneTitle": "クローンしてAIに聞く",
-    "cloneDescription": "ドキュメントを読む必要も、誰かに聞く必要もありません。Claude Code、Cursor、Windsurf、Gemini Code Assist などのAIコーディングツールがプロジェクトのコンテキストを読み、あなたの言語で、あなたのAIと一緒に貢献できます。",
+    "cloneDescription": "ドキュメントを読む必要も、誰かに聞く必要もありません。Claude Code、Cursor、Windsurf、OpenCode、Gemini Code Assist などのAIコーディングツールがプロジェクトのコンテキストを読み、あなたの言語で、あなたのAIと一緒に貢献できます。",
     "cloneAsk": "あなたの言語で聞いてください：「このプロジェクトは何で、どう手伝えますか？」「こういう改善があるといいんだけど、提案できる？」",
     "whyTitle": "Naiaが違う理由",
     "whyItems": [

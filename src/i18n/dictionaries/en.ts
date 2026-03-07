@@ -425,7 +425,7 @@ const en: Dictionary = {
     title: "AI-Native Open Source — Contribute to Naia",
     subtitle: "An open source project built with AI. Clone the repo, let AI guide you, and contribute in your language.",
     cloneTitle: "Clone & Ask AI",
-    cloneDescription: "No docs to read, no one to ask. AI coding tools like Claude Code, Cursor, Windsurf, and Gemini Code Assist read the project context — contribute in your language, with your AI.",
+    cloneDescription: "No docs to read, no one to ask. AI coding tools like Claude Code, Cursor, Windsurf, OpenCode, and Gemini Code Assist read the project context — contribute in your language, with your AI.",
     cloneAsk: "Ask in your language: \"What is this project and how can I help?\" \"I'd like to suggest an improvement — can I?\"",
     whyTitle: "What Makes Naia Different",
     whyItems: [

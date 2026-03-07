@@ -411,7 +411,7 @@ const fr: Dictionary = {
     "title": "Open source AI-natif — Contribuer à Naia",
     "subtitle": "Un projet open source construit avec l'IA. Clonez le dépôt, laissez l'IA vous guider et contribuez dans votre langue.",
     "cloneTitle": "Cloner et demander à l'IA",
-    "cloneDescription": "Pas de docs à lire, personne à qui demander. Les outils de codage IA comme Claude Code, Cursor, Windsurf et Gemini Code Assist lisent le contexte du projet — contribuez dans votre langue, avec votre IA.",
+    "cloneDescription": "Pas de docs à lire, personne à qui demander. Les outils de codage IA comme Claude Code, Cursor, Windsurf, OpenCode et Gemini Code Assist lisent le contexte du projet — contribuez dans votre langue, avec votre IA.",
     "cloneAsk": "Demandez dans votre langue : « C'est quoi ce projet et comment je peux aider ? » « J'aimerais suggérer une amélioration — c'est possible ? »",
     "whyTitle": "Ce qui rend Naia différent",
     "whyItems": [

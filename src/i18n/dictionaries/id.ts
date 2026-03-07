@@ -411,7 +411,7 @@ const id: Dictionary = {
     "title": "Open source AI-native — Kontribusi ke Naia",
     "subtitle": "Proyek open source yang dibangun bersama AI. Clone repo, biarkan AI memandu Anda, dan berkontribusi dalam bahasa Anda.",
     "cloneTitle": "Clone & Tanya AI",
-    "cloneDescription": "Tidak perlu baca dokumen, tidak perlu bertanya siapa pun. Tool coding AI seperti Claude Code, Cursor, Windsurf, dan Gemini Code Assist membaca konteks proyek — berkontribusi dalam bahasa Anda, bersama AI Anda.",
+    "cloneDescription": "Tidak perlu baca dokumen, tidak perlu bertanya siapa pun. Tool coding AI seperti Claude Code, Cursor, Windsurf, OpenCode, dan Gemini Code Assist membaca konteks proyek — berkontribusi dalam bahasa Anda, bersama AI Anda.",
     "cloneAsk": "Tanya dalam bahasa Anda: \"Proyek ini tentang apa dan bagaimana saya bisa membantu?\" \"Saya ingin menyarankan perbaikan — bolehkah?\"",
     "whyTitle": "Apa yang Membuat Naia Berbeda",
     "whyItems": [
