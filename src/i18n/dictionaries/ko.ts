@@ -420,11 +420,11 @@ const ko: Dictionary = {
     cancel: "취소",
   },
   contribute: {
-    title: "Naia에 참여하기",
-    subtitle: "Naia는 AI-네이티브 오픈소스입니다. 리포를 클론하고, AI의 안내를 받아, 당신의 언어로 기여하세요.",
+    title: "AI-네이티브 오픈소스, Naia에 참여하기",
+    subtitle: "AI와 함께 만드는 오픈소스 프로젝트. 리포를 클론하고, AI의 안내를 받아, 당신의 언어로 기여하세요.",
     cloneTitle: "클론하고 AI에게 물어보세요",
-    cloneDescription: "문서를 읽을 필요 없고, 누구에게 물어볼 필요도 없습니다. AI 코딩 도구가 프로젝트 컨텍스트를 읽고 당신의 언어로 안내합니다.",
-    cloneAsk: "당신의 언어로 물어보세요: \"이 프로젝트가 뭐고, 내가 뭘 도울 수 있어?\"",
+    cloneDescription: "문서를 읽을 필요 없고, 누구에게 물어볼 필요도 없습니다. Claude Code, Cursor, Windsurf, Gemini Code Assist 등 AI 코딩 도구가 프로젝트 컨텍스트를 읽고, 당신의 언어로, 당신의 AI와 함께 기여할 수 있습니다.",
+    cloneAsk: "당신의 언어로 물어보세요: \"이 프로젝트가 뭐고, 내가 뭘 도울 수 있어?\" \"이런 거 개선되면 좋겠는데, 제안할 수 있어?\"",
     whyTitle: "Naia가 다른 점",
     whyItems: [
       { traditional: "CONTRIBUTING.md 읽고 알아서 파악", naia: "AI가 전체 컨텍스트를 읽고 단계별로 안내" },
@@ -436,7 +436,8 @@ const ko: Dictionary = {
     waysItems: [
       { title: "번역", description: "UI, 매뉴얼, AI 컨텍스트에 당신의 언어를 추가하세요" },
       { title: "스킬", description: "Naia를 위한 새로운 AI 스킬을 만드세요" },
-      { title: "버그 리포트", description: "문제를 발견했나요? 어떤 언어로든 이슈를 열어주세요" },
+      { title: "신기능", description: "새로운 기능을 제안하거나 직접 구현하세요 — AI가 기존 아키텍처를 설명해줍니다" },
+      { title: "버그 리포트", description: "버그를 발견했나요? AI에게 말하세요 — 중복 확인 후 이슈를 등록해줍니다" },
       { title: "코드", description: "이슈를 골라 PR을 보내주세요" },
       { title: "문서", description: "문서를 개선하거나 AI 에이전트용 컨텍스트를 추가하세요" },
       { title: "테스팅", description: "앱을 사용해보고 피드백을 공유해주세요" },
@@ -444,7 +445,7 @@ const ko: Dictionary = {
     ctaGithub: "GitHub에서 보기",
     ctaGuide: "기여 가이드",
     ctaDonate: "후원하기",
-    ctaDonateDescription: "Naia는 1인 개발자가 만듭니다. 후원이 서버를 유지하고 무료 크레딧을 가능하게 합니다.",
+    ctaDonateDescription: "후원이 서버를 유지하고 무료 크레딧을 가능하게 합니다.",
     manualLink: "오픈소스 보호 구조 자세히 보기",
   },
   billing: {

@@ -408,11 +408,11 @@ const es: Dictionary = {
     "cancel": "Cancelar",
   },
   "contribute": {
-    "title": "Contribuir a Naia",
-    "subtitle": "Naia es código abierto AI-nativo. Clona el repo, deja que la IA te guíe y contribuye en tu idioma.",
+    "title": "Open source AI-nativo — Contribuir a Naia",
+    "subtitle": "Un proyecto de código abierto construido con IA. Clona el repo, deja que la IA te guíe y contribuye en tu idioma.",
     "cloneTitle": "Clona y pregunta a la IA",
-    "cloneDescription": "Sin docs que leer, sin nadie a quien preguntar. Tu herramienta de codificación IA lee el contexto del proyecto y te guía — en tu idioma.",
-    "cloneAsk": "Pregunta en tu idioma: \"¿Qué es este proyecto y cómo puedo ayudar?\"",
+    "cloneDescription": "Sin docs que leer, sin nadie a quien preguntar. Herramientas de codificación IA como Claude Code, Cursor, Windsurf y Gemini Code Assist leen el contexto del proyecto — contribuye en tu idioma, con tu IA.",
+    "cloneAsk": "Pregunta en tu idioma: \"¿Qué es este proyecto y cómo puedo ayudar?\" \"Me gustaría sugerir una mejora — ¿puedo?\"",
     "whyTitle": "Qué hace diferente a Naia",
     "whyItems": [
       { "traditional": "Leer CONTRIBUTING.md y averiguarlo solo", "naia": "La IA lee todo el contexto y te guía paso a paso" },
@@ -424,7 +424,8 @@ const es: Dictionary = {
     "waysItems": [
       { "title": "Traducción", "description": "Añade tu idioma a la UI, manual o contexto IA" },
       { "title": "Habilidades", "description": "Crea una nueva habilidad IA para Naia" },
-      { "title": "Reportes de bugs", "description": "¿Encontraste algo roto? Abre un issue en cualquier idioma" },
+      { "title": "Nuevas funciones", "description": "Propón o construye nuevas funciones — la IA te explicará la arquitectura existente" },
+      { "title": "Reportes de bugs", "description": "¿Encontraste un bug? Dile a tu IA — verificará duplicados y creará el issue" },
       { "title": "Código", "description": "Elige un issue y envía un PR" },
       { "title": "Documentación", "description": "Mejora los docs o añade contexto para agentes IA" },
       { "title": "Pruebas", "description": "Prueba la app y comparte tu feedback" },
@@ -432,7 +433,7 @@ const es: Dictionary = {
     "ctaGithub": "Ver en GitHub",
     "ctaGuide": "Guía de contribución",
     "ctaDonate": "Patrocinar",
-    "ctaDonateDescription": "Naia está construido por un desarrollador independiente. Las donaciones mantienen los servidores y los créditos gratuitos.",
+    "ctaDonateDescription": "Las donaciones mantienen los servidores y los créditos gratuitos.",
     "manualLink": "Lee más sobre nuestra protección de código abierto",
   },
   "billing": {

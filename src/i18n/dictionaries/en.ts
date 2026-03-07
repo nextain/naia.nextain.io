@@ -422,11 +422,11 @@ const en: Dictionary = {
     cancel: "Cancel",
   },
   contribute: {
-    title: "Contribute to Naia",
-    subtitle: "Naia is AI-native open source. Clone the repo, let AI guide you, and contribute in your language.",
+    title: "AI-Native Open Source — Contribute to Naia",
+    subtitle: "An open source project built with AI. Clone the repo, let AI guide you, and contribute in your language.",
     cloneTitle: "Clone & Ask AI",
-    cloneDescription: "No docs to read, no one to ask. Your AI coding tool reads the project context and guides you — in your language.",
-    cloneAsk: "Ask in your language: \"What is this project and how can I help?\"",
+    cloneDescription: "No docs to read, no one to ask. AI coding tools like Claude Code, Cursor, Windsurf, and Gemini Code Assist read the project context — contribute in your language, with your AI.",
+    cloneAsk: "Ask in your language: \"What is this project and how can I help?\" \"I'd like to suggest an improvement — can I?\"",
     whyTitle: "What Makes Naia Different",
     whyItems: [
       { traditional: "Read CONTRIBUTING.md and figure it out", naia: "AI reads the full context and guides you step by step" },
@@ -438,7 +438,8 @@ const en: Dictionary = {
     waysItems: [
       { title: "Translation", description: "Add your language to the UI, manual, or AI context" },
       { title: "Skills", description: "Build a new AI skill for Naia" },
-      { title: "Bug Reports", description: "Found something broken? Open an issue in any language" },
+      { title: "New Features", description: "Propose or build new features — AI will explain the existing architecture" },
+      { title: "Bug Reports", description: "Found a bug? Just tell your AI — it will check for duplicates and file the issue for you" },
       { title: "Code", description: "Pick an issue and submit a PR" },
       { title: "Documentation", description: "Improve docs or add context for AI agents" },
       { title: "Testing", description: "Try the app and share your feedback" },
@@ -446,7 +447,7 @@ const en: Dictionary = {
     ctaGithub: "View on GitHub",
     ctaGuide: "Contributing Guide",
     ctaDonate: "Sponsor",
-    ctaDonateDescription: "Naia is built by a solo developer. Donations keep the servers running and credits free.",
+    ctaDonateDescription: "Donations keep the servers running and free credits available.",
     manualLink: "Read about our open source protection in detail",
   },
   billing: {

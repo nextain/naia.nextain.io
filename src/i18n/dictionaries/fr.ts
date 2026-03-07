@@ -408,11 +408,11 @@ const fr: Dictionary = {
     "cancel": "Annuler",
   },
   "contribute": {
-    "title": "Contribuer à Naia",
-    "subtitle": "Naia est un projet open source AI-natif. Clonez le dépôt, laissez l'IA vous guider et contribuez dans votre langue.",
+    "title": "Open source AI-natif — Contribuer à Naia",
+    "subtitle": "Un projet open source construit avec l'IA. Clonez le dépôt, laissez l'IA vous guider et contribuez dans votre langue.",
     "cloneTitle": "Cloner et demander à l'IA",
-    "cloneDescription": "Pas de docs à lire, personne à qui demander. Votre outil de codage IA lit le contexte du projet et vous guide — dans votre langue.",
-    "cloneAsk": "Demandez dans votre langue : « C'est quoi ce projet et comment je peux aider ? »",
+    "cloneDescription": "Pas de docs à lire, personne à qui demander. Les outils de codage IA comme Claude Code, Cursor, Windsurf et Gemini Code Assist lisent le contexte du projet — contribuez dans votre langue, avec votre IA.",
+    "cloneAsk": "Demandez dans votre langue : « C'est quoi ce projet et comment je peux aider ? » « J'aimerais suggérer une amélioration — c'est possible ? »",
     "whyTitle": "Ce qui rend Naia différent",
     "whyItems": [
       { "traditional": "Lire CONTRIBUTING.md et se débrouiller", "naia": "L'IA lit tout le contexte et vous guide étape par étape" },
@@ -424,7 +424,8 @@ const fr: Dictionary = {
     "waysItems": [
       { "title": "Traduction", "description": "Ajoutez votre langue à l'UI, au manuel ou au contexte IA" },
       { "title": "Compétences", "description": "Créez une nouvelle compétence IA pour Naia" },
-      { "title": "Signalement de bugs", "description": "Trouvé un problème ? Ouvrez un ticket dans n'importe quelle langue" },
+      { "title": "Nouvelles fonctionnalités", "description": "Proposez ou développez de nouvelles fonctionnalités — l'IA vous expliquera l'architecture existante" },
+      { "title": "Signalement de bugs", "description": "Bug trouvé ? Dites-le à votre IA — elle vérifiera les doublons et créera l'issue" },
       { "title": "Code", "description": "Choisissez un ticket et soumettez une PR" },
       { "title": "Documentation", "description": "Améliorez les docs ou ajoutez du contexte pour les agents IA" },
       { "title": "Tests", "description": "Essayez l'application et partagez vos retours" },
@@ -432,7 +433,7 @@ const fr: Dictionary = {
     "ctaGithub": "Voir sur GitHub",
     "ctaGuide": "Guide de contribution",
     "ctaDonate": "Sponsoriser",
-    "ctaDonateDescription": "Naia est développé par un développeur indépendant. Les dons maintiennent les serveurs et les crédits gratuits.",
+    "ctaDonateDescription": "Les dons maintiennent les serveurs et les crédits gratuits.",
     "manualLink": "En savoir plus sur notre protection open source",
   },
   "billing": {
