@@ -141,3 +141,7 @@ Naia একজন স্বতন্ত্র ডেভেলপার দ্ব
 - [AI এজেন্ট লাইসেন্স সুরক্ষা পরীক্ষা](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [দান পেজ](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

@@ -31,7 +31,8 @@ const vi: Dictionary = {
     "dashboard": "Trang tổng quan",
     "toggleMenu": "Chuyển đổi menu",
     "manual": "Hướng dẫn sử dụng",
-    "blog": "Blog"
+    "blog": "Blog",
+    "contribute": "Đóng góp"
   },
   "footer": {
     "brand": "Naia",
@@ -405,6 +406,34 @@ const vi: Dictionary = {
     "guestPrompt": "Bạn có thể bình luận mà không cần đăng nhập",
     "noComments": "Chưa có bình luận nào. Hãy là người đầu tiên!",
     "cancel": "Hủy",
+  },
+  "contribute": {
+    "title": "Đóng góp cho Naia",
+    "subtitle": "Naia là mã nguồn mở AI-native. Clone repo, để AI hướng dẫn bạn và đóng góp bằng ngôn ngữ của bạn.",
+    "cloneTitle": "Clone & hỏi AI",
+    "cloneDescription": "Không cần đọc tài liệu, không cần hỏi ai. Công cụ coding AI của bạn đọc ngữ cảnh dự án và hướng dẫn bạn — bằng ngôn ngữ của bạn.",
+    "cloneAsk": "Hỏi bằng ngôn ngữ của bạn: \"Dự án này là gì và tôi có thể giúp gì?\"",
+    "whyTitle": "Điều gì khiến Naia khác biệt",
+    "whyItems": [
+      { "traditional": "Đọc CONTRIBUTING.md và tự tìm hiểu", "naia": "AI đọc toàn bộ ngữ cảnh và hướng dẫn từng bước" },
+      { "traditional": "Issue và thảo luận chỉ bằng tiếng Anh", "naia": "Viết bằng bất kỳ ngôn ngữ nào — maintainer dùng dịch thuật AI" },
+      { "traditional": "Một file LICENSE, dễ bị bỏ qua", "naia": "Agent AI tự động tuân thủ giấy phép (bảo vệ 5 lớp)" },
+      { "traditional": "Ngữ cảnh chỉ trong đầu developer", "naia": "Ngữ cảnh là mã — quản lý phiên bản, mirror, luôn cập nhật" },
+    ],
+    "waysTitle": "Cách đóng góp",
+    "waysItems": [
+      { "title": "Dịch thuật", "description": "Thêm ngôn ngữ của bạn vào UI, hướng dẫn hoặc ngữ cảnh AI" },
+      { "title": "Kỹ năng", "description": "Tạo kỹ năng AI mới cho Naia" },
+      { "title": "Báo lỗi", "description": "Tìm thấy lỗi? Mở issue bằng bất kỳ ngôn ngữ nào" },
+      { "title": "Mã nguồn", "description": "Chọn một issue và gửi PR" },
+      { "title": "Tài liệu", "description": "Cải thiện tài liệu hoặc thêm ngữ cảnh cho agent AI" },
+      { "title": "Kiểm thử", "description": "Thử ứng dụng và chia sẻ phản hồi của bạn" },
+    ],
+    "ctaGithub": "Xem trên GitHub",
+    "ctaGuide": "Hướng dẫn đóng góp",
+    "ctaDonate": "Tài trợ",
+    "ctaDonateDescription": "Naia được xây dựng bởi một developer. Quyên góp giúp duy trì server và tín dụng miễn phí.",
+    "manualLink": "Đọc thêm về bảo vệ mã nguồn mở của chúng tôi",
   },
   "billing": {
     "title": "Thanh toán",

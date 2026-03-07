@@ -13,6 +13,7 @@ import {
   Rocket,
 } from "lucide-react";
 import { SectionReveal } from "@/components/home/section-reveal";
+import Link from "next/link";
 
 export function Features({ dict }: { dict: Dictionary }) {
   const items = dict.home.features.items;
@@ -38,7 +39,7 @@ export function Features({ dict }: { dict: Dictionary }) {
       icon: Code2,
       title: items.openSource.title,
       description: items.openSource.description,
-      href: "https://github.com/nextain/naia-os",
+      href: `/${dict.locale}/contribute`,
     },
     { icon: Rocket, title: items.vision.title, description: items.vision.description },
   ];
@@ -72,9 +73,15 @@ export function Features({ dict }: { dict: Dictionary }) {
           return (
             <SectionReveal key={card.title} delay={idx * 40}>
               {card.href ? (
-                <a href={card.href} target="_blank" rel="noopener noreferrer" className="block h-full">
-                  {content}
-                </a>
+                card.href.startsWith("http") ? (
+                  <a href={card.href} target="_blank" rel="noopener noreferrer" className="block h-full">
+                    {content}
+                  </a>
+                ) : (
+                  <Link href={card.href} className="block h-full">
+                    {content}
+                  </Link>
+                )
               ) : (
                 content
               )}

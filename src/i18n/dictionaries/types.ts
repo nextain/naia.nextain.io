@@ -32,6 +32,7 @@ export interface Dictionary {
     toggleMenu: string;
     manual: string;
     blog: string;
+    contribute: string;
   };
   footer: {
     brand: string;
@@ -336,6 +337,22 @@ export interface Dictionary {
     guestPrompt: string;
     noComments: string;
     cancel: string;
+  };
+  contribute: {
+    title: string;
+    subtitle: string;
+    cloneTitle: string;
+    cloneDescription: string;
+    cloneAsk: string;
+    whyTitle: string;
+    whyItems: { traditional: string; naia: string }[];
+    waysTitle: string;
+    waysItems: { title: string; description: string }[];
+    ctaGithub: string;
+    ctaGuide: string;
+    ctaDonate: string;
+    ctaDonateDescription: string;
+    manualLink: string;
   };
   billing: {
     title: string;

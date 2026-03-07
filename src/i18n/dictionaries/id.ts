@@ -31,7 +31,8 @@ const id: Dictionary = {
     "dashboard": "Dasbor",
     "toggleMenu": "Alihkan menu",
     "manual": "petunjuk",
-    "blog": "Blog"
+    "blog": "Blog",
+    "contribute": "Kontribusi"
   },
   "footer": {
     "brand": "Naia",
@@ -405,6 +406,34 @@ const id: Dictionary = {
     "guestPrompt": "Anda dapat berkomentar tanpa masuk",
     "noComments": "Belum ada komentar. Jadilah yang pertama!",
     "cancel": "Batal",
+  },
+  "contribute": {
+    "title": "Kontribusi ke Naia",
+    "subtitle": "Naia adalah open source AI-native. Clone repo, biarkan AI memandu Anda, dan berkontribusi dalam bahasa Anda.",
+    "cloneTitle": "Clone & Tanya AI",
+    "cloneDescription": "Tidak perlu baca dokumen, tidak perlu bertanya siapa pun. Tool coding AI Anda membaca konteks proyek dan memandu — dalam bahasa Anda.",
+    "cloneAsk": "Tanya dalam bahasa Anda: \"Proyek ini tentang apa dan bagaimana saya bisa membantu?\"",
+    "whyTitle": "Apa yang Membuat Naia Berbeda",
+    "whyItems": [
+      { "traditional": "Baca CONTRIBUTING.md dan cari tahu sendiri", "naia": "AI membaca seluruh konteks dan memandu langkah demi langkah" },
+      { "traditional": "Issue dan diskusi hanya dalam bahasa Inggris", "naia": "Tulis dalam bahasa apa pun — maintainer menggunakan terjemahan AI" },
+      { "traditional": "Satu file LICENSE, mudah diabaikan", "naia": "Agen AI mematuhi lisensi secara otomatis (perlindungan 5 lapis)" },
+      { "traditional": "Konteks hanya di kepala developer", "naia": "Konteks adalah kode — terversi, di-mirror, selalu terbaru" },
+    ],
+    "waysTitle": "Cara Berkontribusi",
+    "waysItems": [
+      { "title": "Terjemahan", "description": "Tambahkan bahasa Anda ke UI, manual, atau konteks AI" },
+      { "title": "Skill", "description": "Buat skill AI baru untuk Naia" },
+      { "title": "Laporan Bug", "description": "Menemukan masalah? Buka issue dalam bahasa apa pun" },
+      { "title": "Kode", "description": "Pilih issue dan kirim PR" },
+      { "title": "Dokumentasi", "description": "Perbaiki docs atau tambahkan konteks untuk agen AI" },
+      { "title": "Pengujian", "description": "Coba aplikasinya dan bagikan feedback Anda" },
+    ],
+    "ctaGithub": "Lihat di GitHub",
+    "ctaGuide": "Panduan Kontribusi",
+    "ctaDonate": "Sponsor",
+    "ctaDonateDescription": "Naia dibangun oleh satu developer. Donasi menjaga server tetap berjalan dan kredit gratis tetap tersedia.",
+    "manualLink": "Baca lebih lanjut tentang perlindungan open source kami",
   },
   "billing": {
     "title": "Penagihan",

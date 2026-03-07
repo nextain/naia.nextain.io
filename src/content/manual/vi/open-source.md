@@ -141,3 +141,7 @@ Mã nguồn mở không tự duy trì chỉ bằng mã nguồn. Quyên góp từ
 - [Kiểm tra bảo vệ giấy phép AI Agent](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [Trang quyên góp](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

@@ -31,7 +31,8 @@ const zh: Dictionary = {
     "dashboard": "仪表板",
     "toggleMenu": "切换菜单",
     "manual": "手册",
-    "blog": "博客"
+    "blog": "博客",
+    "contribute": "参与"
   },
   "footer": {
     "brand": "奈亚",
@@ -405,6 +406,34 @@ const zh: Dictionary = {
     "guestPrompt": "无需登录即可评论",
     "noComments": "还没有评论，来写第一条吧！",
     "cancel": "取消",
+  },
+  "contribute": {
+    "title": "参与 Naia",
+    "subtitle": "Naia 是 AI 原生的开源项目。克隆仓库，让 AI 指引你，用你的语言贡献。",
+    "cloneTitle": "克隆并询问 AI",
+    "cloneDescription": "无需阅读文档，无需询问任何人。AI 编码工具会读取项目上下文，用你的语言为你指引。",
+    "cloneAsk": "用你的语言询问：'这个项目是什么，我能帮什么忙？'",
+    "whyTitle": "Naia 的不同之处",
+    "whyItems": [
+      { "traditional": "阅读 CONTRIBUTING.md 自己摸索", "naia": "AI 读取完整上下文，逐步指引" },
+      { "traditional": "仅限英语的 Issue 和讨论", "naia": "任何语言都可以——维护者使用 AI 翻译" },
+      { "traditional": "仅一个 LICENSE 文件，容易被忽略", "naia": "AI 代理自动遵守许可证（五层保护）" },
+      { "traditional": "上下文只在开发者脑中", "naia": "上下文即代码——版本控制、镜像、始终最新" },
+    ],
+    "waysTitle": "贡献方式",
+    "waysItems": [
+      { "title": "翻译", "description": "为 UI、手册或 AI 上下文添加你的语言" },
+      { "title": "技能", "description": "为 Naia 创建新的 AI 技能" },
+      { "title": "错误报告", "description": "发现问题？用任何语言提交 Issue" },
+      { "title": "代码", "description": "选择一个 Issue，提交 PR" },
+      { "title": "文档", "description": "改进文档或为 AI 代理添加上下文" },
+      { "title": "测试", "description": "试用应用并分享你的反馈" },
+    ],
+    "ctaGithub": "在 GitHub 上查看",
+    "ctaGuide": "贡献指南",
+    "ctaDonate": "赞助",
+    "ctaDonateDescription": "Naia 由独立开发者构建。捐赠帮助维持服务器运行和免费额度。",
+    "manualLink": "详细了解开源保护机制",
   },
   "billing": {
     "title": "计费",

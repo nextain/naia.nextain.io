@@ -141,3 +141,7 @@ Open source doesn't sustain itself on code alone. Donations from users keep the 
 - [AI Agent License Protection Tests](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [Donation Page](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

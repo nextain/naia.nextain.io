@@ -141,3 +141,7 @@ Open Source erhält sich nicht allein durch Code. Spenden von Nutzern halten das
 - [KI-Agenten-Lizenzschutztests](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [Spendenseite](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

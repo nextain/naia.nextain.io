@@ -40,7 +40,8 @@ src/
 │   │   │   ├── terms/          # 이용약관
 │   │   │   ├── privacy/        # 개인정보처리방침
 │   │   │   ├── refund/         # 환불정책
-│   │   │   └── contact/        # 문의
+│   │   │   ├── contact/        # 문의
+│   │   │   └── contribute/     # 오픈소스 기여 (AI-native 온보딩)
 │   │   ├── (protected)/        # 인증 필요 (AuthHeader + Sidebar)
 │   │   │   ├── layout.tsx
 │   │   │   ├── dashboard/      # 크레딧 잔액 + 요약 + 빠른 링크

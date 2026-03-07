@@ -141,3 +141,7 @@ Open source tidak bertahan hanya dengan kode saja. Donasi dari pengguna menjaga 
 - [Pengujian Perlindungan Lisensi Agen AI](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [Halaman Donasi](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

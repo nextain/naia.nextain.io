@@ -31,7 +31,8 @@ const ja: Dictionary = {
     "dashboard": "ダッシュボード",
     "toggleMenu": "メニューの切り替え",
     "manual": "マニュアル",
-    "blog": "ブログ"
+    "blog": "ブログ",
+    "contribute": "参加"
   },
   "footer": {
     "brand": "ナイア",
@@ -405,6 +406,34 @@ const ja: Dictionary = {
     "guestPrompt": "ログインなしでコメントできます",
     "noComments": "まだコメントがありません。最初のコメントを書いてみましょう！",
     "cancel": "キャンセル",
+  },
+  "contribute": {
+    "title": "Naiaに参加する",
+    "subtitle": "NaiaはAIネイティブのオープンソースです。リポをクローンし、AIのガイドを受け、あなたの言語で貢献しましょう。",
+    "cloneTitle": "クローンしてAIに聞く",
+    "cloneDescription": "ドキュメントを読む必要も、誰かに聞く必要もありません。AIコーディングツールがプロジェクトのコンテキストを読み、あなたの言語でガイドします。",
+    "cloneAsk": "あなたの言語で聞いてください：「このプロジェクトは何で、どう手伝えますか？」",
+    "whyTitle": "Naiaが違う理由",
+    "whyItems": [
+      { "traditional": "CONTRIBUTING.mdを読んで自分で理解", "naia": "AIが全コンテキストを読み、ステップごとにガイド" },
+      { "traditional": "英語のみのイシューとディスカッション", "naia": "どの言語でもOK — メンテナーがAI翻訳を使用" },
+      { "traditional": "LICENSEファイル1つ、簡単に無視される", "naia": "AIエージェントがライセンスを自動遵守（5層保護）" },
+      { "traditional": "コンテキストは開発者の頭の中だけ", "naia": "コンテキストはコード — バージョン管理、ミラーリング、常に最新" },
+    ],
+    "waysTitle": "貢献の方法",
+    "waysItems": [
+      { "title": "翻訳", "description": "UI、マニュアル、AIコンテキストにあなたの言語を追加" },
+      { "title": "スキル", "description": "Naiaの新しいAIスキルを作成" },
+      { "title": "バグ報告", "description": "問題を見つけましたか？どの言語でもイシューを開けます" },
+      { "title": "コード", "description": "イシューを選んでPRを送信" },
+      { "title": "ドキュメント", "description": "ドキュメントの改善やAIエージェント用コンテキストの追加" },
+      { "title": "テスト", "description": "アプリを試してフィードバックを共有" },
+    ],
+    "ctaGithub": "GitHubで見る",
+    "ctaGuide": "貢献ガイド",
+    "ctaDonate": "スポンサー",
+    "ctaDonateDescription": "Naiaは個人開発者が作っています。寄付がサーバーを維持し、無料クレジットを可能にします。",
+    "manualLink": "オープンソース保護の詳細を読む",
   },
   "billing": {
     "title": "請求",

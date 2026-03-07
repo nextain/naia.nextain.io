@@ -141,3 +141,7 @@ El código abierto no se sostiene solo con código. Las donaciones de los usuari
 - [Pruebas de protección de licencia para agentes de IA](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [Página de donaciones](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

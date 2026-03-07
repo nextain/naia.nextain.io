@@ -141,3 +141,7 @@ Naia مبني من قبل مطور فردي ويُدار كمصدر مفتوح. 
 - [اختبارات حماية ترخيص وكيل الذكاء الاصطناعي](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [صفحة التبرع](https://naia.nextain.io/donation)
+
+---
+
+**→ [Contribute to Naia](../contribute)** — Want to contribute? Clone the repo and ask AI.

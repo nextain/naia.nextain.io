@@ -141,3 +141,7 @@ Naia는 개인 개발자가 만들고, 오픈소스로 유지하는 프로젝트
 - [AI 에이전트 라이선스 보호 테스트](https://github.com/nextain/naia-os/blob/main/.agents/tests/license-protection-test.md)
 - [GitHub Sponsors](https://github.com/sponsors/luke-n-alpha)
 - [후원 페이지](https://naia.nextain.io/donation)
+
+---
+
+**→ [Naia에 참여하기](../contribute)** — 기여하고 싶으신가요? 리포를 클론하고 AI에게 물어보세요.

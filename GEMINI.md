@@ -40,7 +40,8 @@ src/
 │   │   │   ├── terms/          # 이용약관
 │   │   │   ├── privacy/        # 개인정보처리방침
 │   │   │   ├── refund/         # 환불정책
-│   │   │   └── contact/        # 문의
+│   │   │   ├── contact/        # 문의
+│   │   │   └── contribute/     # 오픈소스 기여 (AI-native 온보딩)
 │   │   ├── (protected)/        # 인증 필요 (AuthHeader + Sidebar)
 │   │   │   ├── layout.tsx
 │   │   │   ├── dashboard/      # 크레딧 잔액 + 요약 + 빠른 링크
@@ -53,8 +54,20 @@ src/
 │   │       ├── layout.tsx
 │   │       ├── login/          # OAuth (Google, Discord)
 │   │       └── callback/       # 데스크톱 딥링크 리다이렉트
+│   │   ├── admin/              # 관리자 (localhost only)
+│   │   │   ├── page.tsx        # Posts 대시보드
+│   │   │   ├── blog/editor/    # Markdown 에디터 + 크로스포스팅
+│   │   │   └── comments/       # 댓글 관리
 │   └── api/                    # BFF API Routes
 │       ├── auth/               # NextAuth v5
+│       ├── blog/popular/       # GET — GA4 인기 포스팅 (5분 캐싱)
+│       ├── comments/           # POST/DELETE — 블로그 댓글
+│       ├── admin/              # Admin APIs (localhost only)
+│       │   ├── posts/          # GET/PUT — 포스트 CRUD
+│       │   ├── comments/       # POST — 댓글 목록/삭제
+│       │   ├── upload/         # POST — 이미지 업로드
+│       │   ├── deploy/         # POST — Git 배포
+│       │   └── crosspost/      # POST — Dev.to/Reddit
 │       ├── gateway/            # Gateway 프록시
 │       │   ├── balance/        # GET — 크레딧 잔액
 │       │   ├── keys/           # GET/POST — 키 목록/생성
@@ -69,6 +82,7 @@ src/
 │   ├── ui/                     # shadcn/ui (button, card, badge 등)
 │   ├── layout/                 # header, footer, auth-header, sidebar, mobile-nav
 │   ├── home/                   # hero, features, pricing, faq, section-reveal
+│   ├── blog/                   # blog-markdown, comments, popular-posts
 │   ├── usage/                  # requests-chart, tokens-chart, spend-chart
 │   ├── logs/                   # logs-table
 │   └── providers/              # theme-provider, locale-provider, query-provider
@@ -81,6 +95,10 @@ src/
 ├── lib/
 │   ├── auth.ts                 # NextAuth v5 설정 (Google + Discord)
 │   ├── gateway-client.ts       # Gateway REST 클라이언트 (서버 전용)
+│   ├── firebase.ts             # Firebase Client SDK (댓글 읽기)
+│   ├── firebase-admin.ts       # Firebase Admin SDK (댓글 쓰기)
+│   ├── posts.ts                # 블로그 포스트 로더 (frontmatter 파싱)
+│   ├── email.ts                # Office 365 SMTP 이메일 (nodemailer)
 │   ├── lemonsqueezy.ts         # LemonSqueezy 체크아웃 빌더
 │   ├── home-docs.ts            # FAQ 마크다운 파서
 │   ├── legal-docs.ts           # 법적 문서 마크다운 파서
@@ -99,9 +117,12 @@ src/
 
 - **Next.js 16** (App Router, Server Components)
 - **NextAuth v5** (Google + Discord OAuth)
-- **shadcn/ui** + Tailwind CSS 4 (naia 브라운 테마)
+- **shadcn/ui** + Tailwind CSS 4 (Nextain Blue / Flow Cyan 테마)
 - **Recharts** — 사용량 차트
 - **next-themes** — 다크/라이트 모드
+- **Firebase** — 블로그 댓글 (Client SDK 읽기 + Admin SDK 쓰기)
+- **GA4 Data API** — 인기 포스팅 (`@google-analytics/data`)
+- **nodemailer** — 댓글 답글 이메일 알림 (Office 365 SMTP)
 - **LemonSqueezy** — 결제 (준비 중, env 미설정 시 Coming Soon)
 
 ## 컨벤션 (요약)
@@ -133,3 +154,9 @@ npm run build        # 프로덕션 빌드
 npm run lint         # 린트
 npm test             # 테스트
 ```
+
+## Open Source
+
+- **소스코드**: Apache License 2.0
+- **AI 컨텍스트** (`.agents/`, `.users/`, `CLAUDE.md`, `AGENTS.md`, `GEMINI.md`): CC-BY-SA-4.0
+- **블로그 포스트 및 콘텐츠** (`public/posts/`): CC-BY-NC-SA-4.0
