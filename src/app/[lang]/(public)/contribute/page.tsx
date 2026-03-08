@@ -40,6 +40,15 @@ import { CopyButton } from "@/components/ui/copy-button";
 const GITHUB_REPO = "https://github.com/nextain/naia-os";
 const CLONE_COMMAND = "git clone https://github.com/nextain/naia-os.git";
 
+const CONTRIBUTORS = [
+	{
+		username: "leonardo-gonc",
+		avatar: "https://github.com/leonardo-gonc.png",
+		contributionKey: "ptContextDocs" as const,
+		date: "2026-03-07",
+	},
+];
+
 const WHY_ICONS = [FileCode, Globe, Shield, Code2];
 
 const WAYS_ICONS = [Globe, Code2, BookOpen, Terminal, FileCode, ArrowRight];
@@ -129,6 +138,39 @@ export default async function ContributePage({
 							</div>
 						);
 					})}
+				</div>
+			</div>
+
+			{/* Contributors */}
+			<div className="mb-12">
+				<h2 className="mb-2 text-center text-2xl font-semibold">
+					{c.contributorsTitle}
+				</h2>
+				<p className="mb-6 text-center text-sm text-muted-foreground">
+					{c.contributorsSubtitle}
+				</p>
+				<div className="flex flex-wrap justify-center gap-4">
+					{CONTRIBUTORS.map((contributor) => (
+						<Link
+							key={contributor.username}
+							href={`https://github.com/${contributor.username}`}
+							target="_blank"
+							rel="noreferrer"
+							className="flex items-center gap-3 rounded-lg border border-border/60 px-4 py-3 transition hover:border-primary/30 hover:shadow-sm"
+						>
+							<img
+								src={contributor.avatar}
+								alt={contributor.username}
+								className="h-8 w-8 rounded-full"
+							/>
+							<div>
+								<p className="text-sm font-medium">@{contributor.username}</p>
+								<p className="text-xs text-muted-foreground">
+									{c.contributions[contributor.contributionKey]} · {contributor.date}
+								</p>
+							</div>
+						</Link>
+					))}
 				</div>
 			</div>
 

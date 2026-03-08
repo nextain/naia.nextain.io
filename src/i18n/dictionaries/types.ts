@@ -348,6 +348,9 @@ export interface Dictionary {
     whyItems: { traditional: string; naia: string }[];
     waysTitle: string;
     waysItems: { title: string; description: string }[];
+    contributorsTitle: string;
+    contributorsSubtitle: string;
+    contributions: Record<string, string>;
     ctaGithub: string;
     ctaGuide: string;
     ctaDonate: string;
