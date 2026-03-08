@@ -37,7 +37,7 @@ const PLATFORM_INSTRUCTIONS: Record<string, string> = {
   linkedin:
     "Write a LinkedIn post. MAX 4-5 lines (under 400 characters). Lead with a surprising insight or bold claim. Blog link at end. One question to invite comments. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_. Use line breaks for structure.",
   x:
-    "Write a SINGLE tweet (under 280 characters). Bold hook with the key message upfront. Include blog link. Punchy, quotable, no fluff. NOT a thread. PLAIN TEXT ONLY — no markdown.",
+    "Write a SINGLE tweet. HARD LIMIT: total text INCLUDING the blog URL must be under 280 characters. Count carefully — the URL alone is ~70 chars, so your message must be under 210 chars. Bold hook with the key message upfront. Punchy, quotable, no fluff. NOT a thread. PLAIN TEXT ONLY — no markdown.",
   instagram:
     "Write an Instagram caption. MAX 3 lines (under 200 characters before hashtags). Hook first, key message upfront. Include the blog post URL in the caption. End with 3-5 hashtags. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_.",
 };
@@ -50,6 +50,7 @@ function buildPrompt(
   summary: string | undefined,
   subreddit?: string,
   lang?: string,
+  slug?: string,
 ): string {
   const styleDesc = STYLES[style] ?? STYLES.community;
   const platformDesc = PLATFORM_INSTRUCTIONS[platform] ?? PLATFORM_INSTRUCTIONS.reddit;
@@ -79,7 +80,8 @@ ${blogContent.slice(0, 6000)}
 - Write in ${lang === "ko" ? "Korean (한국어)" : "English"}
 - Do not fabricate features or claims not in the source
 - CRITICAL: If the platform says "PLAIN TEXT ONLY", you MUST NOT use any markdown formatting — no **bold**, no *italic*, no _underline_, no bullet points, no headings. Just plain text with line breaks.
-- For Reddit: include "Read the full post: https://naia.nextain.io/en/blog/SLUG" at the end (replace SLUG)
+- For Reddit: include "Read the full post: https://naia.nextain.io/en/blog/${slug}" at the end
+- For other social platforms: include the blog link https://naia.nextain.io/${lang === "ko" ? "ko" : "en"}/blog/${slug} naturally in the post
 - For Dev.to: the full article will be posted with canonical_url, so write the complete article`;
 }
 
@@ -114,7 +116,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Post not found" }, { status: 404 });
     }
 
-    const prompt = buildPrompt(platform, style, post.title, post.content, post.summary, typeof subreddit === "string" ? subreddit : undefined, typeof lang === "string" ? lang : undefined);
+    const prompt = buildPrompt(platform, style, post.title, post.content, post.summary, typeof subreddit === "string" ? subreddit : undefined, typeof lang === "string" ? lang : undefined, slug);
 
     const res = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,

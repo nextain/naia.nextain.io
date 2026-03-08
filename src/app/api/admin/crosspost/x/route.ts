@@ -96,3 +96,59 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: String(err) }, { status: 500 });
   }
 }
+
+export async function DELETE(req: NextRequest) {
+  const host = req.headers.get("host") ?? "";
+  if (!host.startsWith("localhost") && !host.startsWith("127.0.0.1")) {
+    return NextResponse.json({ error: "Not found" }, { status: 404 });
+  }
+
+  const apiKey = process.env.X_API_KEY;
+  const apiSecret = process.env.X_API_SECRET;
+  const accessToken = process.env.X_ACCESS_TOKEN;
+  const accessTokenSecret = process.env.X_ACCESS_TOKEN_SECRET;
+
+  if (!apiKey || !apiSecret || !accessToken || !accessTokenSecret) {
+    return NextResponse.json({ error: "X API credentials not configured" }, { status: 500 });
+  }
+
+  try {
+    const { tweetId } = await req.json();
+    if (typeof tweetId !== "string" || !tweetId.trim()) {
+      return NextResponse.json({ error: "No tweetId" }, { status: 400 });
+    }
+
+    const url = `https://api.twitter.com/2/tweets/${tweetId}`;
+    const nonce = crypto.randomBytes(16).toString("hex");
+    const timestamp = Math.floor(Date.now() / 1000).toString();
+
+    const oauthParams: Record<string, string> = {
+      oauth_consumer_key: apiKey,
+      oauth_nonce: nonce,
+      oauth_signature_method: "HMAC-SHA1",
+      oauth_timestamp: timestamp,
+      oauth_token: accessToken,
+      oauth_version: "1.0",
+    };
+
+    const signature = generateOAuthSignature("DELETE", url, oauthParams, apiSecret, accessTokenSecret);
+    oauthParams.oauth_signature = signature;
+
+    const authHeader = buildAuthHeader(oauthParams);
+
+    const res = await fetch(url, {
+      method: "DELETE",
+      headers: { Authorization: authHeader },
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      return NextResponse.json({ error: "Delete failed", details: data }, { status: res.status });
+    }
+
+    return NextResponse.json({ ok: true, deleted: data.data?.deleted });
+  } catch (err) {
+    return NextResponse.json({ error: String(err) }, { status: 500 });
+  }
+}

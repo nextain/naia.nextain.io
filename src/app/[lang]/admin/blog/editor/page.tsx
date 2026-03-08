@@ -41,12 +41,14 @@ interface CrosspostTarget {
   style?: string;
   lang?: string;
   subreddit?: string;
+  /** URL to manually submit content (for platforms that block automation) */
+  submitUrl?: string;
 }
 
 const CROSSPOST_TARGETS: CrosspostTarget[] = [
   // Blog — original content (Naver/Velog/CafeLua KO, Dev.to EN)
-  { id: "naver", platform: "naver", label: "네이버", group: "blog", type: "original", lang: "ko" },
-  { id: "velog", platform: "velog", label: "Velog", group: "blog", type: "original", lang: "ko" },
+  { id: "naver", platform: "naver", label: "네이버", group: "blog", type: "original", lang: "ko", submitUrl: "https://blog.naver.com/fstory97/postwrite" },
+  { id: "velog", platform: "velog", label: "Velog", group: "blog", type: "original", lang: "ko", submitUrl: "https://velog.io/write" },
   { id: "cafelua-ko", platform: "cafelua", label: "CafeLua (KO)", group: "blog", type: "original", lang: "ko" },
   { id: "cafelua-en", platform: "cafelua", label: "CafeLua (EN)", group: "blog", type: "original", lang: "en" },
   { id: "devto", platform: "devto", label: "Dev.to", group: "blog", type: "original", lang: "en" },
@@ -56,13 +58,13 @@ const CROSSPOST_TARGETS: CrosspostTarget[] = [
   { id: "linkedin-ko", platform: "linkedin", label: "LinkedIn (KO)", group: "luke", type: "ai", style: "luke", lang: "ko" },
   { id: "linkedin-en", platform: "linkedin", label: "LinkedIn (EN)", group: "luke", type: "ai", style: "luke", lang: "en" },
   // Naia social (Reddit, X, Instagram)
-  { id: "reddit-opensource", platform: "reddit", label: "r/opensource", group: "naia", type: "ai", style: "naia", subreddit: "opensource" },
-  { id: "reddit-locallama", platform: "reddit", label: "r/LocalLLaMA", group: "naia", type: "ai", style: "naia", subreddit: "LocalLLaMA" },
-  { id: "reddit-programming", platform: "reddit", label: "r/programming", group: "naia", type: "ai", style: "naia", subreddit: "programming" },
+  { id: "reddit-opensource", platform: "reddit", label: "r/opensource", group: "naia", type: "ai", style: "naia", subreddit: "opensource", submitUrl: "https://www.reddit.com/r/opensource/submit?type=text" },
+  { id: "reddit-locallama", platform: "reddit", label: "r/LocalLLaMA", group: "naia", type: "ai", style: "naia", subreddit: "LocalLLaMA", submitUrl: "https://www.reddit.com/r/LocalLLaMA/submit?type=text" },
+  { id: "reddit-programming", platform: "reddit", label: "r/programming", group: "naia", type: "ai", style: "naia", subreddit: "programming", submitUrl: "https://www.reddit.com/r/programming/submit?type=text" },
   { id: "x-ko", platform: "x", label: "X (KO)", group: "naia", type: "ai", style: "naia", lang: "ko" },
   { id: "x-en", platform: "x", label: "X (EN)", group: "naia", type: "ai", style: "naia", lang: "en" },
-  { id: "instagram-ko", platform: "instagram", label: "Insta (KO)", group: "naia", type: "ai", style: "naia", lang: "ko" },
-  { id: "instagram-en", platform: "instagram", label: "Insta (EN)", group: "naia", type: "ai", style: "naia", lang: "en" },
+  { id: "instagram-ko", platform: "instagram", label: "Insta (KO)", group: "naia", type: "ai", style: "naia", lang: "ko", submitUrl: "https://www.instagram.com/" },
+  { id: "instagram-en", platform: "instagram", label: "Insta (EN)", group: "naia", type: "ai", style: "naia", lang: "en", submitUrl: "https://www.instagram.com/" },
 ];
 
 const ALL_LOCALES = ["ko", "en", "ja", "zh", "fr", "de", "ru", "es", "pt", "vi", "id", "ar", "hi", "bn"];
@@ -140,8 +142,20 @@ function EditorInner() {
   const [crosspostTitle, setCrosspostTitle] = useState("");
   const [generating, setGenerating] = useState<Record<string, boolean>>({});
   const [posting, setPosting] = useState(false);
+  const [postingStatus, setPostingStatus] = useState<Record<string, "posting" | "done" | "fail" | "copied">>({});
   const [koPreview, setKoPreview] = useState<Record<string, string>>({});
   const [koPreviewLoading, setKoPreviewLoading] = useState<Record<string, boolean>>({});
+  const [publishedUrls, setPublishedUrlsRaw] = useState<Record<string, string>>(() => {
+    if (typeof window === "undefined" || !slugParam) return {};
+    try { return JSON.parse(localStorage.getItem(`crosspost-urls-${slugParam}`) ?? "{}"); } catch { return {}; }
+  });
+  const setPublishedUrls = (updater: Record<string, string> | ((prev: Record<string, string>) => Record<string, string>)) => {
+    setPublishedUrlsRaw((prev) => {
+      const next = typeof updater === "function" ? updater(prev) : updater;
+      if (selectedSlug) localStorage.setItem(`crosspost-urls-${selectedSlug}`, JSON.stringify(next));
+      return next;
+    });
+  };
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -463,9 +477,12 @@ function EditorInner() {
     if (ready.length === 0) { showMsg("배포할 드래프트가 없습니다"); return; }
     if (!confirm(`${ready.length}개 채널에 배포합니다. 계속하시겠습니까?`)) return;
     setPosting(true);
+    setPostingStatus({});
     const results: string[] = [];
     for (const target of ready) {
       const draft = drafts[target.id];
+      setPostingStatus((p) => ({ ...p, [target.id]: "posting" }));
+      setActiveTarget(target.id);
       try {
         if (target.platform === "devto") {
           const res = await fetch("/api/admin/crosspost", {
@@ -474,35 +491,82 @@ function EditorInner() {
             body: JSON.stringify({ slug: selectedSlug, targets: ["devto"], overrideTitle: crosspostTitle, overrideBody: draft }),
           });
           const data = await res.json();
-          if (res.ok && data.devto?.url) { results.push(`✓ Dev.to`); window.open(data.devto.url, "_blank"); }
-          else results.push(`✗ Dev.to`);
+          if (res.ok && data.devto?.url) {
+            results.push(`✓ Dev.to`);
+            setPublishedUrls((p) => ({ ...p, [target.id]: data.devto.url }));
+            setPostingStatus((p) => ({ ...p, [target.id]: "done" }));
+          } else {
+            results.push(`✗ Dev.to: ${data.error ?? "failed"}`);
+            setPostingStatus((p) => ({ ...p, [target.id]: "fail" }));
+          }
         } else if (target.platform === "reddit") {
           const sub = target.subreddit ?? "opensource";
-          const res = await fetch("/api/admin/crosspost", {
+          const res = await fetch("/api/admin/crosspost/social", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ slug: selectedSlug, targets: ["reddit"], subreddit: sub, overrideTitle: crosspostTitle, overrideBody: draft }),
+            body: JSON.stringify({ platform: "reddit", text: draft, title: crosspostTitle, subreddit: sub }),
           });
           const data = await res.json();
-          if (res.ok && data.reddit?.submitUrl) { results.push(`✓ r/${sub}`); window.open(data.reddit.submitUrl, "_blank"); }
-          else results.push(`✗ r/${sub}`);
+          if (res.ok && data.ok) {
+            results.push(`✓ r/${sub}`);
+            if (data.url) setPublishedUrls((p) => ({ ...p, [target.id]: data.url }));
+            setPostingStatus((p) => ({ ...p, [target.id]: "done" }));
+          } else {
+            results.push(`✗ r/${sub}: ${data.error ?? "failed"}`);
+            setPostingStatus((p) => ({ ...p, [target.id]: "fail" }));
+          }
         } else if (target.platform === "x") {
-          const res = await fetch("/api/admin/crosspost/x", {
+          const res = await fetch("/api/admin/crosspost/social", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ text: draft }),
+            body: JSON.stringify({ platform: "x", text: draft }),
           });
           const data = await res.json();
-          if (res.ok && data.tweetUrl) results.push(`✓ ${target.label}`);
-          else results.push(`✗ ${target.label}`);
+          if (res.ok && data.ok) {
+            results.push(`✓ ${target.label}`);
+            if (data.url) setPublishedUrls((p) => ({ ...p, [target.id]: data.url }));
+            setPostingStatus((p) => ({ ...p, [target.id]: "done" }));
+          } else {
+            results.push(`✗ ${target.label}: ${data.error ?? "failed"}`);
+            setPostingStatus((p) => ({ ...p, [target.id]: "fail" }));
+          }
+        } else if (["facebook", "linkedin", "instagram", "naver", "velog"].includes(target.platform)) {
+          // Playwright-based platforms
+          const res = await fetch("/api/admin/crosspost/social", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              platform: target.platform,
+              text: draft,
+              title: crosspostTitle,
+              url: `https://naia.nextain.io/${target.lang ?? "en"}/blog/${selectedSlug}`,
+            }),
+          });
+          const data = await res.json();
+          if (res.ok && data.ok) {
+            results.push(`✓ ${target.label}`);
+            if (data.url) setPublishedUrls((p) => ({ ...p, [target.id]: data.url }));
+            setPostingStatus((p) => ({ ...p, [target.id]: "done" }));
+          } else {
+            results.push(`✗ ${target.label}: ${data.error ?? "failed"}`);
+            setPostingStatus((p) => ({ ...p, [target.id]: "fail" }));
+          }
         } else {
+          // CafeLua or unknown — copy to clipboard
           await navigator.clipboard.writeText(draft);
           results.push(`✓ ${target.label} (복사됨)`);
+          setPostingStatus((p) => ({ ...p, [target.id]: "copied" }));
         }
-      } catch { results.push(`✗ ${target.label}`); }
+      } catch {
+        results.push(`✗ ${target.label}`);
+        setPostingStatus((p) => ({ ...p, [target.id]: "fail" }));
+      }
     }
     setPosting(false);
-    showMsg(results.join(", "));
+    // Show results in alert for visibility
+    const done = results.filter((r) => r.startsWith("✓")).length;
+    const failed = results.filter((r) => r.startsWith("✗")).length;
+    alert(`배포 완료: ${done} 성공, ${failed} 실패\n\n${results.join("\n")}`);
   };
 
   const handleDeploy = async () => {
@@ -551,11 +615,17 @@ function EditorInner() {
         if (res.ok) {
           const data = await res.json();
           const md = data.locales[target.lang ?? "en"] ?? data.locales["ko"] ?? "";
-          const body = md.replace(/^---[\s\S]*?---\s*/, "");
+          let body = md.replace(/^---[\s\S]*?---\s*/, "");
+          // Clean up locale markers and fix image paths
+          body = body.replace(/^.*<!-- *(?:ko|en) *-->.*$/gm, "");
+          body = body.replace(/\]\(\/posts\//g, "](https://naia.nextain.io/posts/");
+          body = body.replace(/\n{3,}/g, "\n\n");
+          body = body.trim();
           const lang = target.lang ?? "en";
+          const blogUrl = `https://naia.nextain.io/${lang}/blog/${selectedSlug}`;
           const originalLink = lang === "ko"
-            ? `*본 글은 [Naia 블로그](https://naia.nextain.io/ko/blog/${selectedSlug})에서 가져온 글입니다.*`
-            : `*Originally published at [Naia Blog](https://naia.nextain.io/en/blog/${selectedSlug})*`;
+            ? `*본 글은 [Naia 블로그](${blogUrl})에서 원본을 확인할 수 있습니다.*`
+            : `*Originally published at [Naia Blog](${blogUrl})*`;
           setDrafts((prev) => ({ ...prev, [targetId]: originalLink + "\n\n---\n\n" + body + "\n\n---\n\n" + originalLink }));
         } else {
           showMsg("Failed to load post content");
@@ -587,10 +657,14 @@ function EditorInner() {
     }
   };
 
-  const generateAll = async () => {
+  const generateAll = async (force = false) => {
     if (!selectedSlug) return;
     if (selectedPost) setCrosspostTitle(selectedPost.title);
-    await Promise.all(CROSSPOST_TARGETS.map((t) => generateOne(t.id)));
+    await Promise.all(CROSSPOST_TARGETS.map((t) => {
+      // Skip if draft already exists (unless force regenerate)
+      if (!force && drafts[t.id]?.trim()) return Promise.resolve();
+      return generateOne(t.id);
+    }));
   };
 
   const handlePost = async () => {
@@ -615,6 +689,7 @@ function EditorInner() {
         const data = await res.json();
         if (res.ok && data.devto?.url) {
           showMsg(`Dev.to published: ${data.devto.url}`);
+          setPublishedUrls((p) => ({ ...p, [activeTarget]: data.devto.url }));
           window.open(data.devto.url, "_blank");
         } else {
           showMsg(`Post failed: ${data.error ?? "Unknown error"}`);
@@ -658,14 +733,39 @@ function EditorInner() {
         const data = await res.json();
         if (res.ok && data.tweetUrl) {
           showMsg(`Tweet posted!`);
+          setPublishedUrls((p) => ({ ...p, [activeTarget]: data.tweetUrl }));
           window.open(data.tweetUrl, "_blank");
         } else {
           showMsg(`Tweet failed: ${data.error ?? "Unknown error"}`);
         }
       } catch { showMsg("Tweet failed"); }
       finally { setPosting(false); }
+    } else if (["facebook", "linkedin", "instagram", "naver", "velog"].includes(target.platform)) {
+      // Playwright-based platforms
+      if (!confirm(`${target.label}에 Playwright로 배포합니다. 계속하시겠습니까?`)) return;
+      setPosting(true);
+      try {
+        const res = await fetch("/api/admin/crosspost/social", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            platform: target.platform,
+            text: draft,
+            title: crosspostTitle,
+            url: `https://naia.nextain.io/${target.lang ?? "en"}/blog/${selectedSlug}`,
+          }),
+        });
+        const data = await res.json();
+        if (res.ok && data.ok) {
+          showMsg(`${target.label} posted!`);
+          if (data.url) setPublishedUrls((p) => ({ ...p, [activeTarget]: data.url }));
+        } else {
+          showMsg(`${target.label} failed: ${data.error ?? "Unknown error"}`);
+        }
+      } catch { showMsg(`${target.label} failed`); }
+      finally { setPosting(false); }
     } else {
-      // Velog, Naver, CafeLua, Facebook, LinkedIn, Instagram — copy to clipboard
+      // CafeLua or unknown — copy to clipboard
       await navigator.clipboard.writeText(draft);
       showMsg(`${target.label} 초안이 클립보드에 복사되었습니다.`);
     }
@@ -675,10 +775,6 @@ function EditorInner() {
     if (crosspostOpen) { setCrosspostOpen(false); return; }
     setCrosspostOpen(true);
     if (selectedPost) setCrosspostTitle(selectedPost.title);
-    if (Object.keys(drafts).length === 0) {
-      setActiveTarget("devto");
-      setTimeout(() => generateAll(), 0);
-    }
   };
 
   const previewMarkdown = content.replace(/^---[\s\S]*?---\s*/, "");
@@ -1002,24 +1098,33 @@ function EditorInner() {
                 return (
                   <div key={group} className="flex items-center gap-0.5">
                     <span className="mr-1 text-[10px] font-medium uppercase text-muted-foreground">{label}</span>
-                    {targets.map((t) => (
-                      <button
-                        key={t.id}
-                        onClick={() => setActiveTarget(t.id)}
-                        className={`rounded px-2 py-0.5 text-[11px] transition-colors ${
-                          activeTarget === t.id
-                            ? "bg-primary text-primary-foreground"
-                            : generating[t.id]
-                              ? "bg-yellow-500/20 text-yellow-700 dark:text-yellow-400"
-                              : drafts[t.id]
-                                ? "bg-green-500/20 text-green-700 dark:text-green-400"
-                                : "text-muted-foreground hover:text-foreground"
-                        }`}
-                      >
-                        {t.label}
-                        {generating[t.id] && " ..."}
-                      </button>
-                    ))}
+                    {targets.map((t) => {
+                      const ps = postingStatus[t.id];
+                      return (
+                        <button
+                          key={t.id}
+                          onClick={() => setActiveTarget(t.id)}
+                          className={`rounded px-2 py-0.5 text-[11px] transition-colors ${
+                            ps === "posting"
+                              ? "animate-pulse bg-orange-500/30 text-orange-700 dark:text-orange-400"
+                              : ps === "fail"
+                                ? "bg-red-500/20 text-red-700 dark:text-red-400"
+                                : activeTarget === t.id
+                                  ? "bg-primary text-primary-foreground"
+                                  : generating[t.id]
+                                    ? "bg-yellow-500/20 text-yellow-700 dark:text-yellow-400"
+                                    : publishedUrls[t.id]
+                                      ? "bg-blue-500/20 text-blue-700 dark:text-blue-400"
+                                      : drafts[t.id]
+                                        ? "bg-green-500/20 text-green-700 dark:text-green-400"
+                                        : "text-muted-foreground hover:text-foreground"
+                          }`}
+                        >
+                          {ps === "posting" ? "⏳ " : ps === "done" ? "✓ " : ps === "copied" ? "📋 " : ps === "fail" ? "✗ " : publishedUrls[t.id] ? "✓ " : ""}{t.label}
+                          {generating[t.id] && " ..."}
+                        </button>
+                      );
+                    })}
                     <div className="mx-1 h-3 w-px bg-border/30" />
                   </div>
                 );
@@ -1076,7 +1181,7 @@ function EditorInner() {
             <Button
               size="sm"
               variant="outline"
-              onClick={() => { if (confirm("전체 채널을 재생성합니다. 편집한 내용이 덮어씌워집니다. 계속하시겠습니까?")) generateAll(); }}
+              onClick={() => { if (confirm("전체 채널을 재생성합니다. 편집한 내용이 덮어씌워집니다. 계속하시겠습니까?")) generateAll(true); }}
               disabled={Object.values(generating).some(Boolean)}
               className="text-xs"
             >
@@ -1084,17 +1189,40 @@ function EditorInner() {
               Regenerate All
             </Button>
 
-            <Button
-              size="sm"
-              onClick={handlePost}
-              disabled={posting || !drafts[activeTarget]?.trim()}
-            >
-              <Send className="mr-1 h-3 w-3" />
-              {posting ? "..." : (() => {
-                const p = CROSSPOST_TARGETS.find((t) => t.id === activeTarget)?.platform;
-                return p === "reddit" ? "Open Reddit" : p === "devto" ? "Publish" : "Copy";
-              })()}
-            </Button>
+            {(() => {
+              const target = CROSSPOST_TARGETS.find((t) => t.id === activeTarget);
+              if (target?.submitUrl) {
+                return (
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => {
+                      if (drafts[activeTarget]?.trim()) {
+                        navigator.clipboard.writeText(drafts[activeTarget]);
+                        showMsg("클립보드에 복사됨");
+                      }
+                      window.open(target.submitUrl, "_blank");
+                    }}
+                  >
+                    <ExternalLink className="mr-1 h-3 w-3" />
+                    {target.label} 열기 (수동)
+                  </Button>
+                );
+              }
+              return (
+                <Button
+                  size="sm"
+                  onClick={handlePost}
+                  disabled={posting || !drafts[activeTarget]?.trim()}
+                >
+                  <Send className="mr-1 h-3 w-3" />
+                  {posting ? "..." : (() => {
+                    const p = target?.platform;
+                    return p === "devto" ? "Publish" : "배포";
+                  })()}
+                </Button>
+              );
+            })()}
 
             <Button
               size="sm"
@@ -1223,8 +1351,46 @@ function EditorInner() {
             <span className="text-[10px] text-muted-foreground">
               {Object.values(generating).filter(Boolean).length > 0
                 ? `Generating ${Object.values(generating).filter(Boolean).length} drafts...`
-                : `${Object.keys(drafts).length}/${CROSSPOST_TARGETS.length} drafts ready`}
+                : `${Object.keys(drafts).length}/${CROSSPOST_TARGETS.length} drafts | ${Object.keys(publishedUrls).length} published`}
             </span>
+            <div className="mx-1 h-3 w-px bg-border/30" />
+            {publishedUrls[activeTarget] ? (
+              <a
+                href={publishedUrls[activeTarget]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1 text-[10px] text-blue-600 hover:underline dark:text-blue-400"
+              >
+                <ExternalLink className="h-3 w-3" />
+                {publishedUrls[activeTarget].length > 60
+                  ? publishedUrls[activeTarget].slice(0, 60) + "..."
+                  : publishedUrls[activeTarget]}
+              </a>
+            ) : (
+              <input
+                type="text"
+                placeholder="배포 URL 입력..."
+                className="flex-1 bg-transparent text-[10px] text-muted-foreground placeholder:text-muted-foreground/40 focus:outline-none"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    const val = (e.target as HTMLInputElement).value.trim();
+                    if (val) {
+                      setPublishedUrls((p) => ({ ...p, [activeTarget]: val }));
+                      (e.target as HTMLInputElement).value = "";
+                      showMsg("URL saved");
+                    }
+                  }
+                }}
+              />
+            )}
+            {publishedUrls[activeTarget] && (
+              <button
+                onClick={() => setPublishedUrls((p) => { const next = { ...p }; delete next[activeTarget]; return next; })}
+                className="text-[10px] text-muted-foreground hover:text-destructive"
+              >
+                ✕
+              </button>
+            )}
             <div className="flex-1" />
             {message && (
               <span className="max-w-xs truncate text-[10px] text-muted-foreground">

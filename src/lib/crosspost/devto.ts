@@ -20,6 +20,16 @@ function normalizeTag(tag: string): string {
   return tag.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 30);
 }
 
+function prepareMarkdownForDevTo(markdown: string): string {
+  // Remove locale-specific lines (e.g. images with <!-- ko --> marker)
+  let body = markdown.replace(/^.*<!-- *ko *-->.*$/gm, "");
+  // Convert relative image/link paths to absolute naia.nextain.io URLs
+  body = body.replace(/\]\(\/posts\//g, "](https://naia.nextain.io/posts/");
+  // Clean up triple+ newlines
+  body = body.replace(/\n{3,}/g, "\n\n");
+  return body.trim();
+}
+
 export async function publishToDevTo(opts: {
   title: string;
   markdown: string;
@@ -40,7 +50,7 @@ export async function publishToDevTo(opts: {
 
   const article: DevtoArticle = {
     title: opts.title,
-    body_markdown: opts.markdown,
+    body_markdown: prepareMarkdownForDevTo(opts.markdown),
     published: true,
     tags: devtoTags,
     canonical_url: `https://naia.nextain.io/en/blog/${opts.slug}`,
