@@ -6,6 +6,25 @@ import { Button } from "@/components/ui/button";
 import { Github, Download, Heart } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+	params,
+}: {
+	params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+	const { lang } = await params;
+	if (!isLocale(lang)) return {};
+	const dict = await getDictionary(lang as Locale);
+	const n = dict.naia;
+	return buildPageMetadata({
+		lang,
+		path: "naia",
+		title: `${n.title} — ${n.subtitle}`,
+		description: n.identity.appearance.value,
+	});
+}
 
 export default async function NaiaPage({
 	params,

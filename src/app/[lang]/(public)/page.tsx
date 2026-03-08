@@ -10,6 +10,24 @@ import { UsbBoot } from "@/components/home/usb-boot";
 import { Faq } from "@/components/home/faq";
 import { readHomeFaq } from "@/lib/home-docs";
 import { auth } from "@/lib/auth";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return buildPageMetadata({
+    lang,
+    path: "",
+    title: dict.meta.title,
+    description: dict.meta.description,
+  });
+}
 
 export default async function HomePage({
   params,

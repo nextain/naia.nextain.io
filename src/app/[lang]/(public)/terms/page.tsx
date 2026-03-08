@@ -4,6 +4,24 @@ import type { Locale } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import { readLegalDoc } from "@/lib/legal-docs";
 import { LegalMarkdown } from "@/components/legal/legal-markdown";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  if (!isLocale(lang)) return {};
+  const dict = await getDictionary(lang as Locale);
+  return buildPageMetadata({
+    lang,
+    path: "terms",
+    title: `${dict.footer.links.terms} — Naia`,
+    description: `Naia ${dict.footer.links.terms}`,
+  });
+}
 
 export default async function TermsPage({
   params,

@@ -37,6 +37,13 @@ export async function generateMetadata({
       description: dict.meta.description,
       locale: lang,
       url: `/${lang}/blog`,
+      images: [{ url: "/branding/character/naia-default-character.png", width: 800, height: 800, alt: "Naia" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${dict.header.blog} — ${dict.meta.title}`,
+      description: dict.meta.description,
+      images: ["/branding/character/naia-default-character.png"],
     },
   };
 }

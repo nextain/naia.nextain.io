@@ -1,6 +1,6 @@
 # Naia
 
-> The most advanced AI agent, as the perfect OS.
+> The Next Generation AI OS — Your AI lives here.
 
 Naia is a Linux AI desktop OS built on top of the OpenClaw ecosystem. It provides GUI-based access to 5,700+ community skills, 7 LLM providers, and a 3D AI avatar — all without requiring API keys.
 
@@ -20,6 +20,15 @@ Naia is a desktop application (and a standalone Linux OS) that rides on the Open
 - **One-Click Install & OS**: One-click desktop app install, or build a dedicated AI environment with the Linux OS image. Flatpak, AppImage, DEB, RPM supported.
 - **No API Keys Required**: Start instantly with a Naia account and credits. No separate API key setup needed.
 - **14 Languages**: English, Korean, Japanese, Chinese, French, German, Russian, Spanish, Arabic, Hindi, Bengali, Portuguese, Indonesian, Vietnamese.
+
+## Meet Naia — The Liquid Cat
+
+Naia is a digital cat made of liquid carbon — your AI companion. She flows transparently along logic, and when you need her, she can harden like diamond to protect you. Liquid logic, living companion — your AI lives here.
+
+- **Name origins**: Greek (Naiad, water nymph), Basque (Nahia, wave/wish), Hawaiian (dolphin), Korean (나의, mine), Acronym (Next-gen AI Agent)
+- **Personality**: Rational Optimist — smart and logical, cat-like calm, transparent honesty, customizable to your preference
+- **Core values**: AI Sovereignty, Privacy First, Transparency, Always On, Avatar-Centric
+- **Customizable**: Appearance, personality, and role — secretary, friend, scholar, partner, family — whatever you want
 
 ## How is Naia different?
 
@@ -45,12 +54,16 @@ The homepage and portal (this site) provides:
 - **API Key Management**: Create and manage API keys for connecting the desktop app.
 - **Desktop Integration**: Seamless deep-link connection between the web portal and the local Naia app.
 - **User Manuals**: Comprehensive guides on installing and using Naia.
-- **Download Page**: Download Flatpak, AppImage, DEB, RPM packages.
+- **Download Page**: Download Flatpak, AppImage, DEB, RPM packages and live USB ISO.
+- **Blog**: Project news, philosophy, and tech stories.
 
 ## Public Pages
 
 - `/{locale}` — Homepage (features, comparison, pricing, FAQ)
-- `/{locale}/download` — Download desktop app
+- `/{locale}/naia` — Meet Naia (character persona, brand introduction)
+- `/{locale}/download` — Download desktop app and OS
+- `/{locale}/contribute` — Open source contribution guide (AI-native onboarding)
+- `/{locale}/donation` — Support the project
 - `/{locale}/manual` — User manual
 - `/{locale}/manual/{slug}` — Manual details (`video-manual`, `live-usb`, `install`, `install-iso`, `install-app`, `getting-started`, `main-screen`, `chat`, `history`, `progress`, `skills`, `channels`, `agents`, `diagnostics`, `settings`, `tools`, `naia-account`, `troubleshooting`, `open-source`)
 - `/{locale}/terms` — Terms of Service
@@ -121,5 +134,8 @@ Naia is developed by Nextain, a South Korean AI company.
 - Company: https://about.nextain.io
 - Website: https://naia.nextain.io
 - GitHub: https://github.com/nextain/naia-os
+- Twitter/X: https://x.com/Naia_Nextain
+- Instagram: https://www.instagram.com/naia_nextain/
+- Reddit: https://www.reddit.com/user/naia-nextain/
 - Discord: https://discord.gg/FGYJN7auty
 - Donation: https://naia.nextain.io/donation

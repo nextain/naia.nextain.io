@@ -13,6 +13,27 @@ import type { ManualSlug } from "@/lib/manual-docs";
 import { ManualMarkdown } from "@/components/manual/manual-markdown";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { buildPageMetadata } from "@/lib/seo";
+import type { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; slug: string }>;
+}): Promise<Metadata> {
+  const { lang, slug } = await params;
+  if (!isLocale(lang) || !isManualSlug(slug)) return {};
+  const dict = await getDictionary(lang as Locale);
+  const sections = dict.manual.sections as Record<string, string>;
+  const sectionKey = SLUG_TO_SECTION_KEY[slug as ManualSlug];
+  const sectionTitle = sections[sectionKey] ?? slug;
+  return buildPageMetadata({
+    lang,
+    path: `manual/${slug}`,
+    title: `${sectionTitle} — ${dict.header.manual}`,
+    description: `${sectionTitle} — Naia ${dict.header.manual}`,
+  });
+}
 
 export async function generateStaticParams() {
   const params: Array<{ lang: string; slug: string }> = [];

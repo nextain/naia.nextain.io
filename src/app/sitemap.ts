@@ -5,7 +5,7 @@ import { getPostSlugs } from "@/lib/posts";
 
 const BASE_URL = "https://naia.nextain.io";
 
-const PUBLIC_PAGES = ["", "download", "terms", "privacy", "refund", "contact", "manual", "blog"];
+const PUBLIC_PAGES = ["", "naia", "download", "contribute", "donation", "terms", "privacy", "refund", "contact", "manual", "blog"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
