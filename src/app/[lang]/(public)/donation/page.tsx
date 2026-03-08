@@ -19,7 +19,10 @@ export async function generateMetadata({
     lang,
     path: "donation",
     title: `${dict.footer.links.donation} — Naia`,
-    description: `Naia ${dict.footer.links.donation}`,
+    description: lang === "ko"
+      ? "Naia 오픈소스 프로젝트를 후원해주세요. GitHub Sponsors를 통해 개발을 지원할 수 있습니다."
+      : "Support the Naia open source project. Sponsor development through GitHub Sponsors.",
+    keywords: ["Naia donate", "sponsor Naia", "GitHub Sponsors", "open source donation", "support AI development"],
   });
 }
 

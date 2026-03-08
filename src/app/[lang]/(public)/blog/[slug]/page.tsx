@@ -62,6 +62,7 @@ export async function generateMetadata({
       description: post.summary ?? post.title,
       ...(post.hero ? { images: [post.hero] } : {}),
     },
+    keywords: ["Naia", "AI OS", ...post.tags],
   };
 }
 
@@ -165,7 +166,7 @@ export default async function BlogPostPage({
         )}
       </header>
 
-      <BlogMarkdown markdown={post.content} slug={post.slug} />
+      <BlogMarkdown markdown={post.content} slug={post.slug} locale={lang} />
 
       <PopularPosts
         lang={lang}

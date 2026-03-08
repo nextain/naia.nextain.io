@@ -13,7 +13,7 @@ import type { ManualSlug } from "@/lib/manual-docs";
 import { ManualMarkdown } from "@/components/manual/manual-markdown";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { buildPageMetadata } from "@/lib/seo";
+import { buildPageMetadata, MANUAL_OG_IMAGE } from "@/lib/seo";
 import type { Metadata } from "next";
 
 export async function generateMetadata({
@@ -27,11 +27,19 @@ export async function generateMetadata({
   const sections = dict.manual.sections as Record<string, string>;
   const sectionKey = SLUG_TO_SECTION_KEY[slug as ManualSlug];
   const sectionTitle = sections[sectionKey] ?? slug;
+  const ogScreenshot = MANUAL_OG_IMAGE[slug]
+    ? `/manual/en/${MANUAL_OG_IMAGE[slug]}`
+    : undefined;
+  const manualDesc = lang === "ko"
+    ? `Naia 사용법 — ${sectionTitle}. Naia AI OS 데스크톱 앱 가이드.`
+    : `Naia Manual — ${sectionTitle}. Naia AI OS desktop app guide.`;
   return buildPageMetadata({
     lang,
     path: `manual/${slug}`,
-    title: `${sectionTitle} — ${dict.header.manual}`,
-    description: `${sectionTitle} — Naia ${dict.header.manual}`,
+    title: `${sectionTitle} — Naia ${dict.header.manual}`,
+    description: manualDesc,
+    ogImage: ogScreenshot,
+    keywords: ["Naia manual", `Naia ${sectionTitle}`, "AI OS guide", "Naia tutorial", "Naia desktop app"],
   });
 }
 

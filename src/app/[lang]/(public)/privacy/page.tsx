@@ -19,7 +19,10 @@ export async function generateMetadata({
     lang,
     path: "privacy",
     title: `${dict.footer.links.privacy} — Naia`,
-    description: `Naia ${dict.footer.links.privacy}`,
+    description: lang === "ko"
+      ? "Naia 개인정보처리방침. 수집하는 정보, 이용 목적, 보관 기간, 사용자 권리를 안내합니다."
+      : "Naia Privacy Policy. Information we collect, how we use it, retention periods, and your rights.",
+    keywords: ["Naia privacy", "privacy policy", "AI OS privacy", "data protection"],
   });
 }
 

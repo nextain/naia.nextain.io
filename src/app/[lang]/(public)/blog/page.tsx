@@ -22,9 +22,13 @@ export async function generateMetadata({
   const { lang } = await params;
   if (!isLocale(lang)) return {};
   const dict = await getDictionary(lang as Locale);
+  const blogDesc = lang === "ko"
+    ? "Naia 프로젝트 소식, 개발 철학, 기술 이야기. AI OS 개발 여정을 함께하세요."
+    : "Naia project news, development philosophy, and tech stories. Follow the AI OS development journey.";
   return {
-    title: `${dict.header.blog} — ${dict.meta.title}`,
-    description: dict.meta.description,
+    title: `${dict.header.blog} — Naia`,
+    description: blogDesc,
+    keywords: ["Naia blog", "AI OS blog", "Naia development", "open source AI news", "Nextain blog"],
     alternates: {
       canonical: `/${lang}/blog`,
       languages: Object.fromEntries([
@@ -33,17 +37,15 @@ export async function generateMetadata({
       ]),
     },
     openGraph: {
-      title: `${dict.header.blog} — ${dict.meta.title}`,
-      description: dict.meta.description,
+      title: `${dict.header.blog} — Naia`,
+      description: blogDesc,
       locale: lang,
       url: `/${lang}/blog`,
-      images: [{ url: "/branding/character/naia-default-character.png", width: 800, height: 800, alt: "Naia" }],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${dict.header.blog} — ${dict.meta.title}`,
-      description: dict.meta.description,
-      images: ["/branding/character/naia-default-character.png"],
+      title: `${dict.header.blog} — Naia`,
+      description: blogDesc,
     },
   };
 }

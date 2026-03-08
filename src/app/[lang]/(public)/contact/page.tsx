@@ -19,7 +19,10 @@ export async function generateMetadata({
     lang,
     path: "contact",
     title: `${dict.footer.links.contact} — Naia`,
-    description: `Naia ${dict.footer.links.contact}`,
+    description: lang === "ko"
+      ? "Naia 팀에 문의하세요. 기술 지원, 파트너십, 일반 문의 연락처를 안내합니다."
+      : "Contact the Naia team. Technical support, partnerships, and general inquiries.",
+    keywords: ["Naia contact", "Naia support", "Nextain contact", "AI OS support"],
   });
 }
 

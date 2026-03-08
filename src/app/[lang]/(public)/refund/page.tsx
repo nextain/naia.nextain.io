@@ -19,7 +19,10 @@ export async function generateMetadata({
     lang,
     path: "refund",
     title: `${dict.footer.links.refund} — Naia`,
-    description: `Naia ${dict.footer.links.refund}`,
+    description: lang === "ko"
+      ? "Naia 환불 정책. 크레딧 구매 환불 조건, 절차, 기간을 안내합니다."
+      : "Naia Refund Policy. Conditions, procedures, and timelines for credit purchase refunds.",
+    keywords: ["Naia refund", "refund policy", "AI credit refund"],
   });
 }
 

@@ -26,6 +26,8 @@ export async function generateMetadata({
     path: "",
     title: dict.meta.title,
     description: dict.meta.description,
+    ogImage: "/branding/og-home.jpg",
+    keywords: ["Naia", "AI OS", "personal AI", "VRM avatar", "open source AI", "Linux AI", "local AI", "voice AI", "3D avatar", "AI companion", "Steam gaming Linux", "OpenClaw", "AI gateway", "Nextain"],
   });
 }
 

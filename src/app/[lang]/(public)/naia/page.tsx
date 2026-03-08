@@ -23,6 +23,8 @@ export async function generateMetadata({
 		path: "naia",
 		title: `${n.title} — ${n.subtitle}`,
 		description: n.identity.appearance.value,
+		ogImage: "/branding/og-naia.png",
+		keywords: ["Naia", "AI character", "liquid carbon cat", "digital companion", "VRM avatar", "AI personality", "AI identity", "open source AI character"],
 	});
 }
 

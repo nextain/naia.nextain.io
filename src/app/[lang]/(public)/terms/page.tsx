@@ -19,7 +19,10 @@ export async function generateMetadata({
     lang,
     path: "terms",
     title: `${dict.footer.links.terms} — Naia`,
-    description: `Naia ${dict.footer.links.terms}`,
+    description: lang === "ko"
+      ? "Naia 서비스 이용약관. AI OS 서비스 이용 조건, 사용자 권리와 의무, 면책 사항을 안내합니다."
+      : "Naia Terms of Service. Service conditions, user rights and obligations, and disclaimers for the AI OS platform.",
+    keywords: ["Naia terms", "terms of service", "AI OS terms", "Naia legal"],
   });
 }
 

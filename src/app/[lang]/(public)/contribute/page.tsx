@@ -16,8 +16,9 @@ export async function generateMetadata({
 	return buildPageMetadata({
 		lang,
 		path: "contribute",
-		title: `${dict.contribute.title}`,
+		title: dict.contribute.title,
 		description: dict.contribute.subtitle,
+		keywords: ["Naia open source", "contribute to Naia", "AI-native open source", "open source contribution", "Naia OS GitHub", "translate AI", "AI community"],
 	});
 }
 import {

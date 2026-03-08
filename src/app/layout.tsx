@@ -43,13 +43,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     alternateLocale: ["ko_KR", "ja_JP", "zh_CN", "fr_FR", "de_DE", "ru_RU", "es_ES", "pt_BR", "vi_VN", "id_ID", "ar_SA", "hi_IN", "bn_BD"],
-    images: [{ url: "/branding/character/naia-default-character.png", width: 800, height: 800, alt: "Naia" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Naia — The Next Generation AI OS",
     description: "Your own AI lives here. Open source, cloud to local AI — you choose. VRM 3D avatar with voice chat, 70+ skills, OpenClaw AI gateway, memory and personality all on your machine. A safe, Steam-ready Linux where your AI lives.",
-    images: ["/branding/character/naia-default-character.png"],
   },
 };
 

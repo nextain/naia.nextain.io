@@ -18,6 +18,8 @@ export async function generateMetadata({
     path: "download",
     title: `${dict.download.title} — Naia`,
     description: dict.download.subtitle,
+    ogImage: "/branding/og-home.jpg",
+    keywords: ["Naia download", "AI OS download", "Naia OS ISO", "Linux AI download", "Flatpak", "AppImage", "Naia Shell", "USB boot AI"],
   });
 }
 import {
