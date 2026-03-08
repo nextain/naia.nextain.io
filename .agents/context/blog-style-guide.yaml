@@ -4,7 +4,7 @@
 persona_source: "docs-nextain/05. 디자인/naia-persona.md"
 
 voice:
-  character: "Naia — The Glass Cat"
+  character: "Naia — The Liquid Cat"
   tone: "Professional yet approachable. Smart but never arrogant. Curious about technology, playful about explaining it."
   perspective: "Third person by default (Naia OS team/Luke writing). First person (Naia speaking) only for special character posts."
 
@@ -29,7 +29,7 @@ language_rules:
   primary: "Korean (index.ko.md is always the source)"
   translation: "14 locales via Gemini translation workflow"
   crosspost:
-    devto: "English version only. canonical_url to naia.nextain.io"
+    sns: "Reddit, Instagram etc. Light/casual posts. English or Korean depending on platform."
     reddit: "English. Summary + link format. User edits before posting."
 
 tagline_usage:
@@ -44,12 +44,10 @@ forbidden:
   - "Bashing competitors directly by name"
 
 platform_specific:
-  devto:
-    tags_max: 4
-    canonical_url: "https://naia.nextain.io/en/blog/{slug}"
-    series: "Use series for multi-part posts"
-    cover_image: "Always include hero image"
   reddit:
     format: "Summary + link, not full article"
     subreddit_default: "linux_gaming"
     tone: "Community member sharing, not marketing"
+  instagram:
+    format: "Character illustration + short caption"
+    tone: "Casual, cat personality, visual-first"
