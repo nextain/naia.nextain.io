@@ -9,9 +9,68 @@ import rehypeRaw from "rehype-raw";
 interface BlogMarkdownProps {
   markdown: string;
   slug: string;
+  locale?: string;
 }
 
-export function BlogMarkdown({ markdown, slug }: BlogMarkdownProps) {
+/**
+ * Filter images by locale. Convention: ![alt](src)<!-- ko -->
+ *
+ * Consecutive images form a group. Within a group:
+ * - Marked images (<!-- XX -->) show only for that locale
+ * - Unmarked images are fallback: shown only when no marked image matches
+ *
+ * Example:
+ *   ![KO](ko.webp)<!-- ko -->
+ *   ![EN](en.webp)
+ * → KO sees ko.webp, all others see en.webp
+ */
+function filterLocaleImages(md: string, locale: string): string {
+  const imgLine = /^(!\[[^\]]*\]\([^)]*\))\s*(?:<!--\s*(\w{2})\s*-->)?$/;
+  const lines = md.split("\n");
+  const result: string[] = [];
+
+  let i = 0;
+  while (i < lines.length) {
+    const match = lines[i].trim().match(imgLine);
+    if (!match) {
+      result.push(lines[i]);
+      i++;
+      continue;
+    }
+
+    // Collect consecutive image lines into a group
+    const group: { line: string; lang: string | null }[] = [];
+    while (i < lines.length) {
+      const trimmed = lines[i].trim();
+      if (trimmed === "") { i++; continue; } // skip blank lines within group
+      const m = trimmed.match(imgLine);
+      if (!m) break;
+      group.push({ line: m[1], lang: m[2] ?? null });
+      i++;
+    }
+
+    const hasMarkers = group.some((g) => g.lang !== null);
+    if (!hasMarkers) {
+      // No markers at all → show everything
+      for (const g of group) result.push(g.line);
+    } else {
+      // Check if this locale has a specific image
+      const localeMatch = group.find((g) => g.lang === locale);
+      if (localeMatch) {
+        result.push(localeMatch.line);
+      } else {
+        // Fallback: show unmarked images only
+        for (const g of group) {
+          if (g.lang === null) result.push(g.line);
+        }
+      }
+    }
+  }
+
+  return result.join("\n");
+}
+
+export function BlogMarkdown({ markdown, slug, locale }: BlogMarkdownProps) {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
   const closeLightbox = useCallback(() => setLightbox(null), []);
@@ -159,7 +218,7 @@ export function BlogMarkdown({ markdown, slug }: BlogMarkdownProps) {
             hr: () => <hr className="my-8 border-border/40" />,
           }}
         >
-          {markdown}
+          {locale ? filterLocaleImages(markdown, locale) : markdown}
         </ReactMarkdown>
       </article>
 
