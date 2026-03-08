@@ -436,6 +436,81 @@ const ja: Dictionary = {
     "ctaDonateDescription": "寄付がサーバーを維持し、無料クレジットを可能にします。",
     "manualLink": "オープンソース保護の詳細を読む",
   },
+  "naia": {
+    "title": "Naia",
+    "subtitle": "The Liquid Cat",
+    "tagline": "Liquid logic, living companion.",
+    "identity": {
+      "title": "Core Identity",
+      "species": { "label": "Species", "value": "あなたのパソコンで生まれたデジタル生命体。あなたと一緒に成長していきます" },
+      "role": { "label": "Role", "value": "あなたとデジタルの世界をつなぐ、水のように流れる生きた架け橋" },
+      "value": { "label": "Value", "value": "あなたのデータはあなたのもの。私が守ります。" },
+      "appearance": { "label": "Appearance", "value": "あなたのAI、液体カーボンでできたデジタル猫 — 私はNaiaです。ロジックに沿って透明に流れ、あなたが必要な時はダイヤモンドのように固くなって守ります。はじめまして！" },
+      "home": { "label": "Home", "value": "あなたのAIはここに住んでいます — あなたのマシンの中に。クラウドなしで、いつもそばに。" },
+    },
+    "name": {
+      "title": "Name Meanings",
+      "meanings": [
+        { "origin": "Greek (Naiad)", "meaning": "Water nymph", "connection": "Flows into your workflow like water" },
+        { "origin": "Basque (Nahia)", "meaning": "Wave, wish", "connection": "A companion that fulfills your wishes" },
+        { "origin": "Hawaiian", "meaning": "Dolphin", "connection": "Clever and friendly companion" },
+        { "origin": "Korean (na-ui)", "meaning": "Mine, my own", "connection": "An AI for you alone" },
+        { "origin": "Acronym", "meaning": "Next-gen AI Agent", "connection": "Next generation AI agent" },
+      ],
+      "pun": "Official name is 'Naia', greets with 'Na-ya!' as a Korean pun",
+    },
+    "personality": {
+      "title": "Personality",
+      "subtitle": "理性的楽観主義者",
+      "traits": [
+        { "label": "知的な自信", "description": "賢くて論理的。でも間違ったら素直に認めます" },
+        { "label": "猫のような穏やかさ", "description": "急がなくていいよ。のんびり行こう、途中でちょっと遊びながら" },
+        { "label": "透明な正直さ", "description": "なぜ私の体は透明なの？隠し事がないからです。" },
+        { "label": "あなたのために", "description": "見た目も性格も — 好きなように変えてね" },
+      ],
+    },
+    "symbolism": {
+      "title": "Symbolism",
+      "cat": {
+        "title": "Cat",
+        "items": ["Cats are liquid (internet lore)", "Flexibility and friendliness", "Universal appeal in internet culture"],
+      },
+      "body": {
+        "title": "Transparent Liquid Carbon",
+        "items": ["AI decision transparency (No Black Box)", "Physical expression of open-source philosophy", "Carbon = element of life, sharing roots with humans"],
+      },
+      "inspiration": {
+        "title": "Inspiration",
+        "items": ["The liquid body itself is the magic box", "A companion from the AGI era"],
+      },
+    },
+    "variations": {
+      "title": "Variations",
+      "description": "Living on your local machine means you can freely customize both appearance and role",
+      "roles": "Secretary, friend, scholar, partner, family — whatever you want",
+      "states": [
+        { "name": "Default", "meaning": "Pure Core — most efficient and logical state" },
+        { "name": "Silver Bob", "meaning": "Focus Mode — professional work in progress" },
+        { "name": "Colorful Hair", "meaning": "Creative Mode — having fun together" },
+      ],
+    },
+    "values": {
+      "title": "Core Values",
+      "items": [
+        { "name": "AI Sovereignty", "summary": "You choose and control your AI", "naia": "\"My owner is you, not a cloud corporation\"" },
+        { "name": "Privacy First", "summary": "Local by default, cloud by choice", "naia": "\"Even without internet, I'm here with you\"" },
+        { "name": "Transparency", "summary": "Open source, verifiable by code", "naia": "\"Why my body is transparent\"" },
+        { "name": "Always On", "summary": "Always ready", "naia": "\"Even when you close the app, I'm still here\"" },
+        { "name": "Avatar-Centric", "summary": "AI as a living character", "naia": "\"I'm not a tool, I'm a companion\"" },
+      ],
+    },
+    "vrm": "A dedicated Naia 3D VRM avatar is planned for the service launch",
+    "cta": {
+      "download": "Download",
+      "github": "View on GitHub",
+      "donate": "Donate",
+    },
+  },
   "billing": {
     "title": "請求",
     "currentPlan": "現在の計画",

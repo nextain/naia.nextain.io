@@ -127,3 +127,8 @@
   0%, 100% { transform: translate(0, 0) scale(1.1); opacity: 0.4; }
   50% { transform: translate(-40px, 30px) scale(0.95); opacity: 0.6; }
 }
+
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}

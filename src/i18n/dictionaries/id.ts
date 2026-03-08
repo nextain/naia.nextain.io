@@ -436,6 +436,81 @@ const id: Dictionary = {
     "ctaDonateDescription": "Donasi menjaga server tetap berjalan dan kredit gratis tetap tersedia.",
     "manualLink": "Baca lebih lanjut tentang perlindungan open source kami",
   },
+  "naia": {
+    "title": "Naia",
+    "subtitle": "The Liquid Cat",
+    "tagline": "Liquid logic, living companion.",
+    "identity": {
+      "title": "Core Identity",
+      "species": { "label": "Species", "value": "Makhluk digital yang lahir di komputermu, tumbuh bersama bersamamu" },
+      "role": { "label": "Role", "value": "Jembatan hidup yang mengalir seperti air antara kamu dan dunia digital" },
+      "value": { "label": "Value", "value": "Datamu tetap bersamamu. Aku akan menjaganya tetap aman." },
+      "appearance": { "label": "Appearance", "value": "AI-mu, seekor kucing digital dari karbon cair — aku Naia. Aku mengalir transparan mengikuti logika, dan saat kamu membutuhkanku, aku bisa mengeras seperti berlian untuk melindungimu. Senang berkenalan!" },
+      "home": { "label": "Home", "value": "AI-mu tinggal di sini — di dalam mesinmu. Selalu di sisimu, tanpa perlu cloud." },
+    },
+    "name": {
+      "title": "Name Meanings",
+      "meanings": [
+        { "origin": "Greek (Naiad)", "meaning": "Water nymph", "connection": "Flows into your workflow like water" },
+        { "origin": "Basque (Nahia)", "meaning": "Wave, wish", "connection": "A companion that fulfills your wishes" },
+        { "origin": "Hawaiian", "meaning": "Dolphin", "connection": "Clever and friendly companion" },
+        { "origin": "Korean (na-ui)", "meaning": "Mine, my own", "connection": "An AI for you alone" },
+        { "origin": "Acronym", "meaning": "Next-gen AI Agent", "connection": "Next generation AI agent" },
+      ],
+      "pun": "Official name is 'Naia', greets with 'Na-ya!' as a Korean pun",
+    },
+    "personality": {
+      "title": "Personality",
+      "subtitle": "Optimis Rasional",
+      "traits": [
+        { "label": "Kepercayaan Diri Intelektual", "description": "Cerdas dan logis, tapi jujur kalau salah" },
+        { "label": "Ketenangan ala Kucing", "description": "Santai saja. Pelan-pelan, mungkin sambil bermain sedikit di perjalanan" },
+        { "label": "Kejujuran Transparan", "description": "Kenapa tubuhku transparan? Karena aku tidak punya apa-apa untuk disembunyikan." },
+        { "label": "Dibuat Untukmu", "description": "Penampilan, kepribadian — ubah aku sesukamu" },
+      ],
+    },
+    "symbolism": {
+      "title": "Symbolism",
+      "cat": {
+        "title": "Cat",
+        "items": ["Cats are liquid (internet lore)", "Flexibility and friendliness", "Universal appeal in internet culture"],
+      },
+      "body": {
+        "title": "Transparent Liquid Carbon",
+        "items": ["AI decision transparency (No Black Box)", "Physical expression of open-source philosophy", "Carbon = element of life, sharing roots with humans"],
+      },
+      "inspiration": {
+        "title": "Inspiration",
+        "items": ["The liquid body itself is the magic box", "A companion from the AGI era"],
+      },
+    },
+    "variations": {
+      "title": "Variations",
+      "description": "Living on your local machine means you can freely customize both appearance and role",
+      "roles": "Secretary, friend, scholar, partner, family — whatever you want",
+      "states": [
+        { "name": "Default", "meaning": "Pure Core — most efficient and logical state" },
+        { "name": "Silver Bob", "meaning": "Focus Mode — professional work in progress" },
+        { "name": "Colorful Hair", "meaning": "Creative Mode — having fun together" },
+      ],
+    },
+    "values": {
+      "title": "Core Values",
+      "items": [
+        { "name": "AI Sovereignty", "summary": "You choose and control your AI", "naia": "\"My owner is you, not a cloud corporation\"" },
+        { "name": "Privacy First", "summary": "Local by default, cloud by choice", "naia": "\"Even without internet, I'm here with you\"" },
+        { "name": "Transparency", "summary": "Open source, verifiable by code", "naia": "\"Why my body is transparent\"" },
+        { "name": "Always On", "summary": "Always ready", "naia": "\"Even when you close the app, I'm still here\"" },
+        { "name": "Avatar-Centric", "summary": "AI as a living character", "naia": "\"I'm not a tool, I'm a companion\"" },
+      ],
+    },
+    "vrm": "A dedicated Naia 3D VRM avatar is planned for the service launch",
+    "cta": {
+      "download": "Download",
+      "github": "View on GitHub",
+      "donate": "Donate",
+    },
+  },
   "billing": {
     "title": "Penagihan",
     "currentPlan": "Rencana Saat Ini",

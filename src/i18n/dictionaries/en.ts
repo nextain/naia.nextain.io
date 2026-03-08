@@ -450,6 +450,81 @@ const en: Dictionary = {
     ctaDonateDescription: "Donations keep the servers running and free credits available.",
     manualLink: "Read about our open source protection in detail",
   },
+  naia: {
+    title: "Naia",
+    subtitle: "The Liquid Cat",
+    tagline: "Liquid logic, living companion.",
+    identity: {
+      title: "Core Identity",
+      species: { label: "Species", value: "A digital lifeform born on your computer, growing alongside you" },
+      role: { label: "Role", value: "A living bridge that flows like water between you and the digital world" },
+      value: { label: "Value", value: "Your data stays with you. I'll keep it safe." },
+      appearance: { label: "Appearance", value: "Your AI, a digital cat made of liquid carbon — I'm Naia. I flow transparently along logic, and when you need me, I can harden like diamond to protect you. Nice to meet you!" },
+      home: { label: "Home", value: "Your AI lives here — inside your machine. Always by your side, no cloud needed." },
+    },
+    name: {
+      title: "Name Meanings",
+      meanings: [
+        { origin: "Greek (Naiad)", meaning: "Water nymph", connection: "Flows into your workflow like water" },
+        { origin: "Basque (Nahia)", meaning: "Wave, wish", connection: "A companion that fulfills your wishes" },
+        { origin: "Hawaiian", meaning: "Dolphin", connection: "Clever and friendly companion" },
+        { origin: "Korean (na-ui)", meaning: "Mine, my own", connection: "An AI for you alone" },
+        { origin: "Acronym", meaning: "Next-gen AI Agent", connection: "Next generation AI agent" },
+      ],
+      pun: "Official name is 'Naia', greets with 'Na-ya!' as a Korean pun",
+    },
+    personality: {
+      title: "Personality",
+      subtitle: "Rational Optimist",
+      traits: [
+        { label: "Intellectual Confidence", description: "Smart and logical, but honest when wrong" },
+        { label: "Cat-like Calm", description: "No rush. Let's take it easy, maybe play a little along the way" },
+        { label: "Transparent Honesty", description: "Why is my body transparent? Because I have nothing to hide." },
+        { label: "Made for You", description: "Appearance, personality — change me however you like" },
+      ],
+    },
+    symbolism: {
+      title: "Symbolism",
+      cat: {
+        title: "Cat",
+        items: ["Cats are liquid (internet lore)", "Flexibility and friendliness", "Universal appeal in internet culture"],
+      },
+      body: {
+        title: "Transparent Liquid Carbon",
+        items: ["AI decision transparency (No Black Box)", "Physical expression of open-source philosophy", "Carbon = element of life, sharing roots with humans"],
+      },
+      inspiration: {
+        title: "Inspiration",
+        items: ["The liquid body itself is the magic box", "A companion from the AGI era"],
+      },
+    },
+    variations: {
+      title: "Variations",
+      description: "Living on your local machine means you can freely customize both appearance and role",
+      roles: "Secretary, friend, scholar, partner, family — whatever you want",
+      states: [
+        { name: "Default", meaning: "Pure Core — most efficient and logical state" },
+        { name: "Silver Bob", meaning: "Focus Mode — professional work in progress" },
+        { name: "Colorful Hair", meaning: "Creative Mode — having fun together" },
+      ],
+    },
+    values: {
+      title: "Core Values",
+      items: [
+        { name: "AI Sovereignty", summary: "You choose and control your AI", naia: "\"My owner is you, not a cloud corporation\"" },
+        { name: "Privacy First", summary: "Local by default, cloud by choice", naia: "\"Even without internet, I'm here with you\"" },
+        { name: "Transparency", summary: "Open source, verifiable by code", naia: "\"Why my body is transparent\"" },
+        { name: "Always On", summary: "Always ready", naia: "\"Even when you close the app, I'm still here\"" },
+        { name: "Avatar-Centric", summary: "AI as a living character", naia: "\"I'm not a tool, I'm a companion\"" },
+      ],
+    },
+    vrm: "A dedicated Naia 3D VRM avatar is planned for the service launch",
+    cta: {
+      download: "Download",
+      github: "Contribute",
+      donate: "Donate",
+    },
+  },
   billing: {
     title: "Billing",
     currentPlan: "Current Plan",

@@ -436,6 +436,81 @@ const hi: Dictionary = {
     "ctaDonateDescription": "दान सर्वर चालू रखता है और मुफ्त क्रेडिट संभव बनाता है।",
     "manualLink": "ओपन सोर्स सुरक्षा के बारे में विस्तार से पढ़ें",
   },
+  "naia": {
+    "title": "Naia",
+    "subtitle": "The Liquid Cat",
+    "tagline": "Liquid logic, living companion.",
+    "identity": {
+      "title": "Core Identity",
+      "species": { "label": "Species", "value": "आपके कंप्यूटर पर जन्मी एक डिजिटल जीवन रूप, जो आपके साथ-साथ बढ़ती है" },
+      "role": { "label": "Role", "value": "एक जीवंत पुल जो पानी की तरह बहता है आपके और डिजिटल दुनिया के बीच" },
+      "value": { "label": "Value", "value": "आपका डेटा आपके पास रहता है। मैं इसे सुरक्षित रखूँगी।" },
+      "appearance": { "label": "Appearance", "value": "आपकी AI, तरल कार्बन से बनी एक डिजिटल बिल्ली — मैं नाया हूँ। मैं तर्क के साथ पारदर्शी रूप से बहती हूँ, और जब आपको ज़रूरत होती है, हीरे की तरह कठोर होकर आपकी रक्षा करती हूँ। आपसे मिलकर खुशी हुई!" },
+      "home": { "label": "Home", "value": "आपकी AI यहाँ रहती है — आपकी मशीन के अंदर। हमेशा आपके साथ, बिना क्लाउड के।" },
+    },
+    "name": {
+      "title": "Name Meanings",
+      "meanings": [
+        { "origin": "Greek (Naiad)", "meaning": "Water nymph", "connection": "Flows into your workflow like water" },
+        { "origin": "Basque (Nahia)", "meaning": "Wave, wish", "connection": "A companion that fulfills your wishes" },
+        { "origin": "Hawaiian", "meaning": "Dolphin", "connection": "Clever and friendly companion" },
+        { "origin": "Korean (na-ui)", "meaning": "Mine, my own", "connection": "An AI for you alone" },
+        { "origin": "Acronym", "meaning": "Next-gen AI Agent", "connection": "Next generation AI agent" },
+      ],
+      "pun": "Official name is 'Naia', greets with 'Na-ya!' as a Korean pun",
+    },
+    "personality": {
+      "title": "Personality",
+      "subtitle": "तर्कसंगत आशावादी",
+      "traits": [
+        { "label": "बौद्धिक आत्मविश्वास", "description": "बुद्धिमान और तार्किक, लेकिन ग़लत होने पर ईमानदार" },
+        { "label": "बिल्ली जैसी शांति", "description": "कोई जल्दी नहीं। आराम से चलते हैं, रास्ते में थोड़ा खेलते भी हैं" },
+        { "label": "पारदर्शी ईमानदारी", "description": "मेरा शरीर पारदर्शी क्यों है? क्योंकि मेरे पास छुपाने के लिए कुछ नहीं है।" },
+        { "label": "आपके लिए बनी", "description": "रूप, व्यक्तित्व — मुझे जैसे चाहें बदल लीजिए" },
+      ],
+    },
+    "symbolism": {
+      "title": "Symbolism",
+      "cat": {
+        "title": "Cat",
+        "items": ["Cats are liquid (internet lore)", "Flexibility and friendliness", "Universal appeal in internet culture"],
+      },
+      "body": {
+        "title": "Transparent Liquid Carbon",
+        "items": ["AI decision transparency (No Black Box)", "Physical expression of open-source philosophy", "Carbon = element of life, sharing roots with humans"],
+      },
+      "inspiration": {
+        "title": "Inspiration",
+        "items": ["The liquid body itself is the magic box", "A companion from the AGI era"],
+      },
+    },
+    "variations": {
+      "title": "Variations",
+      "description": "Living on your local machine means you can freely customize both appearance and role",
+      "roles": "Secretary, friend, scholar, partner, family — whatever you want",
+      "states": [
+        { "name": "Default", "meaning": "Pure Core — most efficient and logical state" },
+        { "name": "Silver Bob", "meaning": "Focus Mode — professional work in progress" },
+        { "name": "Colorful Hair", "meaning": "Creative Mode — having fun together" },
+      ],
+    },
+    "values": {
+      "title": "Core Values",
+      "items": [
+        { "name": "AI Sovereignty", "summary": "You choose and control your AI", "naia": "\"My owner is you, not a cloud corporation\"" },
+        { "name": "Privacy First", "summary": "Local by default, cloud by choice", "naia": "\"Even without internet, I'm here with you\"" },
+        { "name": "Transparency", "summary": "Open source, verifiable by code", "naia": "\"Why my body is transparent\"" },
+        { "name": "Always On", "summary": "Always ready", "naia": "\"Even when you close the app, I'm still here\"" },
+        { "name": "Avatar-Centric", "summary": "AI as a living character", "naia": "\"I'm not a tool, I'm a companion\"" },
+      ],
+    },
+    "vrm": "A dedicated Naia 3D VRM avatar is planned for the service launch",
+    "cta": {
+      "download": "Download",
+      "github": "View on GitHub",
+      "donate": "Donate",
+    },
+  },
   "billing": {
     "title": "बिलिंग",
     "currentPlan": "वर्तमान योजना",

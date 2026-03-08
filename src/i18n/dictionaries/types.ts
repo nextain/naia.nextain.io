@@ -354,6 +354,51 @@ export interface Dictionary {
     ctaDonateDescription: string;
     manualLink: string;
   };
+  naia: {
+    title: string;
+    subtitle: string;
+    tagline: string;
+    identity: {
+      title: string;
+      species: { label: string; value: string };
+      role: { label: string; value: string };
+      value: { label: string; value: string };
+      appearance: { label: string; value: string };
+      home: { label: string; value: string };
+    };
+    name: {
+      title: string;
+      meanings: { origin: string; meaning: string; connection: string }[];
+      pun: string;
+    };
+    personality: {
+      title: string;
+      subtitle: string;
+      traits: { label: string; description: string }[];
+    };
+    symbolism: {
+      title: string;
+      cat: { title: string; items: string[] };
+      body: { title: string; items: string[] };
+      inspiration: { title: string; items: string[] };
+    };
+    variations: {
+      title: string;
+      description: string;
+      roles: string;
+      states: { name: string; meaning: string }[];
+    };
+    values: {
+      title: string;
+      items: { name: string; summary: string; naia: string }[];
+    };
+    vrm: string;
+    cta: {
+      download: string;
+      github: string;
+      donate: string;
+    };
+  };
   billing: {
     title: string;
     currentPlan: string;

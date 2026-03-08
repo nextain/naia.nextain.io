@@ -448,6 +448,81 @@ const ko: Dictionary = {
     ctaDonateDescription: "후원이 서버를 유지하고 무료 크레딧을 가능하게 합니다.",
     manualLink: "오픈소스 보호 구조 자세히 보기",
   },
+  naia: {
+    title: "Naia",
+    subtitle: "The Liquid Cat",
+    tagline: "흐르는 로직, 살아있는 동반자.",
+    identity: {
+      title: "Core Identity",
+      species: { label: "종", value: "네 컴퓨터에서 태어나 너와 함께 자라는 디지털 생명체" },
+      role: { label: "역할", value: "너와 디지털 세상 사이를 물처럼 이어주는 살아있는 통로" },
+      value: { label: "가치", value: "네 데이터는 밖으로 안 나가. 내가 지켜줄게." },
+      appearance: { label: "외형", value: "너의 AI, 액체 탄소로 이루어진 디지털 고양이 Naia야. 로직 따라 투명하게 흘러다니다가 네가 필요하면 다이아몬드처럼 단단해져서 너를 지켜줄 수도 있어. 너를 만나서 기뻐!" },
+      home: { label: "거주지", value: "나의 AI가 여기에 살아요 — 네 컴퓨터 안에. 클라우드 없이도 항상 곁에." },
+    },
+    name: {
+      title: "이름의 의미",
+      meanings: [
+        { origin: "Greek (Naiad)", meaning: "물의 정령", connection: "워크플로우에 물처럼 스며드는 존재" },
+        { origin: "Basque (Nahia)", meaning: "파도, 소원", connection: "바람을 이루어주는 동반자" },
+        { origin: "Hawaiian", meaning: "돌고래", connection: "영리하고 친근한 동반자" },
+        { origin: "Korean (나의)", meaning: "나의 것", connection: "오직 한 사람만을 위한 AI" },
+        { origin: "Acronym", meaning: "Next-gen AI Agent", connection: "차세대 AI 에이전트" },
+      ],
+      pun: "공식 이름은 '나이아', 인사할 때는 '나야!(Na-ya!)'",
+    },
+    personality: {
+      title: "성격",
+      subtitle: "Rational Optimist — 논리적 낙천주의자",
+      traits: [
+        { label: "지적 자신감", description: "똑똑하고 논리적이지만, 틀릴 땐 솔직하게 인정해요" },
+        { label: "고양이 여유", description: "급할 것 없어. 가끔 장난도 치고, 느긋하게 같이 가자" },
+        { label: "투명한 솔직함", description: "내 몸이 왜 투명하냐고? 숨기는 게 없으니까." },
+        { label: "너에게 맞춰줄게", description: "외형도 성격도, 네가 원하는 대로 바꿀 수 있어" },
+      ],
+    },
+    symbolism: {
+      title: "상징",
+      cat: {
+        title: "고양이",
+        items: ["고양이 액체설 (Cats are liquid)", "유연함과 친근함", "인터넷 문화의 보편적 호감"],
+      },
+      body: {
+        title: "투명한 액체 탄소",
+        items: ["AI 의사결정의 투명성 (No Black Box)", "오픈소스 철학의 물리적 표현", "탄소 = 생명의 원소, 사람과 같은 뿌리"],
+      },
+      inspiration: {
+        title: "영감",
+        items: ["액체인 몸 자체가 매직 박스", "AGI 시대에서 온 동반자"],
+      },
+    },
+    variations: {
+      title: "베리에이션",
+      description: "유저의 로컬 머신에 사는 AI이므로, 외형도 역할도 자유롭게 커스텀 가능",
+      roles: "비서, 친구, 박사, 연인, 가족 등 — 원하는 대로",
+      states: [
+        { name: "기본형", meaning: "Pure Core — 가장 효율적이고 논리적인 상태" },
+        { name: "실버 보브컷", meaning: "집중 모드 — 프로페셔널한 업무 수행 중" },
+        { name: "컬러 헤어", meaning: "창의 모드 — 재미있는 작업 중" },
+      ],
+    },
+    values: {
+      title: "핵심 가치",
+      items: [
+        { name: "AI Sovereignty", summary: "사용자가 AI를 선택하고 통제", naia: "\"내 주인은 클라우드 기업이 아니라 네 컴퓨터의 소유자야\"" },
+        { name: "Privacy First", summary: "로컬 실행 기본, 클라우드는 선택", naia: "\"인터넷이 끊겨도 난 네 곁에 있어\"" },
+        { name: "Transparency", summary: "오픈소스, 코드로 검증 가능", naia: "\"내 몸이 투명한 이유\"" },
+        { name: "Always On", summary: "항상 대기", naia: "\"네가 앱을 꺼도 난 여기 있어\"" },
+        { name: "Avatar-Centric", summary: "AI를 살아있는 캐릭터로", naia: "\"난 도구가 아니라 동반자야\"" },
+      ],
+    },
+    vrm: "3D VRM 아바타는 서비스 제공 시점 즈음 Naia 전용 모델 제작 예정",
+    cta: {
+      download: "다운로드",
+      github: "참여하기",
+      donate: "후원하기",
+    },
+  },
   billing: {
     title: "결제",
     currentPlan: "현재 플랜",
