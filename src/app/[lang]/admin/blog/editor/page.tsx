@@ -44,9 +44,12 @@ interface CrosspostTarget {
 }
 
 const CROSSPOST_TARGETS: CrosspostTarget[] = [
-  // Blog — original content (Dev.to publish, Velog clipboard)
-  { id: "devto", platform: "devto", label: "Dev.to", group: "blog", type: "original", lang: "en" },
+  // Blog — original content (Naver/Velog/CafeLua KO, Dev.to EN)
+  { id: "naver", platform: "naver", label: "네이버", group: "blog", type: "original", lang: "ko" },
   { id: "velog", platform: "velog", label: "Velog", group: "blog", type: "original", lang: "ko" },
+  { id: "cafelua-ko", platform: "cafelua", label: "CafeLua (KO)", group: "blog", type: "original", lang: "ko" },
+  { id: "cafelua-en", platform: "cafelua", label: "CafeLua (EN)", group: "blog", type: "original", lang: "en" },
+  { id: "devto", platform: "devto", label: "Dev.to", group: "blog", type: "original", lang: "en" },
   // Luke social (Facebook, LinkedIn)
   { id: "facebook-ko", platform: "facebook", label: "Facebook (KO)", group: "luke", type: "ai", style: "luke", lang: "ko" },
   { id: "facebook-en", platform: "facebook", label: "Facebook (EN)", group: "luke", type: "ai", style: "luke", lang: "en" },
@@ -108,7 +111,8 @@ function EditorInner() {
   const [commitMsg, setCommitMsg] = useState("");
   const [viewMode, setViewMode] = useState<ViewMode>("split");
   const [uploading, setUploading] = useState(false);
-  const [imageLocale, setImageLocale] = useState("");
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [editingImage, setEditingImage] = useState<{ defaultImg: string; koImg: string } | null>(null);
   const [existingLocales, setExistingLocales] = useState<string[]>([]);
 
   // Translation
@@ -122,18 +126,111 @@ function EditorInner() {
   // Crosspost panel
   const [crosspostOpen, setCrosspostOpen] = useState(false);
   const [activeTarget, setActiveTarget] = useState("devto");
-  const [drafts, setDrafts] = useState<Record<string, string>>({});
+  const [drafts, setDraftsRaw] = useState<Record<string, string>>(() => {
+    if (typeof window === "undefined" || !slugParam) return {};
+    try { return JSON.parse(localStorage.getItem(`crosspost-drafts-${slugParam}`) ?? "{}"); } catch { return {}; }
+  });
+  const setDrafts: typeof setDraftsRaw = (updater) => {
+    setDraftsRaw((prev) => {
+      const next = typeof updater === "function" ? updater(prev) : updater;
+      if (selectedSlug) localStorage.setItem(`crosspost-drafts-${selectedSlug}`, JSON.stringify(next));
+      return next;
+    });
+  };
   const [crosspostTitle, setCrosspostTitle] = useState("");
   const [generating, setGenerating] = useState<Record<string, boolean>>({});
   const [posting, setPosting] = useState(false);
+  const [koPreview, setKoPreview] = useState<Record<string, string>>({});
+  const [koPreviewLoading, setKoPreviewLoading] = useState<Record<string, boolean>>({});
 
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const isDirty = content !== originalContent;
   const selectedPost = posts.find((p) => p.slug === selectedSlug);
   const missingLocales = ALL_LOCALES.filter((l) => !existingLocales.includes(l));
   const allLocalesReady = missingLocales.length === 0;
+  const currentHero = content.match(/^---[\s\S]*?hero:\s*"([^"]*)"[\s\S]*?---/)?.[1] ?? "";
+  const currentSummary = content.match(/^---[\s\S]*?summary:\s*"((?:[^"\\]|\\.)*)"/)?.[1]?.replace(/\\"/g, '"') ?? "";
+
+  const [generatingSummary, setGeneratingSummary] = useState(false);
+
+  const handleSummaryChange = (newSummary: string) => {
+    const escaped = newSummary.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+    setContent((prev) => {
+      const lines = prev.split("\n");
+      const idx = lines.findIndex((l) => l.startsWith("summary:"));
+      if (idx !== -1) lines[idx] = `summary: "${escaped}"`;
+      return lines.join("\n");
+    });
+  };
+
+  const handleGenerateSummary = async () => {
+    if (!content.trim() || generatingSummary) return;
+    setGeneratingSummary(true);
+    try {
+      const res = await fetch("/api/admin/summarize", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: content.replace(/^---[\s\S]*?---\s*/, ""), lang: locale }),
+      });
+      const data = await res.json();
+      if (res.ok && data.summary) {
+        handleSummaryChange(data.summary);
+        showMsg("Summary generated");
+      } else {
+        showMsg(`Summary failed: ${data.error}`);
+      }
+    } catch {
+      showMsg("Summary generation failed");
+    } finally {
+      setGeneratingSummary(false);
+    }
+  };
+
+  const handlePreviewImageClick = (e: React.MouseEvent) => {
+    const img = (e.target as HTMLElement).closest("img");
+    if (!img) return;
+    const src = img.getAttribute("src") ?? "";
+    const lines = content.split("\n");
+    const imgRe = /^!\[([^\]]*)\]\(([^)]+)\)(<!--\s*(\w+)\s*-->)?/;
+    let targetIdx = -1;
+    for (let i = 0; i < lines.length; i++) {
+      const m = lines[i].match(imgRe);
+      if (m && src.endsWith(m[2])) { targetIdx = i; break; }
+    }
+    if (targetIdx === -1) return;
+    // Expand to consecutive image group
+    let start = targetIdx, end = targetIdx;
+    while (start > 0 && imgRe.test(lines[start - 1])) start--;
+    while (end < lines.length - 1 && imgRe.test(lines[end + 1])) end++;
+    let defaultImg = "", koImg = "";
+    for (let i = start; i <= end; i++) {
+      const m = lines[i].match(imgRe);
+      if (m) {
+        if (m[4] === "ko") koImg = m[2];
+        else if (!m[4]) defaultImg = m[2];
+      }
+    }
+    setEditingImage({ defaultImg, koImg });
+    setShowImageModal(true);
+  };
+
+  const handleSetHero = (heroPath: string) => {
+    const relPath = heroPath.replace(`/posts/${selectedSlug}/`, "");
+    setContent((prev) => prev.replace(
+      /^(---[\s\S]*?)(hero:\s*"[^"]*")([\s\S]*?---)/,
+      (_, before, _old, after) => `${before}hero: "${relPath}"${after}`,
+    ));
+    showMsg(`Hero set: ${relPath}`);
+  };
+
+  const handleClearHero = () => {
+    setContent((prev) => prev.replace(
+      /^(---[\s\S]*?)(hero:\s*"[^"]*")([\s\S]*?---)/,
+      (_, before, _old, after) => `${before}hero: ""${after}`,
+    ));
+    showMsg("Hero cleared");
+  };
 
   const showMsg = useCallback((msg: string) => {
     setMessage(msg);
@@ -255,48 +352,61 @@ function EditorInner() {
     }
   };
 
-  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files?.length || !selectedSlug) {
-      showMsg("Select a post first");
-      return;
-    }
+  const uploadFile = async (file: File): Promise<string | null> => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("slug", selectedSlug);
+    const res = await fetch("/api/admin/upload", { method: "POST", body: formData });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || "Upload failed");
+    return data.path;
+  };
+
+  const handleImageModalUpload = async (defaultFile: File | null, koFile: File | null, featured: boolean) => {
+    if (!selectedSlug || (!defaultFile && !koFile)) return;
     setUploading(true);
     const lines: string[] = [];
-    let uploaded = 0;
-    for (const file of Array.from(files)) {
-      try {
-        const formData = new FormData();
-        formData.append("file", file);
-        formData.append("slug", selectedSlug);
-        const res = await fetch("/api/admin/upload", {
-          method: "POST",
-          body: formData,
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || "Upload failed");
-        const marker = imageLocale ? `<!-- ${imageLocale} -->` : "";
-        lines.push(`![${file.name}](${data.path})${marker}`);
-        uploaded++;
-      } catch (err) {
-        showMsg(err instanceof Error ? err.message : `Upload failed: ${file.name}`);
+    let heroPath: string | null = null;
+    try {
+      if (defaultFile) {
+        const p = await uploadFile(defaultFile);
+        if (p) {
+          lines.push(`![${defaultFile.name}](${p})`);
+          if (featured) heroPath = p;
+        }
       }
+      if (koFile) {
+        const p = await uploadFile(koFile);
+        if (p) lines.push(`![${koFile.name}](${p})<!-- ko -->`);
+      }
+    } catch (err) {
+      showMsg(err instanceof Error ? err.message : "Upload failed");
     }
     if (lines.length > 0) {
+      let updated = content;
+      // Update hero in frontmatter
+      if (heroPath) {
+        // Extract relative path (strip /posts/{slug}/ prefix for cleaner frontmatter)
+        const relPath = heroPath.replace(`/posts/${selectedSlug}/`, "");
+        updated = updated.replace(
+          /^(---[\s\S]*?)(hero:\s*"[^"]*")([\s\S]*?---)/,
+          (_, before, _old, after) => `${before}hero: "${relPath}"${after}`,
+        );
+      }
       const insert = lines.join("\n") + "\n";
       if (textareaRef.current) {
         const ta = textareaRef.current;
         const start = ta.selectionStart;
-        const before = content.slice(0, start);
-        const after = content.slice(ta.selectionEnd);
+        const before = updated.slice(0, start);
+        const after = updated.slice(ta.selectionEnd);
         setContent(before + insert + after);
       } else {
-        setContent(content + "\n" + insert);
+        setContent(updated + "\n" + insert);
       }
-      showMsg(`Uploaded ${uploaded} file(s)${imageLocale ? ` (${imageLocale})` : ""}`);
+      showMsg(`Uploaded ${lines.length} image(s)${heroPath ? " + hero set" : ""}`);
     }
     setUploading(false);
-    if (fileInputRef.current) fileInputRef.current.value = "";
+    setShowImageModal(false);
   };
 
   const handleTranslateAll = async () => {
@@ -310,25 +420,29 @@ function EditorInner() {
 
     let succeeded = 0;
     let failed = 0;
-    for (const lang of targets) {
-      setTranslateProgress((prev) => ({ ...prev, current: lang.toUpperCase() }));
-      try {
-        const res = await fetch("/api/admin/translate", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug: selectedSlug, sourceLang, targetLang: lang }),
-        });
-        if (res.ok) {
-          succeeded++;
-        } else {
-          const data = await res.json();
-          console.error(`Translate ${lang} failed:`, data.error);
-          failed++;
-        }
-      } catch {
-        failed++;
+    const CONCURRENCY = 4;
+    for (let i = 0; i < targets.length; i += CONCURRENCY) {
+      const batch = targets.slice(i, i + CONCURRENCY);
+      setTranslateProgress((prev) => ({ ...prev, current: batch.map((l) => l.toUpperCase()).join(", ") }));
+      const results = await Promise.allSettled(
+        batch.map(async (lang) => {
+          const res = await fetch("/api/admin/translate", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ slug: selectedSlug, sourceLang, targetLang: lang }),
+          });
+          if (!res.ok) {
+            const data = await res.json();
+            console.error(`Translate ${lang} failed:`, data.error);
+            throw new Error(data.error);
+          }
+        }),
+      );
+      for (const r of results) {
+        if (r.status === "fulfilled") succeeded++;
+        else failed++;
       }
-      setTranslateProgress((prev) => ({ ...prev, done: prev.done + 1 }));
+      setTranslateProgress((prev) => ({ ...prev, done: prev.done + batch.length }));
     }
 
     setTranslating(false);
@@ -341,6 +455,54 @@ function EditorInner() {
         setExistingLocales(Object.keys(data.locales));
       }
     } catch { /* ignore */ }
+  };
+
+  const handlePostAll = async () => {
+    if (!selectedSlug) return;
+    const ready = CROSSPOST_TARGETS.filter((t) => drafts[t.id]?.trim());
+    if (ready.length === 0) { showMsg("배포할 드래프트가 없습니다"); return; }
+    if (!confirm(`${ready.length}개 채널에 배포합니다. 계속하시겠습니까?`)) return;
+    setPosting(true);
+    const results: string[] = [];
+    for (const target of ready) {
+      const draft = drafts[target.id];
+      try {
+        if (target.platform === "devto") {
+          const res = await fetch("/api/admin/crosspost", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ slug: selectedSlug, targets: ["devto"], overrideTitle: crosspostTitle, overrideBody: draft }),
+          });
+          const data = await res.json();
+          if (res.ok && data.devto?.url) { results.push(`✓ Dev.to`); window.open(data.devto.url, "_blank"); }
+          else results.push(`✗ Dev.to`);
+        } else if (target.platform === "reddit") {
+          const sub = target.subreddit ?? "opensource";
+          const res = await fetch("/api/admin/crosspost", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ slug: selectedSlug, targets: ["reddit"], subreddit: sub, overrideTitle: crosspostTitle, overrideBody: draft }),
+          });
+          const data = await res.json();
+          if (res.ok && data.reddit?.submitUrl) { results.push(`✓ r/${sub}`); window.open(data.reddit.submitUrl, "_blank"); }
+          else results.push(`✗ r/${sub}`);
+        } else if (target.platform === "x") {
+          const res = await fetch("/api/admin/crosspost/x", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ text: draft }),
+          });
+          const data = await res.json();
+          if (res.ok && data.tweetUrl) results.push(`✓ ${target.label}`);
+          else results.push(`✗ ${target.label}`);
+        } else {
+          await navigator.clipboard.writeText(draft);
+          results.push(`✓ ${target.label} (복사됨)`);
+        }
+      } catch { results.push(`✗ ${target.label}`); }
+    }
+    setPosting(false);
+    showMsg(results.join(", "));
   };
 
   const handleDeploy = async () => {
@@ -372,7 +534,7 @@ function EditorInner() {
 
   const handleVerify = () => {
     if (!selectedSlug) return;
-    const url = `https://naia.nextain.io/en/blog/${selectedSlug}`;
+    const url = `https://naia.nextain.io/${locale}/blog/${selectedSlug}`;
     window.open(url, "_blank");
     setVerified(true);
     showMsg("URL opened — verify in browser");
@@ -389,7 +551,12 @@ function EditorInner() {
         if (res.ok) {
           const data = await res.json();
           const md = data.locales[target.lang ?? "en"] ?? data.locales["ko"] ?? "";
-          setDrafts((prev) => ({ ...prev, [targetId]: md.replace(/^---[\s\S]*?---\s*/, "") }));
+          const body = md.replace(/^---[\s\S]*?---\s*/, "");
+          const lang = target.lang ?? "en";
+          const originalLink = lang === "ko"
+            ? `*본 글은 [Naia 블로그](https://naia.nextain.io/ko/blog/${selectedSlug})에서 가져온 글입니다.*`
+            : `*Originally published at [Naia Blog](https://naia.nextain.io/en/blog/${selectedSlug})*`;
+          setDrafts((prev) => ({ ...prev, [targetId]: originalLink + "\n\n---\n\n" + body + "\n\n---\n\n" + originalLink }));
         } else {
           showMsg("Failed to load post content");
         }
@@ -408,6 +575,7 @@ function EditorInner() {
         const data = await res.json();
         if (res.ok) {
           setDrafts((prev) => ({ ...prev, [targetId]: data.generated }));
+          setKoPreview((prev) => { const next = { ...prev }; delete next[targetId]; return next; });
         } else {
           showMsg(`Generate failed: ${data.error}`);
         }
@@ -478,20 +646,39 @@ function EditorInner() {
         }
       } catch { showMsg("Post failed"); }
       finally { setPosting(false); }
+    } else if (target.platform === "x") {
+      if (!confirm(`X(@Naia_Nextain)에 트윗합니다. 계속하시겠습니까?`)) return;
+      setPosting(true);
+      try {
+        const res = await fetch("/api/admin/crosspost/x", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: draft }),
+        });
+        const data = await res.json();
+        if (res.ok && data.tweetUrl) {
+          showMsg(`Tweet posted!`);
+          window.open(data.tweetUrl, "_blank");
+        } else {
+          showMsg(`Tweet failed: ${data.error ?? "Unknown error"}`);
+        }
+      } catch { showMsg("Tweet failed"); }
+      finally { setPosting(false); }
     } else {
-      // Velog, Facebook, LinkedIn, X, Instagram — copy to clipboard
+      // Velog, Naver, CafeLua, Facebook, LinkedIn, Instagram — copy to clipboard
       await navigator.clipboard.writeText(draft);
       showMsg(`${target.label} 초안이 클립보드에 복사되었습니다.`);
     }
   };
 
   const openCrosspost = () => {
+    if (crosspostOpen) { setCrosspostOpen(false); return; }
     setCrosspostOpen(true);
-    setDrafts({});
-    setActiveTarget("devto");
     if (selectedPost) setCrosspostTitle(selectedPost.title);
-    // Auto-generate all
-    setTimeout(() => generateAll(), 0);
+    if (Object.keys(drafts).length === 0) {
+      setActiveTarget("devto");
+      setTimeout(() => generateAll(), 0);
+    }
   };
 
   const previewMarkdown = content.replace(/^---[\s\S]*?---\s*/, "");
@@ -585,20 +772,6 @@ function EditorInner() {
           <option value="bn">BN</option>
         </select>
 
-        {selectedSlug && (
-          <button
-            onClick={handleTranslateAll}
-            disabled={translating || isDirty}
-            className="flex items-center gap-1 rounded-md border border-border/50 px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground disabled:opacity-50"
-            title={isDirty ? "Save first" : `Translate from ${locale.toUpperCase()} to all other locales`}
-          >
-            <Languages className="h-3.5 w-3.5" />
-            {translating
-              ? `${translateProgress.current} ${translateProgress.done}/${translateProgress.total}`
-              : "Translate All"}
-          </button>
-        )}
-
         <div className="flex rounded-md border border-border/50">
           <button
             onClick={() => setViewMode("edit")}
@@ -621,31 +794,14 @@ function EditorInner() {
         </div>
 
         {selectedSlug && (
-          <div className="flex items-center gap-0.5">
-            <label className="flex cursor-pointer items-center gap-1 rounded-l-md border border-border/50 px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground">
-              <ImagePlus className="h-3.5 w-3.5" />
-              {uploading ? "..." : "Image"}
-              <input
-                ref={fileInputRef}
-                type="file"
-                accept="image/*"
-                multiple
-                onChange={handleImageUpload}
-                className="hidden"
-              />
-            </label>
-            <select
-              value={imageLocale}
-              onChange={(e) => setImageLocale(e.target.value)}
-              className="rounded-r-md border border-l-0 border-border/50 bg-background px-1 py-1 text-[10px]"
-              title="Image locale (empty = all)"
-            >
-              <option value="">ALL</option>
-              {ALL_LOCALES.map((l) => (
-                <option key={l} value={l}>{l.toUpperCase()}</option>
-              ))}
-            </select>
-          </div>
+          <button
+            onClick={() => setShowImageModal(true)}
+            disabled={uploading}
+            className="flex items-center gap-1 rounded-md border border-border/50 px-2 py-1 text-xs text-muted-foreground transition-colors hover:text-foreground disabled:opacity-50"
+          >
+            <ImagePlus className="h-3.5 w-3.5" />
+            {uploading ? "..." : "Image"}
+          </button>
         )}
 
         <div className="flex-1" />
@@ -667,6 +823,29 @@ function EditorInner() {
         </Button>
       </div>
 
+      {/* Summary bar */}
+      {selectedSlug && (
+        <div className="flex gap-2 border-b border-border/40 px-4 py-1.5">
+          <span className="shrink-0 pt-0.5 text-[10px] font-medium text-muted-foreground">Summary</span>
+          <textarea
+            value={currentSummary}
+            onChange={(e) => handleSummaryChange(e.target.value.replace(/\n/g, " "))}
+            onKeyDown={(e) => { if (e.key === "Enter") e.preventDefault(); }}
+            placeholder="블로그 리스트 + OG description에 표시되는 요약"
+            rows={2}
+            className="flex-1 resize-none bg-transparent text-xs leading-relaxed text-foreground placeholder:text-muted-foreground/50 focus:outline-none"
+          />
+          <button
+            onClick={handleGenerateSummary}
+            disabled={generatingSummary || !content.trim()}
+            className="shrink-0 self-start rounded border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:text-foreground disabled:opacity-50"
+          >
+            <Sparkles className="mr-1 inline h-3 w-3" />
+            {generatingSummary ? "..." : "AI 생성"}
+          </button>
+        </div>
+      )}
+
       {/* Editor + Preview */}
       <div className="flex flex-1 overflow-hidden">
         {viewMode !== "preview" && (
@@ -687,8 +866,9 @@ function EditorInner() {
         {viewMode !== "edit" && (
           <div
             className={`overflow-y-auto ${viewMode === "split" ? "w-1/2" : "w-full"}`}
+            onClick={handlePreviewImageClick}
           >
-            <div className="mx-auto max-w-3xl px-4 py-6">
+            <div className="mx-auto max-w-3xl px-4 py-6 [&_img]:cursor-pointer">
               {selectedPost && (
                 <header className="mb-6">
                   <h1 className="text-2xl font-bold">{selectedPost.title}</h1>
@@ -713,27 +893,24 @@ function EditorInner() {
         )}
       </div>
 
-      {/* Bottom bar — Step 1: Deploy → Step 2: Verify → Step 3: Social */}
+      {/* Bottom bar — Step 1: Translate → Step 2: Deploy → Step 3: Verify → Step 4: Social */}
       {selectedSlug && !crosspostOpen && (
         <div className="border-t border-border/40 px-4 py-3">
           <div className="flex items-center gap-3">
-            {/* Step 1: Deploy */}
+            {/* Step 1: Translate */}
             <div className="flex items-center gap-2">
-              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${deployed ? "bg-green-500 text-white" : "bg-primary text-primary-foreground"}`}>1</span>
-              <Input
-                value={commitMsg}
-                onChange={(e) => setCommitMsg(e.target.value)}
-                placeholder={`blog: update ${selectedSlug}`}
-                className="max-w-sm text-sm"
-              />
+              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${allLocalesReady ? "bg-green-500 text-white" : "bg-primary text-primary-foreground"}`}>1</span>
               <Button
                 size="sm"
-                onClick={handleDeploy}
-                disabled={deploying || isDirty || !allLocalesReady}
-                title={!allLocalesReady ? `Missing: ${missingLocales.map((l) => l.toUpperCase()).join(", ")}` : ""}
+                variant={allLocalesReady ? "outline" : "default"}
+                onClick={handleTranslateAll}
+                disabled={translating || isDirty}
+                title={isDirty ? "Save first" : `Translate from ${locale.toUpperCase()} to all other locales`}
               >
-                <Rocket className="mr-1.5 h-3.5 w-3.5" />
-                {deploying ? "..." : deployed ? "Re-deploy" : "Deploy"}
+                <Languages className="mr-1.5 h-3.5 w-3.5" />
+                {translating
+                  ? `${translateProgress.current} ${translateProgress.done}/${translateProgress.total}`
+                  : allLocalesReady ? "Re-translate" : "Translate All"}
               </Button>
               {!allLocalesReady && (
                 <span className="text-[10px] text-destructive">
@@ -744,40 +921,51 @@ function EditorInner() {
 
             <div className="mx-1 h-6 w-px bg-border/40" />
 
-            {/* Step 2: Verify */}
+            {/* Step 2: Deploy */}
             <div className="flex items-center gap-2">
-              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${verified ? "bg-green-500 text-white" : deployed ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>2</span>
+              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${deployed ? "bg-green-500 text-white" : allLocalesReady ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>2</span>
+              <Input
+                value={commitMsg}
+                onChange={(e) => setCommitMsg(e.target.value)}
+                placeholder={`blog: update ${selectedSlug}`}
+                className="max-w-xs text-sm"
+              />
               <Button
                 size="sm"
-                variant="outline"
-                onClick={handleVerify}
-                disabled={!deployed}
+                onClick={handleDeploy}
+                disabled={deploying || isDirty || !allLocalesReady}
               >
-                <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
-                {verified ? "Verified" : "Verify URL"}
+                <Rocket className="mr-1.5 h-3.5 w-3.5" />
+                {deploying ? "..." : deployed ? "Re-deploy" : "Deploy"}
               </Button>
-              {deployed && !verified && (
-                <a
-                  href={`https://naia.nextain.io/en/blog/${selectedSlug}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] text-primary underline"
-                >
-                  Open
-                </a>
-              )}
             </div>
 
             <div className="mx-1 h-6 w-px bg-border/40" />
 
-            {/* Step 3: Social */}
+            {/* Step 3: Verify */}
             <div className="flex items-center gap-2">
-              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${verified ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>3</span>
+              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${verified ? "bg-green-500 text-white" : deployed ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>3</span>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handleVerify}
+                disabled={!selectedSlug}
+              >
+                <ExternalLink className="mr-1.5 h-3.5 w-3.5" />
+                {verified ? "Verified" : "Verify"}
+              </Button>
+            </div>
+
+            <div className="mx-1 h-6 w-px bg-border/40" />
+
+            {/* Step 4: Social */}
+            <div className="flex items-center gap-2">
+              <span className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold ${verified ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>4</span>
               <Button
                 size="sm"
                 variant={verified ? "default" : "outline"}
                 onClick={openCrosspost}
-                disabled={!verified}
+                disabled={!selectedSlug}
               >
                 <Send className="mr-1.5 h-3.5 w-3.5" />
                 Social
@@ -840,6 +1028,40 @@ function EditorInner() {
 
             <div className="flex-1" />
 
+            {(() => {
+              const target = CROSSPOST_TARGETS.find((t) => t.id === activeTarget);
+              const enId = target?.lang === "ko" ? activeTarget.replace(/-ko$/, "-en") : null;
+              const hasCurrentDraft = drafts[activeTarget]?.trim();
+              if (enId && hasCurrentDraft) return (
+                <Button
+                  size="sm"
+                  variant="secondary"
+                  onClick={async () => {
+                    setGenerating((prev) => ({ ...prev, [enId]: true }));
+                    try {
+                      const res = await fetch("/api/admin/translate-text", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ text: drafts[activeTarget], targetLang: "en" }),
+                      });
+                      const data = await res.json();
+                      if (res.ok && data.translated) {
+                        setDrafts((prev) => ({ ...prev, [enId]: data.translated }));
+                        showMsg(`${enId} 번역 완료`);
+                      } else showMsg("Translation failed");
+                    } catch { showMsg("Translation failed"); }
+                    finally { setGenerating((prev) => ({ ...prev, [enId]: false })); }
+                  }}
+                  disabled={!!generating[enId]}
+                  className="text-xs"
+                >
+                  <Languages className="mr-1 h-3 w-3" />
+                  {generating[enId] ? "..." : "→EN 번역"}
+                </Button>
+              );
+              return null;
+            })()}
+
             <Button
               size="sm"
               variant="secondary"
@@ -849,6 +1071,17 @@ function EditorInner() {
             >
               <Sparkles className="mr-1 h-3 w-3" />
               {generating[activeTarget] ? "..." : "Regenerate"}
+            </Button>
+
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => { if (confirm("전체 채널을 재생성합니다. 편집한 내용이 덮어씌워집니다. 계속하시겠습니까?")) generateAll(); }}
+              disabled={Object.values(generating).some(Boolean)}
+              className="text-xs"
+            >
+              <Sparkles className="mr-1 h-3 w-3" />
+              Regenerate All
             </Button>
 
             <Button
@@ -863,6 +1096,16 @@ function EditorInner() {
               })()}
             </Button>
 
+            <Button
+              size="sm"
+              variant="default"
+              onClick={handlePostAll}
+              disabled={posting || Object.keys(drafts).length === 0}
+            >
+              <Rocket className="mr-1 h-3 w-3" />
+              {posting ? "..." : "전체 배포"}
+            </Button>
+
             <button
               onClick={() => setCrosspostOpen(false)}
               className="text-muted-foreground hover:text-foreground"
@@ -873,25 +1116,106 @@ function EditorInner() {
 
           {/* Content */}
           <div className="flex h-52 gap-0">
-            <div className="flex flex-1 flex-col border-r border-border/20">
-              {["reddit", "devto", "velog"].includes(CROSSPOST_TARGETS.find((t) => t.id === activeTarget)?.platform ?? "") ? (
-                <Input
-                  value={crosspostTitle}
-                  onChange={(e) => setCrosspostTitle(e.target.value)}
-                  placeholder="Title"
-                  className="h-8 rounded-none border-0 border-b border-border/20 text-sm font-medium"
-                />
-              ) : null}
-              <textarea
-                value={drafts[activeTarget] ?? ""}
-                onChange={(e) => setDrafts((prev) => ({ ...prev, [activeTarget]: e.target.value }))}
-                className="flex-1 resize-none bg-transparent p-3 font-mono text-xs text-foreground focus:outline-none"
-                placeholder={generating[activeTarget] ? "Generating..." : "Click Regenerate or wait for auto-generation..."}
-              />
-            </div>
-            <div className="w-1/2 overflow-y-auto whitespace-pre-wrap p-3 text-xs text-muted-foreground">
-              {drafts[activeTarget] || (generating[activeTarget] ? "Generating..." : "Select a tab and generate...")}
-            </div>
+            {(() => {
+              const target = CROSSPOST_TARGETS.find((t) => t.id === activeTarget);
+              const isOriginal = target?.type === "original";
+              const isKo = target?.lang === "ko";
+              const showTitle = ["reddit", "devto", "velog"].includes(target?.platform ?? "");
+              const needsRightPanel = !isOriginal && !isKo;
+              return (
+                <>
+                  <div className="flex flex-1 flex-col border-r border-border/20">
+                    {showTitle && (
+                      <Input
+                        value={crosspostTitle}
+                        onChange={(e) => setCrosspostTitle(e.target.value)}
+                        placeholder="Title"
+                        readOnly={isOriginal}
+                        className="h-8 rounded-none border-0 border-b border-border/20 text-sm font-medium"
+                      />
+                    )}
+                    <textarea
+                      value={drafts[activeTarget] ?? ""}
+                      onChange={(e) => { if (!isOriginal) setDrafts((prev) => ({ ...prev, [activeTarget]: e.target.value })); }}
+                      readOnly={isOriginal}
+                      className={`flex-1 resize-none bg-transparent p-3 font-mono text-xs text-foreground focus:outline-none ${isOriginal ? "cursor-default opacity-70" : ""}`}
+                      placeholder={generating[activeTarget] ? "Generating..." : "Click Regenerate or wait for auto-generation..."}
+                    />
+                  </div>
+                  {(() => {
+                    if (!needsRightPanel) return <div className="w-1/2" />;
+              // Non-KO: editable Korean panel + KO→EN button
+              const koId = target?.lang === "en" ? activeTarget.replace(/-en$/, "-ko") : null;
+              const koText = koId ? (drafts[koId] ?? "") : (koPreview[activeTarget] ?? "");
+              const setKoText = (val: string) => {
+                if (koId) setDrafts((prev) => ({ ...prev, [koId]: val }));
+                else setKoPreview((prev) => ({ ...prev, [activeTarget]: val }));
+              };
+              const translateKoToEn = async () => {
+                if (!koText.trim()) return;
+                setGenerating((prev) => ({ ...prev, [activeTarget]: true }));
+                try {
+                  const res = await fetch("/api/admin/translate-text", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: koText, targetLang: "en" }),
+                  });
+                  const data = await res.json();
+                  if (res.ok && data.translated) {
+                    setDrafts((prev) => ({ ...prev, [activeTarget]: data.translated }));
+                    showMsg("KO→EN 번역 완료");
+                  } else showMsg("Translation failed");
+                } catch { showMsg("Translation failed"); }
+                finally { setGenerating((prev) => ({ ...prev, [activeTarget]: false })); }
+              };
+              const translateEnToKo = async () => {
+                if (!drafts[activeTarget]?.trim()) return;
+                const tid = activeTarget;
+                setKoPreviewLoading((p) => ({ ...p, [tid]: true }));
+                try {
+                  const res = await fetch("/api/admin/translate-text", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: drafts[tid], targetLang: "ko" }),
+                  });
+                  const data = await res.json();
+                  if (res.ok && data.translated) setKoPreview((p) => ({ ...p, [tid]: data.translated }));
+                } catch {}
+                finally { setKoPreviewLoading((p) => ({ ...p, [tid]: false })); }
+              };
+              return (
+                <div className="flex w-1/2 flex-col">
+                  <div className="flex items-center gap-2 border-b border-border/20 px-3 py-1">
+                    <button
+                      onClick={translateKoToEn}
+                      disabled={!koText.trim() || !!generating[activeTarget]}
+                      className="rounded border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:text-foreground disabled:opacity-50"
+                    >
+                      {generating[activeTarget] ? "..." : "EN ← KO 적용"}
+                    </button>
+                    <span className="text-[10px] font-medium text-muted-foreground/70">한국어 {koId ? "버전" : "번역"}</span>
+                    {!koId && (
+                      <button
+                        onClick={translateEnToKo}
+                        disabled={!drafts[activeTarget]?.trim() || !!koPreviewLoading[activeTarget]}
+                        className="ml-auto rounded border border-border/50 px-2 py-0.5 text-[10px] text-muted-foreground transition-colors hover:text-foreground disabled:opacity-50"
+                      >
+                        {koPreviewLoading[activeTarget] ? "..." : "EN→KO"}
+                      </button>
+                    )}
+                  </div>
+                  <textarea
+                    value={koPreviewLoading[activeTarget] ? "한국어 번역 중..." : koText}
+                    onChange={(e) => setKoText(e.target.value)}
+                    disabled={!!koPreviewLoading[activeTarget]}
+                    className="flex-1 resize-none bg-transparent p-3 font-mono text-xs text-foreground focus:outline-none"
+                  />
+                </div>
+              );
+            })()}
+                </>
+              );
+            })()}
           </div>
 
           {/* Status bar */}
@@ -910,6 +1234,189 @@ function EditorInner() {
           </div>
         </div>
       )}
+
+      {/* Image upload modal */}
+      {showImageModal && (
+        <ImageUploadModal
+          uploading={uploading}
+          currentHero={currentHero}
+          existingImages={editingImage}
+          onUpload={handleImageModalUpload}
+          onSetHero={handleSetHero}
+          onClearHero={handleClearHero}
+          onClose={() => { setShowImageModal(false); setEditingImage(null); }}
+        />
+      )}
+    </div>
+  );
+}
+
+function ImageUploadModal({
+  uploading,
+  currentHero,
+  existingImages,
+  onUpload,
+  onSetHero,
+  onClearHero,
+  onClose,
+}: {
+  uploading: boolean;
+  currentHero: string;
+  existingImages: { defaultImg: string; koImg: string } | null;
+  onUpload: (defaultFile: File | null, koFile: File | null, featured: boolean) => void;
+  onSetHero: (path: string) => void;
+  onClearHero: () => void;
+  onClose: () => void;
+}) {
+  const [defaultFile, setDefaultFile] = useState<File | null>(null);
+  const [koFile, setKoFile] = useState<File | null>(null);
+  const [featured, setFeatured] = useState(false);
+
+  const hasFile = defaultFile || koFile;
+  const isEditing = existingImages && (existingImages.defaultImg || existingImages.koImg);
+  const isHero = isEditing && existingImages.defaultImg && currentHero &&
+    (currentHero === existingImages.defaultImg || existingImages.defaultImg.endsWith(currentHero));
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50" onClick={onClose}>
+      <div className="w-full max-w-md rounded-lg border border-border bg-background p-5 shadow-lg" onClick={(e) => e.stopPropagation()}>
+        <div className="mb-4 flex items-center justify-between">
+          <h3 className="text-sm font-semibold">{isEditing ? "이미지 관리" : "이미지 업로드"}</h3>
+          <button onClick={onClose} className="text-muted-foreground hover:text-foreground">
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+
+        <div className="space-y-3">
+          {/* Existing images (when clicking an image in preview) */}
+          {isEditing && (
+            <>
+              <div className="space-y-2 rounded border border-border/50 bg-muted/20 p-3">
+                {existingImages.defaultImg && (
+                  <div className="flex items-center gap-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={existingImages.defaultImg} alt="" className="h-12 w-16 shrink-0 rounded border border-border/30 object-cover" />
+                    <div className="min-w-0 flex-1">
+                      <span className="block truncate text-[10px] text-muted-foreground">{existingImages.defaultImg}</span>
+                      <span className="text-[10px] font-medium text-foreground">기본 (EN/공통)</span>
+                    </div>
+                  </div>
+                )}
+                {existingImages.koImg && (
+                  <div className="flex items-center gap-2">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={existingImages.koImg} alt="" className="h-12 w-16 shrink-0 rounded border border-border/30 object-cover" />
+                    <div className="min-w-0 flex-1">
+                      <span className="block truncate text-[10px] text-muted-foreground">{existingImages.koImg}</span>
+                      <span className="text-[10px] font-medium text-foreground">한국어</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Hero toggle for existing image */}
+              {existingImages.defaultImg && (
+                <button
+                  onClick={() => {
+                    if (isHero) onClearHero();
+                    else onSetHero(existingImages.defaultImg);
+                  }}
+                  className={`w-full rounded border px-3 py-2 text-xs transition-colors ${
+                    isHero
+                      ? "border-primary bg-primary/10 text-primary"
+                      : "border-border/50 text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {isHero ? "Featured (Hero) 해제" : "Featured (Hero)로 설정"}
+                </button>
+              )}
+
+              <div className="border-t border-border/30 pt-3">
+                <span className="text-[10px] text-muted-foreground">새 이미지로 교체하려면 아래에서 업로드</span>
+              </div>
+            </>
+          )}
+
+          {/* Current hero (only when not editing) */}
+          {!isEditing && currentHero && (
+            <div className="flex items-center gap-2 rounded border border-border/50 bg-muted/30 px-3 py-2">
+              <span className="flex-1 truncate text-xs">
+                <span className="text-muted-foreground">Hero: </span>
+                {currentHero}
+              </span>
+              <button
+                onClick={onClearHero}
+                className="shrink-0 text-[10px] text-destructive hover:underline"
+              >
+                제거
+              </button>
+            </div>
+          )}
+
+          {/* Default image upload */}
+          <div>
+            <div className="mb-1 flex items-center gap-2">
+              <label className="text-xs text-muted-foreground">기본 이미지 (EN/공통)</label>
+              {isEditing && existingImages?.defaultImg && (
+                <span className="truncate text-[10px] text-foreground/60">{existingImages.defaultImg.split("/").pop()}</span>
+              )}
+            </div>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setDefaultFile(e.target.files?.[0] ?? null)}
+              className="w-full text-xs file:mr-2 file:rounded file:border-0 file:bg-primary/10 file:px-2 file:py-1 file:text-xs file:text-primary"
+            />
+          </div>
+
+          {/* Korean image upload */}
+          <div>
+            <div className="mb-1 flex items-center gap-2">
+              <label className="text-xs text-muted-foreground">한국어 이미지 (선택)</label>
+              {isEditing && existingImages?.koImg && (
+                <span className="truncate text-[10px] text-foreground/60">{existingImages.koImg.split("/").pop()}</span>
+              )}
+            </div>
+            <input
+              type="file"
+              accept="image/*"
+              onChange={(e) => setKoFile(e.target.files?.[0] ?? null)}
+              className="w-full text-xs file:mr-2 file:rounded file:border-0 file:bg-primary/10 file:px-2 file:py-1 file:text-xs file:text-primary"
+            />
+          </div>
+
+          {/* Featured checkbox for new upload */}
+          {!isEditing && (
+            <label className="flex items-center gap-2 rounded border border-border/50 px-3 py-2">
+              <input
+                type="checkbox"
+                checked={featured}
+                onChange={(e) => setFeatured(e.target.checked)}
+                className="h-3.5 w-3.5 accent-primary"
+              />
+              <span className="text-xs">Featured (Hero) 이미지로 설정</span>
+            </label>
+          )}
+          {!isEditing && featured && !defaultFile && (
+            <p className="text-[10px] text-destructive">Hero에는 기본 이미지가 필요합니다</p>
+          )}
+        </div>
+
+        <div className="mt-4 flex justify-end gap-2">
+          <Button size="sm" variant="outline" onClick={onClose}>
+            {isEditing && !hasFile ? "닫기" : "취소"}
+          </Button>
+          {hasFile && (
+            <Button
+              size="sm"
+              onClick={() => onUpload(defaultFile, koFile, featured)}
+              disabled={uploading || (featured && !defaultFile)}
+            >
+              {uploading ? "업로드 중..." : "업로드"}
+            </Button>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

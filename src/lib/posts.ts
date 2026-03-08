@@ -64,7 +64,7 @@ function parseFrontmatter(source: string): { data: Frontmatter; content: string 
       (value.startsWith('"') && value.endsWith('"')) ||
       (value.startsWith("'") && value.endsWith("'"))
     ) {
-      value = value.slice(1, -1);
+      value = value.slice(1, -1).replace(/\\"/g, '"').replace(/\\\\/g, "\\");
     }
 
     if (value.startsWith("[") && value.endsWith("]")) {

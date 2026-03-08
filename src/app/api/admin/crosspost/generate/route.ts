@@ -31,15 +31,15 @@ const PLATFORM_INSTRUCTIONS: Record<string, string> = {
   devto:
     "Write a full Dev.to article. Include a compelling intro, well-structured body with headings, and a closing call-to-action. Use markdown formatting.",
   reddit:
-    "Write a Reddit self-post. Keep it concise (3-5 paragraphs). Conversational tone. End with the blog link and a discussion question. No markdown headings — just paragraphs.",
+    "Write a Reddit self-post. MAX 3 short paragraphs (under 500 characters total). Lead with the key message. Conversational tone. End with blog link + one discussion question.",
   facebook:
-    "Write a Facebook post. Casual and engaging. 2-3 short paragraphs max. Hook in the first line. End with the blog link. Use line breaks for readability. No hashtags spam — 2-3 relevant ones at the end if any.",
+    "Write a Facebook post. MAX 3-4 lines (under 300 characters). Hook in the first line with the key message. Blog link at end. No hashtags spam — 1-2 max. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_, no bullet points.",
   linkedin:
-    "Write a LinkedIn post. Professional but not corporate. Lead with an insight or surprising fact. 3-4 paragraphs. End with the blog link and a thought-provoking question to invite comments. Use line breaks between paragraphs for LinkedIn formatting.",
+    "Write a LinkedIn post. MAX 4-5 lines (under 400 characters). Lead with a surprising insight or bold claim. Blog link at end. One question to invite comments. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_. Use line breaks for structure.",
   x:
-    "Write a tweet thread (2-3 tweets). Each tweet under 280 characters. First tweet hooks with a bold statement. Thread with 🧵. Last tweet has the blog link. Punchy, quotable, no fluff.",
+    "Write a SINGLE tweet (under 280 characters). Bold hook with the key message upfront. Include blog link. Punchy, quotable, no fluff. NOT a thread. PLAIN TEXT ONLY — no markdown.",
   instagram:
-    "Write an Instagram caption. Casual, visual-friendly. Start with a hook line. 2-3 short paragraphs. End with relevant hashtags (5-8). Include a call-to-action like 'link in bio'. Emoji-friendly but not excessive.",
+    "Write an Instagram caption. MAX 3 lines (under 200 characters before hashtags). Hook first, key message upfront. Include the blog post URL in the caption. End with 3-5 hashtags. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_.",
 };
 
 function buildPrompt(
@@ -78,6 +78,7 @@ ${blogContent.slice(0, 6000)}
 - Write ONLY the post content, no meta commentary
 - Write in ${lang === "ko" ? "Korean (한국어)" : "English"}
 - Do not fabricate features or claims not in the source
+- CRITICAL: If the platform says "PLAIN TEXT ONLY", you MUST NOT use any markdown formatting — no **bold**, no *italic*, no _underline_, no bullet points, no headings. Just plain text with line breaks.
 - For Reddit: include "Read the full post: https://naia.nextain.io/en/blog/SLUG" at the end (replace SLUG)
 - For Dev.to: the full article will be posted with canonical_url, so write the complete article`;
 }
@@ -116,13 +117,13 @@ export async function POST(req: NextRequest) {
     const prompt = buildPrompt(platform, style, post.title, post.content, post.summary, typeof subreddit === "string" ? subreddit : undefined, typeof lang === "string" ? lang : undefined);
 
     const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           contents: [{ parts: [{ text: prompt }] }],
-          generationConfig: { temperature: 0.7, maxOutputTokens: 4096 },
+          generationConfig: { temperature: 0.7, maxOutputTokens: 16384 },
         }),
       },
     );
