@@ -36,7 +36,7 @@ interface CrosspostTarget {
   id: string;
   platform: string;
   label: string;
-  group: "blog" | "luke" | "naia";
+  group: "blog" | "luke" | "naia" | "community";
   type: "original" | "ai";
   style?: string;
   lang?: string;
@@ -57,10 +57,11 @@ const CROSSPOST_TARGETS: CrosspostTarget[] = [
   { id: "facebook-en", platform: "facebook", label: "Facebook (EN)", group: "luke", type: "ai", style: "luke", lang: "en" },
   { id: "linkedin-ko", platform: "linkedin", label: "LinkedIn (KO)", group: "luke", type: "ai", style: "luke", lang: "ko" },
   { id: "linkedin-en", platform: "linkedin", label: "LinkedIn (EN)", group: "luke", type: "ai", style: "luke", lang: "en" },
-  // Naia social (Reddit, X, Instagram)
-  { id: "reddit-opensource", platform: "reddit", label: "r/opensource", group: "naia", type: "ai", style: "naia", subreddit: "opensource", submitUrl: "https://www.reddit.com/r/opensource/submit?type=text" },
-  { id: "reddit-locallama", platform: "reddit", label: "r/LocalLLaMA", group: "naia", type: "ai", style: "naia", subreddit: "LocalLLaMA", submitUrl: "https://www.reddit.com/r/LocalLLaMA/submit?type=text" },
-  { id: "reddit-programming", platform: "reddit", label: "r/programming", group: "naia", type: "ai", style: "naia", subreddit: "programming", submitUrl: "https://www.reddit.com/r/programming/submit?type=text" },
+  // Community social (Reddit — developer perspective)
+  { id: "reddit-opensource", platform: "reddit", label: "r/opensource", group: "community", type: "ai", style: "luke", subreddit: "opensource", submitUrl: "https://www.reddit.com/r/opensource/submit?type=text" },
+  { id: "reddit-locallama", platform: "reddit", label: "r/LocalLLaMA", group: "community", type: "ai", style: "luke", subreddit: "LocalLLaMA", submitUrl: "https://www.reddit.com/r/LocalLLaMA/submit?type=text" },
+  { id: "reddit-programming", platform: "reddit", label: "r/programming", group: "community", type: "ai", style: "luke", subreddit: "programming", submitUrl: "https://www.reddit.com/r/programming/submit?type=text" },
+  // Naia social (X, Instagram — brand voice)
   { id: "x-ko", platform: "x", label: "X (KO)", group: "naia", type: "ai", style: "naia", lang: "ko" },
   { id: "x-en", platform: "x", label: "X (EN)", group: "naia", type: "ai", style: "naia", lang: "en" },
   { id: "instagram-ko", platform: "instagram", label: "Insta (KO)", group: "naia", type: "ai", style: "naia", lang: "ko", submitUrl: "https://www.instagram.com/" },

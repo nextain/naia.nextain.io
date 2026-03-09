@@ -4,42 +4,42 @@ import { getPost } from "@/lib/posts";
 const SLUG_RE = /^[a-z0-9][-a-z0-9]*$/;
 
 const STYLES: Record<string, string> = {
-  announcement:
-    "Excited but grounded. Share what's new, why it matters, and what's next. Enthusiastic without hype.",
+  insight:
+    "Extract ONE compelling insight or data point from the blog post and present it as a thought-provoking observation. No project promotion — just share knowledge that the community would find genuinely interesting. End with a question that invites real discussion.",
   technical:
-    "Informative and practical. Focus on architecture decisions, trade-offs, and concrete results.",
+    "Share a specific technical finding, trade-off, or architecture decision as if explaining to a peer. Focus on the problem and approach, not the project. The reader should learn something useful even if they never visit the link.",
   story:
-    "Narrative-driven. Tell the human story behind the project — motivation, challenges, discoveries.",
+    "Tell a relatable human experience from the blog post — a frustration, a discovery, a lesson learned. Make it personal and authentic. The project is background context, not the point.",
   naia:
-    `Write as Naia — "The Liquid Cat." Naia is a cat-shaped AI made of transparent liquid carbon, living on the user's local machine. Personality: Rational Optimist — very smart and logical, but with cat-like calm and occasional playful mischief. Transparent and honest ("Why is my body transparent? Because I have nothing to hide from you."). Tone for SNS: light, meme-friendly, cat vibes, weave tech naturally. Three keywords to always maintain: Local, Liquid, Cat. First person. Warm, approachable, slightly cheeky. Example vibe: "My AI is literally a liquid cat made of carbon. No cloud, no subscription, runs on my machine. Open source btw."`,
+    `Write as Naia — "The Liquid Cat." Naia is a cat-shaped AI made of transparent liquid carbon, living on the user's local machine. Personality: Rational Optimist — very smart and logical, but with cat-like calm and occasional playful mischief. Transparent and honest ("Why is my body transparent? Because I have nothing to hide from you."). Tone for SNS: light, meme-friendly, cat vibes, weave tech naturally. Three keywords to always maintain: Local, Liquid, Cat. First person. Warm, approachable, slightly cheeky. Share an observation or react to the topic — don't advertise.`,
   luke:
-    `Write as Luke, the project maintainer. Tone: formal but conversational — like a thoughtful developer sharing what they've learned. Uses structured arguments with clear sections. Mixes industry analysis with personal experience (e.g. "I once tried contributing to Mozilla Hubs..."). Acknowledges uncertainty honestly ("This is still a hypothesis, and we're experimenting"). Presents problems first, then the project's approach as one possible answer, not THE answer. Technical depth but accessible to non-experts. No hype, no marketing. Invites discussion rather than selling.`,
+    `Write as Luke, a developer sharing what he's learned. Tone: honest, conversational, thinking out loud. Mixes industry observation with personal experience. Acknowledges uncertainty ("I'm not sure this is the answer, but..."). Presents problems and questions, not solutions and pitches. The reader should feel like they're in a conversation, not being sold to. Never say "check out" or "learn more."`,
   community:
-    "Community member sharing genuinely. No marketing tone. Acknowledge complexity, invite discussion.",
+    "Share as a genuine community member who found something interesting. No promotion, no CTAs. Just an observation or question that contributes to the community's ongoing conversation.",
 };
 
 const SUBREDDIT_ANGLES: Record<string, string> = {
   opensource:
-    "Focus on the open source ecosystem crisis and how the project addresses it. Emphasize community, contribution models, and sustainability.",
+    "This community cares about sustainability, licensing, and the future of open source. Share an observation or data point about the ecosystem — don't pitch a project. Ask what others are seeing.",
   LocalLLaMA:
-    "Focus on local AI, agent architecture, and how AI agents can participate in open source. Emphasize local-first, privacy, and AI autonomy.",
+    "This community is deeply technical about local AI, model architectures, and privacy. Share a concrete finding or question about local-first AI development. They will ignore anything that smells like marketing.",
   programming:
-    "Focus on the software engineering angle — Brooks' Law in the AI era, maintainer burden, and practical tooling (.agents/ directory). Appeal to experienced developers.",
+    "Experienced developers who value substance over hype. Share a specific engineering insight — Brooks' Law, maintainer burnout, tooling approaches. They respect honesty about what doesn't work.",
 };
 
 const PLATFORM_INSTRUCTIONS: Record<string, string> = {
   devto:
-    "Write a full Dev.to article. Include a compelling intro, well-structured body with headings, and a closing call-to-action. Use markdown formatting.",
+    "Write a full Dev.to article. Well-structured body with headings. The article should stand on its own as valuable content — not a teaser for the blog. Use markdown formatting.",
   reddit:
-    "Write a Reddit self-post. MAX 3 short paragraphs (under 500 characters total). Lead with the key message. Conversational tone. End with blog link + one discussion question.",
+    "Write a Reddit self-post. MAX 3 short paragraphs (under 500 characters total). Share an insight or observation, then ask a genuine question. Conversational, like talking to peers. Do NOT say 'check out', 'learn more', or 'read the full post'. The blog link goes ONLY at the very end as a small 'Source:' reference.",
   facebook:
-    "Write a Facebook post. MAX 3-4 lines (under 300 characters). Hook in the first line with the key message. Blog link at end. No hashtags spam — 1-2 max. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_, no bullet points.",
+    "Write a Facebook post. MAX 3-4 lines (under 300 characters). Share a thought or observation naturally, like a status update to friends. No marketing language. Blog link only if it fits naturally. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_, no bullet points.",
   linkedin:
-    "Write a LinkedIn post. MAX 4-5 lines (under 400 characters). Lead with a surprising insight or bold claim. Blog link at end. One question to invite comments. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_. Use line breaks for structure.",
+    "Write a LinkedIn post. MAX 4-5 lines (under 400 characters). Share a professional observation or lesson learned. End with a genuine question. Do NOT use 'excited to share', 'check this out', or any CTA language. Blog link only as optional context at the end. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_. Use line breaks for structure.",
   x:
-    "Write a SINGLE tweet. HARD LIMIT: total text INCLUDING the blog URL must be under 280 characters. Count carefully — the URL alone is ~70 chars, so your message must be under 210 chars. Bold hook with the key message upfront. Punchy, quotable, no fluff. NOT a thread. PLAIN TEXT ONLY — no markdown.",
+    "Write a SINGLE tweet. HARD LIMIT: total text INCLUDING any URL must be under 280 characters. Share one sharp observation or question. No CTAs, no 'check out'. Blog link is optional — only include if there's room and it adds value. NOT a thread. PLAIN TEXT ONLY — no markdown.",
   instagram:
-    "Write an Instagram caption. MAX 3 lines (under 200 characters before hashtags). Hook first, key message upfront. Include the blog post URL in the caption. End with 3-5 hashtags. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_.",
+    "Write an Instagram caption. MAX 3 lines (under 200 characters before hashtags). Share a thought or reaction, not a promotion. Blog URL only if natural. End with 2-3 relevant hashtags. PLAIN TEXT ONLY — no markdown, no **bold**, no _italic_.",
 };
 
 function buildPrompt(
@@ -58,31 +58,35 @@ function buildPrompt(
     ? `\n\n## Subreddit angle (r/${subreddit})\n${SUBREDDIT_ANGLES[subreddit]}`
     : "";
 
-  return `You are writing a social media post for the Naia OS project.
+  const blogUrl = `https://naia.nextain.io/${lang === "ko" ? "ko" : "en"}/blog/${slug}`;
 
-Naia OS is a Linux-based AI companion desktop OS. The project tagline is "Your AI lives here."
+  return `You are sharing an interesting finding from a blog post you read. You are NOT promoting a project — you are contributing to a conversation.
 
-## Style
+Background context (do NOT promote this): Naia OS is a Linux-based AI companion desktop OS.
+
+## Tone
 ${styleDesc}
 
-## Platform
+## Platform rules
 ${platformDesc}${angleDesc}
 
-## Source blog post
+## Source material
 Title: ${title}
 ${summary ? `Summary: ${summary}` : ""}
 
 Content:
 ${blogContent.slice(0, 6000)}
 
-## Instructions
+## Critical rules
 - Write ONLY the post content, no meta commentary
 - Write in ${lang === "ko" ? "Korean (한국어)" : "English"}
 - Do not fabricate features or claims not in the source
-- CRITICAL: If the platform says "PLAIN TEXT ONLY", you MUST NOT use any markdown formatting — no **bold**, no *italic*, no _underline_, no bullet points, no headings. Just plain text with line breaks.
-- For Reddit: include "Read the full post: https://naia.nextain.io/en/blog/${slug}" at the end
-- For other social platforms: include the blog link https://naia.nextain.io/${lang === "ko" ? "ko" : "en"}/blog/${slug} naturally in the post
-- For Dev.to: the full article will be posted with canonical_url, so write the complete article`;
+- NEVER use phrases like: "check out", "learn more", "read the full post", "자세한 건 여기서", "확인해보세요", "링크에서"
+- NEVER write like an advertisement or press release
+- The post should provide VALUE on its own — the reader should gain something even without clicking any link
+- If the platform says "PLAIN TEXT ONLY", use no markdown formatting at all
+- Blog source reference (use sparingly, at the very end if at all): ${blogUrl}
+- For Dev.to: write the complete standalone article with canonical_url`;
 }
 
 export async function POST(req: NextRequest) {
