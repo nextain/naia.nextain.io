@@ -22,6 +22,7 @@ export async function generateMetadata({
     keywords: ["Naia download", "AI OS download", "Naia OS ISO", "Linux AI download", "Flatpak", "AppImage", "Naia Shell", "USB boot AI"],
   });
 }
+import yaml from "js-yaml";
 import {
   Download,
   Package,
@@ -61,6 +62,57 @@ const FORMAT_ICONS = {
 /** Formats that have passed verification and are available for download */
 const ENABLED_FORMATS = new Set(["flatpak"]);
 
+interface ReleaseChange {
+  type: string;
+  scope: string;
+  description: Record<string, string>;
+}
+
+interface ReleaseData {
+  version: string;
+  date: string;
+  summary: Record<string, string>;
+  changes: ReleaseChange[];
+}
+
+async function getLatestReleases(): Promise<ReleaseData[]> {
+  try {
+    const headers: Record<string, string> = {
+      Accept: "application/vnd.github.v3+json",
+    };
+    if (process.env.GITHUB_TOKEN) {
+      headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+    }
+
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/releases`,
+      { headers, next: { revalidate: 3600 } },
+    );
+    if (!res.ok) return [];
+    const files: { name: string; download_url: string }[] = await res.json();
+
+    const yamlFiles = files
+      .filter((f) => f.name.endsWith(".yaml"))
+      .sort((a, b) => b.name.localeCompare(a.name))
+      .slice(0, 3);
+
+    const releases = await Promise.all(
+      yamlFiles.map(async (f) => {
+        const raw = await fetch(f.download_url, {
+          headers,
+          next: { revalidate: 3600 },
+        });
+        if (!raw.ok) return null;
+        const text = await raw.text();
+        return yaml.load(text) as ReleaseData;
+      }),
+    );
+
+    return releases.filter((r): r is ReleaseData => r !== null);
+  } catch {
+    return [];
+  }
+}
 
 export default async function DownloadPage({
   params,
@@ -71,6 +123,7 @@ export default async function DownloadPage({
   if (!isLocale(lang)) notFound();
   const dict = await getDictionary(lang as Locale);
   const d = dict.download;
+  const releases = await getLatestReleases();
 
   const formats = ["flatpak", "appimage", "deb", "rpm"] as const;
 
@@ -236,6 +289,44 @@ export default async function DownloadPage({
           <CopyButton text="sha256sum -c SHA256SUMS" />
         </div>
       </div>
+
+      {/* Release Notes */}
+      {releases.length > 0 && (
+        <div className="mb-8">
+          <h2 className="mb-4 text-xl font-semibold">{d.releaseNotes}</h2>
+          {releases.map((release) => (
+            <div key={release.version} className="mb-6 rounded-lg border p-4">
+              <h3 className="mb-2 text-base font-medium">
+                v{release.version}{" "}
+                <span className="text-sm text-muted-foreground">
+                  ({release.date})
+                </span>
+              </h3>
+              <p className="mb-3 text-sm text-muted-foreground">
+                {release.summary[lang] ?? release.summary.en}
+              </p>
+              <ul className="space-y-1.5">
+                {release.changes.map((change, i) => (
+                  <li
+                    key={`${release.version}-${i}`}
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                  >
+                    <Badge
+                      variant="outline"
+                      className="mt-0.5 shrink-0 text-xs"
+                    >
+                      {change.type}({change.scope})
+                    </Badge>
+                    <span>
+                      {change.description[lang] ?? change.description.en}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Links */}
       <div className="flex flex-wrap gap-3">
