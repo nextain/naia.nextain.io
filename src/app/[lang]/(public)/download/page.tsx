@@ -84,11 +84,12 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
       headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
     }
 
-    const res = await fetch(
-      `https://api.github.com/repos/${GITHUB_REPO}/contents/releases`,
-      { headers, cache: "no-store" },
-    );
-    if (!res.ok) return [];
+    const url = `https://api.github.com/repos/${GITHUB_REPO}/contents/releases`;
+    const res = await fetch(url, { headers, cache: "no-store" });
+    if (!res.ok) {
+      console.error(`[releases] GitHub API ${res.status}: ${await res.text().catch(() => "")}`);
+      return [];
+    }
     const files: { name: string; download_url: string }[] = await res.json();
 
     const yamlFiles = files
@@ -109,7 +110,8 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
     );
 
     return releases.filter((r): r is ReleaseData => r !== null);
-  } catch {
+  } catch (err) {
+    console.error("[releases] Failed to fetch releases:", err);
     return [];
   }
 }
