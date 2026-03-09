@@ -82,7 +82,7 @@ export default async function BlogPostPage({
     auth(),
     getPostViews(),
   ]);
-  const views = viewsMap[slug] ?? 0;
+  const views = viewsMap[`${lang}/${slug}`] ?? 0;
   const allPosts = getAllPosts(lang as Locale);
   const currentIndex = allPosts.findIndex((p) => p.slug === slug);
   const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;

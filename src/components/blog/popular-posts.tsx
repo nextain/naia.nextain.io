@@ -23,7 +23,7 @@ export function PopularPosts({ lang, excludeSlugs }: PopularPostsProps) {
   useEffect(() => {
     const excluded = new Set(excludeSlugs);
 
-    fetch("/api/blog/popular")
+    fetch(`/api/blog/popular?lang=${lang}`)
       .then((res) => (res.ok ? res.json() : null))
       .then((data) => {
         if (data?.popular?.length) {

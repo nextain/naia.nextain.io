@@ -39,19 +39,22 @@ export const getPostViews = unstable_cache(
         limit: 50,
       });
 
+      // Keys are "locale/slug" for per-locale counts
       const slugViews: Record<string, number> = {};
       for (const row of response.rows || []) {
         const rawPath = row.dimensionValues?.[0]?.value || "";
         const views = Number(row.metricValues?.[0]?.value ?? 0);
-        const match = rawPath.match(/\/blog\/([^/?]+)/);
+        const match = rawPath.match(/\/([a-z]{2})\/blog\/([^/?]+)/);
         if (!match) continue;
+        const locale = match[1];
         let slug: string;
         try {
-          slug = decodeURIComponent(match[1]);
+          slug = decodeURIComponent(match[2]);
         } catch {
-          slug = match[1];
+          slug = match[2];
         }
-        slugViews[slug] = (slugViews[slug] || 0) + views;
+        const key = `${locale}/${slug}`;
+        slugViews[key] = (slugViews[key] || 0) + views;
       }
 
       return slugViews;

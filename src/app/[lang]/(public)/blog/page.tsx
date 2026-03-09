@@ -105,9 +105,9 @@ export default async function BlogListPage({
                       })}
                     </time>
                     {post.author && <span>· {post.author}</span>}
-                    {(viewsMap[post.slug] ?? 0) > 0 && (
+                    {(viewsMap[`${lang}/${post.slug}`] ?? 0) > 0 && (
                       <span className="flex items-center gap-0.5">
-                        · <Eye className="h-3 w-3" /> {viewsMap[post.slug].toLocaleString()}
+                        · <Eye className="h-3 w-3" /> {viewsMap[`${lang}/${post.slug}`].toLocaleString()}
                       </span>
                     )}
                   </div>
