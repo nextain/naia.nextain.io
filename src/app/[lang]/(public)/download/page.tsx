@@ -86,7 +86,7 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
 
     const res = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/releases`,
-      { headers, next: { revalidate: 900 } },
+      { headers, cache: "no-store" },
     );
     if (!res.ok) return [];
     const files: { name: string; download_url: string }[] = await res.json();
