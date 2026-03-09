@@ -86,7 +86,7 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
 
     const res = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/releases`,
-      { headers, next: { revalidate: 3600 } },
+      { headers, next: { revalidate: 900 } },
     );
     if (!res.ok) return [];
     const files: { name: string; download_url: string }[] = await res.json();
@@ -100,7 +100,7 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
       yamlFiles.map(async (f) => {
         const raw = await fetch(f.download_url, {
           headers,
-          next: { revalidate: 3600 },
+          next: { revalidate: 900 },
         });
         if (!raw.ok) return null;
         const text = await raw.text();
