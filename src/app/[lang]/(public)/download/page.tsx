@@ -77,31 +77,33 @@ interface ReleaseData {
   changes: ReleaseChange[];
 }
 
+const RAW_BASE = `https://raw.githubusercontent.com/${GITHUB_REPO}/main/releases`;
+
 async function getLatestReleases(): Promise<ReleaseData[]> {
   try {
-    const headers: Record<string, string> = {
-      Accept: "application/vnd.github.v3+json",
-    };
-    if (process.env.GITHUB_TOKEN) {
-      headers.Authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
+    // Get release tags from GitHub Releases API to discover versions
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/releases?per_page=5`,
+      { cache: "no-store" },
+    );
+    if (!res.ok) return [];
+    const ghReleases: { tag_name: string }[] = await res.json();
+
+    // Extract unique base versions (e.g., v0.1.2-dev.xxx → v0.1.2)
+    const seen = new Set<string>();
+    const versions: string[] = [];
+    for (const r of ghReleases) {
+      const match = r.tag_name.match(/^v(\d+\.\d+\.\d+)/);
+      if (match && !seen.has(match[1])) {
+        seen.add(match[1]);
+        versions.push(match[1]);
+      }
     }
 
-    const url = `https://api.github.com/repos/${GITHUB_REPO}/contents/releases`;
-    const res = await fetch(url, { headers, cache: "no-store" });
-    if (!res.ok) {
-      console.error(`[releases] GitHub API ${res.status}: ${await res.text().catch(() => "")}`);
-      return [];
-    }
-    const files: { name: string; download_url: string }[] = await res.json();
-
-    const yamlFiles = files
-      .filter((f) => f.name.endsWith(".yaml"))
-      .sort((a, b) => b.name.localeCompare(a.name))
-      .slice(0, 3);
-
+    // Fetch YAML files from raw.githubusercontent.com (no rate limit)
     const releases = await Promise.all(
-      yamlFiles.map(async (f) => {
-        const raw = await fetch(f.download_url, {
+      versions.slice(0, 3).map(async (ver) => {
+        const raw = await fetch(`${RAW_BASE}/v${ver}.yaml`, {
           cache: "no-store",
         });
         if (!raw.ok) return null;
