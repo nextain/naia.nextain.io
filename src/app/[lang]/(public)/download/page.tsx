@@ -67,6 +67,7 @@ const ENABLED_FORMATS = new Set(["flatpak"]);
 interface ReleaseChange {
   type: string;
   scope: string;
+  issue?: number;
   description: Record<string, string>;
 }
 
@@ -102,7 +103,7 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
 
     // Fetch YAML files from raw.githubusercontent.com (no rate limit)
     const releases = await Promise.all(
-      versions.slice(0, 3).map(async (ver) => {
+      versions.slice(0, 2).map(async (ver) => {
         const raw = await fetch(`${RAW_BASE}/v${ver}.yaml`, {
           cache: "no-store",
         });
@@ -324,19 +325,47 @@ export default async function DownloadPage({
                     </Badge>
                     <span>
                       {change.description[lang] ?? change.description.en}
+                      {change.issue && (
+                        <>
+                          {" "}
+                          <Link
+                            href={`https://github.com/${GITHUB_REPO}/issues/${change.issue}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-primary hover:underline"
+                          >
+                            #{change.issue}
+                          </Link>
+                        </>
+                      )}
                     </span>
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+          <div className="mt-2 text-right">
+            <Button variant="link" size="sm" asChild>
+              <Link
+                href={`https://github.com/${GITHUB_REPO}/blob/main/CHANGELOG${lang === "en" ? "" : `.${lang}`}.md`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {d.allReleases} →
+              </Link>
+            </Button>
+          </div>
         </div>
       )}
 
       {/* Links */}
       <div className="flex flex-wrap gap-3">
         <Button variant="outline" asChild>
-          <Link href={RELEASE_BASE} target="_blank" rel="noreferrer">
+          <Link
+            href={`https://github.com/${GITHUB_REPO}/blob/main/CHANGELOG${lang === "en" ? "" : `.${lang}`}.md`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <ExternalLink className="mr-2 h-4 w-4" />
             {d.allReleases}
           </Link>
