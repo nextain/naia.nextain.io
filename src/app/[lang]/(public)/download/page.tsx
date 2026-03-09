@@ -5,6 +5,8 @@ import { notFound } from "next/navigation";
 import { buildPageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({
   params,
 }: {
@@ -100,8 +102,7 @@ async function getLatestReleases(): Promise<ReleaseData[]> {
     const releases = await Promise.all(
       yamlFiles.map(async (f) => {
         const raw = await fetch(f.download_url, {
-          headers,
-          next: { revalidate: 900 },
+          cache: "no-store",
         });
         if (!raw.ok) return null;
         const text = await raw.text();
