@@ -85,6 +85,9 @@ export function Footer() {
         <p className="mt-8 text-center text-xs text-muted-foreground">
           {dict.footer.copyright}
         </p>
+        <p className="mt-2 text-center text-xs text-muted-foreground whitespace-pre-line">
+          {dict.footer.companyInfo}
+        </p>
       </div>
     </footer>
   );

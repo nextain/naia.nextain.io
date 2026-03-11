@@ -45,7 +45,8 @@ const id: Dictionary = {
       "about": "Tentang Nextain",
       "donation": "Donasi"
     },
-    "copyright": "© 2026 Selanjutnya. Semua hak dilindungi undang-undang."
+    "copyright": "© 2026 nextain Inc. All rights reserved.",
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "Masuk / Daftar",

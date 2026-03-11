@@ -46,6 +46,7 @@ export interface Dictionary {
       donation: string;
     };
     copyright: string;
+    companyInfo: string;
   };
   auth: {
     loginTitle: string;

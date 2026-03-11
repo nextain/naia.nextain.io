@@ -45,7 +45,8 @@ const ko: Dictionary = {
       about: "회사 소개",
       donation: "후원",
     },
-    copyright: "© 2026 Nextain (Next AI Networks). All rights reserved.",
+    copyright: "© 2026 nextain Inc. All rights reserved.",
+    companyInfo: "(주)넥스테인 | 대표 양병석 | 사업자등록번호 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io",
   },
   auth: {
     loginTitle: "로그인 / 회원가입",
