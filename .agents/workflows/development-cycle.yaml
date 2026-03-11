@@ -29,12 +29,15 @@ cycle:
 
   - phase: VERIFY
     actions:
-      - Run tests (npm test)
-      - Run dev server (npm run dev) and check manually
-      - Verify in browser if UI change
+      - "Check .env for required test data (API keys, tokens, URLs) — if missing, ask user"
+      - "Run targeted tests FIRST (changed scope only) for fast feedback"
+      - "Run full test suite (npm test)"
+      - "Run dev server (npm run dev) and verify in browser"
+      - "After targeted tests pass, run full E2E suite if available"
     rules:
-      - Type check alone is NOT verification
-      - Actually run the app
+      - "MUST actually run the web server — type check alone is NOT verification"
+      - "Test data comes from .env — if missing, ask user (never guess)"
+      - "Changed parts first, then full suite"
 
   - phase: CLEAN
     actions:
