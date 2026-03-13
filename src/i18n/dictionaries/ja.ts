@@ -46,7 +46,7 @@ const ja: Dictionary = {
       "donation": "寄付"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "ログイン/サインアップ",
@@ -170,7 +170,29 @@ const ja: Dictionary = {
           "高度な音声機能"
         ],
         "cta": "アップグレード"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "月",
+        description: "パワーユーザーのために",
+        features: [
+          "チャージごとに1%ボーナスクレジット",
+          "すべてのベーシック機能",
+          "プレミアムモデルへのアクセス",
+          "優先キュー",
+          "専用サポート",
+        ],
+        cta: "PRO にする",
+      },
+      creditPacks: {
+        title: "クレジットパック",
+        subtitle: "サブスクリプション加入者は最大3%のボーナス付きで追加クレジットを購入できます",
+        bonus: "ボーナス",
+        credits: "クレジット",
+        buy: "購入",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "よくある質問"
@@ -522,8 +544,11 @@ const ja: Dictionary = {
     "periodUsage": "期間利用",
     "comparePlans": "プランを比較する",
     "upgrade": "アップグレード",
+    "downgrade": "ダウングレード",
+    "cancelPlan": "プランを解約",
     "free": "無料",
     "basic": "ベーシック",
+    "pro": "PRO",
     "currentBadge": "現在",
     "freeFeatures": [
       "500 サインアップ クレジット",
@@ -535,6 +560,25 @@ const ja: Dictionary = {
       "優先サポート",
       "高品質な音声"
     ],
+    "proFeatures": ["チャージごとに1%ボーナスクレジット", "プレミアムモデルへのアクセス", "専用サポート"],
+    creditPacks: {
+      title: "クレジットパック",
+      subtitle: "サブスクリプション加入者は最大3%のボーナス付きで追加クレジットを購入できます",
+      bonus: "ボーナス",
+      credits: "クレジット",
+      buy: "購入",
+      baseRate: "基本レート: 1,000クレジット = $1",
+    },
+    subscriptionManagement: {
+      title: "サブスクリプション管理",
+      changePlan: "プランを変更",
+      cancelConfirmTitle: "サブスクリプションをキャンセルしますか？",
+      cancelConfirmDescription: "現在のプラン特典は請求期間の終了まで有効です。",
+      downgradeConfirmTitle: "プランをダウングレードしますか？",
+      downgradeConfirmDescription: "現在の請求期間の終了時にプランがダウングレードされます。",
+      customerPortal: "請求履歴と領収書",
+      customerPortalDescription: "お支払い履歴の確認と領収書のダウンロード",
+    },
     "lemonNotice": "支払いはLemonSqueezyによって処理されます。請求と返金のポリシーを確認してください。",
     "pricingModelsSynced": "価格モデルが同期されました"
   }

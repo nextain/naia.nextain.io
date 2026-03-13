@@ -46,7 +46,7 @@ const ar: Dictionary = {
       "donation": "تبرع"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "تسجيل الدخول / الاشتراك",
@@ -170,7 +170,29 @@ const ar: Dictionary = {
           "ميزات صوتية متقدمة"
         ],
         "cta": "ترقية"
-      }
+      },
+      "pro": {
+        "name": "PRO",
+        "price": "$25",
+        "period": "شهر",
+        "description": "للمستخدمين المتقدمين",
+        "features": [
+          "مكافأة 1% رصيد على كل شحن",
+          "جميع ميزات الخطة الأساسية",
+          "الوصول إلى النماذج المميزة",
+          "أولوية في قائمة الانتظار",
+          "دعم مخصص",
+        ],
+        "cta": "الترقية إلى Pro",
+      },
+      "creditPacks": {
+        "title": "حزم الرصيد",
+        "subtitle": "يمكن للمشتركين شراء رصيد إضافي مع مكافأة تصل إلى 3%",
+        "bonus": "مكافأة",
+        "credits": "رصيد",
+        "buy": "شراء",
+        "baseRate": "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "الأسئلة المتداولة"
@@ -522,8 +544,11 @@ const ar: Dictionary = {
     "periodUsage": "استخدام الفترة",
     "comparePlans": "قارن الخطط",
     "upgrade": "ترقية",
+    "downgrade": "تخفيض",
+    "cancelPlan": "إلغاء الخطة",
     "free": "مجاني",
     "basic": "الأساسية",
+    "pro": "PRO",
     "currentBadge": "الحالي",
     "freeFeatures": [
       "500 اعتمادات الاشتراك",
@@ -535,6 +560,25 @@ const ar: Dictionary = {
       "دعم الأولوية",
       "صوت عالي الجودة"
     ],
+    "proFeatures": ["مكافأة 1% رصيد على كل شحن", "الوصول إلى النماذج المميزة", "دعم مخصص"],
+    creditPacks: {
+      title: "حزم الرصيد",
+      subtitle: "يمكن للمشتركين شراء رصيد إضافي مع مكافأة تصل إلى 3%",
+      bonus: "مكافأة",
+      credits: "رصيد",
+      buy: "شراء",
+      baseRate: "السعر الأساسي: 1,000 رصيد = $1",
+    },
+    subscriptionManagement: {
+      title: "إدارة الاشتراك",
+      changePlan: "تغيير الخطة",
+      cancelConfirmTitle: "إلغاء اشتراكك؟",
+      cancelConfirmDescription: "ستستمر مزايا خطتك الحالية حتى نهاية فترة الفوترة.",
+      downgradeConfirmTitle: "تخفيض الخطة؟",
+      downgradeConfirmDescription: "سيتم تخفيض خطتك في نهاية فترة الفوترة الحالية.",
+      customerPortal: "سجل الفواتير والإيصالات",
+      customerPortalDescription: "عرض سجل المدفوعات وتحميل الإيصالات",
+    },
     "lemonNotice": "تتم معالجة المدفوعات عن طريق LemonSqueezy. يرجى مراجعة سياسات الفوترة واسترداد الأموال.",
     "pricingModelsSynced": "نماذج التسعير متزامنة"
   }

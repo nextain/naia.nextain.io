@@ -46,7 +46,7 @@ const vi: Dictionary = {
       "donation": "Quyên góp"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "Đăng nhập / Đăng ký",
@@ -170,7 +170,29 @@ const vi: Dictionary = {
           "Tính năng giọng nói nâng cao"
         ],
         "cta": "Nâng cấp"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "tháng",
+        description: "Dành cho người dùng chuyên sâu",
+        features: [
+          "Thưởng 1% tín dụng cho mỗi lần nạp",
+          "Tất cả tính năng Cơ bản",
+          "Truy cập mô hình cao cấp",
+          "Hàng đợi ưu tiên",
+          "Hỗ trợ chuyên dụng",
+        ],
+        cta: "Nâng cấp Pro",
+      },
+      creditPacks: {
+        title: "Gói tín dụng",
+        subtitle: "Người đăng ký có thể mua thêm tín dụng với tối đa 3% thưởng",
+        bonus: "Thưởng",
+        credits: "tín dụng",
+        buy: "Mua",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "Câu hỏi thường gặp"
@@ -522,8 +544,11 @@ const vi: Dictionary = {
     "periodUsage": "Thời gian sử dụng",
     "comparePlans": "So sánh các gói",
     "upgrade": "Nâng cấp",
+    "downgrade": "Hạ cấp",
+    "cancelPlan": "Hủy gói",
     "free": "MIỄN PHÍ",
     "basic": "CƠ BẢN",
+    "pro": "PRO",
     "currentBadge": "hiện tại",
     "freeFeatures": [
       "500 tín dụng đăng ký",
@@ -535,6 +560,25 @@ const vi: Dictionary = {
       "Hỗ trợ ưu tiên",
       "Giọng nói chất lượng cao"
     ],
+    "proFeatures": ["Thưởng 1% tín dụng cho mỗi lần nạp", "Truy cập mô hình cao cấp", "Hỗ trợ chuyên biệt"],
+    creditPacks: {
+      title: "Gói tín dụng",
+      subtitle: "Người đăng ký có thể mua thêm tín dụng với tối đa 3% thưởng",
+      bonus: "Thưởng",
+      credits: "Tín dụng",
+      buy: "Mua",
+      baseRate: "Tỷ lệ cơ bản: 1,000 tín dụng = $1",
+    },
+    subscriptionManagement: {
+      title: "Quản lý đăng ký",
+      changePlan: "Thay đổi gói",
+      cancelConfirmTitle: "Hủy đăng ký của bạn?",
+      cancelConfirmDescription: "Quyền lợi gói hiện tại sẽ tiếp tục cho đến hết chu kỳ thanh toán.",
+      downgradeConfirmTitle: "Hạ cấp gói?",
+      downgradeConfirmDescription: "Gói của bạn sẽ được hạ cấp khi kết thúc chu kỳ thanh toán hiện tại.",
+      customerPortal: "Lịch sử thanh toán và hóa đơn",
+      customerPortalDescription: "Xem lịch sử thanh toán và tải hóa đơn",
+    },
     "lemonNotice": "Thanh toán được xử lý bởi LemonSqueezy. Vui lòng xem lại chính sách thanh toán và hoàn tiền.",
     "pricingModelsSynced": "Đã đồng bộ hóa mô hình định giá"
   }

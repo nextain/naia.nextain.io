@@ -46,7 +46,7 @@ const zh: Dictionary = {
       "donation": "捐赠"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "登录/注册",
@@ -170,7 +170,29 @@ const zh: Dictionary = {
           "先进的语音功能"
         ],
         "cta": "升级"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "月",
+        description: "为高级用户打造",
+        features: [
+          "每次充值享1%奖励积分",
+          "所有基本功能",
+          "高级模型访问",
+          "优先队列",
+          "专属支持",
+        ],
+        cta: "升级到 Pro",
+      },
+      creditPacks: {
+        title: "积分包",
+        subtitle: "订阅用户可购买额外积分，最高享3%奖励",
+        bonus: "奖励",
+        credits: "积分",
+        buy: "购买",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "常见问题解答"
@@ -522,8 +544,11 @@ const zh: Dictionary = {
     "periodUsage": "期间使用情况",
     "comparePlans": "比较计划",
     "upgrade": "升级",
+    "downgrade": "降级",
+    "cancelPlan": "取消计划",
     "free": "免费",
     "basic": "基本",
+    "pro": "PRO",
     "currentBadge": "当前",
     "freeFeatures": [
       "500 个注册积分",
@@ -535,6 +560,25 @@ const zh: Dictionary = {
       "优先支持",
       "高品质语音"
     ],
+    "proFeatures": ["每次充值享1%奖励积分", "访问高级模型", "专属支持"],
+    creditPacks: {
+      title: "积分包",
+      subtitle: "订阅用户可购买额外积分，最高享3%奖励",
+      bonus: "奖励",
+      credits: "积分",
+      buy: "购买",
+      baseRate: "基础费率: 1,000积分 = $1",
+    },
+    subscriptionManagement: {
+      title: "订阅管理",
+      changePlan: "更改计划",
+      cancelConfirmTitle: "取消订阅？",
+      cancelConfirmDescription: "当前计划权益将持续到计费周期结束。",
+      downgradeConfirmTitle: "降级计划？",
+      downgradeConfirmDescription: "您的计划将在当前计费周期结束时降级。",
+      customerPortal: "账单历史和收据",
+      customerPortalDescription: "查看付款历史和下载收据",
+    },
     "lemonNotice": "付款由 LemonSqueezy 处理。请查看计费和退款政策。",
     "pricingModelsSynced": "定价模型已同步"
   }

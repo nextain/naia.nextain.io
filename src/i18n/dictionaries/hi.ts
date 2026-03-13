@@ -46,7 +46,7 @@ const hi: Dictionary = {
       "donation": "दान करें"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "लॉगइन/साइन अप करें",
@@ -170,7 +170,29 @@ const hi: Dictionary = {
           "उन्नत आवाज सुविधाएँ"
         ],
         "cta": "अपग्रेड करें"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "माह",
+        description: "पावर उपयोगकर्ताओं के लिए",
+        features: [
+          "हर रिचार्ज पर 1% बोनस क्रेडिट",
+          "सभी बुनियादी सुविधाएँ",
+          "प्रीमियम मॉडल एक्सेस",
+          "प्राथमिकता कतार",
+          "समर्पित सहायता",
+        ],
+        cta: "Pro बनें",
+      },
+      creditPacks: {
+        title: "क्रेडिट पैक",
+        subtitle: "सदस्य 3% तक बोनस के साथ अतिरिक्त क्रेडिट खरीद सकते हैं",
+        bonus: "बोनस",
+        credits: "क्रेडिट",
+        buy: "खरीदें",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "अक्सर पूछे जाने वाले प्रश्न"
@@ -522,8 +544,11 @@ const hi: Dictionary = {
     "periodUsage": "अवधि उपयोग",
     "comparePlans": "योजनाओं की तुलना करें",
     "upgrade": "अपग्रेड करें",
+    "downgrade": "डाउनग्रेड करें",
+    "cancelPlan": "योजना रद्द करें",
     "free": "मुफ़्त",
     "basic": "बुनियादी",
+    "pro": "PRO",
     "currentBadge": "वर्तमान",
     "freeFeatures": [
       "500 साइनअप क्रेडिट",
@@ -535,6 +560,25 @@ const hi: Dictionary = {
       "प्राथमिकता समर्थन",
       "उच्च गुणवत्ता वाली आवाज"
     ],
+    "proFeatures": ["हर रिचार्ज पर 1% बोनस क्रेडिट", "प्रीमियम मॉडल एक्सेस", "समर्पित सहायता"],
+    creditPacks: {
+      title: "क्रेडिट पैक",
+      subtitle: "सदस्य 3% तक बोनस के साथ अतिरिक्त क्रेडिट खरीद सकते हैं",
+      bonus: "बोनस",
+      credits: "क्रेडिट",
+      buy: "खरीदें",
+      baseRate: "आधार दर: 1,000 क्रेडिट = $1",
+    },
+    subscriptionManagement: {
+      title: "सदस्यता प्रबंधन",
+      changePlan: "योजना बदलें",
+      cancelConfirmTitle: "सदस्यता रद्द करें?",
+      cancelConfirmDescription: "वर्तमान योजना के लाभ बिलिंग अवधि के अंत तक जारी रहेंगे।",
+      downgradeConfirmTitle: "योजना डाउनग्रेड करें?",
+      downgradeConfirmDescription: "आपकी योजना वर्तमान बिलिंग अवधि के अंत में डाउनग्रेड हो जाएगी।",
+      customerPortal: "बिलिंग इतिहास और रसीदें",
+      customerPortalDescription: "भुगतान इतिहास देखें और रसीदें डाउनलोड करें",
+    },
     "lemonNotice": "भुगतान लेमनस्क्वीज़ी द्वारा संसाधित किए जाते हैं। कृपया बिलिंग और धनवापसी नीतियों की समीक्षा करें।",
     "pricingModelsSynced": "मूल्य निर्धारण मॉडल समन्वयित"
   }

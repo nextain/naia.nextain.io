@@ -46,7 +46,7 @@ const id: Dictionary = {
       "donation": "Donasi"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "Masuk / Daftar",
@@ -170,7 +170,29 @@ const id: Dictionary = {
           "Fitur suara tingkat lanjut"
         ],
         "cta": "Tingkatkan"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "bulan",
+        description: "Untuk pengguna tingkat lanjut",
+        features: [
+          "Bonus kredit 1% untuk setiap pengisian",
+          "Semua fitur Dasar",
+          "Akses model premium",
+          "Antrean prioritas",
+          "Dukungan khusus",
+        ],
+        cta: "Jadi Pro",
+      },
+      creditPacks: {
+        title: "Paket Kredit",
+        subtitle: "Pelanggan dapat membeli kredit tambahan dengan bonus hingga 3%",
+        bonus: "Bonus",
+        credits: "kredit",
+        buy: "Beli",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "Pertanyaan yang Sering Diajukan"
@@ -522,8 +544,11 @@ const id: Dictionary = {
     "periodUsage": "Periode Penggunaan",
     "comparePlans": "Bandingkan Paket",
     "upgrade": "Tingkatkan",
+    "downgrade": "Turunkan",
+    "cancelPlan": "Batalkan paket",
     "free": "GRATIS",
     "basic": "DASAR",
+    "pro": "PRO",
     "currentBadge": "Saat ini",
     "freeFeatures": [
       "500 kredit pendaftaran",
@@ -535,6 +560,25 @@ const id: Dictionary = {
       "Dukungan prioritas",
       "Suara berkualitas tinggi"
     ],
+    "proFeatures": ["Bonus kredit 1% untuk setiap pengisian", "Akses model premium", "Dukungan khusus"],
+    creditPacks: {
+      title: "Paket Kredit",
+      subtitle: "Pelanggan dapat membeli kredit tambahan dengan bonus hingga 3%",
+      bonus: "Bonus",
+      credits: "Kredit",
+      buy: "Beli",
+      baseRate: "Tarif dasar: 1.000 kredit = $1",
+    },
+    subscriptionManagement: {
+      title: "Manajemen Langganan",
+      changePlan: "Ubah paket",
+      cancelConfirmTitle: "Batalkan langganan Anda?",
+      cancelConfirmDescription: "Manfaat paket saat ini akan berlanjut hingga akhir periode penagihan.",
+      downgradeConfirmTitle: "Turunkan paket?",
+      downgradeConfirmDescription: "Paket Anda akan diturunkan di akhir periode penagihan saat ini.",
+      customerPortal: "Riwayat penagihan dan tanda terima",
+      customerPortalDescription: "Lihat riwayat pembayaran dan unduh tanda terima",
+    },
     "lemonNotice": "Pembayaran diproses oleh LemonSqueezy. Harap tinjau kebijakan penagihan dan pengembalian dana.",
     "pricingModelsSynced": "Model penetapan harga disinkronkan"
   }

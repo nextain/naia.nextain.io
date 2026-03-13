@@ -3,22 +3,16 @@ import { verifyLemonSignature } from "@/lib/lemonsqueezy";
 import {
   upgradeSubscription,
   cancelSubscription,
+  topupCredits,
 } from "@/lib/gateway-client";
+import { resolveVariantToPlan, resolveVariantToCredits } from "@/lib/pricing";
 
 const HANDLED_EVENTS = new Set([
   "subscription_created",
   "subscription_updated",
   "subscription_cancelled",
+  "order_created",
 ]);
-
-/** Map LemonSqueezy variant IDs to gateway plan names. */
-function resolvePlanName(variantId: string | undefined): string {
-  const mapping: Record<string, string> = {
-    [process.env.LEMON_VARIANT_FREE ?? ""]: "FREE",
-    [process.env.LEMON_VARIANT_BASIC ?? ""]: "BASIC",
-  };
-  return mapping[variantId ?? ""] ?? "FREE";
-}
 
 export async function POST(request: Request) {
   const secret = process.env.LEMONSQUEEZY_WEBHOOK_SECRET;
@@ -58,12 +52,19 @@ export async function POST(request: Request) {
     switch (eventName) {
       case "subscription_created":
       case "subscription_updated": {
-        const planName = resolvePlanName(variantId);
+        const planName = resolveVariantToPlan(variantId ?? "");
         await upgradeSubscription(userId, planName);
         break;
       }
       case "subscription_cancelled": {
         await cancelSubscription(userId);
+        break;
+      }
+      case "order_created": {
+        const credits = resolveVariantToCredits(variantId ?? "");
+        if (credits > 0) {
+          await topupCredits(userId, credits, "LEMONSQUEEZY");
+        }
         break;
       }
     }

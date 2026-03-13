@@ -46,7 +46,7 @@ const ru: Dictionary = {
       "donation": "Пожертвовать"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "Войти / Зарегистрироваться",
@@ -170,7 +170,29 @@ const ru: Dictionary = {
           "Расширенные голосовые функции"
         ],
         "cta": "Обновление"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "мес.",
+        description: "Для продвинутых пользователей",
+        features: [
+          "1% бонусных кредитов при каждом пополнении",
+          "Все функции БАЗОВОГО плана",
+          "Доступ к премиум-моделям",
+          "Приоритетная очередь",
+          "Выделенная поддержка",
+        ],
+        cta: "Перейти на Pro",
+      },
+      creditPacks: {
+        title: "Пакеты кредитов",
+        subtitle: "Подписчики могут приобретать дополнительные кредиты с бонусом до 3%",
+        bonus: "Бонус",
+        credits: "кредитов",
+        buy: "Купить",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "Часто задаваемые вопросы"
@@ -522,8 +544,11 @@ const ru: Dictionary = {
     "periodUsage": "Период использования",
     "comparePlans": "Сравнить планы",
     "upgrade": "Обновление",
+    "downgrade": "Понизить",
+    "cancelPlan": "Отменить план",
     "free": "БЕСПЛАТНО",
     "basic": "БАЗОВЫЙ",
+    "pro": "PRO",
     "currentBadge": "Текущий",
     "freeFeatures": [
       "500 регистрационных кредитов",
@@ -535,6 +560,25 @@ const ru: Dictionary = {
       "Приоритетная поддержка",
       "Качественный голос"
     ],
+    "proFeatures": ["1% бонусных кредитов при каждом пополнении", "Доступ к премиум-моделям", "Выделенная поддержка"],
+    creditPacks: {
+      title: "Пакеты кредитов",
+      subtitle: "Подписчики могут приобретать дополнительные кредиты с бонусом до 3%",
+      bonus: "Бонус",
+      credits: "Кредиты",
+      buy: "Купить",
+      baseRate: "Базовая ставка: 1,000 кредитов = $1",
+    },
+    subscriptionManagement: {
+      title: "Управление подпиской",
+      changePlan: "Изменить план",
+      cancelConfirmTitle: "Отменить подписку?",
+      cancelConfirmDescription: "Преимущества текущего плана будут действовать до конца расчётного периода.",
+      downgradeConfirmTitle: "Понизить план?",
+      downgradeConfirmDescription: "Ваш план будет понижен по окончании текущего расчётного периода.",
+      customerPortal: "История платежей и квитанции",
+      customerPortalDescription: "Просмотр истории платежей и загрузка квитанций",
+    },
     "lemonNotice": "Платежи обрабатываются LemonSqueezy. Пожалуйста, ознакомьтесь с правилами выставления счетов и возврата средств.",
     "pricingModelsSynced": "Модели ценообразования синхронизированы"
   }

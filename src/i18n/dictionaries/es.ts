@@ -46,7 +46,7 @@ const es: Dictionary = {
       "donation": "Donar"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "Iniciar sesión / Registrarse",
@@ -170,7 +170,29 @@ const es: Dictionary = {
           "Funciones de voz avanzadas"
         ],
         "cta": "Actualizar"
-      }
+      },
+      pro: {
+        name: "PRO",
+        price: "$25",
+        period: "mes",
+        description: "Para usuarios avanzados",
+        features: [
+          "1% de créditos de bonificación en cada recarga",
+          "Todas las funciones de BÁSICO",
+          "Acceso a modelos premium",
+          "Cola prioritaria",
+          "Soporte dedicado",
+        ],
+        cta: "Hazte Pro",
+      },
+      creditPacks: {
+        title: "Paquetes de créditos",
+        subtitle: "Los suscriptores pueden comprar créditos adicionales con hasta un 3% de bonificación",
+        bonus: "Bonificación",
+        credits: "créditos",
+        buy: "Comprar",
+        baseRate: "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "Preguntas frecuentes"
@@ -522,8 +544,11 @@ const es: Dictionary = {
     "periodUsage": "Uso del período",
     "comparePlans": "Comparar planes",
     "upgrade": "Actualizar",
+    "downgrade": "Bajar de plan",
+    "cancelPlan": "Cancelar plan",
     "free": "GRATIS",
     "basic": "BÁSICO",
+    "pro": "PRO",
     "currentBadge": "Actual",
     "freeFeatures": [
       "500 créditos de registro",
@@ -535,6 +560,25 @@ const es: Dictionary = {
       "Apoyo prioritario",
       "Voz de alta calidad"
     ],
+    "proFeatures": ["1% de créditos de bonificación en cada recarga", "Acceso a modelos premium", "Soporte dedicado"],
+    creditPacks: {
+      title: "Paquetes de créditos",
+      subtitle: "Los suscriptores pueden comprar créditos adicionales con hasta un 3% de bonificación",
+      bonus: "Bonificación",
+      credits: "Créditos",
+      buy: "Comprar",
+      baseRate: "Tarifa base: 1,000 créditos = $1",
+    },
+    subscriptionManagement: {
+      title: "Gestión de suscripción",
+      changePlan: "Cambiar plan",
+      cancelConfirmTitle: "¿Cancelar tu suscripción?",
+      cancelConfirmDescription: "Los beneficios de tu plan actual seguirán activos hasta el final del período de facturación.",
+      downgradeConfirmTitle: "¿Bajar de plan?",
+      downgradeConfirmDescription: "Tu plan se bajará al final del período de facturación actual.",
+      customerPortal: "Historial de facturación y recibos",
+      customerPortalDescription: "Ver historial de pagos y descargar recibos",
+    },
     "lemonNotice": "Los pagos son procesados ​​por LemonSqueezy. Revise las políticas de facturación y reembolso.",
     "pricingModelsSynced": "Modelos de precios sincronizados"
   }

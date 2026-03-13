@@ -1,9 +1,34 @@
 import Link from "next/link";
 import type { Dictionary } from "@/i18n/dictionaries/types";
+import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 import { SectionReveal } from "@/components/home/section-reveal";
 
 export function Pricing({ dict, lang }: { dict: Dictionary; lang: string }) {
+  const plans = [
+    {
+      key: "free",
+      ...dict.home.pricing.free,
+      bonusPercent: 0,
+      highlight: false,
+      href: `/${lang}/login`,
+    },
+    {
+      key: "basic",
+      ...dict.home.pricing.basic,
+      bonusPercent: 0,
+      highlight: false,
+      href: `/${lang}/billing`,
+    },
+    {
+      key: "pro",
+      ...dict.home.pricing.pro,
+      bonusPercent: 1,
+      highlight: true,
+      href: `/${lang}/billing`,
+    },
+  ];
+
   return (
     <section id="pricing" className="border-y border-border/40 bg-muted/25">
       <div className="mx-auto max-w-6xl px-4 py-16 md:py-20">
@@ -18,71 +43,73 @@ export function Pricing({ dict, lang }: { dict: Dictionary; lang: string }) {
           </div>
         </SectionReveal>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          <SectionReveal>
-            <article className="rounded-xl border border-border bg-card p-6">
-              <p className="text-xs font-semibold tracking-wide text-muted-foreground">
-                {dict.home.pricing.free.name}
-              </p>
-              <div className="mt-2 flex items-end gap-2">
-                <span className="text-4xl font-bold">{dict.home.pricing.free.price}</span>
-                <span className="pb-1 text-sm text-muted-foreground">
-                  {dict.home.pricing.free.period}
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {dict.home.pricing.free.description}
-              </p>
-              <ul className="mt-5 space-y-2">
-                {dict.home.pricing.free.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm">
-                    <Check className="mt-0.5 h-4 w-4 text-primary" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={`/${lang}/login`}
-                className="mt-6 inline-flex w-full items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium transition hover:bg-muted"
+        <div className="grid gap-4 md:grid-cols-3">
+          {plans.map((plan, i) => (
+            <SectionReveal key={plan.key} delay={i * 80}>
+              <article
+                className={`rounded-xl border p-6 ${
+                  plan.highlight
+                    ? "border-primary/30 bg-primary/5"
+                    : "border-border bg-card"
+                }`}
               >
-                {dict.home.pricing.free.cta}
-              </Link>
-            </article>
-          </SectionReveal>
-
-          <SectionReveal delay={80}>
-            <article className="rounded-xl border border-primary/30 bg-primary/5 p-6">
-              <p className="text-xs font-semibold tracking-wide text-primary">
-                {dict.home.pricing.basic.name}
-              </p>
-              <div className="mt-2 flex items-end gap-2">
-                <span className="text-4xl font-bold">{dict.home.pricing.basic.price}</span>
-                <span className="pb-1 text-sm text-muted-foreground">
-                  / {dict.home.pricing.basic.period}
-                </span>
-              </div>
-              <p className="mt-2 text-sm text-muted-foreground">
-                {dict.home.pricing.basic.description}
-              </p>
-              <ul className="mt-5 space-y-2">
-                {dict.home.pricing.basic.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-2 text-sm">
-                    <Check className="mt-0.5 h-4 w-4 text-primary" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href={`/${lang}/billing`}
-                className="mt-6 inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90"
-              >
-                {dict.home.pricing.basic.cta}
-              </Link>
-            </article>
-          </SectionReveal>
+                <div className="flex items-center gap-2">
+                  <p
+                    className={`text-xs font-semibold tracking-wide ${
+                      plan.highlight ? "text-primary" : "text-muted-foreground"
+                    }`}
+                  >
+                    {plan.name}
+                  </p>
+                  {plan.bonusPercent > 0 && (
+                    <Badge
+                      variant="outline"
+                      className="text-xs text-green-600 border-green-300"
+                    >
+                      +{plan.bonusPercent}% {dict.home.pricing.creditPacks.bonus}
+                    </Badge>
+                  )}
+                </div>
+                <div className="mt-2 flex items-end gap-2">
+                  <span className="text-4xl font-bold">{plan.price}</span>
+                  <span className="pb-1 text-sm text-muted-foreground">
+                    {plan.key === "free" ? plan.period : `/ ${plan.period}`}
+                  </span>
+                </div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  {plan.description}
+                </p>
+                <ul className="mt-5 space-y-2">
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 text-sm">
+                      <Check className="mt-0.5 h-4 w-4 text-primary" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={plan.href}
+                  className={`mt-6 inline-flex w-full items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition ${
+                    plan.highlight
+                      ? "bg-primary text-primary-foreground hover:opacity-90"
+                      : "border border-border hover:bg-muted"
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
+              </article>
+            </SectionReveal>
+          ))}
         </div>
 
-        <p className="mt-6 text-center text-xs text-muted-foreground">
+        <p className="mt-6 text-center text-sm text-muted-foreground">
+          {dict.home.pricing.creditPacks.baseRate}
+        </p>
+        <p className="mt-2 text-center text-xs text-muted-foreground">
+          {dict.home.pricing.creditPacks.subtitle}
+        </p>
+
+        <p className="mt-4 text-center text-xs text-muted-foreground">
           {dict.home.pricing.policyNote}{" "}
           <Link href={`/${lang}/terms`} className="underline hover:text-foreground">
             {dict.footer.links.terms}

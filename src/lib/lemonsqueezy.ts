@@ -2,26 +2,25 @@ import crypto from "crypto";
 import type { Locale } from "@/i18n/config";
 
 export interface LemonCheckoutParams {
+  variantId: string;
   userId: string;
   email?: string | null;
   lang: Locale;
 }
 
 export function isLemonSqueezyConfigured(): boolean {
-  return Boolean(
-    process.env.NEXT_PUBLIC_LEMONSQUEEZY_STORE_ID &&
-      process.env.NEXT_PUBLIC_LEMONSQUEEZY_BASIC_VARIANT_ID,
-  );
+  return Boolean(process.env.NEXT_PUBLIC_LEMONSQUEEZY_STORE_ID);
 }
 
+/**
+ * Build a LemonSqueezy checkout URL for any product (credit pack or subscription).
+ */
 export function buildLemonCheckoutUrl({
+  variantId,
   userId,
   email,
   lang,
-}: LemonCheckoutParams): string | null {
-  const variantId = process.env.NEXT_PUBLIC_LEMONSQUEEZY_BASIC_VARIANT_ID;
-  if (!variantId) return null;
-
+}: LemonCheckoutParams): string {
   const url = new URL(`https://checkout.lemonsqueezy.com/buy/${variantId}`);
   url.searchParams.set("checkout[custom][user_id]", userId);
   if (email) {

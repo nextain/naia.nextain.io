@@ -46,7 +46,7 @@ const bn: Dictionary = {
       "donation": "দান করুন"
     },
     "copyright": "© 2026 nextain Inc. All rights reserved.",
-    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n경기도 화성시 효행구 매송면 매송고색로 422번길 77, 나동 107호 | support@nextain.io"
+    "companyInfo": "nextain Inc. | CEO Byeongseok Yang | Business Registration No. 529-81-03749\n77, Maesong-Gosaek-ro 422beon-gil, Maesong-myeon, Hyohaeng-gu, Hwaseong-si, Gyeonggi-do, South Korea, Bldg B #107 | support@nextain.io"
   },
   "auth": {
     "loginTitle": "লগইন/সাইন আপ করুন",
@@ -170,7 +170,29 @@ const bn: Dictionary = {
           "উন্নত ভয়েস বৈশিষ্ট্য"
         ],
         "cta": "আপগ্রেড করুন"
-      }
+      },
+      "pro": {
+        "name": "PRO",
+        "price": "$25",
+        "period": "মাস",
+        "description": "পাওয়ার ব্যবহারকারীদের জন্য",
+        "features": [
+          "প্রতিটি রিচার্জে 1% বোনাস ক্রেডিট",
+          "সমস্ত বেসিক বৈশিষ্ট্য",
+          "প্রিমিয়াম মডেল অ্যাক্সেস",
+          "অগ্রাধিকার সারি",
+          "ডেডিকেটেড সাপোর্ট",
+        ],
+        "cta": "Pro হন",
+      },
+      "creditPacks": {
+        "title": "ক্রেডিট প্যাক",
+        "subtitle": "সাবস্ক্রাইবাররা 3% পর্যন্ত বোনাস সহ অতিরিক্ত ক্রেডিট কিনতে পারেন",
+        "bonus": "বোনাস",
+        "credits": "ক্রেডিট",
+        "buy": "কিনুন",
+        "baseRate": "Base rate: 1,000 credits = $1",
+      },
     },
     "faq": {
       "title": "প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী"
@@ -522,8 +544,11 @@ const bn: Dictionary = {
     "periodUsage": "সময়কাল ব্যবহার",
     "comparePlans": "পরিকল্পনা তুলনা",
     "upgrade": "আপগ্রেড করুন",
+    "downgrade": "ডাউনগ্রেড করুন",
+    "cancelPlan": "পরিকল্পনা বাতিল করুন",
     "free": "বিনামূল্যে",
     "basic": "বেসিক",
+    "pro": "PRO",
     "currentBadge": "কারেন্ট",
     "freeFeatures": [
       "500টি সাইনআপ ক্রেডিট",
@@ -535,6 +560,25 @@ const bn: Dictionary = {
       "অগ্রাধিকার সমর্থন",
       "উচ্চ মানের ভয়েস"
     ],
+    "proFeatures": ["প্রতিটি রিচার্জে 1% বোনাস ক্রেডিট", "প্রিমিয়াম মডেল অ্যাক্সেস", "ডেডিকেটেড সাপোর্ট"],
+    creditPacks: {
+      title: "ক্রেডিট প্যাক",
+      subtitle: "সাবস্ক্রাইবাররা 3% পর্যন্ত বোনাস সহ অতিরিক্ত ক্রেডিট কিনতে পারেন",
+      bonus: "বোনাস",
+      credits: "ক্রেডিট",
+      buy: "কিনুন",
+      baseRate: "মূল হার: 1,000 ক্রেডিট = $1",
+    },
+    subscriptionManagement: {
+      title: "সাবস্ক্রিপশন ব্যবস্থাপনা",
+      changePlan: "পরিকল্পনা পরিবর্তন করুন",
+      cancelConfirmTitle: "সাবস্ক্রিপশন বাতিল করবেন?",
+      cancelConfirmDescription: "বর্তমান পরিকল্পনার সুবিধাগুলি বিলিং সময়কাল শেষ হওয়া পর্যন্ত চালু থাকবে।",
+      downgradeConfirmTitle: "পরিকল্পনা ডাউনগ্রেড করবেন?",
+      downgradeConfirmDescription: "বর্তমান বিলিং সময়কাল শেষে আপনার পরিকল্পনা ডাউনগ্রেড হবে।",
+      customerPortal: "বিলিং ইতিহাস এবং রসিদ",
+      customerPortalDescription: "পেমেন্ট ইতিহাস দেখুন এবং রসিদ ডাউনলোড করুন",
+    },
     "lemonNotice": "পেমেন্ট LemonSqueezy দ্বারা প্রক্রিয়া করা হয়. বিলিং এবং ফেরত নীতি পর্যালোচনা করুন.",
     "pricingModelsSynced": "দামের মডেল সিঙ্ক করা হয়েছে"
   }

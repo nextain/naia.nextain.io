@@ -120,6 +120,22 @@ export interface Dictionary {
         features: string[];
         cta: string;
       };
+      pro: {
+        name: string;
+        price: string;
+        period: string;
+        description: string;
+        features: string[];
+        cta: string;
+      };
+      creditPacks: {
+        title: string;
+        subtitle: string;
+        bonus: string;
+        credits: string;
+        buy: string;
+        baseRate: string;
+      };
     };
     usbBoot: {
       title: string;
@@ -410,11 +426,33 @@ export interface Dictionary {
     periodUsage: string;
     comparePlans: string;
     upgrade: string;
+    downgrade: string;
+    cancelPlan: string;
     free: string;
     basic: string;
+    pro: string;
     currentBadge: string;
     freeFeatures: string[];
     basicFeatures: string[];
+    proFeatures: string[];
+    creditPacks: {
+      title: string;
+      subtitle: string;
+      bonus: string;
+      credits: string;
+      buy: string;
+      baseRate: string;
+    };
+    subscriptionManagement: {
+      title: string;
+      changePlan: string;
+      cancelConfirmTitle: string;
+      cancelConfirmDescription: string;
+      downgradeConfirmTitle: string;
+      downgradeConfirmDescription: string;
+      customerPortal: string;
+      customerPortalDescription: string;
+    };
     lemonNotice: string;
     pricingModelsSynced: string;
   };
