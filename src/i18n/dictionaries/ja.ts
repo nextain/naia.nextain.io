@@ -16,7 +16,7 @@ const ja: Dictionary = {
     "confirm": "確認する",
     "copy": "コピー",
     "copied": "コピーされました",
-    "comingSoon": "近日公開予定",
+    "comingSoon": "準備中",
     "backTo": "戻る",
     "prev": "前へ",
     "next": "次へ",

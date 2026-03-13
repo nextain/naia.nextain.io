@@ -16,7 +16,7 @@ const ko: Dictionary = {
     confirm: "확인",
     copy: "복사",
     copied: "복사됨",
-    comingSoon: "서비스 예정",
+    comingSoon: "준비중",
     backTo: "돌아가기",
     prev: "이전",
     next: "다음",

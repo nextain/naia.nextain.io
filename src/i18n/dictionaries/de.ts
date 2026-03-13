@@ -16,7 +16,7 @@ const de: Dictionary = {
     "confirm": "Bestätigen",
     "copy": "Kopieren",
     "copied": "Kopiert",
-    "comingSoon": "Demnächst erhältlich",
+    "comingSoon": "Demnächst",
     "backTo": "Zurück",
     "prev": "Vorher",
     "next": "Als nächstes",

@@ -16,7 +16,7 @@ const vi: Dictionary = {
     "confirm": "Xác nhận",
     "copy": "Sao chép",
     "copied": "Đã sao chép",
-    "comingSoon": "sắp ra mắt",
+    "comingSoon": "Sắp có",
     "backTo": "Quay lại",
     "prev": "Trước đó",
     "next": "Tiếp theo",

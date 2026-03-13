@@ -16,7 +16,7 @@ const hi: Dictionary = {
     "confirm": "पुष्टि करें",
     "copy": "प्रतिलिपि",
     "copied": "नकल की गई",
-    "comingSoon": "जल्द आ रहा है",
+    "comingSoon": "जल्द ही",
     "backTo": "वापस",
     "prev": "पिछला",
     "next": "अगला",

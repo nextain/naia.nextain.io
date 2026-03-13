@@ -5,6 +5,8 @@ import { Check } from "lucide-react";
 import { SectionReveal } from "@/components/home/section-reveal";
 
 export function Pricing({ dict, lang }: { dict: Dictionary; lang: string }) {
+  const storeActive = Boolean(process.env.NEXT_PUBLIC_LEMONSQUEEZY_STORE_ID);
+
   const plans = [
     {
       key: "free",
@@ -87,16 +89,26 @@ export function Pricing({ dict, lang }: { dict: Dictionary; lang: string }) {
                     </li>
                   ))}
                 </ul>
-                <Link
-                  href={plan.href}
-                  className={`mt-6 inline-flex w-full items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition ${
-                    plan.highlight
-                      ? "bg-primary text-primary-foreground hover:opacity-90"
-                      : "border border-border hover:bg-muted"
-                  }`}
-                >
-                  {plan.cta}
-                </Link>
+                {plan.key === "free" || storeActive ? (
+                  <Link
+                    href={plan.href}
+                    className={`mt-6 inline-flex w-full items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition ${
+                      plan.highlight
+                        ? "bg-primary text-primary-foreground hover:opacity-90"
+                        : "border border-border hover:bg-muted"
+                    }`}
+                  >
+                    {plan.cta}
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    className="mt-6 w-full rounded-md border px-4 py-2 text-sm font-medium"
+                    disabled
+                  >
+                    {plan.cta} ({dict.common.comingSoon})
+                  </button>
+                )}
               </article>
             </SectionReveal>
           ))}

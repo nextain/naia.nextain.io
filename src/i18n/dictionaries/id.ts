@@ -16,7 +16,7 @@ const id: Dictionary = {
     "confirm": "Konfirmasikan",
     "copy": "Salin",
     "copied": "Disalin",
-    "comingSoon": "Segera Hadir",
+    "comingSoon": "Segera",
     "backTo": "Kembali",
     "prev": "Sebelumnya",
     "next": "Selanjutnya",

@@ -16,7 +16,7 @@ const bn: Dictionary = {
     "confirm": "নিশ্চিত করুন",
     "copy": "কপি",
     "copied": "কপি করা হয়েছে",
-    "comingSoon": "শীঘ্রই আসছে",
+    "comingSoon": "শীঘ্রই",
     "backTo": "ব্যাক",
     "prev": "পূর্ববর্তী",
     "next": "পরবর্তী",

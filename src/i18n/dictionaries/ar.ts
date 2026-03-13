@@ -16,7 +16,7 @@ const ar: Dictionary = {
     "confirm": "تأكيد",
     "copy": "نسخ",
     "copied": "منقول",
-    "comingSoon": "قريبا",
+    "comingSoon": "قريباً",
     "backTo": "العودة",
     "prev": "السابق",
     "next": "التالي",
