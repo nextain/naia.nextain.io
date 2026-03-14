@@ -70,16 +70,21 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
  */
 export async function issueDesktopKey(gwUserId: string): Promise<string> {
   const keyName = `desktop-${gwUserId}`;
+  // Delete ALL existing desktop keys for this user (not just one by exact name)
   try {
     const existingKeys = await listKeys(gwUserId);
-    const existingDesktopKey = existingKeys.find(k => k.key_name === keyName);
-    if (existingDesktopKey) {
-      // The gateway list API only returns hashes, not the plaintext key.
-      // So if it exists, we must delete it and recreate it to get the plaintext key again.
-      await deleteKey(existingDesktopKey.id);
+    const desktopKeys = existingKeys.filter(
+      k => k.key_name === keyName || k.key_name?.startsWith("desktop-"),
+    );
+    for (const oldKey of desktopKeys) {
+      try {
+        await deleteKey(oldKey.id);
+      } catch (delErr) {
+        console.error("[auth] Failed to delete old desktop key:", oldKey.id, delErr);
+      }
     }
   } catch (err) {
-    console.error("[auth] Failed to check/delete existing keys:", err);
+    console.error("[auth] Failed to list existing keys:", err);
   }
 
   const keyResponse = await createVirtualKey(gwUserId, keyName);
